@@ -2,7 +2,7 @@
 
 This companion maps the results and substantive proof steps in
 [the paper](two-coordinate-obstruction.tex) to their Lean sources.
-The paper states the supporting classifications and gives the algebraic arguments used in the proof. The table below maps those steps to the formal declarations. The [combined verification report](../verification/rebuild.json) records a fresh build of all 120 local modules and an axiom audit of 515 public theorems and lemmas plus 69 definitions. Only `propext`, `Classical.choice`, and `Quot.sound` are permitted. The standalone entry point is [verify.py](../verify.py).
+The paper states the supporting classifications and gives the algebraic arguments used in the proof. The table below maps those steps to the formal declarations. The [combined verification report](../verification/rebuild.json) records a fresh build of all 128 local modules and an axiom audit of 567 public theorems and lemmas plus 85 definitions. Only `propext`, `Classical.choice`, and `Quot.sound` are permitted. The standalone entry point is [verify.py](../verify.py).
 
 The fixed-decrement soundness remarks in Section 2.1 are formalized in [FullTwoSoundness.lean](../formal/FullTwoSoundness.lean), namespace `CollatzResearch.FullTwoSoundness`. The declarations `admissible_preserves_gap`, `weak_rule_gives_gap`, and `gap_wellFounded` are included in the combined audit. The general rule-removal theorem and the prior equivalence with Collatz are cited, not re-formalized by this artifact.
 
@@ -86,8 +86,23 @@ The interpretation and gap definitions are in
 [FullTwoBasic.lean](../formal/FullTwoBasic.lean),
 [ReversedRealNormalization.lean](../formal/ReversedRealNormalization.lean),
 and [ReversedBinaryPowerClosure.lean](../formal/ReversedBinaryPowerClosure.lean).
-The [exact appendix](lean-statement-appendix.tex) reproduces the definitions and both final theorem types.
+The [exact appendix](lean-statement-appendix.tex) reproduces the definitions and principal theorem types.
 
 This obstruction concerns the specified first-offset strictness criterion.
 It does not establish equality of full affine maps, exclude higher
 dimensions or proper subsystems, or prove the Collatz conjecture.
+
+
+Section 8 gives the following further necessary conditions. All names below start with `CollatzResearch`.
+
+| Paper result or proof step | Exact declarations and sources | Scope |
+|---|---|---|
+| Every five conversion stages contain each root carry | `ForwardFiveCover.five_stage_cover` in [CollatzForwardFiveCover.lean](../formal/CollatzForwardFiveCover.lean); `ForwardRealWordGrowth.stage_five_cover` and `stage_five_cover_fin` in [CollatzForwardRealWordGrowth.lean](../formal/CollatzForwardRealWordGrowth.lean) | The seventeen rational cases include every endpoint; uniqueness of binary normalization transfers the cover to the conversion schedule. |
+| Quantitative observed forward growth | `ForwardRealWordGrowth.Data.repeated_e_growth` in [CollatzForwardRealWordGrowth.lean](../formal/CollatzForwardRealWordGrowth.lean) | Any finite coordinate set, six nonnegative affine maps, and exactly nine weak comparisons in `Data`. The observed value includes the offset of `C`. No dynamic boundary map is assumed. |
+| Contraction of the binary matrix A excludes all three forward root gaps | `ForwardRealContraction.observed_ternary_bounded_of_positive_subeigenrow` in [CollatzForwardRealContraction.lean](../formal/CollatzForwardRealContraction.lean); `ForwardRealWordGrowth.Data.eligible_offsets_eq_of_positive_subeigenrow` | A strictly positive left row for `A` has multiplier in `[0,1)`. The proof requires no corresponding contraction condition on `B`. |
+| Explicit two-coordinate necessary condition | `ForwardRealTwoCoordinateNecessary.positive_subeigenrow_of_two_coordinate_bounds` and `positive_eligible_gap_requires_noncontraction` in [CollatzForwardRealTwoCoordinateNecessary.lean](../formal/CollatzForwardRealTwoCoordinateNecessary.lean) | A positive gap requires `A00 >= 1`, `A11 >= 1`, or `(1-A00)(1-A11) <= A01*A10`. This is necessary, not sufficient. |
+| Every observed maximal ternary power is nonzero under reversed strictness | `RealStationaryObstruction.strict_reversed_maximal_ternary_row_nonzero` in [CollatzReversedRealStationaryObstruction.lean](../formal/CollatzReversedRealStationaryObstruction.lean) | All finite dimensions; follows from the existing mixed-row growth theorem, including exponent zero. |
+| Ordered powers and stationary observation | `RealOrderedPowers.ordered_scaled_row_power_le` and `ordered_stationary_profile_row_zero` in [CollatzReversedRealOrderedPowers.lean](../formal/CollatzReversedRealOrderedPowers.lean) | Uses `XY <= YX`, a nonnegative row, and the displayed scaled row inequality. Stationarity and boundedness are explicit hypotheses. |
+| Final reversed stationary-profile obstruction | `RealWeakStationaryObstruction.weak_stationary_profile_excludes_strict` in [CollatzReversedRealWeakStationaryObstruction.lean](../formal/CollatzReversedRealWeakStationaryObstruction.lean) | Eleven reversed weak rules; `B = alpha X`, `G = beta Y`, `0 <= alpha < beta`; nonnegative `X,Y`, positive `v`, bounded `r X^n v`, and eventually stationary `Y^n v`. The original weak `GB` rule supplies the ordered matrix relation. No commutation equality or automatic stationarity is assumed. |
+
+These additions do not prove a complete unrestricted forward or higher-dimensional obstruction. The four new forward and four new reversed modules are included in the same fresh combined verification as the main theorems. The original 120 Lean files remain byte-identical to the preceding revision.

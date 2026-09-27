@@ -21,7 +21,9 @@ The theorem with diagonal bounds is `CollatzResearch.FullTwo.full_two_coordinate
 
 ## Verify the proof
 
-The standalone [verify.py](verify.py) rebuilds the complete dependency closure of both obstructions and the three fixed-decrement soundness lemmas. The combined inventory has **120 Lean modules, 515 public theorem/lemma declarations, and 69 definitions included in the axiom audit**. It permits only `propext`, `Classical.choice`, and `Quot.sound` and makes no SAT-solver calls. The [retained report](verification/rebuild.json) records the build and axiom audit.
+The paper also proves necessary conditions in arbitrary finite dimension. Under only the six forward digit swaps and three forward root comparisons, the observed repeated-`e` value dominates `floor(n/5)` times the sum of the three eligible offset gaps. A positive left row contracted by the binary matrix `A` makes those gaps vanish, yielding an explicit necessary inequality in two coordinates. In the reversed system, a positive eligible gap is impossible when the normalized binary observation is bounded, the normalized ternary orbit of a positive vector eventually stabilizes, and the ternary scale is larger. These are explicit additional hypotheses; no commutation equality is assumed.
+
+The standalone [verify.py](verify.py) rebuilds the complete dependency closure of both obstructions, the further necessary conditions, and the three fixed-decrement soundness lemmas. The combined inventory has **128 Lean modules, 567 public theorem/lemma declarations, and 85 definitions included in the axiom audit**. It permits only `propext`, `Classical.choice`, and `Quot.sound` and makes no SAT-solver calls. The [retained report](verification/rebuild.json) records the build and axiom audit.
 
 Use Lean **4.27.0** and mathlib commit **`a3a10db0e9d66acbebf76c5e6a135066525ac900`**. After the dependency setup in [formal/README.md](formal/README.md), run from the repository root:
 

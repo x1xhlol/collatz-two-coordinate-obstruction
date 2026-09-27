@@ -24,8 +24,8 @@ The unrestricted reversed theorem is in
 \texttt{CollatzResearch.RealTwoCoordinate}; it uses only
 \texttt{Affine.Nonnegative} and the eleven reversed weak comparisons.
 
-\paragraph{Ambient types and the coefficient order.}
-\noindent\texttt{\detokenize{formal/ReversedBinaryPowerClosure.lean}}, lines 10--17.
+\paragraph{Ambient types and the coefficient order.}\mbox{}\par
+\noindent{\small\path{formal/ReversedBinaryPowerClosure.lean}, lines 10--17.}\par
 \begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=10,numbersep=5pt,xleftmargin=18pt]
 variable {n : Type*} [Fintype n]
 
@@ -37,8 +37,8 @@ def EntrywiseLE (M N : Mat n) : Prop := ∀ i j, M i j ≤ N i j
 local infix:50 " ≤ₘ " => EntrywiseLE
 \end{Verbatim}
 
-\paragraph{Affine composition and comparison.}
-\noindent\texttt{\detokenize{formal/ReversedBinaryPowerClosure.lean}}, lines 255--266.
+\paragraph{Affine composition and comparison.}\mbox{}\par
+\noindent{\small\path{formal/ReversedBinaryPowerClosure.lean}, lines 255--266.}\par
 \begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=255,numbersep=5pt,xleftmargin=18pt]
 structure Affine (n : Type*) where
   matrix : Mat n
@@ -54,16 +54,16 @@ def Affine.Weak (X Y : Affine n) : Prop :=
   (Y.matrix ≤ₘ X.matrix) ∧ Y.offset ≤ X.offset
 \end{Verbatim}
 
-\paragraph{Two coordinates and admissibility.}
-\noindent\texttt{\detokenize{formal/FullTwoBasic.lean}}, lines 9--11.
+\paragraph{Two coordinates and admissibility.}\mbox{}\par
+\noindent{\small\path{formal/FullTwoBasic.lean}, lines 9--11.}\par
 \begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=9,numbersep=5pt,xleftmargin=18pt]
 abbrev Aff2 := Affine (Fin 2)
 
 def Admissible (X : Aff2) : Prop := X.Nonnegative ∧ 1 ≤ X.matrix 0 0
 \end{Verbatim}
 
-\paragraph{Forward weak rules.}
-\noindent\texttt{\detokenize{formal/FullTwoBasic.lean}}, lines 21--32.
+\paragraph{Forward weak rules.}\mbox{}\par
+\noindent{\small\path{formal/FullTwoBasic.lean}, lines 21--32.}\par
 \begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=21,numbersep=5pt,xleftmargin=18pt]
 structure ForwardWeak (A B C D E F G : Aff2) : Prop where
   ad : (A.comp D).Weak D
@@ -79,8 +79,8 @@ structure ForwardWeak (A B C D E F G : Aff2) : Prop where
   cg : (C.comp G).Weak (C.comp (A.comp B))
 \end{Verbatim}
 
-\paragraph{Forward offset equalities.}
-\noindent\texttt{\detokenize{formal/FullTwoBasic.lean}}, lines 34--45.
+\paragraph{Forward offset equalities.}\mbox{}\par
+\noindent{\small\path{formal/FullTwoBasic.lean}, lines 34--45.}\par
 \begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=34,numbersep=5pt,xleftmargin=18pt]
 structure ForwardGapsZero (A B C D E F G : Aff2) : Prop where
   ad : (A.comp D).offset 0 = D.offset 0
@@ -115,8 +115,8 @@ structure ReversedRealWeak (A B C D E F G : Affine ι) : Prop where
   gc : (G.comp C).Weak (B.comp (A.comp C))
 \end{Verbatim}
 
-\paragraph{Reversed offset equalities.}
-\noindent\texttt{\detokenize{formal/FullTwoBasic.lean}}, lines 47--58.
+\paragraph{Reversed offset equalities.}\mbox{}\par
+\noindent{\small\path{formal/FullTwoBasic.lean}, lines 47--58.}\par
 \begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=47,numbersep=5pt,xleftmargin=18pt]
 structure ReversedGapsZero (A B C D E F G : Aff2) : Prop where
   da : (D.comp A).offset 0 = D.offset 0
@@ -132,8 +132,8 @@ structure ReversedGapsZero (A B C D E F G : Aff2) : Prop where
   gc : (G.comp C).offset 0 = (B.comp (A.comp C)).offset 0
 \end{Verbatim}
 
-\paragraph{The theorem with diagonal bounds.}
-\noindent\texttt{\detokenize{formal/FullTwoCoordinate.lean}}, lines 30--34.
+\paragraph{The theorem with diagonal bounds.}\mbox{}\par
+\noindent{\small\path{formal/FullTwoCoordinate.lean}, lines 30--34.}\par
 \begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=30,numbersep=5pt,xleftmargin=18pt]
 theorem full_two_coordinate_obstruction (A B C D E F G : Aff2)
     (hA : Admissible A) (hB : Admissible B) (hC : Admissible C) (hD : Admissible D)
@@ -142,8 +142,8 @@ theorem full_two_coordinate_obstruction (A B C D E F G : Aff2)
     (ReversedRealWeak A B C D E F G → ReversedGapsZero A B C D E F G)
 \end{Verbatim}
 
-\paragraph{The unrestricted reversed theorem.}
-\noindent\texttt{\detokenize{formal/CollatzReversedRealTwoCoordinate.lean}}, lines 30--35.
+\paragraph{The unrestricted reversed theorem.}\mbox{}\par
+\noindent{\small\path{formal/CollatzReversedRealTwoCoordinate.lean}, lines 30--35.}\par
 \begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=30,numbersep=5pt,xleftmargin=18pt]
 theorem reversed_eligible_offsets_equal
     (A B C D E F G : Affine (Fin 2))
@@ -151,4 +151,115 @@ theorem reversed_eligible_offsets_equal
     (hD : D.Nonnegative) (hE : E.Nonnegative) (hF : F.Nonnegative) (hG : G.Nonnegative)
     (h : ReversedRealWeak A B C D E F G) :
     (D.comp A).offset = D.offset ∧ (D.comp B).offset = (D.comp G).offset
+\end{Verbatim}
+
+% Source SHA256 CollatzForwardRealWordGrowth.lean: c092f7be3e514c4c427d22ab4a7089b36dbf88f70ad7054947b18a13334c47a8
+% Source SHA256 CollatzForwardRealTwoCoordinateNecessary.lean: ed4faea0c2a78da5af454e3bd1c140cc8fa8eccec4d7f0107c82e29bf3d239ca
+% Source SHA256 CollatzReversedRealWeakStationaryObstruction.lean: 8b1254e0f728cdaa0368ea3282203aee685bc384d456a08828df8a4e61d5b296
+
+\subsection*{Further necessary conditions}
+
+The next forward blocks use the namespace
+\path{CollatzResearch.ForwardRealWordGrowth}, with a finite index type
+{\leanappendixfont ι}. The three root constructors label the eligible forward
+boundary rules. The two-coordinate corollary is in
+\path{CollatzResearch.ForwardRealTwoCoordinateNecessary}.
+The final reversed statement is in
+\path{CollatzResearch.RealWeakStationaryObstruction}; it assumes
+{\leanappendixfont [Fintype ι]} and {\leanappendixfont [DecidableEq ι]} and uses the shared
+affine and reversed-rule definitions displayed above. In that statement
+\texttt{X} and \texttt{Y} are normalized matrices, while \texttt{A}
+through \texttt{G} are affine maps.
+
+\paragraph{The forward root labels.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 9--11.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=9,numbersep=5pt,xleftmargin=18pt]
+inductive Root where
+  | e | f | g
+  deriving DecidableEq
+\end{Verbatim}
+
+\paragraph{The forward nine-comparison data.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 209--230.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=209,numbersep=5pt,xleftmargin=18pt]
+structure Data (ι : Type*) [Fintype ι] where
+  A : Affine ι
+  B : Affine ι
+  C : Affine ι
+  E : Affine ι
+  F : Affine ι
+  G : Affine ι
+  hA : A.Nonnegative
+  hB : B.Nonnegative
+  hC : C.Nonnegative
+  hE : E.Nonnegative
+  hF : F.Nonnegative
+  hG : G.Nonnegative
+  ae : (A.comp E).Weak (E.comp A)
+  af : (A.comp F).Weak (E.comp B)
+  ag : (A.comp G).Weak (F.comp A)
+  be : (B.comp E).Weak (F.comp B)
+  bf : (B.comp F).Weak (G.comp A)
+  bg : (B.comp G).Weak (G.comp B)
+  ce : (C.comp E).Weak (C.comp B)
+  cf : (C.comp F).Weak (C.comp (A.comp A))
+  cg : (C.comp G).Weak (C.comp (A.comp B))
+\end{Verbatim}
+
+\paragraph{The three forward gaps.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 245--248.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=245,numbersep=5pt,xleftmargin=18pt]
+def Data.gap (d : Data ι) (i : ι) : Root → ℝ
+  | .e => (d.C.comp d.E).offset i - (d.C.comp d.B).offset i
+  | .f => (d.C.comp d.F).offset i - (d.C.comp (d.A.comp d.A)).offset i
+  | .g => (d.C.comp d.G).offset i - (d.C.comp (d.A.comp d.B)).offset i
+\end{Verbatim}
+
+\paragraph{Quantitative growth of the observed ternary orbit.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 356--358.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=356,numbersep=5pt,xleftmargin=18pt]
+theorem Data.repeated_e_growth (d : Data ι) (i : ι) (n : ℕ) :
+    ((n / 5 : ℕ) : ℝ) * (d.gap i .e + d.gap i .f + d.gap i .g) ≤
+      eval d.C ((eval d.E)^[n] 0) i
+\end{Verbatim}
+
+\paragraph{Forward equality under a positive contracting row.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 410--416.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=410,numbersep=5pt,xleftmargin=18pt]
+theorem Data.eligible_offsets_eq_of_positive_subeigenrow (d : Data ι) (i : ι)
+    (w : Vec ι) (hw : ∀ j, 0 < w j)
+    (l : ℝ) (hl : 0 ≤ l) (hl1 : l < 1)
+    (hc : w ᵥ* d.A.matrix ≤ l • w) :
+    (d.C.comp d.E).offset i = (d.C.comp d.B).offset i ∧
+    (d.C.comp d.F).offset i = (d.C.comp (d.A.comp d.A)).offset i ∧
+    (d.C.comp d.G).offset i = (d.C.comp (d.A.comp d.B)).offset i
+\end{Verbatim}
+
+\paragraph{The explicit two-coordinate forward condition.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealTwoCoordinateNecessary.lean}, lines 61--66.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=61,numbersep=5pt,xleftmargin=18pt]
+theorem positive_eligible_gap_requires_noncontraction
+    (d : ForwardRealWordGrowth.Data (Fin 2)) (i : Fin 2)
+    (hs : 0 < d.gap i .e ∨ 0 < d.gap i .f ∨ 0 < d.gap i .g) :
+    1 ≤ d.A.matrix 0 0 ∨ 1 ≤ d.A.matrix 1 1 ∨
+      (1 - d.A.matrix 0 0) * (1 - d.A.matrix 1 1) ≤
+        d.A.matrix 0 1 * d.A.matrix 1 0
+\end{Verbatim}
+
+\paragraph{The reversed stationary-profile obstruction.}\mbox{}\par
+\noindent{\small\path{formal/CollatzReversedRealWeakStationaryObstruction.lean}, lines 10--22.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=10,numbersep=5pt,xleftmargin=18pt]
+theorem weak_stationary_profile_excludes_strict
+    (A B C D E F G : Affine ι) (i₀ : ι)
+    (hA : A.Nonnegative) (hB : B.Nonnegative) (hC : C.Nonnegative)
+    (hD : D.Nonnegative) (hE : E.Nonnegative) (hF : F.Nonnegative) (hG : G.Nonnegative)
+    (h : ReversedRealWeak A B C D E F G)
+    (hstrict : D.offset i₀ < (D.comp A).offset i₀ ∨
+      (D.comp G).offset i₀ < (D.comp B).offset i₀)
+    (X Y : Mat ι) (v : Vec ι) (α β K : ℝ) (N : ℕ)
+    (hX : EntrywiseLE 0 X) (hY : EntrywiseLE 0 Y)
+    (hv : ∀ i, 0 < v i) (hα : 0 ≤ α) (hαβ : α < β) (hK : 0 ≤ K)
+    (hscaleB : B.matrix = α • X) (hscaleG : G.matrix = β • Y)
+    (hbound : ∀ n : ℕ, (D.matrix i₀ ᵥ* X ^ n) ⬝ᵥ v ≤ K)
+    (hstationary : ∀ n : ℕ, N ≤ n → Y ^ n *ᵥ v = Y ^ N *ᵥ v) : False
 \end{Verbatim}
