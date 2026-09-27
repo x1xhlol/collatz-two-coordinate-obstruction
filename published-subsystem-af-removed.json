@@ -1,0 +1,238 @@
+{
+  "claim": "Termination of the ten-rule subsystem T minus af->eb only",
+  "source": "Yolcu-Aaronson-Heule, Example 4.3, https://emreyolcu.com/research/rewriting-collatz.pdf",
+  "domain": "natural",
+  "dimension": 2,
+  "orientation": "forward",
+  "excluded_canonical_rules": [
+    [
+      "af",
+      "eb"
+    ]
+  ],
+  "rules": [
+    [
+      "ad",
+      "d"
+    ],
+    [
+      "bd",
+      "gd"
+    ],
+    [
+      "ae",
+      "ea"
+    ],
+    [
+      "ag",
+      "fa"
+    ],
+    [
+      "be",
+      "fb"
+    ],
+    [
+      "bf",
+      "ga"
+    ],
+    [
+      "bg",
+      "gb"
+    ],
+    [
+      "ce",
+      "cb"
+    ],
+    [
+      "cf",
+      "caa"
+    ],
+    [
+      "cg",
+      "cab"
+    ]
+  ],
+  "interpretations": {
+    "a": {
+      "M": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "v": [
+        0,
+        0
+      ]
+    },
+    "b": {
+      "M": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "v": [
+        1,
+        1
+      ]
+    },
+    "c": {
+      "M": [
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "v": [
+        0,
+        0
+      ]
+    },
+    "d": {
+      "M": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "v": [
+        1,
+        1
+      ]
+    },
+    "e": {
+      "M": [
+        [
+          7,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "v": [
+        2,
+        1
+      ]
+    },
+    "f": {
+      "M": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "v": [
+        1,
+        0
+      ]
+    },
+    "g": {
+      "M": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "v": [
+        0,
+        2
+      ]
+    }
+  },
+  "independent_checks": [
+    {
+      "rule": "ad->d",
+      "weak": true,
+      "strict": true,
+      "first_offset_gap": 1
+    },
+    {
+      "rule": "bd->gd",
+      "weak": true,
+      "strict": true,
+      "first_offset_gap": 1
+    },
+    {
+      "rule": "ae->ea",
+      "weak": true,
+      "strict": true,
+      "first_offset_gap": 1
+    },
+    {
+      "rule": "af->eb",
+      "weak": false,
+      "strict": false,
+      "first_offset_gap": -10
+    },
+    {
+      "rule": "ag->fa",
+      "weak": true,
+      "strict": true,
+      "first_offset_gap": 1
+    },
+    {
+      "rule": "be->fb",
+      "weak": true,
+      "strict": true,
+      "first_offset_gap": 2
+    },
+    {
+      "rule": "bf->ga",
+      "weak": true,
+      "strict": true,
+      "first_offset_gap": 2
+    },
+    {
+      "rule": "bg->gb",
+      "weak": true,
+      "strict": true,
+      "first_offset_gap": 3
+    },
+    {
+      "rule": "ce->cb",
+      "weak": true,
+      "strict": true,
+      "first_offset_gap": 1
+    },
+    {
+      "rule": "cf->caa",
+      "weak": true,
+      "strict": true,
+      "first_offset_gap": 1
+    },
+    {
+      "rule": "cg->cab",
+      "weak": true,
+      "strict": true,
+      "first_offset_gap": 3
+    }
+  ],
+  "full_Collatz_certificate": false
+}

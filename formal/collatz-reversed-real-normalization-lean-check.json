@@ -1,0 +1,369 @@
+{
+  "all_local_dependencies_built_in_fresh_directory": true,
+  "builds": {
+    "CollatzCore": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-o",
+        "/dev/shm/collatz-reversed-real-normalization-wjejxx9k/CollatzCore.olean",
+        "/home/ubuntu/collatz-research-2026-09-26/formal/CollatzCore.lean"
+      ],
+      "compiled_module_sha256": "9fba84e07c20679598d2dc1ec34ef02efd96379b3d8acae06a801f4e34a50956",
+      "compiler_exit_code": 0,
+      "compiler_output": "'CollatzResearch.step_pos' depends on axioms: [propext, Quot.sound]\n'CollatzResearch.iterate_pos' depends on axioms: [propext, Quot.sound]\n'CollatzResearch.reaches_one_of_reachable' does not depend on any axioms\n'CollatzResearch.collatz_iff_universal_descent' depends on axioms: [propext, Quot.sound]\n'CollatzResearch.step_even' depends on axioms: [propext]\n'CollatzResearch.step_odd' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.two_steps_odd' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.power_two_steps' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.odd_block_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.collatz_of_rank' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.even_descends' depends on axioms: [propext, Quot.sound]\n'CollatzResearch.three_steps_of_four_mul_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.one_mod_four_descends' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.non_descending_is_three_mod_four' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.universal_descent_iff_three_mod_four' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.collatz_iff_three_mod_four_descent' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "declaration_axioms": {
+        "CollatzResearch.collatz_iff_three_mod_four_descent": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.collatz_iff_universal_descent": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.collatz_of_rank": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.even_descends": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.iterate_pos": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.non_descending_is_three_mod_four": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.odd_block_reachable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.one_mod_four_descends": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.power_two_steps": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.reaches_one_of_reachable": [],
+        "CollatzResearch.step_even": [
+          "propext"
+        ],
+        "CollatzResearch.step_odd": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.step_pos": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.three_steps_of_four_mul_add_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.two_steps_odd": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.universal_descent_iff_three_mod_four": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "34c4d688780811db45487d9b550fd61cb73e4da02b24ac7e63bba926a3402349"
+    },
+    "CollatzEvenStrictRank": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-o",
+        "/dev/shm/collatz-reversed-real-normalization-wjejxx9k/CollatzEvenStrictRank.olean",
+        "/home/ubuntu/collatz-research-2026-09-26/formal/CollatzEvenStrictRank.lean"
+      ],
+      "compiled_module_sha256": "58d626b7b1be6957c105a23f4d4eef136231d292266b8cbabdbb29af830f6a34",
+      "compiler_exit_code": 0,
+      "compiler_output": "'CollatzResearch.twoVal_even' depends on axioms: [propext, Quot.sound]\n'CollatzResearch.twoVal_mul_three' depends on axioms: [propext, Quot.sound]\n'CollatzResearch.twoVal_odd_shortcut' depends on axioms: [propext, Quot.sound]\n'CollatzResearch.collatz_of_even_strict_rank' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "declaration_axioms": {
+        "CollatzResearch.collatz_of_even_strict_rank": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.twoVal_even": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.twoVal_mul_three": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.twoVal_odd_shortcut": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "11433051ed5be90205e6cd2b0bfdeecf687eaacbe7d1a928f36f4cb5144ee32e"
+    },
+    "CollatzReversedCertificate": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-o",
+        "/dev/shm/collatz-reversed-real-normalization-wjejxx9k/CollatzReversedCertificate.olean",
+        "/home/ubuntu/collatz-research-2026-09-26/formal/CollatzReversedCertificate.lean"
+      ],
+      "compiled_module_sha256": "d7cf3630242e4235b4e7d234e02d3b2e974d48018b60fb0ba1a90ef4aca2f0ab",
+      "compiler_exit_code": 0,
+      "compiler_output": "'CollatzResearch.ReversedCertificate.binaryInterp_one' depends on axioms: [propext, Quot.sound]\n'CollatzResearch.ReversedCertificate.binaryInterp_even' depends on axioms: [propext, Quot.sound]\n'CollatzResearch.ReversedCertificate.binaryInterp_odd' depends on axioms: [propext, Quot.sound]\n'CollatzResearch.ReversedCertificate.ternary_conversion_weak' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.ReversedCertificate.strict_da_implies_collatz' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzResearch.ReversedCertificate.strict_db_implies_collatz' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzResearch.ReversedCertificate.first_eligible_root_implies_collatz' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "declaration_axioms": {
+        "CollatzResearch.ReversedCertificate.binaryInterp_even": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.ReversedCertificate.binaryInterp_odd": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.ReversedCertificate.binaryInterp_one": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.ReversedCertificate.first_eligible_root_implies_collatz": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.ReversedCertificate.strict_da_implies_collatz": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.ReversedCertificate.strict_db_implies_collatz": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.ReversedCertificate.ternary_conversion_weak": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "41c033d10c8c4f65596923f4b06584ff92cc50305e010fe750fb0a6d54a7e713"
+    },
+    "CollatzReversedRealCertificate": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-o",
+        "/dev/shm/collatz-reversed-real-normalization-wjejxx9k/CollatzReversedRealCertificate.olean",
+        "/home/ubuntu/collatz-research-2026-09-26/formal/CollatzReversedRealCertificate.lean"
+      ],
+      "compiled_module_sha256": "5450a679b5fa6494564a6bc4157e7ea830f255532aaa593bcb42ce7146e7463c",
+      "compiler_exit_code": 0,
+      "compiler_output": "'CollatzResearch.RealAffine.eval_comp' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.RealAffine.eval_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.RealAffine.eval_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.RealAffine.eval_weak' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.RealAffine.eval_offset_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.RealAffine.floor_scaled_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzResearch.RealAffine.reversed_real_first_removal_implies_collatz' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "declaration_axioms": {
+        "CollatzResearch.RealAffine.eval_comp": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.RealAffine.eval_monotone": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.RealAffine.eval_nonnegative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.RealAffine.eval_offset_gap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.RealAffine.eval_weak": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.RealAffine.floor_scaled_gap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzResearch.RealAffine.reversed_real_first_removal_implies_collatz": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "fbdd7789343547a06ce22d66be707029aa968d8d7a9889d08f979d7af87b5403"
+    },
+    "ReversedBinaryPowerClosure": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-o",
+        "/dev/shm/collatz-reversed-real-normalization-wjejxx9k/ReversedBinaryPowerClosure.olean",
+        "/home/ubuntu/collatz-research-2026-09-26/formal/ReversedBinaryPowerClosure.lean"
+      ],
+      "compiled_module_sha256": "7fada9149fd1d5d0991f6a97863dfef9b1bfd21d5f59dcadbed6e9deb2cc61cb",
+      "compiler_exit_code": 0,
+      "compiler_output": "'CollatzCertificate.binary_power_closure' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.first_gap_zero_of_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.first_gap_zero_of_return_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.first_gap_zero_of_coordinate_returns' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.positive_first_gap_has_transient_coordinate' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCertificate.ordered_reversed_gaps_zero_of_det_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCertificate.first_gap_le_BAa' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.first_gap_zero_of_BA_return_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.four_affine_rules_gaps_zero_of_det_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "declaration_axioms": {
+        "CollatzCertificate.binary_power_closure": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.first_gap_le_BAa": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.first_gap_zero_of_BA_return_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.first_gap_zero_of_coordinate_returns": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.first_gap_zero_of_det_ne_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.first_gap_zero_of_return_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.four_affine_rules_gaps_zero_of_det_ne_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.ordered_reversed_gaps_zero_of_det_ne_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.positive_first_gap_has_transient_coordinate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "6f448bb1475e4214a10d4acdac8835d526a559d166c93acfd910e39bca23f281"
+    },
+    "ReversedRealNormalization": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-o",
+        "/dev/shm/collatz-reversed-real-normalization-wjejxx9k/ReversedRealNormalization.olean",
+        "/home/ubuntu/collatz-research-2026-09-26/formal/ReversedRealNormalization.lean"
+      ],
+      "compiled_module_sha256": "b83ff7b29b43529dc8a4f03a35fbb6ee92cebc51b7b66dd2856e87780ea73163",
+      "compiler_exit_code": 0,
+      "compiler_output": "'CollatzCertificate.normalized_initial_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.normalized_readout_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.normalized_initial_preserves_weak' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.normalized_readout_preserves_da' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.normalized_readout_preserves_db' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.normalized_readout_gap_da' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.normalized_readout_gap_db' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.normalize_reversed_real_rules' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.normalized_real_rules_imply_collatz' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "declaration_axioms": {
+        "CollatzCertificate.normalize_reversed_real_rules": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.normalized_initial_nonnegative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.normalized_initial_preserves_weak": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.normalized_readout_gap_da": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.normalized_readout_gap_db": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.normalized_readout_nonnegative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.normalized_readout_preserves_da": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.normalized_readout_preserves_db": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.normalized_real_rules_imply_collatz": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "947bb86b18f46ba0f150437c4a334c79a18b89bbc73b5855eff9381237b23761"
+    }
+  },
+  "checked_at_utc": "2026-09-27T04:46:09.145839+00:00",
+  "checker_sources_sha256": {
+    "check_collatz_certificate_bridge.py": "04c35cec1405277697ea72511a2b982dcf0ef55fc87292aa5a04a961210b1c75",
+    "check_collatz_core.py": "5ddddcc8bf3acad8db6b43a011b5ea6ab6cda64d8001944c1a9c26581df364d4",
+    "check_collatz_forward_certificate.py": "1dda1a434bf956cd77e235bf70a6733ad6b2402219dd85149d012e8072825669",
+    "check_collatz_reversed_certificate.py": "eeaae8b0d6eebb6f06eecf71ac555c25b8780d76cdcb8e59e8bb42c289a6ed79",
+    "check_collatz_reversed_conditions.py": "154136c1c9c0e9739cbe9bf6c59d632142365fd438dcd1a54eb2df4df941b70e",
+    "check_collatz_reversed_readout.py": "144d9ba7370e9b932e2b94a9ea565c81732bb7682fe848dc20ea85f8a92ca6b8",
+    "check_collatz_reversed_real_certificate.py": "4d66c5a1ad1ef3c298ea98dc051588ee2287945a63d157c8cc04f0fab17eeb41",
+    "check_collatz_reversed_real_normalization.py": "9151c3a5ede950e003117de2aa1054fed168f0611a72940a537ee0e852175881",
+    "check_collatz_reversed_row_interval.py": "7a3e127b988a06a5b1ec3984f0e35df6b5663e83a4b8fe6072bb186d28579cbb",
+    "check_collatz_reversed_row_transfer.py": "9cb880bab2549d839a071e7d9eb9032f5f0f300537ea2a5a70fe6bcf2ae04f3a",
+    "check_collatz_reversed_ternary_readout.py": "67bb79da4309d5061b03a2986f637c7fca09e491a0515e8611c2c99cc023f8ce",
+    "check_reversed_binary_power_closure.py": "d6f6b5a204d4d109a0ae5a7237eabb03ef26729cec489f7dbc4a287e046fe969",
+    "check_reversed_readout_eigenrow.py": "5cd79397efd5a9727a133f9fcedb0ba808f6a12141df1eb837a0e798e569a02e"
+  },
+  "dependency_revisions": {
+    "Cli": "55c37290ff6186e2e965d68cf853a57c0702db82",
+    "LeanSearchClient": "5ce7f0a355f522a952a3d678d696bd563bb4fd28",
+    "Qq": "bd58c9efe2086d56ca361807014141a860ddbf8c",
+    "aesop": "cb837cc26236ada03c81837bebe0acd9c70ced7d",
+    "batteries": "b25b36a7caf8e237e7d1e6121543078a06777c8a",
+    "importGraph": "8f497d55985a189cea8020d9dc51260af1e41ad2",
+    "mathlib": "a3a10db0e9d66acbebf76c5e6a135066525ac900",
+    "plausible": "009dc1e6f2feb2c96c081537d80a0905b2c6498f",
+    "proofwidgets": "c04225ee7c0585effbd933662b3151f01b600e40"
+  },
+  "lean_version": "Lean (version 4.27.0, x86_64-unknown-linux-gnu, commit db93fe1608548721853390a10cd40580fe7d22ae, Release)",
+  "mathlib_manifest_sha256": "6c24676b690a32627317b1d6dd58cf9318d689c5481e1edc53d07c93c892632f",
+  "previous_reports_sha256": {
+    "collatz-reversed-real-certificate-lean-check.json": "e4bd8fd2a6e0babe27859fd82217b0802a14175b3beddec0541b26c815360f2c"
+  },
+  "proves_collatz_conjecture": false,
+  "sat_solver_calls": 0,
+  "scope": "For any finite dimension, a reversed nonnegative-real affine certificate with all eleven weak rules and an eligible positive offset gap can be normalized: zero initial matrix, unchanged initial offset, one selected output row relocated to any distinguished coordinate, zero output offset, and a selected gap at least one by positive readout scaling. All eleven original weak comparisons are preserved. No upper coefficient bound is imposed or claimed preserved. The normalized unit-gap rules imply Collatz through the retained real certificate theorem. These are conditional theorems, not a witness or a Collatz proof.",
+  "status": "PASS"
+}

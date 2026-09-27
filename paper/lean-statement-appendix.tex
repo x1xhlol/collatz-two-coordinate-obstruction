@@ -1,0 +1,139 @@
+% Exact excerpts extracted from the frozen Lean sources; no proof body is reproduced.
+% Preamble requirements: \usepackage{fontspec,fancyvrb}
+%                       \newfontfamily\leanappendixfont{FreeMono}
+% Insert after \appendix in the main document. This snippet adds no page breaks.
+% Source SHA256 ReversedBinaryPowerClosure.lean: 6f448bb1475e4214a10d4acdac8835d526a559d166c93acfd910e39bca23f281
+% Source SHA256 ReversedRealNormalization.lean: 947bb86b18f46ba0f150437c4a334c79a18b89bbc73b5855eff9381237b23761
+% Source SHA256 FullTwoBasic.lean: 38d6e8029e7fff5a948aca33ad661b28ed232ac527c3627882eac397cf00780e
+% Source SHA256 FullTwoCoordinate.lean: 429785555eecec277248380fe0c2e767c8c7303cf0e2712de29878dda2bd29a0
+
+\section{Exact Lean declarations}
+\label{app:lean-statements}
+The blocks below reproduce the checked source verbatim, with the original
+line numbers. The final block ends at the theorem's type; its proof term is
+omitted. Source paths are relative to the repository root.
+
+The affine definitions and \texttt{ReversedRealWeak} are in
+\texttt{CollatzCertificate}. The two-coordinate definitions and final theorem
+are in \texttt{CollatzResearch.FullTwo}. Matrix notation is opened in both
+namespaces. The order on vectors is pointwise, so \texttt{Weak X Y} means
+that every coefficient of \texttt{Y} is at most the corresponding coefficient
+of \texttt{X}. Composition places the left argument outside the right argument.
+
+\paragraph{Ambient types and the coefficient order.}
+\noindent\texttt{\detokenize{formal/ReversedBinaryPowerClosure.lean}}, lines 10--17.
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=10,numbersep=5pt,xleftmargin=18pt]
+variable {n : Type*} [Fintype n]
+
+abbrev Vec (n : Type*) := n → ℝ
+abbrev Mat (n : Type*) := Matrix n n ℝ
+
+def EntrywiseLE (M N : Mat n) : Prop := ∀ i j, M i j ≤ N i j
+
+local infix:50 " ≤ₘ " => EntrywiseLE
+\end{Verbatim}
+
+\paragraph{Affine composition and comparison.}
+\noindent\texttt{\detokenize{formal/ReversedBinaryPowerClosure.lean}}, lines 255--266.
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=255,numbersep=5pt,xleftmargin=18pt]
+structure Affine (n : Type*) where
+  matrix : Mat n
+  offset : Vec n
+
+def Affine.comp (X Y : Affine n) : Affine n :=
+  ⟨X.matrix * Y.matrix, X.matrix *ᵥ Y.offset + X.offset⟩
+
+def Affine.Nonnegative (X : Affine n) : Prop :=
+  (0 ≤ₘ X.matrix) ∧ 0 ≤ X.offset
+
+def Affine.Weak (X Y : Affine n) : Prop :=
+  (Y.matrix ≤ₘ X.matrix) ∧ Y.offset ≤ X.offset
+\end{Verbatim}
+
+\paragraph{Two coordinates and admissibility.}
+\noindent\texttt{\detokenize{formal/FullTwoBasic.lean}}, lines 9--11.
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=9,numbersep=5pt,xleftmargin=18pt]
+abbrev Aff2 := Affine (Fin 2)
+
+def Admissible (X : Aff2) : Prop := X.Nonnegative ∧ 1 ≤ X.matrix 0 0
+\end{Verbatim}
+
+\paragraph{Forward weak rules.}
+\noindent\texttt{\detokenize{formal/FullTwoBasic.lean}}, lines 21--32.
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=21,numbersep=5pt,xleftmargin=18pt]
+structure ForwardWeak (A B C D E F G : Aff2) : Prop where
+  ad : (A.comp D).Weak D
+  bd : (B.comp D).Weak (G.comp D)
+  ae : (A.comp E).Weak (E.comp A)
+  af : (A.comp F).Weak (E.comp B)
+  ag : (A.comp G).Weak (F.comp A)
+  be : (B.comp E).Weak (F.comp B)
+  bf : (B.comp F).Weak (G.comp A)
+  bg : (B.comp G).Weak (G.comp B)
+  ce : (C.comp E).Weak (C.comp B)
+  cf : (C.comp F).Weak (C.comp (A.comp A))
+  cg : (C.comp G).Weak (C.comp (A.comp B))
+\end{Verbatim}
+
+\paragraph{Forward offset equalities.}
+\noindent\texttt{\detokenize{formal/FullTwoBasic.lean}}, lines 34--45.
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=34,numbersep=5pt,xleftmargin=18pt]
+structure ForwardGapsZero (A B C D E F G : Aff2) : Prop where
+  ad : (A.comp D).offset 0 = D.offset 0
+  bd : (B.comp D).offset 0 = (G.comp D).offset 0
+  ae : (A.comp E).offset 0 = (E.comp A).offset 0
+  af : (A.comp F).offset 0 = (E.comp B).offset 0
+  ag : (A.comp G).offset 0 = (F.comp A).offset 0
+  be : (B.comp E).offset 0 = (F.comp B).offset 0
+  bf : (B.comp F).offset 0 = (G.comp A).offset 0
+  bg : (B.comp G).offset 0 = (G.comp B).offset 0
+  ce : (C.comp E).offset 0 = (C.comp B).offset 0
+  cf : (C.comp F).offset 0 = (C.comp (A.comp A)).offset 0
+  cg : (C.comp G).offset 0 = (C.comp (A.comp B)).offset 0
+\end{Verbatim}
+
+\paragraph{Reversed weak rules.}
+Here the index type is finite and has decidable equality; the final
+theorem instantiates it with \texttt{Fin 2}.
+\noindent\texttt{\detokenize{formal/ReversedRealNormalization.lean}}, lines 83--94.
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=83,numbersep=5pt,xleftmargin=18pt]
+structure ReversedRealWeak (A B C D E F G : Affine ι) : Prop where
+  da : (D.comp A).Weak D
+  db : (D.comp B).Weak (D.comp G)
+  ea : (E.comp A).Weak (A.comp E)
+  fa : (F.comp A).Weak (B.comp E)
+  ga : (G.comp A).Weak (A.comp F)
+  eb : (E.comp B).Weak (B.comp F)
+  fb : (F.comp B).Weak (A.comp G)
+  gb : (G.comp B).Weak (B.comp G)
+  ec : (E.comp C).Weak (B.comp C)
+  fc : (F.comp C).Weak (A.comp (A.comp C))
+  gc : (G.comp C).Weak (B.comp (A.comp C))
+\end{Verbatim}
+
+\paragraph{Reversed offset equalities.}
+\noindent\texttt{\detokenize{formal/FullTwoBasic.lean}}, lines 47--58.
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=47,numbersep=5pt,xleftmargin=18pt]
+structure ReversedGapsZero (A B C D E F G : Aff2) : Prop where
+  da : (D.comp A).offset 0 = D.offset 0
+  db : (D.comp B).offset 0 = (D.comp G).offset 0
+  ea : (E.comp A).offset 0 = (A.comp E).offset 0
+  fa : (F.comp A).offset 0 = (B.comp E).offset 0
+  ga : (G.comp A).offset 0 = (A.comp F).offset 0
+  eb : (E.comp B).offset 0 = (B.comp F).offset 0
+  fb : (F.comp B).offset 0 = (A.comp G).offset 0
+  gb : (G.comp B).offset 0 = (B.comp G).offset 0
+  ec : (E.comp C).offset 0 = (B.comp C).offset 0
+  fc : (F.comp C).offset 0 = (A.comp (A.comp C)).offset 0
+  gc : (G.comp C).offset 0 = (B.comp (A.comp C)).offset 0
+\end{Verbatim}
+
+\paragraph{The final theorem statement.}
+\noindent\texttt{\detokenize{formal/FullTwoCoordinate.lean}}, lines 30--34.
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=30,numbersep=5pt,xleftmargin=18pt]
+theorem full_two_coordinate_obstruction (A B C D E F G : Aff2)
+    (hA : Admissible A) (hB : Admissible B) (hC : Admissible C) (hD : Admissible D)
+    (hE : Admissible E) (hF : Admissible F) (hG : Admissible G) :
+    (ForwardWeak A B C D E F G → ForwardGapsZero A B C D E F G) ∧
+    (ReversedRealWeak A B C D E F G → ReversedGapsZero A B C D E F G)
+\end{Verbatim}

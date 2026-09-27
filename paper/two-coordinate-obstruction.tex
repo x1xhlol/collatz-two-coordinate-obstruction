@@ -1,0 +1,603 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array}
+\usepackage{lmodern,microtype,fancyhdr}
+\usepackage{fontspec,fancyvrb}
+\usepackage[hidelinks]{hyperref}
+\newfontfamily\leanappendixfont{FreeMono}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\R}{\mathbb R}
+\newcommand{\nn}{\R_{\ge0}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\gap}{\operatorname{gap}}
+\newcommand{\rev}{\operatorname{rev}}
+\newcommand{\code}[1]{\texttt{#1}}
+\DeclareMathOperator{\im}{im}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Affine interpretations in two coordinates}
+\fancyhead[R]{\small Lucas Valbuena}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parindent}{1.1em}
+\setlength{\parskip}{3pt}
+\setlength{\abovedisplayskip}{7pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{7pt plus 2pt minus 2pt}
+\hypersetup{pdftitle={A two-coordinate obstruction for affine interpretations of the Yolcu--Aaronson--Heule Collatz system},pdfauthor={Lucas Valbuena},pdfsubject={Lean-checked obstruction for strictly monotone affine interpretations}}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\LARGE\bfseries A two-coordinate obstruction for affine\\[3pt]
+interpretations of the Yolcu--Aaronson--Heule\\[3pt]
+Collatz system\par}
+\vspace{8pt}
+{\large Lucas Valbuena\par}
+\vspace{4pt}
+{\normalsize 27 September 2026}
+\end{center}
+\vspace{2pt}
+\begin{abstract}
+We prove a restriction on matrix-interpretation proofs for the
+eleven-rule Collatz system constructed by Yolcu, Aaronson, and Heule.
+For nonnegative real affine maps in two coordinates, assume that every
+symbol matrix has first diagonal entry at least one. If all eleven rules
+are weakly oriented coefficientwise, every first-coordinate offset gap
+is zero. Thus no rule can be removed in a first step using this strictly
+monotone interpretation format, regardless of coefficient size. The
+same conclusion holds after word reversal and allows arbitrary
+admissible boundary maps. The proof includes singular matrices and zero
+secondary entries. Lean 4 checks the complete theorem and its supporting
+algebra. The relaxed TOP setting and arctic interpretations are outside
+the theorem's scope.
+\end{abstract}
+
+\section{Introduction}
+Yolcu, Aaronson, and Heule constructed a mixed binary--ternary string
+rewriting system whose termination is equivalent to the Collatz
+conjecture~\cite[Theorem~3.17]{yah}. Their construction turns a question
+about integer trajectories into a termination problem for eleven rules.
+The system, its arithmetic interpretation, and that equivalence are
+their results. This paper studies a restriction on possible
+matrix-interpretation proofs for their system.
+
+Rule removal builds a termination proof in stages. An interpretation
+orients all remaining rules weakly and a nonempty subset strictly;
+relative termination then permits removal of that subset. Repeating
+the process can establish termination~\cite[Theorems~2.6 and~2.15]{yah}.
+The first step therefore needs at least one strict rule while retaining
+weak comparisons for the complete system.
+
+Our result rules out that first step in two coordinates for the
+strictly monotone affine format defined below. It quantifies over all
+admissible nonnegative real coefficients, including irrational ones,
+and imposes no upper bound. A failed bounded SAT search cannot establish
+this conclusion: it leaves larger coefficients and coefficients outside
+its encoding unexamined. The obstruction is algebraic. It forces all
+eleven candidate strict gaps to vanish, rather than excluding one
+chosen rule or one coefficient range.
+
+Dimension restrictions matter in this setting. Yolcu, Aaronson, and
+Heule report that, for some weakened variants, their tool found only
+interpretations of dimension five~\cite[p.~4]{yah}. Their Table~1 also
+records a natural dimension-five certificate for the subsystem omitting
+\(bf\to ga\) in our notation. These are search outcomes, not proofs
+of minimal dimension. The present result supplies a coefficient-independent
+exclusion for the full system in dimension two, within a narrower,
+precisely stated interpretation format.
+
+The proof has two parts. First, the matrix comparisons force the five
+digit matrices to share a triangular orientation, with unit first
+diagonals. Second, an affine analysis forces every first-offset gap to
+zero. The upper triangular case requires retaining products between
+matrix entries and offsets, including several zero-slope cases.
+All new obstruction results are formalized in Lean. Appendix~\ref{app:lean-statements}
+reproduces the definitions and the exact final theorem type.
+
+\section{The system and the interpretation format}
+\label{sec:format}
+We use the alphabet $\{a,b,c,d,e,f,g\}$ and the ASCII names from
+the authors' implementation~\cite{yahcode}. Table~\ref{tab:symbols}
+relates these names to the symbols in their article. The rules are
+their full mixed-base system~\cite[Section~3.2]{yah},
+with the leftmost symbol interpreted as the outermost map:
+\begin{equation}\label{eq:rules}
+\begin{array}{lll}
+ ad\to d, & bd\to gd, & \\
+ ae\to ea, & af\to eb, & ag\to fa,\\
+ be\to fb, & bf\to ga, & bg\to gb,\\
+ ce\to cb, & cf\to caa, & cg\to cab.
+\end{array}
+\end{equation}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+This paper and the ASCII implementation & $a$ & $b$ & $c$ & $d$ & $e$ & $f$ & $g$\\
+Yolcu--Aaronson--Heule~\cite{yah} & $\mathtt f$ & $\mathtt t$ &
+$\triangleleft$ & $\triangleright$ & $\mathtt0$ & $\mathtt1$ & $\mathtt2$\\
+\bottomrule
+\end{tabular}
+\caption{Symbol correspondence. The letters $a,b$ are binary digits,
+$e,f,g$ are ternary digits, and $c,d$ mark the boundaries.}
+\label{tab:symbols}
+\end{table}
+
+The five symbols $a,b,e,f,g$ are called digits; $c,d$ are boundary symbols.
+Assign to each symbol $s$ an affine map $F_s(x)=M_sx+v_s$ on $\R^2$.
+An interpretation is \emph{admissible} when
+\begin{equation}\label{eq:admissible}
+M_s\in\nn^{2\times2},\qquad v_s\in\nn^2,\qquad (M_s)_{00}\ge1
+\quad\text{for every }s.
+\end{equation}
+For words, composition determines $M_w,v_w$; in particular,
+$M_{uv}=M_uM_v$ and $v_{uv}=M_uv_v+v_u$.
+A rule $\ell\to r$ is \emph{weak} if $M_\ell\ge M_r$ and $v_\ell\ge v_r$
+entrywise. Its first-offset gap is
+$\gap(\ell,r)=(v_\ell)_0-(v_r)_0$.
+The strictness criterion considered here is $\gap(\ell,r)>0$.
+
+\begin{theorem}\label{thm:main}
+For every admissible interpretation in two real coordinates, weak
+orientation of all eleven rules in \eqref{eq:rules} implies
+$\gap(\ell,r)=0$ for every rule. The same assertion holds for the eleven
+rules $\rev(\ell)\to\rev(r)$, where each word is reversed and the direction
+of every rule is retained.
+\end{theorem}
+
+The two orientations are separate implications, not simultaneous
+hypotheses. There is no coefficient bound, integrality requirement,
+nonsingularity assumption, or prescribed boundary shape. The conclusion
+concerns the first offsets; it does not assert equality of the complete
+affine maps. The following sections describe the checked proof. The
+formal artifact contains the full algebraic case analyses behind the
+compressed arguments below.
+
+\subsection{Scope and soundness}
+The theorem covers the strictly monotone, full-context interpretation
+format specified in \eqref{eq:admissible} only. Every symbol, including
+both boundaries, must satisfy $(M_s)_{00}\ge1$. The relaxed \textsc{top}
+setting remains unresolved by this theorem. It does not exclude interpretations used
+only for relative top termination, where strict monotonicity of every
+symbol is not required. In particular, it does not settle the top-removal
+approach in Yolcu--Aaronson--Heule's Lemma~3.18~\cite{yah}.
+Arctic interpretations, other strict orders, and higher dimensions are
+also outside its scope.
+
+Real coefficients require a fixed positive decrement. For $\delta>0$,
+put
+\[
+x\succ_\delta y\quad\Longleftrightarrow\quad
+x_0\ge y_0+\delta\ \text{ and }\ x_1\ge y_1,
+\qquad x,y\in\nn^2.
+\]
+Along a decrease, $\lfloor x_0/\delta\rfloor$ strictly decreases in
+$\mathbb N$, so $\succ_\delta$ is well-founded. Nonnegative affine maps
+preserve coordinatewise weak order. The bound $(M_s)_{00}\ge1$ also
+preserves $\succ_\delta$, since
+\[
+\bigl(F_s(x)-F_s(y)\bigr)_0
+ = (M_s)_{00}(x_0-y_0)+(M_s)_{01}(x_1-y_1)\ge\delta.
+\]
+A weak rule with first-offset gap $\varepsilon>0$ decreases by at least
+$\varepsilon$ at every nonnegative input. For a finite nonempty set of
+strict rules, the least such gap supplies a common $\delta>0$.
+These observations explain the real-coefficient certificate format;
+ordinary strict inequality on the reals alone would not suffice.
+Theorem~\ref{thm:main} prevents even this first choice of a strict rule.
+The preservation, evaluation, and well-foundedness claims above are
+formalized separately in \code{FullTwoSoundness.lean}.
+
+\section{Reduction of the digit matrices}
+Write $A,B,C,D,E,F,G$ for the seven matrices and set
+$H=A+B+E+F+G$. The matrix parts of the six swaps give
+\begin{equation}\label{eq:swaps}
+AE\ge EA,\quad AF\ge EB,\quad AG\ge FA,\quad
+BE\ge FB,\quad BF\ge GA,\quad BG\ge GB.
+\end{equation}
+
+\begin{lemma}\label{lem:matrix}
+Under the matrix hypotheses of Theorem~\ref{thm:main}, the five digit
+matrices are all upper triangular or all lower triangular in the original
+coordinates. Moreover, $A_{00}=B_{00}=E_{00}=F_{00}=G_{00}=1$.
+This holds in both word orientations.
+\end{lemma}
+
+\begin{proof}[Proof outline]
+Suppose $H_{01},H_{10}>0$. With $P=A+B$, the sum of the six nonnegative
+differences in \eqref{eq:swaps} is $PH-HP$. The checked identities
+$\tr(H^k(PH-HP))=0$, for $k=0,1$, force every entry of this commutator to
+vanish: $k=0$ treats the diagonal, and $k=1$ treats the off-diagonal
+entries. Each of the six differences therefore vanishes separately.
+The resulting exact swaps are incompatible with the boundary
+inequalities, as follows.
+
+If $\det F=0$, the exact relations yield a common positive left row.
+The rank-one identities and the checked two-dimensional stationary-vector
+lemma supply the corresponding right actions. Applying $BD\ge GD$ and
+$CF\ge CA^2$ gives $\alpha\ge\beta\ge\alpha^2$, with $\alpha\ge1$.
+Thus both eigenvalues are one. Positivity forced by $H_{01},H_{10}>0$
+contradicts the rank-one trace and the first-diagonal lower bound.
+
+If $\det F\ne0$, determinant identities give either $\det A=\det B=0$
+or nonsingularity of all five digits. For singular $A,B$, their traces
+coincide. When $A=B$, the common rank-one argument applies. Otherwise,
+writing this positive trace as $\alpha$, exact swaps force
+\[
+AB=\alpha A,\quad BA=\alpha B,\quad
+F=\beta I,\quad E=(\beta/\alpha)A,\quad G=(\beta/\alpha)B.
+\]
+The boundaries give $\alpha^2\le\beta\le\alpha$; hence
+$\alpha=\beta=1$. The diagonal bounds and the two product identities
+then force all four mixed off-diagonal products to be zero, contradicting
+the assumed positivity of both off-diagonals of $H$.
+
+In the nonsingular case $A=B$ forces $E=F=G$. The inequalities
+$AD\ge D$, $ED\le AD$, $CE\ge CA^2$, together with $AE=EA$, give an
+entrywise contradiction to $H_{01},H_{10}>0$. If $A\ne B$, an exact
+classification gives $\mu,t>0$ with
+\begin{gather*}
+\tr A=\tr B=3\mu,\qquad \det A=\det B=2\mu^2,\\
+E=t(2A-\mu I),\quad F=t(A+B-\mu I),\quad G=t(2B-\mu I).
+\end{gather*}
+Put $U=A-\mu I$, $V=B-\mu I$. These matrices are nonnegative and satisfy
+$U^2=UV=\mu U$, $VU=V^2=\mu V$. The boundary inequalities give
+$3t\le2$ and, for $u=(CU)_{00}$, $v=(CV)_{00}$,
+\[
+u+v\le3tu,\qquad 2\mu(u+v)\le3tv,\qquad u+v>0.
+\]
+Consequently $\mu\le\tfrac12$. The trace and diagonal bounds force
+$\mu=\tfrac12$ and $U_{11}=V_{11}=0$, contradicting
+$(U+V)^2=2\mu(U+V)$ and positive off-diagonals.
+
+Thus $H$ has a zero off-diagonal entry. Nonnegativity makes that entry
+zero in every digit. Expanding the triangular swap and boundary
+inequalities then forces the five first diagonals to be one; both zero
+and positive secondary-diagonal cases are included in the formal proof.
+Transposition converts the reversed matrix rules to the forward ones.
+\end{proof}
+
+\section{The lower triangular affine case}
+After Lemma~\ref{lem:matrix}, lower triangular digit maps have the form
+\begin{equation}\label{eq:lower}
+F_s(x,y)=(x+h_s,\ q_sx+z_sy+k_s),\qquad h_s,q_s,z_s,k_s\ge0.
+\end{equation}
+Their first offsets add under composition. The six weak swap gaps sum
+to zero, so all six vanish and
+\begin{equation}\label{eq:twooffsets}
+h_a=h_b=r,\qquad h_e=h_f=h_g=u,\qquad r,u\ge0.
+\end{equation}
+
+\begin{proposition}\label{prop:lower}
+For lower digit maps \eqref{eq:lower}, every first-offset gap vanishes in
+either orientation, with arbitrary admissible boundary maps.
+\end{proposition}
+
+\begin{proof}[Forward orientation]
+The dynamic rule $bd\to gd$ gives $r\ge u$. Write the first row of $C$
+as $(c_0,c_1)$, with $c_0\ge1$. If $c_1=0$, the $cf$ boundary gives
+$u\ge2r$, hence $r=u=0$, and every boundary gap is zero.
+
+Suppose $c_1>0$. The lower rows of the digit matrix products define
+scalar affine maps $y\mapsto z_sy+q_s$. The matrix inequalities induce
+all the forward scalar constraints, with outer boundary the identity and
+inner boundary the constant $D_{10}/D_{00}$. The checked scalar
+classification gives precisely two possibilities: every $q_s=0$, or
+every $q_s=v>0$ and every $z_s=0$.
+
+If every $q_s=0$, apply the scalar classification to
+$y\mapsto z_sy+k_s$. Put
+\[
+\Delta_e=k_e-k_b,\quad
+\Delta_f=k_f-(1+z_a)k_a,\quad
+\Delta_g=k_g-k_a-z_ak_b.
+\]
+The original boundary offset inequalities give
+$c_1\Delta_e\ge c_0(r-u)$ and
+$c_1\Delta_f,c_1\Delta_g\ge c_0(2r-u)$.
+Since $r\ge u$, these supply the remaining scalar weak constraints.
+The scalar result makes all three $\Delta$'s zero. Hence $u\ge2r$,
+so $r=u=0$ and all eleven first-offset gaps vanish.
+
+In the other case, $q_s=v>0$ and $z_s=0$. The second-offset $ag$
+inequality and first-offset $cf$ inequality yield
+\[
+k_a-k_f\ge v(r-u),\qquad
+k_f-k_a\ge vr+(c_0/c_1)(2r-u).
+\]
+Their sum forces $r=u=0$. The remaining weak inequalities make all five
+$k_s$ equal, so the three boundary gaps vanish as well.
+\end{proof}
+
+\begin{proof}[Reversed orientation]
+The first-offset swap equalities still give \eqref{eq:twooffsets}; now
+the inner boundary $fc\to aac$ gives $u\ge2r$. If $D_{01}=0$, the
+outer dynamic comparison gives $r\ge u$, and the result follows.
+For $D_{01}>0$, the matrix constraints yield a reversed scalar system
+for $z_sy+q_s$. Its checked classification gives either all $q_s=0$ or
+\[
+z_a=1,\quad z_b=z_f=z_g=0,\quad
+q_a=0,\quad q_b=q_f=q_g=\beta\ge0.
+\]
+In the zero case, the scalar reversed theorem applied to $z_sy+k_s$
+gives $k_a=0$ and $k_b=k_g$. The outer $db$ inequality then forces
+$r=u=0$. In the exceptional case, $gb\to bg$ gives $k_g\ge k_b$;
+combining this with $db\to dg$ again gives $r=u=0$ and $k_b=k_g$.
+The remaining swaps force $k_a=0$. The two dynamic gaps are therefore
+zero, and the other nine gaps already vanish.
+\end{proof}
+
+\section{Upper normalization and aggregate cancellation}
+\label{sec:upper-normalization}
+Upper digit maps with unit first diagonals have the form
+\begin{equation}\label{eq:upper}
+F_s(x,y)=(x+q_sy+h_s,\ z_sy+k_s),\qquad q_s,z_s,h_s,k_s\ge0.
+\end{equation}
+In the forward orientation, replace the boundary maps by
+\begin{equation}\label{eq:normal}
+\widehat C(x,y)=(x+\kappa y,0),\quad
+\widehat D(x,y)=(x,\tau),\qquad
+\kappa=C_{01}/C_{00},\quad \tau=(v_d)_1.
+\end{equation}
+The outer boundary matrix and offset comparisons in coordinate zero
+are divided by $C_{00}>0$. The dynamic offset differences are unchanged,
+and their normalized matrix differences are zero. Thus all weak rules
+are preserved, and zero first-offset gaps in the normalized model imply
+zero gaps in the original model. This leaves 22 nonnegative parameters.
+
+For a digit word, composition in \eqref{eq:upper} is described exactly by
+\begin{equation}\label{eq:composition}
+\begin{aligned}
+q_{uv}&=q_v+q_uz_v,& z_{uv}&=z_uz_v,\\
+h_{uv}&=h_u+h_v+q_uk_v,& k_{uv}&=k_u+z_uk_v.
+\end{aligned}
+\end{equation}
+In particular, the products $q_uk_v$ remain in every offset comparison.
+
+\begin{lemma}\label{lem:aggregate}
+Put
+\[
+\begin{array}{lll}
+p=z_a+z_b-2,& Q=q_a+q_b,& R=k_a+k_b,\\
+r=z_e+z_f+z_g-3,& P=q_e+q_f+q_g,& K=k_e+k_f+k_g.
+\end{array}
+\]
+The sums of the six swap gaps in the $q,k,h$ coordinates are
+\begin{equation}\label{eq:aggregate}
+G_q=rQ-pP\ge0,\quad G_k=pK-rR\ge0,\quad G_h=QK-PR\ge0.
+\end{equation}
+If $p<0$ or $r<0$, and $Q+P,R+K>0$, all six affine swaps are exact.
+\end{lemma}
+\begin{proof}
+Expanding \eqref{eq:composition} gives \eqref{eq:aggregate} and
+\[
+RG_q+QG_k=pG_h,\qquad KG_q+PG_k=rG_h.
+\]
+A negative coefficient on the right forces $G_h=0$. Adding the resulting
+equalities gives $(R+K)G_q+(Q+P)G_k=0$, hence $G_q=G_k=0$.
+Every individual gap in these sums is nonnegative. The secondary-slope
+swap gaps also sum to zero, completing the assertion.
+\end{proof}
+
+Two checked degenerate lemmas dispose of $Q+P=0$ and $R+K=0$ without
+any condition on the secondary slopes. In the second case all $k_s=0$;
+the first offsets reduce to \eqref{eq:twooffsets}. If $\tau=0$,
+$bd$ and $cf$ force $r=u=0$. If $\tau>0$, the matrix $q$-constraints
+form a reversed scalar system, which forces $q_a=0$ and $q_b=q_g$;
+the same conclusion follows. The zero-$q$ case follows from the forward
+scalar classification of the $k$-constraints.
+
+The remaining proof therefore assumes positive total $q$ and $k$.
+For exact swaps, a common form
+$q_s=\lambda(1-z_s)$, $k_s=\eta(1-z_s)$, with $\lambda,\eta>0$,
+is impossible. Indeed, $H_s=h_s+\lambda k_s$ has binary value $L$
+and ternary value $N$. The dynamic rule gives $L\ge N$, while the $cf$
+matrix and offset comparisons give $N\ge2L$. Thus $L=N=0$, forcing
+every $k_s=0$, a contradiction. These identities also treat boundary
+parameter values equal to zero.
+
+\section{Completion of the upper case and word reversal}
+\begin{proposition}\label{prop:upper}
+Every normalized upper model satisfying all eleven weak forward rules
+has zero first-offset gap in every rule.
+\end{proposition}
+\begin{proof}[Proof outline]
+First suppose $z_a,z_b>0$. The exact slope comparisons make
+$z_e=z_f=z_g=s$. If $s>0$, they also make $z_a=z_b=t$.
+For exact swaps between triangular matrices with diagonals
+$(\alpha,\rho)$ and $(\beta,\sigma)$, with $\alpha,\beta,\rho>0$,
+the checked resonance calculation
+gives either equal binary off-diagonals and equal ternary off-diagonals,
+or $\rho=2\alpha$, $\sigma=3\beta$.
+
+If $\min(s,t)<1$, Lemma~\ref{lem:aggregate} makes the swaps exact.
+The $q$ resonance $(t,s)=(2,3)$ is unavailable, so
+$q_s=\lambda(1-z_s)$ with $\lambda>0$. The $k$ calculation gives the
+common form from Section~\ref{sec:upper-normalization}, except at
+$(t,s)=(1/2,1/3)$. At that
+exceptional pair, the $ce$ and $cf$ matrix gaps force $\kappa=\lambda$;
+the projected offset argument still gives $L\ge N\ge2L$.
+If $s,t\ge1$, the unit case is checked separately. For $1\le s\le t$
+with $t>1$, the boundary inequalities give $P\ge2Q$, whereas the
+aggregate inequality gives $P\le\tfrac32Q$, forcing every $q_s=0$.
+For $s>t\ge1$, the $bg$ and $bd$ secondary inequalities force
+$k_b=k_g=\tau=0$, and the remaining swaps force every $k_s=0$.
+If $s=0$, exact swaps yield the same common form directly, even when
+the two positive binary slopes differ.
+
+Now suppose at least one binary slope is zero. If the other exceeds
+one, the swap inequalities force every $q_s=0$. Otherwise $p<0$, so
+Lemma~\ref{lem:aggregate} again makes all swaps exact. When exactly one
+binary slope is zero, the common form follows directly. When both are
+zero, the same holds unless
+\[
+(z_a,z_b,z_e,z_f,z_g)=(0,0,0,1,0),\qquad
+q_a=q_b=q_e=q_g=q>0,\quad q_f=0.
+\]
+In this exceptional branch, $k_e=k_a$, $k_f=0$, $k_g=k_b$, and $cf$
+gives $\kappa\ge q$. Exact swaps and the $bd,cf$ offset comparisons
+force $h_a+\kappa k_a\le0$, then $k_a=k_b=0$, contradicting positive
+total $k$. This exhausts the slope cases; the degenerate lemmas give
+all eleven zero-gap equalities in every surviving model.
+\end{proof}
+
+For reversed upper models, normalize instead
+\[
+\widehat D(x,y)=(x+\lambda y,0),\qquad
+\widehat C(x,y)=(x,\sigma),\qquad
+\lambda=D_{01}/D_{00},\quad \sigma=(v_c)_1.
+\]
+The same entrywise argument preserves all weak rules and transfers
+zero gaps back to the original boundaries. For an upper affine map,
+write its homogeneous matrix as
+\[
+\mathcal H_s=\begin{pmatrix}1&q_s&h_s\\0&z_s&k_s\\0&0&1\end{pmatrix}.
+\]
+If $J$ reverses the three coordinates, $\Phi(\mathcal H)=J\mathcal H^\mathsf TJ$
+reverses products. It exchanges $q_s,k_s$ and preserves $z_s,h_s$.
+Thus it preserves entrywise inequalities and the first-offset entry,
+while converting the normalized reversed rules into the forward rules.
+The boundary forms exchange; the symbol labels do not. This operation
+is used only after normalization, when every image is again affine.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Apply Lemma~\ref{lem:matrix}. For lower digits use
+Proposition~\ref{prop:lower}. For upper digits, normalize the boundaries
+and use Proposition~\ref{prop:upper}; in the reversed orientation first
+apply $\Phi$. The checked normalization lemmas transfer each of the
+eleven zero gaps back to the original interpretation.
+\end{proof}
+
+\section{Formal statement, verification, and scope}
+The formalization uses Lean~4 and mathlib~\cite{lean4,mathlib}. Matrices
+and offsets are functions on \code{Fin 2} with values in $\R$.
+The shared definition \code{Affine.comp X Y} is
+\[
+(M_XM_Y,\ M_Xv_Y+v_X),
+\]
+so the formal composition convention is the one used throughout this
+paper. \code{Admissible} is exactly \eqref{eq:admissible};
+\code{ForwardWeak} and \code{ReversedRealWeak} each contain eleven
+coefficientwise comparisons. The two zero-gap records each contain
+eleven equalities at offset index zero.
+
+The main declarations in \code{FullTwoCoordinate.lean} are
+\begin{center}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Declaration in \code{CollatzResearch.FullTwo} & Conclusion\\
+\midrule
+\code{forward\_all\_gaps\_zero} & Eleven forward gaps vanish\\
+\code{reversed\_all\_gaps\_zero} & Eleven reversed gaps vanish\\
+\code{full\_two\_coordinate\_obstruction} & Both implications\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each declaration reports only \code{propext}, \code{Classical.choice},
+and \code{Quot.sound}. No additional axiom or proof placeholder is used.
+The complete dependency closure of 50 local modules was rebuilt in a
+fresh directory, and an
+additional audit queries the axioms of every public theorem and lemma
+in that closure, 222 declarations in total. The retained report records the exact source inventory,
+source and compiled-module hashes, compiler outputs, dependency revisions,
+and the final theorem audit. Existing local compiled files are excluded
+from that fresh build.
+
+The fixed-gap soundness lemmas use the namespace
+\code{CollatzResearch.FullTwoSoundness}:
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}
+\code{admissible\_preserves\_gap} & Preservation under admissible maps\\
+\code{weak\_rule\_gives\_gap} & Evaluation of a weak rule with an offset gap\\
+\code{gap\_wellFounded} & Well-foundedness for a positive decrement
+\end{tabular}
+\end{center}
+Their separate fresh build covers eight local
+modules and audits 65 public declarations, with the same restriction
+to standard axioms. This supplementary check is recorded in
+\path{verification/soundness-rebuild.json}; it does not formalize the
+prior Collatz equivalence or the general rule-removal theorem.
+
+The checked environment is Lean~4.27.0 with mathlib revision
+\begin{center}\small\code{a3a10db0e9d66acbebf76c5e6a135066525ac900}.\end{center}
+The main source has SHA-256
+\begin{center}\scriptsize\code{429785555eecec277248380fe0c2e767c8c7303cf0e2712de29878dda2bd29a0}.\end{center}
+From the artifact root, the verification entry point is
+\begin{quote}\small\ttfamily
+python3 formal/check\_full\_two\_coordinate.py \textbackslash\newline
+\hspace*{1em}--mathlib-root /path/to/pinned/mathlib \textbackslash\newline
+\hspace*{1em}--build-root /path/to/temporary/builds \textbackslash\newline
+\hspace*{1em}--report /path/to/fresh-check.json
+\end{quote}
+The retained verification record is
+\code{formal/full-two-coordinate-lean-check.json}. A separate statement
+review compares the final declarations, affine definitions, and all
+eleven rule pairs against the original research statement. That review
+is supplementary; the kernel check supplies the proof verification.
+Appendix~\ref{app:lean-statements} exposes the actual definitions and
+theorem type, so the connection between the prose and the formal claim
+can be inspected directly.
+
+The trust boundary consists of Lean's kernel and the stated foundational
+axioms, together with the definitions shown in the appendix. Automated
+tactics construct proof terms that the kernel checks. The build rejects
+proof placeholders and additional axioms; it does not use numerical
+search results as proof. Kernel acceptance establishes the Lean
+proposition. The symbol table, appendix, and statement review address
+the separate question of whether that proposition is the one claimed
+in the paper. The Collatz equivalence is cited from prior work and is
+not asserted to have been re-formalized by this artifact.
+
+\subsection{Availability and reproducibility}
+The paper, Lean sources, verification scripts, retained compiler output,
+and claim-to-declaration map are available at
+\begin{center}\small
+\url{https://github.com/x1xhlol/collatz-two-coordinate-obstruction}.
+\end{center}
+The repository records the source hashes and pins the dependencies.
+Reproduction uses a new output path to preserve the supplied audit
+record. The main obstruction has no coefficient cap, integrality
+assumption, or nonsingularity assumption. It does retain every
+admissibility condition in Section~\ref{sec:format}. In particular,
+the result neither proves the Collatz conjecture nor excludes the
+relaxed \textsc{top} setting.
+
+\section*{Acknowledgments}
+I thank Emre Yolcu, Scott Aaronson, and Marijn J.\ H.\ Heule for making
+their rewriting system and implementation available. The formalization
+uses Lean and mathlib, and I thank their developers and contributors.
+
+\section*{Use of AI}
+OpenAI Codex was used extensively for mathematical exploration,
+development of the Lean proofs and verification scripts, and preparation
+and revision of this manuscript. The proof claims are supported by the
+accompanying Lean artifacts, rather than by the system's assertions.
+This disclosure does not imply review or endorsement by the authors
+of the underlying rewriting system.
+
+\begin{thebibliography}{9}\small
+\bibitem{yah} E. Yolcu, S. Aaronson, and M. J. H. Heule.
+\emph{An Automated Approach to the Collatz Conjecture}.
+Journal of Automated Reasoning \textbf{67}(2), Article 15, 2023.
+\url{https://doi.org/10.1007/s10817-022-09658-8}.
+\bibitem{yahcode} E. Yolcu, S. Aaronson, and M. J. H. Heule.
+\emph{Rewriting Collatz: implementation and rewriting systems}.
+\url{https://github.com/emreyolcu/rewriting-collatz}.
+\bibitem{lean4} L. de Moura and S. Ullrich.
+\emph{The Lean 4 Theorem Prover and Programming Language}.
+In Automated Deduction, CADE 28, pp. 625--635, 2021.
+\url{https://lean-lang.org/papers/lean4.pdf}.
+\bibitem{mathlib} The mathlib Community.
+\emph{The Lean mathematical library}.
+In Certified Programs and Proofs, CPP 2020.
+\url{https://doi.org/10.1145/3372885.3373824}.
+\end{thebibliography}
+\clearpage
+\appendix
+\input{lean-statement-appendix.tex}
+\end{document}

@@ -1,0 +1,174 @@
+{
+  "all_local_dependencies_built_in_fresh_directory": true,
+  "all_recompiled_predecessors_match_retained_evidence": true,
+  "builds": {
+    "ReversedBinaryPowerClosure": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-o",
+        "/dev/shm/reversed-swap-recurrence-c436gt4x/ReversedBinaryPowerClosure.olean",
+        "/home/ubuntu/collatz-research-2026-09-26/formal/ReversedBinaryPowerClosure.lean"
+      ],
+      "compiled_module_sha256": "7fada9149fd1d5d0991f6a97863dfef9b1bfd21d5f59dcadbed6e9deb2cc61cb",
+      "compiler_exit_code": 0,
+      "compiler_output": "'CollatzCertificate.binary_power_closure' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.first_gap_zero_of_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.first_gap_zero_of_return_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.first_gap_zero_of_coordinate_returns' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.positive_first_gap_has_transient_coordinate' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCertificate.ordered_reversed_gaps_zero_of_det_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCertificate.first_gap_le_BAa' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.first_gap_zero_of_BA_return_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.four_affine_rules_gaps_zero_of_det_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "declaration_axioms": {
+        "CollatzCertificate.binary_power_closure": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.first_gap_le_BAa": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.first_gap_zero_of_BA_return_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.first_gap_zero_of_coordinate_returns": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.first_gap_zero_of_det_ne_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.first_gap_zero_of_return_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.four_affine_rules_gaps_zero_of_det_ne_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.ordered_reversed_gaps_zero_of_det_ne_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.positive_first_gap_has_transient_coordinate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "6f448bb1475e4214a10d4acdac8835d526a559d166c93acfd910e39bca23f281"
+    },
+    "ReversedSwapRecurrence": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-o",
+        "/dev/shm/reversed-swap-recurrence-c436gt4x/ReversedSwapRecurrence.olean",
+        "/home/ubuntu/collatz-research-2026-09-26/formal/ReversedSwapRecurrence.lean"
+      ],
+      "compiled_module_sha256": "723acb417022e4c261574b280b10b17dd473acb599915ee35ad79e85903a8fa1",
+      "compiler_exit_code": 0,
+      "compiler_output": "'CollatzCertificate.nonnegative_matrix_power_entries' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.commutator_power_trace_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.nonnegative_commutator_return_product_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCertificate.nonnegative_commutator_zero_at_return' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.reversed_swap_equalities_at_return' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.reversed_swap_equalities_of_all_returns' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.reversed_swap_equalities_on_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCertificate.reversed_affine_swaps_exact_of_irreducible' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "declaration_axioms": {
+        "CollatzCertificate.commutator_power_trace_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.nonnegative_commutator_return_product_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.nonnegative_commutator_zero_at_return": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.nonnegative_matrix_power_entries": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.reversed_affine_swaps_exact_of_irreducible": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.reversed_swap_equalities_at_return": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.reversed_swap_equalities_of_all_returns": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCertificate.reversed_swap_equalities_on_diagonal": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "46cf2c22a17649a8e3c0330bbafcd5a21a0656dec7ec2bcd3beeff5eb17ba695"
+    }
+  },
+  "checked_at_utc": "2026-09-27T07:54:49.719922+00:00",
+  "checker_sources_sha256": {
+    "check_collatz_certificate_bridge.py": "04c35cec1405277697ea72511a2b982dcf0ef55fc87292aa5a04a961210b1c75",
+    "check_collatz_core.py": "5ddddcc8bf3acad8db6b43a011b5ea6ab6cda64d8001944c1a9c26581df364d4",
+    "check_collatz_finite_source_support.py": "284e81266093024c80ebaeb6ce5f7ce4730a6d64c0c9ca48c03d83d811ffd940",
+    "check_collatz_forward_certificate.py": "1dda1a434bf956cd77e235bf70a6733ad6b2402219dd85149d012e8072825669",
+    "check_collatz_mixed_support.py": "60ab188f67968f9cca3aad1b8e30af168dacfa2a7f6e4235b9412d73c894a246",
+    "check_collatz_odd_blocks.py": "40a874abef075881c9205a10df31c963a6c615229c7b239a50b2b2bca975601b",
+    "check_collatz_rank_growth.py": "b43e54436ca8325c4b681798e62f6ff71a627448d39401ffbb5ff168d9097620",
+    "check_collatz_reversed_certificate.py": "eeaae8b0d6eebb6f06eecf71ac555c25b8780d76cdcb8e59e8bb42c289a6ed79",
+    "check_collatz_reversed_conditions.py": "154136c1c9c0e9739cbe9bf6c59d632142365fd438dcd1a54eb2df4df941b70e",
+    "check_collatz_reversed_readout.py": "144d9ba7370e9b932e2b94a9ea565c81732bb7682fe848dc20ea85f8a92ca6b8",
+    "check_collatz_reversed_real_above_powers.py": "37720bd46c51c4a5dc50bc8cbfbd8e7d2e899120659a66b73965f686dfed6db4",
+    "check_collatz_reversed_real_certificate.py": "4d66c5a1ad1ef3c298ea98dc051588ee2287945a63d157c8cc04f0fab17eeb41",
+    "check_collatz_reversed_real_dynamics.py": "1e5bb210004032c1f6ecc5f63b7c3e9f802e379eeef53302a8eb92c41b953c70",
+    "check_collatz_reversed_real_growth.py": "c76036ffbbd245fb2cc760068cc7cdac86de5d3463f5e2589a88c9ea24ce1168",
+    "check_collatz_reversed_real_mixed_growth.py": "7c97f0dd74b9deebe0b2e6dec6ea0146d57bc033c7a7a49a0e8b496505dc2849",
+    "check_collatz_reversed_real_normalization.py": "9151c3a5ede950e003117de2aa1054fed168f0611a72940a537ee0e852175881",
+    "check_collatz_reversed_real_positive_offsets.py": "da0db74932aa6d3581ee6ffe97393c21b2224cd66b8ce27e9f5686cea93ac4f9",
+    "check_collatz_reversed_real_positive_word.py": "05c11fddd621230df361459863e99357d1a94cb8c50521a32225e8b8ed6ec6d3",
+    "check_collatz_reversed_real_power_contraction.py": "6d54f9d2df1edbd5ee313d3bcf2f40708177a12ab93fb62f27cfcf9e6ca55dc4",
+    "check_collatz_reversed_real_row_contraction.py": "d414fe00cc0491789b77e3d913ca6e837f684bd0992d6afbc5f2d4eb027f83fb",
+    "check_collatz_reversed_real_support_family.py": "2649115069c9e9b084f2a314921557160601b1b8612128086e1feeb1b1228942",
+    "check_collatz_reversed_row_interval.py": "7a3e127b988a06a5b1ec3984f0e35df6b5663e83a4b8fe6072bb186d28579cbb",
+    "check_collatz_reversed_row_transfer.py": "9cb880bab2549d839a071e7d9eb9032f5f0f300537ea2a5a70fe6bcf2ae04f3a",
+    "check_collatz_reversed_ternary_readout.py": "67bb79da4309d5061b03a2986f637c7fca09e491a0515e8611c2c99cc023f8ce",
+    "check_collatz_reversed_two_step_readout.py": "21d01830760eda0858e491d13e4b772cfc8d2e613f535453897f0dbbd4556224",
+    "check_collatz_support_family.py": "2ded7c90fb9b948fd4bdac06e75efad3781c5fa5b911afb4e2c2cdf3d9e2d810",
+    "check_reversed_binary_power_closure.py": "d6f6b5a204d4d109a0ae5a7237eabb03ef26729cec489f7dbc4a287e046fe969",
+    "check_reversed_readout_eigenrow.py": "5cd79397efd5a9727a133f9fcedb0ba808f6a12141df1eb837a0e798e569a02e",
+    "check_reversed_swap_recurrence.py": "fd8f31d43d7a0ff62e75319436a43028342f82d7db5fd3dcc8c33489995a95cc"
+  },
+  "dependency_revisions": {
+    "Cli": "55c37290ff6186e2e965d68cf853a57c0702db82",
+    "LeanSearchClient": "5ce7f0a355f522a952a3d678d696bd563bb4fd28",
+    "Qq": "bd58c9efe2086d56ca361807014141a860ddbf8c",
+    "aesop": "cb837cc26236ada03c81837bebe0acd9c70ced7d",
+    "batteries": "b25b36a7caf8e237e7d1e6121543078a06777c8a",
+    "importGraph": "8f497d55985a189cea8020d9dc51260af1e41ad2",
+    "mathlib": "a3a10db0e9d66acbebf76c5e6a135066525ac900",
+    "plausible": "009dc1e6f2feb2c96c081537d80a0905b2c6498f",
+    "proofwidgets": "c04225ee7c0585effbd933662b3151f01b600e40"
+  },
+  "lean_version": "Lean (version 4.27.0, x86_64-unknown-linux-gnu, commit db93fe1608548721853390a10cd40580fe7d22ae, Release)",
+  "mathlib_manifest_sha256": "6c24676b690a32627317b1d6dd58cf9318d689c5481e1edc53d07c93c892632f",
+  "previous_reports_sha256": {
+    "collatz-reversed-real-row-contraction-lean-check.json": "814fed8aca27ff4bac155294bc02239cdda31dfdc7ebe020c426aeb58af1ecac"
+  },
+  "proves_collatz_conjecture": false,
+  "recompiled_predecessor_modules": [
+    "ReversedBinaryPowerClosure"
+  ],
+  "sat_solver_calls": 0,
+  "scope": "For a nonnegative matrix H and a nonnegative commutator D = S*H-H*S, every entry D[i,j] vanishes if some power of H has a positive [j,i] entry. The six weak reversed digit-conversion matrix inequalities therefore are equalities at every such returning pair for H=A+B+E+F+G, including every diagonal entry. If the five-digit sum is irreducible, all six matrix inequalities are equalities. The affine interface assumes only the six weak swaps and digit nonnegativity. It does not claim equality of offset comparisons, existence of a certificate, vanishing of the eligible gaps, or the Collatz conjecture.",
+  "status": "PASS"
+}

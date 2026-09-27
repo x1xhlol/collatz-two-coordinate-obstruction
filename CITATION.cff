@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the accompanying paper."
+type: software
+title: "A two-coordinate obstruction for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
+authors:
+  - family-names: Valbuena
+    given-names: Lucas
+repository-code: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction"
+url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction"
+abstract: >-
+  Lean proofs and a paper showing that nonnegative real affine interpretations
+  in two coordinates, with first diagonal entry at least one for every symbol,
+  have zero first-coordinate offset gap for every rule whenever all eleven
+  rules of the Yolcu–Aaronson–Heule Collatz system are weakly oriented
+  coefficientwise. The result holds separately for the original system and
+  its word reversal.
+keywords:
+  - Collatz conjecture
+  - string rewriting
+  - matrix interpretations
+  - Lean
+  - formal verification
+preferred-citation:
+  type: article
+  title: "A two-coordinate obstruction for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
+  authors:
+    - family-names: Valbuena
+      given-names: Lucas
+  year: 2026
+  url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction/blob/main/paper/two-coordinate-obstruction.pdf"
