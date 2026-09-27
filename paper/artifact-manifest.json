@@ -1,14 +1,14 @@
 {
   "title": "A two-coordinate obstruction for affine interpretations of the Yolcu–Aaronson–Heule Collatz system",
   "author": "Lucas Valbuena",
-  "created_at_utc": "2026-09-27T16:37:11.991703+00:00",
+  "created_at_utc": "2026-09-27T17:17:47.085723+00:00",
   "public_repository": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction",
-  "paper_pages": 40,
+  "paper_pages": 38,
   "paper_format": "A4",
   "typesetting_tool": "Tectonic 0.17.0",
   "appendix_font": "DejaVuSansMono.ttf",
   "all_pages_visually_reviewed": true,
-  "appendix_exact_source_blocks_verified": 16,
+  "appendix_exact_source_blocks_verified": 15,
   "combined_check": {
     "status": "PASS",
     "modules": 128,
@@ -23,7 +23,7 @@
   "files_sha256": {
     ".gitignore": "0dea9934c1890a3c8ec9d2341c5b5f2eaf34a77fa90614028c7ae04bdf76ab5d",
     "CITATION.cff": "d0f9b97465b7bbb323a6f8a418f13e873516561c6a96858ca0ef1a2422696c24",
-    "README.md": "e780f26b326b1c967a6e5e486d1920694c984329ee168eed690070c3d1bd1410",
+    "README.md": "1e763f7739d2559185ff61f8f9a4b16de844ad60e854171befc2eee21480936c",
     "formal/CollatzCertificateBridge.lean": "1cbad54373f22b1c194f85548c82a2f80605ce11e38b5fdc51e62622afc5dff5",
     "formal/CollatzCore.lean": "34c4d688780811db45487d9b550fd61cb73e4da02b24ac7e63bba926a3402349",
     "formal/CollatzEvenStrictRank.lean": "11433051ed5be90205e6cd2b0bfdeecf687eaacbe7d1a928f36f4cb5144ee32e",
@@ -131,7 +131,7 @@
     "formal/FullTwoUpperTransfer.lean": "e7c808988ae6312d4f08b9938bcd6b2b0d4edd84106377efab27718a401c71cd",
     "formal/FullTwoUpperUnit.lean": "1e497943c3ef24c914ba060278073fbedd193647f1c61581991ef84eb105fd9a",
     "formal/FullTwoUpperZero.lean": "bd153d64d819dcf07581d561da9b8707d90f4253e3aa41148a48ad3b8f241a13",
-    "formal/README.md": "b16b1a4e16e47b63b24216ba78ff3a9f9aabc9deff78f91a9e4eda14e041006a",
+    "formal/README.md": "cab6b376ac5a35686cfa5993781661e2ff80305c7a7a75544495c678b066060a",
     "formal/ReversedBinaryPowerClosure.lean": "6f448bb1475e4214a10d4acdac8835d526a559d166c93acfd910e39bca23f281",
     "formal/ReversedPositivePrefixArithmetic.lean": "c1192ed208b4aa4636ba9bbf95ca4094fdc622cd6d71492a676c27e4d1076d9a",
     "formal/ReversedReadoutEigenrow.lean": "862d43eb60e73fc34db7cb968dab576547a5bf8e5f50980d96fc87567eb3084e",
@@ -153,13 +153,18 @@
     "formal/ReversedTwoDimensionalUnitEigen.lean": "b39dc2bcf2ed90df7726fa4c144ae50b7ff2e11e2b7effdf331d34652e8c0055",
     "formal/ReversedTwoStepReadout.lean": "95422c78e3028de48a312f42feff82b69222fa1d3aa77815b7bb7d71c1e1ed60",
     "formal/ReversedUpperTriangularRay.lean": "c0a329e955380ae36684ec6d21d3a213d09fbc8dc1f72a6877b2eb3e306d9a7a",
-    "paper/lean-claims.md": "b37e7d215e8332e0384eb63131cfa7f04b73d247abf96e215ee87efb6f039e33",
-    "paper/lean-statement-appendix.tex": "35c1c8bb7664d7d4cda69ad52acd041bab0056c5db8f4930d6920657e7fdb5be",
-    "paper/two-coordinate-obstruction.pdf": "d8eae6a59fe87483273c56011431515127e8fe65d3be3858ed41a77db8917abb",
-    "paper/two-coordinate-obstruction.tex": "f12a9154a272c8d4b58ff8c412971517e324703e9321d86fc0407c3bc9924725",
+    "paper/lean-claims.md": "b41007d5c33bf05851ee25209afd09dd0f5559bc4dce9ce8151cf24a2a8dd833",
+    "paper/lean-statement-appendix.tex": "cc826d7430f1c476e3ccf201de59295595bca1a0230849f160bb10c13b07e324",
+    "paper/two-coordinate-obstruction.pdf": "ffa6bdd6a769fc305ee2a4249f26bb10877742eb9935a1e9b80dbb0551e24730",
+    "paper/two-coordinate-obstruction.tex": "5fbba586b9f271209daf8b73e0e6889f2b2d1ee65bd078821c4c90221fb6fe26",
     "verification/rebuild.json": "ef4ed7ee3cfcbda97b68e2b5c710b547dbcd0f50d08fe7585e8c8b0a7a511a93",
     "verify.py": "5b8406551d78e001f6f300d8d9770838f404fa7b41162f41cdc03327ba8ab665"
   },
-  "appendix_symbol_fallback_font": "FreeMono.ttf (U+2B1D only)",
-  "prior_120_lean_sources_unchanged_from_commit": "f7cfaa9fca43fd9042540fc40cd620c859b7d08b"
+  "prior_120_lean_sources_unchanged_from_commit": "f7cfaa9fca43fd9042540fc40cd620c859b7d08b",
+  "auxiliary_modules_not_claimed_in_manuscript": [
+    "formal/CollatzReversedRealOrderedPowers.lean",
+    "formal/CollatzReversedRealStationaryObstruction.lean",
+    "formal/CollatzReversedRealStationaryProfile.lean",
+    "formal/CollatzReversedRealWeakStationaryObstruction.lean"
+  ]
 }

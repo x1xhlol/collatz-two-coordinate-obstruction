@@ -6,7 +6,7 @@ For each of its seven symbols, let `F_s(x) = M_s x + v_s`, where the 2×2 matrix
 
 A second theorem removes the diagonal bounds for the reversed system. Nonnegativity and all eleven weak comparisons alone force equality of the full offset vectors in `da → d` and `db → dg`. This excludes either eligible first TOP removal in two nonnegative real affine coordinates. It does not force the other nine reversed gaps to vanish.
 
-These results do not prove the Collatz conjecture. The forward TOP problem, arctic interpretations, and higher dimensions remain outside their conclusions.
+These results do not prove the Collatz conjecture. The unrestricted forward TOP problem, arctic interpretations, and unrestricted higher-dimensional interpretations remain unresolved.
 
 ## Read the result
 
@@ -21,9 +21,9 @@ The theorem with diagonal bounds is `CollatzResearch.FullTwo.full_two_coordinate
 
 ## Verify the proof
 
-The paper also proves necessary conditions in arbitrary finite dimension. Under only the six forward digit swaps and three forward root comparisons, the observed repeated-`e` value dominates `floor(n/5)` times the sum of the three eligible offset gaps. A positive left row contracted by the binary matrix `A` makes those gaps vanish, yielding an explicit necessary inequality in two coordinates. In the reversed system, a positive eligible gap is impossible when the normalized binary observation is bounded, the normalized ternary orbit of a positive vector eventually stabilizes, and the ternary scale is larger. These are explicit additional hypotheses; no commutation equality is assumed.
+The paper also proves a forward growth and contraction result in arbitrary finite dimension. Under only the six digit swaps and three root comparisons, the observed repeated-`e` value dominates `floor(n/5)` times the sum of the three eligible offset gaps. A positive left row contracted by the binary matrix `A` makes those gaps vanish, yielding an explicit two-coordinate corollary. This treats a different regime from the main theorem's diagonal lower bound and requires no contraction condition on the other digit matrices.
 
-The standalone [verify.py](verify.py) rebuilds the complete dependency closure of both obstructions, the further necessary conditions, and the three fixed-decrement soundness lemmas. The combined inventory has **128 Lean modules, 567 public theorem/lemma declarations, and 85 definitions included in the axiom audit**. It permits only `propext`, `Classical.choice`, and `Quot.sound` and makes no SAT-solver calls. The [retained report](verification/rebuild.json) records the build and axiom audit.
+The standalone [verify.py](verify.py) rebuilds the complete dependency closure of the paper's results, the three fixed-decrement soundness lemmas, and four auxiliary modules on conditional stationary profiles. Those auxiliary results remain available as checked algebra; they are not presented as contributions of the manuscript. The combined inventory has **128 Lean modules, 567 public theorem/lemma declarations, and 85 definitions included in the axiom audit**. It permits only `propext`, `Classical.choice`, and `Quot.sound` and makes no SAT-solver calls. The [retained report](verification/rebuild.json) records the build and axiom audit.
 
 Use Lean **4.27.0** and mathlib commit **`a3a10db0e9d66acbebf76c5e6a135066525ac900`**. After the dependency setup in [formal/README.md](formal/README.md), run from the repository root:
 
@@ -35,7 +35,7 @@ python3 verify.py \
   --report "$PWD/.build/rebuild.json"
 ```
 
-Each run uses a fresh temporary build and requires an unused report filename. Every Lean file in `formal/` belongs to the dependency closure of `FullTwoCoordinate`, `FullTwoSoundness`, or `CollatzReversedRealTwoCoordinate`.
+Each run uses a fresh temporary build and requires an unused report filename. Every Lean file in `formal/` belongs to the combined closure of the five entry points listed in `verify.py`: the two main obstruction families, the soundness lemmas, the forward contraction result, and the auxiliary stationary-profile result.
 
 ## Build the paper
 
@@ -50,6 +50,6 @@ The bibliography is included in the source. No BibTeX step is needed.
 
 ## Prior work and citation
 
-The rewriting system and its equivalence to the Collatz conjecture are due to Emre Yolcu, Scott Aaronson, and Marijn J. H. Heule, [An Automated Approach to the Collatz Conjecture, Journal of Automated Reasoning 67(2), Article 15 (2023)](https://doi.org/10.1007/s10817-022-09658-8). We use the ASCII symbol names from their [implementation](https://github.com/emreyolcu/rewriting-collatz). Their paper also proves an impossibility result for natural matrix interpretations of a different, unary Collatz system in every finite dimension, including a residual dependency-pair problem. The present theorems concern their mixed binary–ternary system, allow nonnegative real coefficients, and are restricted to two coordinates. One treats all eleven rules with diagonal bounds; the other treats the two reversed TOP rules without those bounds. The manuscript explains these differences in its related-work discussion.
+The rewriting system and its equivalence to the Collatz conjecture are due to Emre Yolcu, Scott Aaronson, and Marijn J. H. Heule, [An Automated Approach to the Collatz Conjecture, Journal of Automated Reasoning 67(2), Article 15 (2023)](https://doi.org/10.1007/s10817-022-09658-8). We use the ASCII symbol names from their [implementation](https://github.com/emreyolcu/rewriting-collatz). Their paper also proves an impossibility result for natural matrix interpretations of a different, unary Collatz system in every finite dimension, including a residual dependency-pair problem. The two main obstructions concern their mixed binary–ternary system, allow nonnegative real coefficients, and are restricted to two coordinates. One treats all eleven rules with diagonal bounds; the other treats the two reversed TOP rules without those bounds. The manuscript explains these differences in its related-work discussion.
 
 Citation metadata for this paper and artifact is in [CITATION.cff](CITATION.cff). The paper discloses the use of OpenAI Codex in mathematical exploration, Lean development, verification scripts, and manuscript preparation.

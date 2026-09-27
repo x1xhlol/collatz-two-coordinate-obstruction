@@ -164,12 +164,6 @@ The next forward blocks use the namespace
 {\leanappendixfont ι}. The three root constructors label the eligible forward
 boundary rules. The two-coordinate corollary is in
 \path{CollatzResearch.ForwardRealTwoCoordinateNecessary}.
-The final reversed statement is in
-\path{CollatzResearch.RealWeakStationaryObstruction}; it assumes
-{\leanappendixfont [Fintype ι]} and {\leanappendixfont [DecidableEq ι]} and uses the shared
-affine and reversed-rule definitions displayed above. In that statement
-\texttt{X} and \texttt{Y} are normalized matrices, while \texttt{A}
-through \texttt{G} are affine maps.
 
 \paragraph{The forward root labels.}\mbox{}\par
 \noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 9--11.}\par
@@ -244,22 +238,4 @@ theorem positive_eligible_gap_requires_noncontraction
     1 ≤ d.A.matrix 0 0 ∨ 1 ≤ d.A.matrix 1 1 ∨
       (1 - d.A.matrix 0 0) * (1 - d.A.matrix 1 1) ≤
         d.A.matrix 0 1 * d.A.matrix 1 0
-\end{Verbatim}
-
-\paragraph{The reversed stationary-profile obstruction.}\mbox{}\par
-\noindent{\small\path{formal/CollatzReversedRealWeakStationaryObstruction.lean}, lines 10--22.}\par
-\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=10,numbersep=5pt,xleftmargin=18pt]
-theorem weak_stationary_profile_excludes_strict
-    (A B C D E F G : Affine ι) (i₀ : ι)
-    (hA : A.Nonnegative) (hB : B.Nonnegative) (hC : C.Nonnegative)
-    (hD : D.Nonnegative) (hE : E.Nonnegative) (hF : F.Nonnegative) (hG : G.Nonnegative)
-    (h : ReversedRealWeak A B C D E F G)
-    (hstrict : D.offset i₀ < (D.comp A).offset i₀ ∨
-      (D.comp G).offset i₀ < (D.comp B).offset i₀)
-    (X Y : Mat ι) (v : Vec ι) (α β K : ℝ) (N : ℕ)
-    (hX : EntrywiseLE 0 X) (hY : EntrywiseLE 0 Y)
-    (hv : ∀ i, 0 < v i) (hα : 0 ≤ α) (hαβ : α < β) (hK : 0 ≤ K)
-    (hscaleB : B.matrix = α • X) (hscaleG : G.matrix = β • Y)
-    (hbound : ∀ n : ℕ, (D.matrix i₀ ᵥ* X ^ n) ⬝ᵥ v ≤ K)
-    (hstationary : ∀ n : ℕ, N ≤ n → Y ^ n *ᵥ v = Y ^ N *ᵥ v) : False
 \end{Verbatim}

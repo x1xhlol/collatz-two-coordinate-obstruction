@@ -5,14 +5,6 @@
 \usepackage{fontspec,fancyvrb}
 \usepackage[hidelinks]{hyperref}
 \newfontfamily\leanappendixfont{DejaVuSansMono.ttf}
-\newfontfamily\leansymbolfont{FreeMono.ttf}
-\newXeTeXintercharclass\leandotclass
-\XeTeXcharclass"2B1D=\leandotclass
-\XeTeXinterchartoks 0 \leandotclass={\begingroup\leansymbolfont}
-\XeTeXinterchartoks 4095 \leandotclass={\begingroup\leansymbolfont}
-\XeTeXinterchartoks \leandotclass 0={\endgroup}
-\XeTeXinterchartoks \leandotclass 4095={\endgroup}
-\XeTeXinterchartokenstate=1
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -64,10 +56,9 @@ uniform decrement in this two-coordinate real affine format.
 The proofs include singular matrices and zero entries. We give the
 matrix and scalar classifications, the resonance calculation, and the
 growth argument underlying the unrestricted reversed result.
-We also prove necessary conditions in arbitrary finite dimension: a
-five-stage growth bound for the forward root gaps, a contraction
-criterion that makes those gaps vanish, and a reversed obstruction
-under explicit boundedness and eventual-stationarity hypotheses.
+For the forward system in arbitrary finite dimension, we also prove
+a five-stage growth bound for the three root gaps and show that a
+positive contracting left row for the binary matrix makes them vanish.
 Lean 4 checks these statements and their supporting algebra.
 The unrestricted forward TOP problem, unrestricted higher dimensions,
 and the Collatz conjecture remain unresolved by these results.
@@ -117,16 +108,13 @@ A second result removes the diagonal bounds for the reversed
 a common triangular orientation. It then excludes each possible
 active diagonal, using a comparison between binary-prefix growth and
 ternary-word bounds in the expanding case.
-Section~\ref{sec:further-necessary} gives two further restrictions
-without a dimension bound. In the forward orientation, every five
-stages of an explicit conversion use each eligible root rule, yielding
-a quantitative growth bound. A positive contracting left row for the
-binary matrix $A$ makes all three root gaps vanish; in two coordinates
-this gives an explicit necessary inequality. For the reversed
-orientation, bounded normalized binary observation and eventual
-stationarity of a normalized ternary orbit exclude strictness when
-the ternary scale is larger. Those are additional hypotheses, not
-properties asserted for every interpretation.
+Section~\ref{sec:further-necessary} treats a complementary forward
+case without a dimension bound. Every five stages of an explicit
+conversion use each eligible root rule, yielding a quantitative growth
+bound. A positive contracting left row for the binary matrix $A$
+makes all three root gaps vanish. This contraction condition is
+incompatible with the first-diagonal lower bound in the first theorem;
+it imposes no contraction condition on the other digit matrices.
 All these results are formalized in Lean.
 Appendix~\ref{app:lean-statements} reproduces the definitions and
 exact principal theorem types.
@@ -187,11 +175,10 @@ coefficient comparisons from strictness of the first offset
 \cite[Lemma~4]{ewz}; Section~\ref{sec:format} gives the fixed-decrement
 real version used here. The contributions are the two precise
 coefficient-independent obstructions for the mixed-base system,
-the further necessary conditions in Section~\ref{sec:further-necessary},
-and their Lean proofs. The new forward result uses only the six digit
-swaps and three root comparisons, omitting both dynamic-boundary rules.
-The reversed stationary-profile result retains all eleven weak rules
-and states its additional orbit hypotheses explicitly.
+the forward growth and contraction result in
+Section~\ref{sec:further-necessary}, and their Lean proofs. The forward
+result uses only the six digit swaps and three root comparisons,
+omitting both dynamic-boundary rules.
 
 
 \section{The system and the interpretation format}
@@ -2435,18 +2422,14 @@ and it does not settle the unrestricted forward TOP problem.
 \end{proof}
 
 
-\section{Further necessary conditions}
+\section{Forward growth and a contraction obstruction}
 \label{sec:further-necessary}
-
-We now give restrictions that do not require two coordinates. The
-forward result uses only nine weak comparisons and supplies an explicit
-necessary condition in two coordinates. The reversed result retains
-all eleven weak comparisons and adds hypotheses on two normalized
-matrix orbits. Neither assertion is a complete obstruction for its
-unrestricted higher-dimensional setting.
-
-\subsection{Forward boundary growth and contraction}
 \label{sec:forward-necessary}
+
+This section treats a forward case outside the first theorem's diagonal
+assumptions. It uses only nine weak comparisons, works in every finite
+dimension, and imposes a contraction condition only on the binary
+matrix $M_a$. The critical and expanding cases remain open.
 
 Let $F_s(x)=M_sx+v_s$ have nonnegative real matrices and offsets in
 $m\ge1$ coordinates, for $s\in\{a,b,c,e,f,g\}$. Assume the following
@@ -2520,33 +2503,44 @@ $\operatorname{code}(w_k)=3^k$. If $d_k=|w_k|$, then
 where $h_k$ in the fractions denotes the numerical carry value.
 
 Every five consecutive stages contain all three carry letters. The
-following seventeen cases prove the needed finite cover. In the row
-labelled $h$, the displayed $(j,t)$ satisfies $0\le j<5$, $t\ge0$, and
+following seventeen cases prove the finite cover: in the group labelled
+$h$, the displayed $(j,t)$ satisfies $0\le j<5$, $t\ge0$, and
 \begin{equation}\label{eq:forward-cover-target}
  \frac{3+h}{3}<\frac{3^j x}{2^t}<\frac{4+h}{3}.
 \end{equation}
 All left endpoints are included; right endpoints are excluded except
 where a closing square bracket is shown.
 \[
-\begin{array}{c|c|rr}
- h&\text{range of }x&j&t\\ \hline
- 0&[1,32/27)&2&3\\
- 0&[32/27,4/3)&0&0\\
- 0&[4/3,128/81)&3&5\\
- 0&[128/81,16/9)&1&2\\
- 0&[16/9,2]&4&7\\ \hline
- 1&[1,10/9)&1&1\\
- 1&[10/9,320/243)&4&6\\
- 1&[320/243,40/27)&2&3\\
- 1&[40/27,5/3)&0&0\\
- 1&[5/3,160/81)&3&5\\
- 1&[160/81,2]&1&2\\ \hline
- 2&[1,32/27)&3&4\\
- 2&[32/27,4/3)&1&1\\
- 2&[4/3,128/81)&4&6\\
- 2&[128/81,16/9)&2&3\\
- 2&[16/9,2)&0&0\\
- 2&\{2\}&3&5
+\begin{array}[t]{c|rr}
+ \multicolumn{3}{c}{h=0}\\
+ \text{range of }x&j&t\\ \hline
+ {[1,32/27)} & 2 & 3\\
+ {[32/27,4/3)} & 0 & 0\\
+ {[4/3,128/81)} & 3 & 5\\
+ {[128/81,16/9)} & 1 & 2\\
+ {[16/9,2]} & 4 & 7
+\end{array}
+\qquad
+\begin{array}[t]{c|rr}
+ \multicolumn{3}{c}{h=1}\\
+ \text{range of }x&j&t\\ \hline
+ {[1,10/9)} & 1 & 1\\
+ {[10/9,320/243)} & 4 & 6\\
+ {[320/243,40/27)} & 2 & 3\\
+ {[40/27,5/3)} & 0 & 0\\
+ {[5/3,160/81)} & 3 & 5\\
+ {[160/81,2]} & 1 & 2
+\end{array}
+\qquad
+\begin{array}[t]{c|rr}
+ \multicolumn{3}{c}{h=2}\\
+ \text{range of }x&j&t\\ \hline
+ {[1,32/27)} & 3 & 4\\
+ {[32/27,4/3)} & 1 & 1\\
+ {[4/3,128/81)} & 4 & 6\\
+ {[128/81,16/9)} & 2 & 3\\
+ {[16/9,2)} & 0 & 0\\
+ {\{2\}} & 3 & 5
 \end{array}
 \]
 Each instance of \eqref{eq:forward-cover-target} follows by multiplying
@@ -2620,17 +2614,19 @@ nonnegative gaps, and hence each gap, to vanish. Only $M_a$ is subject
 to the contraction condition \eqref{eq:forward-a-contraction}.
 \end{proof}
 
-\begin{proposition}\label{thm:forward-two-necessary}
-In two coordinates, a positive gap among
-$\delta_e,\delta_f,\delta_g$ requires
+The criterion includes matrices whose column sums are all below one
+(take $w=(1,\ldots,1)$), while $(M_a)_{ii}\le\lambda<1$ separates this
+regime from the diagonal-admissible class of Theorem~\ref{thm:main}.
+
+\noindent\textbf{Explicit two-coordinate corollary.}
+Under \eqref{eq:forward-nine}, a positive gap among
+$\delta_e,\delta_f,\delta_g$ in two coordinates requires
 \begin{equation}\label{eq:forward-two-necessary}
  (M_a)_{00}\ge1\quad\text{or}\quad (M_a)_{11}\ge1
  \quad\text{or}\quad
  (1-(M_a)_{00})(1-(M_a)_{11})
  \le (M_a)_{01}(M_a)_{10}.
 \end{equation}
-\end{proposition}
-
 \begin{proof}
 Suppose all three alternatives fail, and set
 \[
@@ -2655,114 +2651,6 @@ zero, a contradiction.
 Condition \eqref{eq:forward-two-necessary} is a necessary condition
 for a positive boundary gap. It is not a sufficiency statement or a
 complete exclusion of the nonnegative forward interpretation format.
-
-\subsection{A stationary-profile obstruction for the reversed system}
-\label{sec:stationary-necessary}
-
-The following necessary condition applies in every finite dimension.
-Retain the reversed notation $B,G$ for the digit matrices and $r$ for
-the selected row of $M_d$. A positive eligible gap forces
-\begin{equation}\label{eq:stationary-nonzero}
-rG^n\ne0\qquad(n\ge0).
-\end{equation}
-Indeed, apply Lemma~\ref{lem:top-mixed-growth} to the word $g^n$.
-Its proof uses no two-coordinate hypothesis: the binary recursion,
-mixed-base inequalities, and scalar rank argument are valid in every
-finite dimension. If $rG^n=0$, the observed sequence in that lemma is
-identically zero, contradicting its divergence.
-
-We first give the matrix estimate needed to contradict
-\eqref{eq:stationary-nonzero}. All inequalities in the next two lemmas
-are entrywise, and $r$ is a row.
-
-\begin{lemma}\label{lem:ordered-power-comparison}
-Let $X,Y\ge0$, $r\ge0$, and $\eta\ge0$. If
-\[
-XY\le YX,\qquad rY\le\eta rX,
-\]
-then $rY^n\le\eta^n rX^n$ for every $n\ge0$.
-\end{lemma}
-\begin{proof}
-The row $rX^k$ satisfies the same one-step comparison as $r$.
-For the induction step, nonnegativity and $XY\le YX$ give
-\[
-(rX^{k+1})Y=(rX^k)XY
-\le((rX^k)Y)X
-\le\eta(rX^{k+1})X.
-\]
-Starting from $rY\le\eta rX$, this proves
-$(rX^k)Y\le\eta rX^{k+1}$ for every $k$.
-A second induction now yields
-\[
-rY^{n+1}\le\eta^n(rX^n)Y
-\le\eta^{n+1}rX^{n+1}.
-\]
-The case $n=0$ is equality.
-\end{proof}
-
-\begin{lemma}\label{lem:stationary-row-zero}
-Under the hypotheses of Lemma~\ref{lem:ordered-power-comparison},
-suppose $0\le\eta<1$, $v$ is a column with every entry positive,
-and $K\ge0$ satisfies $rX^nv\le K$ for all $n\ge0$.
-If, for some natural $N$,
-\[
-Y^nv=Y^Nv\qquad(n\ge N),
-\]
-then $rY^N=0$.
-\end{lemma}
-\begin{proof}
-For every $n\ge N$, the preceding estimate gives
-\[
-0\le rY^Nv=rY^nv\le\eta^n rX^nv\le\eta^nK.
-\]
-Letting $n$ tend to infinity shows $rY^Nv=0$. The row $rY^N$
-is nonnegative, and every entry of $v$ is strictly positive, so each
-entry of $rY^N$ is zero.
-\end{proof}
-
-\begin{theorem}\label{thm:weak-stationary-obstruction}
-Let seven nonnegative real affine maps on a finite coordinate set
-satisfy all eleven reversed weak comparisons. Fix a readout row $r$
-of $M_d$. Suppose that
-\[
-B=\alpha X,\qquad G=\beta Y,\qquad
-X,Y\ge0,\qquad 0\le\alpha<\beta.
-\]
-Assume there are a strictly positive column $v$, a constant $K\ge0$,
-and a natural $N$ such that
-\begin{equation}\label{eq:stationary-explicit-hypotheses}
-rX^nv\le K\quad(n\ge0),\qquad
-Y^nv=Y^Nv\quad(n\ge N).
-\end{equation}
-Then neither eligible reversed rule has a positive offset gap in the
-selected coordinate. Equivalently, both nonnegative gaps $ra$ and
-$r(b-g)$ vanish there.
-\end{theorem}
-\begin{proof}
-Suppose an eligible gap were positive, so that
-\eqref{eq:stationary-nonzero} holds. If $\alpha=0$, then $B=0$,
-and $0\le rG\le rB=0$ contradicts that condition with $n=1$.
-
-Otherwise $\alpha,\beta>0$. The existing weak swap $BG\le GB$
-implies $XY\le YX$ after division by $\alpha\beta$.
-The readout comparison $rG\le rB$ gives
-\[
-rY\le\frac\alpha\beta rX,
-\qquad 0\le\frac\alpha\beta<1.
-\]
-Lemma~\ref{lem:stationary-row-zero} and
-\eqref{eq:stationary-explicit-hypotheses} therefore imply $rY^N=0$.
-It follows that $rG^N=\beta^NrY^N=0$, again contradicting
-\eqref{eq:stationary-nonzero}.
-\end{proof}
-
-This result needs neither exact matrix commutation nor irreducibility.
-Its boundedness and stationarity assumptions are substantive: the theorem
-does not derive them for an arbitrary higher-dimensional interpretation.
-In particular, it does not extend Theorem~\ref{thm:reversed-top} to
-unrestricted dimension. The formal proof derives the ordered matrix
-comparison from the original weak rule and retains both assumptions
-in~\eqref{eq:stationary-explicit-hypotheses} explicitly.
 
 \section{Formal statement, verification, and scope}
 The formalization uses Lean~4 and mathlib~\cite{lean4,mathlib}. The two
@@ -2827,24 +2715,13 @@ The explicit two-coordinate condition is
 \end{center}
 in \path{CollatzForwardRealTwoCoordinateNecessary.lean}.
 
-For Section~\ref{sec:stationary-necessary}, the file
-\begin{center}\small
-\path{CollatzReversedRealOrderedPowers.lean}
-\end{center}
-proves the ordered power comparison and stationary row-zero lemma.
-The final declaration and its file are
-\begin{center}\small
-\path{weak_stationary_profile_excludes_strict}\\
-\path{CollatzReversedRealWeakStationaryObstruction.lean}.
-\end{center}
-It retains the two orbit hypotheses, assumes no commutation equality,
-and handles a zero binary scale separately. The exact statement in
-the appendix makes these qualifications visible.
 
 Each declaration reports only \code{propext}, \code{Classical.choice},
 and \code{Quot.sound}. No additional axiom or proof placeholder is used.
-The combined dependency closure of both obstructions, the further necessary
-conditions, and the soundness lemmas below contains 128 local modules.
+The artifact contains the dependency closure of the paper's results
+and the soundness lemmas below, together with four auxiliary modules
+on conditional stationary-profile obstructions that are not used in
+this paper. There are 128 local modules in total.
 These were rebuilt in a fresh directory, and an additional audit queries
 the axioms of all 567 public theorems and lemmas and 85 supporting
 definitions: 652 declarations in total. The retained report records the exact source inventory,
@@ -2907,10 +2784,8 @@ record. Neither obstruction has a coefficient cap, integrality assumption,
 or nonsingularity assumption. Theorem~\ref{thm:main} retains the
 diagonal bounds; Theorem~\ref{thm:reversed-top} removes them for the
 two reversed eligible rules. The forward necessary condition excludes the contracting case but
-does not resolve unrestricted forward \textsc{top} removal. The reversed
-stationary-profile theorem has the explicit additional hypotheses
-in~\eqref{eq:stationary-explicit-hypotheses}. None of these results proves
-the Collatz conjecture.
+does not resolve unrestricted forward \textsc{top} removal. None of
+these results proves the Collatz conjecture.
 
 \section*{Acknowledgments}
 I thank Emre Yolcu, Scott Aaronson, and Marijn J.\ H.\ Heule for making
