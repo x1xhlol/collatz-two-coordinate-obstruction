@@ -1,7 +1,5 @@
 # A two-coordinate obstruction for affine interpretations of the Yolcu–Aaronson–Heule Collatz system
 
-Lucas Valbuena
-
 This repository contains the paper, Lean proofs, and verification scripts for an obstruction to the first rule-removal step for the eleven-rule Yolcu–Aaronson–Heule system.
 
 For each of its seven symbols, let `F_s(x) = M_s x + v_s`, where the 2×2 matrix and offset vector have nonnegative real entries and `(M_s)₀₀ ≥ 1`. If all eleven rules are weakly oriented coefficientwise, the first-coordinate offset gap of every rule is zero. The theorem holds separately for the original rules and their word reversals. It has no coefficient bound, integrality requirement, or invertibility assumption.
