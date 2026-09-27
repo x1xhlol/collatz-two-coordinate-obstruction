@@ -2,26 +2,9 @@
 
 This companion maps the results and substantive proof steps in
 [the paper](two-coordinate-obstruction.tex) to their Lean sources.
-The numbered results are fully formalized; the paper compresses the
-algebraic case analyses. **Fresh verification: PASS.** The
-[retained report](../formal/full-two-coordinate-lean-check.json), completed
-on 27 September 2026 at 11:36:58 UTC, records 50 freshly rebuilt modules
-and 222 public theorem/lemma axiom audits, using only `propext`,
-`Classical.choice`, and `Quot.sound`. Its SHA-256 is
-`3e4c23a484105a3f2132e531c8647faf8497847f7724cf684befa75b307f2b55`.
-This map is a source guide; the linked report supplies the kernel-check
-evidence.
+The numbered results are fully formalized; the paper compresses the algebraic case analyses. The [combined verification report](../verification/rebuild.json) records a fresh build of all 51 local modules and an axiom audit of all 225 public theorems and lemmas. Only `propext`, `Classical.choice`, and `Quot.sound` are permitted. The standalone entry point is [verify.py](../verify.py).
 
-The fixed-decrement soundness remarks in Section 2.1 are checked separately
-in [FullTwoSoundness.lean](../formal/FullTwoSoundness.lean), namespace
-`CollatzResearch.FullTwoSoundness`. The declarations are
-`admissible_preserves_gap`, `weak_rule_gives_gap`, and `gap_wellFounded`.
-The [soundness audit](../verification/soundness-rebuild.json) passed for
-eight rebuilt modules and 65 public theorem/lemma declarations. Its SHA-256
-is `7754ed4551db12aa8c99a3a287c6f3c0a1069af9ed5f1659868c15ec68949c76`.
-These counts overlap the obstruction closure. The general rule-removal
-theorem and the prior equivalence with Collatz are cited, not re-formalized
-by this artifact.
+The fixed-decrement soundness remarks in Section 2.1 are formalized in [FullTwoSoundness.lean](../formal/FullTwoSoundness.lean), namespace `CollatzResearch.FullTwoSoundness`. The declarations `admissible_preserves_gap`, `weak_rule_gives_gap`, and `gap_wellFounded` are included in the combined audit. The general rule-removal theorem and the prior equivalence with Collatz are cited, not re-formalized by this artifact.
 
 The following prefixes abbreviate exact Lean namespaces:
 
@@ -82,10 +65,7 @@ The interpretation and gap definitions are in
 [FullTwoBasic.lean](../formal/FullTwoBasic.lean),
 [ReversedRealNormalization.lean](../formal/ReversedRealNormalization.lean),
 and [ReversedBinaryPowerClosure.lean](../formal/ReversedBinaryPowerClosure.lean).
-The [independent statement review](../formal/full-two-coordinate-statement-review.md)
-records their hashes and checks all eleven forward/reversed rule pairs.
-The fresh verification entry point is
-[check_full_two_coordinate.py](../formal/check_full_two_coordinate.py).
+The [exact appendix](lean-statement-appendix.tex) reproduces the definitions and final theorem type.
 
 This obstruction concerns the specified first-offset strictness criterion.
 It does not establish equality of full affine maps, exclude higher

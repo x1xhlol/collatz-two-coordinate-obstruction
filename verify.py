@@ -1,0 +1,501 @@
+#!/usr/bin/env python3
+"""Freshly rebuild and audit the paper's Lean proofs with pinned dependencies.
+
+Requires Python 3.10+, Git, and Lean 4.27.0 with the pinned mathlib checkout.
+Only Python's standard library is used. No historical verification reports are read.
+"""
+
+import argparse
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import tempfile
+import time
+
+
+LEAN_VERSION = "4.27.0"
+LEAN_COMMIT = "db93fe1608548721853390a10cd40580fe7d22ae"
+STANDARD_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
+MATHLIB_MANIFEST_SHA256 = "6c24676b690a32627317b1d6dd58cf9318d689c5481e1edc53d07c93c892632f"
+DEPENDENCY_REVISIONS = {
+    "Cli": "55c37290ff6186e2e965d68cf853a57c0702db82",
+    "LeanSearchClient": "5ce7f0a355f522a952a3d678d696bd563bb4fd28",
+    "Qq": "bd58c9efe2086d56ca361807014141a860ddbf8c",
+    "aesop": "cb837cc26236ada03c81837bebe0acd9c70ced7d",
+    "batteries": "b25b36a7caf8e237e7d1e6121543078a06777c8a",
+    "importGraph": "8f497d55985a189cea8020d9dc51260af1e41ad2",
+    "mathlib": "a3a10db0e9d66acbebf76c5e6a135066525ac900",
+    "plausible": "009dc1e6f2feb2c96c081537d80a0905b2c6498f",
+    "proofwidgets": "c04225ee7c0585effbd933662b3151f01b600e40"
+}
+SOURCE_SHA256 = {
+    "CollatzCore": "34c4d688780811db45487d9b550fd61cb73e4da02b24ac7e63bba926a3402349",
+    "CollatzEvenStrictRank": "11433051ed5be90205e6cd2b0bfdeecf687eaacbe7d1a928f36f4cb5144ee32e",
+    "CollatzReversedCertificate": "41c033d10c8c4f65596923f4b06584ff92cc50305e010fe750fb0a6d54a7e713",
+    "CollatzReversedRealCertificate": "fbdd7789343547a06ce22d66be707029aa968d8d7a9889d08f979d7af87b5403",
+    "FullTwoBasic": "38d6e8029e7fff5a948aca33ad661b28ed232ac527c3627882eac397cf00780e",
+    "FullTwoBoundaryTransfer": "1a245f23727eba60bcb71fb546bb0efa44f93f3f1200991a305fea7f37eff8d3",
+    "FullTwoCoordinate": "429785555eecec277248380fe0c2e767c8c7303cf0e2712de29878dda2bd29a0",
+    "FullTwoFlip": "549dc990100e249b6e2c86f25f6fc4012a07d16662467addea360de693dce06b",
+    "FullTwoLowerForward": "9b79f1aaad7f2ff426fd59df267bd6f56927b631166686a00c98ecb43749849f",
+    "FullTwoLowerReversed": "97607cb347243c4b5f4c97443d1759a7d30eb014e91c1c49885afcccdc00d818",
+    "FullTwoLowerScalar": "7e82f62bff38fc56b73b9214602b08b7c0802d265ebb8b9f9f2dcd0d395dfaa9",
+    "FullTwoLowerScalarReverseShape": "663ebb52d152f50e346e6753375e620f2cd9571baedcca40de71cfb576d6b55d",
+    "FullTwoMatrixAggregate": "438e7a8db20a0cf8b359c2d616517bfa0a30fee95491b91688919d024c520eab",
+    "FullTwoMatrixBasic": "d0530708a383c4901b2a200e3e9bd5eafd1dff62546f831bfd70661c4323545a",
+    "FullTwoMatrixBinaryProjectionBoundary": "add65620e8df756f1a536de64b21faa99a53b76761f739ccf9a11af973bc66f9",
+    "FullTwoMatrixCommonRankOne": "2ddf055b30363bc7e0610d8aa65b6c5051719b17623acef3b5177dc1c365f486",
+    "FullTwoMatrixDeterminants": "4f2d8cedb5eb464394a12136f929824be8e054156cdbfb4ef1cfdaf3dd2f7627",
+    "FullTwoMatrixFirstDiagonal": "8bf939cbc68254324bb5e9444a6649c6dcfe01e661a3a068842f0d418a709eef",
+    "FullTwoMatrixNonsingular": "5c415fc952177ed7125d2012b3b0b6007743f29256954755b4dadb2ab42bfb48",
+    "FullTwoMatrixNonsingularBasic": "89b112f02e72e5d1e3987e305844bfa7aa8677a3c8e4302f400adae02f6144cd",
+    "FullTwoMatrixNonsingularBoundary": "2a0e541a127a1c09f8a4f5f95c5e456eb52a551cccb0efb31f8bbccc8f66c4bc",
+    "FullTwoMatrixNonsingularShape": "dd306355a1dab4f002f622ff82bc8bb1e5f8922310344e0288dc1a8816813f43",
+    "FullTwoMatrixOrientation": "2a7ec179c2143a3ebf419663f5a295f4da016cd7eb4209e4348defead032ee24",
+    "FullTwoMatrixReduction": "967201d0509caa1989310f71fa56e2b10209c7cfb8f8ef64ea0e841b81f80e83",
+    "FullTwoMatrixRepeated": "a5b62c790b6681e994200c1b2b569739e13bc590b36259ad7fef763a2b07a10c",
+    "FullTwoMatrixSingular": "ea47fcfb3942734deb71177b0da72e1c4d131eab984dc0c004e1dafdd9578924",
+    "FullTwoMatrixSingularAlgebra": "1236461c62c92a83bd766c374e77a8276a78c596b30012c7d9493ce9f24aa7ef",
+    "FullTwoMatrixSingularBinary": "d787c69d87a6b854d6062eb9364cd51b476d6398efc425ac819347af787257c5",
+    "FullTwoMatrixSingularBinaryShape": "980eea136d088a3795aecbbcb4a2e191d26e0528cff8337d6a41cd36b9e4a9a4",
+    "FullTwoMatrixSingularEqual": "b1af51c955ff536db7be59ec3b96cf597695c80f22e448e730a57cee672976a7",
+    "FullTwoMatrixSingularSupport": "8bb834ac50076495c16a2ff3702bf623c415455ad4f881c1d1fd255fccea066b",
+    "FullTwoMatrixStationary": "931a2324b73d46ccb5dad58a765ee7e740554518d23384c1c6b98d1508c7e798",
+    "FullTwoMatrixTranspose": "fa30e171fc0f3275c9c017170e1d46c31bfee33f1bba223366243035faf4b930",
+    "FullTwoMatrixTriangular": "057ad504911f8b836cd8fad87d8a9b992cb2db29fe0999b1cf16cb766160f685",
+    "FullTwoNormalize": "6841d99a01dc755f1e2f1eb5dedd8478c4b3a949c78c80b99eaf65765c94e8fe",
+    "FullTwoSoundness": "7e97553622f5ebffe692ff3654e5bcdd1011b702bb6973263d44517176565664",
+    "FullTwoTriangular": "13bb1a176187e8dc2ef6c203da70a856f2b4825ddcf180ece7bb83f18bb83bc4",
+    "FullTwoUpper": "54e819496b12d8f77eae8d271e6f8359659ad975f2d6913bad095fa7d461aab7",
+    "FullTwoUpperAffine": "610179098bf811e11f8f1e604bd7bdc8141a6317cc94765f5f5f5a604786a402",
+    "FullTwoUpperAlgebra": "911b8f5c1b4965f8d9579b45f190c8dc091bc7629acb4e22f82b0da3ea7e3c51",
+    "FullTwoUpperBasic": "ca5fb73132ef31c9c4390b6e0c5db68dc5766417a8a435cd23ab2ffee29be3a2",
+    "FullTwoUpperDegenerate": "9dc8ffce2f8c6dbf9fa4bc941f8d62d879e7d1b9513395da38bb0912aed52c39",
+    "FullTwoUpperPositive": "41b508fc64cdeb361425f295b127562948f809b6afcc58d5db886ef566492d32",
+    "FullTwoUpperTransfer": "e7c808988ae6312d4f08b9938bcd6b2b0d4edd84106377efab27718a401c71cd",
+    "FullTwoUpperUnit": "1e497943c3ef24c914ba060278073fbedd193647f1c61581991ef84eb105fd9a",
+    "FullTwoUpperZero": "bd153d64d819dcf07581d561da9b8707d90f4253e3aa41148a48ad3b8f241a13",
+    "ReversedBinaryPowerClosure": "6f448bb1475e4214a10d4acdac8835d526a559d166c93acfd910e39bca23f281",
+    "ReversedRealNormalization": "947bb86b18f46ba0f150437c4a334c79a18b89bbc73b5855eff9381237b23761",
+    "ReversedSwapRecurrence": "46cf2c22a17649a8e3c0330bbafcd5a21a0656dec7ec2bcd3beeff5eb17ba695",
+    "ReversedTwoDimensionalMiddleRank": "57f608def3f879f4421a05fca79a84d3679b0b25c12f5a4fb169918e660e30ae",
+    "ReversedTwoDimensionalSwapAlgebra": "27a1ab2ffd726db4a99bbf940b212f5ac238580ef9ab13f647162d9233e9a79b"
+}
+TOPS = {
+    "FullTwoCoordinate": {
+        "imports": ["FullTwoTriangular", "FullTwoMatrixReduction"],
+        "declarations": {
+            "CollatzResearch.FullTwo.forward_all_gaps_zero",
+            "CollatzResearch.FullTwo.reversed_all_gaps_zero",
+            "CollatzResearch.FullTwo.full_two_coordinate_obstruction",
+        },
+    },
+    "FullTwoSoundness": {
+        "imports": ["FullTwoBasic"],
+        "declarations": {
+            "CollatzResearch.FullTwoSoundness.admissible_preserves_gap",
+            "CollatzResearch.FullTwoSoundness.weak_rule_gives_gap",
+            "CollatzResearch.FullTwoSoundness.gap_wellFounded",
+        },
+    },
+}
+IDENTIFIER = r"[A-Za-z_][A-Za-z0-9_]*"
+QUALIFIED = IDENTIFIER + r"(?:\." + IDENTIFIER + r")*"
+AXIOM_OUTPUT = re.compile(
+    r"'(" + QUALIFIED + r")' "
+    r"(?:depends on axioms:\s*\[([^]]*)\]|(does not depend on any axioms))"
+)
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def sha(path):
+    return digest(path.read_bytes())
+
+
+def lean_code(source):
+    """Erase strings and nested comments, preserving line numbers and token boundaries."""
+    result = []
+    i = 0
+    depth = 0
+    quoted = False
+    while i < len(source):
+        pair = source[i:i + 2]
+        char = source[i]
+        if depth:
+            if pair == "/-":
+                depth += 1
+                result.extend("  ")
+                i += 2
+            elif pair == "-/":
+                depth -= 1
+                result.extend("  ")
+                i += 2
+            else:
+                result.append("\n" if char == "\n" else " ")
+                i += 1
+        elif quoted:
+            if char == "\\":
+                if i + 1 >= len(source):
+                    raise ValueError("Unterminated Lean string escape")
+                result.extend("\n" if c == "\n" else " " for c in source[i:i + 2])
+                i += 2
+            else:
+                quoted = char != '"'
+                result.append("\n" if char == "\n" else " ")
+                i += 1
+        elif pair == "--":
+            end = source.find("\n", i)
+            end = len(source) if end < 0 else end
+            result.extend(" " * (end - i))
+            i = end
+        elif pair == "/-":
+            depth = 1
+            result.extend("  ")
+            i += 2
+        elif char == '"':
+            quoted = True
+            result.append(" ")
+            i += 1
+        else:
+            result.append(char)
+            i += 1
+    if depth or quoted:
+        raise ValueError("Unterminated Lean comment or string")
+    return "".join(result)
+
+
+def source_inventory(name, data):
+    code = lean_code(data.decode("utf-8"))
+    if re.search(r"\b(?:sorry|admit|native_decide|axiom|opaque|unsafe)\b", code):
+        raise ValueError("Forbidden proof placeholder or declaration in " + name)
+    namespaces = list(re.finditer(r"^namespace (" + QUALIFIED + r")\s*$", code, re.M))
+    ends = list(re.finditer(r"^end (" + QUALIFIED + r")\s*$", code, re.M))
+    # This checker deliberately accepts the retained single-namespace source format only.
+    if (len(namespaces) != 1 or len(ends) != 1
+            or namespaces[0].group(1) != ends[0].group(1)
+            or len(re.findall(r"\bnamespace\b", code)) != 1
+            or len(re.findall(r"\bend\b", code)) != 1
+            or re.search(r"\b(?:section|private|protected)\b", code)):
+        raise ValueError("Unsupported declaration scope in " + name)
+    start, end = namespaces[0], ends[0]
+    namespace = start.group(1)
+    declarations = list(re.finditer(
+        r"^(?:theorem|lemma)\s+(" + IDENTIFIER + r")(?=\s|\{|\(|:)", code, re.M))
+    if len(declarations) != len(re.findall(r"\b(?:theorem|lemma)\b", code)):
+        raise ValueError("A theorem or lemma was not inventoried in " + name)
+    if not declarations or any(not start.end() <= item.start() < end.start()
+                               for item in declarations):
+        raise ValueError("Missing or out-of-namespace declarations in " + name)
+    public = [namespace + "." + item.group(1) for item in declarations]
+    if len(public) != len(set(public)):
+        raise ValueError("Duplicate public declaration in " + name)
+    imports = re.findall(r"^import (" + QUALIFIED + r")\s*$", code, re.M)
+    if len(imports) != len(re.findall(r"\bimport\b", code)) or len(imports) != len(set(imports)):
+        raise ValueError("Unsupported or duplicate import in " + name)
+    prints = list(re.finditer(r"^#print axioms (" + QUALIFIED + r")\s*$", code, re.M))
+    if len(prints) != len(re.findall(r"#", code)):
+        raise ValueError("Unsupported diagnostic command in " + name)
+    definitions = {
+        namespace + "." + item.group(1)
+        for item in re.finditer(
+            r"^(?:noncomputable\s+)?def\s+(" + IDENTIFIER + r")(?=\s|\{|\(|:)", code, re.M)
+        if start.end() <= item.start() < end.start()
+    }
+    expected_prints = []
+    for item in prints:
+        target = item.group(1)
+        if "." not in target:
+            if not start.end() <= item.start() < end.start():
+                raise ValueError("Unqualified print outside namespace in " + name)
+            target = namespace + "." + target
+        if target not in set(public) | definitions or target in expected_prints:
+            raise ValueError("Unknown or duplicate existing axiom print in " + name)
+        expected_prints.append(target)
+    return {
+        "source_sha256": digest(data), "namespace": namespace,
+        "imports": imports, "public_declarations": public,
+        "existing_axiom_prints": expected_prints,
+        "local_dependencies": [item for item in imports if not item.startswith("Mathlib.")],
+    }
+
+
+def audit_output(output, expected):
+    axioms = {}
+    for name, entries, no_axioms in AXIOM_OUTPUT.findall(output):
+        if name in axioms:
+            raise ValueError("Duplicate axiom report: " + name)
+        declared = set() if no_axioms else {item.strip() for item in entries.split(",") if item.strip()}
+        if not declared <= STANDARD_AXIOMS:
+            raise ValueError("Nonstandard axioms: " + name + " " + repr(declared))
+        axioms[name] = sorted(declared)
+    if set(axioms) != set(expected) or AXIOM_OUTPUT.sub("", output).strip():
+        raise ValueError("Wrong axiom coverage or unexpected compiler output:\n" + output)
+    return axioms
+
+
+def compile_module(name, source, output, lean, environment, expected):
+    command = [lean, "-j1", "-Dlinter.unusedVariables=false",
+               "-Dlinter.unusedSimpArgs=false", "-Dlinter.unnecessarySimpa=false",
+               "--root=" + str(source.parent), "-o", str(output), str(source)]
+    began = time.monotonic()
+    compiled = subprocess.run(command, cwd=source.parent, env=environment, text=True,
+                              capture_output=True, timeout=900, check=False)
+    record = {
+        "command": command, "working_directory": str(source.parent),
+        "compiler_exit_code": compiled.returncode, "compiler_stdout": compiled.stdout,
+        "compiler_stderr": compiled.stderr, "elapsed_seconds": time.monotonic() - began,
+        "source_sha256": sha(source),
+    }
+    if compiled.returncode or compiled.stderr:
+        raise RuntimeError("Lean failed: " + name + "\n" + json.dumps(record, indent=2))
+    record["existing_print_declaration_axioms"] = audit_output(compiled.stdout, expected)
+    if not output.is_file():
+        raise ValueError("Lean did not write a compiled module: " + name)
+    record["compiled_module_sha256"] = sha(output)
+    return record
+
+
+def run(arguments, directory):
+    result = subprocess.run(arguments, cwd=directory, text=True, capture_output=True,
+                            timeout=600, check=False)
+    if result.returncode or result.stderr:
+        raise RuntimeError(f"Command failed: {arguments!r}\n{result.stdout}\n{result.stderr}")
+    return result.stdout
+
+
+def audited_revision(directory, expected):
+    actual = run(["git", "rev-parse", "HEAD"], directory).strip()
+    if actual != expected:
+        raise ValueError(f"Unexpected dependency revision in {directory}: {actual}")
+    run(["git", "diff", "--exit-code", "HEAD", "--"], directory)
+    return actual
+
+
+def revisions(mathlib, manifest):
+    expected = {"mathlib": DEPENDENCY_REVISIONS["mathlib"]}
+    for package in manifest["packages"]:
+        name = package["name"]
+        if (package["type"] != "git" or not re.fullmatch(IDENTIFIER, name)
+                or name in expected):
+            raise ValueError("Unpinned or duplicate mathlib dependency")
+        expected[name] = package["rev"]
+    if expected != DEPENDENCY_REVISIONS:
+        raise ValueError("The mathlib dependency revisions differ from the embedded pins")
+    return {
+        name: audited_revision(mathlib if name == "mathlib" else
+                               mathlib / ".lake" / "packages" / name, revision)
+        for name, revision in expected.items()
+    }
+
+
+def closure(directory):
+    sources, inventory, active = {}, {}, set()
+
+    def visit(name):
+        if name in active:
+            raise ValueError("Cyclic local imports: " + name)
+        if name in inventory:
+            return
+        if name not in SOURCE_SHA256:
+            raise ValueError("Unpinned local module: " + name)
+        active.add(name)
+        data = (directory / (name + ".lean")).read_bytes()
+        if digest(data) != SOURCE_SHA256[name]:
+            raise ValueError("The published proof source changed: " + name)
+        sources[name] = data
+        item = source_inventory(name, data)
+        for dependency in item["local_dependencies"]:
+            visit(dependency)
+        active.remove(name)
+        inventory[name] = item
+
+    for name, expected in TOPS.items():
+        visit(name)
+        if (inventory[name]["imports"] != expected["imports"]
+                or set(inventory[name]["public_declarations"]) != expected["declarations"]):
+            raise ValueError("Unexpected top-level imports or theorems: " + name)
+    if sources.keys() != SOURCE_SHA256.keys():
+        raise ValueError("The proof closure differs from the embedded source inventory")
+    names = [name for item in inventory.values() for name in item["public_declarations"]]
+    if len(names) != len(set(names)):
+        raise ValueError("A public declaration is repeated across local modules")
+    return sources, inventory
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--mathlib-root", type=Path, required=True,
+                        help="mathlib checkout at the embedded revision, with dependencies built")
+    parser.add_argument("--lake", default="lake", help="Lake executable (default: lake on PATH)")
+    parser.add_argument("--build-root", type=Path,
+                        help="parent of the temporary build (default: system temporary directory)")
+    parser.add_argument("--workers", type=int, choices=range(1, 5), default=2)
+    parser.add_argument("--report", type=Path,
+                        help="new report path (default: verification/rebuild.json)")
+    args = parser.parse_args()
+    checker = Path(__file__).resolve()
+    root = checker.parent
+    directory = root / "formal"
+    report = (args.report or root / "verification" / "rebuild.json").resolve()
+    if report.exists():
+        raise ValueError("Refusing to overwrite a report; choose a new path with --report")
+    sources, inventory = closure(directory)
+    guarded = {"verify.py": (checker, sha(checker))}
+    for name, data in sources.items():
+        guarded["formal/" + name + ".lean"] = (directory / (name + ".lean"), digest(data))
+
+    mathlib = args.mathlib_root.resolve()
+    manifest_path = mathlib / "lake-manifest.json"
+    manifest_bytes = manifest_path.read_bytes()
+    if digest(manifest_bytes) != MATHLIB_MANIFEST_SHA256:
+        raise ValueError("The mathlib manifest differs from the embedded pin")
+    manifest = json.loads(manifest_bytes)
+    dependency_revisions = revisions(mathlib, manifest)
+    lake = shutil.which(args.lake)
+    if lake is None:
+        raise ValueError("Lake executable not found: " + args.lake)
+    lake = str(Path(lake).absolute())
+    guarded["toolchain/lake_launcher"] = (Path(lake), sha(Path(lake)))
+    lean = run([lake, "env", "which", "lean"], mathlib).strip()
+    if not Path(lean).is_absolute() or not Path(lean).is_file():
+        raise ValueError("Lake did not identify an absolute Lean executable")
+    version = run([lean, "--version"], mathlib).strip()
+    if not re.fullmatch(r"Lean \(version " + re.escape(LEAN_VERSION) +
+                        r", [^,]+, commit " + LEAN_COMMIT + r", Release\)", version):
+        raise ValueError("Unexpected Lean version: " + version)
+    reported_library_path = run([lake, "env", "printenv", "LEAN_PATH"], mathlib).strip()
+    library_locations, absent_library_locations = [], []
+    for entry in reported_library_path.split(os.pathsep):
+        location = Path(entry)
+        if not entry or not location.is_absolute():
+            raise ValueError("Unexpected Lean library path: " + entry)
+        if not location.exists():
+            absent_library_locations.append(entry)
+            continue
+        if not location.is_dir():
+            raise ValueError("Lean library path is not a directory: " + entry)
+        if any((location / (name + ".olean")).exists() for name in sources):
+            raise ValueError("A cached local module could shadow the fresh closure: " + entry)
+        library_locations.append(entry)
+    library_path = os.pathsep.join(library_locations)
+    guarded["mathlib/lake-manifest.json"] = (manifest_path, digest(manifest_bytes))
+    guarded["toolchain/lean"] = (Path(lean), sha(Path(lean)))
+    before = {label: expected for label, (_, expected) in guarded.items()}
+    inventory_bytes = json.dumps(inventory, sort_keys=True, separators=(",", ":")).encode()
+    public = sorted(name for item in inventory.values() for name in item["public_declarations"])
+    declarations = sorted(set(public) | {name for item in inventory.values()
+                                         for name in item["existing_axiom_prints"]})
+    audit_name = "PublicationAudit"
+    audit_source = ("".join("import " + name + "\n" for name in TOPS) + "\n" +
+                    "".join("#print axioms " + name + "\n" for name in declarations))
+    builds = {}
+    with tempfile.TemporaryDirectory(prefix="collatz-proof-", dir=args.build_root) as temporary:
+        build = Path(temporary)
+        source_dir, module_dir = build / "sources", build / "modules"
+        source_dir.mkdir()
+        module_dir.mkdir()
+        for name, data in sources.items():
+            (source_dir / (name + ".lean")).write_bytes(data)
+        environment = os.environ.copy()
+        environment["LEAN_PATH"] = str(module_dir) + os.pathsep + library_path
+        pending, running = set(sources), {}
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            while pending or running:
+                ready = sorted(name for name in pending
+                               if set(inventory[name]["local_dependencies"]) <= builds.keys())
+                for name in ready[:args.workers - len(running)]:
+                    pending.remove(name)
+                    future = pool.submit(
+                        compile_module, name, source_dir / (name + ".lean"),
+                        module_dir / (name + ".olean"), lean, environment,
+                        inventory[name]["existing_axiom_prints"])
+                    running[future] = name
+                if not running:
+                    raise ValueError("The local dependency DAG made no progress")
+                completed, _ = wait(running, return_when=FIRST_COMPLETED)
+                for future in completed:
+                    name = running.pop(future)
+                    builds[name] = future.result()
+                    print(json.dumps({"module": name, "status": "PASS",
+                                      "completed": len(builds), "total": len(sources)}), flush=True)
+        audit_path = source_dir / (audit_name + ".lean")
+        audit_path.write_text(audit_source)
+        audit = compile_module(audit_name, audit_path, module_dir / (audit_name + ".olean"),
+                               lean, environment, declarations)
+        for name, data in sources.items():
+            if (source_dir / (name + ".lean")).read_bytes() != data:
+                raise ValueError("A snapshotted source changed during compilation: " + name)
+            if sha(module_dir / (name + ".olean")) != builds[name]["compiled_module_sha256"]:
+                raise ValueError("A compiled module changed during auditing: " + name)
+        if audit_path.read_text() != audit_source:
+            raise ValueError("The generated audit source changed during compilation")
+        if sha(module_dir / (audit_name + ".olean")) != audit["compiled_module_sha256"]:
+            raise ValueError("The compiled axiom audit changed")
+    after = {label: sha(path) for label, (path, _) in guarded.items()}
+    if after != before:
+        raise ValueError("A proof source, verifier, compiler, or manifest changed during checking")
+    if revisions(mathlib, manifest) != dependency_revisions:
+        raise ValueError("A pinned dependency revision changed during checking")
+    if any(Path(entry).exists() for entry in absent_library_locations):
+        raise ValueError("An excluded absent library directory appeared during checking")
+    if any((Path(entry) / (name + ".olean")).exists()
+           for entry in library_locations for name in sources):
+        raise ValueError("A cached local module appeared in a dependency library")
+    after_sources, after_inventory = closure(directory)
+    if after_sources != sources or after_inventory != inventory:
+        raise ValueError("The complete source/declaration closure changed during checking")
+    result = {
+        "status": "PASS", "proves_collatz_conjecture": False,
+        "checked_at_utc": datetime.now(timezone.utc).isoformat(),
+        "top_modules": list(TOPS),
+        "top_declarations": sorted(name for item in TOPS.values() for name in item["declarations"]),
+        "module_count": len(sources), "public_declaration_count": len(public),
+        "audited_declaration_count": len(declarations),
+        "additional_audited_definitions": sorted(set(declarations) - set(public)),
+        "inventory": inventory, "inventory_sha256": digest(inventory_bytes),
+        "builds": builds, "audit": audit, "generated_audit_source": audit_source,
+        "all_public_theorems_and_lemmas_audited": True,
+        "all_local_dependencies_built_in_fresh_directory": True,
+        "all_source_snapshots_match_originals_before_and_after": True,
+        "guarded_files_sha256_before": before, "guarded_files_sha256_after": after,
+        "verifier_sha256": before["verify.py"],
+        "lean_version": version, "lean_executable": lean,
+        "lean_reported_library_path": reported_library_path,
+        "excluded_absent_library_directories": absent_library_locations,
+        "lean_library_path": library_path, "mathlib_manifest_sha256": digest(manifest_bytes),
+        "dependency_revisions": dependency_revisions,
+        "parallel_lean_workers": args.workers, "threads_per_lean_worker": 1,
+        "sat_solver_calls": 0,
+        "scope": (
+            "For seven nonnegative real affine maps in two coordinates, each with "
+            "first diagonal entry at least one, the eleven ordinary weak rewrite "
+            "rules in either orientation force all eleven first-coordinate offset "
+            "gaps to vanish. No triangularity, invertibility, coefficient cap, or "
+            "integrality is assumed. For delta >= 0, admissible maps preserve the "
+            "fixed-gap relation. A weak affine comparison with first-coordinate "
+            "offset gap at least delta yields that relation on nonnegative vectors. "
+            "For delta > 0, the relation is well-founded. These are "
+            "interpretation obstruction and soundness theorems, not a proof of "
+            "the Collatz conjecture."
+        ),
+    }
+    report.parent.mkdir(parents=True, exist_ok=True)
+    with report.open("x") as stream:
+        json.dump(result, stream, indent=2, sort_keys=True)
+        stream.write("\n")
+    print(json.dumps({"status": "PASS", "modules": len(sources),
+                      "public_declarations": len(public), "audited_declarations": len(declarations),
+                      "report_sha256": sha(report), "sat_solver_calls": 0}), flush=True)
+
+
+if __name__ == "__main__":
+    main()

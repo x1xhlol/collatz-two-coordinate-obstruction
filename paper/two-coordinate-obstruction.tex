@@ -4,7 +4,7 @@
 \usepackage{lmodern,microtype,fancyhdr}
 \usepackage{fontspec,fancyvrb}
 \usepackage[hidelinks]{hyperref}
-\newfontfamily\leanappendixfont{FreeMono}
+\newfontfamily\leanappendixfont{DejaVuSansMono.ttf}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -500,10 +500,10 @@ Declaration in \code{CollatzResearch.FullTwo} & Conclusion\\
 \end{center}
 Each declaration reports only \code{propext}, \code{Classical.choice},
 and \code{Quot.sound}. No additional axiom or proof placeholder is used.
-The complete dependency closure of 50 local modules was rebuilt in a
-fresh directory, and an
-additional audit queries the axioms of every public theorem and lemma
-in that closure, 222 declarations in total. The retained report records the exact source inventory,
+The complete dependency closure, including the soundness lemmas below,
+contains 51 local modules. These were rebuilt in a fresh directory, and
+an additional audit queries the axioms of every public theorem and lemma,
+225 declarations in total. The retained report records the exact source inventory,
 source and compiled-module hashes, compiler outputs, dependency revisions,
 and the final theorem audit. Existing local compiled files are excluded
 from that fresh build.
@@ -517,11 +517,9 @@ The fixed-gap soundness lemmas use the namespace
 \code{gap\_wellFounded} & Well-foundedness for a positive decrement
 \end{tabular}
 \end{center}
-Their separate fresh build covers eight local
-modules and audits 65 public declarations, with the same restriction
-to standard axioms. This supplementary check is recorded in
-\path{verification/soundness-rebuild.json}; it does not formalize the
-prior Collatz equivalence or the general rule-removal theorem.
+These three declarations are included in the combined fresh build and
+axiom audit. They do not formalize the prior Collatz equivalence or the
+general rule-removal theorem.
 
 The checked environment is Lean~4.27.0 with mathlib revision
 \begin{center}\small\code{a3a10db0e9d66acbebf76c5e6a135066525ac900}.\end{center}
@@ -529,16 +527,14 @@ The main source has SHA-256
 \begin{center}\scriptsize\code{429785555eecec277248380fe0c2e767c8c7303cf0e2712de29878dda2bd29a0}.\end{center}
 From the artifact root, the verification entry point is
 \begin{quote}\small\ttfamily
-python3 formal/check\_full\_two\_coordinate.py \textbackslash\newline
+python3 verify.py \textbackslash\newline
 \hspace*{1em}--mathlib-root /path/to/pinned/mathlib \textbackslash\newline
 \hspace*{1em}--build-root /path/to/temporary/builds \textbackslash\newline
 \hspace*{1em}--report /path/to/fresh-check.json
 \end{quote}
 The retained verification record is
-\code{formal/full-two-coordinate-lean-check.json}. A separate statement
-review compares the final declarations, affine definitions, and all
-eleven rule pairs against the original research statement. That review
-is supplementary; the kernel check supplies the proof verification.
+\path{verification/rebuild.json}. The claim-to-declaration map in
+\path{paper/lean-claims.md} identifies the supporting formal results.
 Appendix~\ref{app:lean-statements} exposes the actual definitions and
 theorem type, so the connection between the prose and the formal claim
 can be inspected directly.
@@ -548,13 +544,13 @@ axioms, together with the definitions shown in the appendix. Automated
 tactics construct proof terms that the kernel checks. The build rejects
 proof placeholders and additional axioms; it does not use numerical
 search results as proof. Kernel acceptance establishes the Lean
-proposition. The symbol table, appendix, and statement review address
+proposition. The symbol table, appendix, and claim-to-declaration map address
 the separate question of whether that proposition is the one claimed
 in the paper. The Collatz equivalence is cited from prior work and is
 not asserted to have been re-formalized by this artifact.
 
 \subsection{Availability and reproducibility}
-The paper, Lean sources, verification scripts, retained compiler output,
+The paper, Lean sources, verification script, retained compiler output,
 and claim-to-declaration map are available at
 \begin{center}\small
 \url{https://github.com/x1xhlol/collatz-two-coordinate-obstruction}.

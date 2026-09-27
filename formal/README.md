@@ -12,7 +12,7 @@ Every declaration assumes seven nonnegative real affine maps in two coordinates,
 
 ## Prerequisites and pinned dependencies
 
-Use Linux x86_64, Git, Python 3.10 or later, and [Elan](https://github.com/leanprover/elan#installation), which supplies `lean` and `lake`. The check compares the full Lean version string with the retained evidence, including the target platform:
+Use Linux x86_64, Git, Python 3.10 or later, and [Elan](https://github.com/leanprover/elan#installation), which supplies `lean` and `lake`. The checker pins Lean 4.27.0, its compiler commit, and a Release build. The retained run used:
 
 ```text
 Lean (version 4.27.0, x86_64-unknown-linux-gnu, commit db93fe1608548721853390a10cd40580fe7d22ae, Release)
@@ -37,47 +37,35 @@ lake exe cache get
 cd ../..
 ```
 
-Keep the pinned manifest unchanged. The repository uses an external mathlib checkout rather than its own Lake project; the checking scripts assemble and compile the local dependency closure.
+Keep the pinned manifest unchanged. The repository uses an external mathlib checkout rather than its own Lake project; the standalone checker assembles and compiles the local dependency closure.
 
-## Check the obstruction
+## Run the combined check
 
-Run from the repository root:
+From the repository root:
 
 ```sh
 mkdir -p .build
-python3 formal/check_full_two_coordinate.py \
+python3 verify.py \
   --mathlib-root "$PWD/.deps/mathlib4" \
   --build-root "$PWD/.build" \
   --workers 4 \
-  --report "$PWD/.build/obstruction-check.json"
+  --report "$PWD/.build/rebuild.json"
 ```
 
-Use a new report filename for each run. Existing reports are never overwritten. The script accepts one to four workers and gives each Lean process one thread; reduce `--workers` if memory is limited. The build root must already exist and be writable. An explicit build root also avoids depending on the default `/dev/shm` location.
+Use a new report filename for each run. The script accepts one to four workers and gives each Lean process one thread. The build root must exist and be writable.
 
-The checker rebuilds all 50 local modules in a fresh temporary directory, using the pinned compiled mathlib dependencies. It inventories and queries the axioms of all 222 public theorems and lemmas, including the three final declarations. It rejects proof placeholders, additional axioms, unexpected compiler output, and source or dependency changes during the run. Temporary compiled modules are removed on completion; the JSON report retains the compiler output, commands, inventories, hashes, and axiom results.
+The checker rebuilds all 51 local modules in a fresh temporary directory using the pinned compiled mathlib dependencies. It inventories and queries the axioms of all 225 public theorems and lemmas, including the three final obstruction declarations and three soundness lemmas. It rejects proof placeholders, additional axioms, unexpected compiler output, cached local modules on the library path, and changes to guarded sources or dependencies during the run. The JSON report retains compiler output, commands, inventories, hashes, and axiom results. Temporary compiled modules are removed on completion.
 
-The original report is [full-two-coordinate-lean-check.json](full-two-coordinate-lean-check.json). The [publication-directory rebuild](../verification/publication-rebuild.json) also passed for all 50 modules and 222 declarations. Absolute paths inside a retained report describe the environment of that run; the scripts resolve the current source directory independently.
+The [retained combined report](../verification/rebuild.json) describes the environment of its run. The checker resolves the current source directory independently and has no dependency on historical reports or other checking scripts.
 
-## Check the supplemental soundness lemmas
+## Supplemental soundness lemmas
 
-`FullTwoSoundness.lean` treats a fixed decrement `δ`: `Gap δ x y` means `y 0 + δ ≤ x 0` and `y 1 ≤ x 1`. It proves that admissible affine maps preserve this relation for `δ ≥ 0`, weak coefficientwise comparisons give the asserted gap on nonnegative inputs, and the resulting decrease relation is well-founded for `δ > 0`.
+[FullTwoSoundness.lean](FullTwoSoundness.lean) treats a fixed decrement `δ`: `Gap δ x y` means `y 0 + δ ≤ x 0` and `y 1 ≤ x 1`. Its three public declarations prove preservation by admissible maps for `δ ≥ 0`, evaluation of weak coefficientwise comparisons with an offset gap on nonnegative inputs, and well-foundedness of the decrease relation for `δ > 0`.
 
-The [separate soundness audit](../verification/soundness-rebuild.json) passed. To reproduce it, run from the repository root:
+These lemmas and their dependencies are included in the combined check. The main obstruction alone has 50 modules and 222 public declarations; the combined closure adds one module and three declarations.
 
-```sh
-python3 formal/check_full_two_soundness.py \
-  --mathlib-root "$PWD/.deps/mathlib4" \
-  --build-root "$PWD/.build" \
-  --workers 2 \
-  --report "$PWD/.build/soundness-check.json"
-```
+## Read the statement
 
-The supplemental closure has eight modules and 65 public theorems and lemmas. These counts overlap the obstruction's dependencies; they are not additional disjoint results.
+The [paper appendix](../paper/lean-statement-appendix.tex) reproduces the definitions and exact theorem type. The [claim map](../paper/lean-claims.md) identifies the supporting lemmas.
 
-## Reading the evidence
-
-The [statement review](full-two-coordinate-statement-review.md) compares the formal definitions and theorem type with the mathematical claim. The [paper appendix](../paper/lean-statement-appendix.tex) reproduces those declarations, and the [claim map](../paper/lean-claims.md) identifies the supporting lemmas.
-
-Lean's kernel checks proof terms under the reported foundational axioms. Matching the formal proposition to the paper remains a separate reading task. The Collatz equivalence is attributed to Yolcu–Aaronson–Heule; the obstruction theorem does not require a new formalization of that equivalence.
-
-The other checking scripts and pinned reports in this directory preserve the provenance required by the main checker. Reproduction of this paper uses the two entry points above.
+Lean's kernel checks proof terms under the reported foundational axioms. Matching the formal proposition to the paper remains a separate reading task. The Collatz equivalence is attributed to Yolcu–Aaronson–Heule; this artifact does not re-formalize that equivalence or the general rule-removal theorem.
