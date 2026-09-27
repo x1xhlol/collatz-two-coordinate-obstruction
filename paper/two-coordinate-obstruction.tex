@@ -26,12 +26,12 @@
 \setlength{\parskip}{3pt}
 \setlength{\abovedisplayskip}{7pt plus 2pt minus 2pt}
 \setlength{\belowdisplayskip}{7pt plus 2pt minus 2pt}
-\hypersetup{pdftitle={A two-coordinate obstruction for affine interpretations of the Yolcu--Aaronson--Heule Collatz system},pdfauthor={Lucas Valbuena},pdfsubject={Lean-checked two-coordinate affine obstructions, including reversed TOP}}
+\hypersetup{pdftitle={Two-coordinate obstructions for affine interpretations of the Yolcu--Aaronson--Heule Collatz system},pdfauthor={Lucas Valbuena},pdfsubject={Lean-checked two-coordinate affine obstructions, including reversed TOP}}
 
 \begin{document}
 \thispagestyle{plain}
 \begin{center}
-{\LARGE\bfseries A two-coordinate obstruction for affine\\[3pt]
+{\LARGE\bfseries Two-coordinate obstructions for affine\\[3pt]
 interpretations of the Yolcu--Aaronson--Heule\\[3pt]
 Collatz system\par}
 \vspace{8pt}
@@ -92,8 +92,9 @@ chosen rule or one coefficient range.
 Dimension restrictions matter in this setting. Yolcu, Aaronson, and
 Heule report that, for some weakened variants, their tool found only
 interpretations of dimension five~\cite[Section~1]{yah}. Their Table~1 also
-records a natural dimension-five certificate for the subsystem omitting
-\(bf\to ga\) in our notation. These are search outcomes, not proofs
+records a termination proof using five-dimensional natural matrix
+interpretations for the subsystem omitting \(bf\to ga\) in our notation.
+These are search outcomes, not proofs
 of minimal dimension. The present result supplies a coefficient-independent
 exclusion for the full system in dimension two, within a narrower,
 precisely stated interpretation format.
@@ -163,7 +164,8 @@ dimensions, or arctic interpretations.
 
 The proof mechanisms also differ. The unary argument represents a
 configuration value by an $\mathbb N$-rational sequence $u^TM^nv$ and
-contradicts its eventual growth properties~\cite[Theorems~3.5--3.8]{yah}.
+contradicts its eventual growth properties
+\cite[Theorem~3.5, Corollary~3.6, and Theorems~3.7--3.8]{yah}.
 Our proof uses the mixed-base swap inequalities to force a common
 triangular orientation, then eliminates the affine gaps. The unrestricted
 reversed argument also compares growth along binary prefixes with
@@ -300,6 +302,12 @@ For the root comparisons of Theorem~\ref{thm:reversed-top}, a positive
 uniform decrement at every nonnegative input would in particular hold
 at zero. The offset equalities rule this out without any assumption
 that strict decrease is preserved inside a context.
+
+The weak comparisons and uniform strict decrements in this format are
+required on the entire nonnegative orthant, including zero. A method
+that requires decrease only on inputs reachable from represented
+configurations lies outside these obstructions. In particular, a zero
+offset gap does not exclude positive decrease on such a restricted set.
 
 \section{Reduction of the digit matrices}
 \label{sec:matrix-reduction}
@@ -1695,8 +1703,10 @@ contrary to the assumption.
 \end{proof}
 
 \begin{lemma}\label{lem:top-mixed-growth}
-Let $W$ be any word in the five digit maps and let $M_W$ be its
-matrix. Under the strict-gap assumption,
+Assume a hypothetical nonnegative affine interpretation satisfies all
+eleven reversed weak comparisons and has a positive gap in
+\eqref{eq:top-gaps}. Let $W$ be any word in its five digit maps and
+let $M_W$ be its matrix. Then
 \[
 rM_W\mathcal B^n(\gamma)\longrightarrow\infty.
 \]
@@ -1728,7 +1738,8 @@ At every step above $1$, $R$ does not increase; it decreases by at
 least $\delta$ on every even step or on every odd step, according to
 which dynamic gap is positive.
 
-If the even gap is positive, every trajectory must reach $1$.
+Under these hypothetical certificate inequalities, a positive even gap
+would force every positive trajectory to reach $1$.
 Indeed, an infinite trajectory with infinitely many even steps would
 make $R$ negative. An infinite final run of odd steps is also
 impossible: after $j$ consecutive odd steps,
@@ -2805,7 +2816,7 @@ of the underlying rewriting system.
 \emph{An Automated Approach to the Collatz Conjecture}.
 Journal of Automated Reasoning \textbf{67}(2), Article 15, 2023.
 \url{https://doi.org/10.1007/s10817-022-09658-8}.
-The theorem numbering cited here is also available in
+Numbered references to this work follow arXiv v3 (31 December 2022):
 \url{https://arxiv.org/abs/2105.14697v3}.
 \bibitem{yahcode} E. Yolcu, S. Aaronson, and M. J. H. Heule.
 \emph{Rewriting Collatz: implementation and rewriting systems}.

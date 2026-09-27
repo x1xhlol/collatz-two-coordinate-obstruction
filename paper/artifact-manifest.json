@@ -1,14 +1,14 @@
 {
-  "title": "A two-coordinate obstruction for affine interpretations of the Yolcu–Aaronson–Heule Collatz system",
+  "title": "Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system",
   "author": "Lucas Valbuena",
-  "created_at_utc": "2026-09-27T17:17:47.085723+00:00",
+  "created_at_utc": "2026-09-27T17:32:37.327631+00:00",
   "public_repository": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction",
   "paper_pages": 38,
   "paper_format": "A4",
   "typesetting_tool": "Tectonic 0.17.0",
   "appendix_font": "DejaVuSansMono.ttf",
   "all_pages_visually_reviewed": true,
-  "appendix_exact_source_blocks_verified": 15,
+  "appendix_exact_source_blocks_verified": 16,
   "combined_check": {
     "status": "PASS",
     "modules": 128,
@@ -22,8 +22,8 @@
   "proves_collatz_conjecture": false,
   "files_sha256": {
     ".gitignore": "0dea9934c1890a3c8ec9d2341c5b5f2eaf34a77fa90614028c7ae04bdf76ab5d",
-    "CITATION.cff": "d0f9b97465b7bbb323a6f8a418f13e873516561c6a96858ca0ef1a2422696c24",
-    "README.md": "1e763f7739d2559185ff61f8f9a4b16de844ad60e854171befc2eee21480936c",
+    "CITATION.cff": "6e39a9ee833e5664177b8eaea14bf9dc19162e81e2821ee4ed24a33ae88a3986",
+    "README.md": "e11c3a1fb031735309a484f582c02eb5ad71d46c17acb652da8c7b0e96ceb9d9",
     "formal/CollatzCertificateBridge.lean": "1cbad54373f22b1c194f85548c82a2f80605ce11e38b5fdc51e62622afc5dff5",
     "formal/CollatzCore.lean": "34c4d688780811db45487d9b550fd61cb73e4da02b24ac7e63bba926a3402349",
     "formal/CollatzEvenStrictRank.lean": "11433051ed5be90205e6cd2b0bfdeecf687eaacbe7d1a928f36f4cb5144ee32e",
@@ -154,9 +154,9 @@
     "formal/ReversedTwoStepReadout.lean": "95422c78e3028de48a312f42feff82b69222fa1d3aa77815b7bb7d71c1e1ed60",
     "formal/ReversedUpperTriangularRay.lean": "c0a329e955380ae36684ec6d21d3a213d09fbc8dc1f72a6877b2eb3e306d9a7a",
     "paper/lean-claims.md": "b41007d5c33bf05851ee25209afd09dd0f5559bc4dce9ce8151cf24a2a8dd833",
-    "paper/lean-statement-appendix.tex": "cc826d7430f1c476e3ccf201de59295595bca1a0230849f160bb10c13b07e324",
-    "paper/two-coordinate-obstruction.pdf": "ffa6bdd6a769fc305ee2a4249f26bb10877742eb9935a1e9b80dbb0551e24730",
-    "paper/two-coordinate-obstruction.tex": "5fbba586b9f271209daf8b73e0e6889f2b2d1ee65bd078821c4c90221fb6fe26",
+    "paper/lean-statement-appendix.tex": "6e5fbe5d58e55722871453f3643663fc5dec1a66ab7e4bc4fee86ba7cf057b97",
+    "paper/two-coordinate-obstruction.pdf": "3087c3c73ea7245dc5ca2ba7e8257917f3f165630dba2d61b357bb23eb4bd252",
+    "paper/two-coordinate-obstruction.tex": "c84dad9c4306cbb146d8f185678c2fa8dce09bb8b078a2270c43e31568a45ee4",
     "verification/rebuild.json": "ef4ed7ee3cfcbda97b68e2b5c710b547dbcd0f50d08fe7585e8c8b0a7a511a93",
     "verify.py": "5b8406551d78e001f6f300d8d9770838f404fa7b41162f41cdc03327ba8ab665"
   },
@@ -166,5 +166,9 @@
     "formal/CollatzReversedRealStationaryObstruction.lean",
     "formal/CollatzReversedRealStationaryProfile.lean",
     "formal/CollatzReversedRealWeakStationaryObstruction.lean"
-  ]
+  ],
+  "numbered_yah_citations_checked_against": {
+    "url": "https://arxiv.org/pdf/2105.14697v3",
+    "pdf_sha256": "93448d7a6f3818383d4c6c6000f683cbd43773a0164812701a48cc68b9a5e39f"
+  }
 }

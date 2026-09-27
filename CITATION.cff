@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite the accompanying paper."
 type: software
-title: "A two-coordinate obstruction for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
+title: "Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
 authors:
   - family-names: Valbuena
     given-names: Lucas
@@ -24,7 +24,7 @@ keywords:
   - formal verification
 preferred-citation:
   type: article
-  title: "A two-coordinate obstruction for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
+  title: "Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
   authors:
     - family-names: Valbuena
       given-names: Lucas

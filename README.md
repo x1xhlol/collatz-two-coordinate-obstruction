@@ -1,4 +1,4 @@
-# A two-coordinate obstruction for affine interpretations of the Yolcu–Aaronson–Heule Collatz system
+# Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system
 
 This repository contains the paper, Lean proofs, and a verification script for an obstruction to the first rule-removal step for the eleven-rule Yolcu–Aaronson–Heule system.
 

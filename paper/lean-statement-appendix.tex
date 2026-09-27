@@ -7,6 +7,7 @@
 % Source SHA256 FullTwoBasic.lean: 38d6e8029e7fff5a948aca33ad661b28ed232ac527c3627882eac397cf00780e
 % Source SHA256 CollatzReversedRealTwoCoordinate.lean: b7cc9035e073d624fd270f6fbde9f2149a290dd93f238643a65aefe4fe434b71
 % Source SHA256 FullTwoCoordinate.lean: 429785555eecec277248380fe0c2e767c8c7303cf0e2712de29878dda2bd29a0
+% Source SHA256 CollatzReversedRealCertificate.lean: fbdd7789343547a06ce22d66be707029aa968d8d7a9889d08f979d7af87b5403
 
 \section{Exact Lean declarations}
 \label{app:lean-statements}
@@ -16,8 +17,10 @@ omitted. Source paths are relative to the repository root.
 
 The affine definitions and \texttt{ReversedRealWeak} are in
 \texttt{CollatzCertificate}. The definitions and theorem with diagonal bounds
-are in \texttt{CollatzResearch.FullTwo}. Matrix notation is opened in both
-namespaces. The order on vectors is pointwise, so \texttt{Weak X Y} means
+are in \texttt{CollatzResearch.FullTwo}. The evaluation function
+\texttt{eval} is in \texttt{CollatzResearch.RealAffine}.
+Matrix notation is opened where used. The order on vectors is pointwise,
+so \texttt{Weak X Y} means
 that every coefficient of \texttt{Y} is at most the corresponding coefficient
 of \texttt{X}. Composition places the left argument outside the right argument.
 The unrestricted reversed theorem is in
@@ -52,6 +55,14 @@ def Affine.Nonnegative (X : Affine n) : Prop :=
 
 def Affine.Weak (X Y : Affine n) : Prop :=
   (Y.matrix ≤ₘ X.matrix) ∧ Y.offset ≤ X.offset
+\end{Verbatim}
+
+\paragraph{Affine evaluation.}\mbox{}\par
+\noindent{\small\path{formal/CollatzReversedRealCertificate.lean}, lines 10--12.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=10,numbersep=5pt,xleftmargin=18pt]
+variable {ι : Type*} [Fintype ι]
+
+def eval (F : Affine ι) (x : Vec ι) : Vec ι := F.matrix *ᵥ x + F.offset
 \end{Verbatim}
 
 \paragraph{Two coordinates and admissibility.}\mbox{}\par
@@ -200,6 +211,7 @@ structure Data (ι : Type*) [Fintype ι] where
   cg : (C.comp G).Weak (C.comp (A.comp B))
 \end{Verbatim}
 
+\noindent\begin{minipage}{\linewidth}
 \paragraph{The three forward gaps.}\mbox{}\par
 \noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 245--248.}\par
 \begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=245,numbersep=5pt,xleftmargin=18pt]
@@ -208,6 +220,7 @@ def Data.gap (d : Data ι) (i : ι) : Root → ℝ
   | .f => (d.C.comp d.F).offset i - (d.C.comp (d.A.comp d.A)).offset i
   | .g => (d.C.comp d.G).offset i - (d.C.comp (d.A.comp d.B)).offset i
 \end{Verbatim}
+\end{minipage}\par
 
 \paragraph{Quantitative growth of the observed ternary orbit.}\mbox{}\par
 \noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 356--358.}\par
