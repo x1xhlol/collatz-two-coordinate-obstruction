@@ -13,7 +13,9 @@ abstract: >-
   have zero first-coordinate offset gap for every rule whenever all eleven
   rules of the Yolcu–Aaronson–Heule Collatz system are weakly oriented
   coefficientwise. The result holds separately for the original system and
-  its word reversal.
+  its word reversal. A second theorem removes the diagonal bounds for the
+  reversed system: all eleven weak comparisons force equality of the full
+  offset vectors in both eligible TOP rules, da to d and db to dg.
 keywords:
   - Collatz conjecture
   - string rewriting

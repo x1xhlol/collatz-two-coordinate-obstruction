@@ -1,6 +1,6 @@
 # Formal verification
 
-The entry point is [FullTwoCoordinate.lean](FullTwoCoordinate.lean). In namespace `CollatzResearch.FullTwo`, it proves:
+For the theorem with diagonal bounds, the entry point is [FullTwoCoordinate.lean](FullTwoCoordinate.lean). In namespace `CollatzResearch.FullTwo`, it proves:
 
 | Declaration | Conclusion |
 | --- | --- |
@@ -8,7 +8,9 @@ The entry point is [FullTwoCoordinate.lean](FullTwoCoordinate.lean). In namespac
 | `reversed_all_gaps_zero` | All eleven reversed first-offset gaps vanish. |
 | `full_two_coordinate_obstruction` | Both implications, with their weak-rule hypotheses kept separate. |
 
-Every declaration assumes seven nonnegative real affine maps in two coordinates, with first diagonal entry at least one for **every** symbol, including both boundaries. The result excludes a first rule removal in this format. It does not cover arbitrary TOP interpretations or arctic arithmetic, and it does not prove Collatz.
+These three declarations assume seven nonnegative real affine maps in two coordinates, with first diagonal entry at least one for **every** symbol, including both boundaries. The result excludes a first rule removal in this format. The second entry point, [CollatzReversedRealTwoCoordinate.lean](CollatzReversedRealTwoCoordinate.lean), removes all diagonal bounds for the reversed eligible rules. In namespace `CollatzResearch.RealTwoCoordinate`, `reversed_eligible_offsets_equal` proves the vector equalities `(D.comp A).offset = D.offset` and `(D.comp B).offset = (D.comp G).offset` from seven nonnegativity assumptions and all eleven reversed weak comparisons. Its companion `no_positive_eligible_offset_gap` excludes a positive fixed decrement in either coordinate.
+
+Together these results exclude the stated full-context format in both orientations and the unrestricted reversed TOP step in two coordinates. They do not settle forward TOP, arctic arithmetic, higher dimensions, or Collatz.
 
 ## Prerequisites and pinned dependencies
 
@@ -54,7 +56,7 @@ python3 verify.py \
 
 Use a new report filename for each run. The script accepts one to four workers and gives each Lean process one thread. The build root must exist and be writable.
 
-The checker rebuilds all 51 local modules in a fresh temporary directory using the pinned compiled mathlib dependencies. It inventories and queries the axioms of all 225 public theorems and lemmas, including the three final obstruction declarations and three soundness lemmas. It rejects proof placeholders, additional axioms, unexpected compiler output, cached local modules on the library path, and changes to guarded sources or dependencies during the run. The JSON report retains compiler output, commands, inventories, hashes, and axiom results. Temporary compiled modules are removed on completion.
+The checker rebuilds all 120 local modules in a fresh temporary directory using the pinned compiled mathlib dependencies. It inventories and queries the axioms of all 515 public theorems and lemmas and all 69 definitions in the inventory, for 584 audited declarations. These include both final obstruction families and the three soundness lemmas. It rejects proof placeholders, additional axioms, unexpected compiler output, cached local modules on the library path, and changes to guarded sources or dependencies during the run. The JSON report retains compiler output, commands, inventories, hashes, and axiom results. Temporary compiled modules are removed on completion.
 
 The [retained combined report](../verification/rebuild.json) describes the environment of its run. The checker resolves the current source directory independently and has no dependency on historical reports or other checking scripts.
 
@@ -62,10 +64,10 @@ The [retained combined report](../verification/rebuild.json) describes the envir
 
 [FullTwoSoundness.lean](FullTwoSoundness.lean) treats a fixed decrement `δ`: `Gap δ x y` means `y 0 + δ ≤ x 0` and `y 1 ≤ x 1`. Its three public declarations prove preservation by admissible maps for `δ ≥ 0`, evaluation of weak coefficientwise comparisons with an offset gap on nonnegative inputs, and well-foundedness of the decrease relation for `δ > 0`.
 
-These lemmas and their dependencies are included in the combined check. The main obstruction alone has 50 modules and 222 public declarations; the combined closure adds one module and three declarations.
+These lemmas and their dependencies are included in the combined check. The unrestricted reversed obstruction has a 119-module dependency closure, which already includes the 50 modules supporting the theorem with diagonal bounds. The soundness file adds one module and three public declarations.
 
 ## Read the statement
 
-The [paper appendix](../paper/lean-statement-appendix.tex) reproduces the definitions and exact theorem type. The [claim map](../paper/lean-claims.md) identifies the supporting lemmas.
+The [paper appendix](../paper/lean-statement-appendix.tex) reproduces the definitions and both exact theorem types. The [claim map](../paper/lean-claims.md) identifies the supporting lemmas.
 
 Lean's kernel checks proof terms under the reported foundational axioms. Matching the formal proposition to the paper remains a separate reading task. The Collatz equivalence is attributed to Yolcu–Aaronson–Heule; this artifact does not re-formalize that equivalence or the general rule-removal theorem.
