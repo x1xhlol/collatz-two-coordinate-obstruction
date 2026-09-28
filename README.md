@@ -1,10 +1,12 @@
-# Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system
+# Affine obstructions and finite-pattern synchronization for the Collatz map
 
-This repository contains the paper, Lean proofs, and a verification script for an obstruction to the first rule-removal step for the eleven-rule Yolcu–Aaronson–Heule system.
+This repository contains the paper, Lean proofs, and a verification script for obstructions to the first rule-removal step for the eleven-rule Yolcu–Aaronson–Heule system and a direct theorem on finite patterns of Collatz starting values.
 
 For each of its seven symbols, let `F_s(x) = M_s x + v_s`, where the 2×2 matrix and offset vector have nonnegative real entries and `(M_s)₀₀ ≥ 1`. If all eleven rules are weakly oriented coefficientwise, the first-coordinate offset gap of every rule is zero. The theorem holds separately for the original rules and their word reversals. It has no coefficient bound, integrality requirement, or invertibility assumption.
 
 A second theorem removes the diagonal bounds for the reversed system. Nonnegativity and all eleven weak comparisons alone force equality of the full offset vectors in `da → d` and `db → dg`. This excludes either eligible first TOP removal in two nonnegative real affine coordinates. It does not force the other nine reversed gaps to vanish.
+
+A separate theorem proves that every finite set of nonnegative offsets has arbitrarily large translates whose Collatz trajectories first reach 1 at the same finite time, with equal odd counts. In particular, consecutive runs of every prescribed length exist. The proof first coalesces the entire pattern on one dyadic progression, then specializes the common endpoint to a power of two. Here the map sends even `n` to `n/2` and odd `n` to `(3n+1)/2`. The construction chooses the translating integer; it does not establish convergence from an arbitrary prescribed start.
 
 These results do not prove the Collatz conjecture. The unrestricted forward TOP problem, arctic interpretations, and unrestricted higher-dimensional interpretations remain unresolved.
 
@@ -13,6 +15,8 @@ These results do not prove the Collatz conjecture. The unrestricted forward TOP 
 - [Paper (PDF)](paper/two-coordinate-obstruction.pdf) and [LaTeX source](paper/two-coordinate-obstruction.tex)
 - [Theorem with diagonal bounds](formal/FullTwoCoordinate.lean)
 - [Reversed TOP theorem without diagonal bounds](formal/CollatzReversedRealTwoCoordinate.lean)
+- [Finite-pattern convergence and consecutive-run theorem](formal/FinitePatternConvergence.lean)
+- [Finite-pattern coalescence on a dyadic progression](formal/FinitePatternCoalescence.lean)
 - [Definitions and theorem type reproduced in the paper](paper/lean-statement-appendix.tex)
 - [Paper claims mapped to Lean declarations](paper/lean-claims.md)
 - [Formal verification instructions](formal/README.md)
@@ -23,7 +27,7 @@ The theorem with diagonal bounds is `CollatzResearch.FullTwo.full_two_coordinate
 
 The paper also proves a forward growth and contraction result in arbitrary finite dimension. Under only the six digit swaps and three root comparisons, the observed repeated-`e` value dominates `floor(n/5)` times the sum of the three eligible offset gaps. A positive left row contracted by the binary matrix `A` makes those gaps vanish, yielding an explicit two-coordinate corollary. This treats a different regime from the main theorem's diagonal lower bound and requires no contraction condition on the other digit matrices.
 
-The standalone [verify.py](verify.py) rebuilds the complete dependency closure of the paper's results, the three fixed-decrement soundness lemmas, and four auxiliary modules on conditional stationary profiles. Those auxiliary results remain available as checked algebra; they are not presented as contributions of the manuscript. The combined inventory has **128 Lean modules, 567 public theorem/lemma declarations, and 85 definitions included in the axiom audit**. It permits only `propext`, `Classical.choice`, and `Quot.sound` and makes no SAT-solver calls. The [retained report](verification/rebuild.json) records the build and axiom audit.
+The standalone [verify.py](verify.py) rebuilds the complete dependency closure of the paper's results, the three fixed-decrement soundness lemmas, and four auxiliary modules on conditional stationary profiles. Those auxiliary results remain available as checked algebra; they are not presented as contributions of the manuscript. The combined inventory has **137 Lean modules, 633 public theorem/lemma declarations, and 93 definitions included in the axiom audit**. It permits only `propext`, `Classical.choice`, and `Quot.sound` and makes no SAT-solver calls. The [retained report](verification/rebuild.json) records the build and axiom audit.
 
 Use Lean **4.27.0** and mathlib commit **`a3a10db0e9d66acbebf76c5e6a135066525ac900`**. After the dependency setup in [formal/README.md](formal/README.md), run from the repository root:
 
@@ -35,7 +39,7 @@ python3 verify.py \
   --report "$PWD/.build/rebuild.json"
 ```
 
-Each run uses a fresh temporary build and requires an unused report filename. Every Lean file in `formal/` belongs to the combined closure of the five entry points listed in `verify.py`: the two main obstruction families, the soundness lemmas, the forward contraction result, and the auxiliary stationary-profile result.
+Each run uses a fresh temporary build and requires an unused report filename. Every Lean file in `formal/` belongs to the combined closure of the six entry points listed in `verify.py`: the two main obstruction families, the soundness lemmas, the forward contraction result, and the auxiliary stationary-profile result, and finite-pattern convergence.
 
 ## Build the paper
 

@@ -34,7 +34,16 @@ DEPENDENCY_REVISIONS = {
     "plausible": "009dc1e6f2feb2c96c081537d80a0905b2c6498f",
     "proofwidgets": "c04225ee7c0585effbd933662b3151f01b600e40"
 }
-SOURCE_SHA256 = {'CollatzCertificateBridge': '1cbad54373f22b1c194f85548c82a2f80605ce11e38b5fdc51e62622afc5dff5',
+SOURCE_SHA256 = {'AffineDifferenceMeasure': 'd7f207b01e2557c3c19758b49921d876df60dc7e25d37841812dcad6d9b3d79a',
+ 'AffineFamilySynchronization': '9e001bc3b246dde4effe37753b5bb004c846a66e13e7add74c2e472346c37eb6',
+ 'CollatzAffineProgressions': '5e28d1b0cae1f601d06983fd37b588498ad5d0f691c7c2ed1064db18ec6d4cf1',
+ 'FinitePatternCoalescence': '86208b374e1df4c1ecbefcd33270853b3b0a3349fdeb0aad854ae22939729087',
+ 'FinitePatternConvergence': '74ccd96f004198fbd04c6a5283022cb78414fd0351f49bc4c0ad61fc1c30ffb5',
+ 'OddAffineParameter': '6ca72b4eaa71f9f0f7c061d8d6e6f88e86fff4dd66a0c42ae3ec5d9767b4d209',
+ 'PositiveProgressionCoalescence': '9f503a2ea7ca75c8dcdfe8b7de95618eb526b5ee5bea8c5bf69bb8c35396d58f',
+ 'PowerTwoModuloThree': '5be46eeab995b54ccdeea3b662944dec43cdedc05e58e61b537b6a66cfcc5e30',
+ 'ProgressionConvergenceSpecialization': 'd2082e3c7d94e2fb2b762e80e02b327657b16ba73f2782e3c7aaf9fbc84acd50',
+ 'CollatzCertificateBridge': '1cbad54373f22b1c194f85548c82a2f80605ce11e38b5fdc51e62622afc5dff5',
  'CollatzCore': '34c4d688780811db45487d9b550fd61cb73e4da02b24ac7e63bba926a3402349',
  'CollatzEvenStrictRank': '11433051ed5be90205e6cd2b0bfdeecf687eaacbe7d1a928f36f4cb5144ee32e',
  'CollatzFiniteSourceSupport': '4c2c156e0192520ca4b09e46a652062b26cbf1fbddb8f7eb6742bd8c71402313',
@@ -162,7 +171,11 @@ SOURCE_SHA256 = {'CollatzCertificateBridge': '1cbad54373f22b1c194f85548c82a2f806
  'ReversedTwoDimensionalUnitEigen': 'b39dc2bcf2ed90df7726fa4c144ae50b7ff2e11e2b7effdf331d34652e8c0055',
  'ReversedTwoStepReadout': '95422c78e3028de48a312f42feff82b69222fa1d3aa77815b7bb7d71c1e1ed60',
  'ReversedUpperTriangularRay': 'c0a329e955380ae36684ec6d21d3a213d09fbc8dc1f72a6877b2eb3e306d9a7a'}
-TOPS = {'CollatzForwardRealTwoCoordinateNecessary': {'declarations': {'CollatzResearch.ForwardRealTwoCoordinateNecessary.gaps_zero_of_two_coordinate_bounds',
+TOPS = {'FinitePatternConvergence': {'declarations': {'CollatzPositiveProgression.arbitrarily_long_consecutive_equal_first_hitting_times',
+                                               'CollatzPositiveProgression.every_finite_pattern_has_equal_first_hitting_times'},
+                              'imports': ['FinitePatternCoalescence',
+                                          'ProgressionConvergenceSpecialization']},
+ 'CollatzForwardRealTwoCoordinateNecessary': {'declarations': {'CollatzResearch.ForwardRealTwoCoordinateNecessary.gaps_zero_of_two_coordinate_bounds',
                                                                'CollatzResearch.ForwardRealTwoCoordinateNecessary.positive_eligible_gap_requires_noncontraction',
                                                                'CollatzResearch.ForwardRealTwoCoordinateNecessary.positive_subeigenrow_of_two_coordinate_bounds'},
                                               'imports': ['CollatzForwardRealContraction',
@@ -183,8 +196,8 @@ TOPS = {'CollatzForwardRealTwoCoordinateNecessary': {'declarations': {'CollatzRe
                                        'CollatzResearch.FullTwoSoundness.gap_wellFounded',
                                        'CollatzResearch.FullTwoSoundness.weak_rule_gives_gap'},
                       'imports': ['FullTwoBasic']}}
-EXPECTED_PUBLIC_DECLARATION_COUNT = 567
-EXPECTED_AUDITED_DECLARATION_COUNT = 652
+EXPECTED_PUBLIC_DECLARATION_COUNT = 633
+EXPECTED_AUDITED_DECLARATION_COUNT = 726
 IDENTIFIER = r"[A-Za-z_][A-Za-z0-9_]*"
 QUALIFIED = IDENTIFIER + r"(?:\." + IDENTIFIER + r")*"
 AXIOM_OUTPUT = re.compile(
@@ -603,6 +616,13 @@ def main():
             "gaps vanish without the diagonal floor or assert a corresponding "
             "unrestricted forward obstruction. Neither obstruction assumes a "
             "coefficient cap, integrality, invertibility, or triangularity. "
+            "Separately, every finite set of natural offsets has arbitrarily "
+            "large translates whose shortcut Collatz iterates first reach one "
+            "at a common finite time, with equal odd counts. The construction "
+            "first coalesces the pattern on one dyadic progression and then "
+            "chooses a power-of-two endpoint. This includes consecutive runs "
+            "of every length but does not prove convergence from arbitrary "
+            "prescribed starting values. "
             "For delta >= 0, admissible maps preserve the fixed-gap relation. "
             "A weak affine comparison with first-coordinate offset gap at least "
             "delta yields that relation on nonnegative vectors. For delta > 0, "

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite the accompanying paper."
 type: software
-title: "Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
+title: "Affine obstructions and finite-pattern synchronization for the Collatz map"
 authors:
   - family-names: Valbuena
     given-names: Lucas
@@ -16,6 +16,10 @@ abstract: >-
   its word reversal. A second theorem removes the diagonal bounds for the
   reversed system: all eleven weak comparisons force equality of the full
   offset vectors in both eligible TOP rules, da to d and db to dg.
+  A separate theorem constructs arbitrarily large translates of every finite
+  pattern of nonnegative offsets whose Collatz trajectories first reach one
+  at the same finite time, with equal odd counts. Consecutive runs of every
+  prescribed length follow. These results do not prove the Collatz conjecture.
 keywords:
   - Collatz conjecture
   - string rewriting
@@ -24,7 +28,7 @@ keywords:
   - formal verification
 preferred-citation:
   type: article
-  title: "Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
+  title: "Affine obstructions and finite-pattern synchronization for the Collatz map"
   authors:
     - family-names: Valbuena
       given-names: Lucas
