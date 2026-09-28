@@ -16,6 +16,11 @@ abstract: >-
   its word reversal. A second theorem removes the diagonal bounds for the
   reversed system: all eleven weak comparisons force equality of the full
   offset vectors in both eligible TOP rules, da to d and db to dg.
+  Section 9 gives an independent second proof of Omar Javier Said Duran’s
+  theorem on arbitrarily long consecutive runs with equal finite Collatz
+  height and equal odd-step counts. Priority belongs to his earlier preprint,
+  doi:10.5281/zenodo.23003526. The finite-pattern formulation is equivalent.
+  These results do not prove the Collatz conjecture.
 keywords:
   - Collatz conjecture
   - string rewriting
