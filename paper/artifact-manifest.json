@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "release_version": "2026.09.28.2",
+  "release_version": "2026.09.28.3",
   "author": "Lucas Valbuena",
   "public_repository": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction",
   "papers": [
@@ -25,8 +25,8 @@
       "source": "paper/tao-basin-densities.tex",
       "pdf": "paper/tao-basin-densities.pdf",
       "pages": 22,
-      "source_sha256": "ba6354ac3a5829ddf8a1283c1a59e07146f14edd54ed9675131ba2d12d1ecf4a",
-      "pdf_sha256": "9e7d56cfddf94d0abcaf6a798ead6a80629fe8b0ffb5bf5444cc8ca64401eb6d"
+      "source_sha256": "f5fbb1f949b5bd4feb7bfb5a72ae66ef10901796651091103c6edc04446a7faf",
+      "pdf_sha256": "7d23adf394c052bbdc0c22ee707c26fecbf10e35c3f1b6b32cafe57179b58cea"
     }
   ],
   "typesetting_tool": "Tectonic 0.17.0",
@@ -34,7 +34,7 @@
     "matrix_and_synchronization": {
       "status": "PASS",
       "report": "verification/rebuild.json",
-      "report_sha256": "5e6065face64c23aa1c5f6a970e5335947d1c83942962dc4c27d3958681fa431",
+      "report_sha256": "642d0bd8ed8ea31f6a6d1df342d13b618ced5e8c5a5ba207a3afb1662d41a7f3",
       "modules": 137,
       "public_declarations": 633,
       "audited_declarations": 726
@@ -42,10 +42,10 @@
     "local_basin_steps": {
       "status": "PASS",
       "report": "verification/basin-rebuild.json",
-      "report_sha256": "3290ba22de5b60cbb6b5487bbb4a547bbc3168d0ff3bd40af7404bccf254122e",
-      "modules": 35,
-      "public_declarations": 251,
-      "audited_declarations": 306
+      "report_sha256": "a762226d2da918fc89c554f9dd6c85718537e638e608158708c41d21d475ab80",
+      "modules": 62,
+      "public_declarations": 474,
+      "audited_declarations": 579
     },
     "second_scale": {
       "status": "PASS",
@@ -71,7 +71,7 @@
   "full_basin_paper_formalized": false,
   "limitations": [
     "External first-passage replays use Lean 4.30.0-rc2 and are separate from the local Lean 4.27.0 development.",
-    "The finite Syracuse residue law is checked; its infinite stationary-measure interface and the Green/cylinder identification remain unformalized.",
+    "The infinite stationary Syracuse probability law, exact Green formula and finiteness, and selected analytic limit implications are checked; density existence, first-hit clock laws, the weighted Dirichlet residue asymptotic, and complete Green/cylinder identification remain unformalized in this release.",
     "The external companion contains an unused open-problem registry declaration with sorry; audited theorem roots do not use sorryAx."
   ]
 }

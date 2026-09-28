@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite the individual paper whose results you use; the three papers are listed below."
 type: software
-version: "2026.09.28.2"
+version: "2026.09.28.3"
 date-released: "2026-09-28"
 license:
   - MIT

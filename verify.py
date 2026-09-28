@@ -276,7 +276,8 @@ def source_inventory(name, data):
     if len(imports) != len(re.findall(r"\bimport\b", code)) or len(imports) != len(set(imports)):
         raise ValueError("Unsupported or duplicate import in " + name)
     namespaces, public, definitions, raw_prints = [], [], [], []
-    counts = {"namespace": 0, "end": 0, "theorem": 0, "lemma": 0, "def": 0, "print": 0}
+    counts = {"namespace": 0, "end": 0, "theorem": 0, "lemma": 0,
+              "def": 0, "instance": 0, "print": 0}
     for line in code.splitlines():
         match = re.fullmatch(r"(namespace|end) (" + QUALIFIED + r")\s*", line)
         if match:
@@ -302,13 +303,20 @@ def source_inventory(name, data):
             counts["def"] += 1
             definitions.append(".".join([*namespaces, match.group(1)]))
             continue
+        match = re.match(r"(?:noncomputable )?instance (" + QUALIFIED + r")(?=\s|\{|\(|:|$)", line)
+        if match:
+            if not namespaces:
+                raise ValueError("Instance outside namespace in " + name)
+            counts["instance"] += 1
+            definitions.append(".".join([*namespaces, match.group(1)]))
+            continue
         match = re.fullmatch(r"#print axioms (" + QUALIFIED + r")\s*", line)
         if match:
             counts["print"] += 1
             raw_prints.append((".".join(namespaces), match.group(1)))
     if namespaces:
         raise ValueError("Unclosed namespace in " + name)
-    for kind in ("namespace", "end", "theorem", "lemma", "def"):
+    for kind in ("namespace", "end", "theorem", "lemma", "def", "instance"):
         if counts[kind] != len(re.findall(r"\b" + kind + r"\b", code)):
             raise ValueError("An unsupported " + kind + " command was not inventoried in " + name)
     if counts["print"] != len(re.findall(r"#", code)) or not public:
