@@ -1,6 +1,6 @@
-# Partial formalization of the basin-density paper
+# Earlier Lean 4.27 basin development
 
-The exact statement coverage and remaining obligations are listed in [the basin claim map](../paper/basin-lean-claims.md). This directory uses Lean 4.27.0 and the same pinned mathlib revision as the original formal artifact.
+This 98-module development is retained from release v2026.09.28.4. The complete native theorem chain and current [basin claim map](../paper/basin-lean-claims.md) use [formal-basins-native](../formal-basins-native/README.md). This older directory uses Lean 4.27.0 and the same pinned mathlib revision as the original matrix/synchronization artifact.
 
 From the repository root, with the dependencies described in [formal/README.md](../formal/README.md):
 

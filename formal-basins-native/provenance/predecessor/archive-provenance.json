@@ -1,0 +1,16 @@
+[
+  {
+    "name": "supplement",
+    "url": "https://www.proofatlas.ai/papers/positive-lower-density-collatz-predecessors/positive-lower-density-collatz-predecessors-v1.1-source.zip",
+    "sha256": "55ceb4df0cca17ae728dc65b30bf5077000e1b47f2dc322454eea9f637ac75b3",
+    "bytes": 55103,
+    "files": 32
+  },
+  {
+    "name": "baseline",
+    "url": "https://www.proofatlas.ai/papers/positive-density-log-time-collatz/positive-density-log-time-collatz-v2.1-source.zip",
+    "sha256": "23f5cac4d66e696401144658752cf180a13ce70373a122f00693e1e1fe969c1f",
+    "bytes": 914975,
+    "files": 411
+  }
+]

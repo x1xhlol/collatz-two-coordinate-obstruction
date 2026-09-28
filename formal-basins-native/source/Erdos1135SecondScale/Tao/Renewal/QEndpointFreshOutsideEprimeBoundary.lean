@@ -1,0 +1,105 @@
+/-
+Modification notice: changed by Lucas Valbuena, 28 September 2026.
+This file is a namespace-renamed copy of the second-scale adaptation of
+Lech Mazur's published formalization. Erdos1135 module, import, and namespace
+identifiers were changed to Erdos1135SecondScale for the joint build.
+The alpha = 2001/2000 adaptation and its proof changes are recorded in the
+retained patch and provenance. Original attribution and licenses are retained.
+-/
+
+import Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeNative
+import Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOuterBadJBoundary
+
+/-!
+# Boundary Source Adapter for Canonical Outside-Eprime
+
+This leaf packages the triangle selected by the Proposition 7.8 far-below
+boundary branch as the exact current-scale input consumed by the canonical
+fixed-offset estimate.
+-/
+
+namespace Erdos1135SecondScale
+namespace Tao
+
+noncomputable section
+
+namespace TaoSection7Case3SourceStoppingRun
+namespace Lemma79TailExpectation
+
+/-- The far-below boundary triangle supplies exact gap alignment and all
+current-scale fields.  The gate `2 <= m` is required for `1 < M`. -/
+theorem
+    lemma79_exists_qmBoundaryFarBelow_entryTriangle_currentScaleControls
+    {n m : ℕ} {xi : ZMod (3 ^ n)} {epsilon : ℝ}
+    (hactive : TaoSection7Prop78ActiveCoverData n xi epsilon)
+    {entry : TaoSection7RenewalPoint}
+    (hboundary : taoSection7QmBoundary (n / 2) m entry)
+    (hfar :
+      TaoSection7QmBoundaryFarBelow
+        (taoSection7Prop78BoundaryThreshold m)
+        hactive.family entry)
+    (hm : 2 ≤ m) :
+    ∃ Delta ∈ hactive.family,
+      Delta.Mem entry.toPoint ∧
+      taoSection7Prop78BoundaryThreshold m <
+        (lemma79EntryVerticalGap Delta entry.toPoint : ℝ) ∧
+      Delta.cornerL - entry.l =
+        (lemma79EntryVerticalGap Delta entry.toPoint : ℤ) ∧
+      TaoSection7Lemma710CurrentScaleControls
+        n Delta entry.toPoint (m : ℝ)
+          (lemma79EntryVerticalGap Delta entry.toPoint : ℝ) := by
+  rcases
+      lemma79_exists_qmBoundaryFarBelow_entryTriangle_gap_bounds
+        hactive hboundary hfar with
+    ⟨Delta, hDelta, hmem, hfarGap, hgapUpper⟩
+  have hdomain :=
+    taoSection7QmBoundary_toPoint_sourceDomain hboundary
+  have hsub : n / 2 - (entry.j : ℕ) = m := by
+    unfold taoSection7QmBoundary at hboundary
+    omega
+  have hcurrent :
+      taoSection7Lemma710CurrentM n entry.toPoint = (m : ℝ) := by
+    unfold taoSection7Lemma710CurrentM
+    simpa [TaoSection7RenewalPoint.toPoint] using
+      congrArg (fun k : ℕ => (k : ℝ)) hsub
+  have hgap :
+      Delta.verticalDepth entry.toPoint =
+        (lemma79EntryVerticalGap Delta entry.toPoint : ℤ) := by
+    simpa [TaoSection7Triangle.verticalDepth] using
+      lemma79EntryVerticalGap_coe_of_mem hmem
+  have hgapAlign :
+      Delta.cornerL - entry.l =
+        (lemma79EntryVerticalGap Delta entry.toPoint : ℤ) := by
+    simpa [TaoSection7RenewalPoint.toPoint] using
+      lemma79EntryVerticalGap_coe_of_mem hmem
+  have hSdef :
+      (lemma79EntryVerticalGap Delta entry.toPoint : ℝ) =
+        ((Delta.verticalDepth entry.toPoint : ℤ) : ℝ) := by
+    rw [hgap]
+    norm_num
+  have hm_gt_one : 1 < m := by omega
+  have hm_gt_one_real : (1 : ℝ) < (m : ℝ) := by
+    exact_mod_cast hm_gt_one
+  have hMlower :
+      (m : ℝ) / (Real.log (m : ℝ)) ^ 2 ≤
+        (lemma79EntryVerticalGap Delta entry.toPoint : ℝ) := by
+    unfold taoSection7Prop78BoundaryThreshold at hfarGap
+    exact hfarGap.le
+  refine ⟨Delta, hDelta, hmem, hfarGap, hgapAlign, ?_⟩
+  exact
+    { M_def := hcurrent.symm
+      S_def := hSdef
+      domain := hdomain
+      M_large := hm_gt_one_real
+      logM_pos := Real.log_pos hm_gt_one_real
+      S_nonneg := Nat.cast_nonneg _
+      hMlower := hMlower
+      upper_752 := hgapUpper }
+
+end Lemma79TailExpectation
+end TaoSection7Case3SourceStoppingRun
+
+end
+
+end Tao
+end Erdos1135SecondScale

@@ -1,0 +1,17 @@
+{
+  "provenance/predecessor/BASELINE_LICENSE": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+  "provenance/predecessor/BASELINE_NOTICE": "a42c24fb15a8cde899a4b76a0ca3f9ace85b1e085dfd48eebc57baedba647319",
+  "provenance/predecessor/LICENSE": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+  "provenance/predecessor/NOTICE": "df7ac28e54e3eca1c35a456262f7cc82f4ab2c5e7352b1a1586d54fbb1105f6e",
+  "provenance/predecessor/RIGHTS.md": "de0f6376a786b7e21d12c830814842cf68e4591b120bcc82239111425afb4e14",
+  "provenance/predecessor/archive-provenance.json": "a94f8a94a4b9523d64fdd4ec2601e19759826733d870c0038653af2985c42b6f",
+  "provenance/predecessor/assembly.json": "9da50833f18f8427523da5cd89ff4a0dbf1198fe09a9a4acccf4583898ac2ec3",
+  "provenance/predecessor/license.json": "cb10aeec21a61d44414f089024fa9cd1752dfb6e45579d722ef9143314ea303b",
+  "provenance/predecessor/namespace-provenance.json": "fa665a98c52bc542b89681fd0c0196b87b7b5f50102afdab88f25e7e91744ef3",
+  "provenance/second-scale/alpha-2001-2000.patch": "a4fd6bebb47493455881af354ec52cb166f6ab7d457f479222aabf441348f99d",
+  "provenance/second-scale/clock-source-map.json": "828b85ce2e4102137c9b36ab0cba35b199c35e1dd74e44cf0929a264a54bdfec",
+  "provenance/second-scale/local-estimate-namespace-provenance.json": "9292bb0dae51fd67a6dcfa3729b73d0e0ee9f5b8722d250d427ee3ceacd4963d",
+  "provenance/second-scale/namespace-ledger-verification.json": "da6eed253fbfefffa8ef98adee180370eaa4b8f90c4b6c950db0e72ba295429c",
+  "provenance/second-scale/namespace-source-map.json": "7706d9af3bd7514d70596267026c0b99ccf2aea34b4cd06634add0f44c925adc",
+  "provenance/source-change-notices.json": "e9e08d99069fc8de2885915a758d604750a4601c3c2a1f0e5466742b357ed23b"
+}

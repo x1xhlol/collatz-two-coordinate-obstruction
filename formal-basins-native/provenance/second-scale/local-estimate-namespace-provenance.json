@@ -1,0 +1,76 @@
+{
+  "mapping": {
+    "PositiveValuationWordCount": "SecondScalePositiveValuationWordCount",
+    "ActualStoppedTupleFibers": "SecondScaleActualStoppedTupleFibers",
+    "FiniteWindowAtoms": "SecondScaleFiniteWindowAtoms",
+    "BoundedPassageWords": "SecondScaleBoundedPassageWords",
+    "AtomWordBudget": "SecondScaleAtomWordBudget",
+    "CanonicalPassageAtoms": "SecondScaleCanonicalPassageAtoms",
+    "RealPassageAtoms": "SecondScaleRealPassageAtoms",
+    "FinePrefixExponentialRate": "SecondScaleFinePrefixExponentialRate",
+    "RealClockExponentialRate": "SecondScaleRealClockExponentialRate",
+    "RealCanonicalClockRates": "SecondScaleRealCanonicalClockRates",
+    "RealClockRateBounds": "SecondScaleRealClockRateBounds",
+    "RealLocalClockProbability": "SecondScaleRealLocalClockProbability",
+    "RealClockFloorGeometry": "SecondScaleRealClockFloorGeometry",
+    "RealClockSourceTransport": "SecondScaleRealClockSourceTransport",
+    "CanonicalLocalClockProbability": "SecondScaleCanonicalLocalClockProbability",
+    "CoarsePrefixProbabilityRate": "SecondScaleCoarsePrefixProbabilityRate",
+    "ActualPrefixEventTransfer": "SecondScaleActualPrefixEventTransfer",
+    "SyracuseLandingLowerBound": "SecondScaleSyracuseLandingLowerBound",
+    "SyracuseCenteredPassage": "SecondScaleSyracuseCenteredPassage",
+    "SyracuseLogTrajectory": "SecondScaleSyracuseLogTrajectory",
+    "CanonicalClockWindows": "SecondScaleCanonicalClockWindows",
+    "TaoLocalPrefixConcentration": "SecondScaleTaoLocalPrefixConcentration",
+    "Erdos1135": "Erdos1135SecondScale",
+    "CollatzClockAudit": "CollatzClockSecondScale",
+    "CollatzPassageAtoms": "CollatzPassageAtomsSecondScale"
+  },
+  "modules": {
+    "SecondScalePositiveValuationWordCount": {
+      "original_path": "/dev/shm/collatz-local-atom-proof/PositiveValuationWordCount.lean",
+      "original_sha256": "2db93f88501ce961f41a83cccc3f35582f7a12a0f2bc4b5c7f9d817e433f669a",
+      "renamed_sha256": "e1056cd14531eeaaf75c8edcc4113db6109f0edda1540de1d5937318cbce17b0"
+    },
+    "SecondScaleActualStoppedTupleFibers": {
+      "original_path": "/dev/shm/collatz-local-atom-proof/ActualStoppedTupleFibers.lean",
+      "original_sha256": "b10f4b17bb12e4aef72557931e7121735bcc799cd021ca2cbaf8e8dd90d81c70",
+      "renamed_sha256": "8249fafc5266bd57fa9e65ed7dc6a31efff7a015c199556094762c7a11e89b9b"
+    },
+    "SecondScaleFiniteWindowAtoms": {
+      "original_path": "/dev/shm/collatz-local-atom-proof/FiniteWindowAtoms.lean",
+      "original_sha256": "637b4e420c4fd5b471595f03119dd00dc5ee694784c743270f754bc4f10396ea",
+      "renamed_sha256": "1cfad6ca54109ef3113fb93eaa83cfa1d49fbe364f84ad8369f8eb3d29ef0dce"
+    },
+    "SecondScaleBoundedPassageWords": {
+      "original_path": "/dev/shm/collatz-local-atom-proof/BoundedPassageWords.lean",
+      "original_sha256": "90ed27d284870cb7cd903eb577a2ca8eb3997c40bf4c87a02b38267acf7098f4",
+      "renamed_sha256": "57ffb6b12f3dd888a04ae0c4ea0e331ffdda1dbb125bcd9384dd0b2fe313931f"
+    },
+    "SecondScaleAtomWordBudget": {
+      "original_path": "/dev/shm/collatz-local-atom-proof/AtomWordBudget.lean",
+      "original_sha256": "e30ddc05fac2b183bbb881cf0fa39485901aadf2169858725e0e1e317a004a37",
+      "renamed_sha256": "382f6f41a3eb5868c0f1866468d1fb61b008a30b4db634d4631f19b4855d035e"
+    },
+    "SecondScaleCanonicalPassageAtoms": {
+      "original_path": "/dev/shm/collatz-local-atom-proof/CanonicalPassageAtoms.lean",
+      "original_sha256": "a59941f3c09f8e085ecb443037204580761e5f65343bc5d91285f43152bb22a6",
+      "renamed_sha256": "30218f39348b873b33c7a196de772d7bdd47ff82926e1f699f70ab8921d6c33d"
+    },
+    "SecondScaleRealPassageAtoms": {
+      "original_path": "/dev/shm/collatz-local-atom-proof/RealPassageAtoms.lean",
+      "original_sha256": "fb78fe023009be11bb3d0486a4f440f6ad16a2ae3e2f8db7eda555013c1c8ede",
+      "renamed_sha256": "e2be7c3d0b8b6a2d69a70bb342a0749073b12bcd4e6bf5ed284383e8bf030a20"
+    },
+    "SecondScaleFinePrefixExponentialRate": {
+      "original_path": "/dev/shm/collatz-sharp-clock-proof/FinePrefixExponentialRate.lean",
+      "original_sha256": "575486195a9145b8bd5d37c0f0fa98204fddac80d5a4633f84fe2cbfe0c2abd2",
+      "renamed_sha256": "874708e53ffc3094194f5120d73fadbbfb8450c36677df04f9e147535bc0a18a"
+    },
+    "SecondScaleRealClockExponentialRate": {
+      "original_path": "/dev/shm/collatz-sharp-clock-proof/RealClockExponentialRate.lean",
+      "original_sha256": "b79d592c6776e5331bac96eb10f9777f14ecba93eeb608156431682f6519a638",
+      "renamed_sha256": "2fb38a95dc50601d75a6edaa5f8d78c463cbf540c6ba0f6dde3b6e2868d59f38"
+    }
+  }
+}

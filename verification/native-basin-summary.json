@@ -1,0 +1,13 @@
+{
+  "version": "2026.09.28.5",
+  "modules": 1602,
+  "local_modules": 281,
+  "theorems": 1507,
+  "definitions": 275,
+  "external_roots": 5,
+  "roots": 1787,
+  "fresh": 847,
+  "reused": 755,
+  "manifest_sha256": "efc8bc1226fb158341a4626eeafaf5c97b9284da1a2d137de38b7db035cbb230",
+  "replay_record_sha256": "260930d45985dca3d8b7abe88fff1c8c73aa154893d5fa1476b5c76b0b70a79c"
+}

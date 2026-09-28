@@ -55,17 +55,18 @@ logarithmic density one of the eventually periodic set. Additional results of Ma
 density and imply that the canonical function is positive exactly at
 integers prime to three. With that input, global sublinearity is
 equivalent to eventual periodicity of every orbit; this condition and
-the exclusion of additional cycles remain unresolved. The accompanying
-Lean development checks selected proof steps, but the main analytic
-theorem chain has not yet been formalized.
+the exclusion of additional cycles remain unresolved. The accompanying Lean development verifies the numbered results,
+connecting both first-passage scales and the additional Mazur inputs
+to the density, clock, and canonical-limit conclusions.
 \end{abstract}
 
 \section{Introduction and notation}
 \label{sec:canonical-traces}
 
 We use Tao's first-passage stabilization theorem to study fixed integer
-basins. The arguments in this paper are analytic proofs with selected steps
-checked in Lean. We prove
+basins. The numbered results have accompanying Lean proofs, with
+the external formal inputs and their interfaces checked in one native
+development. We prove
 existence of logarithmic basin densities, total-variation limits for
 countable orbit labels, and equality of two canonical critical traces
 at every positive integer. A final proposition characterizes the
@@ -150,8 +151,8 @@ first-passage stabilization theorem, rather than only Tao's final
 almost-boundedness conclusion. Its checked source fixes the scale
 parameter at \(\alpha=1001/1000\). We rebuilt that theorem and
 adapted its checked source to \(\alpha=2001/2000\), retaining the
-real-threshold first-passage and rate conclusions. The two separate
-Lean checks supply exactly the scales used in
+real-threshold first-passage and rate conclusions. The two checked scale namespaces coexist in the combined Lean
+development and supply exactly the scales used in
 Proposition~\ref{prop:ct-tao-input}; they do not assert a formally
 checked continuum of scale parameters.
 His natural-density transport theorem~\cite{MazurNatural2026}
@@ -428,7 +429,7 @@ The following estimates concern the full unstopped valuation prefix.
 They do not assume independence after a hitting time.
 
 \begin{lemma}\label{lem:ct-local}
-Uniformly for \(a\in[1.0005,1.001]\), let \(Q\) have logarithmic
+Uniformly for \(a\in\{1001/1000,2001/2000\}\), let \(Q\) have logarithmic
 distribution on the odd integers in either
 \([x^a,x^{a^2}]\) or \([x^{a^2},x^{a^3}]\).
 There are \(C,c>0\) such that
@@ -1666,61 +1667,52 @@ proving the Collatz conjecture, is not achieved here.
 
 \section{Formal verification scope}
 
-The accompanying Lean development verifies Lemma~\ref{lem:ct-two-scale}
-in its original Banach-valued form, including the convergence rate,
-and checks the irrational ratio of the two numerical scales.
-The trajectory development proves the parity count, entropy bound,
-and actual counting recurrence, thereby closing the uniform packing
-and reciprocal-tail estimates in Lemma~\ref{lem:ct-packing}.
-It also proves the uniform finite correction-product bound, infinite
-product convergence on distinct orbits, and the forward-tail limit.
-The cylinder development defines the full countable arithmetic word
-law, proves its expansion and identification with the explicit finite
-Syracuse residue law, and checks the upper, lower, and maximum mass
-bounds. It constructs the infinite geometric random series as a
-measurable \(\mathbb Z_3\)-valued variable, proves that its Borel
-probability law has these cylinder masses, and verifies the affine
-stationarity equation, uniqueness among stationary probability measures,
-and maximal-cylinder exponent.
-The first-hit development checks actual inverse-word weights, hitting-time
-classification, cycle weights, and the inverse-operator expansion. It
-proves the exact Green Dirichlet formula and finiteness, including the
-nonnegative interchange of sums and comparison with the ordinary
-\(p\)-series. The analytic development derives the weighted Dirichlet
-residue from a weighted logarithmic mean, and hence the critical Green
-limit and harmonic equation when the required means exist.
-The first-hit reconstruction and countable endpoint tails are checked
-in both periodic and nonperiodic cases. From an odd weighted logarithmic
-mean and absolute zero logarithmic density of odd-clock exceptions,
-the development identifies the actual cylinder depth average, Cesàro
-average, Abel average, and normalized Green limit. The full weighted
-mean follows from a checked halving recursion, including its possible
-single-target defect. The deterministic conversion between odd-step and
-elapsed shortcut clocks is also proved, with its correction bound derived
-uniformly from first-hit distinctness.
-First-passage weight and expectation transport are formalized, as are
-the odd harmonic normalizers and the two-scale criterion for existence
-of the actual odd weighted mean. The required normalized-window
-estimates remain explicit hypotheses of this criterion.
-The raw-to-shortcut
-map inclusion used in Theorem~\ref{thm:ct-positive-unit-support} and
-the predecessor description for multiples of three are also checked.
+The accompanying Lean 4.30.0-rc2 development gives checked declarations
+for the numbered results in Sections 2--12. It includes the Banach-valued
+two-scale averaging theorem and rate, uniform trajectory packing and
+correction products, both real-threshold first-passage scales, local
+clock and atom estimates, and the countable label laws. The actual
+weighted and ordinary basin means are proved from those inputs.
+The clock-exception estimates are then proved for odd and all positive
+starts, and the Green, cylinder depth, Ces\`aro, and Abel limits are
+identified at each positive target without additional density or clock
+hypotheses.
 
-These checks do not yet formalize the complete analytic theorem chain.
-Separate Lean~4.30.0-rc2 replays check Mazur's real-threshold
-first-passage rate theorem at each required scale, and his original
-natural-density transport root. The local Lean~4.27.0 development
-does not yet connect these inputs to density existence, the actual
-clock-exception estimates, or the additional Mazur interfaces. The
-Green and cylinder identification is checked conditional on the stated
-density and clock hypotheses. The repository's
-\texttt{paper/basin-lean-claims.md} records the exact declarations and
-remaining obligations. Its verifier builds the local proof files afresh
-and audits their axiom dependencies separately from the matrix and
-synchronization papers. The present batch comprises ninety-eight modules
-and 678 public theorem and lemma declarations; the axiom audit also
-covers 138 definitions and named instances. The external replay records state
-their separate source and dependency pins.
+The native cylinder development constructs the canonical 3-adic
+probability law and checks stationarity, uniqueness, the explicit
+recursion, maximal-cylinder bounds and exponent, and the inverse-block
+normalizations. It also proves the uniform backward-basin boundary
+estimate, forward-component exhaustion and weighted limits, and the
+four global-condition equivalences. Mazur's natural-counting and
+predecessor theorems are included with their actual map and counting
+interfaces. They yield the natural-density limits, positivity exactly
+at targets prime to three, positive component masses, and the stated
+equivalence with universal eventual periodicity. The equivalent global
+conditions remain unproved; the development does not exclude additional
+cycles or prove the Collatz conjecture.
+
+The scales \(1001/1000\) and \(2001/2000\) use distinct namespaces in
+one Lean environment, with their numerical definitions checked by the
+root audit. Lemma~\ref{lem:ct-local} is stated at those two scales.
+The predecessor source has a third namespace because its pinned baseline
+differs from the first-passage package. Imported sources retain their
+original attribution and licenses.
+
+The combined bundle contains 1,602 dependency modules,
+including 281 local proof modules. Its root audit covers
+1,507 local theorem and lemma declarations,
+275 definitions and named instances, and
+5 upstream theorem roots.
+Only \texttt{propext}, \texttt{Classical.choice}, and
+\texttt{Quot.sound} are permitted in their logical dependencies.
+The source manifest, dependency pins, theorem map, and recorded build
+are supplied in the repository. The recorded joint build identifies
+fresh compilation and exact dependency-checked reuse; the default
+verifier rebuilds all bundled modules. The earlier Lean 4.27 development
+is retained separately for reproducibility. The exact correspondence
+between manuscript statements and declarations is recorded in
+\texttt{paper/basin-lean-claims.md}.
+
 
 \section*{Acknowledgments}
 The main first-passage input and stationary Syracuse law are due to
@@ -1735,8 +1727,8 @@ and license notice.
 \section*{Use of AI}
 OpenAI Codex was used extensively for mathematical exploration and
 preparation and revision of this manuscript. The proofs use the
-explicitly cited analytic inputs. Selected proof steps have been checked
-in Lean; the full analytic theorem chain has not yet been formalized.
+explicitly cited analytic inputs. The numbered results have accompanying Lean proofs; their
+source and verification boundaries are specified above.
 Automated review does not constitute external peer review or endorsement
 by the authors of the cited works.
 
@@ -1746,7 +1738,8 @@ This paper and its LaTeX source are licensed under
 \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
 Attribution 4.0 International (CC BY 4.0)}. The original accompanying
 code is licensed under MIT. Imported proof sources retain their own
-licenses; the Mazur replay in the repository uses Apache~2.0.
+licenses; the imported Mazur packages use Apache~2.0 with their separate
+retained notices.
 
 \begin{thebibliography}{99}\small\raggedright
 \bibitem{Tao2022} T. Tao.
@@ -1791,7 +1784,7 @@ Checked-source package \texttt{ca3dd0d63920411213403092aecc6946619eb082}.
 \bibitem{MazurPredecessors2026} L. Mazur.
 \emph{Positive Lower Density of Collatz Predecessors}.
 Preprint, version 1.0, 6 September 2026.
-\url{https://www.proofatlas.ai/formalizations/positive-lower-density-collatz-predecessors/}.
+\href{https://www.proofatlas.ai/formalizations/positive-lower-density-collatz-predecessors/}{ProofAtlas formalization and source}.
 Checked-source package \texttt{c290ac229b379d2b51026d3e86140496870d6f39}.
 \end{thebibliography}
 \end{document}

@@ -6,7 +6,7 @@ Three standalone papers are maintained here, with their LaTeX sources and formal
 | --- | --- | --- |
 | Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system | [PDF](paper/two-coordinate-obstruction.pdf) · [Source](paper/two-coordinate-obstruction.tex) | Lean checks the stated algebraic obstruction results and supporting lemmas. |
 | An independent second proof of Said Duran’s equal-height Collatz runs theorem | [PDF](paper/said-duran-second-proof.pdf) · [Source](paper/said-duran-second-proof.tex) | Lean checks finite-pattern synchronization and equal first hitting times. Priority belongs to Said Duran. |
-| Collatz basin densities and canonical traces from first-passage stabilization | [PDF](paper/tao-basin-densities.pdf) · [Source](paper/tao-basin-densities.tex) | Selected proof steps are checked. The main analytic theorem chain is not yet fully formalized. |
+| Collatz basin densities and canonical traces from first-passage stabilization | [PDF](paper/tao-basin-densities.pdf) · [Source](paper/tao-basin-densities.tex) | Lean checks the density, clock, Green/cylinder identification, natural-density, positivity, and component-equivalence results. |
 
 The first paper retains Sections 1–8 of the earlier combined manuscript. Its two-coordinate obstruction with diagonal bounds covers all eleven weak rules, separately in both word orientations. A second result removes the diagonal bounds for the reversed system and excludes both eligible TOP removals. It also proves a forward growth and contraction criterion in arbitrary finite dimension. The unrestricted forward TOP problem and unrestricted higher-dimensional interpretations remain unresolved.
 
@@ -20,18 +20,23 @@ The literature comparison uses Shaik’s **6 September 2026 version 4.0.0**, Nas
 
 The [matrix and synchronization claim map](paper/lean-claims.md) identifies the checked declarations in the first two papers. Their combined closure contains **137 Lean modules, 633 public theorem/lemma declarations, and 93 audited definitions**. Four auxiliary modules on conditional stationary profiles are retained as checked algebra outside the papers’ contributions. The [rebuild report](verification/rebuild.json) records the build and axiom audit.
 
-The [basin claim map](paper/basin-lean-claims.md) records the partial formalization of the third paper, including the precise missing analytic steps. It currently contains **98 modules, 678 public theorem/lemma declarations, and 138 audited definitions and named instances**, covering uniform trajectory packing, the unique stationary Syracuse probability law, actual first-hit reconstruction and transport, the odd-window mean criterion, weighted Dirichlet residues, and Green/cylinder limit identification from explicit density and clock hypotheses. Its sources, inventory, and rebuild report are separate from the original closure. A successful check of these modules does not certify the full basin-density paper or its external theorem interfaces.
+The [basin claim map](paper/basin-lean-claims.md) matches the third paper's numbered results to the [native Lean 4.30.0-rc2 development](formal-basins-native/README.md). Its joint closure contains **1,602 bundled Lean modules, including 281 local proof modules, 1,507 local theorem/lemma declarations, 275 definitions and named instances, and 5 separately audited upstream roots**. The actual first-passage estimates at both scales are connected to density existence, clock laws, and the Green/cylinder identification. Mazur's natural-counting and predecessor inputs are also connected to the natural-density and positivity conclusions. The [joint replay](formal-basins-native/REPLAY-REPORT.md) audits 1,787 declarations using only `propext`, `Classical.choice`, and `Quot.sound`.
 
-A [separate replay](external/mazur-alpha-2001-2000/REPLAY-REPORT.md) checks Mazur’s real-threshold first-passage rate theorem at **α = 2001/2000**. The original **α = 1001/1000** theorem and natural-density transport root also passed a fresh 578-module rebuild. The replay includes source, the patch, attribution, and a portable verifier; it uses Lean 4.30.0-rc2 and has its own dependency pins.
+The native bundle includes both **α = 1001/1000** and **α = 2001/2000** in one Lean environment. The [original second-scale replay](external/mazur-alpha-2001-2000/REPLAY-REPORT.md) and patch remain available. The joint source preserves the independently named scale and predecessor packages, their licenses, and their provenance. The manifest and report distinguish fresh compilation from exact dependency-checked object reuse; the default command rebuilds every bundled module.
 
-Use Lean **4.27.0** and mathlib commit **`a3a10db0e9d66acbebf76c5e6a135066525ac900`**. Dependency setup is described in [formal/README.md](formal/README.md). Both scopes use the same [verifier](verify.py), which creates fresh local compiled modules and permits only `propext`, `Classical.choice`, and `Quot.sound`:
+Use the [native bundle instructions](formal-basins-native/README.md) with Lean **4.30.0-rc2** and mathlib **`5450b53e5ddc75d46418fabb605edbf36bd0beb6`**:
 
 ```sh
-python3 verify.py --mathlib-root /path/to/mathlib4 --report /new/path/matrix-synchronization.json
-python3 verify.py --scope basins --mathlib-root /path/to/mathlib4 --report /new/path/basins.json
+python3 formal-basins-native/verify_replay.py --mathlib /path/to/native/mathlib4 --lean /path/to/lean-4.30.0-rc2/bin/lean --output /new/path/native-basin-build --jobs 3
 ```
 
-Each report path must be unused. No SAT-solver result is used as a proof premise.
+The first two papers use Lean **4.27.0** and mathlib **`a3a10db0e9d66acbebf76c5e6a135066525ac900`**, as described in [formal/README.md](formal/README.md):
+
+```sh
+python3 verify.py --mathlib-root /path/to/lean-4.27/mathlib4 --report /new/path/matrix-synchronization.json
+```
+
+The earlier [98-module basin development](formal-basins/README.md) is retained for reproducibility and can still be checked with `verify.py --scope basins` under Lean 4.27.0. The current theorem map refers to the native bundle. Every output path must be unused. No SAT-solver result is used as a proof premise.
 
 ## Build the papers
 
@@ -52,6 +57,6 @@ The rewriting system and its equivalence to the Collatz conjecture are due to Yo
 
 ## License and archival releases
 
-The original Lean source, verification scripts, and repository documentation outside `paper/` and `external/` are licensed under the [MIT License](LICENSE). The [Mazur companion and second-scale adaptation](external/mazur-alpha-2001-2000/REPLAY-REPORT.md) retain [Apache 2.0](external/mazur-alpha-2001-2000/LICENSE) and the [Advameg notice](external/mazur-alpha-2001-2000/NOTICE), with separately licensed upstream material identified there. The adapted Sharpe parity module retains its MIT copyright and license notice. The papers, including their LaTeX sources and PDFs, are licensed under [CC BY 4.0](paper/LICENSE); code excerpts retain the code's MIT license. Referenced works and any third-party material retain their original rights.
+The original Lean source, scripts, and documentation use the [MIT License](LICENSE). Imported proof sources in `external/` and `formal-basins-native/source/` retain their own licenses; the [native source-license map](formal-basins-native/SOURCE-LICENSES.md) identifies the Apache-2.0 packages and their separate Mazur, Advameg, and upstream notices. The adapted Sharpe parity module retains its MIT attribution. The papers, including their LaTeX sources and PDFs, use [CC BY 4.0](paper/LICENSE); code excerpts retain their code license. Referenced works and third-party material retain their original rights.
 
-[GitHub releases](https://github.com/x1xhlol/collatz-two-coordinate-obstruction/releases) bundle the three standalone PDFs, sources, and verification reports. The connected Zenodo integration archives each published repository release. Its DOI identifies the complete release; each paper remains separately titled and attributed within that archive.
+[GitHub releases](https://github.com/x1xhlol/collatz-two-coordinate-obstruction/releases) bundle the three standalone PDFs, sources, and verification reports. Zenodo’s [concept DOI (all versions)](https://doi.org/10.5281/zenodo.23021640) groups deposited releases. Each deposited release has its own version DOI and contains the complete repository with the three separately titled papers. A new GitHub release’s version DOI becomes available after Zenodo finishes archiving it.

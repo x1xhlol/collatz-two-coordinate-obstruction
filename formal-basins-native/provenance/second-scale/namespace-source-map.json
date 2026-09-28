@@ -1,0 +1,1912 @@
+{
+  "Erdos1135.Basic": {
+    "module": "Erdos1135SecondScale.Basic",
+    "original_sha256": "cf8f99310847c1e3aeb4019a1dee229e5c437f0619495ac2818f3af8139a9d99",
+    "renamed_sha256": "1a2fdd21a185b49e3905d91b0aec5fd594c9b6453aaa815d5b22ef8ea866611a"
+  },
+  "Erdos1135.CollatzStep": {
+    "module": "Erdos1135SecondScale.CollatzStep",
+    "original_sha256": "be7a77bc4ec1f7c4b111d25733e52148b4e22cd4fce507630fe0fb1ca2de398a",
+    "renamed_sha256": "6be2811b0c0233dd5d742d1bfad3a15ad38d8d9e5bb6d99fe53503fdda842903"
+  },
+  "Erdos1135.Division": {
+    "module": "Erdos1135SecondScale.Division",
+    "original_sha256": "c8a63f9bc9e3fb8127044a80513412a449aa5b21872f001a02dcebfda34f2fdd",
+    "renamed_sha256": "ff44cea6a860ead88555c47d1f02557d2609a0c5f7b022a5147f5ad91c2077d5"
+  },
+  "Erdos1135.Parity": {
+    "module": "Erdos1135SecondScale.Parity",
+    "original_sha256": "30e004b959735fbbf04769a40350ded21455dc0312106e8132500b319de236e1",
+    "renamed_sha256": "bba1dea1b402c57d1ab6e7affa89f3762f529dddae5a0a3c8fd37b79342ef2cc"
+  },
+  "Erdos1135.Residues": {
+    "module": "Erdos1135SecondScale.Residues",
+    "original_sha256": "3d7255b27418277d3adcd03bec2a256caba50ae063874cb7df5a855cb0f509b8",
+    "renamed_sha256": "7be3760a93ede2e2d4a755bdfda0e7ccde6679cfb956b38f13d584d9de76d6e9"
+  },
+  "Erdos1135.Tao.Density.FiniteLogCountAlgebra": {
+    "module": "Erdos1135SecondScale.Tao.Density.FiniteLogCountAlgebra",
+    "original_sha256": "30338322835652244893e7600436fb012eeac7249b5add463493dc5b573fe764",
+    "renamed_sha256": "034f16ee1c4d60aa8266643a65075e4d0c2c95f41147da0b62abc4705d1968ad"
+  },
+  "Erdos1135.Tao.Density.LogDensity": {
+    "module": "Erdos1135SecondScale.Tao.Density.LogDensity",
+    "original_sha256": "c0db38d394c3374bdbf67b8c1dcaa23f7f8b1faba6742b0c206848785bfeeede",
+    "renamed_sha256": "65eedc5cb21f677839c3e382ea1b767049b767ff2bc4a0a3d135c3e42367fe96"
+  },
+  "Erdos1135.Tao.Fourier.Basic": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Basic",
+    "original_sha256": "2a791b97a9d3a19ca15de059aa373e7fcf20e41ff4adb8738bfce35f3b51afbe",
+    "renamed_sha256": "59deeeeeb33d5d165281c513d49b06e5a7cce5500652487ee03b2f9e892ceb36"
+  },
+  "Erdos1135.Tao.Fourier.DecayStatement": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.DecayStatement",
+    "original_sha256": "6821d417795593c67c29b87e90490f2ae690f26dc8b5bbf95221caef2c099dbe",
+    "renamed_sha256": "df476584de6ef716ebc25a9120d86a40c393755a4dd0c145337bf1bb4f7185f8"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74CanonicalClaimStar": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74CanonicalClaimStar",
+    "original_sha256": "201bd0fb7706be7a58c1a221b09d9c64569c312b1debe3333e128bcab7c8e4e9",
+    "renamed_sha256": "93b9ada4c66819deaaab87b18f278c3e77dc229352183e804734ff6b937f7f8c"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74CanonicalCoherence": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74CanonicalCoherence",
+    "original_sha256": "e9bb4caa9f2dd86d4254168442af687bd89f8f434cec8cc2f70992ad8b0807a2",
+    "renamed_sha256": "70cc78c589852b398c377b7570eda4000843878316da4a1aca8879315cd4f281"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74CanonicalFamily": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74CanonicalFamily",
+    "original_sha256": "6d27f8875866006d013e6f1bca2c536e23e11499a71ea6b54f7c3ce7fe050ec1",
+    "renamed_sha256": "1d9417227a9cfba76535bc937b5f618a9d4e28f00f6364fd7a6921e759b8f2c4"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74CanonicalRaw": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74CanonicalRaw",
+    "original_sha256": "6c1e1b362280de37a88d1ce43d3c4575016800457b096f80df2f40720bfa309b",
+    "renamed_sha256": "261ba8862d3aaf449d470670d6e3d7155c00719fdff92051f8ff0bd08b449ff9"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74CanonicalSourceMem": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74CanonicalSourceMem",
+    "original_sha256": "c83c52f13eb8281df934a8dbe691829446284ee1bdf3830710ee5ee034e7cb23",
+    "renamed_sha256": "dae7e0c8b0c11501a36a1c5454c415926a138723c7806517dbaa32d92a9c399a"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74ClaimStarMetric": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74ClaimStarMetric",
+    "original_sha256": "60a13ecca4e57ed24fe449ed89b06a523af37207597216b2606387c9033d8614",
+    "renamed_sha256": "fc9962ffbaa4a32bf29473d86fd55542db486d93c60b963859d62b2a85422aef"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74ClaimStarPropagation": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74ClaimStarPropagation",
+    "original_sha256": "bec15834e7a201590f8b87bea86a6fcc7d3b2266569b459a1e3d5e677ef74c31",
+    "renamed_sha256": "7cc585abaf9e6a79e21686defd8b7e0023aa6a01cea6275204546247c8e399f8"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74ClaimStarScalars": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74ClaimStarScalars",
+    "original_sha256": "b2a79b1724049f398d17cbf7771a21c766142b484a4649b899a70e8390eb7601",
+    "renamed_sha256": "f3d65e07594be6b416c2eafba9e04fc9a3ad09832dd47561cfec50636578ee69"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74PrimitiveStrip": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74PrimitiveStrip",
+    "original_sha256": "f77c8d60380086339159ce2a4ac460d9e3d32d214099192b3e5ba36f9e942140",
+    "renamed_sha256": "b56ed814dbbbee777fe6576594a7b1bdb337e716ff8213e13520b05a0e493045"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74SoutheastTransport": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74SoutheastTransport",
+    "original_sha256": "dbef4e278de380114b75c601e63bc5d6d4560ecb7393e4f42b6e0d4a3c3819ae",
+    "renamed_sha256": "c1c290e6f45bb45270d15888a2f0e0c12e1372b11be53e3285c63679ebdbdd29"
+  },
+  "Erdos1135.Tao.Fourier.Lemma74ThetaArithmetic": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Lemma74ThetaArithmetic",
+    "original_sha256": "2085f3e47db8ca74999353d185f76f3c8a044fe024deca5864d0bbd1ef623b16",
+    "renamed_sha256": "c9608fa558d4d4025cf688c983d1e62219d0dd13d7d23c2538c17a55a90739f6"
+  },
+  "Erdos1135.Tao.Fourier.MixingStatement": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.MixingStatement",
+    "original_sha256": "ad1906d96c281fa6553d07577670db7712beed1bba0087f2a4c9319c4047144f",
+    "renamed_sha256": "8ed982511ba38752f486679d34750793e5a4aa49b39f514869a5150380f0f5d9"
+  },
+  "Erdos1135.Tao.Fourier.OscillationAlgebra": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.OscillationAlgebra",
+    "original_sha256": "3d9e37e7b216996885f88aac0bc1e382cdd0a92789e1c9535b61fabf94840759",
+    "renamed_sha256": "57e3dab7aa80a22e06923ab75e788b2eef07048b0f84f477a5775429589f9f74"
+  },
+  "Erdos1135.Tao.Fourier.Prop114CanonicalAssembly": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Prop114CanonicalAssembly",
+    "original_sha256": "13df0d82f92c8ddcbba951b6c2be2a466f982adfeed3bec33ab140b794ec9058",
+    "renamed_sha256": "aaffa367e2aff81790179c0b14504bbd0fd0533f9b2b98c5cca390591b46b495"
+  },
+  "Erdos1135.Tao.Fourier.Prop71CanonicalAssembly": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Prop71CanonicalAssembly",
+    "original_sha256": "e046de144bb06ab7cce82b420c8e536eacaaa8afeea5cf0a7c7d1cc025783e4f",
+    "renamed_sha256": "1f0454c9b6a2e4ad67db7d21ef3a4edeb8c905c39a6888e738a602f5a08c1ab7"
+  },
+  "Erdos1135.Tao.Fourier.Section7Cancellation": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7Cancellation",
+    "original_sha256": "8d24948df85382e29e5f5e20fd09624f4afe19eccc1a8df946ae2ceab905a355",
+    "renamed_sha256": "2d0c772a4e1da50e3c90f27c8338ae5038fbb1233fc9f5cba5206c877c1678fe"
+  },
+  "Erdos1135.Tao.Fourier.Section7Character": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7Character",
+    "original_sha256": "d5ad75334cf19fd28339362ed9574ac636e540261ca3d8679b35c19882b52b90",
+    "renamed_sha256": "83e7a61056208d19bd3cd0e29da33123d1e0ec58dc112b846d025fd6ee49c9ba"
+  },
+  "Erdos1135.Tao.Fourier.Section7Geometry": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7Geometry",
+    "original_sha256": "3396dab7cdf771abf67f9acdd2c5a592514b0b62287222411a4805c05a49520c",
+    "renamed_sha256": "e5986937c1613667fabceca8b8bf7eb8a09e8eb6e2d5c3845017c5c2f92c4857"
+  },
+  "Erdos1135.Tao.Fourier.Section7PairExpansion": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7PairExpansion",
+    "original_sha256": "8097e84283a110bdba12ca32cca3275f54b5e872771c46753a327995481df752",
+    "renamed_sha256": "e472fca29afd56829152ecbecbd916d011cdaa6b01d1fe3eee91df7d3ccd3d99"
+  },
+  "Erdos1135.Tao.Fourier.Section7PairExpectation": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7PairExpectation",
+    "original_sha256": "b4cab97e37207cd905db2241eb4e7b0a3f21b9853bd908470b7d6d2a0fa4f214",
+    "renamed_sha256": "eabd452ae47097e7a13212db8af1c4f58d1f2391159a779702f834eaeb4712ba"
+  },
+  "Erdos1135.Tao.Fourier.Section7PairFiber": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7PairFiber",
+    "original_sha256": "6ca5cdffa89510590295b1188a74b6391d1209a6d8d6be28de6b77c7b842d850",
+    "renamed_sha256": "bc209a38c048f18f9791d289ff135aab646562fa60e7e0773678e63c9c9fdd7f"
+  },
+  "Erdos1135.Tao.Fourier.Section7ProductPenalty": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7ProductPenalty",
+    "original_sha256": "dff70b28e5cf4e4699bf16b516e2aa0ea0c79d59ee668a99268266d3a026c75a",
+    "renamed_sha256": "166d988e5e003d779c3f3b5f66e68db4358c3624e51f9e50721e0dd5f2f04c2b"
+  },
+  "Erdos1135.Tao.Fourier.Section7SChiActualQ": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7SChiActualQ",
+    "original_sha256": "46f72388cf9d115420c135d9ea53c6e33a55f6997ab247a47e2ff2f510132ebc",
+    "renamed_sha256": "4957b796e0b417b87966100817a8180e5011fab52198a09e9f1a767cdf157152"
+  },
+  "Erdos1135.Tao.Fourier.Section7SourceDomain": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7SourceDomain",
+    "original_sha256": "c34441a891d411b0ae7acebea61519ba3d7bc1860188aa5c7dc4a7e1720d8e2b",
+    "renamed_sha256": "cc176acd5e395c19d72878430c02bdd76f08bf61de9da327e899c52b26db679c"
+  },
+  "Erdos1135.Tao.Fourier.Section7SourceFThreeQFinite": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7SourceFThreeQFinite",
+    "original_sha256": "74d5a054ae03a2e40bfed592154bee891f66ea5a42e76e038245a32d89b5709f",
+    "renamed_sha256": "25188d6486ec2230a1cf7995b6a0e783a008d8d34ac33e0268d19fa60f6b1c48"
+  },
+  "Erdos1135.Tao.Fourier.Section7SourceLaw": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7SourceLaw",
+    "original_sha256": "214534e8b3bbaa3a532504ed2d932292999d824be8e3bf47d696ff91710fb019",
+    "renamed_sha256": "9169e1681db68da1216f35f4bb7c9f7f2fd6b7704cebb026928b93430d2663d8"
+  },
+  "Erdos1135.Tao.Fourier.Section7SourcePairing": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7SourcePairing",
+    "original_sha256": "f87009b60c27e04f648e0975f9a593556c419790a0754d345d9eed96a9c71251",
+    "renamed_sha256": "954924077285803c5e189f0e0279a3660dfd064c808fdc19d99daee6e0973ce6"
+  },
+  "Erdos1135.Tao.Fourier.Section7SourcePredicates": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7SourcePredicates",
+    "original_sha256": "860311d3a596d3e46b593ab057dca96d511ed555b107a07bd6a3918a74a2cbf8",
+    "renamed_sha256": "3b5a7fb7ec6e3664721f5b22b8751899bf0d45cb73d4efdd377babb31309ff74"
+  },
+  "Erdos1135.Tao.Fourier.Section7WhiteHitSplit": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.Section7WhiteHitSplit",
+    "original_sha256": "91f5a3cd1550f6a45acb8247b34a3a79fb990198abfba2baf9b3afa36230afaf",
+    "renamed_sha256": "6ac199b927cc6296e659842d35dccd3401746047c673a87a3a3f1db6c4370ece"
+  },
+  "Erdos1135.Tao.Fourier.TV": {
+    "module": "Erdos1135SecondScale.Tao.Fourier.TV",
+    "original_sha256": "36019531ddd385c79741d930ea45da8979d302e3bded7ff0a772f245bb5c0290",
+    "renamed_sha256": "805b0cc7cca1dd8ae474e9f1574827349fed212de82bff6bbf1d4444a5a4cbb6"
+  },
+  "Erdos1135.Tao.Probability.AntitoneResidueSums": {
+    "module": "Erdos1135SecondScale.Tao.Probability.AntitoneResidueSums",
+    "original_sha256": "b670c3fe14be415395b17304d620266cf2290f1dbdd81a0ca834eb3e4cc79f95",
+    "renamed_sha256": "b2b195acf9ddda9977585273393d38ee0778963a2d56ffa40d83a99081212d40"
+  },
+  "Erdos1135.Tao.Probability.CountableMarkov": {
+    "module": "Erdos1135SecondScale.Tao.Probability.CountableMarkov",
+    "original_sha256": "594ad7132da199dbab833eee413d7d090004df7f05503db4adeca869278c8788",
+    "renamed_sha256": "ca2a6ba6de035bc00021ab0f112395a955b8e2c78cad9f7248b2386c0e10dff6"
+  },
+  "Erdos1135.Tao.Probability.Finite": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Finite",
+    "original_sha256": "2fdfd5d29e65fb2c33187775ae47b10d6be012a75f5c494da538b5f5f216f18f",
+    "renamed_sha256": "377116a8030c8c67c9c5fe70f4289b6b790988f6711af17336adf18279eddcf5"
+  },
+  "Erdos1135.Tao.Probability.FullL1": {
+    "module": "Erdos1135SecondScale.Tao.Probability.FullL1",
+    "original_sha256": "fc7b6680eb8462152548f0d309ad768bfd0308fdec44ec5823bc2bd5639c26ec",
+    "renamed_sha256": "4da415da39aa4510689074783fdf6328da5992be216b5e4c8b3ac030c3c35dc7"
+  },
+  "Erdos1135.Tao.Probability.GatedSubmass": {
+    "module": "Erdos1135SecondScale.Tao.Probability.GatedSubmass",
+    "original_sha256": "a1f78255ed618876f7bbc3fea8da09b0394928ed7fdd059d8d68d1cc1e2fbad8",
+    "renamed_sha256": "1e32bede8f4745bf35bbf68489201b34b23f3824281179cb2b8d76f1241d1e60"
+  },
+  "Erdos1135.Tao.Probability.GatedSubmassComplement": {
+    "module": "Erdos1135SecondScale.Tao.Probability.GatedSubmassComplement",
+    "original_sha256": "f17a9b8f1b3d21c912fbe2fad8beb04808f6f69b4bf7ed4d32205acd1c928aff",
+    "renamed_sha256": "ab62d323939ceeb8d1b06611cf2a1cb71e51bc9620dadc791f9b2659c29f64a8"
+  },
+  "Erdos1135.Tao.Probability.GatedSubmassPartition": {
+    "module": "Erdos1135SecondScale.Tao.Probability.GatedSubmassPartition",
+    "original_sha256": "97404989ae19beab83a23cb721612677523bcec1b964f4f89d29c9c6903260c4",
+    "renamed_sha256": "35e316e92723eb99d1b7260187e7932d536421eb72bfe637af384423ca33fb4a"
+  },
+  "Erdos1135.Tao.Probability.Geom": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Geom",
+    "original_sha256": "071d405a5b9fb9e18b1721485b2fb64e3ca8a22ef507a6925952eb4ab9d8e180",
+    "renamed_sha256": "06d3169dbe3f5bce985821ea59738ab4033c18bb23be903256efce92711e6612"
+  },
+  "Erdos1135.Tao.Probability.Geom2CenteredMoment": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Geom2CenteredMoment",
+    "original_sha256": "ed2f630e6cc0964c725ae53aeb6c2ee91408d3e3a9166a2366a0ad92e665ea50",
+    "renamed_sha256": "d3f2f9bbd216e6041a7db87c3841e24fdcb89fffed9781f34a686acbbe466484"
+  },
+  "Erdos1135.Tao.Probability.Geom2HighWeight": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Geom2HighWeight",
+    "original_sha256": "4097d5fb8bb13531e25f1281301935fe252116ad9b9d5ff4b55d36a5152edf37",
+    "renamed_sha256": "991b008eb12dcdf80ca8260a93b46f73b0032428620bb32ab646e5f0582d87db"
+  },
+  "Erdos1135.Tao.Probability.Geom2ListProjectivity": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Geom2ListProjectivity",
+    "original_sha256": "96ae7e249688e987192a352ecb2a181aac325c2c3b4ca628d3e667aadb6f7e9a",
+    "renamed_sha256": "d89256ca68cc9c1fa47fce5b45aeef3ab6c9a654850d498cb341d88ca085bada"
+  },
+  "Erdos1135.Tao.Probability.Geom2ListReverse": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Geom2ListReverse",
+    "original_sha256": "bf059c7ecd2bffba9d5fa2b0c8e5cb507a6140149aeea023aa65b1e31e575af2",
+    "renamed_sha256": "f6723e8d755e40bbb54c86a4d03d24c93395e4d65679349ea36bb0ddeed4de27"
+  },
+  "Erdos1135.Tao.Probability.Geom2LowWeight": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Geom2LowWeight",
+    "original_sha256": "8398f619bafbd70b74822909783d5308292cd62eb6dd2aa67265b0a8b061d0a7",
+    "renamed_sha256": "11616ea4b8b43cbedc577da7a475af63ed0d65da6344e2a09239ce26a22c0267"
+  },
+  "Erdos1135.Tao.Probability.Geom2PrefixTypical": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Geom2PrefixTypical",
+    "original_sha256": "c3033203d3f7f52a4164292cb9f1974172b7b5259e374b56e20e9dbab7044b24",
+    "renamed_sha256": "7bea01536f4b8ffe42e3228689aa67f34b0cbbc0e5b8ecce3e7039936a3bd66d"
+  },
+  "Erdos1135.Tao.Probability.Geom2TerminalMoment": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Geom2TerminalMoment",
+    "original_sha256": "a2e9671b705d0c7396f39e2cb2e0c489e185d375c0d42b63917e61f360065e8a",
+    "renamed_sha256": "05f88745f250b3df163a75e89493e61df0032ccfd232d42feb8632f71f38521d"
+  },
+  "Erdos1135.Tao.Probability.HoldExpWeight": {
+    "module": "Erdos1135SecondScale.Tao.Probability.HoldExpWeight",
+    "original_sha256": "9f39fb56ea5256dcf49951769da129ffee44ede0f777673899f1c6182ea569e4",
+    "renamed_sha256": "96b5c7e352a3165c3c9a983291d0f71fa4fc8f2ad19d3f7ae63b202d2b51c245"
+  },
+  "Erdos1135.Tao.Probability.HoldMass": {
+    "module": "Erdos1135SecondScale.Tao.Probability.HoldMass",
+    "original_sha256": "7ccddb89409d99e24bde858b7eb196eb7a92e52c2bb07c09a2ac2102fcdc9e4d",
+    "renamed_sha256": "620146b643b76836b709cd2621a9c3c7b7115e63be3bfce95476d92df8e1c06a"
+  },
+  "Erdos1135.Tao.Probability.LogSupportPerturbation": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogSupportPerturbation",
+    "original_sha256": "2009f535d597f6096e4d7feb1c149b3b2e400e4e11edc89638dd98f271fb24f9",
+    "renamed_sha256": "b28002a47f824450c09e9ed6c7398ca7dab2f62f3e006f656cc2f7920c2e71d3"
+  },
+  "Erdos1135.Tao.Probability.LogWindow": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindow",
+    "original_sha256": "6dcf248851eea1c4e460d5914b3efaf78efc6365b9cb272eae1d972865d98ce6",
+    "renamed_sha256": "4fc506d98f6ffdb6bf984f47f6b45a1bd71114f0fe72c6ea947e338f7b2bc524"
+  },
+  "Erdos1135.Tao.Probability.LogWindowBoundaryMass": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowBoundaryMass",
+    "original_sha256": "e3886ba5938175d7c2ab1871f31991ebfed87ab500b5a68e446b35e48eb21cb3",
+    "renamed_sha256": "0bd083213d933db93f59a5ab95d767d22d5f7e3b4ef879c4fa179a6ff6fc1aa7"
+  },
+  "Erdos1135.Tao.Probability.LogWindowCenteredMass": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowCenteredMass",
+    "original_sha256": "e8a7e4a825e2fc4e596b453ad7f849233337ddc68631e3de9b6fcf9d752561d5",
+    "renamed_sha256": "bfe4fdb575432b280ddf9129d43ce8d4adf73ebfa322e65f48f72247f58960ee"
+  },
+  "Erdos1135.Tao.Probability.LogWindowEndpoints": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowEndpoints",
+    "original_sha256": "8e04a543b32b8eb1a7c751f67a1b2dde384d3e911dccd4ebb70a3e72194a9986",
+    "renamed_sha256": "e104c2a670d0de8ff524406a832f762c982db0da3affa5c5c890566636f434ac"
+  },
+  "Erdos1135.Tao.Probability.LogWindowEventualMassLower": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowEventualMassLower",
+    "original_sha256": "74e63f546c670c9e3a552f536dfdb6a1753ce6d3d08874b203adb471751a1414",
+    "renamed_sha256": "cee478d0993f4bb0e13553c082c3524f5ebc54e64abed4dd438778a09962f962"
+  },
+  "Erdos1135.Tao.Probability.LogWindowFloorPerturbation": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowFloorPerturbation",
+    "original_sha256": "19b3a6790223253b2c3f2d07f5fd4c5ee9e5a5564badb7e0bc7da978da13d968",
+    "renamed_sha256": "9bb21b91ac2edcd91895fb025ea62a4e6e259ad7cad7e63fa8f81bc117ce4e5c"
+  },
+  "Erdos1135.Tao.Probability.LogWindowMassLower": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowMassLower",
+    "original_sha256": "21d9aff87eb10ce406ed80aa2ea83eb4c62d4c1d911b7025f95655a72232517a",
+    "renamed_sha256": "6962edac9a8590301d0a7a61de7f7993ea30c87923bf1d4cc9fff9c847daffa2"
+  },
+  "Erdos1135.Tao.Probability.LogWindowOddNatPoint": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowOddNatPoint",
+    "original_sha256": "5a71dc557f5d28258956a03e925cdd59a65570b4c46cae8c8a12357589188aae",
+    "renamed_sha256": "40bd225b34ef5818023f085706af7f52bce4ecbba05246a4e2719bc4a4b604bc"
+  },
+  "Erdos1135.Tao.Probability.LogWindowOddPrefix": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowOddPrefix",
+    "original_sha256": "6c7be59ac14a0a9c24d3676dfc2f47edb1411cbf0ddf95de4e2af0eef6e1099c",
+    "renamed_sha256": "1f859f33f867fe5e59c003e828d3f8e1c4c970ec465681f6f1fd2b645b1a1a62"
+  },
+  "Erdos1135.Tao.Probability.LogWindowPMF": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowPMF",
+    "original_sha256": "bb27758b92da1685a44c6b017aa1c626e16e10251eec07b4af9cadd398befdf4",
+    "renamed_sha256": "5fc85f9b52e2871fd5ebe96fcb05777dc22f2dd6218489e28f777a1495791331"
+  },
+  "Erdos1135.Tao.Probability.LogWindowPrefix": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowPrefix",
+    "original_sha256": "bfdf5916201b9c07c0cf2169d7e1ac4a405b6c8583fcc849cb238bc5a209d769",
+    "renamed_sha256": "27a30acffb31cc312234d2ef99206bb1f971b5df301e1a1ab516d6be9db82977"
+  },
+  "Erdos1135.Tao.Probability.LogWindowQuarterMass": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowQuarterMass",
+    "original_sha256": "65421754f95d7870447f7b1d4da4ed88eae81ecdd60bfa6b5757b2126b625d8c",
+    "renamed_sha256": "eafc0696e08839056d22e22a6ff35acb6edacf92b181f54fc6dc6a93dddc4d44"
+  },
+  "Erdos1135.Tao.Probability.LogWindowResidue": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowResidue",
+    "original_sha256": "2a363c1666c54761865c1f2996b97293849111726eaa37759fdf429016796183",
+    "renamed_sha256": "11c65757fd13a5156df0b86e5c69d922ba89fc26b2fcbedd60373333c6083977"
+  },
+  "Erdos1135.Tao.Probability.LogWindowResidueRoom": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowResidueRoom",
+    "original_sha256": "c74fbd7b0384a467dc6a2fa3c3099506d70bbde7a4c2c4eaffd317f252bfcd13",
+    "renamed_sha256": "573342995e85ce2be0280d1e10ff0b47be5cb125f7c69c10e5d898db9c667773"
+  },
+  "Erdos1135.Tao.Probability.LogWindowSourceIndex": {
+    "module": "Erdos1135SecondScale.Tao.Probability.LogWindowSourceIndex",
+    "original_sha256": "9d5df5365d13db6f33c1660ccf0b824757d29c831384539cf2007fd6c636fccb",
+    "renamed_sha256": "0c61d063bf72c954af30dbdb1dcd2e880673b902901068e04dcf37ecc46e8be4"
+  },
+  "Erdos1135.Tao.Probability.Pascal": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Pascal",
+    "original_sha256": "8cfac743c9f19f0f9e2a2a0443081475325fd229a0b17ca4e76b5c26e505a3bd",
+    "renamed_sha256": "99e7a78f0f9e090ef3e44af18d23ab1076ba4cfc0840a2163829dae756671501"
+  },
+  "Erdos1135.Tao.Probability.PascalPrime": {
+    "module": "Erdos1135SecondScale.Tao.Probability.PascalPrime",
+    "original_sha256": "c4d2ac96419a049853f790306c33d689d687c85ef3d6671cfb96d0d17b1402a8",
+    "renamed_sha256": "5f3fd0ff6370488b8e97d5c634ceb083c248773c5e8ef266e4f4b6b9331fd7a4"
+  },
+  "Erdos1135.Tao.Probability.PascalPrimeList": {
+    "module": "Erdos1135SecondScale.Tao.Probability.PascalPrimeList",
+    "original_sha256": "44a60235558413bbc3f692f412f9d40c9044854503dc0223445e9c7848897df9",
+    "renamed_sha256": "9385f6e15fbbb32a69105f5939c2c115215602b48bdf55a1c4d9d11f16511ba1"
+  },
+  "Erdos1135.Tao.Probability.ReciprocalProgression": {
+    "module": "Erdos1135SecondScale.Tao.Probability.ReciprocalProgression",
+    "original_sha256": "d7fc4f035ed2497e9229e23e61ae0d8d2fa4ce19f97e8d13b480262a1c9c1db7",
+    "renamed_sha256": "1700b36c9b1e26e3ef78a0e1b3080a85a51162dbb3983fe1a83df74b1032e8d2"
+  },
+  "Erdos1135.Tao.Probability.Truncation": {
+    "module": "Erdos1135SecondScale.Tao.Probability.Truncation",
+    "original_sha256": "09f4c839ee7faabf5c17e2ab4791d7a775c4044bf588f8b6dd5e99625a84174e",
+    "renamed_sha256": "95a4eea6ffbaaf4156a1fad366ef3899b9aef3d83743eed39742bb217333f431"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageEndpoint": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageEndpoint",
+    "original_sha256": "58483d8d6b29e0abd29060cfc1d9bc6ba012fca84373b946e27b345e6b030e48",
+    "renamed_sha256": "34df0149cb865d2f93d453b38e352f242ea6819fc992a4f7d6567d738ea10eee"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageExpMoment": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageExpMoment",
+    "original_sha256": "5cc1a50ad75fd1e1da9846e5b9321b2e59d10381d44983d1c86fcb0edf37e245",
+    "renamed_sha256": "93a63725bc14198774caed45607fae7cd931e0a2c55adc865e06099bc5b250df"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageHorizontal": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageHorizontal",
+    "original_sha256": "b4af951b74cbea175c26958f7e636f5c60f7f910af25a83036c6867cacd5e53c",
+    "renamed_sha256": "4b6ecbe5e34ea78ec05c1d672c3adc449ef2ad46814d75165c3bdd09e2ec393e"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageLocalizedMass": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageLocalizedMass",
+    "original_sha256": "7e9f205cc066a5504be24798938ed1677ad0baff21742943c4aac0308609de8e",
+    "renamed_sha256": "e5ad7ee90a94674356f10d8318e9f3600fa515f7d12bdcb316217784c37385f8"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassagePointwise": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassagePointwise",
+    "original_sha256": "0aafc9ede16e59cf4b4c08f1530bbe179664ac13d5332e60c82028533e04cccc",
+    "renamed_sha256": "84df024e01884699be0f18e5395e2d258c8182c98f086a2cebd38b9f26e28484"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageSigmaCenters": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageSigmaCenters",
+    "original_sha256": "3e9086ff9c59e5cb02c38738d8925d384255d025e90fa3ab68718fdd86866c45",
+    "renamed_sha256": "3ccb4095f3b097ec12d5bf1e1357134632855198f514fdab60258733475ab1d6"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageSignedAverage": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageSignedAverage",
+    "original_sha256": "9be03adbe04b1b0c9a69c2db4de74fba4e32349b10f2d6b64762ee4aaec93589",
+    "renamed_sha256": "81a820e9e6795479e90fa54e9f9084eaba0c26950c56b9bf648dddb0e6c26359"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageSignedCenterSum": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageSignedCenterSum",
+    "original_sha256": "b86cf3d9fa58be2f779bd5a4d617c18ea4a4dfb0f1b470e0e828c95744e9adf7",
+    "renamed_sha256": "1811b3deb6bde117fad96dbb4bcae23d266506a296a2eb57849889135d762d65"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageSignedSparse": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageSignedSparse",
+    "original_sha256": "5ae81dccc046312294d5b64005cc9c915dcc078f53a9d6509dddf1fce66a8672",
+    "renamed_sha256": "db44e5fb95b7cb35e79fc785bfb34632f238ac49f65ad36f6d42e0c83e69a786"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageSignedTotal": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageSignedTotal",
+    "original_sha256": "b6272b0bf8ac40f6c72b624bb2a8be8c3a1b132f2add7fe569036f58e276676c",
+    "renamed_sha256": "793e2143f73567046c2a34421d78432af074c01810c97eeb2d5b52708be37afe"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageTails": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageTails",
+    "original_sha256": "e47bdc3252339276182f70308a80f2909f1d20345c82b2e551e01b05721605ce",
+    "renamed_sha256": "13a77a5ee2df6410e18cd859c6d86378af2f9febc53163b5804bca8a440a0539"
+  },
+  "Erdos1135.Tao.Renewal.CanonicalFirstPassageTerminal": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageTerminal",
+    "original_sha256": "56f2fbc429c3609df7c06878dde4bdc4ff5108702c80cbf234f7e8549a744c17",
+    "renamed_sha256": "b3145ba0fdc6dcdaf42912991499b5e886b7abdff01ece7d1718d2ab45c09972"
+  },
+  "Erdos1135.Tao.Renewal.GeometryBridge": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.GeometryBridge",
+    "original_sha256": "e1ab3ccc29ff48ea9717b0e1fab8d94efc9bc5ebb1f6d60d10f0936541b04570",
+    "renamed_sha256": "66c0d2b82c2b7fdc8091b261b2bf1bedbe70cd9459182624802cd69435e18446"
+  },
+  "Erdos1135.Tao.Renewal.HoldExpectation": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.HoldExpectation",
+    "original_sha256": "334f3edbf74401dfd79f7ce60d6ad29a12da58f6dbd4f27c971341435bcb8e12",
+    "renamed_sha256": "eaa6e4312471a6fa217e86d5a71261813b5ec9ceceda0f25da47485f36af4574"
+  },
+  "Erdos1135.Tao.Renewal.HoldFirstPassagePMF": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.HoldFirstPassagePMF",
+    "original_sha256": "68f4cbdeed45535573c0f7d86de6b292aa651e6b3e8636a2872ec26404e9da3f",
+    "renamed_sha256": "98a7eafde14db31a6f294d397da9d2b6bd20ccc8993eb7bc96bd3b819358640f"
+  },
+  "Erdos1135.Tao.Renewal.HoldIID": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.HoldIID",
+    "original_sha256": "8185331fb5946025791c09872ca8f90f9a9ba127403b655665ec6e70a14b4905",
+    "renamed_sha256": "5ac387b89e8417eec9f4a2216ff0d91681a92601995f804b92866c94eb4d73d2"
+  },
+  "Erdos1135.Tao.Renewal.HoldListHorizontalMoment": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.HoldListHorizontalMoment",
+    "original_sha256": "2309e443059479b587931eddd2eda12898b631074d1e1dab2d79c4f8e7e0fb85",
+    "renamed_sha256": "fd136c93bc973fd58f6b360a98b48e61e6677508606b0e70464e9b75f0ca3c1c"
+  },
+  "Erdos1135.Tao.Renewal.HoldListHorizontalTail": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.HoldListHorizontalTail",
+    "original_sha256": "6bff4807c4ecb188aaf0a9c5f669e25431294b4a7c362f6587fad2e779303516",
+    "renamed_sha256": "e6189fb91055ae9fa6cbefcfa6d121973199561e7bacbda4952ad1847a2d70ba"
+  },
+  "Erdos1135.Tao.Renewal.HoldListVerticalTail": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.HoldListVerticalTail",
+    "original_sha256": "261fbd56a9d61c1b11fc891132dbaf1a3d3c9fd08819ac67a1b47aec83b3eaa5",
+    "renamed_sha256": "b988aa745dc7c76c171717ae14b95937a1aff2da1b4e00a37876ef657c7a1b85"
+  },
+  "Erdos1135.Tao.Renewal.HoldPMF": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.HoldPMF",
+    "original_sha256": "b22f4ad2e839972b9731a203efa1575c585f1d520dc4d33659b641052b81efff",
+    "renamed_sha256": "5eed2d4f95cb06f2cd4a75d6e8508d5302bb6c5e313a1324c226e609594ceb7d"
+  },
+  "Erdos1135.Tao.Renewal.HoldPoint": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.HoldPoint",
+    "original_sha256": "a1fd3da6d14a6100e57c7b5d62b460961795030056add5f168e26fc63e67a614",
+    "renamed_sha256": "3e561a5f0168d4a067e3cb3f107fddd507a1bdc3211d803b9081db165b9d0021"
+  },
+  "Erdos1135.Tao.Renewal.HoldStoppedTail": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.HoldStoppedTail",
+    "original_sha256": "b80edfbafe2b405f9fc4930d7235cc4caa3b287cc2a3744043de40044ad983bc",
+    "renamed_sha256": "e9a87d6b839c9901d879fe543a6e4a6b0936f6bd4924672f3d4f79779138f4c4"
+  },
+  "Erdos1135.Tao.Renewal.Lemma710Complementary": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma710Complementary",
+    "original_sha256": "110abc5dcf2dcc42b8501baf1da453681d8a9e6dc7309c95d86d6c3654a1ce06",
+    "renamed_sha256": "df2aa76b1c9cb51ecff22b43d1b59a5a25a0acff1fcc58dc185f12ce41f8e962"
+  },
+  "Erdos1135.Tao.Renewal.Lemma710EprimeProbability": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma710EprimeProbability",
+    "original_sha256": "d557f81b71d340e307e187b624e89e05dc6daab0ece90f5d6143dedb52d74546",
+    "renamed_sha256": "05859e3cccb2025dd80835abc91e652b0a27a43b316acf80102b7bc0d33ae45b"
+  },
+  "Erdos1135.Tao.Renewal.Lemma710KernelWindow": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma710KernelWindow",
+    "original_sha256": "e6fcc23a39c27481e9c84ed0a4f9429fce513c5a444dae730b5450f204f35452",
+    "renamed_sha256": "8694b830c5a08f923aa29c32db43e93dd2a9d806edac2fab9bb9ad7a39079c77"
+  },
+  "Erdos1135.Tao.Renewal.Lemma710PostStoppedKernel": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma710PostStoppedKernel",
+    "original_sha256": "a04b998f1c1576bac368405d0c4aa268c0013a5678e7b9d55e5a77527101e439",
+    "renamed_sha256": "3f903992f8acb5f7f30510127a6136c8ed589f5fc4fdadf3dc38a290bb31fe6b"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77EndpointAssembly": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77EndpointAssembly",
+    "original_sha256": "353050ea658cedfaec4776dd5b0b884dad422d19c79f1e417fcc785c2ab663e6",
+    "renamed_sha256": "ed635fc89b1e8c68f8481c70f236a96f7efdbb0993077ec29f88476651b88404"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77FirstPassageEndpoint": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77FirstPassageEndpoint",
+    "original_sha256": "0457011c52f19a09374627d9949bbb35e723decfc4b92e3c0256dade036b9799",
+    "renamed_sha256": "6555d295a635daff6964687b7f587b4acfaa241b7719a65cc61523c2d03d1901"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77HighJ": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77HighJ",
+    "original_sha256": "bd71bfd69b607678d4e37e8d7e67ac8c1d789eca592a0cdee7cd1a962c626a29",
+    "renamed_sha256": "144b4bee2df0039e42d402a00448d0e5a5d7d081d60e0c1b8122599b84a683ab"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77HorizontalMarginal": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77HorizontalMarginal",
+    "original_sha256": "a89e142b13c054fb5de809291ce3c5ac15bf123f3ac88ed43eb05a1597823a7b",
+    "renamed_sha256": "a4112f51d4ff59f00dca1ff4fad30992ed4f5c76cfc025580cdd31f527f81579"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77KernelTail": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77KernelTail",
+    "original_sha256": "c486f6f2d966a324138dc0512bf1636284ebfbdc39d74fbca2f2e54542f03d24",
+    "renamed_sha256": "f7611b97edaf6bb1f71577f6f2c3bc19af693c9c4adfa4570e4ddf19731c04c9"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77LocalLimit": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77LocalLimit",
+    "original_sha256": "0018ceac8d80a6618eb8f10070d3f2a80fd6e3ceecb3ab7e93161b21f86d4d46",
+    "renamed_sha256": "d0db3fca09a6f2d7f41912515822cddf67ea267eb580682f504320d33ba3ba43"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77PascalComposition": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77PascalComposition",
+    "original_sha256": "59a8fe1a2b7d17832f217a99b1f0845a31554bdeaacd5d57681cfe91261ab811",
+    "renamed_sha256": "5226474f78a14dc7ae8bf020e3e8b26690361a2ac41c1cb5b5936359e09cbdc2"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77PascalFormula": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77PascalFormula",
+    "original_sha256": "31c87a96999e728cdd529a2f8eb87e6f354f8fab067323f8e695d0f38fb43025",
+    "renamed_sha256": "afefc6f52ed90fc0a38a3dfc6f5855fcb324406e866fe812d1daa81cef911fe9"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77PascalGaussian": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77PascalGaussian",
+    "original_sha256": "ed455a20486db6bbd7a3a0722ee6dfdfd2c0769d302552c720d19a244061bb01",
+    "renamed_sha256": "4056a996a2310504dfce7e0932944d71d4d3dc156763bcd90dc245d59251944e"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77PascalPotential": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77PascalPotential",
+    "original_sha256": "a4d9e36263e5dfc98a71ad26b9127049a6e103861d730a56868143d5e221cd40",
+    "renamed_sha256": "f502608532c63398ff2e1bc28055d4b9c7712fa032203c576b6b7050b6de60e6"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77PotentialCore": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77PotentialCore",
+    "original_sha256": "753f90f0474f06cd13ca4a0fc32b93e87a40803dbf1b120fb1efd684b7b0fbd0",
+    "renamed_sha256": "488d14e44e901552556a998ef25aa3bdccbf3e03a3e5e09d144470d80eef303e"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77SourceFiber": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77SourceFiber",
+    "original_sha256": "cae912f82436b8d29ced88c0d8d81bb0e995a7b3feb05e2af42549e4b11ca474",
+    "renamed_sha256": "6ff0a88f6d2a34afca98530c05a17c0b13373662ed660b237e34f3c12a99b5bd"
+  },
+  "Erdos1135.Tao.Renewal.Lemma77TerminalHoldMoment": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma77TerminalHoldMoment",
+    "original_sha256": "edabf9bdc23d96db2d2fbee725354eac80d72845138188e2854044872da52324",
+    "renamed_sha256": "05a5d8b750579f6a792caaa627459b7c41a5302ed94399753df8e16ed26e381d"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79AllRBound": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79AllRBound",
+    "original_sha256": "717ed31f4b5fe4a209de8c651b7fa6ecbdcd19990987cd624656dfa2418e4d37",
+    "renamed_sha256": "7ec8ea9c9553048e31bfa88a1f93c9f2002caaf5cb5e8eed48effcb85a31a4ea"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79CanonicalExitWhite": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79CanonicalExitWhite",
+    "original_sha256": "2e0245c70c5132eb739082196f7836ca5645d1e9fc7d75c4d1289976741f2c33",
+    "renamed_sha256": "fbcf6ea4cc8db6593e8253a4045346a67a15c83960c2154ac81ac839d4407b38"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79CanonicalTraceProjection": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79CanonicalTraceProjection",
+    "original_sha256": "aa7eee5c2b74abe3cce6c6497c11d92559000adb02a193d934822ebd7a4b3ee9",
+    "renamed_sha256": "7c999fec14134da9d37dd28c291364171a5bca54f0802d75f0da228d97e3270f"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79Case3EventAdapter": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79Case3EventAdapter",
+    "original_sha256": "8db39481baa629e35e8179346829821f64751d5c1dc2f309efa70f4685fced66",
+    "renamed_sha256": "2641523e51eca490b2cf8698b4ede789a0cda4584b33c57b85908ad48dd794e1"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79ClockDeath": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79ClockDeath",
+    "original_sha256": "ce36627a0558c1c5478fe0ab6b651eb386dda7f7930df51241b2234ede45f8e1",
+    "renamed_sha256": "d0a105a3d880e66a9d2c75ce1929a0fea3797f30c86fb3ce810d40dd64b4f5aa"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79CutoffLocality": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79CutoffLocality",
+    "original_sha256": "edfbc05b3c6bfe6d01827e6252457625432143f2153420a59abbdffdf3252a1a",
+    "renamed_sha256": "4eb6f2bcb4abdf52014bfe2c7badd4c9f9fa562211ae36cdb1825860b6d2a4c7"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79CutoffStatistic": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79CutoffStatistic",
+    "original_sha256": "e0f1a60c7414db617cecf2002abe023f751e5e8b0cbbccb0fbc8669a27b93902",
+    "renamed_sha256": "56363c59813c325c189c854f6a9c5b931f4f4f40a8632aeed778eaa4ca555160"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79EndpointFreshCoordinates": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79EndpointFreshCoordinates",
+    "original_sha256": "5556b8526c47b17c58e58389325a28a5f305e0c527dafead7c90b3458f4935b8",
+    "renamed_sha256": "bf95a51852b3702c674423762c5b4f6a7c05685c8f07672b57322e74aca2242d"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79EndpointFreshLaw": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79EndpointFreshLaw",
+    "original_sha256": "7f92eb50cd50b9adf625f5775ca9c746cb0cf3aae15c9df1813d32109a7e4ce8",
+    "renamed_sha256": "04844bb72a4b4906000f13d020eaf544db6f8207568b834ead6d8da0edfd9158"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79FirstEntryCount": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79FirstEntryCount",
+    "original_sha256": "cb3aa4dd85d117e7a074e520b2e4fe1ef377e31645710c02d8815403f75e3aa9",
+    "renamed_sha256": "f08536c681da9253304695408b1b03d173bec89f9e604be0d103901585507fde"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79FirstEntryCylinder": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79FirstEntryCylinder",
+    "original_sha256": "5f717daa1660d337d93ccdff83176621795cb538debf79ea31aae957500e1c1b",
+    "renamed_sha256": "3c2ad6c5eda65c0055764ed5f84da1a94405e16cac44ec1c871aac254264b1c7"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79FirstEntryEndpointLaw": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79FirstEntryEndpointLaw",
+    "original_sha256": "8c691d0ca93fec029d769426fe5523a8e86d8f7f59d4f08162323fbd8f10613d",
+    "renamed_sha256": "8972b3ac0d3e26c4dd04893cadb2a1de63d8a18a363edd661f997fa468b30d90"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79FirstEntryFiberLaw": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79FirstEntryFiberLaw",
+    "original_sha256": "12b33e55247f557ff1533d9eadb62eeee3549b0084944ca8acd87b3e568f9cd0",
+    "renamed_sha256": "f3cd8bf0116481bfe4e53de95e4b5fd6757e68c7f029d13972394e519c9d445b"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79FirstExit": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79FirstExit",
+    "original_sha256": "7717ff926d375f986a3160e06661ab4dc0a06429dff0833117e5a142d0219026",
+    "renamed_sha256": "e7d1035302e6b83a719858a0f4058095abd0a825929758f235ab45164f75c982"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79InclusiveTrace": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79InclusiveTrace",
+    "original_sha256": "680021fe33b329b1422c76d65bf1355ec6e7d5edefbe626f3bf6141e52076381",
+    "renamed_sha256": "9750827b0e325357a17876f351549d0cca91e79ca2b5909b16f5174929fbd4fb"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79NativeMarkov": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79NativeMarkov",
+    "original_sha256": "5d30467e370f261cd1a4905d924d92316348c6353fbb76a397e4811eb05bd7a0",
+    "renamed_sha256": "0f343f1b0197a1b0b81b77a449d51edc4bbcb750fed2194e80cdbe8b775224d5"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79OneStepBound": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79OneStepBound",
+    "original_sha256": "37c001605d12f07dbbf5fdeffdf17eb4547c196c9e315ae29de358457698f863",
+    "renamed_sha256": "93f7344394af846112e6047f888111c6a1742ad6628dad284dd9787fb885d5ba"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79PostExitFreshTail": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79PostExitFreshTail",
+    "original_sha256": "7c07e65174aaaf49d47ff6b3a03697248a9833de8c1b24e97432bb4b5d8468f3",
+    "renamed_sha256": "99774fef876b63903253d2131b33f273262daa2674419ffaec25013d3951f67b"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R2Aggregation": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R2Aggregation",
+    "original_sha256": "2848a707308af41aebdad091c566e90c86f92365bfbd10616c009aaedcc7d5de",
+    "renamed_sha256": "7a7ddc708ad49447f53ceb55c7a8c605e11fe8b0f023d82f373137d9359c52e6"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R2EndpointContraction": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R2EndpointContraction",
+    "original_sha256": "65cf790012d2cc1d44bfa6399a623f27eca58242cb1b264c6b64c5235d9b71a8",
+    "renamed_sha256": "52c947c91bcedc196a682a375dde87c3b290c8e147d0618cf43dd17d01cb1571"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R2EndpointExpectation": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R2EndpointExpectation",
+    "original_sha256": "884e9640699b0521dfa79f0caac265fd36b56c75a9128bdf9fd83d6abaff8fa4",
+    "renamed_sha256": "6b76e07b57275537385c91ecfcfe1b997f42ce16d6b03f13d9956a522ac4b054"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R2MasterAtom": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R2MasterAtom",
+    "original_sha256": "a64f5d35ae27a22be2af152739a3248e56898566d333d3264c62ae2b5a1f3f84",
+    "renamed_sha256": "bd7cadf38fc119d9cf54c25ccb1170bf44d63bac6e83c05051650eb86e3ba1c2"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R2MasterTransport": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R2MasterTransport",
+    "original_sha256": "f7439df0a1461235b564c3e60dbed5198563d36bf3289a4a6bef726c2549e705",
+    "renamed_sha256": "65a69ae2c964415868a23301c652ec6cc8446cefd7cfedfa7dc30e3ccfd5889c"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R2Pointwise": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R2Pointwise",
+    "original_sha256": "1daaef9d5b09e075cad7110de7f6c38ead3d8f3b28983bfb19cc5e19a515cfff",
+    "renamed_sha256": "12710399443d217504a18826ceb1527a1cbc139740ac3309b5b6d2aba39a9ca3"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R2PositiveKey": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R2PositiveKey",
+    "original_sha256": "7db0d0be976d8fda7eddae210fac96bc3c657cdecba2a6646603244c4425720e",
+    "renamed_sha256": "d53538a3431117d66e8c35153c3d526bf59055b5cadef4ca3ca199d5529f897e"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R2PositiveKeyBound": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R2PositiveKeyBound",
+    "original_sha256": "d673e2e5c92fcbf1e2ae323e5236aca95ed110e14d12b55da0e344067e0874f6",
+    "renamed_sha256": "d9cbc2c10464b58762d5d757d64f7c64d6f7f56602d350910b3a6c1f79ece4c6"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R2Scalar": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R2Scalar",
+    "original_sha256": "ad8da7444cadcc1ceaac5c7b642dd4944ea8c76559d8032b1a9772ea7520acc9",
+    "renamed_sha256": "c49d9864d7d8b188223223d6075affecb5ceab2e17171c6359f2e42c06249eb5"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R3AtomBound": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R3AtomBound",
+    "original_sha256": "d2b07e2eddd2bc422b6bbb717b6394e96cbb7f4a4a5f0525b6bcb9a121432d76",
+    "renamed_sha256": "312ad2b40b10161bf01fe59484f38d54a435f578437b994f96a4037842edc990"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R3MasterAtom": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R3MasterAtom",
+    "original_sha256": "5a1bdac42a7f8eaa52737d13b744f0211f01f3c10df54d5ddc25de662ef3f8b0",
+    "renamed_sha256": "f44dcd3abdeb3cdebe0b0b5a7fce276a52e708e2efe3c31869ed3b599269b79f"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R3Pointwise": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R3Pointwise",
+    "original_sha256": "69dfe9530612bcd0dd26831e633ea9a6626a962feb2f0d159f5dbd9ae36d6f05",
+    "renamed_sha256": "48169fd24759e3baf7e8bd7595fd5d5d47c304a28a1bc03a08a4903c0214ea0f"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79R3Prefix": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79R3Prefix",
+    "original_sha256": "f2e98db77b3ca7cb93155fd5c14e9960c49713fc080fb54812480b1533a588b0",
+    "renamed_sha256": "e140687821231b8b3c993d7973e4056a9886f71a57b9d66e8b5bbfc35514fc90"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79Recurrence": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79Recurrence",
+    "original_sha256": "a4537e7cb3b0601316cdfbc8882250f685684c8afb3e217826f05e7247ccdadb",
+    "renamed_sha256": "374d82a9b5804a1c8dce9046ed6543848c11308305bb9074efde95ad0e036f85"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79Restart": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79Restart",
+    "original_sha256": "05d06cd54efbde74c3740064fe3573600f84382a8468605e0e94c1ca3eaf3f9b",
+    "renamed_sha256": "c50fd2c035267f7d6b7442bd4ccb0133bfd53ff58ad90a769bce034fd042b6fa"
+  },
+  "Erdos1135.Tao.Renewal.Lemma79TailExpectationCore": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Lemma79TailExpectationCore",
+    "original_sha256": "af89d7739cb9da1cf3cd1bf8aabb34f1214c59e37478b532e34dd775f24a9d4d",
+    "renamed_sha256": "97a18ec40bdd080c39b6c5cc2d5c8883520d430c9304f9a930eaa9354bc4fccd"
+  },
+  "Erdos1135.Tao.Renewal.Outer736HoldExpectation": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Outer736HoldExpectation",
+    "original_sha256": "19009e23fc571a9d863efe8dfbf043a3b53ed06bc7c146399b78e66eb0e51695",
+    "renamed_sha256": "a6ffa43d65a8ace31b1b79f241e5cc1fdfd10068b6bb62c8849a84164e67f672"
+  },
+  "Erdos1135.Tao.Renewal.Outer736SourceAlgebra": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Outer736SourceAlgebra",
+    "original_sha256": "de66cf5c7af17f071c4007ae9b41f1fabf8a2f748700220f12cb3a994fc12913",
+    "renamed_sha256": "66e457f7b47ac39e9f6fd73670dd52f4f19439baa384c315d96462470a50ba6f"
+  },
+  "Erdos1135.Tao.Renewal.Outer754HorizontalFactor": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Outer754HorizontalFactor",
+    "original_sha256": "193d2ec363ca7d338d92dff3452f6bf6e595d0ba8753fcaca5597d08b73d56b3",
+    "renamed_sha256": "56fec4a0074fa56e78d57ceb4c1ed4f3e27dafd8e20e4c8a5d4dcdc9565ad162"
+  },
+  "Erdos1135.Tao.Renewal.Outer754SourceWeight": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Outer754SourceWeight",
+    "original_sha256": "9ccc717d0f2c20ae2664026dc1078ab5ddf5698495781b61e42f39914dad3359",
+    "renamed_sha256": "cc6a5fa0aed09588c61914a4ac6a368e25c6aea9dbfda3967264910550f314bc"
+  },
+  "Erdos1135.Tao.Renewal.PMFExpectationThreeRegion": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.PMFExpectationThreeRegion",
+    "original_sha256": "32c4fcc056f55d136de52279d87c093232c692acc989e139925e1d286511eb2a",
+    "renamed_sha256": "5d9f47bed4150f188a7b0fcc7f98835fdf2f829e86ba174b890a34bfe5b7f093"
+  },
+  "Erdos1135.Tao.Renewal.PMFIntWindowUnion": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.PMFIntWindowUnion",
+    "original_sha256": "db51d0205f0e29e2c334a68b7817161d123a083e61e999df17f82e4f8de2eb96",
+    "renamed_sha256": "6418f723949c9199b2c4397f358d300a3b2ffb7eff25c3a9c47ae62ba88c00db"
+  },
+  "Erdos1135.Tao.Renewal.PathGrowth": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.PathGrowth",
+    "original_sha256": "0b950f8007da2b54601b593df397b61e5f5abe0fcc49a946c2cfc0b65993fd91",
+    "renamed_sha256": "82320c9e36005d68d3353a4dd2b9af01bf7058fce6deb66bc923e3b68ad99fa8"
+  },
+  "Erdos1135.Tao.Renewal.Prop78AbsolutePacket": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78AbsolutePacket",
+    "original_sha256": "e8a34c609c66844766628c9fd9aae257c075cad7aabe34e625e58bb1a2297acd",
+    "renamed_sha256": "d6e639f0c9c3d220e60ccf1daf48e246e9d26931d157c769b1e1992344a03642"
+  },
+  "Erdos1135.Tao.Renewal.Prop78ActiveCover": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78ActiveCover",
+    "original_sha256": "aef7631391a1b3ab7e54f2a65133e4ee7a95739136c01452255c6ac49fd3a45d",
+    "renamed_sha256": "b9b8155ebcf95660b40663119c7733df3d1ffb30ca2b59d11d3923b61b9287ad"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Boundary": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Boundary",
+    "original_sha256": "eb22727913fbddd8091156b5071d86ccd50e9f55b5577c267c7253cc3ffcda39",
+    "renamed_sha256": "097dce12bfbeadef7d1482ec9dc16584dda6639ebc58779d6a85991eecac902e"
+  },
+  "Erdos1135.Tao.Renewal.Prop78CanonicalAssembly": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78CanonicalAssembly",
+    "original_sha256": "d106ffb3f6431c309053228e3a94292b5b740fab9ac56e9ac93cd88dc975f36e",
+    "renamed_sha256": "71f545477967bcc547340de25b363f5cbe7923c0c4372728128785529936746c"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case1Scalar": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case1Scalar",
+    "original_sha256": "3ed22dbc823aaef04898fe154ac8c043807b704011b11d3cd181401018c87474",
+    "renamed_sha256": "c044c343833cfc5e5e3576279b0b5b8080cdd9e3ec1b61628372051ef40215ce"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case1White": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case1White",
+    "original_sha256": "a3247039004192f706df15ccbf355c51ec46205c854721ab56107ffe295ff2b6",
+    "renamed_sha256": "baa4ce69f2a2152b2552443f29c9fa0918b7faa36fc65ed62fcf33b246dd2dd4"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case2Discount": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case2Discount",
+    "original_sha256": "5299d660d9083b17d3e7cd3c74990481f12c34f621924cf8f50f38a3a5ad64dc",
+    "renamed_sha256": "0ccf54d991aed09d0d72892fc3f9b7e74f15afdbbf4dc123aead95b9e2645b67"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case2EndpointSplit": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case2EndpointSplit",
+    "original_sha256": "ca353f9b196e19a87e4e6f946adc38560f91e1b7ebf3cab518ba2d29bfdd0560",
+    "renamed_sha256": "2b331a4d6c02307bfb8590a64281d9d673104261928f76cdf6b77fb649f030a5"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case2Expectation": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case2Expectation",
+    "original_sha256": "32ca5f984f014274f488430f49f1e58728a4eba84b658d54f2b33cb6eed936b4",
+    "renamed_sha256": "f9ad9fb36e56974c2c126d92f6aad6ef6b86b6b8e155e5e41bd78c3921c009d1"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case2Geometry": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case2Geometry",
+    "original_sha256": "88e1c3ac19569665adef39709e5f708984c2a0bc9b4e30ef46eec0db39f9275b",
+    "renamed_sha256": "7a3bba6385678a37a43aa14417bdf53e825799dcb0c438f5ddd2f8b9b5e1c771"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case2MomentScalar": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case2MomentScalar",
+    "original_sha256": "1dab0bf8d2dc00ccba3c54177eedc542bbf5556fae15bb00208fcd32c73b1288",
+    "renamed_sha256": "811e415630dd39f329e438207d928f2fcb90c0c72dc95b68c29c3c8237acf1f2"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case2Pointwise": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case2Pointwise",
+    "original_sha256": "5a23e8c5265f98583ea995fe1f3ca7d8f6532dddce3bd60e8bfeb5cb4f75389f",
+    "renamed_sha256": "607fa13ec2e1e6d61eef2cd17bbf9c4f7fb5303530df80715aa283f2e49a2802"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3ActiveCoverStopping": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3ActiveCoverStopping",
+    "original_sha256": "562dc8f9a883647fd682b679d8fd24a7082b80c7ea1b0b744d0ef3539bca009a",
+    "renamed_sha256": "2583b5cd91059156057239a16f3b7e466dc3ad4f3699aa2e3c6bd8ae45fe76dd"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3ActiveTriangle": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3ActiveTriangle",
+    "original_sha256": "da996abb72e16744c0e49a51906efe88bd77d9fb367ef2ce8e88c25dfdba6152",
+    "renamed_sha256": "6146eeab53b7182fe86f58fd21c3e9bf9038fc5ecc11f7bb744efac43b97dcaa"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3BaseKcutFiniteSum": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3BaseKcutFiniteSum",
+    "original_sha256": "a4dc9f5f37a14c2893483a9958edcb3dce9023fb7c9ccc7e06ca591e4ca8a464",
+    "renamed_sha256": "5ce301be088f649ac21dfe921d5b132c73838c9efe16f504e1924ecd0b2b4272"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3BaseKcutScheduleExistence": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3BaseKcutScheduleExistence",
+    "original_sha256": "08ef1f18a5734ec6db88c2f49a1d08d506e430da4c5fc6dd0463cde0507ec7fe",
+    "renamed_sha256": "89b5f07abdbe6409a20809dfbf18a1cd138dd23f34f2ba21d4a9d0cd41dfd695"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3CanonicalFarBelow": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3CanonicalFarBelow",
+    "original_sha256": "115e7c9da01daaa8a02d7b25941a48c46270d2ace2dc147abf2a105dbf2bc197",
+    "renamed_sha256": "e874ea8d48bb19aa151d9e130dfe47b7180c398cd64d5d6bad2496090c91126c"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3CutoffAlignment": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3CutoffAlignment",
+    "original_sha256": "3d56d5b7c218d6f90994c9fb61a90779271980593ea999d003f1c20d38fad101",
+    "renamed_sha256": "3cc7ce8d2dcacd918237b1906d07e63c165fc6c8f53b0b2419e04856f1983941"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3EStarSupportProducer": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3EStarSupportProducer",
+    "original_sha256": "5d4225cade4cd5d13d6d50ad1cdcad8b514a1cdba6ee578f031c055d9f6dd7e4",
+    "renamed_sha256": "85c59a3997bf3cd48521960e2c6918d3e3bb93f756b22b6e926d40118a3731bb"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3Event": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3Event",
+    "original_sha256": "806aad3b1200f2d0cfaa1b17faa4b9fb30f978f66f725fddbd5362dde1241558",
+    "renamed_sha256": "fc35f24df74e08d93771ce0241ed7b127407d9aa112e314e952c672a7318ab24"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3EventualScale": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3EventualScale",
+    "original_sha256": "815f5b5fdb5fefa4db618eff85979cdd9fa733a8adfef22b20cdf5dd48ee9984",
+    "renamed_sha256": "d69c5c8635764f9e04e29bcbf38ca8d5ed4f40b45d56e53f6899c4c4dcbfeddd"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3FixedParameters": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3FixedParameters",
+    "original_sha256": "76283716d7369009497083d7cf30a55005731f78947933b2ca5cddc55709f58b",
+    "renamed_sha256": "04b769515102b1db17a119b686575023e8e5a86e28f9fd9e563be69df0efa34c"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3PriorityScalar": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3PriorityScalar",
+    "original_sha256": "cf9b451b5e12c0111fa5f343db882f9dd8f53754a20fe8bc79c2c49bf6bda34d",
+    "renamed_sha256": "c6e0c71be46e126f0b9142fa55cf66e7a90d6421a74a5e6975e2512b2d956c86"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3Stopping": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3Stopping",
+    "original_sha256": "c7564ab6fe9a90a406e7410805115315acb7feb08617898c4e7264762fce588a",
+    "renamed_sha256": "a87ddf4b8679792e0e904368cbcee1c3f1f5177f1420b856be6fb637df56e6ce"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Case3TriangleExit": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Case3TriangleExit",
+    "original_sha256": "dbf9f626138bdc6961a9cc633bd9b15da8bc33ba6681e82469ca03cc1178bb0c",
+    "renamed_sha256": "85549007c035bbfe59b0dfb3305484f236ee758a806aa28deb22f80a86765769"
+  },
+  "Erdos1135.Tao.Renewal.Prop78CaseAssembly": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78CaseAssembly",
+    "original_sha256": "eb5794108e102f7a170d3ccc955dddbb24b4cc5471d23f90c0fb310bb0cc00fa",
+    "renamed_sha256": "e619256e728b90d3b01fdc00546edd961288621f819dd40390612746fdb7385d"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Pointwise737": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Pointwise737",
+    "original_sha256": "a911e20dc373ddf400f4d9877c9831e2d813e8ce5b97afb4ba5820a5e586a444",
+    "renamed_sha256": "7b3c8d86ed811f677e286395649228fdf7d0f838bb8e8e16915b9e5d8090eded"
+  },
+  "Erdos1135.Tao.Renewal.Prop78Threshold": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.Prop78Threshold",
+    "original_sha256": "9332df5ac63b37a18e0d48861397ed40549e47ee8beced372149f3275f1a30ee",
+    "renamed_sha256": "0f09a07738b0486aa12b74b0fbef8ad5488545ca124259fc316e02868d77123f"
+  },
+  "Erdos1135.Tao.Renewal.QActualLimit": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QActualLimit",
+    "original_sha256": "aea63e7863e5dedfa1501eb83f060399cc1808fdca763e78e1b73e6f2b3e2986",
+    "renamed_sha256": "1eb8e722cf2fa58a212d91ca4cb815b4ad9656442989428ef33f3a9df8c1d90e"
+  },
+  "Erdos1135.Tao.Renewal.QActualRecursion": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QActualRecursion",
+    "original_sha256": "93dac49e927330f3525d4072295f3fcabcde95f6ca4d07dc1660d1e8596b7953",
+    "renamed_sha256": "7af203f4b60c9589ce89768f4dc05bdc34c56633909c3269a55d3418af707a7a"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshCloseout": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshCloseout",
+    "original_sha256": "5e52b7f348908a182cc7b18bdfe8da7d2ef6483002732e92abaee635cdfa06e4",
+    "renamed_sha256": "474f0a94ce1577a59f836769bd958afe7daeb807ea7a9aa19137ea15d7037c46"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshCount": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshCount",
+    "original_sha256": "9e5f77b134acc4f4e81cf84874fe7cabb9e0d3a3c57ef837a150d643c908c7f0",
+    "renamed_sha256": "7db17a01500dd459c8d062718921115ca143bad606fc82955ba2f5f807bd15db"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshDomain": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshDomain",
+    "original_sha256": "a87529df98517ae36486ad6fe2995a678d28f43f3e46e72125ef21fce5fec8fb",
+    "renamed_sha256": "036d6d2345a3c50fd3153cc794cc82e44545b96e3abd732faca9dc99c86275b7"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEStarCountable": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEStarCountable",
+    "original_sha256": "b2093d139ca989cb901c7b6476f76792226068f441f9353211b384aee5b51366",
+    "renamed_sha256": "6d8111b9376586fa1b25e8519028d74d5f99b97723220faa924093f086cff761"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEStarEprime": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEStarEprime",
+    "original_sha256": "273d8eb2bf49125dc692810b8b2315973483a85af7ea4235a5576df5856eded0",
+    "renamed_sha256": "4fe05544ec3589325758263933fdde4e53a9500b82da5806d27ef16c9d0487a1"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEStarFiber": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEStarFiber",
+    "original_sha256": "3fdd48adeae44868fc237c3b4f8e61d0b155265d62f46b5d2f2d1fa953b9950e",
+    "renamed_sha256": "a5f869be4d5c5e52dc710109a4f7f55fe0c01b4a03d32486ed8cd86055d73112"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEStarFixedOffset": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEStarFixedOffset",
+    "original_sha256": "4c0631a96deead981f2b014f827aad67837269425f59307afa26cb834fc39097",
+    "renamed_sha256": "bae208d444f14e354aef7d92d7423531bca2228aa5418b4dc1149dc330162d87"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEStarMass": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEStarMass",
+    "original_sha256": "3b79011c48af544b16dc20a78dd30a6978c767207853c326a5a337901869c75c",
+    "renamed_sha256": "a8a7e70a41d93a6042baa379b4ae77df90c9f301f7b0fb6444b585d4429d8948"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEStarUniform": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEStarUniform",
+    "original_sha256": "24a2d1ecfd3090bfb624d3b6ca6e7687f3180523e6939b8b4110545a176cc6f9",
+    "renamed_sha256": "6422ee1100d82e3bc9047e902d2bb3868dbdf5f7eec2494185d8ec7e18284fa9"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEprimeFourTail": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEprimeFourTail",
+    "original_sha256": "303e693ea84e666755a1d6bed5122f18b03be4e93d6f0feacceb18b88ba62c88",
+    "renamed_sha256": "b26d454225e9b2c6831483e73814d45f005fa583fddfb0fa5f843253734f992f"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEprimeHorizontalTail": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEprimeHorizontalTail",
+    "original_sha256": "b30b24bafffbd569e7bb3588dd59250eb6d48b00ec6928fcb96a6362231717ec",
+    "renamed_sha256": "ce7fd0742679f6531a7334fea6ec8e1959eb804470d4eba1a96063eb1f9d10c2"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEprimeLargeBranch": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEprimeLargeBranch",
+    "original_sha256": "09a88a8358fb716edee53ee68dc3368f13c9ffebdcf3e60c44021c7bfe69d8fa",
+    "renamed_sha256": "1f9316b7dec4b274a9fae34db2ded1a23ecb418dec4617ec2f6c09b90586d72d"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEprimeMarginalMass": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEprimeMarginalMass",
+    "original_sha256": "2c936b7ded38f0c23c587495d1f5c94f401ea737afb154b4943ee482492a00d4",
+    "renamed_sha256": "78e430e9de33867cbb6d0310ca8d7c0219b78c078086c506a22bc94a9b93f1e8"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshEprimeMasterWidth": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshEprimeMasterWidth",
+    "original_sha256": "a22e8d32ed656de85b1a25858d20cbefb4ca2d0e47e352a1905ad3ab66ae1a14",
+    "renamed_sha256": "fa80f3e240663033b4585e9fd5a4c88b12eb8078d0ac011b127488a6af4bd332"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshMarginals": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshMarginals",
+    "original_sha256": "d0c92e2a82f352e47b58c66f29365329219b5a3fe1e67cdc9960e6a3d743ee92",
+    "renamed_sha256": "513566026733d3bd9afd825c571f67b38af09e75d3909cfa2585884d0e2bf7f4"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshMiddleMass": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshMiddleMass",
+    "original_sha256": "e3049854665fc019bcc433a795cadb0a05551e0135bd5728823208e0419d8fdb",
+    "renamed_sha256": "57d9da50a99f247b3d8d191ce72935fed82b6f2fca667302a49fdcc66c75e3f9"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOuterBadJ": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOuterBadJ",
+    "original_sha256": "083bc31400445a7b1ea652f322e32d7f8b5c0055fd3da24e8ea835cb4a032ffd",
+    "renamed_sha256": "996a8d1e11a58122dbed7635441e262b8741ac4c8d294c869b2d9663279654e2"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOuterBadJAbsorption": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOuterBadJAbsorption",
+    "original_sha256": "ef0d29dffb009182d5978445a55a8c87daa02c3a1d7b5259916aad31b8965ed9",
+    "renamed_sha256": "ef89b34a75b944a0771afb7a1806badf3d45bd4ac79f65f36c352f34ab683de4"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOuterBadJBoundary": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOuterBadJBoundary",
+    "original_sha256": "ef54510dcceb0673ddcbe698687fd80e2007460930e4ceef9304ad459ea17678",
+    "renamed_sha256": "fb5077dce2eeb9be7459915b4b9145e52b08391f87413bcc7d6df21449045029"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeBoundary": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeBoundary",
+    "original_sha256": "a77f2ab844acd13e07b0a0086e8ab505fcd48a13815da7fe0a7bcd7ae92bf407",
+    "renamed_sha256": "34ee24963ce31adf787fc284458529a37a65e314f241d41bb4825f338673e462"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeBudget": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeBudget",
+    "original_sha256": "a8e824437ce7228e5a5c0847395660368312513d9a44ca2eab77d9ac8c35d066",
+    "renamed_sha256": "6ab9e3b02ad44d03399c9ed11c82f54c5d75afb700ebbd67846f48a393e0f310"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeFiber": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeFiber",
+    "original_sha256": "66f174008d491e8d7d910f33b0dfd271670ce85d91e6b8e218e6a13e0793add2",
+    "renamed_sha256": "ef0b3e47313d1c1ec3ec2528216c5fc68b5114004801d70def4862f2161a8baf"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeHorizontal": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeHorizontal",
+    "original_sha256": "d90313a7aa7a20d6e4caf1ac0499cd40501e08e10bc2db3eb2ae6473ab0f0ef6",
+    "renamed_sha256": "c62f31fafea3c428b4445d514d8c56a07620edbe636f0e1490b8b918c522c939"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeMass": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeMass",
+    "original_sha256": "f006553bd38814a2787cd47dfe28eeacc41a57b1db1a4eace4e27ee7e591c20c",
+    "renamed_sha256": "7c590fbdedbf7ea4b4106770a1a507bf725eb7bd46cdbf4019ab7e05ade1e44e"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeNative": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeNative",
+    "original_sha256": "31353f1cd37d32c0af60b7e287bd690917ab9c21b1ff42cf01f6ef2c80dc3668",
+    "renamed_sha256": "02c938c85cb2529a78c3562e2a9d22e97329f88963e7a7af23dd93285baba757"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeNearSigma": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeNearSigma",
+    "original_sha256": "bfcab08be426cdc9dcdf76e90c0c54bef191f363da5499d550a850119a1a7157",
+    "renamed_sha256": "44c18af2cb3e2f2cf47213187f6dbdae061319fbaaf3b8ce20268dbfa43af0c6"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeScalar": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeScalar",
+    "original_sha256": "a77c605833d9a285bdb033aade22e594cc03527e7ccdd3e1ca1b527bc07e846c",
+    "renamed_sha256": "a4e2fc12bb1048d776002e1e541bedf65635f5607bed2b046fe074060f71886b"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeSourceMargin": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeSourceMargin",
+    "original_sha256": "c348a64021a04eb9995800bbeb354ac72ec271391d85f4ac0da932e0cc49ed5c",
+    "renamed_sha256": "f88509664c29b52ae4ee9bfcb57b336f55007fddcc305c5155992fee9201abcd"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeSourceMarginCap": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeSourceMarginCap",
+    "original_sha256": "9e489f73a9caded64b05185e408e41234c61d8639ca011d63f4c127a60ca467c",
+    "renamed_sha256": "b6f30ed4559db9976e860b31987764d8fc7f104d7ab84ed2bd3cea35b709e10d"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeSourceWidth": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeSourceWidth",
+    "original_sha256": "8cdd147837b7e0fe4e85669090e7e92f867e4496ef62ce19c7bc89de012cb3ff",
+    "renamed_sha256": "e3ee9bbb3d7057df35e84b41b03f32524dfb305af09af05a312d77e6bc47902a"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeWidth": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeWidth",
+    "original_sha256": "03617035e62bcc054c17d1ac6f85d44ee83a60028b5e38e0a5e50b5600535f2d",
+    "renamed_sha256": "c15caa87d032e78ca4b01895cbc47ce5ae1fa922407a0459bf72a0e7ee03f96e"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeWindow": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeWindow",
+    "original_sha256": "45c71f2d526fccc7f213a46c314c5ea07f0cf9818352fe69b9d96fcbd968be46",
+    "renamed_sha256": "985c6292b0a0fdd88509db710e40443494a683020c4c2f20bbc08287e843dd25"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshPairFSlack": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshPairFSlack",
+    "original_sha256": "3fecd4a571741bef3ca8b122f94d385b17b10407a2b8ce11605fba19eec808a4",
+    "renamed_sha256": "7d732d905e43a83a526c72290a6cbdd6ebbb6e2d6ae183798ab26285cf13b087"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshPriorityPartition": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshPriorityPartition",
+    "original_sha256": "6c24c02c41ec2d71ddeccc0f098f0121094ff01d3aad7acc6cb54178a3eab94d",
+    "renamed_sha256": "09b5b7d4a9f6aeee7dbfb58512963c43aac78fb514b34daa7eeac74cfa1e65d0"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshSupport": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshSupport",
+    "original_sha256": "1959d0adc95d8b6fa39776ed04d8c0b79e286ca43f19c82b4e71d3aa02cd2d07",
+    "renamed_sha256": "2dfef333e7a9bb1ae107410539b8f1107a90e253d4d6a79242f8141be68e2a89"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshSurvival": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshSurvival",
+    "original_sha256": "2fbd39d448edb18b1d361f7809daa51504c374a875372156eb8aefc0e2ab2037",
+    "renamed_sha256": "a834f79e8c86a95ad0c04e96db6dc27f5a0c11c1e38c1eaec12cf878067e3554"
+  },
+  "Erdos1135.Tao.Renewal.QEndpointFreshTower": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshTower",
+    "original_sha256": "e0800825936de544af8f6f2ead9a2c563b1f40e235a08700bf0fbc6fb790358a",
+    "renamed_sha256": "af0a7710a5dbc16cde6f7a885c80406d6f9c85ce1b1b14b3c9682d2d0f34877f"
+  },
+  "Erdos1135.Tao.Renewal.QExpectation": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QExpectation",
+    "original_sha256": "8ac2a03ed4b2b2fa98185e4e7c9ceed485e182650f71097a4206cc4536c3eacf",
+    "renamed_sha256": "71d8c6669758bf4260f1e21a84581818f72a60dde6b9e64480a2b6360e87a809"
+  },
+  "Erdos1135.Tao.Renewal.QFinite": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QFinite",
+    "original_sha256": "b5acc83181dfe1d4c081c65cb404d2c9ded27c2af481904ab1b5c7a3947c726a",
+    "renamed_sha256": "da58565036f5788d9fcb3798c52aa4faab8b6086ea3422dc6b0a84f8304316f6"
+  },
+  "Erdos1135.Tao.Renewal.QFiniteApprox": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QFiniteApprox",
+    "original_sha256": "0030f02b74e9b8da4bab942e3015817c199ed09976e5a0f7bc07403336ec70d6",
+    "renamed_sha256": "6968f43332eee9f440e942c6b1568a114b8f9e24e7afa1675f9e8df4955c5a27"
+  },
+  "Erdos1135.Tao.Renewal.QFiniteIteration": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QFiniteIteration",
+    "original_sha256": "8374ccdb492fc7105a1f5b326aac28a3af4dba733b49fe3c5252870fc142a1a0",
+    "renamed_sha256": "d0695557643bb4a18a155f3bbda2769140d84935701f865e9c13457e16e1775f"
+  },
+  "Erdos1135.Tao.Renewal.QPrefixFactor": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QPrefixFactor",
+    "original_sha256": "7d542c1894f3a75a2f66e8f4149f7d8cce8d24161f269af9c9003297f5ed94a3",
+    "renamed_sha256": "7a90c1b39f01ba2219de788ccb63083fb82073cde4b5efba4ca0544098a7fcd8"
+  },
+  "Erdos1135.Tao.Renewal.QStoppedApprox": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QStoppedApprox",
+    "original_sha256": "b4dc9df6cd33ba39cabad2e56ebb38b88bf7877812492c7c2059bc2aa5f37627",
+    "renamed_sha256": "b7b40c3c80627b6d38ea4cb9976610b858aa186f546625be1f7a3091d6bf1dc3"
+  },
+  "Erdos1135.Tao.Renewal.QStoppedEndpoint": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QStoppedEndpoint",
+    "original_sha256": "d7175e66ca4b0bd3b9b1401eb135c9ebb65f5c01145c1a725a8a55660143e7b4",
+    "renamed_sha256": "d7521b7163de30212fd33d04d92427e89c41ab38a3770c98673d15d78241e3b5"
+  },
+  "Erdos1135.Tao.Renewal.QmHorizontalNormalization": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QmHorizontalNormalization",
+    "original_sha256": "aff5b27547674353d4f7d7e328e04bce9e3cabb6295cd06669877f2140e9c3b7",
+    "renamed_sha256": "c6bdad18889e65f95cb275d466254a6571851b0b6e691ed6bca9ec996f153d2c"
+  },
+  "Erdos1135.Tao.Renewal.QmStatement": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.QmStatement",
+    "original_sha256": "7a1abd72a5e8d805f098f7aee01a17d449a7cd7771d1af48bcef45d57b9fec6d",
+    "renamed_sha256": "16e4b66d085e8f7bf3a3fd4130592bfed781844c5aa99bd5ba491f00cef5c21e"
+  },
+  "Erdos1135.Tao.Renewal.RenewalPathBasic": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.RenewalPathBasic",
+    "original_sha256": "b509ed93bff7ec59c06c46c9d6948168578d5372432011fced8c34cfe5395b90",
+    "renamed_sha256": "96cc35e2fc81e9b65c7e0fc9755fbcc925c7016e0d08827d9353d7b83c2572f7"
+  },
+  "Erdos1135.Tao.Renewal.SeparatedWindowFlattening": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.SeparatedWindowFlattening",
+    "original_sha256": "5aba44617cedc799a216d398dbcf1556089b6a955be4f223539b02efebf9f7ea",
+    "renamed_sha256": "43326d9045d6513e60be28410ac9730447f931436e69f472a52a1783cb338c28"
+  },
+  "Erdos1135.Tao.Renewal.SeparatedWindowGeometry": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.SeparatedWindowGeometry",
+    "original_sha256": "6c1d3d71017336dc186a774aba0cbb33a70a626578cfb44480ce53cfdd69026a",
+    "renamed_sha256": "52d1526b7637e1a8ca4ffd5646f208cf465fc3f1330bbadac5aa4e1420dccdad"
+  },
+  "Erdos1135.Tao.Renewal.SeparatedWindowSum": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.SeparatedWindowSum",
+    "original_sha256": "a0b608c87510fcb353c54d8ab985ae89b03dc9c1264c9730ce4d98e46fcdaa26",
+    "renamed_sha256": "ee5d8167b6a2e1c7a04c6d1615df52e8a46ff87378bfda2bfa1bc850b97c6f4f"
+  },
+  "Erdos1135.Tao.Renewal.SourceActualQ": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.SourceActualQ",
+    "original_sha256": "ae75554fb6acd047e794400ec897367cb333b67210b11475639a25fe930cc212",
+    "renamed_sha256": "d4c20ba181b48dad43be5b869cdfa530e03575c24a350f9400b577c63d90f07b"
+  },
+  "Erdos1135.Tao.Renewal.SourceActualQIteration": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.SourceActualQIteration",
+    "original_sha256": "8b328d26e6db7bde0514a338e59a5f3831d8787baf7e7179d5aff87cc6734977",
+    "renamed_sha256": "51e5b0e04fe0fa53fa72877be5bd0b6c99d9efad991ea8f74af748343db95473"
+  },
+  "Erdos1135.Tao.Renewal.SourceCutoffStabilization": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.SourceCutoffStabilization",
+    "original_sha256": "919e74b56d16d999f67d03accd39b1920e7cc3e86d303a252569f334959bca30",
+    "renamed_sha256": "ecfcd3437f86f4b6d40bba6d785e99717ccd3975f998a8538157ff404133457a"
+  },
+  "Erdos1135.Tao.Renewal.SourceListBridge": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.SourceListBridge",
+    "original_sha256": "25d0bf78141c45cc1952802fb807c4afe6ea806c3f3c98290120ea096c915e71",
+    "renamed_sha256": "b5b39e41e4cd94e2a212b2cf4add9444965c773e932889cde6208186f224a059"
+  },
+  "Erdos1135.Tao.Renewal.SourcePathData": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.SourcePathData",
+    "original_sha256": "0d68ad4b7a19570b066a460304253383dd86c6af0ba4f87ede8fcfa4815e87e3",
+    "renamed_sha256": "0701c7fa7f4df5114dd6ff7fb9e5e58dcf87b08dfe097331f048058f0aa3861a"
+  },
+  "Erdos1135.Tao.Renewal.SourceRegeneration": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.SourceRegeneration",
+    "original_sha256": "fc1c78923a3db8bc818feefea983438ec2ceb3f66d864cc7bc47fda3e36fc1f1",
+    "renamed_sha256": "4d6042c80d8e550e12b9dec211799a08ad950d79eb17de91b7db82990c0b01c8"
+  },
+  "Erdos1135.Tao.Renewal.VerticalFirstPassageBasic": {
+    "module": "Erdos1135SecondScale.Tao.Renewal.VerticalFirstPassageBasic",
+    "original_sha256": "b670459a915e0a7ff18a4cd0e32670fe7b2f671bcb3a2753870ec3cf58ffaf8c",
+    "renamed_sha256": "d6c733fc9e601ac1b4e75f1d383077b9e4bdec2a078a402511818de390b99954"
+  },
+  "Erdos1135.Tao.Section3": {
+    "module": "Erdos1135SecondScale.Tao.Section3",
+    "original_sha256": "a15dff6884ccac3e1549d0321808513801f10633558e091a38a99564ac3b61a2",
+    "renamed_sha256": "06d57269fcc361e1563e021eeacdd2f043295fb03820891040fe794077177df6"
+  },
+  "Erdos1135.Tao.Section3.Prop111RealRate": {
+    "module": "Erdos1135SecondScale.Tao.Section3.Prop111RealRate",
+    "original_sha256": "7151d036401216ddec76e861a3f6bb332d4666d374cc0f8b75c82819c8d6ef3a",
+    "renamed_sha256": "07b94900120bda58c4609c8e7c3653a2230c3f92dd801440b448f88c41f5824f"
+  },
+  "Erdos1135.Tao.Section3.WindowPerturbation": {
+    "module": "Erdos1135SecondScale.Tao.Section3.WindowPerturbation",
+    "original_sha256": "295b2d433ceca7f9bbaa1199df1f5fb18440e5d2b431c62e7e085ecd89bcaf4a",
+    "renamed_sha256": "602c94ad52afb0a4b641d99a6396f0e201c616c29aa0696c547feff71ef664a7"
+  },
+  "Erdos1135.Tao.Section5.AffineAtomDenominatorComparison": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineAtomDenominatorComparison",
+    "original_sha256": "73c9208e72e8028cff54c9322626739c1595bb145adf70ac1693e8cf3ccf0722",
+    "renamed_sha256": "162447d97533f7f24b9fa754f327117874ff590c7d95578d45049eb7241f28bd"
+  },
+  "Erdos1135.Tao.Section5.AffineAtomFiber": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineAtomFiber",
+    "original_sha256": "b04486ce9263e77a86adb867ce10b2ef7789e221078ea8a6bfc496b79875b7eb",
+    "renamed_sha256": "61d50e087965a4c2ec2423e5a1b6108bb1ef4ca7d42d6f476b87944ba5f38cf7"
+  },
+  "Erdos1135.Tao.Section5.AffineAtomPointMass": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineAtomPointMass",
+    "original_sha256": "a4501d5a76c0c6337c10e4497d440a36f00056f1115360c33b7936b22ff33419",
+    "renamed_sha256": "09aa4ebd115ec36983e0f2f3f7a49ef400f1d783391b67a202f62581b091cdbc"
+  },
+  "Erdos1135.Tao.Section5.AffineAtomReciprocalMass": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineAtomReciprocalMass",
+    "original_sha256": "8c3149d50716e4fcaec70a6f335c45c28e2610e635af8949686adae4cb4639ed",
+    "renamed_sha256": "4c1b0ba19db7e950bd0c9ecabbc522a0e81ad3d8db8b0f1839a3cbcad0e8a8e3"
+  },
+  "Erdos1135.Tao.Section5.AffineAtomReverse": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineAtomReverse",
+    "original_sha256": "80afc016fa1b18e9ba370c0c388c55b42196a162f461aff14c52fe2d6a96b718",
+    "renamed_sha256": "c6c30d6e8fc0380e88724cb926e8edf3cbbb532b52b47e69e41fa53ff9e6b219"
+  },
+  "Erdos1135.Tao.Section5.AffineDenominatorRatio": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineDenominatorRatio",
+    "original_sha256": "bf59946d1ac7acd64d86f771db98707ce1221f52ec11ec913d54290773df8ad8",
+    "renamed_sha256": "375afaa2581e80ef15dcac60c4de50f5d711bf69e3bf3be04f9467f26bf247c8"
+  },
+  "Erdos1135.Tao.Section5.AffineIdealSumRegroup": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineIdealSumRegroup",
+    "original_sha256": "584aa81085e64c2b713bb6c5dce7934781b5cc3b1e8e5d85d048a7c2cc05703a",
+    "renamed_sha256": "d3487438124e55a4ec176c8e405b8bb2e6cd1f11cb0ee8a8b3bb6c9ac05aec21"
+  },
+  "Erdos1135.Tao.Section5.AffineSourceLaw": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineSourceLaw",
+    "original_sha256": "039dcc8970036e6216776fc5bda9643c725f983cc6abaf8f519b582d5bbf816a",
+    "renamed_sha256": "3047b691b4424557257bbe350753f10445150362067755992402adcfa7ee8026"
+  },
+  "Erdos1135.Tao.Section5.AffineSourceScale": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineSourceScale",
+    "original_sha256": "bff293bcfa70d51828a0d128e2385e0978deac0d780acca55292185cfb21212b",
+    "renamed_sha256": "12a6c345916e77f093e382c39e70314ea6037f9136e9967de39d75a19f34697f"
+  },
+  "Erdos1135.Tao.Section5.AffineSourceSupport": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineSourceSupport",
+    "original_sha256": "0434fbc68ea2f27af4f8962e319bb3bfef5965d41bb2a5cda8a411d1e6bd650c",
+    "renamed_sha256": "5294e8bd63298ed0d9488e01ce6c1fcfa4e6088c357c9a69dc0c79cd1321e998"
+  },
+  "Erdos1135.Tao.Section5.AffineTypicalityRemoval": {
+    "module": "Erdos1135SecondScale.Tao.Section5.AffineTypicalityRemoval",
+    "original_sha256": "c71f8fb39581527c5072460020b541a49b6fb26755d07d97f9b3369fa45ba537",
+    "renamed_sha256": "d1561f89814320f16a0f02579e8e50c891de345e3eec1c7c69602209fcc34a37"
+  },
+  "Erdos1135.Tao.Section5.BranchPassEvent": {
+    "module": "Erdos1135SecondScale.Tao.Section5.BranchPassEvent",
+    "original_sha256": "05d37918ccdd3508a75b1a269069ecd8c055c27eb72e58456427b17b0952c5f5",
+    "renamed_sha256": "cb35cf5e5cf5cf6f3af78945dfedd226090c74aface252450cefdd5574c32e45"
+  },
+  "Erdos1135.Tao.Section5.BranchPassTV": {
+    "module": "Erdos1135SecondScale.Tao.Section5.BranchPassTV",
+    "original_sha256": "29b739dbe3cd15a7f96ace5a0e44beadf8249ce52a5a955398cb35d0ac20116d",
+    "renamed_sha256": "e9ed5e54ea1336e925062122e1f3591bd8056505ad024e67d5af125014f5040e"
+  },
+  "Erdos1135.Tao.Section5.CommonZ": {
+    "module": "Erdos1135SecondScale.Tao.Section5.CommonZ",
+    "original_sha256": "5bb64311582c4d36e6d90e5c5e70254ff983751f84d574e78c6363b927895b84",
+    "renamed_sha256": "bb59b3209654a7317874e82ba35c8e372fd0052c07307cba37bd054a19d75992"
+  },
+  "Erdos1135.Tao.Section5.DescentScale": {
+    "module": "Erdos1135SecondScale.Tao.Section5.DescentScale",
+    "original_sha256": "bb778b12398991569527f843cdaffb6c96de90107dd479407f148c5211017aaf",
+    "renamed_sha256": "a65969a47e2aca97cef959b36f550358d04075062cb93bb02b2818123bd79367"
+  },
+  "Erdos1135.Tao.Section5.DeterministicDescent": {
+    "module": "Erdos1135SecondScale.Tao.Section5.DeterministicDescent",
+    "original_sha256": "bc9bfc3f75cf0889ded7bbed459e8afa1695b5d857789305e231b88621a3622c",
+    "renamed_sha256": "77fd602d6c1ebe226b273e1fe1e83d4a2a67a3ce4cd1e3619eb9dbfe62044190"
+  },
+  "Erdos1135.Tao.Section5.EndpointCoefficientBound": {
+    "module": "Erdos1135SecondScale.Tao.Section5.EndpointCoefficientBound",
+    "original_sha256": "28a88ea24774e900aa1b47fd5853518001fe5382d7a05372f3a4002e32389395",
+    "renamed_sha256": "b06c852cc29bef8057eebd1860d09ea87b1ea98b50f016d119d9dc8152a5a318"
+  },
+  "Erdos1135.Tao.Section5.EndpointFiberEnvelope": {
+    "module": "Erdos1135SecondScale.Tao.Section5.EndpointFiberEnvelope",
+    "original_sha256": "1f2eda05e55a9722a30b627c532474456ccb66bc7da65727d5bdc39b2c460c96",
+    "renamed_sha256": "8751bcc2ddb7d1a027aed9fb0b0688070a309c5995dd345b25c90b592e758844"
+  },
+  "Erdos1135.Tao.Section5.EndpointFiberProgression": {
+    "module": "Erdos1135SecondScale.Tao.Section5.EndpointFiberProgression",
+    "original_sha256": "8fabd4f2269f385909eeef49d883968ad6281540393a1d80a555500d59052f07",
+    "renamed_sha256": "2c54fe3b9c2766fcc83aae1ecfecb72ef33a5a795be6924e30a702d80891d0b2"
+  },
+  "Erdos1135.Tao.Section5.EndpointLowRoom": {
+    "module": "Erdos1135SecondScale.Tao.Section5.EndpointLowRoom",
+    "original_sha256": "4833d13e053a5237a5ea8e5625e452035b73d33813ebc557248201824d5ea584",
+    "renamed_sha256": "24ceb53ffb5cee116f7d8f240405474f021127dcba15ae6a9b1d071cd7886083"
+  },
+  "Erdos1135.Tao.Section5.EndpointRatio": {
+    "module": "Erdos1135SecondScale.Tao.Section5.EndpointRatio",
+    "original_sha256": "a135aff25bc6bf37e3b272cb4ea3cd1799ec519d0d4782e32f633ac59fd94b61",
+    "renamed_sha256": "b33b4de71f8c3cb21de38d9e2ba636636f2e35a9f3760f91e5aaf851348d5e6d"
+  },
+  "Erdos1135.Tao.Section5.EndpointValuationFiber": {
+    "module": "Erdos1135SecondScale.Tao.Section5.EndpointValuationFiber",
+    "original_sha256": "d9a894887c5986613b7d098776d718e3b69c07fbdff2ba369026adc28ac2b74c",
+    "renamed_sha256": "69baf718d33676d385444a841467ddddc4933f68d42cdd6656ab8db50fafe704"
+  },
+  "Erdos1135.Tao.Section5.FiveStepCompression": {
+    "module": "Erdos1135SecondScale.Tao.Section5.FiveStepCompression",
+    "original_sha256": "16676e3f607a63fd6b2fbc8e2a0e36ecd4feb2bb3c4b3cf4ebd40ca580d04916",
+    "renamed_sha256": "605b37fabd2a99322801f6c9e608f872ca0d95d880b3515e914f3b320a7699f0"
+  },
+  "Erdos1135.Tao.Section5.FixedTimeMixing": {
+    "module": "Erdos1135SecondScale.Tao.Section5.FixedTimeMixing",
+    "original_sha256": "3bd71af6cf74af16c5f473ba224a51a96e7460886130118ccc6bd33d822afb98",
+    "renamed_sha256": "431fc344d8c54ff6cdd64134c678eea181ed3b4ce37db3f5e4264bd159d2d699"
+  },
+  "Erdos1135.Tao.Section5.GenuinePassageApprox": {
+    "module": "Erdos1135SecondScale.Tao.Section5.GenuinePassageApprox",
+    "original_sha256": "22bc537465e3af347eb3162f8fb8e7e5588a1d4d7e517712e916ca674c6a452f",
+    "renamed_sha256": "bddd690c002a7ea58e91f922d9d776d574233a06223fca9f8bdc21e699823efc"
+  },
+  "Erdos1135.Tao.Section5.Geom2HighWeightScalar": {
+    "module": "Erdos1135SecondScale.Tao.Section5.Geom2HighWeightScalar",
+    "original_sha256": "50bcaf9c3cbfea4b1c70cc26419f285f464c574f1e7948041452ba30013cd44a",
+    "renamed_sha256": "0cb82ab2858a39e31a3f3f852cba4b816db3501beedf5c15c02f44d43739af46"
+  },
+  "Erdos1135.Tao.Section5.IdealPassageCenter": {
+    "module": "Erdos1135SecondScale.Tao.Section5.IdealPassageCenter",
+    "original_sha256": "4356f18db2cdb05873ef1d8c560be7e9890ed8430018c5a873933186d3f63dc2",
+    "renamed_sha256": "1b651baa17ced8022ceb6572644a54f11a9fb8816066874b8ceb927470f640e7"
+  },
+  "Erdos1135.Tao.Section5.NoHitEndpoint": {
+    "module": "Erdos1135SecondScale.Tao.Section5.NoHitEndpoint",
+    "original_sha256": "d0cf6b10e3a1c2380f8f28d997a6f8d8cd08dd3e4131575b32e225cd2bdea7c5",
+    "renamed_sha256": "585a1e7088d46a8b36a6614132076ce33d381a8134ca88b49819d786e73e53f3"
+  },
+  "Erdos1135.Tao.Section5.NoHitMap": {
+    "module": "Erdos1135SecondScale.Tao.Section5.NoHitMap",
+    "original_sha256": "f1dace1b117fe94da534115c11fb21b42911b57a57f2879d782a92b5afdc1cb4",
+    "renamed_sha256": "cc3709ca0f17e511b10489754d9f236ca4e52bdfcc90a77f15097b01fbfc4fb7"
+  },
+  "Erdos1135.Tao.Section5.NoHitOutput": {
+    "module": "Erdos1135SecondScale.Tao.Section5.NoHitOutput",
+    "original_sha256": "802958113e5f3288e7e67df0379e3d46843b7b67c7c2db8cad44ff0bb99cc84c",
+    "renamed_sha256": "662428bad67df277eaed0e3a73cdd1817a2adad32a1b284460eaabc87f48e27e"
+  },
+  "Erdos1135.Tao.Section5.NoHitRate": {
+    "module": "Erdos1135SecondScale.Tao.Section5.NoHitRate",
+    "original_sha256": "d698a007f3895a1e21717b53b0b1c522c9a383fcc995c2494c5e26733cb0cce3",
+    "renamed_sha256": "e56d34958918ad2388eb50ee7a4b18dcc447a5fa364e4deb8ecf78ae488db51a"
+  },
+  "Erdos1135.Tao.Section5.PassAtomMass": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassAtomMass",
+    "original_sha256": "67fce2026aded7ccc18b3940f90a74477eae93567416d96bae85bea927b4ceb0",
+    "renamed_sha256": "c6c5c5e5bb90e53dd859d4607caf9c0ed9d91b78fc50bd7f9c97af14178ec108"
+  },
+  "Erdos1135.Tao.Section5.PassEventPartition": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassEventPartition",
+    "original_sha256": "9347d8790e5f1782f28bfad256a6175e07a59a691ad0dbd56696e3b30aaecd72",
+    "renamed_sha256": "67b5a20a8e17b2a9c84d946c82e1c0f463ff165579ebb02b730b04d6b0ddb78c"
+  },
+  "Erdos1135.Tao.Section5.PassLocationStepBack": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassLocationStepBack",
+    "original_sha256": "520d323b5eaac990095ff5b54c1c06bbb2772ff571e834057074c5eb6cf77dc1",
+    "renamed_sha256": "eb8a1dd4d9b9995bda2e11a8bd84c385377bc9b56004ed82926704ce00d5e01e"
+  },
+  "Erdos1135.Tao.Section5.PassLostWindow": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassLostWindow",
+    "original_sha256": "c2b8ac74758bac39fcfb04e439bf411be948658d2ed0dd12de30e4f49204f3b0",
+    "renamed_sha256": "b02b7463cce29579fd8ca986a77db4481c7fd217999e6b5fc4dbf14b64934a3e"
+  },
+  "Erdos1135.Tao.Section5.PassNormalizer": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassNormalizer",
+    "original_sha256": "69227eb36b7317b0f5dca554db95ecffbc4b3732a1236d9a69a0dcb2cb4b7712",
+    "renamed_sha256": "2080eee29d699dacd5ba7321f585238fb3cadba719f020489c77f6dd2561e134"
+  },
+  "Erdos1135.Tao.Section5.PassSchedule": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassSchedule",
+    "original_sha256": "2b49e7cb5f10cfe2030f9b65576971906087e1d008c555b0be17db3d7fabc47c",
+    "renamed_sha256": "1035e0663a0059e05c4af6540d2421da81cd62abe6114eff41ae946a86655b75"
+  },
+  "Erdos1135.Tao.Section5.PassScheduleFacts": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassScheduleFacts",
+    "original_sha256": "da68ea55f0021fdf9a5f320a1cf069eb9fef0177745e3237e549214f2dbb7ab0",
+    "renamed_sha256": "bd7485892a9f25ea92be52d7b1d472c185ea2e80e57bbc46d151508ea6143983"
+  },
+  "Erdos1135.Tao.Section5.PassTimeLocalization": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassTimeLocalization",
+    "original_sha256": "0ed72fbe328555699b1922570feaf17c9a0417ae9faf9fed5f812fa6e4abb995",
+    "renamed_sha256": "b4b87f5531c500f4d6f8d9309406092d6e2e71fbe536526926c274464e3fa5c0"
+  },
+  "Erdos1135.Tao.Section5.PassTotalizerBridge": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassTotalizerBridge",
+    "original_sha256": "c837267a1970b6664789f79f8fb7e9709071994091b72ba3e9c68f2e403c67fc",
+    "renamed_sha256": "4795eb26c7805af48087d84a88cd89d0a3175eebe3ec94c4af7ec7df2b85d494"
+  },
+  "Erdos1135.Tao.Section5.PassTypicalEvent": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassTypicalEvent",
+    "original_sha256": "b8f51cd7cdaa7e660cd07fab216de4bef6e6bbbc3fd53e1fa1e3b37fa4ebd19c",
+    "renamed_sha256": "e9b60abe4d9c90096df09f1eb0a0eacedcded16925ac96bdd5c608a96c04877b"
+  },
+  "Erdos1135.Tao.Section5.PassTypicalFailure": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassTypicalFailure",
+    "original_sha256": "b4530efb37252765db9d1e82d7cd9c81316e983261053c8a680e38cae5ee4afb",
+    "renamed_sha256": "87c959570b3b171c33e86d8950d2158ad38475da95776600dfcd62ba33d384c0"
+  },
+  "Erdos1135.Tao.Section5.PassageSum": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PassageSum",
+    "original_sha256": "be4c23646ed417a9a582e8a4f15dd4e990f058e5bfa031f68fcbb0c62acc9513",
+    "renamed_sha256": "49ee8a1149e4795e4281219c9373a666b5741e0a82a8c503493432e19a63a724"
+  },
+  "Erdos1135.Tao.Section5.PayloadFreeCoefficient": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PayloadFreeCoefficient",
+    "original_sha256": "105ea6c17ae6cea965e420daf6dbd8599bc1e8ddcbe9ed5b6ebb0b7f361c71e2",
+    "renamed_sha256": "0fb2470288a327e3c825759671ef5739e197c939c2b20b9272c536072b5ec9bc"
+  },
+  "Erdos1135.Tao.Section5.PowerInteriorBoundaryMass": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PowerInteriorBoundaryMass",
+    "original_sha256": "3f0be2246bc36931a0941fabb629806a4ebd7fdbcb451c63edcb396e71dbc594",
+    "renamed_sha256": "fd7ddf6400cd69bcc6caf864a41d7d28b0e9559a4cc9f37f4943516b8a65e386"
+  },
+  "Erdos1135.Tao.Section5.PowerInteriorFacts": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PowerInteriorFacts",
+    "original_sha256": "4ca3b59ff8650a62ea13ea6d33d82d0cedb0a00bfed794012f077e00dd84fe1f",
+    "renamed_sha256": "8d956471aea789e69486f8e29328f88b0717d6feca2482d783810d3ef62937c7"
+  },
+  "Erdos1135.Tao.Section5.PrefixTypicalityTransport": {
+    "module": "Erdos1135SecondScale.Tao.Section5.PrefixTypicalityTransport",
+    "original_sha256": "82d8c96f5e891a1621ab0c5961978a96c10b84c691f82398b33d118f7e6ec2e4",
+    "renamed_sha256": "85e99dbc59f7ce911d21dd98a2b4d78db5ffb0bdf0debbe69059373258734a9c"
+  },
+  "Erdos1135.Tao.Section5.Prop111NaturalRate": {
+    "module": "Erdos1135SecondScale.Tao.Section5.Prop111NaturalRate",
+    "original_sha256": "89ed71d711ec8ecc2b89ea4ab3beceeaf88ea65051cd582370910b9f9022b6e9",
+    "renamed_sha256": "8d65d8cd106c27d69eedb82241d675f3261da5563c874b3d2ca8c1159d4e3f74"
+  },
+  "Erdos1135.Tao.Section5.Prop19Output": {
+    "module": "Erdos1135SecondScale.Tao.Section5.Prop19Output",
+    "original_sha256": "1bd0fd663b6d3e7c4d81cd596304cac0e2177a6027291eb05bd65b400a274120",
+    "renamed_sha256": "d12e8f82f50af936c9d4986f45842ed146b913efa662a2206bcf03fd8c646afb"
+  },
+  "Erdos1135.Tao.Section5.ReversePrefix": {
+    "module": "Erdos1135SecondScale.Tao.Section5.ReversePrefix",
+    "original_sha256": "94da4bca2ab5f0898efabcd5fa8eab3435e755463c8748b20ba249c2abfe7cff",
+    "renamed_sha256": "90143b53895b24f79431b6c4b9fd8d83b5073b98e9f410562a50f9cecf9a2883"
+  },
+  "Erdos1135.Tao.Section5.ReversePrefixScalar": {
+    "module": "Erdos1135SecondScale.Tao.Section5.ReversePrefixScalar",
+    "original_sha256": "d8e9a0073fb5dc59f8d9540b74a28bced512c5115b85f14d13e3202e01b1f56e",
+    "renamed_sha256": "d4fce697fd7f9a74b0fc351fdb902e5c2dbb2c19e78d50df5346520b4f5f3baf"
+  },
+  "Erdos1135.Tao.Section5.Schedule": {
+    "module": "Erdos1135SecondScale.Tao.Section5.Schedule",
+    "original_sha256": "c7e11e8371e07a2e8c6edc60936eb19d21b76209d91f61b1f359b99aae9774cc",
+    "renamed_sha256": "b0111ce0dee00634a1b23007851a97f67885885f2da6c19380165410039cb0bb"
+  },
+  "Erdos1135.Tao.Section5.ScheduleResidue": {
+    "module": "Erdos1135SecondScale.Tao.Section5.ScheduleResidue",
+    "original_sha256": "2c7f7ccb907396aa807e21d11081478cbe43921a923e58a2da9436bd481176e0",
+    "renamed_sha256": "8d5510fc7495ba057c6b2a4de1c41ff04c341426fcc0a17f966c15766b79fb66"
+  },
+  "Erdos1135.Tao.Section5.WeightedMixing": {
+    "module": "Erdos1135SecondScale.Tao.Section5.WeightedMixing",
+    "original_sha256": "33ffd1ec199cc0879276c70741615082cf19afa1381f739c5ec1ea1de3761d82",
+    "renamed_sha256": "ac05646f54af85e55a6a003361cc17111546171d617e80de0e7569e383ff0287"
+  },
+  "Erdos1135.Tao.Section6.AdjacentOneStep": {
+    "module": "Erdos1135SecondScale.Tao.Section6.AdjacentOneStep",
+    "original_sha256": "8c84675d6a7d63e6395263b63944c8c5eed15db300c37d0f9ad845b27132a40b",
+    "renamed_sha256": "2f925a8897343b102c386c44e20d59b8c8aae2fa3abd09c42be8f76215dd66da"
+  },
+  "Erdos1135.Tao.Section6.AdjacentTelescope": {
+    "module": "Erdos1135SecondScale.Tao.Section6.AdjacentTelescope",
+    "original_sha256": "959e7acf3929306646ade6272c5f7ba3d7c0b41f79c9889068adda45ac712f12",
+    "renamed_sha256": "6372c80c6dbcb63fc4c00c3a1ee532bcf265ab41590e7edda23ef45d85a5cc45"
+  },
+  "Erdos1135.Tao.Section6.AmbientOffsetAppend": {
+    "module": "Erdos1135SecondScale.Tao.Section6.AmbientOffsetAppend",
+    "original_sha256": "75f4e705c60dae84da42362b1c4ff44daebdcbda40e4b11299023fd598a36570",
+    "renamed_sha256": "d4f57cea185bc20c1435da55714a83b511f121d132ac7c15f8c1f636b1dbce81"
+  },
+  "Erdos1135.Tao.Section6.AmbientTailDFT": {
+    "module": "Erdos1135SecondScale.Tao.Section6.AmbientTailDFT",
+    "original_sha256": "4170caac0428cb347e7b3356ab074ba556c6e8ba5a084ee6c15f738ca6cc3c46",
+    "renamed_sha256": "945024c114f25ed17e8e27fa28baa0a05c93a427b9e89415d15b4f65dc4acbe1"
+  },
+  "Erdos1135.Tao.Section6.AmbientTailDecay": {
+    "module": "Erdos1135SecondScale.Tao.Section6.AmbientTailDecay",
+    "original_sha256": "27c9028ee667e2f6bcc1206034a542b5895fbcc549d8cca111c367d64c368bd0",
+    "renamed_sha256": "61103153dd2cb8270fd1886d578f34633a8fb76bcc1701abc914461bfe76940a"
+  },
+  "Erdos1135.Tao.Section6.ConductorDFT": {
+    "module": "Erdos1135SecondScale.Tao.Section6.ConductorDFT",
+    "original_sha256": "98d0a2e6f6cde4ae169c6d9b406983ee6a564ae66ae0a16b5f71bded8e8e4632",
+    "renamed_sha256": "c4b19eb81805eaf71d27d3f9adf27f2f817302374b3cc0c8a8f58a607d853bac"
+  },
+  "Erdos1135.Tao.Section6.ConductorFrequency": {
+    "module": "Erdos1135SecondScale.Tao.Section6.ConductorFrequency",
+    "original_sha256": "167590572fcb4585b8aa375021caa1dacd996a8e0c1bbb0aa7d20bb6a2c26e4b",
+    "renamed_sha256": "9c4084f8d4878ff245744804c63ea48fa3cfa19863a23f9f2b5b9de9bfb8f97b"
+  },
+  "Erdos1135.Tao.Section6.ConductorIndex": {
+    "module": "Erdos1135SecondScale.Tao.Section6.ConductorIndex",
+    "original_sha256": "14ab0129a83c066e433e775446fe180282fd52b8de7859e0142690e29a8e437d",
+    "renamed_sha256": "78598cf5eca3e69db001b0e97b21a9a40df8265a788545db01697816e566ae6a"
+  },
+  "Erdos1135.Tao.Section6.ConductorProjectivity": {
+    "module": "Erdos1135SecondScale.Tao.Section6.ConductorProjectivity",
+    "original_sha256": "c152c14fbfa1551eae7b2e97e8996ad8f040116257b3cae3cae4ec2ba8317486",
+    "renamed_sha256": "0c16eb13c2d1a65fadef950e8737253d8ff4fd20b1618e509fa497644ee8414e"
+  },
+  "Erdos1135.Tao.Section6.Cor63HeadPrefix": {
+    "module": "Erdos1135SecondScale.Tao.Section6.Cor63HeadPrefix",
+    "original_sha256": "b08b33d06eb314684508f057243e7a1b569b9eb5ff5687b55332d29e20c73230",
+    "renamed_sha256": "7e6a10023a68a2fd161fb5c8bc5ac1162f46876d451eefde02a58ecf856aeff3"
+  },
+  "Erdos1135.Tao.Section6.Corollary63": {
+    "module": "Erdos1135SecondScale.Tao.Section6.Corollary63",
+    "original_sha256": "4ff57f86b370edae7d3d044206e5e782f936fd6e9c21cfc698ad45fa81ae235a",
+    "renamed_sha256": "17856687791b64eeb4e5fcc80d10a10696811418d9b42fdde7836b9016d054f9"
+  },
+  "Erdos1135.Tao.Section6.EventAggregation": {
+    "module": "Erdos1135SecondScale.Tao.Section6.EventAggregation",
+    "original_sha256": "bee5e8551f42a564ce558d3f0e33e7c27186c92af68cecc0bc65dfeb1d290e43",
+    "renamed_sha256": "ea9871709b94bc6a22b98d8499c96ae816c0d28a53af67e808958475f3f5a176"
+  },
+  "Erdos1135.Tao.Section6.FiberAverageDFT": {
+    "module": "Erdos1135SecondScale.Tao.Section6.FiberAverageDFT",
+    "original_sha256": "2f28a5eed88677391f0024d8710d412f35966051b7bb6ef0f163b161c8fdb20f",
+    "renamed_sha256": "65f8aa7831e0cf5be494e868275c2ec28b413d3de3296e38fb885fac1cb6a9f2"
+  },
+  "Erdos1135.Tao.Section6.FiniteFourierCollision": {
+    "module": "Erdos1135SecondScale.Tao.Section6.FiniteFourierCollision",
+    "original_sha256": "e0f32c511983843c757151d1431275c4826c761906916926a387904324f7937b",
+    "renamed_sha256": "de2b6cb94a1260bd43195271dc47b150914a564be474af58b68c47d9268aa277"
+  },
+  "Erdos1135.Tao.Section6.FiniteFourierConvolution": {
+    "module": "Erdos1135SecondScale.Tao.Section6.FiniteFourierConvolution",
+    "original_sha256": "a14cffa58be726c50cbd06c4a4bcbbf8b4a203ff2c834f01b7f42997fc1aab9c",
+    "renamed_sha256": "281e82d812a4f110d727187cb54e585a176ee181ccc0967c061df37eb65e3c44"
+  },
+  "Erdos1135.Tao.Section6.FiniteFourierParseval": {
+    "module": "Erdos1135SecondScale.Tao.Section6.FiniteFourierParseval",
+    "original_sha256": "694c8c3e22e950a12cd72d01f851db2e6dc622d1cce53d5430d6ca919723669b",
+    "renamed_sha256": "2228917171e0849178651fc19e399ff2b4bd37c9be8fb539f6370019dfe42f32"
+  },
+  "Erdos1135.Tao.Section6.FirstCrossingPartition": {
+    "module": "Erdos1135SecondScale.Tao.Section6.FirstCrossingPartition",
+    "original_sha256": "286aafc39555a306b664c92b6e10d585a1760e973c51e09853c77e6b996c3c3d",
+    "renamed_sha256": "b23170087cc5359ead726dd2d69ad5c1efc28b066e758f35a87161738a08dd5c"
+  },
+  "Erdos1135.Tao.Section6.FixedAmbientSlice": {
+    "module": "Erdos1135SecondScale.Tao.Section6.FixedAmbientSlice",
+    "original_sha256": "357c56707318486ead5d59f2ba6728c05c82cfaa1c35b01efe5708e1e73c0dac",
+    "renamed_sha256": "eb00680bd2d33f111c57b38acddcf90cdded0cb9d0895525902c39acb0a13864"
+  },
+  "Erdos1135.Tao.Section6.FixedSliceCollision": {
+    "module": "Erdos1135SecondScale.Tao.Section6.FixedSliceCollision",
+    "original_sha256": "5d62ee1141473e37d2a3d3d3f8fced27738ea106d718f9bc7d9f933150ea3942",
+    "renamed_sha256": "71169cdc95a3547616753d479fda20866bbdf17c07d1f49bbf6f4cceeba8adcb"
+  },
+  "Erdos1135.Tao.Section6.FixedSlicePolynomial": {
+    "module": "Erdos1135SecondScale.Tao.Section6.FixedSlicePolynomial",
+    "original_sha256": "d2e882961051255d64b52c2fca0b64e6721886cb54a5308c20585a0f0bcac0d1",
+    "renamed_sha256": "b45ab416e895f5bfbfd23271ed63ed80b9c28ba75723c9dece8fc9b05a48ee34"
+  },
+  "Erdos1135.Tao.Section6.FixedSliceSource": {
+    "module": "Erdos1135SecondScale.Tao.Section6.FixedSliceSource",
+    "original_sha256": "35920076e354bc6481feb795a03a5d117cc9652549e93a5eea7324051a13cece",
+    "renamed_sha256": "70d6f860c576c7a314b53389bacb2236ec52ade6e61d5a3d6ba5fa8f4e260a60"
+  },
+  "Erdos1135.Tao.Section6.GatePartition": {
+    "module": "Erdos1135SecondScale.Tao.Section6.GatePartition",
+    "original_sha256": "ec41c12a081ad1ab53f2b491aef9e28d9cc351d7dd0b76eb7c24cd53807d1a1c",
+    "renamed_sha256": "0efb8bac832c20a2496a5d9cb0548b415892e3e61040c54cdda3d17aad055e37"
+  },
+  "Erdos1135.Tao.Section6.GatedSourceConvolution": {
+    "module": "Erdos1135SecondScale.Tao.Section6.GatedSourceConvolution",
+    "original_sha256": "04441e299202fe4fdd881e33a46406ec68a85bac6df5f252b1e724dad3550734",
+    "renamed_sha256": "21d8bcb1a76910770b58dc63cdda85ffcd78f188f83221e742bb247a1edb2703"
+  },
+  "Erdos1135.Tao.Section6.Geom2IntervalConcentration": {
+    "module": "Erdos1135SecondScale.Tao.Section6.Geom2IntervalConcentration",
+    "original_sha256": "645919112f6eddd640de9f3a395ebe36cbd08eab462909cfbf2da14fbec1ca62",
+    "renamed_sha256": "444905534e962d0b07ff618134e8df2b29077f189fa5fe920caa035f52cba18e"
+  },
+  "Erdos1135.Tao.Section6.GlobalOscillationBound": {
+    "module": "Erdos1135SecondScale.Tao.Section6.GlobalOscillationBound",
+    "original_sha256": "9dda0242a55c40c7978cffaad0bb736fc3f8d70d56d37d57db94d5bd89708f3c",
+    "renamed_sha256": "ffdda6d39172b907ee31d3d2eaea38557cf6747925a98629e437bc2a8e1e7473"
+  },
+  "Erdos1135.Tao.Section6.GlobalTypicalEvent": {
+    "module": "Erdos1135SecondScale.Tao.Section6.GlobalTypicalEvent",
+    "original_sha256": "cb2ebdb5da67de6f20433512fd8a6aff37e3ec6db63bcde463e0571c5bb0a332",
+    "renamed_sha256": "0be62947d93a20d5a95e42975d44833fc7c07e20de1be518d15f69a96f8d0ee7"
+  },
+  "Erdos1135.Tao.Section6.HeadEntropyScalar": {
+    "module": "Erdos1135SecondScale.Tao.Section6.HeadEntropyScalar",
+    "original_sha256": "b0fba47a5de435060d20fefd87b43b7f84cb9980615f3156ea742182b3aa9034",
+    "renamed_sha256": "3d17d383d74ec505a2ac534e9786212d99e59634706eff68dadbd889439c10a8"
+  },
+  "Erdos1135.Tao.Section6.HeadGate": {
+    "module": "Erdos1135SecondScale.Tao.Section6.HeadGate",
+    "original_sha256": "3701ab94e20d8487f6c9b4dd976e6b5eec1988fc8599a44d0f712c4a6d718bec",
+    "renamed_sha256": "7deff33ae7f65a64e0ad4214810d8b5a7775a9315e7219b3bfab0ed5b178565b"
+  },
+  "Erdos1135.Tao.Section6.HeadGateIndex": {
+    "module": "Erdos1135SecondScale.Tao.Section6.HeadGateIndex",
+    "original_sha256": "e83ab2b2451775eadbb84178ffb0d2ecdae7d0c852246bd439c5050873b1f041",
+    "renamed_sha256": "68c55548caf7069f3cc96bf3050a1c9143df4cae9d1af4bdf1434eef02de07a3"
+  },
+  "Erdos1135.Tao.Section6.HeadGateLocalization": {
+    "module": "Erdos1135SecondScale.Tao.Section6.HeadGateLocalization",
+    "original_sha256": "8e7c8f759d16c53bd29166dd7f8c39d99924a9d144b4a0a20d4cfc5623ff4a8a",
+    "renamed_sha256": "698b6a3aaba74dabe632d884a2e83e2a8c635532e73e6bd933c11994f1b049a2"
+  },
+  "Erdos1135.Tao.Section6.HeadSubmass": {
+    "module": "Erdos1135SecondScale.Tao.Section6.HeadSubmass",
+    "original_sha256": "cf1263768d048d40d66c8e747db956ff8e15d79001d1d61c2ef86c06d55d28e7",
+    "renamed_sha256": "7588e61607c777e06c2f44009fef0c8c6de2263053d3039527e2347e8e0eb1b0"
+  },
+  "Erdos1135.Tao.Section6.HighRegimeAllScale": {
+    "module": "Erdos1135SecondScale.Tao.Section6.HighRegimeAllScale",
+    "original_sha256": "b495df831a62c90a26d57aeeb220c0733fb2fd5bf5d1836f4f4bbe55661dc0d1",
+    "renamed_sha256": "0d8324d4b342aa9c5e4f7424d66eead2c305c820f400aaccd61cc5440a89b4fd"
+  },
+  "Erdos1135.Tao.Section6.HighRegimeMixing": {
+    "module": "Erdos1135SecondScale.Tao.Section6.HighRegimeMixing",
+    "original_sha256": "d01280524a62bdf9be018cd71a65f688752c701b857b2a85737361e1fa06ff6d",
+    "renamed_sha256": "f78df6325e565f5576d8155f77504ff3b572b5778ddb55efb5380fcb41183748"
+  },
+  "Erdos1135.Tao.Section6.InversePowerTail": {
+    "module": "Erdos1135SecondScale.Tao.Section6.InversePowerTail",
+    "original_sha256": "dab9115e52f9ab4cfe2a227e9e6d4912ff1d13687d7723fa08a9726d9b0295e3",
+    "renamed_sha256": "3d80ba2ce9ba1a8ccedba1ee2d80c19d3bdf8c4177719dbf4a000ebaaa04ba73"
+  },
+  "Erdos1135.Tao.Section6.ModulusProjection": {
+    "module": "Erdos1135SecondScale.Tao.Section6.ModulusProjection",
+    "original_sha256": "bc88dcf64e1a19d7124656135de975aed43c42a614d9460f0a09a3552643e773",
+    "renamed_sha256": "ace6618150a754ef518310cea37fb67797f61aa8a7069b4c36dbe07a71d4768c"
+  },
+  "Erdos1135.Tao.Section6.OptionHeadTailConvolution": {
+    "module": "Erdos1135SecondScale.Tao.Section6.OptionHeadTailConvolution",
+    "original_sha256": "6dd6d8e9037c3897b3b380d7ce54f34fdb2f9c76ab2fd32b1531b41373f79410",
+    "renamed_sha256": "3fb1b862d1e2d763e44380e8ca48229263c994d6d44e57102fc542b9b388723b"
+  },
+  "Erdos1135.Tao.Section6.Prop114Assembly": {
+    "module": "Erdos1135SecondScale.Tao.Section6.Prop114Assembly",
+    "original_sha256": "0e5aac15222536f60e7f2d5d2dfda6066a4e05710172ebae03adeb73cbd9fb14",
+    "renamed_sha256": "1a400a7fcf3711b85994167ce58356036ed4706e57ccdf1a390b97ea0aa1445d"
+  },
+  "Erdos1135.Tao.Section6.Prop117ToProp114": {
+    "module": "Erdos1135SecondScale.Tao.Section6.Prop117ToProp114",
+    "original_sha256": "16418b65f7cf5094c217977f4201032566acc43c4519c105f2367b7a5cd48b4d",
+    "renamed_sha256": "b06b7c3cdcec35601158564d7d19534fedde06bb8093e1cd4594a2ac7ff5db12"
+  },
+  "Erdos1135.Tao.Section6.UniformLift": {
+    "module": "Erdos1135SecondScale.Tao.Section6.UniformLift",
+    "original_sha256": "e79628d63f7f72c05db63b5b784b43c00850a41d124ace1e3efa8690cca0b083",
+    "renamed_sha256": "6ebb210ccf36e5768237c12aa3d7b8d64643e7e604e15ba02509d7c0c319c47c"
+  },
+  "Erdos1135.Tao.Statement": {
+    "module": "Erdos1135SecondScale.Tao.Statement",
+    "original_sha256": "7721dad4262e4a801eee0bcf89f49ef37824cbc07be512ff5edbb2e572d09f48",
+    "renamed_sha256": "57746e3a6e11b9c39e036a75eb45f7dfab47882283bd4081d2451e53b7a05ecb"
+  },
+  "Erdos1135.Tao.Syracuse.Affine": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.Affine",
+    "original_sha256": "06a2f9aa999e96cb95bfd2cc64d71528d16965ed37e6623a40ae6116062798ae",
+    "renamed_sha256": "fda31e79fa57babb568c6b2462b5e478c4dcf8810b972fe584b65200742026e8"
+  },
+  "Erdos1135.Tao.Syracuse.AffineCoefficient": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.AffineCoefficient",
+    "original_sha256": "a52f4f5ded19557ce0b177dd0572f8cf418a675782aaa88d1558b45026ec58c3",
+    "renamed_sha256": "991edf97ad9ca7618d0343779e2470a0d6918d7bc7d3f1b5cb37fddb636f2078"
+  },
+  "Erdos1135.Tao.Syracuse.AffineEnvelope": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.AffineEnvelope",
+    "original_sha256": "53a558567aa9301a406f19811a111f755f52316a3f2762eba99a0e41e83d9a63",
+    "renamed_sha256": "1088d5f234679f40fb9d12f495c5a10977346019c342b3c1ef89e664afa176e5"
+  },
+  "Erdos1135.Tao.Syracuse.AffineOdd": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.AffineOdd",
+    "original_sha256": "9e8123d7e6a943cea3da80d789bc9323e2aea08f3ecc2910cee17d0cf92b6570",
+    "renamed_sha256": "5b4c8ef91593595dfc02f5fa17ac2e7a7df026d341ca2589f65450dbccad37fd"
+  },
+  "Erdos1135.Tao.Syracuse.AffineReciprocal": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.AffineReciprocal",
+    "original_sha256": "1ab27c330540ee753cf53776a5db5ac1390e4a7f1728b8c1dae9c14ee9e8c2b2",
+    "renamed_sha256": "d4c4b6966c1eb58e0cf230d7a93ca3c89829d3f559139dd9b8a56114225d4eb6"
+  },
+  "Erdos1135.Tao.Syracuse.AffineResidue": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.AffineResidue",
+    "original_sha256": "df448feb7c3f06159c3d4798e1ba1feda108775d6c66f1a19ce610f19856dbd3",
+    "renamed_sha256": "34bed9f8758bcb4d5ffd48b60e6c8487eb19995562d2843122311f4bc4350ce6"
+  },
+  "Erdos1135.Tao.Syracuse.AffineReverse": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.AffineReverse",
+    "original_sha256": "d3ecd26c44de0eba086b849c87f7684068dc3df60d359e283a41179cdfed5468",
+    "renamed_sha256": "a472c54047621e2d50066c6671b6c6a618dac517a8f1349cad1667c573cbd751"
+  },
+  "Erdos1135.Tao.Syracuse.AffineTrajectory": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.AffineTrajectory",
+    "original_sha256": "dd37ad55df2f2a60001a57be07302d937d0632e32d196387f80f2a1d76c358c4",
+    "renamed_sha256": "d28058c153a3d6e5672d90742570e520bff50d3f62a4d44989e9c6fb9dfffef2"
+  },
+  "Erdos1135.Tao.Syracuse.Basic": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.Basic",
+    "original_sha256": "fafec12689630a30946586513f5e51c350f94002dea430f2a182f44921fdc341",
+    "renamed_sha256": "fe022e7167fea30d7860004028227bc9fd9d6674ecd7f64e2547627b029a2ba6"
+  },
+  "Erdos1135.Tao.Syracuse.CylinderMass": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.CylinderMass",
+    "original_sha256": "a7dd9bd19bcf3b64b052cba210c084c6acb29942ea3c78e4c0ffcd4064ed60c7",
+    "renamed_sha256": "8dc6225ceedfbf193ed6b9522ce920b83685485fbfd68b2fc6697d2a8d4cfdc5"
+  },
+  "Erdos1135.Tao.Syracuse.Defs": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.Defs",
+    "original_sha256": "6a061710b03e35fcc7bea522e96aa634afdc68492f7055124315abb0b08a9f72",
+    "renamed_sha256": "58f14572ac93ddd414a937438083c87e09bec44da488c6807a967631156a9b51"
+  },
+  "Erdos1135.Tao.Syracuse.FirstPassage": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.FirstPassage",
+    "original_sha256": "351424b04d7519ebde3e8a34cf0caab9d25f7d9e43997700ead88559693d490f",
+    "renamed_sha256": "f751e47d9474530ca26ba9bfd91ae206e6b24f7c699656f7a0595160f567cacc"
+  },
+  "Erdos1135.Tao.Syracuse.FirstPassageInterval": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.FirstPassageInterval",
+    "original_sha256": "183d1bb1d28fb4de11cb2130fe831952185c8e8fe6ae912c201e3849d9f476e3",
+    "renamed_sha256": "bd4cb036b1f855af0bca584abcc4fa4c531e3cecd524e949df44f597bf49e429"
+  },
+  "Erdos1135.Tao.Syracuse.OddSource": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.OddSource",
+    "original_sha256": "df5fa6a8aa7ac9e8e10e2981caa0faf7575590937b4e9d87e43dbadeca7ff5c4",
+    "renamed_sha256": "9fe91732c48c130de461133f616d71b36d5a347a10f87239f4bb2e42f314dfc5"
+  },
+  "Erdos1135.Tao.Syracuse.OffsetInjectivity": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.OffsetInjectivity",
+    "original_sha256": "97dd716abdf6d667d954c063b7beb0156a8d3d34e4ca42466d70d9de8ed925e6",
+    "renamed_sha256": "f0d79df4d514292ffa7ee1db0bcf41e93670cc5fa4a7d9b189839c015bfb54f6"
+  },
+  "Erdos1135.Tao.Syracuse.ParityBridge": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.ParityBridge",
+    "original_sha256": "35c35240788a53005055a61fe60a30c89b080f22404c2d963c17e693c5b7fc0f",
+    "renamed_sha256": "b385cf8877bcba866c03fef7cd300e74f5424176b7bd1aec923aab4f92418e25"
+  },
+  "Erdos1135.Tao.Syracuse.Prop19": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.Prop19",
+    "original_sha256": "f4ae66a40a73e0fe88ac7ce4ccba32293c14231ac876214114c63a8c6f79ed4c",
+    "renamed_sha256": "39fbc84b5704717001934b8c1a425285381d4e82efab064add13cb37651f68ef"
+  },
+  "Erdos1135.Tao.Syracuse.Prop19GeomTail": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.Prop19GeomTail",
+    "original_sha256": "75f77864eabd8cb7acf7252cf153f56d2cc830b39a8c9ef57ef79c76ac44c853",
+    "renamed_sha256": "fef5cce1f95ec34481595037a72bae6eca29de7eaf7c679dde6cfad3f6a64444"
+  },
+  "Erdos1135.Tao.Syracuse.Prop19Laws": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.Prop19Laws",
+    "original_sha256": "46d710a610674fc6b806bb271d440d7b8d47b2afbf32b7d0a50f528410d907c8",
+    "renamed_sha256": "0a9c0089717751feb20ca92c60ff42323a708dc1d27d5bb2b12c49a2bf290b2a"
+  },
+  "Erdos1135.Tao.Syracuse.Prop19Truncation": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.Prop19Truncation",
+    "original_sha256": "8429a1855d5fa1474b2044469d15eb114febd0408ade87a1682bdb6e210e2fed",
+    "renamed_sha256": "81d18180a9605d59f0986870d2d687ed9be8ca2e7ffdad09854aa4c0ba5d1384"
+  },
+  "Erdos1135.Tao.Syracuse.RealFirstPassage": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.RealFirstPassage",
+    "original_sha256": "d84e56341f1dc29111f0d23570de4f7c9a999dca7eca88a9d50d25a875efd4a5",
+    "renamed_sha256": "e9c3864c3a2470dcdca7c4b8624ca0fdf8ecaf905e1107e17bd1c2d24503593b"
+  },
+  "Erdos1135.Tao.Syracuse.Residue": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.Residue",
+    "original_sha256": "89b4f3f41c8d34e3a65ef20e1c4ffa1616914021c09b0f077bdedf1a63afcc89",
+    "renamed_sha256": "e8125367dad8f3b78df8fde71602703d33e01708a5061e37778c520bb2cf1667"
+  },
+  "Erdos1135.Tao.Syracuse.Statement": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.Statement",
+    "original_sha256": "ee24450ed488abbc369a296a27fea56b68c7a987c326007d58ec1a98c15a18d0",
+    "renamed_sha256": "3ef4263ac1dfc45d351270bb1f32d1493f640165ca7ff8a0335d328d9c634a32"
+  },
+  "Erdos1135.Tao.Syracuse.Syrac": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.Syrac",
+    "original_sha256": "57266b4ae52def9c4f8d9348a4a6891cc15e87f72d2aff5b1952d6a27109c536",
+    "renamed_sha256": "ad5d45e054327b089fb666bbf3db6e09ed0daa50d9b1868f857ebb1d182746e9"
+  },
+  "Erdos1135.Tao.Syracuse.TruncatedValuationDecoder": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.TruncatedValuationDecoder",
+    "original_sha256": "337d27ec3592c449f7115c84887cd1563e71370f40873647db814255afc818f8",
+    "renamed_sha256": "48b98d14adbbb26f71ddfdf4c686378f61be14e230d42412dde832dd3e383d6b"
+  },
+  "Erdos1135.Tao.Syracuse.TruncatedValuationGeom2": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.TruncatedValuationGeom2",
+    "original_sha256": "7b55a0c400dbdab560262e34780e3f4ad8ba3074a9dfdca27377320603d3e7e9",
+    "renamed_sha256": "82cbd7c2b2abaee427f3780a3201cd4cc1701fecabbc21129c31bc599a1d7e0e"
+  },
+  "Erdos1135.Tao.Syracuse.TruncatedValuationPacking": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.TruncatedValuationPacking",
+    "original_sha256": "46c25fdbe6c3f6dc3b76d4a9b99d248cc9ac2de31f4bf7bd2f45f17d69572ed7",
+    "renamed_sha256": "2207a9a3e929c50e81d55ceb021a0c9415e336d540304c4719dd29722efde50c"
+  },
+  "Erdos1135.Tao.Syracuse.TruncatedValuationTV": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.TruncatedValuationTV",
+    "original_sha256": "0b6c00a4efc0654043b8170708ceb5bf3e9dbdf60822b40b7575a5a6bf89c2eb",
+    "renamed_sha256": "1af8c1a0952816427c00c06d17ecbc4056c2b3365f8eabd4c4ef7c8a19a4c953"
+  },
+  "Erdos1135.Tao.Syracuse.TruncatedValuationUniformOdd": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.TruncatedValuationUniformOdd",
+    "original_sha256": "c0153564374ff3b73871ef8c14386fd5e3f6fe8f243e1b096382663cf0cba5ac",
+    "renamed_sha256": "dcbb24edc4f3264b21cf2431f652b2fd86a8c984627d49647f75b294b260615c"
+  },
+  "Erdos1135.Tao.Syracuse.ValuationCylinder": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.ValuationCylinder",
+    "original_sha256": "53ac59aac554e1e9c207a4b2b756d2e0849fa4004cbde809013423e29331431f",
+    "renamed_sha256": "4f631b434960168c32ff9b8b2e84a4f733ad3e294d4b1338fa4ccf42aa2c51c8"
+  },
+  "Erdos1135.Tao.Syracuse.ValuationCylinderCRT": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.ValuationCylinderCRT",
+    "original_sha256": "1a602cc40cf9ecc3fd40e5bd14e23e2bb7f8db49e1329ae25e0700e880154c55",
+    "renamed_sha256": "bda199d15b1fc0ae8547c4a67f9778c58bd49fb64b76d7652b9a9c0a34313938"
+  },
+  "Erdos1135.Tao.Syracuse.ValuationCylinderResidue": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.ValuationCylinderResidue",
+    "original_sha256": "9d9bd182cfa87347c9c8942471163a6027a6ccacc9d02d52f674b25939b21d6a",
+    "renamed_sha256": "0adeb49457b0dad4df33c56b1f9e74f4037b727ab649db782ac6122ae753e4c1"
+  },
+  "Erdos1135.Tao.Syracuse.ValuationDistribution": {
+    "module": "Erdos1135SecondScale.Tao.Syracuse.ValuationDistribution",
+    "original_sha256": "a765c6aa38b87504514766274f33acfaf0b811f57ab883c1ffecba1745500c97",
+    "renamed_sha256": "d2261b8fec009dc977b98e9dc60029c614a813ce18a46c71ec15aa663897dfaf"
+  },
+  "Erdos1135.Tao.ThresholdAssembly": {
+    "module": "Erdos1135SecondScale.Tao.ThresholdAssembly",
+    "original_sha256": "eaf64175554a1cb7f4f5a4e24e5ace101cfdb470da8fa8960a72e5a7e3687393",
+    "renamed_sha256": "72135b92e54bb7c08269b1a13dca9afeacf77cc6b6dc1f1b6d43537961a0d870"
+  },
+  "Erdos1135.Terras.Core.Defs": {
+    "module": "Erdos1135SecondScale.Terras.Core.Defs",
+    "original_sha256": "5d92f90e1b8ced2990fc76cc289dc72c54cbe2f9c29b2708986925b4ab2abae7",
+    "renamed_sha256": "9b8c47c616dfbb3ccc5e55b47a242cba8151d7edf8d358a805f31f55f23fb718"
+  },
+  "Erdos1135.Terras.Density.NaturalDensity": {
+    "module": "Erdos1135SecondScale.Terras.Density.NaturalDensity",
+    "original_sha256": "eef3c37c806454bf5a8c827a07d593ad05608687b4e538b1541ca50501621454",
+    "renamed_sha256": "8b80b9dc1bfe2581c4412f26a64ad99638d735874fb4c7511b09d99baaf45d5a"
+  },
+  "Erdos1135.Terras.Parity.Residue": {
+    "module": "Erdos1135SecondScale.Terras.Parity.Residue",
+    "original_sha256": "403f5e0a32452ec0e81f24174086cd9178723bfe03dcdcb8bf635bde32b81ebd",
+    "renamed_sha256": "345c1d047911c3cbfc717e9d53a079d3b4e0fc61154542448ce1881c2a4a0f73"
+  },
+  "Erdos1135.Terras.Parity.Word": {
+    "module": "Erdos1135SecondScale.Terras.Parity.Word",
+    "original_sha256": "760efd43ab555f72d122b35e3d5abb1233fe5b0e4b526e5c840bb9d455a2f364",
+    "renamed_sha256": "c0fad420b971db19891e7f267208bf17975470cf39e15485ac134c444c298b51"
+  },
+  "Erdos1135.TwoAdic": {
+    "module": "Erdos1135SecondScale.TwoAdic",
+    "original_sha256": "134e0857941bfe03e228ecbbfcea7d8efb800ad456a23874db6ccfc5669eb72f",
+    "renamed_sha256": "a82d1bcb5975a45b271d72fceb39aa7cea54085cb172692636801c5fc231e970"
+  },
+  "FormalConjectures.Util.ProblemImports": {
+    "module": "FormalConjectures.Util.ProblemImports",
+    "original_sha256": "d1d7c7278eb35585e54d7e33a6969ab2596bf2c91f6b5029dc07086dbcb43c7f",
+    "renamed_sha256": "d1d7c7278eb35585e54d7e33a6969ab2596bf2c91f6b5029dc07086dbcb43c7f"
+  },
+  "FormalConjectures.Wikipedia.CollatzConjecture": {
+    "module": "FormalConjectures.Wikipedia.CollatzConjecture",
+    "original_sha256": "cc45c97c70147327f010caf8d827ad1eb5030ed5686872330188a13a3f6971c8",
+    "renamed_sha256": "cc45c97c70147327f010caf8d827ad1eb5030ed5686872330188a13a3f6971c8"
+  }
+}
