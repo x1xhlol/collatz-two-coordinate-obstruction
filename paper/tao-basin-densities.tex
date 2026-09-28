@@ -1,16 +1,88 @@
-\section{First-passage limits and canonical integer traces}
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array}
+\usepackage{lmodern,microtype,fancyhdr}
+\usepackage{fontspec,fancyvrb}
+\usepackage[hidelinks]{hyperref}
+\newfontfamily\leanappendixfont{DejaVuSansMono.ttf}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\R}{\mathbb R}
+\newcommand{\nn}{\R_{\ge0}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\gap}{\operatorname{gap}}
+\newcommand{\rev}{\operatorname{rev}}
+\newcommand{\code}[1]{\texttt{#1}}
+\DeclareMathOperator{\im}{im}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Collatz basin densities and canonical traces}
+\fancyhead[R]{\small Lucas Valbuena}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parindent}{1.1em}
+\setlength{\parskip}{3pt}
+\setlength{\abovedisplayskip}{7pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{7pt plus 2pt minus 2pt}
+\hypersetup{pdftitle={Collatz basin densities and canonical traces from first-passage stabilization},pdfauthor={Lucas Valbuena},pdfsubject={Consequences of Tao's first-passage stabilization for logarithmic densities and critical traces}}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\LARGE\bfseries Collatz basin densities and canonical traces\\[3pt]from first-passage stabilization\par}
+\vspace{8pt}
+{\large Lucas Valbuena\par}
+\vspace{4pt}
+{\normalsize 28 September 2026}
+\end{center}
+\vspace{2pt}
+\begin{abstract}
+We deduce from Tao's first-passage stabilization that every fixed Collatz
+basin has a logarithmic density and that countable orbit labels have
+limits in total variation. Two incommensurable scale parameters remove
+the possible logarithmic oscillation left by one scale. Weighted basin
+densities give a finite critical Green limit at every positive integer.
+A first-hit time law then identifies this function with the Ces\`aro
+and Abel limits of normalized stationary Syracuse cylinder masses.
+For the largest cylinder mass we prove
+\(2^{-k}\le\max_N\pi(N+3^k\mathbb Z_3)\le(2k+3)2^{-k}\),
+which determines its optimal uniform exponential rate. The canonical
+function is sublinear uniformly among the large ancestors of any fixed
+root. Its global sublinearity on nonperiodic targets is equivalent to
+logarithmic density one of the eventually periodic set. Additional results of Mazur upgrade the basin and label limits to natural
+density and imply that the canonical function is positive exactly at
+integers prime to three. With that input, global sublinearity is
+equivalent to eventual periodicity of every orbit; this condition and
+the exclusion of additional cycles remain unresolved. The accompanying
+Lean development checks selected proof steps, but the main analytic
+theorem chain has not yet been formalized.
+\end{abstract}
+
+\section{Introduction and notation}
 \label{sec:canonical-traces}
 
-We now use Tao's first-passage stabilization theorem to study fixed
-integer basins. The arguments in this section are ordinary analytic
-proofs; they are not part of the Lean formalization. We prove
+We use Tao's first-passage stabilization theorem to study fixed integer
+basins. The arguments in this paper are analytic proofs with selected steps
+checked in Lean. We prove
 existence of logarithmic basin densities, total-variation limits for
 countable orbit labels, and equality of two canonical critical traces
 at every positive integer. A final proposition characterizes the
-global sublinearity condition that remains unresolved.
+global sublinearity condition that remains unresolved. We then use
+separate results of Mazur to obtain natural-density limits and positivity
+at every target prime to three.
 
-Continue to use the shortcut map \(T\) from
-Section~\ref{sec:finite-patterns}. Write
+Use the shortcut Collatz map
+\[
+T(x)=
+\begin{cases}
+x/2,&x\text{ even},\\
+(3x+1)/2,&x\text{ odd}
+\end{cases}
+\qquad(x\in\mathbb Z_{>0}).
+\]
+Write
 \[
  \mathcal B_N=\{q\ge1:T^j(q)=N\text{ for some }j\ge0\},
  \qquad
@@ -30,7 +102,80 @@ are distinct and tend to infinity.
 Two positive integers belong to the same \emph{tail component}
 when their forward orbits eventually meet.
 
-\subsection{Uniform control of finite distinct trajectories}
+\subsection{Relation to the 2026 descent and formalization results}
+
+The density, target, time, and observable must be distinguished when
+comparing the present statements with recent work. Shaik's September
+revision~\cite{Shaik2026}, version 4.0.0, proves natural-density descent
+to
+\[
+ (\log n)^{A_{\rm FP}}U(n),\qquad
+ A_{\rm FP}=\frac1{2(1-H_2(\log_3 2))},
+\]
+where \(H_2\) is binary entropy, for every prescribed positive
+\(U(n)\to\infty\). The shortcut and raw
+Collatz witnesses have a common landing, clocks centered at
+\(2\log n/\lambda\) and \(3\log n/\lambda\), respectively, with
+\(O(\sqrt{\log n\log\log n})\) errors, and a common height bound
+\(nR(n)\) for every prescribed positive \(R(n)\to\infty\).
+His fixed-exponent specialization with a balanced height ceiling attains
+the joint exceptional exponent
+\((1-H_2(\log_3 2))A-1/2\). Our fixed-target first-hit laws concern
+membership in a specified basin and do not claim new drift constants.
+The target in Shaik's theorem still tends to infinity; that theorem
+does not itself supply a limit for the density of a specified basin.
+
+Nashida's fixed-barrier preprint~\cite{NashidaBarrier2026} proves
+\[
+ \#\{n\le X:\operatorname{Col}_{\min}(n)>M\}
+       \le KXM^{-c'},\qquad c'\simeq3.506\cdot10^{-6},
+\]
+uniformly in the endpoint \(X\) and integer barrier \(M\ge1\).
+Its proof combines fixed-barrier counting assembled from Shaik's
+formalization with Mazur's natural-density recursion. This is a
+stronger quantitative tightness estimate than is needed below;
+together with our existence of the minimum law it gives
+\(\mu_{\min}((M,\infty))\le KM^{-c'}\).
+It neither identifies a specified basin's mass nor makes a zero-density
+exceptional set empty. Nashida's generalized-map
+preprint~\cite{NashidaGeneral2026} proves the analogous power saving
+for the Gon\c calves--Greenfeld--Madrid family. His separate
+stopping-time preprint~\cite{NashidaTerras2026} improves the
+Terras-type exponent for long stopping times. That count ranges over
+starting integers and is distinct from the uniform packing bound for
+one finite trajectory of distinct states used here.
+
+Mazur's formalization of Tao~\cite{MazurTao2026} includes the
+first-passage stabilization theorem, rather than only Tao's final
+almost-boundedness conclusion. Its checked source fixes the scale
+parameter at \(\alpha=1001/1000\). It therefore supplies the standard
+scale but does not by itself check our extension to a second
+incommensurable scale in Proposition~\ref{prop:ct-tao-input}.
+His natural-density transport theorem~\cite{MazurNatural2026}
+compares uniform and logarithmic first-passage laws on the same
+source block. Section~\ref{sec:ct-mazur-consequences} uses that
+additional input to upgrade our basin and label limits to natural
+density. His predecessor theorem~\cite{MazurPredecessors2026}
+also implies positivity of the canonical trace at every integer
+prime to three. These are credited consequences of those external
+results, not claims that the external manuscripts state our
+weighted or canonical-limit theorems.
+
+The formal verification boundaries differ between these sources.
+Shaik's version-4 theorem map distinguishes its checked principal
+chain from additional manuscript-only refinements; the separate
+Palomar version-3 record concerns the preceding revision.
+Nashida's fixed-barrier theorem has no additional mathematical
+Lean premise. His generalized natural-density theorem takes a
+transcription of Matveev's bound as a hypothesis, and his
+stopping-time improvement takes a transcription of Bugeaud's
+bound; the cited published theorems supply those inputs to the
+written proofs. The explicit numerical saving in the latter
+paper is certified by rational interval calculations outside Lean.
+Our inspection of those theorem statements and source records
+does not constitute a local rebuild of their full formalizations.
+
+\section{Uniform control of finite distinct trajectories}
 
 For a finite shortcut path \(x_0,\ldots,x_\ell\), define its
 correction product, excluding the terminal state, by
@@ -110,7 +255,7 @@ exceed \(M\), its correction product is
 \end{equation}
 The intervening even states need not exceed \(M\).
 
-\subsection{The first-passage input at two scales}
+\section{The first-passage input at two scales}
 
 On positive odd integers let
 \[
@@ -267,7 +412,7 @@ Thus \(P\) has the two incommensurable periods \(\ell,m\);
 continuity makes it constant. The asserted convergence and rate follow.
 \end{proof}
 
-\subsection{Elementary local passage estimates}
+\section{Elementary local passage estimates}
 
 The following estimates concern the full unstopped valuation prefix.
 They do not assume independence after a hitting time.
@@ -390,7 +535,7 @@ lengths. Each source atom has probability
 \eqref{eq:ct-local-atoms}.
 \end{proof}
 
-\subsection{Logarithmic laws for basins and countable labels}
+\section{Logarithmic laws for basins and countable labels}
 
 \begin{proposition}\label{prop:ct-label-laws}
 Let \(I\) be countable and let \(F\) assign a label in \(I\) to
@@ -500,7 +645,7 @@ sum. The finite-valuation decomposition in the preceding proof
 therefore gives the all-positive density with the same value.
 \end{proof}
 
-\subsection{Weighted densities and the Green limit}
+\section{Weighted densities and the Green limit}
 
 For \(q\in\mathcal B_N\), let \(P_N(q)\) be the correction product
 on the path to its first visit to \(N\), and define
@@ -651,7 +796,7 @@ to the finite pointwise limits gives
 from \eqref{eq:ct-D-density}.
 \end{proof}
 
-\subsection{Uniform bounds for backward basins}
+\section{Uniform bounds for backward basins}
 
 \begin{proposition}\label{prop:ct-basin-boundary}
 There is a function \(\varepsilon(M)=O((\log M)^{-c})\to0\)
@@ -743,7 +888,7 @@ For all the remaining targets,
 This proves the second limit.
 \end{proof}
 
-\subsection{A first-hit law for the number of odd steps}
+\section{A first-hit law for the number of odd steps}
 
 For \(q\in\mathcal B_N\), let \(k_N(q)\) count the odd source
 states before the first shortcut visit to \(N\). For odd \(q,N\)
@@ -887,7 +1032,7 @@ The identity \(\log3+\lambda=\log4=2\log2\) gives the
 shortcut-clock coefficient.
 \end{proof}
 
-\subsection{Stationary cylinders and their maximal mass}
+\section{Stationary cylinders and their maximal mass}
 
 We define the stationary measure explicitly so that its values at
 ordinary integers require no choice of an almost-everywhere density.
@@ -999,7 +1144,7 @@ provide an integer-height estimate uniform in the depth \(k\).
 To control depth averages at fixed integers, we use the endpoint
 representation and the first-hit time law.
 
-\subsection{Identification of the cylinder and Green limits}
+\section{Identification of the cylinder and Green limits}
 
 For \(0<z<1\), set
 \[
@@ -1150,7 +1295,7 @@ endpoints have harmonic mean \(D_N/2\), and
 \(\lambda D_N/2=\delta D_N\). No limit at a moving integer
 target was interchanged with a critical parameter limit.
 
-\subsection{Forward component mass and the remaining global condition}
+\section{Forward component mass and the remaining global condition}
 
 A tail component is called divergent if its orbits never enter a
 cycle; otherwise it is the basin of a finite cycle. The next
@@ -1257,16 +1402,340 @@ The restriction to nonperiodic targets avoids an unproved bound
 on the cycle factors \((1-\beta_N)^{-1}\) across hypothetical
 additional cycles. The equivalent global condition in
 Proposition~\ref{prop:ct-forward-components} has not been proved.
-It would still permit nonempty divergent components of logarithmic
-density zero, on which the canonical trace would vanish.
-If, in addition, \(g(N)>0\) held at every positive integer unit,
-those components would be excluded. Every positive orbit reaches
-such a unit after finitely many steps: after removing factors of two,
-an odd multiple of three has its next shortcut value prime to three.
-An exclusion of additional positive cycles would still be needed
-to obtain convergence to one.
+The preceding Tao-based argument alone does not exclude nonempty
+components of logarithmic density zero. The additional predecessor
+input in the next section excludes that possibility and proves
+positivity at every unit. It still does not prove the global condition
+or rule out additional positive cycles.
 
-Thus the results of this section give canonical limits and their
-precise density interpretation. They establish neither global
-sublinearity nor positivity at every unit, and they do not prove
-the Collatz conjecture.
+\section{Consequences of Mazur's natural-counting and predecessor theorems}
+\label{sec:ct-mazur-consequences}
+
+This section uses two additional results of Mazur. His comparison of
+natural and logarithmic first-passage laws upgrades the density limits
+above to natural density. His positive lower bound for each eligible
+predecessor set determines the support of the canonical trace. The
+conclusions below are deductions from those inputs and the preceding
+sections; the inputs are not attributed to Tao's published theorem.
+
+Put \(\alpha=1001/1000\). For the odd block
+\[
+ B_y=\{q\ge1:q\text{ odd},\ y\le q\le y^\alpha\},
+\]
+let \(U_y\) be its uniform law and \(L_y\) its law proportional
+to \(1/q\). We use the following consequence of
+\cite[Theorem~3.1]{MazurNatural2026}. For every
+\(0<d<5/143\), all sufficiently large \(x\), and either
+\(y=x^\alpha\) or \(y=x^{\alpha^2}\), the block is nonempty and
+\begin{align}
+ \Pr\bigl(\tau_x(U_y)=\infty\bigr)
+     &\le184x^{-1/32000},\label{eq:ct-mazur-natural-failure}\\
+ \left\|\mathcal L(\operatorname{Pass}_x(U_y))
+       -\mathcal L(\operatorname{Pass}_x(L_y))\right\|_1
+     &\le384256(\log x)^{-d}.
+       \label{eq:ct-mazur-natural-transport}
+\end{align}
+Here \(\|\cdot\|_1\) is full \(\ell^1\) distance, and first
+passage has the same default value one as above. The cited theorem
+actually bounds failure to hit by a specified finite time; the
+never-hit bound \eqref{eq:ct-mazur-natural-failure} is weaker.
+
+\begin{theorem}\label{thm:ct-natural-density-upgrade}
+Every label covered by Proposition~\ref{prop:ct-label-laws} has the
+same limiting law under uniformly chosen odd starts in \([1,X]\)
+as under logarithmically chosen odd starts. Convergence is in total
+variation. Extending the label by taking the odd part gives the same
+limit under uniformly chosen positive starts.
+
+Every fixed shortcut basin \(\mathcal B_N\) has natural density,
+and
+\[
+ d_{\rm nat}(\mathcal B_N)=d_{\log}(\mathcal B_N),\qquad
+ \lim_{X\to\infty}\frac1X\sum_{q\le X}w_N(q)=D_N.
+\]
+In particular, every union of tail components has natural density
+equal to its logarithmic density. The natural laws of orbit minima
+and of every fixed first-passage location also converge in total
+variation to the probabilities already constructed above.
+\end{theorem}
+\begin{proof}
+Let \(F\) be one of the labels in
+Proposition~\ref{prop:ct-label-laws}, with values in a countable set
+\(I\), and let \(\mu\) be its limiting probability. In
+\(\ell^1(I)\), put
+\[
+ A_F(t)=\sum_{\substack{q\le e^t\\q\ {\rm odd}}}
+                         \frac{\delta_{F(q)}}q.
+\]
+The proposition gives \(A_F(t)/t\to\mu/2\) in norm. Hence
+\[
+ \mathcal L(F(L_y))
+ =\frac{A_F(\alpha\log y)-A_F(\log y)+O_{\ell^1}(y^{-1})}
+        {\tfrac12(\alpha-1)\log y+O(y^{-1})}
+ \longrightarrow\mu.
+\]
+The endpoint error accounts for a possible included lower endpoint.
+
+On successful passage the label is unchanged. Coupling a source
+with its own passage value therefore bounds the full \(\ell^1\)
+distance between its source-label and passage-label laws by twice
+its failure probability. Push
+\eqref{eq:ct-mazur-natural-transport} forward under \(F\), and
+use \eqref{eq:ct-mazur-natural-failure} and
+Proposition~\ref{prop:ct-tao-input} for the two failure terms.
+It follows that
+\[
+ \|\mathcal L(F(U_y))-\mathcal L(F(L_y))\|_1=o(1)
+ \qquad(y=x^\alpha,\ x\to\infty).
+\]
+Thus \(\mathcal L(F(U_y))\to\mu\).
+
+For an arbitrary large endpoint \(X\), take
+\[
+ x=X^{1/\alpha^2},\qquad y=X^{1/\alpha}.
+\]
+Then \(B_y\) is precisely the odd part of \([y,X]\).
+The proportion of positive odds below \(y\) among those at most
+\(X\) is \(O(X^{1/\alpha-1})=o(1)\). Replacing the uniform
+law on this block by the uniform law on all positive odds at most
+\(X\) changes full \(\ell^1\) distance by at most twice that
+proportion. This proves the odd-label assertion.
+
+For the basin and weighted assertions, fix \(N\). The only
+additional obstruction to passage invariance of
+\(\mathbf1_{\mathcal B_N}\) is a skipped crossing of an even
+target. For \(x\ge N^2\), that event is contained in
+\(\operatorname{Pass}_x\le\sqrt x\), as in the proof of
+Proposition~\ref{prop:ct-basin-density}. Lemma~\ref{lem:ct-local}
+gives probability \(O(x^{-c})\) under \(L_y\).
+Transporting this event through
+\eqref{eq:ct-mazur-natural-transport} gives probability \(o(1)\)
+under \(U_y\) as well. Failure to pass also has probability
+\(o(1)\) for both sources.
+
+On successful passage without a skipped target, the first-hit
+product factorization used in
+Proposition~\ref{prop:ct-weighted-density} gives
+\[
+ w_N(q)=\frac{w_N(\operatorname{Pass}_x(q))}{P_{
+                 q\to\operatorname{Pass}_x(q)}}.
+\]
+Every odd source before the passage is greater than \(x\), and
+the successful prefix has distinct states. The tail estimate
+\eqref{eq:ct-prefix-product} therefore implies
+\[
+ |w_N(q)-w_N(\operatorname{Pass}_x(q))|
+       =O(x^{b-1})=o(1),
+\]
+where the fixed packing exponent satisfies \(b<1\).
+Both observables lie in \([0,1]\). Applying
+\eqref{eq:ct-mazur-natural-transport} to their passage values and
+including the preceding exceptional probabilities proves
+\[
+ \mathbb E_{U_y}f-\mathbb E_{L_y}f=o(1),
+ \qquad f=\mathbf1_{\mathcal B_N}\ \text{or}\ w_N.
+\]
+The logarithmic block means tend respectively to
+\(d_{\log}(\mathcal B_N)\) and \(D_N\), by
+Propositions~\ref{prop:ct-basin-density} and
+\ref{prop:ct-weighted-density}, including their odd-relative
+normalizations. The same top-block argument therefore proves these
+limits for uniform odd starts.
+
+It remains to pass to all positive starts. For labels extended by
+the odd part, doubling leaves the label unchanged. For the two
+scalar observables, doubling has the same property except when the
+initial halving chain hits \(N\). All exceptional starts lie on
+the ray \(\{2^jN:j\ge0\}\), which has only \(O_N(\log X)\)
+members below \(X\). For each fixed \(h\), odd starts multiplied
+by \(2^h\) have asymptotic proportion \(2^{-h-1}\) among all
+positive starts, and their normalized laws or means have the limits
+just proved. Sum over \(0\le h\le H\). The remaining starts
+are multiples of \(2^{H+1}\), with proportion at most
+\(2^{-H-1}+O(X^{-1})\). First let \(X\to\infty\), then
+\(H\to\infty\). This proves the all-positive assertions and,
+for labels, preserves convergence in full \(\ell^1\).
+\end{proof}
+
+The next conclusion uses Mazur's separate predecessor theorem
+\cite[Theorem~1.1]{MazurPredecessors2026}. Write \(C\) for the
+ordinary Collatz map, which sends an odd \(q\) to \(3q+1\),
+and let
+\[
+ \mathcal P(a)=\{q\ge1:C^j(q)=a\text{ for some }j\ge0\}.
+\]
+The cited theorem states that, for every fixed \(a>0\) with
+\(3\nmid a\), there are \(c_a>0\) and \(X_a\) such that
+\[
+ \#\{q<X:q\in\mathcal P(a)\}\ge c_aX
+ \qquad(X\ge X_a,\ X\in\mathbb N).
+\]
+It assumes neither that the target reaches one nor that the target
+is nonperiodic. Constants may depend on the target.
+
+\begin{theorem}\label{thm:ct-positive-unit-support}
+For every positive integer \(N\),
+\[
+ d_{\log}(\mathcal B_N)>0
+ \quad\Longleftrightarrow\quad D_N>0
+ \quad\Longleftrightarrow\quad g(N)>0
+ \quad\Longleftrightarrow\quad 3\nmid N.
+\]
+The same equivalence holds with natural density in place of
+logarithmic density. Every tail component has positive logarithmic
+and natural density. Consequently the equivalent global conditions
+in Proposition~\ref{prop:ct-forward-components} are also equivalent
+to every positive orbit being eventually periodic.
+\end{theorem}
+\begin{proof}
+The map comparison
+\cite[equation~(1.3)]{MazurPredecessors2026} is
+\[
+ \mathcal P(2N)\subseteq\mathcal B_N\subseteq\mathcal P(N).
+\]
+For completeness, a shortcut orbit retains the ordinary orbit
+except for the intermediate even output immediately after an odd
+step. If an ordinary occurrence of \(2N\) is retained, its next
+shortcut step reaches \(N\). If it is omitted, that combined
+shortcut step itself ends at \(N\). This proves the first
+inclusion; expanding shortcut steps proves the second.
+
+If \(3\nmid N\), apply Mazur's theorem to \(2N\). The first
+inclusion gives positive lower natural density of \(\mathcal B_N\).
+It also gives positive lower logarithmic density: writing
+\(A(t)=\#\{q\le t:q\in\mathcal B_N\}\), the count bound
+gives \(A(t)\ge c_{2N}t-O(1)\) for large real \(t\), and
+summation by parts yields
+\[
+ \sum_{\substack{q\le X\\q\in\mathcal B_N}}\frac1q
+ =\frac{A(X)}X+\int_1^X\frac{A(t)}{t^2}\,dt
+ \ge c_{2N}\log X-O_N(1).
+\]
+Thus the existing logarithmic density is positive, independently
+of the natural-density upgrade. The bounds
+\eqref{eq:ct-weight-bounds} and the Green formula
+\eqref{eq:ct-Green-value} give \(D_N>0\) and \(g(N)>0\).
+
+If \(3\mid N\), the only shortcut predecessor of any positive
+multiple of three is its double: an odd shortcut step has output
+congruent to two modulo three. Inducting backward along a finite
+path gives
+\[
+ \mathcal B_N=\{2^jN:j\ge0\}.
+\]
+Its natural and logarithmic densities are zero. Hence \(D_N=0\)
+and \(g(N)=0\), again by the weighted bounds and Green formula.
+Theorem~\ref{thm:ct-natural-density-upgrade} supplies the asserted
+natural-density equivalence.
+
+Every positive orbit reaches an integer prime to three. Indeed,
+remove its initial powers of two; an odd multiple of three has
+its next shortcut value prime to three. A tail component containing
+such a value \(N\) also contains \(\mathcal B_N\), so its
+logarithmic density is positive. Its natural density is the same
+by Theorem~\ref{thm:ct-natural-density-upgrade}.
+
+One of the equivalent conditions in
+Proposition~\ref{prop:ct-forward-components} is that every
+divergent component have zero logarithmic density. Since every
+component has positive density, this now means that there are no
+divergent components. That is exactly eventual periodicity of all
+positive orbits. Conversely, if every orbit is eventually periodic,
+the eventually periodic set is all positive integers, so the
+conditions of that proposition hold.
+\end{proof}
+
+The positivity of the trace on units thus follows after adding
+Mazur's predecessor theorem. Global sublinearity remains unproved;
+with this additional input it is equivalent to excluding divergent
+orbits. Even that conclusion would still permit cycles other than
+the known cycle through one. Excluding such cycles, and hence
+proving the Collatz conjecture, is not achieved here.
+
+\section{Formal verification scope}
+
+The accompanying Lean development verifies Lemma~\ref{lem:ct-two-scale}
+in its original Banach-valued form, including the convergence rate,
+and checks the irrational ratio of the two numerical scales. It also
+checks the counting-recursion bootstrap, actual shortcut affine and
+endpoint bounds, injectivity of certified exponent words, the finite
+head estimate, and the unrestricted infinite geometric-word tail in
+the cylinder argument. The cylinder upper bound is formally assembled
+under an explicit expansion equality; its identification with the
+stationary measure remains a separate obligation. The raw-to-shortcut
+map inclusion used in Theorem~\ref{thm:ct-positive-unit-support} and
+the predecessor description for multiples of three are also checked.
+
+These checks do not yet formalize the complete analytic theorem chain.
+In particular the arithmetic two-scale input, density-existence
+arguments, Green and cylinder limit identification, and the additional
+Mazur interfaces have not been connected in Lean. The repository's
+\texttt{paper/basin-lean-claims.md} records the exact declarations and
+remaining obligations. Its verifier builds the local proof files afresh
+and audits their axiom dependencies separately from the matrix and
+synchronization papers. The present batch comprises eleven modules and
+eighty public theorem and lemma declarations; the axiom audit also
+covers twenty-two definitions.
+
+\section*{Acknowledgments}
+The main first-passage input and stationary Syracuse law are due to
+Terence Tao. The natural-density and positivity deductions use the
+separate results of Lech Mazur. The related-work discussion credits
+Idris Ali Shaik, Hiroyuki Nashida, and Manuel Inselmann for their
+descent and stopping-time results.
+
+\section*{Use of AI}
+OpenAI Codex was used extensively for mathematical exploration and
+preparation and revision of this manuscript. The proofs use the
+explicitly cited analytic inputs. Selected proof steps have been checked
+in Lean; the full analytic theorem chain has not yet been formalized.
+Automated review does not constitute external peer review or endorsement
+by the authors of the cited works.
+
+\begin{thebibliography}{99}\small\raggedright
+\bibitem{Tao2022} T. Tao.
+\emph{Almost all orbits of the Collatz map attain almost bounded values}.
+Forum of Mathematics, Pi \textbf{10}, e12, 2022.
+\url{https://doi.org/10.1017/fmp.2022.8}.
+Numbered references follow arXiv v7:
+\url{https://arxiv.org/abs/1909.03562v7}.
+\bibitem{Inselmann2024} M. Inselmann.
+\emph{An Approximation of the Collatz Map and a Lower Bound for its
+Average Total Stopping Time}.
+Preprint, arXiv:2402.03276v3, 2024.
+\url{https://arxiv.org/abs/2402.03276v3}.
+\bibitem{Shaik2026} I. A. Shaik.
+\emph{Polylogarithmic Descent for Almost All Collatz Orbits in Natural Density}.
+Preprint, version 4.0.0, 6 September 2026.
+\url{https://doi.org/10.5281/zenodo.22525724}.
+Software: \url{https://doi.org/10.5281/zenodo.22525757}.
+\bibitem{NashidaBarrier2026} H. Nashida.
+\emph{A power-saving bound, uniform in the endpoint, for Collatz orbits
+that stay above a fixed barrier}.
+Preprint, revision r8, 27 September 2026.
+\url{https://doi.org/10.5281/zenodo.22986671}.
+\bibitem{NashidaGeneral2026} H. Nashida.
+\emph{A power saving in natural density for generalized Collatz maps}.
+Preprint, revision r5, 27 September 2026.
+\url{https://doi.org/10.5281/zenodo.22986678}.
+\bibitem{NashidaTerras2026} H. Nashida.
+\emph{A strict improvement of the Terras-type bound for integers with
+long Collatz stopping times}.
+Preprint, revision r6, 27 September 2026.
+\url{https://doi.org/10.5281/zenodo.22986642}.
+\bibitem{MazurTao2026} L. Mazur and ProofAtlas.
+\emph{Tao's Almost-Bounded Collatz Orbits}, Lean formalization, 2026.
+\url{https://www.proofatlas.ai/formalizations/tao-almost-bounded-orbits/}.
+Checked-source commit \texttt{d53c8de00056fb05999e44589f2399d7efa026e4}.
+\bibitem{MazurNatural2026} L. Mazur.
+\emph{Natural-Density Almost-Bounded Collatz Orbits in Logarithmic Time}.
+Preprint, version 2, 21 July 2026.
+\url{https://www.proofatlas.ai/formalizations/natural-density-log-time-collatz/}.
+Checked-source package \texttt{ca3dd0d63920411213403092aecc6946619eb082}.
+\bibitem{MazurPredecessors2026} L. Mazur.
+\emph{Positive Lower Density of Collatz Predecessors}.
+Preprint, version 1.0, 6 September 2026.
+\url{https://www.proofatlas.ai/formalizations/positive-lower-density-collatz-predecessors/}.
+Checked-source package \texttt{c290ac229b379d2b51026d3e86140496870d6f39}.
+\end{thebibliography}
+\end{document}

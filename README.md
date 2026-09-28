@@ -1,64 +1,49 @@
-# Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system
+# Collatz matrix obstructions, synchronization, and basin densities
 
-This repository contains the paper, Lean proofs, and a verification script for obstructions to the first rule-removal step for the eleven-rule Yolcu–Aaronson–Heule system and an independent second proof of Said Duran’s equal-height runs theorem in Section 9. Section 10 gives analytic consequences of Tao’s first-passage stabilization for basin densities and canonical integer traces.
+Three standalone papers by Lucas Valbuena are maintained here, with their LaTeX sources and formal verification artifacts.
 
-For each of its seven symbols, let `F_s(x) = M_s x + v_s`, where the 2×2 matrix and offset vector have nonnegative real entries and `(M_s)₀₀ ≥ 1`. If all eleven rules are weakly oriented coefficientwise, the first-coordinate offset gap of every rule is zero. The theorem holds separately for the original rules and their word reversals. It has no coefficient bound, integrality requirement, or invertibility assumption.
+| Paper | Files | Verification scope |
+| --- | --- | --- |
+| Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system | [PDF](paper/two-coordinate-obstruction.pdf) · [Source](paper/two-coordinate-obstruction.tex) | Lean checks the stated algebraic obstruction results and supporting lemmas. |
+| An independent second proof of Said Duran’s equal-height Collatz runs theorem | [PDF](paper/said-duran-second-proof.pdf) · [Source](paper/said-duran-second-proof.tex) | Lean checks finite-pattern synchronization and equal first hitting times. Priority belongs to Said Duran. |
+| Collatz basin densities and canonical traces from first-passage stabilization | [PDF](paper/tao-basin-densities.pdf) · [Source](paper/tao-basin-densities.tex) | Selected proof steps are checked. The main analytic theorem chain is not yet fully formalized. |
 
-A second theorem removes the diagonal bounds for the reversed system. Nonnegativity and all eleven weak comparisons alone force equality of the full offset vectors in `da → d` and `db → dg`. This excludes either eligible first TOP removal in two nonnegative real affine coordinates. It does not force the other nine reversed gaps to vanish.
+The first paper retains Sections 1–8 of the earlier combined manuscript. Its two-coordinate obstruction with diagonal bounds covers all eleven weak rules, separately in both word orientations. A second result removes the diagonal bounds for the reversed system and excludes both eligible TOP removals. It also proves a forward growth and contraction criterion in arbitrary finite dimension. The unrestricted forward TOP problem and unrestricted higher-dimensional interpretations remain unresolved.
 
-**Section 9 is an independent second proof of Omar Javier Said Duran’s theorem** on arbitrarily long consecutive runs with equal finite Collatz height and equal odd-step counts. Priority belongs to his [preprint](https://doi.org/10.5281/zenodo.23003526), dated 27 September 2026 and posted on Zenodo at 01:10:30 UTC on 28 September, with its [Lean archive](https://doi.org/10.5281/zenodo.23003500). The finite-pattern formulation is equivalent, since every finite set of offsets fits inside a sufficiently long run. Our proof directly synchronizes affine families on a dyadic progression and then chooses a power-of-two common endpoint. It constructs suitable translating integers; it does not establish convergence from an arbitrary prescribed start.
+The second paper gives an independent proof of Omar Javier Said Duran’s theorem on arbitrarily long consecutive runs with equal finite Collatz height and equal odd-step counts. His [preprint](https://doi.org/10.5281/zenodo.23003526), dated 27 September 2026, was posted before our proof; his [Lean archive](https://doi.org/10.5281/zenodo.23003500) is separate. Our equivalent finite-pattern formulation synchronizes affine families on a dyadic progression and selects a power-of-two endpoint. It constructs translating integers, rather than proving convergence from an arbitrary prescribed start.
 
-**Section 10 derives density and canonical-limit results from Tao’s first-passage theorem.** Every fixed Collatz basin has a logarithmic density. The logarithmic distributions of tail components and orbit minima converge in total variation to probability laws on their countable label sets. Weighted basin densities give a finite critical Green limit at every positive integer; a first-hit odd-step time law identifies that limit with the cylinder Cesàro and Abel limits. The normalized limit tends to zero uniformly among large ancestors of any fixed root. A counting argument bounds the largest stationary cylinder mass between `2^(-k)` and `(2k+3)2^(-k)`, giving its exact exponential decay rate. The section includes mathematical proofs; these analytic results are not part of the Lean formalization.
+The third paper develops logarithmic basin densities and countable label laws from Tao’s first-passage stabilization. Weighted basin densities identify the critical Green, cylinder Cesàro, and cylinder Abel limits. It also bounds the largest stationary cylinder mass between `2^(-k)` and `(2k+3)2^(-k)`.
 
-These results do not prove the Collatz conjecture. Positivity at every unit and control along divergent forward orbits remain unresolved in the analytic approach. The unrestricted forward TOP problem, arctic interpretations, and unrestricted higher-dimensional interpretations also remain unresolved.
+The literature comparison uses Shaik’s **6 September 2026 version 4.0.0**, Nashida’s three **27 September 2026** preprints, and Mazur’s pinned formalizations. Additional theorems of Mazur upgrade the basin and label limits to natural density and give positivity of the canonical trace exactly at integers not divisible by three. Those inputs are credited separately from Tao’s theorem. Global sublinearity remains unproved; with the predecessor theorem it is equivalent to eventual periodicity of every orbit. Additional cycles also remain unexcluded. None of the three papers proves the Collatz conjecture.
 
-## Read the result
+## Lean verification
 
-- [Paper (PDF)](paper/two-coordinate-obstruction.pdf) and [LaTeX source](paper/two-coordinate-obstruction.tex)
-- [First-passage, density, and canonical-limit proofs](paper/canonical-first-passage-section.tex)
-- [Theorem with diagonal bounds](formal/FullTwoCoordinate.lean)
-- [Reversed TOP theorem without diagonal bounds](formal/CollatzReversedRealTwoCoordinate.lean)
-- [Finite-pattern convergence and consecutive-run theorem](formal/FinitePatternConvergence.lean)
-- [Finite-pattern coalescence on a dyadic progression](formal/FinitePatternCoalescence.lean)
-- [Definitions and theorem type reproduced in the paper](paper/lean-statement-appendix.tex)
-- [Formalized paper claims mapped to Lean declarations](paper/lean-claims.md)
-- [Formal verification instructions](formal/README.md)
+The [matrix and synchronization claim map](paper/lean-claims.md) identifies the checked declarations in the first two papers. Their combined closure contains **137 Lean modules, 633 public theorem/lemma declarations, and 93 audited definitions**. Four auxiliary modules on conditional stationary profiles are retained as checked algebra outside the papers’ contributions. The [rebuild report](verification/rebuild.json) records the build and axiom audit.
 
-The theorem with diagonal bounds is `CollatzResearch.FullTwo.full_two_coordinate_obstruction`. Its two implications each assume all eleven weak comparisons and conclude eleven first-offset equalities. The unrestricted reversed theorem is `CollatzResearch.RealTwoCoordinate.reversed_eligible_offsets_equal`; it concludes two vector equalities using only nonnegativity and the reversed weak rules.
+The [basin claim map](paper/basin-lean-claims.md) records the partial formalization of the third paper, including the precise missing analytic steps. Its sources, inventory, and rebuild report are separate from the original closure. A successful check of these modules does not certify the full basin-density paper or its external theorem interfaces.
 
-## Verify the proof
-
-The paper also proves a forward growth and contraction result in arbitrary finite dimension. Under only the six digit swaps and three root comparisons, the observed repeated-`e` value dominates `floor(n/5)` times the sum of the three eligible offset gaps. A positive left row contracted by the binary matrix `A` makes those gaps vanish, yielding an explicit two-coordinate corollary. This treats a different regime from the main theorem's diagonal lower bound and requires no contraction condition on the other digit matrices.
-
-The standalone [verify.py](verify.py) rebuilds the complete dependency closure of the Lean results in Sections 2–9, the three fixed-decrement soundness lemmas, and four auxiliary modules on conditional stationary profiles. Those auxiliary results remain available as checked algebra; they are not presented as contributions of the manuscript. The combined inventory has **137 Lean modules, 633 public theorem/lemma declarations, and 93 definitions included in the axiom audit**. It permits only `propext`, `Classical.choice`, and `Quot.sound` and makes no SAT-solver calls. The [retained report](verification/rebuild.json) records the build and axiom audit. It does not verify Section 10's analytic arguments or formalize Tao's theorem.
-
-Use Lean **4.27.0** and mathlib commit **`a3a10db0e9d66acbebf76c5e6a135066525ac900`**. After the dependency setup in [formal/README.md](formal/README.md), run from the repository root:
+Use Lean **4.27.0** and mathlib commit **`a3a10db0e9d66acbebf76c5e6a135066525ac900`**. Dependency setup is described in [formal/README.md](formal/README.md). Both scopes use the same [verifier](verify.py), which creates fresh local compiled modules and permits only `propext`, `Classical.choice`, and `Quot.sound`:
 
 ```sh
-mkdir -p .build
-python3 verify.py \
-  --mathlib-root "$PWD/.deps/mathlib4" \
-  --build-root "$PWD/.build" \
-  --report "$PWD/.build/rebuild.json"
+python3 verify.py --mathlib-root /path/to/mathlib4 --report /new/path/matrix-synchronization.json
+python3 verify.py --scope basins --mathlib-root /path/to/mathlib4 --report /new/path/basins.json
 ```
 
-Each run uses a fresh temporary build and requires an unused report filename. Every Lean file in `formal/` belongs to the combined closure of the six entry points listed in `verify.py`: the two main obstruction families, the soundness lemmas, the forward contraction result, the auxiliary stationary-profile result, and finite-pattern convergence.
+Each report path must be unused. No SAT-solver result is used as a proof premise.
 
-## Build the paper
+## Build the papers
 
-The source uses XeLaTeX and loads the appendix font as `DejaVuSansMono.ttf`, available in TeX Live 2025. From `paper/`, run `xelatex two-coordinate-obstruction.tex` twice. [Tectonic 0.17.0](https://tectonic-typesetting.github.io/en-US/install.html) also works:
+Each source is self-contained, including its bibliography and any Lean excerpts. It uses XeLaTeX and the TeX Live font `DejaVuSansMono.ttf`. Run XeLaTeX twice per paper, or use Tectonic:
 
 ```sh
 cd paper
 tectonic --keep-logs --untrusted two-coordinate-obstruction.tex
+tectonic --keep-logs --untrusted said-duran-second-proof.tex
+tectonic --keep-logs --untrusted tao-basin-densities.tex
 ```
 
-The bibliography is included in the source. No BibTeX step is needed.
+## Attribution and citation
 
-## Prior work and citation
+The rewriting system and its equivalence to the Collatz conjecture are due to Yolcu, Aaronson, and Heule, [An Automated Approach to the Collatz Conjecture](https://doi.org/10.1007/s10817-022-09658-8), *Journal of Automated Reasoning* 67(2), Article 15 (2023). Priority for the equal-height runs theorem belongs to Said Duran. The main analytic input is Tao’s [Almost all orbits of the Collatz map attain almost bounded values](https://doi.org/10.1017/fmp.2022.8), *Forum of Mathematics, Pi* 10 (2022), e12. The basin paper gives precise citations for the additional results of Shaik, Nashida, Mazur, and Inselmann.
 
-The rewriting system and its equivalence to the Collatz conjecture are due to Emre Yolcu, Scott Aaronson, and Marijn J. H. Heule, [An Automated Approach to the Collatz Conjecture, Journal of Automated Reasoning 67(2), Article 15 (2023)](https://doi.org/10.1007/s10817-022-09658-8). We use the ASCII symbol names from their [implementation](https://github.com/emreyolcu/rewriting-collatz). Their paper also proves an impossibility result for natural matrix interpretations of a different, unary Collatz system in every finite dimension, including a residual dependency-pair problem. The two main obstructions concern their mixed binary–ternary system, allow nonnegative real coefficients, and are restricted to two coordinates. One treats all eleven rules with diagonal bounds; the other treats the two reversed TOP rules without those bounds. The manuscript explains these differences in its related-work discussion.
-
-Citation metadata for this paper and artifact is in [CITATION.cff](CITATION.cff). The paper discloses the use of OpenAI Codex in mathematical exploration, Lean development, verification scripts, and manuscript preparation.
-
-The deep input to Section 10 is Terence Tao’s [Almost all orbits of the Collatz map attain almost bounded values](https://doi.org/10.1017/fmp.2022.8), *Forum of Mathematics, Pi* 10 (2022), e12. The section explains its use of two scale parameters and gives the subsequent density, time, and trace arguments. It makes no claim of priority over the cited first-passage or synchronization results.
+[CITATION.cff](CITATION.cff) lists the three papers. Each manuscript discloses the use of OpenAI Codex. Automated proof development and review do not constitute external peer review or endorsement by the cited authors.

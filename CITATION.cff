@@ -1,46 +1,50 @@
 cff-version: 1.2.0
-message: "If you use this artifact, please cite the accompanying paper."
+message: "Please cite the individual paper whose results you use; the three papers are listed below."
 type: software
-title: "Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
+title: "Collatz matrix obstructions, synchronization, and basin densities"
 authors:
   - family-names: Valbuena
     given-names: Lucas
 repository-code: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction"
 url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction"
 abstract: >-
-  Lean proofs and a paper showing that nonnegative real affine interpretations
-  in two coordinates, with first diagonal entry at least one for every symbol,
-  have zero first-coordinate offset gap for every rule whenever all eleven
-  rules of the Yolcu–Aaronson–Heule Collatz system are weakly oriented
-  coefficientwise. The result holds separately for the original system and
-  its word reversal. A second theorem removes the diagonal bounds for the
-  reversed system: all eleven weak comparisons force equality of the full
-  offset vectors in both eligible TOP rules, da to d and db to dg.
-  Section 9 gives an independent second proof of Omar Javier Said Duran’s
-  theorem on arbitrarily long consecutive runs with equal finite Collatz
-  height and equal odd-step counts. Priority belongs to his earlier preprint,
-  doi:10.5281/zenodo.23003526. The finite-pattern formulation is equivalent.
-  Section 10 gives analytic deductions from Tao's first-passage stabilization:
-  logarithmic basin densities, total-variation limits of countable orbit labels,
-  a fixed-target odd-step time law, and equality of the critical Green and
-  cylinder Cesaro and Abel limits at every positive integer. A counting
-  argument determines the optimal exponential rate of the largest stationary
-  cylinder mass. Section 10 is
-  not included in the Lean formalization.
-  These results do not prove the Collatz conjecture.
+  Three standalone papers and accompanying Lean proofs. The first establishes
+  two-coordinate affine interpretation obstructions for the Yolcu–Aaronson–Heule
+  Collatz system. The second gives an independent proof of Said Duran's
+  equal-height runs theorem, with priority credited to his earlier preprint.
+  The third derives logarithmic basin densities and canonical trace limits
+  from Tao's first-passage stabilization. Additional results of Mazur give
+  natural-density limits and positivity at targets prime to three. Its Lean
+  formalization currently covers selected proof steps, not the full analytic
+  theorem chain. None of the papers proves the Collatz conjecture.
 keywords:
   - Collatz conjecture
   - string rewriting
   - matrix interpretations
   - Lean
   - formal verification
+  - natural density
   - logarithmic density
   - first passage
-preferred-citation:
-  type: article
-  title: "Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
-  authors:
-    - family-names: Valbuena
-      given-names: Lucas
-  year: 2026
-  url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction/blob/main/paper/two-coordinate-obstruction.pdf"
+references:
+  - type: article
+    title: "Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"
+    authors:
+      - family-names: Valbuena
+        given-names: Lucas
+    year: 2026
+    url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction/blob/main/paper/two-coordinate-obstruction.pdf"
+  - type: article
+    title: "An independent second proof of Said Duran's equal-height Collatz runs theorem"
+    authors:
+      - family-names: Valbuena
+        given-names: Lucas
+    year: 2026
+    url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction/blob/main/paper/said-duran-second-proof.pdf"
+  - type: article
+    title: "Collatz basin densities and canonical traces from first-passage stabilization"
+    authors:
+      - family-names: Valbuena
+        given-names: Lucas
+    year: 2026
+    url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction/blob/main/paper/tao-basin-densities.pdf"

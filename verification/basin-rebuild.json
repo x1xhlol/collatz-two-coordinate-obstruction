@@ -1,0 +1,1359 @@
+{
+  "additional_audited_definitions": [
+    "CollatzBasinMapBridges.rawIterate",
+    "CollatzBasinMapBridges.rawStep",
+    "CollatzCanonical.TwoScale.logarithmicMean",
+    "CollatzCanonical.TwoScale.windowMean",
+    "CollatzCylinderPacking.GeometricWord",
+    "CollatzCylinderPacking.bumpHead",
+    "CollatzCylinderPacking.decode",
+    "CollatzCylinderPacking.encode",
+    "CollatzCylinderPacking.endpointCount",
+    "CollatzCylinderPacking.endpointMass",
+    "CollatzCylinderPacking.endpointSet",
+    "CollatzCylinderPacking.filteredGeometricTail",
+    "CollatzCylinderPacking.geometricTailTerm",
+    "CollatzCylinderPacking.iterate",
+    "CollatzCylinderPacking.oddCount",
+    "CollatzCylinderPacking.reverseItinerary",
+    "CollatzCylinderPacking.step",
+    "CollatzCylinderPacking.wordLength",
+    "CollatzOrbitPackingBootstrap.bootstrapConstant",
+    "CollatzOrbitPackingPowerRecurrence.binaryLogFloor",
+    "CollatzOrbitPackingPowerRecurrence.errorCoefficient",
+    "CollatzOrbitPackingPowerRecurrence.packingNext"
+  ],
+  "all_compiled_modules_match_before_and_after_audit": true,
+  "all_inventoried_definitions_audited": true,
+  "all_local_dependencies_built_in_fresh_directory": true,
+  "all_public_theorems_and_lemmas_audited": true,
+  "all_source_snapshots_match_originals_before_and_after": true,
+  "audit": {
+    "command": [
+      "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+      "-j1",
+      "-Dlinter.unusedVariables=false",
+      "-Dlinter.unusedSimpArgs=false",
+      "-Dlinter.unnecessarySimpa=false",
+      "--root=/tmp/collatz-proof-uxctfvw3/sources",
+      "-o",
+      "/tmp/collatz-proof-uxctfvw3/modules/PublicationAudit.olean",
+      "/tmp/collatz-proof-uxctfvw3/sources/PublicationAudit.lean"
+    ],
+    "compiled_module_sha256": "046770d9fcc6861e9b20f7ec8a327419496225713b22b5eb5c36c40590d2c219",
+    "compiler_exit_code": 0,
+    "compiler_stderr": "",
+    "compiler_stdout": "'CollatzBasinMapBridges.even_of_step_divisible_by_three' depends on axioms: [propext, Quot.sound]\n'CollatzBasinMapBridges.hit_multiple_of_three_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzBasinMapBridges.iterate_step' does not depend on any axioms\n'CollatzBasinMapBridges.rawIterate' does not depend on any axioms\n'CollatzBasinMapBridges.rawStep' does not depend on any axioms\n'CollatzBasinMapBridges.raw_hit_double_implies_shortcut_hit' depends on axioms: [propext, Quot.sound]\n'CollatzCanonical.Scales.logarithms_incommensurable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.Scales.no_equal_positive_powers' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.bounded_expanding_recurrence_eq_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCanonical.TwoScale.eq_const_of_continuous_two_periods' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCanonical.TwoScale.exists_limit_of_eventual_two_scale_residuals' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals_with_rate' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCanonical.TwoScale.exists_periodic_profile_of_exp_shift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCanonical.TwoScale.lipschitz_profile_of_asymptotic_modulus' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzCanonical.TwoScale.logarithmicMean' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.logarithmicMean_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.logarithmicMean_first_residual' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.logarithmicMean_log' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.logarithmicMean_modulus' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.logarithmicMean_modulus_of_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.logarithmicMean_second_residual' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.logarithmicMean_stable_link' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.stable_recurrence_const_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.stable_recurrence_geometric_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.stable_recurrence_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.stable_translation_exp_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.stable_translation_ray_limit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.stable_translation_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.tendsto_exp_neg_mul' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.tendsto_real_arithmetic_ray' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.two_scale_averaging' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.TwoScale.windowMean' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.Admissible.odd_count' depends on axioms: [propext]\n'CollatzCylinderPacking.GeometricWord' does not depend on any axioms\n'CollatzCylinderPacking.admissible_endpoint_injective' depends on axioms: [propext, Quot.sound]\n'CollatzCylinderPacking.admissible_tuple_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.admissible_tuple_scaled_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.bumpHead' does not depend on any axioms\n'CollatzCylinderPacking.certificate_card_le_endpointCount' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.certificate_head_bound_rat' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.certificate_head_bound_real' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.cylinder_bound_of_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.decode' does not depend on any axioms\n'CollatzCylinderPacking.decode_encode' depends on axioms: [propext, Quot.sound]\n'CollatzCylinderPacking.decode_zeros_one' depends on axioms: [propext]\n'CollatzCylinderPacking.encode' does not depend on any axioms\n'CollatzCylinderPacking.encode_injective' depends on axioms: [propext, Quot.sound]\n'CollatzCylinderPacking.encode_length' depends on axioms: [propext, Quot.sound]\n'CollatzCylinderPacking.encode_sum' depends on axioms: [propext]\n'CollatzCylinderPacking.endpointCount' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpointCount_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpointCount_scaled_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpointMass' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpointMass_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpointSet' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpoint_head_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpoint_head_general' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpoint_span' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.filteredGeometricTail' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.filtered_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.filtered_tail_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.filtered_tail_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.filtered_tail_summable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.finite_dyadic_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.finite_dyadic_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometricTailTerm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometricTailTerm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometric_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometric_tail_le_half_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometric_tail_pointwise' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometric_tail_summable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometric_word_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometric_word_probability' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometric_word_tilted_mass' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.iterate' does not depend on any axioms\n'CollatzCylinderPacking.mem_endpointSet' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.oddCount' does not depend on any axioms\n'CollatzCylinderPacking.oddCount_le' depends on axioms: [propext, Quot.sound]\n'CollatzCylinderPacking.odd_card_le_of_span' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.odd_endpoint_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.reverseItinerary' does not depend on any axioms\n'CollatzCylinderPacking.reverseItinerary_length' depends on axioms: [propext]\n'CollatzCylinderPacking.reverseItinerary_sum' depends on axioms: [propext]\n'CollatzCylinderPacking.scaled_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.step' does not depend on any axioms\n'CollatzCylinderPacking.step_even' depends on axioms: [propext, Quot.sound]\n'CollatzCylinderPacking.step_odd' depends on axioms: [propext, Quot.sound]\n'CollatzCylinderPacking.wordLength' does not depend on any axioms\n'CollatzOrbitPackingBootstrap.bootstrapConstant' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingBootstrap.bootstrapConstant_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzOrbitPackingBootstrap.initial_count_le_bootstrapConstant' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzOrbitPackingBootstrap.uniform_counting_bootstrap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingBootstrap.uniform_power_bound_of_counting_recursion' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzOrbitPackingPowerRecurrence.binaryLogFloor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingPowerRecurrence.errorCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingPowerRecurrence.exists_packing_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingPowerRecurrence.floor_log_two_le_power' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingPowerRecurrence.packingNext' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingPowerRecurrence.packing_error_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingPowerRecurrence.uniform_power_bound_of_packing_recurrence' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+    "elapsed_seconds": 36.12019057397265,
+    "existing_print_declaration_axioms": {
+      "CollatzBasinMapBridges.even_of_step_divisible_by_three": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzBasinMapBridges.hit_multiple_of_three_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzBasinMapBridges.iterate_step": [],
+      "CollatzBasinMapBridges.rawIterate": [],
+      "CollatzBasinMapBridges.rawStep": [],
+      "CollatzBasinMapBridges.raw_hit_double_implies_shortcut_hit": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.Scales.logarithms_incommensurable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.Scales.no_equal_positive_powers": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.bounded_expanding_recurrence_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.eq_const_of_continuous_two_periods": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.exists_limit_of_eventual_two_scale_residuals": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals_with_rate": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.exists_periodic_profile_of_exp_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.lipschitz_profile_of_asymptotic_modulus": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.logarithmicMean": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.logarithmicMean_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.logarithmicMean_first_residual": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.logarithmicMean_log": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.logarithmicMean_modulus": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.logarithmicMean_modulus_of_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.logarithmicMean_second_residual": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.logarithmicMean_stable_link": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.stable_recurrence_const_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.stable_recurrence_geometric_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.stable_recurrence_tendsto_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.stable_translation_exp_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.stable_translation_ray_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.stable_translation_tendsto_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.tendsto_exp_neg_mul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.tendsto_real_arithmetic_ray": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.two_scale_averaging": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCanonical.TwoScale.windowMean": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.Admissible.odd_count": [
+        "propext"
+      ],
+      "CollatzCylinderPacking.GeometricWord": [],
+      "CollatzCylinderPacking.admissible_endpoint_injective": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.admissible_tuple_card_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.admissible_tuple_scaled_card_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.bumpHead": [],
+      "CollatzCylinderPacking.certificate_card_le_endpointCount": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.certificate_head_bound_rat": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.certificate_head_bound_real": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.cylinder_bound_of_expansion": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.decode": [],
+      "CollatzCylinderPacking.decode_encode": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.decode_zeros_one": [
+        "propext"
+      ],
+      "CollatzCylinderPacking.encode": [],
+      "CollatzCylinderPacking.encode_injective": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.encode_length": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.encode_sum": [
+        "propext"
+      ],
+      "CollatzCylinderPacking.endpointCount": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.endpointCount_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.endpointCount_scaled_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.endpointMass": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.endpointMass_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.endpointSet": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.endpoint_head_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.endpoint_head_general": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.endpoint_span": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.filteredGeometricTail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.filtered_tail_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.filtered_tail_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.filtered_tail_nonneg": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.filtered_tail_summable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.finite_dyadic_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.finite_dyadic_sum_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.geometricTailTerm": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.geometricTailTerm_nonneg": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.geometric_tail_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.geometric_tail_le_half_pow": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.geometric_tail_pointwise": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.geometric_tail_summable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.geometric_word_hasSum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.geometric_word_probability": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.geometric_word_tilted_mass": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.iterate": [],
+      "CollatzCylinderPacking.mem_endpointSet": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.oddCount": [],
+      "CollatzCylinderPacking.oddCount_le": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.odd_card_le_of_span": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.odd_endpoint_card_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.reverseItinerary": [],
+      "CollatzCylinderPacking.reverseItinerary_length": [
+        "propext"
+      ],
+      "CollatzCylinderPacking.reverseItinerary_sum": [
+        "propext"
+      ],
+      "CollatzCylinderPacking.scaled_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.step": [],
+      "CollatzCylinderPacking.step_even": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.step_odd": [
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzCylinderPacking.wordLength": [],
+      "CollatzOrbitPackingBootstrap.bootstrapConstant": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingBootstrap.bootstrapConstant_nonneg": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingBootstrap.initial_count_le_bootstrapConstant": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingBootstrap.uniform_counting_bootstrap": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingBootstrap.uniform_power_bound_of_counting_recursion": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingPowerRecurrence.binaryLogFloor": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingPowerRecurrence.errorCoefficient": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingPowerRecurrence.exists_packing_threshold": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingPowerRecurrence.floor_log_two_le_power": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingPowerRecurrence.packingNext": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingPowerRecurrence.packing_error_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "CollatzOrbitPackingPowerRecurrence.uniform_power_bound_of_packing_recurrence": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source_sha256": "08fc363528a47e6013b4800f348ba6e0760769bbbe82f5d5b9efbd87f3dbd524",
+    "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+  },
+  "audited_declaration_count": 102,
+  "builds": {
+    "AdmissibleCylinderWords": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/AdmissibleCylinderWords.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/AdmissibleCylinderWords.lean"
+      ],
+      "compiled_module_sha256": "2a01d07d805340fa42569a7006e7428cdce4cd861ccac3c5809dd4e93672eb36",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "'CollatzCylinderPacking.encode_injective' depends on axioms: [propext, Quot.sound]\n'CollatzCylinderPacking.admissible_endpoint_injective' depends on axioms: [propext, Quot.sound]\n'CollatzCylinderPacking.admissible_tuple_scaled_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "elapsed_seconds": 4.329277888056822,
+      "existing_print_declaration_axioms": {
+        "CollatzCylinderPacking.admissible_endpoint_injective": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCylinderPacking.admissible_tuple_scaled_card_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCylinderPacking.encode_injective": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "980d8f83983d673350d77dfb0ff64c2b31ed12ff7514adb020b585e44b8a22d9",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    },
+    "BasinMapBridges": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/BasinMapBridges.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/BasinMapBridges.lean"
+      ],
+      "compiled_module_sha256": "5a11ead9d8d1cd0300e23f51be8fb7430598abcd9745fbed8f9d80cc8b809ce2",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "'CollatzBasinMapBridges.raw_hit_double_implies_shortcut_hit' depends on axioms: [propext, Quot.sound]\n'CollatzBasinMapBridges.hit_multiple_of_three_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "elapsed_seconds": 4.959725919994526,
+      "existing_print_declaration_axioms": {
+        "CollatzBasinMapBridges.hit_multiple_of_three_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzBasinMapBridges.raw_hit_double_implies_shortcut_hit": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "ccdb2e2f8b2b302c7282154f7d38629fb7ab7b79512c7d3811165527712cdc32",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    },
+    "CylinderExpansionBound": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/CylinderExpansionBound.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/CylinderExpansionBound.lean"
+      ],
+      "compiled_module_sha256": "5abb2a82431fe9ca88ce94c631e0e5152c2d5633e519a507aca5761ec7fb4677",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "'CollatzCylinderPacking.certificate_head_bound_real' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.cylinder_bound_of_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "elapsed_seconds": 5.655400148010813,
+      "existing_print_declaration_axioms": {
+        "CollatzCylinderPacking.certificate_head_bound_real": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCylinderPacking.cylinder_bound_of_expansion": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "910e5947855c2d08a22e10e2271c4fb46074fb4c851f751db25d25ed392a4c16",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    },
+    "CylinderHeadBound": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/CylinderHeadBound.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/CylinderHeadBound.lean"
+      ],
+      "compiled_module_sha256": "232f2e972628ef259147d9e12aac80aba0c5e996aa227cad3803caaa2c6e9d4a",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "'CollatzCylinderPacking.endpointMass_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpoint_head_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "elapsed_seconds": 4.086699425941333,
+      "existing_print_declaration_axioms": {
+        "CollatzCylinderPacking.endpointMass_le": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCylinderPacking.endpoint_head_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "c5fdc150fbf09f11a44b4d6c98a098491875ab89327cac01f46a112f7c5b8dee",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    },
+    "GeometricWordTail": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/GeometricWordTail.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/GeometricWordTail.lean"
+      ],
+      "compiled_module_sha256": "9b337087d6adcd5987915f8e0eb6272c08e0e61a35f4ec7e89e1a581e2a99a19",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "'CollatzCylinderPacking.geometric_word_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometric_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.geometric_tail_le_half_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "elapsed_seconds": 42.12000932299998,
+      "existing_print_declaration_axioms": {
+        "CollatzCylinderPacking.geometric_tail_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCylinderPacking.geometric_tail_le_half_pow": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCylinderPacking.geometric_word_hasSum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "503a00a46d73c9bc4df4060b2bda737d5b4e9e84e43e5c363325e0b6162c66d5",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    },
+    "IncommensurableScales": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/IncommensurableScales.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/IncommensurableScales.lean"
+      ],
+      "compiled_module_sha256": "95906b428a404c636de56e660db53e3c167349e1b7b74bafde617dea018978ac",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "'CollatzCanonical.Scales.no_equal_positive_powers' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCanonical.Scales.logarithms_incommensurable' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "elapsed_seconds": 7.802507801097818,
+      "existing_print_declaration_axioms": {
+        "CollatzCanonical.Scales.logarithms_incommensurable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCanonical.Scales.no_equal_positive_powers": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "c160251f2888d5290e61e5ff101df7e2472c93a21fb237cfa60e82695bb6ce0c",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    },
+    "LogTimeMean": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/LogTimeMean.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/LogTimeMean.lean"
+      ],
+      "compiled_module_sha256": "5499efb3b31289630824f49f057d7c6ea3a8751bd7ce4471c2c434d49bbcad60",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "",
+      "elapsed_seconds": 13.730024071992375,
+      "existing_print_declaration_axioms": {},
+      "source_sha256": "855acaaa425b3f45c1be8c5ab7d8b2a1c0f3ca578222a1323b1f6a0dde66ab8a",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    },
+    "OptimalCylinderPacking": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/OptimalCylinderPacking.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/OptimalCylinderPacking.lean"
+      ],
+      "compiled_module_sha256": "39cb8320865aa81728261b6cbe9c2436a736d3414570c449832d5acc513e2cc6",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "'CollatzCylinderPacking.scaled_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpoint_span' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.odd_endpoint_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzCylinderPacking.endpointCount_scaled_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "elapsed_seconds": 14.32129343599081,
+      "existing_print_declaration_axioms": {
+        "CollatzCylinderPacking.endpointCount_scaled_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCylinderPacking.endpoint_span": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCylinderPacking.odd_endpoint_card_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzCylinderPacking.scaled_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "7424c207552ceba9f4bf2c2161280918e2c754956b7f3b385c856fa3bf66a1ee",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    },
+    "OrbitPackingBootstrap": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/OrbitPackingBootstrap.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/OrbitPackingBootstrap.lean"
+      ],
+      "compiled_module_sha256": "0a9440627f05f6aa279ac31e0867b38cea522bceaad0ac5b51712a00b1ee2852",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "'CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CollatzOrbitPackingBootstrap.uniform_counting_bootstrap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingBootstrap.uniform_power_bound_of_counting_recursion' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "elapsed_seconds": 6.859203052939847,
+      "existing_print_declaration_axioms": {
+        "CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzOrbitPackingBootstrap.uniform_counting_bootstrap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzOrbitPackingBootstrap.uniform_power_bound_of_counting_recursion": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "8650a874e5f906142e0d73d64ecb5f5ea422a3652400a0ed4a886288cb69825e",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    },
+    "OrbitPackingPowerRecurrence": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/OrbitPackingPowerRecurrence.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/OrbitPackingPowerRecurrence.lean"
+      ],
+      "compiled_module_sha256": "bba3956ca14c710567b7ac0451f965fc1a63b0b7098e7f0b91e970c7b8f592b7",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "'CollatzOrbitPackingPowerRecurrence.floor_log_two_le_power' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingPowerRecurrence.exists_packing_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CollatzOrbitPackingPowerRecurrence.uniform_power_bound_of_packing_recurrence' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "elapsed_seconds": 7.780234711011872,
+      "existing_print_declaration_axioms": {
+        "CollatzOrbitPackingPowerRecurrence.exists_packing_threshold": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzOrbitPackingPowerRecurrence.floor_log_two_le_power": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CollatzOrbitPackingPowerRecurrence.uniform_power_bound_of_packing_recurrence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_sha256": "bc58c253c4c4874da2b8f512adaab4c942ebf6813330096907e795ce233d9503",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    },
+    "TwoScaleAveraging": {
+      "command": [
+        "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+        "-j1",
+        "-Dlinter.unusedVariables=false",
+        "-Dlinter.unusedSimpArgs=false",
+        "-Dlinter.unnecessarySimpa=false",
+        "--root=/tmp/collatz-proof-uxctfvw3/sources",
+        "-o",
+        "/tmp/collatz-proof-uxctfvw3/modules/TwoScaleAveraging.olean",
+        "/tmp/collatz-proof-uxctfvw3/sources/TwoScaleAveraging.lean"
+      ],
+      "compiled_module_sha256": "6563a7ccb345c782ed2b7c2606d7681e5a2be1eccdbe12b6338436150005fc17",
+      "compiler_exit_code": 0,
+      "compiler_stderr": "",
+      "compiler_stdout": "",
+      "elapsed_seconds": 25.172829309944063,
+      "existing_print_declaration_axioms": {},
+      "source_sha256": "f4c593fd39b32b1f5113b6a55e8945c8e7434f730619b61beef25f034e2419b4",
+      "working_directory": "/tmp/collatz-proof-uxctfvw3/sources"
+    }
+  },
+  "checked_at_utc": "2026-09-28T15:31:48.558641+00:00",
+  "compiled_audit_sha256_after": "046770d9fcc6861e9b20f7ec8a327419496225713b22b5eb5c36c40590d2c219",
+  "compiled_modules_sha256_after_audit": {
+    "AdmissibleCylinderWords": "2a01d07d805340fa42569a7006e7428cdce4cd861ccac3c5809dd4e93672eb36",
+    "BasinMapBridges": "5a11ead9d8d1cd0300e23f51be8fb7430598abcd9745fbed8f9d80cc8b809ce2",
+    "CylinderExpansionBound": "5abb2a82431fe9ca88ce94c631e0e5152c2d5633e519a507aca5761ec7fb4677",
+    "CylinderHeadBound": "232f2e972628ef259147d9e12aac80aba0c5e996aa227cad3803caaa2c6e9d4a",
+    "GeometricWordTail": "9b337087d6adcd5987915f8e0eb6272c08e0e61a35f4ec7e89e1a581e2a99a19",
+    "IncommensurableScales": "95906b428a404c636de56e660db53e3c167349e1b7b74bafde617dea018978ac",
+    "LogTimeMean": "5499efb3b31289630824f49f057d7c6ea3a8751bd7ce4471c2c434d49bbcad60",
+    "OptimalCylinderPacking": "39cb8320865aa81728261b6cbe9c2436a736d3414570c449832d5acc513e2cc6",
+    "OrbitPackingBootstrap": "0a9440627f05f6aa279ac31e0867b38cea522bceaad0ac5b51712a00b1ee2852",
+    "OrbitPackingPowerRecurrence": "bba3956ca14c710567b7ac0451f965fc1a63b0b7098e7f0b91e970c7b8f592b7",
+    "TwoScaleAveraging": "6563a7ccb345c782ed2b7c2606d7681e5a2be1eccdbe12b6338436150005fc17"
+  },
+  "compiled_modules_sha256_before_audit": {
+    "AdmissibleCylinderWords": "2a01d07d805340fa42569a7006e7428cdce4cd861ccac3c5809dd4e93672eb36",
+    "BasinMapBridges": "5a11ead9d8d1cd0300e23f51be8fb7430598abcd9745fbed8f9d80cc8b809ce2",
+    "CylinderExpansionBound": "5abb2a82431fe9ca88ce94c631e0e5152c2d5633e519a507aca5761ec7fb4677",
+    "CylinderHeadBound": "232f2e972628ef259147d9e12aac80aba0c5e996aa227cad3803caaa2c6e9d4a",
+    "GeometricWordTail": "9b337087d6adcd5987915f8e0eb6272c08e0e61a35f4ec7e89e1a581e2a99a19",
+    "IncommensurableScales": "95906b428a404c636de56e660db53e3c167349e1b7b74bafde617dea018978ac",
+    "LogTimeMean": "5499efb3b31289630824f49f057d7c6ea3a8751bd7ce4471c2c434d49bbcad60",
+    "OptimalCylinderPacking": "39cb8320865aa81728261b6cbe9c2436a736d3414570c449832d5acc513e2cc6",
+    "OrbitPackingBootstrap": "0a9440627f05f6aa279ac31e0867b38cea522bceaad0ac5b51712a00b1ee2852",
+    "OrbitPackingPowerRecurrence": "bba3956ca14c710567b7ac0451f965fc1a63b0b7098e7f0b91e970c7b8f592b7",
+    "TwoScaleAveraging": "6563a7ccb345c782ed2b7c2606d7681e5a2be1eccdbe12b6338436150005fc17"
+  },
+  "dependency_revisions": {
+    "Cli": "55c37290ff6186e2e965d68cf853a57c0702db82",
+    "LeanSearchClient": "5ce7f0a355f522a952a3d678d696bd563bb4fd28",
+    "Qq": "bd58c9efe2086d56ca361807014141a860ddbf8c",
+    "aesop": "cb837cc26236ada03c81837bebe0acd9c70ced7d",
+    "batteries": "b25b36a7caf8e237e7d1e6121543078a06777c8a",
+    "importGraph": "8f497d55985a189cea8020d9dc51260af1e41ad2",
+    "mathlib": "a3a10db0e9d66acbebf76c5e6a135066525ac900",
+    "plausible": "009dc1e6f2feb2c96c081537d80a0905b2c6498f",
+    "proofwidgets": "c04225ee7c0585effbd933662b3151f01b600e40"
+  },
+  "excluded_absent_library_directories": [
+    "/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/Cli/.lake/build/lib/lean"
+  ],
+  "generated_audit_source": "import AdmissibleCylinderWords\nimport BasinMapBridges\nimport CylinderExpansionBound\nimport CylinderHeadBound\nimport GeometricWordTail\nimport IncommensurableScales\nimport LogTimeMean\nimport OptimalCylinderPacking\nimport OrbitPackingBootstrap\nimport OrbitPackingPowerRecurrence\nimport TwoScaleAveraging\n\n#print axioms CollatzBasinMapBridges.even_of_step_divisible_by_three\n#print axioms CollatzBasinMapBridges.hit_multiple_of_three_iff\n#print axioms CollatzBasinMapBridges.iterate_step\n#print axioms CollatzBasinMapBridges.rawIterate\n#print axioms CollatzBasinMapBridges.rawStep\n#print axioms CollatzBasinMapBridges.raw_hit_double_implies_shortcut_hit\n#print axioms CollatzCanonical.Scales.logarithms_incommensurable\n#print axioms CollatzCanonical.Scales.no_equal_positive_powers\n#print axioms CollatzCanonical.TwoScale.bounded_expanding_recurrence_eq_zero\n#print axioms CollatzCanonical.TwoScale.eq_const_of_continuous_two_periods\n#print axioms CollatzCanonical.TwoScale.exists_limit_of_eventual_two_scale_residuals\n#print axioms CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals\n#print axioms CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals_with_rate\n#print axioms CollatzCanonical.TwoScale.exists_periodic_profile_of_exp_shift\n#print axioms CollatzCanonical.TwoScale.lipschitz_profile_of_asymptotic_modulus\n#print axioms CollatzCanonical.TwoScale.logarithmicMean\n#print axioms CollatzCanonical.TwoScale.logarithmicMean_bound\n#print axioms CollatzCanonical.TwoScale.logarithmicMean_first_residual\n#print axioms CollatzCanonical.TwoScale.logarithmicMean_log\n#print axioms CollatzCanonical.TwoScale.logarithmicMean_modulus\n#print axioms CollatzCanonical.TwoScale.logarithmicMean_modulus_of_le\n#print axioms CollatzCanonical.TwoScale.logarithmicMean_second_residual\n#print axioms CollatzCanonical.TwoScale.logarithmicMean_stable_link\n#print axioms CollatzCanonical.TwoScale.stable_recurrence_const_bound\n#print axioms CollatzCanonical.TwoScale.stable_recurrence_geometric_bound\n#print axioms CollatzCanonical.TwoScale.stable_recurrence_tendsto_zero\n#print axioms CollatzCanonical.TwoScale.stable_translation_exp_bound\n#print axioms CollatzCanonical.TwoScale.stable_translation_ray_limit\n#print axioms CollatzCanonical.TwoScale.stable_translation_tendsto_zero\n#print axioms CollatzCanonical.TwoScale.tendsto_exp_neg_mul\n#print axioms CollatzCanonical.TwoScale.tendsto_real_arithmetic_ray\n#print axioms CollatzCanonical.TwoScale.two_scale_averaging\n#print axioms CollatzCanonical.TwoScale.windowMean\n#print axioms CollatzCylinderPacking.Admissible.odd_count\n#print axioms CollatzCylinderPacking.GeometricWord\n#print axioms CollatzCylinderPacking.admissible_endpoint_injective\n#print axioms CollatzCylinderPacking.admissible_tuple_card_bound\n#print axioms CollatzCylinderPacking.admissible_tuple_scaled_card_bound\n#print axioms CollatzCylinderPacking.bumpHead\n#print axioms CollatzCylinderPacking.certificate_card_le_endpointCount\n#print axioms CollatzCylinderPacking.certificate_head_bound_rat\n#print axioms CollatzCylinderPacking.certificate_head_bound_real\n#print axioms CollatzCylinderPacking.cylinder_bound_of_expansion\n#print axioms CollatzCylinderPacking.decode\n#print axioms CollatzCylinderPacking.decode_encode\n#print axioms CollatzCylinderPacking.decode_zeros_one\n#print axioms CollatzCylinderPacking.encode\n#print axioms CollatzCylinderPacking.encode_injective\n#print axioms CollatzCylinderPacking.encode_length\n#print axioms CollatzCylinderPacking.encode_sum\n#print axioms CollatzCylinderPacking.endpointCount\n#print axioms CollatzCylinderPacking.endpointCount_bound\n#print axioms CollatzCylinderPacking.endpointCount_scaled_bound\n#print axioms CollatzCylinderPacking.endpointMass\n#print axioms CollatzCylinderPacking.endpointMass_le\n#print axioms CollatzCylinderPacking.endpointSet\n#print axioms CollatzCylinderPacking.endpoint_head_bound\n#print axioms CollatzCylinderPacking.endpoint_head_general\n#print axioms CollatzCylinderPacking.endpoint_span\n#print axioms CollatzCylinderPacking.filteredGeometricTail\n#print axioms CollatzCylinderPacking.filtered_tail_bound\n#print axioms CollatzCylinderPacking.filtered_tail_le\n#print axioms CollatzCylinderPacking.filtered_tail_nonneg\n#print axioms CollatzCylinderPacking.filtered_tail_summable\n#print axioms CollatzCylinderPacking.finite_dyadic_sum\n#print axioms CollatzCylinderPacking.finite_dyadic_sum_le\n#print axioms CollatzCylinderPacking.geometricTailTerm\n#print axioms CollatzCylinderPacking.geometricTailTerm_nonneg\n#print axioms CollatzCylinderPacking.geometric_tail_bound\n#print axioms CollatzCylinderPacking.geometric_tail_le_half_pow\n#print axioms CollatzCylinderPacking.geometric_tail_pointwise\n#print axioms CollatzCylinderPacking.geometric_tail_summable\n#print axioms CollatzCylinderPacking.geometric_word_hasSum\n#print axioms CollatzCylinderPacking.geometric_word_probability\n#print axioms CollatzCylinderPacking.geometric_word_tilted_mass\n#print axioms CollatzCylinderPacking.iterate\n#print axioms CollatzCylinderPacking.mem_endpointSet\n#print axioms CollatzCylinderPacking.oddCount\n#print axioms CollatzCylinderPacking.oddCount_le\n#print axioms CollatzCylinderPacking.odd_card_le_of_span\n#print axioms CollatzCylinderPacking.odd_endpoint_card_bound\n#print axioms CollatzCylinderPacking.reverseItinerary\n#print axioms CollatzCylinderPacking.reverseItinerary_length\n#print axioms CollatzCylinderPacking.reverseItinerary_sum\n#print axioms CollatzCylinderPacking.scaled_bounds\n#print axioms CollatzCylinderPacking.step\n#print axioms CollatzCylinderPacking.step_even\n#print axioms CollatzCylinderPacking.step_odd\n#print axioms CollatzCylinderPacking.wordLength\n#print axioms CollatzOrbitPackingBootstrap.bootstrapConstant\n#print axioms CollatzOrbitPackingBootstrap.bootstrapConstant_nonneg\n#print axioms CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget\n#print axioms CollatzOrbitPackingBootstrap.initial_count_le_bootstrapConstant\n#print axioms CollatzOrbitPackingBootstrap.uniform_counting_bootstrap\n#print axioms CollatzOrbitPackingBootstrap.uniform_power_bound_of_counting_recursion\n#print axioms CollatzOrbitPackingPowerRecurrence.binaryLogFloor\n#print axioms CollatzOrbitPackingPowerRecurrence.errorCoefficient\n#print axioms CollatzOrbitPackingPowerRecurrence.exists_packing_threshold\n#print axioms CollatzOrbitPackingPowerRecurrence.floor_log_two_le_power\n#print axioms CollatzOrbitPackingPowerRecurrence.packingNext\n#print axioms CollatzOrbitPackingPowerRecurrence.packing_error_le\n#print axioms CollatzOrbitPackingPowerRecurrence.uniform_power_bound_of_packing_recurrence\n",
+  "guarded_files_sha256_after": {
+    "formal-basins/AdmissibleCylinderWords.lean": "980d8f83983d673350d77dfb0ff64c2b31ed12ff7514adb020b585e44b8a22d9",
+    "formal-basins/BasinMapBridges.lean": "ccdb2e2f8b2b302c7282154f7d38629fb7ab7b79512c7d3811165527712cdc32",
+    "formal-basins/CylinderExpansionBound.lean": "910e5947855c2d08a22e10e2271c4fb46074fb4c851f751db25d25ed392a4c16",
+    "formal-basins/CylinderHeadBound.lean": "c5fdc150fbf09f11a44b4d6c98a098491875ab89327cac01f46a112f7c5b8dee",
+    "formal-basins/GeometricWordTail.lean": "503a00a46d73c9bc4df4060b2bda737d5b4e9e84e43e5c363325e0b6162c66d5",
+    "formal-basins/IncommensurableScales.lean": "c160251f2888d5290e61e5ff101df7e2472c93a21fb237cfa60e82695bb6ce0c",
+    "formal-basins/LogTimeMean.lean": "855acaaa425b3f45c1be8c5ab7d8b2a1c0f3ca578222a1323b1f6a0dde66ab8a",
+    "formal-basins/OptimalCylinderPacking.lean": "7424c207552ceba9f4bf2c2161280918e2c754956b7f3b385c856fa3bf66a1ee",
+    "formal-basins/OrbitPackingBootstrap.lean": "8650a874e5f906142e0d73d64ecb5f5ea422a3652400a0ed4a886288cb69825e",
+    "formal-basins/OrbitPackingPowerRecurrence.lean": "bc58c253c4c4874da2b8f512adaab4c942ebf6813330096907e795ce233d9503",
+    "formal-basins/TwoScaleAveraging.lean": "f4c593fd39b32b1f5113b6a55e8945c8e7434f730619b61beef25f034e2419b4",
+    "mathlib/lake-manifest.json": "6c24676b690a32627317b1d6dd58cf9318d689c5481e1edc53d07c93c892632f",
+    "toolchain/lake_launcher": "840179e70803ef373c2ec53342d6a45ea7d022533e4145489fc1278b4f716385",
+    "toolchain/lean": "8fadc3ed92cc9decb94c96ee9c0876e91e03a3a5e69138f32114f02789e2766c",
+    "verification/basin-sources.json": "060cfd6b7d2c8b29ae7e07686fe7640a9972993b0cd50b82a701acefc277e792",
+    "verify.py": "d47dc174c8498209eff2656c5dce5ddff0ce15684cdd126000cf779f30fe2b78"
+  },
+  "guarded_files_sha256_before": {
+    "formal-basins/AdmissibleCylinderWords.lean": "980d8f83983d673350d77dfb0ff64c2b31ed12ff7514adb020b585e44b8a22d9",
+    "formal-basins/BasinMapBridges.lean": "ccdb2e2f8b2b302c7282154f7d38629fb7ab7b79512c7d3811165527712cdc32",
+    "formal-basins/CylinderExpansionBound.lean": "910e5947855c2d08a22e10e2271c4fb46074fb4c851f751db25d25ed392a4c16",
+    "formal-basins/CylinderHeadBound.lean": "c5fdc150fbf09f11a44b4d6c98a098491875ab89327cac01f46a112f7c5b8dee",
+    "formal-basins/GeometricWordTail.lean": "503a00a46d73c9bc4df4060b2bda737d5b4e9e84e43e5c363325e0b6162c66d5",
+    "formal-basins/IncommensurableScales.lean": "c160251f2888d5290e61e5ff101df7e2472c93a21fb237cfa60e82695bb6ce0c",
+    "formal-basins/LogTimeMean.lean": "855acaaa425b3f45c1be8c5ab7d8b2a1c0f3ca578222a1323b1f6a0dde66ab8a",
+    "formal-basins/OptimalCylinderPacking.lean": "7424c207552ceba9f4bf2c2161280918e2c754956b7f3b385c856fa3bf66a1ee",
+    "formal-basins/OrbitPackingBootstrap.lean": "8650a874e5f906142e0d73d64ecb5f5ea422a3652400a0ed4a886288cb69825e",
+    "formal-basins/OrbitPackingPowerRecurrence.lean": "bc58c253c4c4874da2b8f512adaab4c942ebf6813330096907e795ce233d9503",
+    "formal-basins/TwoScaleAveraging.lean": "f4c593fd39b32b1f5113b6a55e8945c8e7434f730619b61beef25f034e2419b4",
+    "mathlib/lake-manifest.json": "6c24676b690a32627317b1d6dd58cf9318d689c5481e1edc53d07c93c892632f",
+    "toolchain/lake_launcher": "840179e70803ef373c2ec53342d6a45ea7d022533e4145489fc1278b4f716385",
+    "toolchain/lean": "8fadc3ed92cc9decb94c96ee9c0876e91e03a3a5e69138f32114f02789e2766c",
+    "verification/basin-sources.json": "060cfd6b7d2c8b29ae7e07686fe7640a9972993b0cd50b82a701acefc277e792",
+    "verify.py": "d47dc174c8498209eff2656c5dce5ddff0ce15684cdd126000cf779f30fe2b78"
+  },
+  "inventory": {
+    "AdmissibleCylinderWords": {
+      "definitions": [
+        "CollatzCylinderPacking.encode",
+        "CollatzCylinderPacking.bumpHead",
+        "CollatzCylinderPacking.decode",
+        "CollatzCylinderPacking.reverseItinerary"
+      ],
+      "existing_axiom_prints": [
+        "CollatzCylinderPacking.encode_injective",
+        "CollatzCylinderPacking.admissible_endpoint_injective",
+        "CollatzCylinderPacking.admissible_tuple_scaled_card_bound"
+      ],
+      "imports": [
+        "OptimalCylinderPacking",
+        "Mathlib.Algebra.BigOperators.Group.List.Basic"
+      ],
+      "local_dependencies": [
+        "OptimalCylinderPacking"
+      ],
+      "public_declarations": [
+        "CollatzCylinderPacking.decode_zeros_one",
+        "CollatzCylinderPacking.decode_encode",
+        "CollatzCylinderPacking.encode_injective",
+        "CollatzCylinderPacking.encode_sum",
+        "CollatzCylinderPacking.encode_length",
+        "CollatzCylinderPacking.reverseItinerary_sum",
+        "CollatzCylinderPacking.reverseItinerary_length",
+        "CollatzCylinderPacking.Admissible.odd_count",
+        "CollatzCylinderPacking.admissible_endpoint_injective",
+        "CollatzCylinderPacking.admissible_tuple_card_bound",
+        "CollatzCylinderPacking.admissible_tuple_scaled_card_bound"
+      ],
+      "source_sha256": "980d8f83983d673350d77dfb0ff64c2b31ed12ff7514adb020b585e44b8a22d9"
+    },
+    "BasinMapBridges": {
+      "definitions": [
+        "CollatzBasinMapBridges.rawStep",
+        "CollatzBasinMapBridges.rawIterate"
+      ],
+      "existing_axiom_prints": [
+        "CollatzBasinMapBridges.raw_hit_double_implies_shortcut_hit",
+        "CollatzBasinMapBridges.hit_multiple_of_three_iff"
+      ],
+      "imports": [
+        "OptimalCylinderPacking"
+      ],
+      "local_dependencies": [
+        "OptimalCylinderPacking"
+      ],
+      "public_declarations": [
+        "CollatzBasinMapBridges.iterate_step",
+        "CollatzBasinMapBridges.raw_hit_double_implies_shortcut_hit",
+        "CollatzBasinMapBridges.even_of_step_divisible_by_three",
+        "CollatzBasinMapBridges.hit_multiple_of_three_iff"
+      ],
+      "source_sha256": "ccdb2e2f8b2b302c7282154f7d38629fb7ab7b79512c7d3811165527712cdc32"
+    },
+    "CylinderExpansionBound": {
+      "definitions": [
+        "CollatzCylinderPacking.filteredGeometricTail"
+      ],
+      "existing_axiom_prints": [
+        "CollatzCylinderPacking.certificate_head_bound_real",
+        "CollatzCylinderPacking.cylinder_bound_of_expansion"
+      ],
+      "imports": [
+        "CylinderHeadBound",
+        "GeometricWordTail"
+      ],
+      "local_dependencies": [
+        "CylinderHeadBound",
+        "GeometricWordTail"
+      ],
+      "public_declarations": [
+        "CollatzCylinderPacking.certificate_card_le_endpointCount",
+        "CollatzCylinderPacking.certificate_head_bound_rat",
+        "CollatzCylinderPacking.certificate_head_bound_real",
+        "CollatzCylinderPacking.filtered_tail_nonneg",
+        "CollatzCylinderPacking.filtered_tail_le",
+        "CollatzCylinderPacking.filtered_tail_summable",
+        "CollatzCylinderPacking.filtered_tail_bound",
+        "CollatzCylinderPacking.cylinder_bound_of_expansion"
+      ],
+      "source_sha256": "910e5947855c2d08a22e10e2271c4fb46074fb4c851f751db25d25ed392a4c16"
+    },
+    "CylinderHeadBound": {
+      "definitions": [
+        "CollatzCylinderPacking.endpointMass"
+      ],
+      "existing_axiom_prints": [
+        "CollatzCylinderPacking.endpointMass_le",
+        "CollatzCylinderPacking.endpoint_head_bound"
+      ],
+      "imports": [
+        "AdmissibleCylinderWords",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic"
+      ],
+      "local_dependencies": [
+        "AdmissibleCylinderWords"
+      ],
+      "public_declarations": [
+        "CollatzCylinderPacking.endpointMass_le",
+        "CollatzCylinderPacking.finite_dyadic_sum",
+        "CollatzCylinderPacking.finite_dyadic_sum_le",
+        "CollatzCylinderPacking.endpoint_head_general",
+        "CollatzCylinderPacking.endpoint_head_bound"
+      ],
+      "source_sha256": "c5fdc150fbf09f11a44b4d6c98a098491875ab89327cac01f46a112f7c5b8dee"
+    },
+    "GeometricWordTail": {
+      "definitions": [
+        "CollatzCylinderPacking.GeometricWord",
+        "CollatzCylinderPacking.wordLength",
+        "CollatzCylinderPacking.geometricTailTerm"
+      ],
+      "existing_axiom_prints": [
+        "CollatzCylinderPacking.geometric_word_hasSum",
+        "CollatzCylinderPacking.geometric_tail_bound",
+        "CollatzCylinderPacking.geometric_tail_le_half_pow"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecificLimits.Normed",
+        "Mathlib.Analysis.Normed.Ring.InfiniteSum",
+        "Mathlib.Topology.Algebra.InfiniteSum.Real",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Positivity"
+      ],
+      "local_dependencies": [],
+      "public_declarations": [
+        "CollatzCylinderPacking.geometric_word_hasSum",
+        "CollatzCylinderPacking.geometric_word_probability",
+        "CollatzCylinderPacking.geometric_word_tilted_mass",
+        "CollatzCylinderPacking.geometricTailTerm_nonneg",
+        "CollatzCylinderPacking.geometric_tail_summable",
+        "CollatzCylinderPacking.geometric_tail_pointwise",
+        "CollatzCylinderPacking.geometric_tail_bound",
+        "CollatzCylinderPacking.geometric_tail_le_half_pow"
+      ],
+      "source_sha256": "503a00a46d73c9bc4df4060b2bda737d5b4e9e84e43e5c363325e0b6162c66d5"
+    },
+    "IncommensurableScales": {
+      "definitions": [],
+      "existing_axiom_prints": [
+        "CollatzCanonical.Scales.no_equal_positive_powers",
+        "CollatzCanonical.Scales.logarithms_incommensurable"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.NumberTheory.Real.Irrational",
+        "Mathlib.Data.Nat.Prime.Basic",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity"
+      ],
+      "local_dependencies": [],
+      "public_declarations": [
+        "CollatzCanonical.Scales.no_equal_positive_powers",
+        "CollatzCanonical.Scales.logarithms_incommensurable"
+      ],
+      "source_sha256": "c160251f2888d5290e61e5ff101df7e2472c93a21fb237cfa60e82695bb6ce0c"
+    },
+    "LogTimeMean": {
+      "definitions": [
+        "CollatzCanonical.TwoScale.logarithmicMean",
+        "CollatzCanonical.TwoScale.windowMean"
+      ],
+      "existing_axiom_prints": [],
+      "imports": [
+        "TwoScaleAveraging",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Tactic.Positivity"
+      ],
+      "local_dependencies": [
+        "TwoScaleAveraging"
+      ],
+      "public_declarations": [
+        "CollatzCanonical.TwoScale.logarithmicMean_bound",
+        "CollatzCanonical.TwoScale.logarithmicMean_modulus_of_le",
+        "CollatzCanonical.TwoScale.logarithmicMean_modulus",
+        "CollatzCanonical.TwoScale.logarithmicMean_stable_link",
+        "CollatzCanonical.TwoScale.logarithmicMean_second_residual",
+        "CollatzCanonical.TwoScale.logarithmicMean_first_residual",
+        "CollatzCanonical.TwoScale.logarithmicMean_log",
+        "CollatzCanonical.TwoScale.two_scale_averaging"
+      ],
+      "source_sha256": "855acaaa425b3f45c1be8c5ab7d8b2a1c0f3ca578222a1323b1f6a0dde66ab8a"
+    },
+    "OptimalCylinderPacking": {
+      "definitions": [
+        "CollatzCylinderPacking.step",
+        "CollatzCylinderPacking.iterate",
+        "CollatzCylinderPacking.oddCount",
+        "CollatzCylinderPacking.endpointSet",
+        "CollatzCylinderPacking.endpointCount"
+      ],
+      "existing_axiom_prints": [
+        "CollatzCylinderPacking.scaled_bounds",
+        "CollatzCylinderPacking.endpoint_span",
+        "CollatzCylinderPacking.odd_endpoint_card_bound",
+        "CollatzCylinderPacking.endpointCount_scaled_bound"
+      ],
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity"
+      ],
+      "local_dependencies": [],
+      "public_declarations": [
+        "CollatzCylinderPacking.oddCount_le",
+        "CollatzCylinderPacking.step_even",
+        "CollatzCylinderPacking.step_odd",
+        "CollatzCylinderPacking.scaled_bounds",
+        "CollatzCylinderPacking.endpoint_span",
+        "CollatzCylinderPacking.odd_card_le_of_span",
+        "CollatzCylinderPacking.odd_endpoint_card_bound",
+        "CollatzCylinderPacking.mem_endpointSet",
+        "CollatzCylinderPacking.endpointCount_bound",
+        "CollatzCylinderPacking.endpointCount_scaled_bound"
+      ],
+      "source_sha256": "7424c207552ceba9f4bf2c2161280918e2c754956b7f3b385c856fa3bf66a1ee"
+    },
+    "OrbitPackingBootstrap": {
+      "definitions": [
+        "CollatzOrbitPackingBootstrap.bootstrapConstant"
+      ],
+      "existing_axiom_prints": [
+        "CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget",
+        "CollatzOrbitPackingBootstrap.uniform_counting_bootstrap",
+        "CollatzOrbitPackingBootstrap.uniform_power_bound_of_counting_recursion"
+      ],
+      "imports": [
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Ring"
+      ],
+      "local_dependencies": [],
+      "public_declarations": [
+        "CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget",
+        "CollatzOrbitPackingBootstrap.bootstrapConstant_nonneg",
+        "CollatzOrbitPackingBootstrap.initial_count_le_bootstrapConstant",
+        "CollatzOrbitPackingBootstrap.uniform_counting_bootstrap",
+        "CollatzOrbitPackingBootstrap.uniform_power_bound_of_counting_recursion"
+      ],
+      "source_sha256": "8650a874e5f906142e0d73d64ecb5f5ea422a3652400a0ed4a886288cb69825e"
+    },
+    "OrbitPackingPowerRecurrence": {
+      "definitions": [
+        "CollatzOrbitPackingPowerRecurrence.packingNext",
+        "CollatzOrbitPackingPowerRecurrence.binaryLogFloor",
+        "CollatzOrbitPackingPowerRecurrence.errorCoefficient"
+      ],
+      "existing_axiom_prints": [
+        "CollatzOrbitPackingPowerRecurrence.floor_log_two_le_power",
+        "CollatzOrbitPackingPowerRecurrence.exists_packing_threshold",
+        "CollatzOrbitPackingPowerRecurrence.uniform_power_bound_of_packing_recurrence"
+      ],
+      "imports": [
+        "OrbitPackingBootstrap",
+        "Mathlib.Algebra.Order.Floor.Semiring"
+      ],
+      "local_dependencies": [
+        "OrbitPackingBootstrap"
+      ],
+      "public_declarations": [
+        "CollatzOrbitPackingPowerRecurrence.floor_log_two_le_power",
+        "CollatzOrbitPackingPowerRecurrence.packing_error_le",
+        "CollatzOrbitPackingPowerRecurrence.exists_packing_threshold",
+        "CollatzOrbitPackingPowerRecurrence.uniform_power_bound_of_packing_recurrence"
+      ],
+      "source_sha256": "bc58c253c4c4874da2b8f512adaab4c942ebf6813330096907e795ce233d9503"
+    },
+    "TwoScaleAveraging": {
+      "definitions": [],
+      "existing_axiom_prints": [],
+      "imports": [
+        "Mathlib.Analysis.SpecificLimits.Normed",
+        "Mathlib.Analysis.SpecialFunctions.Exp",
+        "Mathlib.Topology.Instances.AddCircle.DenseSubgroup",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Module"
+      ],
+      "local_dependencies": [],
+      "public_declarations": [
+        "CollatzCanonical.TwoScale.bounded_expanding_recurrence_eq_zero",
+        "CollatzCanonical.TwoScale.eq_const_of_continuous_two_periods",
+        "CollatzCanonical.TwoScale.exists_periodic_profile_of_exp_shift",
+        "CollatzCanonical.TwoScale.stable_recurrence_geometric_bound",
+        "CollatzCanonical.TwoScale.stable_recurrence_tendsto_zero",
+        "CollatzCanonical.TwoScale.stable_recurrence_const_bound",
+        "CollatzCanonical.TwoScale.stable_translation_tendsto_zero",
+        "CollatzCanonical.TwoScale.tendsto_exp_neg_mul",
+        "CollatzCanonical.TwoScale.stable_translation_ray_limit",
+        "CollatzCanonical.TwoScale.tendsto_real_arithmetic_ray",
+        "CollatzCanonical.TwoScale.lipschitz_profile_of_asymptotic_modulus",
+        "CollatzCanonical.TwoScale.stable_translation_exp_bound",
+        "CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals_with_rate",
+        "CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals",
+        "CollatzCanonical.TwoScale.exists_limit_of_eventual_two_scale_residuals"
+      ],
+      "source_sha256": "f4c593fd39b32b1f5113b6a55e8945c8e7434f730619b61beef25f034e2419b4"
+    }
+  },
+  "inventory_sha256": "c3a072b23b367e8b5fdeee9a7707110abb7467ec057ae8386d8842883ec700a7",
+  "lake_executable": "/home/ubuntu/.elan/bin/lake",
+  "lean_executable": "/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean",
+  "lean_library_path": "/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/batteries/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/Qq/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/aesop/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/proofwidgets/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/importGraph/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/plausible/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/build/lib/lean:/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/lib/lean",
+  "lean_reported_library_path": "/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/Cli/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/batteries/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/Qq/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/aesop/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/proofwidgets/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/importGraph/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/packages/plausible/.lake/build/lib/lean:/dev/shm/collatz-mathlib-v4.27.0/.lake/build/lib/lean:/home/ubuntu/.elan/toolchains/leanprover--lean4---v4.27.0/lib/lean",
+  "lean_version": "Lean (version 4.27.0, x86_64-unknown-linux-gnu, commit db93fe1608548721853390a10cd40580fe7d22ae, Release)",
+  "mathlib_manifest_sha256": "6c24676b690a32627317b1d6dd58cf9318d689c5481e1edc53d07c93c892632f",
+  "module_count": 11,
+  "parallel_lean_workers": 2,
+  "proof_family": "basins",
+  "proves_collatz_conjecture": false,
+  "public_declaration_count": 80,
+  "sat_solver_calls": 0,
+  "scope": "Partial formalization of the basin-density paper. Checks the complete abstract Banach-valued two-scale averaging lemma with its rate, irrationality of the specified scale ratio, the counting-recurrence bootstrap and its power-law specialization, actual shortcut affine and endpoint-count bounds, admissible parity-word encoding and injectivity, the finite endpoint head sum, the unconditional infinite geometric-word tail, and raw-to-shortcut reachability and 3-divisible target bridges. The cylinder bound is checked under an explicit head-plus-tail expansion equality; that equality for the stationary measure remains unformalized. Arithmetic first-passage estimates, basin-density existence, weighted Green limits, canonical-limit identification, and the external Mazur theorem interfaces are not certified by this report. No Collatz conjecture proof is claimed.",
+  "status": "PASS",
+  "threads_per_lean_worker": 1,
+  "top_declarations": [
+    "CollatzBasinMapBridges.even_of_step_divisible_by_three",
+    "CollatzBasinMapBridges.hit_multiple_of_three_iff",
+    "CollatzBasinMapBridges.iterate_step",
+    "CollatzBasinMapBridges.raw_hit_double_implies_shortcut_hit",
+    "CollatzCanonical.Scales.logarithms_incommensurable",
+    "CollatzCanonical.Scales.no_equal_positive_powers",
+    "CollatzCanonical.TwoScale.bounded_expanding_recurrence_eq_zero",
+    "CollatzCanonical.TwoScale.eq_const_of_continuous_two_periods",
+    "CollatzCanonical.TwoScale.exists_limit_of_eventual_two_scale_residuals",
+    "CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals",
+    "CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals_with_rate",
+    "CollatzCanonical.TwoScale.exists_periodic_profile_of_exp_shift",
+    "CollatzCanonical.TwoScale.lipschitz_profile_of_asymptotic_modulus",
+    "CollatzCanonical.TwoScale.logarithmicMean_bound",
+    "CollatzCanonical.TwoScale.logarithmicMean_first_residual",
+    "CollatzCanonical.TwoScale.logarithmicMean_log",
+    "CollatzCanonical.TwoScale.logarithmicMean_modulus",
+    "CollatzCanonical.TwoScale.logarithmicMean_modulus_of_le",
+    "CollatzCanonical.TwoScale.logarithmicMean_second_residual",
+    "CollatzCanonical.TwoScale.logarithmicMean_stable_link",
+    "CollatzCanonical.TwoScale.stable_recurrence_const_bound",
+    "CollatzCanonical.TwoScale.stable_recurrence_geometric_bound",
+    "CollatzCanonical.TwoScale.stable_recurrence_tendsto_zero",
+    "CollatzCanonical.TwoScale.stable_translation_exp_bound",
+    "CollatzCanonical.TwoScale.stable_translation_ray_limit",
+    "CollatzCanonical.TwoScale.stable_translation_tendsto_zero",
+    "CollatzCanonical.TwoScale.tendsto_exp_neg_mul",
+    "CollatzCanonical.TwoScale.tendsto_real_arithmetic_ray",
+    "CollatzCanonical.TwoScale.two_scale_averaging",
+    "CollatzCylinderPacking.Admissible.odd_count",
+    "CollatzCylinderPacking.admissible_endpoint_injective",
+    "CollatzCylinderPacking.admissible_tuple_card_bound",
+    "CollatzCylinderPacking.admissible_tuple_scaled_card_bound",
+    "CollatzCylinderPacking.certificate_card_le_endpointCount",
+    "CollatzCylinderPacking.certificate_head_bound_rat",
+    "CollatzCylinderPacking.certificate_head_bound_real",
+    "CollatzCylinderPacking.cylinder_bound_of_expansion",
+    "CollatzCylinderPacking.decode_encode",
+    "CollatzCylinderPacking.decode_zeros_one",
+    "CollatzCylinderPacking.encode_injective",
+    "CollatzCylinderPacking.encode_length",
+    "CollatzCylinderPacking.encode_sum",
+    "CollatzCylinderPacking.endpointCount_bound",
+    "CollatzCylinderPacking.endpointCount_scaled_bound",
+    "CollatzCylinderPacking.endpointMass_le",
+    "CollatzCylinderPacking.endpoint_head_bound",
+    "CollatzCylinderPacking.endpoint_head_general",
+    "CollatzCylinderPacking.endpoint_span",
+    "CollatzCylinderPacking.filtered_tail_bound",
+    "CollatzCylinderPacking.filtered_tail_le",
+    "CollatzCylinderPacking.filtered_tail_nonneg",
+    "CollatzCylinderPacking.filtered_tail_summable",
+    "CollatzCylinderPacking.finite_dyadic_sum",
+    "CollatzCylinderPacking.finite_dyadic_sum_le",
+    "CollatzCylinderPacking.geometricTailTerm_nonneg",
+    "CollatzCylinderPacking.geometric_tail_bound",
+    "CollatzCylinderPacking.geometric_tail_le_half_pow",
+    "CollatzCylinderPacking.geometric_tail_pointwise",
+    "CollatzCylinderPacking.geometric_tail_summable",
+    "CollatzCylinderPacking.geometric_word_hasSum",
+    "CollatzCylinderPacking.geometric_word_probability",
+    "CollatzCylinderPacking.geometric_word_tilted_mass",
+    "CollatzCylinderPacking.mem_endpointSet",
+    "CollatzCylinderPacking.oddCount_le",
+    "CollatzCylinderPacking.odd_card_le_of_span",
+    "CollatzCylinderPacking.odd_endpoint_card_bound",
+    "CollatzCylinderPacking.reverseItinerary_length",
+    "CollatzCylinderPacking.reverseItinerary_sum",
+    "CollatzCylinderPacking.scaled_bounds",
+    "CollatzCylinderPacking.step_even",
+    "CollatzCylinderPacking.step_odd",
+    "CollatzOrbitPackingBootstrap.bootstrapConstant_nonneg",
+    "CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget",
+    "CollatzOrbitPackingBootstrap.initial_count_le_bootstrapConstant",
+    "CollatzOrbitPackingBootstrap.uniform_counting_bootstrap",
+    "CollatzOrbitPackingBootstrap.uniform_power_bound_of_counting_recursion",
+    "CollatzOrbitPackingPowerRecurrence.exists_packing_threshold",
+    "CollatzOrbitPackingPowerRecurrence.floor_log_two_le_power",
+    "CollatzOrbitPackingPowerRecurrence.packing_error_le",
+    "CollatzOrbitPackingPowerRecurrence.uniform_power_bound_of_packing_recurrence"
+  ],
+  "top_modules": [
+    "AdmissibleCylinderWords",
+    "BasinMapBridges",
+    "CylinderExpansionBound",
+    "CylinderHeadBound",
+    "GeometricWordTail",
+    "IncommensurableScales",
+    "LogTimeMean",
+    "OptimalCylinderPacking",
+    "OrbitPackingBootstrap",
+    "OrbitPackingPowerRecurrence",
+    "TwoScaleAveraging"
+  ],
+  "verifier_sha256": "d47dc174c8498209eff2656c5dce5ddff0ce15684cdd126000cf779f30fe2b78"
+}

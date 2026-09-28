@@ -26,14 +26,12 @@
 \setlength{\parskip}{3pt}
 \setlength{\abovedisplayskip}{7pt plus 2pt minus 2pt}
 \setlength{\belowdisplayskip}{7pt plus 2pt minus 2pt}
-\hypersetup{pdftitle={Two-coordinate obstructions for affine interpretations of the Yolcu--Aaronson--Heule Collatz system},pdfauthor={Lucas Valbuena},pdfsubject={Affine obstructions, an independent second proof of Said Duran's theorem, and first-passage consequences for canonical Collatz traces}}
+\hypersetup{pdftitle={Two-coordinate obstructions for affine interpretations of the Yolcu--Aaronson--Heule Collatz system},pdfauthor={Lucas Valbuena},pdfsubject={Coefficient-independent real affine obstructions and Lean proofs}}
 
 \begin{document}
 \thispagestyle{plain}
 \begin{center}
-{\LARGE\bfseries Two-coordinate obstructions for affine\\[3pt]
-interpretations of the Yolcu--Aaronson--Heule\\[3pt]
-Collatz system\par}
+{\LARGE\bfseries Two-coordinate obstructions for affine\\[3pt]interpretations of the Yolcu--Aaronson--Heule\\[3pt]Collatz system\par}
 \vspace{8pt}
 {\large Lucas Valbuena\par}
 \vspace{4pt}
@@ -59,20 +57,7 @@ growth argument underlying the unrestricted reversed result.
 For the forward system in arbitrary finite dimension, we also prove
 a five-stage growth bound for the three root gaps and show that a
 positive contracting left row for the binary matrix makes them vanish.
-Section~9 gives an independent second proof of Said Duran's theorem
-on arbitrarily long consecutive runs with equal finite Collatz height
-and equal odd-step counts. Priority for that result belongs to his
-earlier preprint. The finite-pattern formulation is equivalent to the
-run statement. Lean~4 checks these results and their supporting algebra.
-In a further analytic section, we deduce from Tao's first-passage
-stabilization the existence of logarithmic densities for fixed Collatz
-basins and total-variation limits for countable orbit labels.
-Weighted basin densities identify a finite critical Green limit at
-every positive integer. A first-hit time law then identifies it with
-the cylinder Ces\`aro and Abel limits. A counting argument gives the
-optimal exponential rate of the largest stationary cylinder mass.
-These analytic results have
-ordinary mathematical proofs and are not part of the Lean artifact.
+Lean~4 checks these results and their supporting algebra.
 The unrestricted forward TOP problem, unrestricted higher dimensions,
 and the Collatz conjecture remain unresolved by these results.
 \end{abstract}
@@ -84,9 +69,7 @@ conjecture~\cite[Theorem~3.17]{yah}. Their construction turns a question
 about integer trajectories into a termination problem for eleven rules.
 The system, its arithmetic interpretation, and that equivalence are
 their results. This paper studies restrictions on possible
-matrix-interpretation proofs for their system, a synchronization
-property of finite patterns of Collatz starting values, and analytic
-consequences of first-passage stabilization for integer orbit basins.
+matrix-interpretation proofs for their system.
 
 Rule removal builds a termination proof in stages. An interpretation
 orients all remaining rules weakly and a nonempty subset strictly;
@@ -131,39 +114,9 @@ bound. A positive contracting left row for the binary matrix $A$
 makes all three root gaps vanish. This contraction condition is
 incompatible with the first-diagonal lower bound in the first theorem;
 it imposes no contraction condition on the other digit matrices.
-Section~\ref{sec:finite-patterns} gives an independent second proof of
-Said Duran's equal-height runs theorem~\cite{SaidDuran2026}.
-For every finite set $F\subseteq\mathbb N_0$ and every lower bound,
-there is a larger integer $x$ such that all $x+f$, $f\in F$, first
-reach one at the same finite time, with the same number of odd steps.
-The proof synchronizes affine families on a common dyadic progression
-and then chooses a power-of-two endpoint. In particular, arbitrarily
-long consecutive runs with this property exist; the finite-pattern
-formulation is equivalent by restricting a sufficiently long run.
-The translating
-integer is chosen by the construction; convergence from an arbitrary
-prescribed starting value is not a conclusion.
-The results through Section~\ref{sec:finite-patterns} are formalized in Lean.
+The results are formalized in Lean.
 Appendix~\ref{app:lean-statements} reproduces the definitions and
 exact principal theorem types.
-
-Section~\ref{sec:canonical-traces} takes a different approach, using
-Tao's first-passage stabilization theorem~\cite{Tao2022}. Two
-incommensurable choices of its scale parameter imply logarithmic
-density limits for every fixed basin. An extension to countable orbit
-labels gives convergence in total variation. We control first-hit
-correction products by packing finite distinct orbit segments, obtain
-weighted basin densities, and identify the critical Green limit at
-every positive integer. Elementary local time concentration, transported
-through a sequence of scales, then identifies the cylinder Ces\`aro and
-Abel limits with the same function. We also prove
-\(2^{-k}\le\max_N\pi(N+3^k\mathbb Z_3)\le(2k+3)2^{-k}\)
-for Tao's stationary Syracuse law, determining its optimal uniform
-exponential cylinder exponent. The normalized function tends to
-zero uniformly among large ancestors of any fixed root. A divergent
-forward orbit leaves that fixed basin; controlling its changing
-targets remains a separate requirement. This section consists of
-analytic proofs and is not asserted to have been formalized in Lean.
 
 \subsection{Related work}
 Matrix-interpretation obstructions for Collatz rewriting already appear
@@ -225,24 +178,7 @@ coefficient-independent obstructions for the mixed-base system,
 the forward growth and contraction result in
 Section~\ref{sec:further-necessary}, and their Lean proofs. The forward
 result uses only the six digit swaps and three root comparisons,
-omitting both dynamic-boundary rules. Section~\ref{sec:finite-patterns}
-adds an independent constructive proof and Lean formalization of
-Said Duran's previously established equal-height runs theorem;
-it claims no new existence result.
-
-The analytic input in Section~\ref{sec:canonical-traces} is Tao's
-first-passage stabilization and stationary Syracuse law
-\cite[Proposition~1.11, Lemma~1.12, and Remark~1.13]{Tao2022}.
-The passage to density limits uses two nearby scale parameters;
-the section records the parameter check in the published proof.
-Inselmann's trajectory estimates already give the sharp lower
-first-hit clock on a set of natural density one
-\cite[Theorems~1.1 and~1.10]{Inselmann2024}.
-Our time argument gives the corresponding full fixed-target
-asymptotic outside a set of logarithmic density zero and uses it
-to identify the canonical averages. It does not assert a uniform
-stopping-time bound.
-
+omitting both dynamic-boundary rules.
 
 \section{The system and the interpretation format}
 \label{sec:format}
@@ -2724,357 +2660,8 @@ Condition \eqref{eq:forward-two-necessary} is a necessary condition
 for a positive boundary gap. It is not a sufficiency statement or a
 complete exclusion of the nonnegative forward interpretation format.
 
-\section{An independent second proof of Said Duran's theorem}
-\label{sec:finite-patterns}
-
-Garner's 1985 run-length conjecture~\cite{Garner1985}, as recorded
-by Lagarias~\cite[entry~72, p.~29]{Lagarias2011}, asserts that
-arbitrarily long runs of consecutive integers with equal Collatz
-height exist. Said Duran~\cite[Theorem~1.1]{SaidDuran2026} proved
-this with equal odd-step counts and runs above every prescribed lower
-bound. His preprint is dated 27 September 2026; its Zenodo record was
-created on 28 September at 01:10:30 UTC, before this section first
-appeared. His Lean formalization is archived
-separately~\cite{SaidDuranLean2026}. Priority for the existence theorem
-belongs to Said Duran.
-
-This section presents an independent second proof of the same result.
-Said Duran obtains synchronized runs from his density-one coalescence
-theorem~\cite{SaidDuranGao2026}. Here a direct induction synchronizes
-affine families on a dyadic progression. Both arguments then choose
-a power-of-two common endpoint. This section is separate from the
-matrix obstructions and makes no claim of a stronger existence theorem.
-Throughout this section, $\mathbb N$ includes zero, and
-\[
-T(x)=
-\begin{cases}
-x/2,&x\text{ even},\\
-(3x+1)/2,&x\text{ odd}
-\end{cases}
-\qquad(x\in\mathbb Z_{>0}).
-\]
-Write $o_k(x)$ for the number of odd integers among
-$x,T(x),\ldots,T^{k-1}(x)$, with $o_0(x)=0$.
-
-\begin{theorem}[Said Duran, equivalent finite-pattern form]\label{thm:finite-pattern-hitting}
-For every finite set $F\subset\mathbb N$ and every $L\in\mathbb N$,
-there are integers $x>\max\{1,L\}$ and $H,R\in\mathbb N$ such that,
-for every $n\in F$,
-\begin{equation}\label{eq:finite-pattern-hitting}
-T^H(x+n)=1,\qquad o_H(x+n)=R,\qquad
-T^j(x+n)>1\quad(0\le j<H).
-\end{equation}
-In particular, every prescribed finite pattern has arbitrarily large
-translates whose members have the same finite first hitting time of
-one and the same number of odd steps before that time.
-\end{theorem}
-
-Taking $F=\{0,1,\ldots,\ell-1\}$ gives arbitrarily long intervals
-with these properties. Conversely, a nonempty finite $F$ is contained
-in $\{0,\ldots,\max F\}$, so a run of length $1+\max F$ gives
-its finite-pattern instance; the empty case is vacuous.
-For example, the starts $28,29,30$ all
-reach $20$ after seven steps and first reach one after thirteen
-steps, each having used five odd steps.
-Earlier studies of equal-height pairs and consecutive runs include
-Garner~\cite{Garner1985} and Gao~\cite{Gao1993};
-LaDue~\cite{LaDue2018} studies clusters with equal total stopping times.
-Garner's separate pair-characterization conjecture, refuted by
-Elia and Tucker~\cite{EliaTucker2015}, is distinct from the run-length
-conjecture considered here.
-The proof below first synchronizes a finite pattern on an arithmetic
-progression, then chooses members whose common endpoint is a power of
-two. The latter step uses the classical fact that powers of two exhaust
-the units modulo powers of three. This fact also underlies the
-back-tracing argument in Monks~\cite[Lemma~3.4]{Monks2006}.
-
-\subsection{Parity classes and prescribed gaps}
-
-We first record the dependence of a finite trajectory on its starting
-residue class.
-
-\begin{lemma}\label{lem:finite-dyadic-prefix}
-For $c\in\mathbb Z_{>0}$, $k,t\in\mathbb N$, and $0\le j\le k$,
-\begin{align}
-T^j(c+2^kt)
- &=T^j(c)+2^{k-j}3^{o_j(c)}t,
- \label{eq:finite-dyadic-prefix}\\
-o_j(c+2^kt)&=o_j(c).
- \label{eq:finite-dyadic-count}
-\end{align}
-\end{lemma}
-\begin{proof}
-The assertions hold at $j=0$. If $j<k$, the difference in
-\eqref{eq:finite-dyadic-prefix} is even, so the two current integers
-have the same parity. An even step divides the difference by two;
-an odd step multiplies it by $3/2$ and adds one to both odd counts.
-This proves the induction.
-\end{proof}
-
-In particular, the first $k$ parities are constant on each positive
-residue class modulo $2^k$. If a current value is $A+3^rt$, either
-parity can be prescribed by restricting $t$ to $\varepsilon+2u$,
-where $\varepsilon\in\{0,1\}$. After the prescribed actual step,
-the coefficient of $u$ is $3^r$ or $3^{r+1}$ according as that
-step is even or odd. Thus this prescription can be repeated, and
-each additional step doubles the parameter modulus.
-
-\begin{lemma}\label{lem:finite-pair}
-For every $n\in\mathbb N$, there are $k\in\mathbb N$ and
-$a\in\mathbb Z_{>0}$
-such that, for every $t\in\mathbb N$,
-\begin{align*}
-T^k(a+2^kt)&=T^k(a+2^kt+n),\\
-o_k(a+2^kt)&=o_k(a+2^kt+n).
-\end{align*}
-\end{lemma}
-\begin{proof}
-We use strong induction on $n$. For $n=0$, take $k=0$ and $a=1$.
-For $n=1$, the two trajectories
-\[
-\begin{aligned}
-4+8t&\longmapsto2+4t\longmapsto1+2t\longmapsto2+3t,\\
-5+8t&\longmapsto8+12t\longmapsto4+6t\longmapsto2+3t
-\end{aligned}
-\]
-each have one odd step. This gives $k=3$ and $a=4$.
-
-If $n=2m>0$, use the progression $a+2^kt$ for $m$ supplied
-by induction. The starts $2a+2^{k+1}t$ and
-$2a+2^{k+1}t+2m$ take one even step to that pair. They therefore
-coalesce after $k+1$ steps, with equal odd counts.
-
-It remains to treat odd $n>1$. Choose $m,c,d$ by
-\[
-\begin{array}{c|ccc}
-n\bmod4&m&c&d\\ \hline
-1&(3n+1)/4&1&2\\
-3&(3n-1)/4&2&1
-\end{array}
-\]
-so that $0<m<n$ and $3n+d=4m+c$.
-Let $a+2^kt$ be the progression for $m$.
-Because $2^k$ is invertible modulo three, some
-$q\in\{0,1,2\}$ makes $4(a+2^kq)-c$ divisible by three.
-The integer
-\[
-a'=\frac{4(a+2^kq)-c}{3}
-\]
-is positive. For $X=a'+2^{k+2}t$ and
-$Y=a+2^k(q+3t)$, we have
-\[
-3X+c=4Y,\qquad 3(X+n)+d=4(Y+m).
-\]
-If $3z+1=4w$, then $z\equiv1\pmod4$ and its next two
-steps are odd, even, with endpoint $w$.
-If $3z+2=4w$, then $z\equiv2\pmod4$ and its next two
-steps are even, odd, again with endpoint $w$.
-Hence $X$ and $X+n$ reach $Y$ and $Y+m$ after two steps,
-each having used one odd step. The induction hypothesis at parameter
-$q+3t$ finishes the construction.
-\end{proof}
-
-\subsection{Synchronizing affine families}
-
-To add an offset to a collection that already coalesces, we must
-synchronize its current trajectory with the common trajectory of the
-collection. Their coefficients in the remaining parameter can be
-different powers of three.
-
-\begin{lemma}\label{lem:finite-affine-synchronization}
-Let $A,B\in\mathbb Z_{>0}$ and $r,s\in\mathbb N$.
-There exist $\ell,t_0,Q\in\mathbb N$ and
-$C\in\mathbb Z_{>0}$ such that,
-for every $v\in\mathbb N$,
-\begin{equation}\label{eq:finite-affine-synchronization}
-T^\ell\bigl(A+3^r(t_0+2^\ell v)\bigr)
-=T^\ell\bigl(B+3^s(t_0+2^\ell v)\bigr)
-=C+3^Qv.
-\end{equation}
-The two length-$\ell$ trajectories have fixed odd counts $u,w$
-satisfying $r+u=s+w=Q$.
-\end{lemma}
-\begin{proof}
-Exchange the families if necessary so that $r\le s$.
-Initially their current values satisfy
-\[
-Y=3^dX+D,\qquad d=s-r,\qquad D=B-3^dA\in\mathbb Z.
-\]
-At every subsequent stage the coefficient of the remaining parameter
-in $X$ is a power of three and is therefore odd. We may prescribe its next
-parity, as above. The displayed relation determines the parity of $Y$.
-When $d>0$, the following steps reduce the relation to one with a
-smaller exponent.
-
-If $D\ne0$ is even, prescribe $X$ even. Both values take an even
-step, and
-\[
-Y'=3^dX'+D/2.
-\]
-Repeating this finitely many times makes $D$ odd. This also applies
-to negative $D$, by dividing out the power of two in $|D|$.
-If $D=0$, prescribe $X$ odd. Both values take an odd step, and
-\[
-Y'=3^dX'+\frac{1-3^d}{2}.
-\]
-The new constant is nonzero because $d>0$, so the preceding
-halving procedure makes it odd.
-Once $D$ is odd, prescribe $X$ odd. Then $Y$ is even, and
-\begin{equation}\label{eq:finite-ratio-reduction}
-X'=\frac{3X+1}{2},\qquad Y'=\frac Y2,
-\qquad
-Y'=3^{d-1}X'+\frac{D-3^{d-1}}2.
-\end{equation}
-The last constant is an integer and the exponent has decreased.
-There are finitely many steps at each fixed positive $d$ and finitely
-many decreases of $d$, so eventually $d=0$.
-
-The current values now have the same coefficient in the remaining
-parameter and differ by a constant integer $D$. If $D=0$, they
-are equal already. Otherwise, apply Lemma~\ref{lem:finite-pair}
-with gap $|D|$ to the smaller current value. Suppose its required
-progression is $a+2^kz$. The smaller value has the form
-$E+3^qu$, so the congruence
-\[
-E+3^qu_0\equiv a\pmod{2^k}
-\]
-has a solution. Choose a nonnegative representative $u_0$ large
-enough that $E+3^qu_0\ge a$. On the parameter class
-$u=u_0+2^kv$, the smaller value belongs to the positive tail of
-the required progression for every $v\ge0$.
-The next $k$ steps therefore make the two values equal.
-
-Each parameter restriction has modulus two for each added actual
-step. Their composition has the form $t=t_0+2^\ell v$, where
-$\ell$ is the common total number of steps. All bases and current
-values remain positive. By Lemma~\ref{lem:finite-dyadic-prefix},
-the resulting odd counts $u,w$ are independent of $v$, and the
-two final affine coefficients are $3^{r+u}$ and $3^{s+w}$.
-Equality at $v=0$ and $v=1$ forces these coefficients to agree.
-This proves \eqref{eq:finite-affine-synchronization} and
-$r+u=s+w=Q$.
-\end{proof}
-
-\begin{proposition}\label{prop:finite-pattern-coalescence}
-For every finite $F\subset\mathbb N$, there are $K,R\in\mathbb N$
-and $a,b\in\mathbb Z_{>0}$ such that, for every $n\in F$ and $t\in\mathbb N$,
-\begin{equation}\label{eq:finite-pattern-coalescence}
-T^K(a+2^Kt+n)=b+3^Rt,\qquad
-o_K(a+2^Kt+n)=R.
-\end{equation}
-\end{proposition}
-\begin{proof}
-Enlarge $F$ to include zero, and enumerate its offsets starting with
-zero. For the initial singleton take $K=R=0$ and $a=b=1$.
-Suppose the assertion holds for the offsets already included.
-Their common current value on $a+2^Kt$ is $U(t)=b+3^Rt$.
-For the next offset $n$, Lemma~\ref{lem:finite-dyadic-prefix}
-gives
-\[
-T^K(a+2^Kt+n)=d+3^St,
-\qquad d=T^K(a+n)>0,\quad S=o_K(a+n).
-\]
-Apply Lemma~\ref{lem:finite-affine-synchronization} to these two
-affine families. On a class $t=t_0+2^\ell v$, they have the
-same image after $\ell$ additional steps. Every previously included
-trajectory starts those steps at exactly $U(t)$, so all previous
-equalities are preserved.
-
-The new starting progression is
-\[
-(a+2^Kt_0)+2^{K+\ell}v.
-\]
-Its modulus agrees with the new common time $K+\ell$.
-If the two added trajectories use $u,w$ odd steps, the last
-assertion of Lemma~\ref{lem:finite-affine-synchronization} gives
-$R+u=S+w$. Thus all total odd counts agree as well.
-The new endpoint has the required form $b'+3^{R+u}v$.
-Finite induction proves the proposition.
-\end{proof}
-
-\subsection{Specializing the endpoint to a power of two}
-
-\begin{lemma}\label{lem:finite-power-two-residue}
-Let $b\in\mathbb Z_{>0}$ with $3\nmid b$, and let $R\in\mathbb N$.
-There are arbitrarily large $t\in\mathbb N$ for which
-$b+3^Rt$ is a power of two.
-\end{lemma}
-\begin{proof}
-We give the residue argument explicitly. For $m\ge1$,
-\begin{equation}\label{eq:finite-ternary-lift}
-4^{3^{m-1}}\equiv1+3^m\pmod{3^{m+1}}.
-\end{equation}
-The case $m=1$ is immediate. Cubing a number of the form
-$1+3^m(1+3c)$ proves the next case, since the terms beyond the
-linear term are divisible by $3^{m+2}$.
-
-Powers of two represent both units modulo three. Suppose
-$2^s\equiv b\pmod{3^m}$. Multiplying $2^s$ by
-$(4^{3^{m-1}})^j$, for $j=0,1,2$, changes its residue modulo
-$3^{m+1}$ by $j2^s3^m$, by \eqref{eq:finite-ternary-lift}.
-Since $3\nmid2^s$, these are the three possible lifts of its
-residue modulo $3^m$. One therefore represents $b$ modulo
-$3^{m+1}$. Induction gives $2^s\equiv b\pmod{3^R}$
-for every $R\ge1$; the case $R=0$ is immediate.
-
-The same identity gives
-$2^{2\cdot3^R}\equiv1\pmod{3^R}$.
-We may consequently increase $s$ by arbitrary multiples of
-$2\cdot3^R$ while preserving the residue. For all sufficiently
-large such exponents,
-\[
-t=\frac{2^s-b}{3^R}
-\]
-is a nonnegative integer, and these values of $t$ are unbounded.
-\end{proof}
-
-\begin{proof}[Proof of Theorem~\ref{thm:finite-pattern-hitting}]
-Apply Proposition~\ref{prop:finite-pattern-coalescence} to
-$F\cup\{0,1\}$, obtaining $K,R,a,b$.
-We first show $3\nmid b$. An odd step has output congruent
-to two modulo three. Thus a current value divisible by three has
-only an even predecessor, which is also divisible by three.
-If $3\mid b$, every step in any length-$K$ trajectory ending
-at $b$ would be even, and its initial value would equal $2^Kb$.
-The distinct starts $a$ and $a+1$ both end at $b$, a
-contradiction.
-
-By Lemma~\ref{lem:finite-power-two-residue}, choose $t\ge1$
-as large as necessary, with $b+3^Rt=2^s$, and put
-$x=a+2^Kt$. The common endpoint after $K$ steps is $2^s$.
-After $s$ further even steps, all trajectories reach one, with
-total odd count $R$. Taking $t$ large ensures
-$x>\max\{1,L\}$.
-
-It remains to check that this is the first visit to one.
-For $j<K$, Lemma~\ref{lem:finite-dyadic-prefix} gives
-\[
-T^j(x+n)=T^j(a+n)+2^{K-j}3^{o_j(a+n)}t>1.
-\]
-For $j=K+q<K+s$, the value is $2^{s-q}>1$.
-Hence $H=K+s$ satisfies all of
-\eqref{eq:finite-pattern-hitting}.
-\end{proof}
-
-For the unshortened map that sends odd $x$ to $3x+1$, each
-of the $R$ odd steps above expands to an odd step followed by an
-even step. The corresponding first hitting time is therefore
-$H+R$, also common to the whole pattern. The inserted intermediate
-values are greater than one, so first arrival is preserved.
-
-The translated patterns in Theorem~\ref{thm:finite-pattern-hitting}
-are selected by the construction. The theorem makes no assertion
-that an arbitrary prescribed starting integer reaches one or enters
-one of these patterns. In particular, it does not prove the Collatz
-conjecture.
-
-\input{canonical-first-passage-section.tex}
-
 \section{Formal statement, verification, and scope}
-The Lean artifact covers the results in Sections~2--9.
-Section~\ref{sec:canonical-traces} supplies analytic proofs using
-Tao's published theorem; its statements are not included in the
-formal build or axiom audit described here.
+The Lean artifact covers the results in Sections~2--8.
 The formalization uses Lean~4 and mathlib~\cite{lean4,mathlib}. The two
 main obstruction statements use matrices and offsets on
 \code{Fin 2} with values in $\R$; the results of
@@ -3138,24 +2725,13 @@ The explicit two-coordinate condition is
 in \path{CollatzForwardRealTwoCoordinateNecessary.lean}.
 
 
-The direct Collatz results of Section~\ref{sec:finite-patterns} use
-\path{CollatzPositiveProgression.step}, the shortcut map on natural
-numbers, together with its recursively defined \code{iterate} and
-\code{oddCount}. The entry point \path{FinitePatternConvergence.lean}
-imports the finite-pattern coalescence theorem and the power-of-two
-specialization. Its two declarations prove the general finite-pattern
-statement and its consecutive-run corollary. These statements quantify
-over the actual iterates, and their first-hitting-time conclusions
-explicitly require every earlier iterate to exceed one. The appendix
-reproduces all three definitions and the principal theorem types.
-
-
 Each declaration reports only \code{propext}, \code{Classical.choice},
 and \code{Quot.sound}. No additional axiom or proof placeholder is used.
-The artifact contains the dependency closure of the paper's Lean results
-and the soundness lemmas below, together with four auxiliary modules
-on conditional stationary-profile obstructions that are not used in
-this paper. There are 137 local modules in total.
+The retained combined artifact contains the dependency closure of this
+paper's Lean results and the soundness lemmas below. Its 137 local
+modules also include separate finite-pattern Collatz results and four
+auxiliary modules on conditional stationary-profile obstructions; those
+additional results are not used in this paper.
 These were rebuilt in a fresh directory, and an additional audit queries
 the axioms of all 633 public theorems and lemmas and 93 supporting
 definitions: 726 declarations in total. The retained report records the exact source inventory,
@@ -3219,12 +2795,6 @@ or nonsingularity assumption. Theorem~\ref{thm:main} retains the
 diagonal bounds; Theorem~\ref{thm:reversed-top} removes them for the
 two reversed eligible rules. The forward necessary condition excludes the contracting case but
 does not resolve unrestricted forward \textsc{top} removal.
-The finite-pattern theorem constructs infinitely many suitable
-translates of each prescribed pattern, but makes no convergence claim
-for all translates or for an arbitrary fixed starting value.
-The analytic section establishes density and canonical-trace limits,
-without proving positivity at every unit, ruling out positive-density
-divergent components, or excluding additional positive cycles.
 None of these results proves the Collatz conjecture.
 
 \section*{Acknowledgments}
@@ -3235,26 +2805,12 @@ uses Lean and mathlib, and I thank their developers and contributors.
 \section*{Use of AI}
 OpenAI Codex was used extensively for mathematical exploration,
 development of the Lean proofs and verification scripts, and preparation
-and revision of this manuscript. The results of Sections~2--9 have
-the accompanying Lean artifacts. Section~\ref{sec:canonical-traces}
-has mathematical proofs with explicitly cited analytic inputs; it has
-not been checked by Lean. Automated review of those proofs does not
-constitute external peer review.
+and revision of this manuscript. The results have the accompanying
+Lean artifacts. Automated review does not constitute external peer review.
 This disclosure does not imply review or endorsement by the authors
 of the underlying rewriting system.
 
 \begin{thebibliography}{99}\small\raggedright
-\bibitem{Tao2022} T. Tao.
-\emph{Almost all orbits of the Collatz map attain almost bounded values}.
-Forum of Mathematics, Pi \textbf{10}, e12, 2022.
-\url{https://doi.org/10.1017/fmp.2022.8}.
-Numbered references follow arXiv v7:
-\url{https://arxiv.org/abs/1909.03562v7}.
-\bibitem{Inselmann2024} M. Inselmann.
-\emph{An Approximation of the Collatz Map and a Lower Bound for its
-Average Total Stopping Time}.
-Preprint, arXiv:2402.03276v3, 2024.
-\url{https://arxiv.org/abs/2402.03276v3}.
 \bibitem{yah} E. Yolcu, S. Aaronson, and M. J. H. Heule.
 \emph{An Automated Approach to the Collatz Conjecture}.
 Journal of Automated Reasoning \textbf{67}(2), Article 15, 2023.
@@ -3282,58 +2838,261 @@ Journal of Automated Reasoning \textbf{34}(2), 105--139, 2005.
 \emph{Matrix Interpretations for Proving Termination of Term Rewriting}.
 Journal of Automated Reasoning \textbf{40}(2--3), 195--220, 2008.
 \url{https://doi.org/10.1007/s10817-007-9087-9}.
-\bibitem{Garner1985} L. E. Garner.
-\emph{On heights in the Collatz $3n+1$ problem}.
-Discrete Mathematics \textbf{55}(1), 57--64, 1985.
-\url{https://doi.org/10.1016/S0012-365X(85)80020-0}.
-
-\bibitem{SaidDuran2026} O. J. Said Duran.
-\emph{Arbitrarily long runs of consecutive integers with the same Collatz height}.
-Preprint dated 27 September 2026, Zenodo, version~1.
-\url{https://doi.org/10.5281/zenodo.23003526}.
-
-\bibitem{SaidDuranLean2026} O. J. Said Duran.
-\emph{Formal proofs in Lean~4 of conjectures of Gao, Garner and Wu
-on consecutive integers in the Collatz problem}.
-Software, version~1.0.0, Zenodo, 2026.
-\url{https://doi.org/10.5281/zenodo.23003500}.
-
-\bibitem{SaidDuranGao2026} O. J. Said Duran.
-\emph{Consecutive integers coalesce with density one under the Collatz map:
-a formally verified proof of a conjecture of Gao}.
-Preprint dated 27 September 2026, Zenodo, version~1.
-\url{https://doi.org/10.5281/zenodo.23003524}.
-
-\bibitem{Lagarias2011} J. C. Lagarias.
-\emph{The $3x+1$ Problem: An Annotated Bibliography (1963--1999)}.
-arXiv:math/0309224v13, 2011, entry~72, p.~29.
-\url{https://arxiv.org/pdf/math/0309224v13}.
-
-\bibitem{EliaTucker2015} M. Elia and A. Tucker.
-\emph{Consecutive Integers and the Collatz Conjecture}.
-arXiv:1511.09141, 2015.
-\url{https://arxiv.org/abs/1511.09141}.
-
-\bibitem{Gao1993} G.-G. Gao.
-\emph{On consecutive numbers of the same height in the Collatz problem}.
-Discrete Mathematics \textbf{112}(1--3), 261--267, 1993.
-\url{https://doi.org/10.1016/0012-365X(93)90240-T}.
-
-\bibitem{Monks2006} K. M. Monks.
-\emph{The sufficiency of arithmetic progressions for the $3x+1$ Conjecture}.
-Proceedings of the American Mathematical Society \textbf{134}(10),
-2861--2872, 2006.
-\url{https://doi.org/10.1090/S0002-9939-06-08567-4}.
-Author version:
-\url{https://monks.scranton.edu/files/pubs/SufficiencyRev4.pdf}.
-
-\bibitem{LaDue2018} M. D. LaDue.
-\emph{Clusters of integers with equal total stopping times in the $3x+1$ problem}.
-The Fibonacci Quarterly \textbf{56}(2), 156--162, 2018.
-\url{https://www.fq.math.ca/Papers1/56-2/ladue121517.pdf}.
-
 \end{thebibliography}
 \clearpage
 \appendix
-\input{lean-statement-appendix.tex}
+% Exact excerpts extracted from the frozen Lean sources; no proof body is reproduced.
+% Preamble requirements: \usepackage{fontspec,fancyvrb}
+%                       \newfontfamily\leanappendixfont{DejaVuSansMono.ttf}
+% Insert after \appendix in the main document. This snippet adds no page breaks.
+% Source SHA256 ReversedBinaryPowerClosure.lean: 6f448bb1475e4214a10d4acdac8835d526a559d166c93acfd910e39bca23f281
+% Source SHA256 ReversedRealNormalization.lean: 947bb86b18f46ba0f150437c4a334c79a18b89bbc73b5855eff9381237b23761
+% Source SHA256 FullTwoBasic.lean: 38d6e8029e7fff5a948aca33ad661b28ed232ac527c3627882eac397cf00780e
+% Source SHA256 CollatzReversedRealTwoCoordinate.lean: b7cc9035e073d624fd270f6fbde9f2149a290dd93f238643a65aefe4fe434b71
+% Source SHA256 FullTwoCoordinate.lean: 429785555eecec277248380fe0c2e767c8c7303cf0e2712de29878dda2bd29a0
+% Source SHA256 CollatzReversedRealCertificate.lean: fbdd7789343547a06ce22d66be707029aa968d8d7a9889d08f979d7af87b5403
+
+\section{Exact Lean declarations}
+\label{app:lean-statements}
+The blocks below reproduce the checked source verbatim, with the original
+line numbers. The theorem blocks end at their types; their proof terms are
+omitted. Source paths are relative to the repository root.
+
+The affine definitions and \texttt{ReversedRealWeak} are in
+\texttt{CollatzCertificate}. The definitions and theorem with diagonal bounds
+are in \texttt{CollatzResearch.FullTwo}. The evaluation function
+\texttt{eval} is in \texttt{CollatzResearch.RealAffine}.
+Matrix notation is opened where used. The order on vectors is pointwise,
+so \texttt{Weak X Y} means
+that every coefficient of \texttt{Y} is at most the corresponding coefficient
+of \texttt{X}. Composition places the left argument outside the right argument.
+The unrestricted reversed theorem is in
+\texttt{CollatzResearch.RealTwoCoordinate}; it uses only
+\texttt{Affine.Nonnegative} and the eleven reversed weak comparisons.
+
+\paragraph{Ambient types and the coefficient order.}\mbox{}\par
+\noindent{\small\path{formal/ReversedBinaryPowerClosure.lean}, lines 10--17.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=10,numbersep=5pt,xleftmargin=18pt]
+variable {n : Type*} [Fintype n]
+
+abbrev Vec (n : Type*) := n → ℝ
+abbrev Mat (n : Type*) := Matrix n n ℝ
+
+def EntrywiseLE (M N : Mat n) : Prop := ∀ i j, M i j ≤ N i j
+
+local infix:50 " ≤ₘ " => EntrywiseLE
+\end{Verbatim}
+
+\paragraph{Affine composition and comparison.}\mbox{}\par
+\noindent{\small\path{formal/ReversedBinaryPowerClosure.lean}, lines 255--266.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=255,numbersep=5pt,xleftmargin=18pt]
+structure Affine (n : Type*) where
+  matrix : Mat n
+  offset : Vec n
+
+def Affine.comp (X Y : Affine n) : Affine n :=
+  ⟨X.matrix * Y.matrix, X.matrix *ᵥ Y.offset + X.offset⟩
+
+def Affine.Nonnegative (X : Affine n) : Prop :=
+  (0 ≤ₘ X.matrix) ∧ 0 ≤ X.offset
+
+def Affine.Weak (X Y : Affine n) : Prop :=
+  (Y.matrix ≤ₘ X.matrix) ∧ Y.offset ≤ X.offset
+\end{Verbatim}
+
+\paragraph{Affine evaluation.}\mbox{}\par
+\noindent{\small\path{formal/CollatzReversedRealCertificate.lean}, lines 10--12.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=10,numbersep=5pt,xleftmargin=18pt]
+variable {ι : Type*} [Fintype ι]
+
+def eval (F : Affine ι) (x : Vec ι) : Vec ι := F.matrix *ᵥ x + F.offset
+\end{Verbatim}
+
+\paragraph{Two coordinates and admissibility.}\mbox{}\par
+\noindent{\small\path{formal/FullTwoBasic.lean}, lines 9--11.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=9,numbersep=5pt,xleftmargin=18pt]
+abbrev Aff2 := Affine (Fin 2)
+
+def Admissible (X : Aff2) : Prop := X.Nonnegative ∧ 1 ≤ X.matrix 0 0
+\end{Verbatim}
+
+\paragraph{Forward weak rules.}\mbox{}\par
+\noindent{\small\path{formal/FullTwoBasic.lean}, lines 21--32.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=21,numbersep=5pt,xleftmargin=18pt]
+structure ForwardWeak (A B C D E F G : Aff2) : Prop where
+  ad : (A.comp D).Weak D
+  bd : (B.comp D).Weak (G.comp D)
+  ae : (A.comp E).Weak (E.comp A)
+  af : (A.comp F).Weak (E.comp B)
+  ag : (A.comp G).Weak (F.comp A)
+  be : (B.comp E).Weak (F.comp B)
+  bf : (B.comp F).Weak (G.comp A)
+  bg : (B.comp G).Weak (G.comp B)
+  ce : (C.comp E).Weak (C.comp B)
+  cf : (C.comp F).Weak (C.comp (A.comp A))
+  cg : (C.comp G).Weak (C.comp (A.comp B))
+\end{Verbatim}
+
+\paragraph{Forward offset equalities.}\mbox{}\par
+\noindent{\small\path{formal/FullTwoBasic.lean}, lines 34--45.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=34,numbersep=5pt,xleftmargin=18pt]
+structure ForwardGapsZero (A B C D E F G : Aff2) : Prop where
+  ad : (A.comp D).offset 0 = D.offset 0
+  bd : (B.comp D).offset 0 = (G.comp D).offset 0
+  ae : (A.comp E).offset 0 = (E.comp A).offset 0
+  af : (A.comp F).offset 0 = (E.comp B).offset 0
+  ag : (A.comp G).offset 0 = (F.comp A).offset 0
+  be : (B.comp E).offset 0 = (F.comp B).offset 0
+  bf : (B.comp F).offset 0 = (G.comp A).offset 0
+  bg : (B.comp G).offset 0 = (G.comp B).offset 0
+  ce : (C.comp E).offset 0 = (C.comp B).offset 0
+  cf : (C.comp F).offset 0 = (C.comp (A.comp A)).offset 0
+  cg : (C.comp G).offset 0 = (C.comp (A.comp B)).offset 0
+\end{Verbatim}
+
+\paragraph{Reversed weak rules.}
+Here the index type is finite and has decidable equality; the final
+theorem instantiates it with \texttt{Fin 2}.
+\noindent\texttt{\detokenize{formal/ReversedRealNormalization.lean}}, lines 83--94.
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=83,numbersep=5pt,xleftmargin=18pt]
+structure ReversedRealWeak (A B C D E F G : Affine ι) : Prop where
+  da : (D.comp A).Weak D
+  db : (D.comp B).Weak (D.comp G)
+  ea : (E.comp A).Weak (A.comp E)
+  fa : (F.comp A).Weak (B.comp E)
+  ga : (G.comp A).Weak (A.comp F)
+  eb : (E.comp B).Weak (B.comp F)
+  fb : (F.comp B).Weak (A.comp G)
+  gb : (G.comp B).Weak (B.comp G)
+  ec : (E.comp C).Weak (B.comp C)
+  fc : (F.comp C).Weak (A.comp (A.comp C))
+  gc : (G.comp C).Weak (B.comp (A.comp C))
+\end{Verbatim}
+
+\paragraph{Reversed offset equalities.}\mbox{}\par
+\noindent{\small\path{formal/FullTwoBasic.lean}, lines 47--58.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=47,numbersep=5pt,xleftmargin=18pt]
+structure ReversedGapsZero (A B C D E F G : Aff2) : Prop where
+  da : (D.comp A).offset 0 = D.offset 0
+  db : (D.comp B).offset 0 = (D.comp G).offset 0
+  ea : (E.comp A).offset 0 = (A.comp E).offset 0
+  fa : (F.comp A).offset 0 = (B.comp E).offset 0
+  ga : (G.comp A).offset 0 = (A.comp F).offset 0
+  eb : (E.comp B).offset 0 = (B.comp F).offset 0
+  fb : (F.comp B).offset 0 = (A.comp G).offset 0
+  gb : (G.comp B).offset 0 = (B.comp G).offset 0
+  ec : (E.comp C).offset 0 = (B.comp C).offset 0
+  fc : (F.comp C).offset 0 = (A.comp (A.comp C)).offset 0
+  gc : (G.comp C).offset 0 = (B.comp (A.comp C)).offset 0
+\end{Verbatim}
+
+\paragraph{The theorem with diagonal bounds.}\mbox{}\par
+\noindent{\small\path{formal/FullTwoCoordinate.lean}, lines 30--34.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=30,numbersep=5pt,xleftmargin=18pt]
+theorem full_two_coordinate_obstruction (A B C D E F G : Aff2)
+    (hA : Admissible A) (hB : Admissible B) (hC : Admissible C) (hD : Admissible D)
+    (hE : Admissible E) (hF : Admissible F) (hG : Admissible G) :
+    (ForwardWeak A B C D E F G → ForwardGapsZero A B C D E F G) ∧
+    (ReversedRealWeak A B C D E F G → ReversedGapsZero A B C D E F G)
+\end{Verbatim}
+
+\paragraph{The unrestricted reversed theorem.}\mbox{}\par
+\noindent{\small\path{formal/CollatzReversedRealTwoCoordinate.lean}, lines 30--35.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=30,numbersep=5pt,xleftmargin=18pt]
+theorem reversed_eligible_offsets_equal
+    (A B C D E F G : Affine (Fin 2))
+    (hA : A.Nonnegative) (hB : B.Nonnegative) (hC : C.Nonnegative)
+    (hD : D.Nonnegative) (hE : E.Nonnegative) (hF : F.Nonnegative) (hG : G.Nonnegative)
+    (h : ReversedRealWeak A B C D E F G) :
+    (D.comp A).offset = D.offset ∧ (D.comp B).offset = (D.comp G).offset
+\end{Verbatim}
+
+% Source SHA256 CollatzForwardRealWordGrowth.lean: c092f7be3e514c4c427d22ab4a7089b36dbf88f70ad7054947b18a13334c47a8
+% Source SHA256 CollatzForwardRealTwoCoordinateNecessary.lean: ed4faea0c2a78da5af454e3bd1c140cc8fa8eccec4d7f0107c82e29bf3d239ca
+% Source SHA256 CollatzReversedRealWeakStationaryObstruction.lean: 8b1254e0f728cdaa0368ea3282203aee685bc384d456a08828df8a4e61d5b296
+
+\subsection*{Further necessary conditions}
+
+The next forward blocks use the namespace
+\path{CollatzResearch.ForwardRealWordGrowth}, with a finite index type
+{\leanappendixfont ι}. The three root constructors label the eligible forward
+boundary rules. The two-coordinate corollary is in
+\path{CollatzResearch.ForwardRealTwoCoordinateNecessary}.
+
+\paragraph{The forward root labels.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 9--11.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=9,numbersep=5pt,xleftmargin=18pt]
+inductive Root where
+  | e | f | g
+  deriving DecidableEq
+\end{Verbatim}
+
+\paragraph{The forward nine-comparison data.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 209--230.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=209,numbersep=5pt,xleftmargin=18pt]
+structure Data (ι : Type*) [Fintype ι] where
+  A : Affine ι
+  B : Affine ι
+  C : Affine ι
+  E : Affine ι
+  F : Affine ι
+  G : Affine ι
+  hA : A.Nonnegative
+  hB : B.Nonnegative
+  hC : C.Nonnegative
+  hE : E.Nonnegative
+  hF : F.Nonnegative
+  hG : G.Nonnegative
+  ae : (A.comp E).Weak (E.comp A)
+  af : (A.comp F).Weak (E.comp B)
+  ag : (A.comp G).Weak (F.comp A)
+  be : (B.comp E).Weak (F.comp B)
+  bf : (B.comp F).Weak (G.comp A)
+  bg : (B.comp G).Weak (G.comp B)
+  ce : (C.comp E).Weak (C.comp B)
+  cf : (C.comp F).Weak (C.comp (A.comp A))
+  cg : (C.comp G).Weak (C.comp (A.comp B))
+\end{Verbatim}
+
+\noindent\begin{minipage}{\linewidth}
+\paragraph{The three forward gaps.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 245--248.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=245,numbersep=5pt,xleftmargin=18pt]
+def Data.gap (d : Data ι) (i : ι) : Root → ℝ
+  | .e => (d.C.comp d.E).offset i - (d.C.comp d.B).offset i
+  | .f => (d.C.comp d.F).offset i - (d.C.comp (d.A.comp d.A)).offset i
+  | .g => (d.C.comp d.G).offset i - (d.C.comp (d.A.comp d.B)).offset i
+\end{Verbatim}
+\end{minipage}\par
+
+\paragraph{Quantitative growth of the observed ternary orbit.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 356--358.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=356,numbersep=5pt,xleftmargin=18pt]
+theorem Data.repeated_e_growth (d : Data ι) (i : ι) (n : ℕ) :
+    ((n / 5 : ℕ) : ℝ) * (d.gap i .e + d.gap i .f + d.gap i .g) ≤
+      eval d.C ((eval d.E)^[n] 0) i
+\end{Verbatim}
+
+\paragraph{Forward equality under a positive contracting row.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealWordGrowth.lean}, lines 410--416.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=410,numbersep=5pt,xleftmargin=18pt]
+theorem Data.eligible_offsets_eq_of_positive_subeigenrow (d : Data ι) (i : ι)
+    (w : Vec ι) (hw : ∀ j, 0 < w j)
+    (l : ℝ) (hl : 0 ≤ l) (hl1 : l < 1)
+    (hc : w ᵥ* d.A.matrix ≤ l • w) :
+    (d.C.comp d.E).offset i = (d.C.comp d.B).offset i ∧
+    (d.C.comp d.F).offset i = (d.C.comp (d.A.comp d.A)).offset i ∧
+    (d.C.comp d.G).offset i = (d.C.comp (d.A.comp d.B)).offset i
+\end{Verbatim}
+
+\paragraph{The explicit two-coordinate forward condition.}\mbox{}\par
+\noindent{\small\path{formal/CollatzForwardRealTwoCoordinateNecessary.lean}, lines 61--66.}\par
+\begin{Verbatim}[formatcom=\leanappendixfont,fontsize=\scriptsize,numbers=left,firstnumber=61,numbersep=5pt,xleftmargin=18pt]
+theorem positive_eligible_gap_requires_noncontraction
+    (d : ForwardRealWordGrowth.Data (Fin 2)) (i : Fin 2)
+    (hs : 0 < d.gap i .e ∨ 0 < d.gap i .f ∨ 0 < d.gap i .g) :
+    1 ≤ d.A.matrix 0 0 ∨ 1 ≤ d.A.matrix 1 1 ∨
+      (1 - d.A.matrix 0 0) * (1 - d.A.matrix 1 1) ≤
+        d.A.matrix 0 1 * d.A.matrix 1 0
+\end{Verbatim}
 \end{document}

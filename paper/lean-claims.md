@@ -1,11 +1,7 @@
 # Paper claims and Lean declarations
 
-This companion maps the formalized results and substantive proof steps in
-Sections 2–9 of [the paper](two-coordinate-obstruction.tex) to their Lean sources.
-Section 10's first-passage, density, time, and canonical-limit arguments are
-ordinary mathematical proofs and are **not included in the Lean artifact**.
-The verification report below does not establish those analytic results or
-formalize their external input from Tao's theorem.
+This companion maps the formalized results in the [matrix-obstruction paper](two-coordinate-obstruction.tex) and the [independent second proof of Said Duran’s theorem](said-duran-second-proof.tex) to their Lean sources. The separate [basin-density claim map](basin-lean-claims.md) records that paper’s partial formalization. The verification report described here concerns the matrix and synchronization closure only.
+
 The paper states the supporting classifications and gives the algebraic arguments used in the proof. The table below maps those steps to the formal declarations. The [combined verification report](../verification/rebuild.json) records a fresh build of all 137 local modules and an axiom audit of 633 public theorems and lemmas plus 93 definitions. Only `propext`, `Classical.choice`, and `Quot.sound` are permitted. The standalone entry point is [verify.py](../verify.py).
 
 The fixed-decrement soundness remarks in Section 2.1 are formalized in [FullTwoSoundness.lean](../formal/FullTwoSoundness.lean), namespace `CollatzResearch.FullTwoSoundness`. The declarations `admissible_preserves_gap`, `weak_rule_gives_gap`, and `gap_wellFounded` are included in the combined audit. The general rule-removal theorem and the prior equivalence with Collatz are cited, not re-formalized by this artifact.
@@ -119,7 +115,7 @@ The following conditional results are retained for reproducibility. They are not
 | Ordered powers and stationary observation | `RealOrderedPowers.ordered_scaled_row_power_le` and `ordered_stationary_profile_row_zero` in [CollatzReversedRealOrderedPowers.lean](../formal/CollatzReversedRealOrderedPowers.lean) | Uses `XY <= YX`, a nonnegative row, and the displayed scaled row inequality. Stationarity and boundedness are explicit hypotheses. |
 | Final reversed stationary-profile obstruction | `RealWeakStationaryObstruction.weak_stationary_profile_excludes_strict` in [CollatzReversedRealWeakStationaryObstruction.lean](../formal/CollatzReversedRealWeakStationaryObstruction.lean) | Eleven reversed weak rules; `B = alpha X`, `G = beta Y`, `0 <= alpha < beta`; nonnegative `X,Y`, positive `v`, bounded `r X^n v`, and eventually stationary `Y^n v`. The original weak `GB` rule supplies the ordered matrix relation. No commutation equality or automatic stationarity is assumed. |
 
-## Section 9: independent second proof of Said Duran’s theorem
+## Independent second proof of Said Duran’s theorem
 
 The declarations in this table refer to the actual shortcut Collatz map on natural numbers, with odd step `(3*n + 1)/2`. `CPP` abbreviates `CollatzPositiveProgression`, `CAS` abbreviates `CollatzAffineSynchronization`, and `CPT` abbreviates `CollatzPowerTwo`.
 
@@ -134,4 +130,4 @@ The declarations in this table refer to the actual shortcut Collatz map on natur
 | Unit endpoint and exclusion of an earlier hit | `CPP.coalescing_distinct_equal_count_endpoint_unit` and `CPP.common_progression_has_equal_first_hitting_times` in [ProgressionConvergenceSpecialization.lean](../formal/ProgressionConvergenceSpecialization.lean) | Distinct coalescing starts with equal odd counts force a common endpoint not divisible by three. Positive parameter values keep all earlier iterates above one. |
 | Equal finite first hitting times for every finite pattern; consecutive-run corollary | `CPP.every_finite_pattern_has_equal_first_hitting_times` and `CPP.arbitrarily_long_consecutive_equal_first_hitting_times` in [FinitePatternConvergence.lean](../formal/FinitePatternConvergence.lean) | For every finite pattern and lower bound there exists a larger translating integer. Every member first reaches one at a common finite time, with the same odd count. This is an existence theorem for translates, not convergence from an arbitrary fixed start. |
 
-The nine-module closure of these results is included in the combined fresh build and axiom audit. The prose consequence for the unaccelerated map follows by inserting the omitted even steps; the Lean theorem types use nonnegative offsets and the shortcut map. Priority for the equal-height existence theorem belongs to [Said Duran’s earlier preprint](https://doi.org/10.5281/zenodo.23003526). Section 9 gives an independent second proof. The finite-pattern statement is equivalent to the consecutive-run statement by restriction to a run containing the requested offsets.
+The nine-module closure of these results is included in the combined fresh build and axiom audit. The prose consequence for the unaccelerated map follows by inserting the omitted even steps; the Lean theorem types use nonnegative offsets and the shortcut map. Priority for the equal-height existence theorem belongs to [Said Duran’s earlier preprint](https://doi.org/10.5281/zenodo.23003526). The separate synchronization paper gives an independent second proof. The finite-pattern statement is equivalent to the consecutive-run statement by restriction to a run containing the requested offsets.

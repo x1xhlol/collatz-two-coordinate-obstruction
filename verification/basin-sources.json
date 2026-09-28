@@ -1,0 +1,209 @@
+{
+  "audited_declaration_count": 102,
+  "public_declaration_count": 80,
+  "scope": "Partial formalization of the basin-density paper. Checks the complete abstract Banach-valued two-scale averaging lemma with its rate, irrationality of the specified scale ratio, the counting-recurrence bootstrap and its power-law specialization, actual shortcut affine and endpoint-count bounds, admissible parity-word encoding and injectivity, the finite endpoint head sum, the unconditional infinite geometric-word tail, and raw-to-shortcut reachability and 3-divisible target bridges. The cylinder bound is checked under an explicit head-plus-tail expansion equality; that equality for the stationary measure remains unformalized. Arithmetic first-passage estimates, basin-density existence, weighted Green limits, canonical-limit identification, and the external Mazur theorem interfaces are not certified by this report. No Collatz conjecture proof is claimed.",
+  "source_sha256": {
+    "AdmissibleCylinderWords": "980d8f83983d673350d77dfb0ff64c2b31ed12ff7514adb020b585e44b8a22d9",
+    "BasinMapBridges": "ccdb2e2f8b2b302c7282154f7d38629fb7ab7b79512c7d3811165527712cdc32",
+    "CylinderExpansionBound": "910e5947855c2d08a22e10e2271c4fb46074fb4c851f751db25d25ed392a4c16",
+    "CylinderHeadBound": "c5fdc150fbf09f11a44b4d6c98a098491875ab89327cac01f46a112f7c5b8dee",
+    "GeometricWordTail": "503a00a46d73c9bc4df4060b2bda737d5b4e9e84e43e5c363325e0b6162c66d5",
+    "IncommensurableScales": "c160251f2888d5290e61e5ff101df7e2472c93a21fb237cfa60e82695bb6ce0c",
+    "LogTimeMean": "855acaaa425b3f45c1be8c5ab7d8b2a1c0f3ca578222a1323b1f6a0dde66ab8a",
+    "OptimalCylinderPacking": "7424c207552ceba9f4bf2c2161280918e2c754956b7f3b385c856fa3bf66a1ee",
+    "OrbitPackingBootstrap": "8650a874e5f906142e0d73d64ecb5f5ea422a3652400a0ed4a886288cb69825e",
+    "OrbitPackingPowerRecurrence": "bc58c253c4c4874da2b8f512adaab4c942ebf6813330096907e795ce233d9503",
+    "TwoScaleAveraging": "f4c593fd39b32b1f5113b6a55e8945c8e7434f730619b61beef25f034e2419b4"
+  },
+  "top_modules": {
+    "AdmissibleCylinderWords": {
+      "declarations": [
+        "CollatzCylinderPacking.decode_zeros_one",
+        "CollatzCylinderPacking.decode_encode",
+        "CollatzCylinderPacking.encode_injective",
+        "CollatzCylinderPacking.encode_sum",
+        "CollatzCylinderPacking.encode_length",
+        "CollatzCylinderPacking.reverseItinerary_sum",
+        "CollatzCylinderPacking.reverseItinerary_length",
+        "CollatzCylinderPacking.Admissible.odd_count",
+        "CollatzCylinderPacking.admissible_endpoint_injective",
+        "CollatzCylinderPacking.admissible_tuple_card_bound",
+        "CollatzCylinderPacking.admissible_tuple_scaled_card_bound"
+      ],
+      "imports": [
+        "OptimalCylinderPacking",
+        "Mathlib.Algebra.BigOperators.Group.List.Basic"
+      ]
+    },
+    "BasinMapBridges": {
+      "declarations": [
+        "CollatzBasinMapBridges.iterate_step",
+        "CollatzBasinMapBridges.raw_hit_double_implies_shortcut_hit",
+        "CollatzBasinMapBridges.even_of_step_divisible_by_three",
+        "CollatzBasinMapBridges.hit_multiple_of_three_iff"
+      ],
+      "imports": [
+        "OptimalCylinderPacking"
+      ]
+    },
+    "CylinderExpansionBound": {
+      "declarations": [
+        "CollatzCylinderPacking.certificate_card_le_endpointCount",
+        "CollatzCylinderPacking.certificate_head_bound_rat",
+        "CollatzCylinderPacking.certificate_head_bound_real",
+        "CollatzCylinderPacking.filtered_tail_nonneg",
+        "CollatzCylinderPacking.filtered_tail_le",
+        "CollatzCylinderPacking.filtered_tail_summable",
+        "CollatzCylinderPacking.filtered_tail_bound",
+        "CollatzCylinderPacking.cylinder_bound_of_expansion"
+      ],
+      "imports": [
+        "CylinderHeadBound",
+        "GeometricWordTail"
+      ]
+    },
+    "CylinderHeadBound": {
+      "declarations": [
+        "CollatzCylinderPacking.endpointMass_le",
+        "CollatzCylinderPacking.finite_dyadic_sum",
+        "CollatzCylinderPacking.finite_dyadic_sum_le",
+        "CollatzCylinderPacking.endpoint_head_general",
+        "CollatzCylinderPacking.endpoint_head_bound"
+      ],
+      "imports": [
+        "AdmissibleCylinderWords",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic"
+      ]
+    },
+    "GeometricWordTail": {
+      "declarations": [
+        "CollatzCylinderPacking.geometric_word_hasSum",
+        "CollatzCylinderPacking.geometric_word_probability",
+        "CollatzCylinderPacking.geometric_word_tilted_mass",
+        "CollatzCylinderPacking.geometricTailTerm_nonneg",
+        "CollatzCylinderPacking.geometric_tail_summable",
+        "CollatzCylinderPacking.geometric_tail_pointwise",
+        "CollatzCylinderPacking.geometric_tail_bound",
+        "CollatzCylinderPacking.geometric_tail_le_half_pow"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecificLimits.Normed",
+        "Mathlib.Analysis.Normed.Ring.InfiniteSum",
+        "Mathlib.Topology.Algebra.InfiniteSum.Real",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Positivity"
+      ]
+    },
+    "IncommensurableScales": {
+      "declarations": [
+        "CollatzCanonical.Scales.no_equal_positive_powers",
+        "CollatzCanonical.Scales.logarithms_incommensurable"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.NumberTheory.Real.Irrational",
+        "Mathlib.Data.Nat.Prime.Basic",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity"
+      ]
+    },
+    "LogTimeMean": {
+      "declarations": [
+        "CollatzCanonical.TwoScale.logarithmicMean_bound",
+        "CollatzCanonical.TwoScale.logarithmicMean_modulus_of_le",
+        "CollatzCanonical.TwoScale.logarithmicMean_modulus",
+        "CollatzCanonical.TwoScale.logarithmicMean_stable_link",
+        "CollatzCanonical.TwoScale.logarithmicMean_second_residual",
+        "CollatzCanonical.TwoScale.logarithmicMean_first_residual",
+        "CollatzCanonical.TwoScale.logarithmicMean_log",
+        "CollatzCanonical.TwoScale.two_scale_averaging"
+      ],
+      "imports": [
+        "TwoScaleAveraging",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Tactic.Positivity"
+      ]
+    },
+    "OptimalCylinderPacking": {
+      "declarations": [
+        "CollatzCylinderPacking.oddCount_le",
+        "CollatzCylinderPacking.step_even",
+        "CollatzCylinderPacking.step_odd",
+        "CollatzCylinderPacking.scaled_bounds",
+        "CollatzCylinderPacking.endpoint_span",
+        "CollatzCylinderPacking.odd_card_le_of_span",
+        "CollatzCylinderPacking.odd_endpoint_card_bound",
+        "CollatzCylinderPacking.mem_endpointSet",
+        "CollatzCylinderPacking.endpointCount_bound",
+        "CollatzCylinderPacking.endpointCount_scaled_bound"
+      ],
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity"
+      ]
+    },
+    "OrbitPackingBootstrap": {
+      "declarations": [
+        "CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget",
+        "CollatzOrbitPackingBootstrap.bootstrapConstant_nonneg",
+        "CollatzOrbitPackingBootstrap.initial_count_le_bootstrapConstant",
+        "CollatzOrbitPackingBootstrap.uniform_counting_bootstrap",
+        "CollatzOrbitPackingBootstrap.uniform_power_bound_of_counting_recursion"
+      ],
+      "imports": [
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "OrbitPackingPowerRecurrence": {
+      "declarations": [
+        "CollatzOrbitPackingPowerRecurrence.floor_log_two_le_power",
+        "CollatzOrbitPackingPowerRecurrence.packing_error_le",
+        "CollatzOrbitPackingPowerRecurrence.exists_packing_threshold",
+        "CollatzOrbitPackingPowerRecurrence.uniform_power_bound_of_packing_recurrence"
+      ],
+      "imports": [
+        "OrbitPackingBootstrap",
+        "Mathlib.Algebra.Order.Floor.Semiring"
+      ]
+    },
+    "TwoScaleAveraging": {
+      "declarations": [
+        "CollatzCanonical.TwoScale.bounded_expanding_recurrence_eq_zero",
+        "CollatzCanonical.TwoScale.eq_const_of_continuous_two_periods",
+        "CollatzCanonical.TwoScale.exists_periodic_profile_of_exp_shift",
+        "CollatzCanonical.TwoScale.stable_recurrence_geometric_bound",
+        "CollatzCanonical.TwoScale.stable_recurrence_tendsto_zero",
+        "CollatzCanonical.TwoScale.stable_recurrence_const_bound",
+        "CollatzCanonical.TwoScale.stable_translation_tendsto_zero",
+        "CollatzCanonical.TwoScale.tendsto_exp_neg_mul",
+        "CollatzCanonical.TwoScale.stable_translation_ray_limit",
+        "CollatzCanonical.TwoScale.tendsto_real_arithmetic_ray",
+        "CollatzCanonical.TwoScale.lipschitz_profile_of_asymptotic_modulus",
+        "CollatzCanonical.TwoScale.stable_translation_exp_bound",
+        "CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals_with_rate",
+        "CollatzCanonical.TwoScale.exists_limit_of_two_scale_residuals",
+        "CollatzCanonical.TwoScale.exists_limit_of_eventual_two_scale_residuals"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecificLimits.Normed",
+        "Mathlib.Analysis.SpecialFunctions.Exp",
+        "Mathlib.Topology.Instances.AddCircle.DenseSubgroup",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Module"
+      ]
+    }
+  }
+}

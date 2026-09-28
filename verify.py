@@ -402,7 +402,7 @@ def revisions(mathlib, manifest):
     }
 
 
-def closure(directory):
+def closure(directory, source_pins, tops, expected_public, expected_audited):
     sources, inventory, active = {}, {}, set()
 
     def visit(name):
@@ -410,11 +410,11 @@ def closure(directory):
             raise ValueError("Cyclic local imports: " + name)
         if name in inventory:
             return
-        if name not in SOURCE_SHA256:
+        if name not in source_pins:
             raise ValueError("Unpinned local module: " + name)
         active.add(name)
         data = (directory / (name + ".lean")).read_bytes()
-        if digest(data) != SOURCE_SHA256[name]:
+        if digest(data) != source_pins[name]:
             raise ValueError("The published proof source changed: " + name)
         sources[name] = data
         item = source_inventory(name, data)
@@ -423,22 +423,22 @@ def closure(directory):
         active.remove(name)
         inventory[name] = item
 
-    for name, expected in TOPS.items():
+    for name, expected in tops.items():
         visit(name)
         if (inventory[name]["imports"] != expected["imports"]
-                or set(inventory[name]["public_declarations"]) != expected["declarations"]):
+                or set(inventory[name]["public_declarations"]) != set(expected["declarations"])):
             raise ValueError("Unexpected top-level imports or theorems: " + name)
-    if sources.keys() != SOURCE_SHA256.keys():
+    if sources.keys() != source_pins.keys():
         raise ValueError("The proof closure differs from the embedded source inventory")
     names = [name for item in inventory.values() for name in item["public_declarations"]]
     if len(names) != len(set(names)):
         raise ValueError("A public declaration is repeated across local modules")
-    if len(names) != EXPECTED_PUBLIC_DECLARATION_COUNT:
+    if len(names) != expected_public:
         raise ValueError("The reviewed public declaration count changed")
     defined = names + [name for item in inventory.values() for name in item["definitions"]]
     if len(defined) != len(set(defined)):
         raise ValueError("A declaration or definition repeats across local modules")
-    if len(defined) != EXPECTED_AUDITED_DECLARATION_COUNT:
+    if len(defined) != expected_audited:
         raise ValueError("The reviewed complete declaration count changed")
     return sources, inventory
 
@@ -447,6 +447,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mathlib-root", type=Path, required=True,
                         help="mathlib checkout at the embedded revision, with dependencies built")
+    parser.add_argument("--scope", choices=("matrix-synchronization", "basins"),
+                        default="matrix-synchronization",
+                        help="proof family to rebuild and audit")
     parser.add_argument("--lake", default="lake", help="Lake executable (default: lake on PATH)")
     parser.add_argument("--build-root", type=Path,
                         help="parent of the temporary build (default: system temporary directory)")
@@ -457,13 +460,37 @@ def main():
     checker = Path(__file__).resolve()
     root = checker.parent
     directory = root / "formal"
-    report = (args.report or root / "verification" / "rebuild.json").resolve()
+    source_pins, tops = SOURCE_SHA256, TOPS
+    expected_public = EXPECTED_PUBLIC_DECLARATION_COUNT
+    expected_audited = EXPECTED_AUDITED_DECLARATION_COUNT
+    guarded = {"verify.py": (checker, sha(checker))}
+    scope_description = None
+    default_report = "rebuild.json"
+    if args.scope == "basins":
+        scope_path = root / "verification" / "basin-sources.json"
+        scope_bytes = scope_path.read_bytes()
+        scope = json.loads(scope_bytes)
+        if set(scope) != {"source_sha256", "top_modules", "public_declaration_count",
+                          "audited_declaration_count", "scope"}:
+            raise ValueError("Unexpected basin proof manifest fields")
+        source_pins, tops = scope["source_sha256"], scope["top_modules"]
+        expected_public = scope["public_declaration_count"]
+        expected_audited = scope["audited_declaration_count"]
+        scope_description = scope["scope"]
+        if not source_pins or not tops or not scope_description:
+            raise ValueError("Empty basin proof manifest")
+        for name, source_hash in source_pins.items():
+            if not re.fullmatch(IDENTIFIER, name) or not re.fullmatch(r"[0-9a-f]{64}", source_hash):
+                raise ValueError("Invalid basin source pin")
+        directory = root / "formal-basins"
+        default_report = "basin-rebuild.json"
+        guarded["verification/basin-sources.json"] = (scope_path, digest(scope_bytes))
+    report = (args.report or root / "verification" / default_report).resolve()
     if report.exists():
         raise ValueError("Refusing to overwrite a report; choose a new path with --report")
-    sources, inventory = closure(directory)
-    guarded = {"verify.py": (checker, sha(checker))}
+    sources, inventory = closure(directory, source_pins, tops, expected_public, expected_audited)
     for name, data in sources.items():
-        guarded["formal/" + name + ".lean"] = (directory / (name + ".lean"), digest(data))
+        guarded[directory.name + "/" + name + ".lean"] = (directory / (name + ".lean"), digest(data))
 
     mathlib = args.mathlib_root.resolve()
     manifest_path = mathlib / "lake-manifest.json"
@@ -508,10 +535,10 @@ def main():
                                          for name in item["definitions"]} |
                           {name for item in inventory.values()
                            for name in item["existing_axiom_prints"]})
-    if len(declarations) != EXPECTED_AUDITED_DECLARATION_COUNT:
+    if len(declarations) != expected_audited:
         raise ValueError("The generated axiom audit differs from the reviewed inventory")
     audit_name = "PublicationAudit"
-    audit_source = ("".join("import " + name + "\n" for name in TOPS) + "\n" +
+    audit_source = ("".join("import " + name + "\n" for name in tops) + "\n" +
                     "".join("#print axioms " + name + "\n" for name in declarations))
     builds = {}
     with tempfile.TemporaryDirectory(prefix="collatz-proof-", dir=args.build_root) as temporary:
@@ -572,14 +599,16 @@ def main():
     if any((Path(entry) / (name + ".olean")).exists()
            for entry in library_locations for name in sources):
         raise ValueError("A cached local module appeared in a dependency library")
-    after_sources, after_inventory = closure(directory)
+    after_sources, after_inventory = closure(directory, source_pins, tops,
+                                              expected_public, expected_audited)
     if after_sources != sources or after_inventory != inventory:
         raise ValueError("The complete source/declaration closure changed during checking")
     result = {
         "status": "PASS", "proves_collatz_conjecture": False,
         "checked_at_utc": datetime.now(timezone.utc).isoformat(),
-        "top_modules": list(TOPS),
-        "top_declarations": sorted(name for item in TOPS.values() for name in item["declarations"]),
+        "proof_family": args.scope,
+        "top_modules": list(tops),
+        "top_declarations": sorted(name for item in tops.values() for name in item["declarations"]),
         "module_count": len(sources), "public_declaration_count": len(public),
         "audited_declaration_count": len(declarations),
         "additional_audited_definitions": sorted(set(declarations) - set(public)),
@@ -602,7 +631,7 @@ def main():
         "dependency_revisions": dependency_revisions,
         "parallel_lean_workers": args.workers, "threads_per_lean_worker": 1,
         "sat_solver_calls": 0,
-        "scope": (
+        "scope": scope_description or (
             "For seven nonnegative real affine maps in two coordinates, each with "
             "first diagonal entry at least one, all eleven weak rules in either "
             "word orientation force all eleven first-coordinate offset gaps to "

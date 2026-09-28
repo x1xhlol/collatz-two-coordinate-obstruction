@@ -80,3 +80,5 @@ Lean's kernel checks proof terms under the reported foundational axioms. Matchin
 
 
 The additional forward results are in `CollatzForwardRealWordGrowth.lean` and `CollatzForwardRealTwoCoordinateNecessary.lean`, supported by `CollatzForwardFiveCover.lean` and `CollatzForwardRealContraction.lean`. They assume six nonnegative affine maps and nine forward weak comparisons; neither dynamic boundary comparison is required. An auxiliary reversed theorem, not used in the manuscript, is `RealWeakStationaryObstruction.weak_stationary_profile_excludes_strict`. It assumes all eleven reversed weak comparisons, separated matrix scales, a bounded normalized binary observation, and eventual stationarity of a normalized ternary orbit on a positive vector. The ordered-power lemmas remove the need for a commutation equality. No assertion deriving these orbit hypotheses in general is part of the theorem.
+
+The separate basin-density development is in [formal-basins](../formal-basins/README.md). Select it with `verify.py --scope basins`; its partial coverage and verification report are separate from the 137-module matrix/synchronization closure described here.
