@@ -860,7 +860,7 @@ For an arbitrary start whose initial halving chain already reaches
  \mathcal B_v\subseteq\{2^hq:h\ge0,\ q\in E_{M,m_v}\}.
 \]
 The dyadic closure of an odd set of relative upper logarithmic
-density at most \(d\) has ordinary upper density at most \(d\):
+density at most \(d\) has ordinary upper logarithmic density at most \(d\):
 sum finitely many valuations and bound the omitted starts by
 multiples of \(2^{H+1}\), then let \(H\to\infty\).
 This proves \eqref{eq:ct-small-ancestor} with
@@ -1244,22 +1244,24 @@ Letting \(\epsilon\downarrow0\) proves
 Independently of the time law, the same cutoff and \(w_N\le1\)
 give \(F_N(K)\le C_N(K+1)\).
 
-If \(N\) is nonperiodic, every odd endpoint hits it only once.
-Therefore
+Define \(e_N=\mathbf1_{2\mid N}\). If \(N\) is nonperiodic,
+every odd endpoint hits it only once, and hence
 \[
- \sum_{k=0}^K\rho_k(N)=F_N(K)+O_N(1).
+ \sum_{k=0}^K\rho_k(N)=e_N+F_N(K).
 \]
-The bounded correction is the depth-zero term: for odd \(N\) it
-is already the endpoint \(q=N\), and for even \(N\) it is an
-extra singleton term.
-If \(N\) is periodic, later visits repeat its cycle. Each endpoint
-then contributes at depths \(k_N(q)+r_Nj\), with weights multiplied
-by \(\beta_N^j\). Thus
+For odd \(N\), the empty word is already counted by the endpoint
+\(q=N\) in \(F_N\). For even \(N\), no odd endpoint has depth
+zero, so \(e_N\) supplies the single term \(\rho_0(N)=1\).
+If \(N\) is periodic, later visits repeat its cycle. Each odd
+endpoint contributes at depths \(k_N(q)+r_Nj\), with weights
+multiplied by \(\beta_N^j\). Thus
 \[
  \sum_{k=0}^K\rho_k(N)
- =\sum_{j=0}^{\lfloor K/r_N\rfloor}
-                   \beta_N^jF_N(K-r_Nj)+O_N(1).
+ =e_N+\sum_{j=0}^{\lfloor K/r_N\rfloor}
+                   \beta_N^jF_N(K-r_Nj).
 \]
+The even depth-zero singleton is outside this sum: positive-depth
+odd-block words always have odd endpoints.
 The domination \(F_N(K)\le C_N(K+1)\) permits dominated
 convergence against the geometric series after division by \(K\).
 Equation~\eqref{eq:ct-first-hit-Cesaro} gives the Cesàro limit
@@ -1691,6 +1693,13 @@ explicitly cited analytic inputs. Selected proof steps have been checked
 in Lean; the full analytic theorem chain has not yet been formalized.
 Automated review does not constitute external peer review or endorsement
 by the authors of the cited works.
+
+\section*{License}
+Copyright \textcopyright\ 2026 Lucas Valbuena.
+This paper and its LaTeX source are licensed under
+\href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
+Attribution 4.0 International (CC BY 4.0)}. The accompanying code is
+licensed under the MIT License.
 
 \begin{thebibliography}{99}\small\raggedright
 \bibitem{Tao2022} T. Tao.

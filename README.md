@@ -47,3 +47,9 @@ tectonic --keep-logs --untrusted tao-basin-densities.tex
 The rewriting system and its equivalence to the Collatz conjecture are due to Yolcu, Aaronson, and Heule, [An Automated Approach to the Collatz Conjecture](https://doi.org/10.1007/s10817-022-09658-8), *Journal of Automated Reasoning* 67(2), Article 15 (2023). Priority for the equal-height runs theorem belongs to Said Duran. The main analytic input is Tao’s [Almost all orbits of the Collatz map attain almost bounded values](https://doi.org/10.1017/fmp.2022.8), *Forum of Mathematics, Pi* 10 (2022), e12. The basin paper gives precise citations for the additional results of Shaik, Nashida, Mazur, and Inselmann.
 
 [CITATION.cff](CITATION.cff) lists the three papers. Each manuscript discloses the use of OpenAI Codex. Automated proof development and review do not constitute external peer review or endorsement by the cited authors.
+
+## License and archival releases
+
+The Lean source, verification scripts, and repository documentation outside `paper/` are licensed under the [MIT License](LICENSE). The papers, including their LaTeX sources and PDFs, are licensed under [CC BY 4.0](paper/LICENSE); code excerpts retain the code's MIT license. Referenced works and any third-party material retain their original rights.
+
+[GitHub releases](https://github.com/x1xhlol/collatz-two-coordinate-obstruction/releases) bundle the three standalone PDFs, sources, and verification reports. The connected Zenodo integration archives each published repository release. Its DOI identifies the complete release; each paper remains separately titled and attributed within that archive.

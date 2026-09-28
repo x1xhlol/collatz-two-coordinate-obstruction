@@ -1,0 +1,30 @@
+{
+  "title": "Collatz matrix obstructions, synchronization, and basin densities: three papers and Lean artifacts",
+  "creators": [
+    {
+      "name": "Valbuena, Lucas"
+    }
+  ],
+  "description": "<p>Three standalone papers with LaTeX sources, PDFs, Lean proof sources, and fresh verification reports: (1) Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system; (2) An independent second proof of Said Duran’s equal-height Collatz runs theorem; (3) Collatz basin densities and canonical traces from first-passage stabilization.</p><p>The matrix and synchronization scope has 137 checked Lean modules and 633 public theorem/lemma declarations. The basin scope currently checks selected steps in 11 modules, including the complete abstract two-scale averaging lemma. The second arithmetic scale of Tao’s first-passage theorem and the downstream Green/cylinder identifications are not yet fully formalized. Priority for the equal-height existence theorem belongs to Omar Javier Said Duran. None of these papers proves the Collatz conjecture.</p><p>License scope: Lean code, scripts, and repository documentation outside paper/ use the MIT License. Papers and their LaTeX sources and PDFs use Creative Commons Attribution 4.0 International (CC BY 4.0); code excerpts retain MIT. Third-party material retains its original rights. This DOI archives the complete repository release, containing the three individually titled papers.</p>",
+  "version": "2026.09.28.1",
+  "publication_date": "2026-09-28",
+  "access_right": "open",
+  "license": "mit",
+  "upload_type": "software",
+  "language": "eng",
+  "keywords": [
+    "Collatz conjecture",
+    "Lean",
+    "formal verification",
+    "matrix interpretations",
+    "logarithmic density",
+    "first passage"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}
