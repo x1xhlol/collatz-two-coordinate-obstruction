@@ -1,0 +1,440 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage{lmodern,microtype,fancyhdr,fontspec,fancyvrb}
+\usepackage[hidelinks]{hyperref}
+\newfontfamily\leanappendixfont{DejaVuSansMono.ttf}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\code}[1]{\texttt{#1}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Consecutive integers with equal Collatz height}
+\fancyhead[R]{\small Lucas Valbuena}\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parindent}{1.1em}\setlength{\parskip}{3pt}
+\setlength{\abovedisplayskip}{7pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{7pt plus 2pt minus 2pt}
+\hypersetup{pdftitle={Arbitrarily long runs of consecutive integers with equal Collatz height},pdfauthor={Lucas Valbuena},pdfsubject={Finite-pattern synchronization and equal finite first hitting times; Lean-checked proofs}}
+\begin{document}\thispagestyle{plain}
+\begin{center}
+{\LARGE\bfseries Arbitrarily long runs of consecutive integers\\[3pt]
+with equal Collatz height\par}
+\vspace{8pt}{\large Lucas Valbuena\par}
+\vspace{4pt}{\normalsize 28 September 2026}
+\end{center}
+\begin{abstract}
+For every prescribed length and lower bound, we construct a larger
+interval of consecutive positive integers that first reach one after
+the same number of shortcut Collatz steps, with equal odd-step counts.
+More generally, every finite pattern of nonnegative offsets has
+arbitrarily large translates with these properties. The proof first
+coalesces the pattern on a dyadic progression, then specializes its
+common endpoint to a power of two. Equal first hitting times also
+follow for the unshortened map. The principal statements and their
+supporting lemmas are formalized in Lean~4. These results do not
+establish convergence from an arbitrary prescribed starting integer.
+\end{abstract}
+
+\section{Heights and the main result}
+Let $\mathbb N$ include zero. For positive integers, put
+\[
+T(x)=\begin{cases}x/2,&x\text{ even},\\(3x+1)/2,&x\text{ odd}.
+\end{cases}
+\]
+We use \emph{height} for the first hitting time
+$h(x)=\min\{k\in\mathbb N:T^k(x)=1\}$, taking $h(x)=\infty$
+when that set is empty. In particular, $h(1)=0$.
+Write $o_k(x)$ for the number of odd inputs among
+$x,T(x),\ldots,T^{k-1}(x)$, with $o_0(x)=0$.
+This is the height convention used by Garner~\cite{Garner1985},
+as distinguished from other conventions in
+LaDue~\cite[p.~156]{LaDue2018}.
+
+Garner's 1985 run-length conjecture~\cite{Garner1985}, as recorded
+by Lagarias~\cite[entry~72, p.~29]{Lagarias2011}, asserts that runs
+of consecutive integers with equal height can be arbitrarily long.
+Theorem~\ref{thm:equal-heights} proves this assertion with equal odd
+counts as well, and with the runs occurring above every prescribed
+lower bound. A separate conjecture of Garner concerned a proposed
+characterization of equal-height consecutive pairs; the counterexamples
+of Elia and Tucker~\cite{EliaTucker2015} concern that characterization,
+not the run-length assertion. Related studies include Gao's computations
+of long runs~\cite{Gao1993} and LaDue's results on
+clusters~\cite{LaDue2018}. We give a self-contained construction and
+its Lean formalization, without claiming historical priority.
+
+
+\begin{theorem}\label{thm:equal-heights}
+For every integer $\ell\ge1$ and every $B\in\mathbb N$, there are
+an integer $x>\max\{1,B\}$ and $H,R\in\mathbb N$ such that
+\[
+h(x+i)=H,\qquad o_H(x+i)=R\qquad(0\le i<\ell).
+\]
+Thus arbitrarily long runs of consecutive integers have the same
+finite Collatz height, and each prescribed run length occurs above
+every lower bound.
+\end{theorem}
+
+For example, $28,29,30$ all reach $20$ after seven steps and first
+reach one after thirteen steps, with five odd inputs each.
+We prove a stronger finite-pattern statement: any finite set
+$F\subseteq\mathbb N$ may replace $\{0,\ldots,\ell-1\}$ in the theorem.
+The translating integer $x$ is chosen by the construction; no
+convergence assertion for an arbitrary fixed $x$ is assumed or deduced.
+The power-of-two endpoint argument uses the fact that two generates
+the units modulo powers of three, also used by
+Monks~\cite[Lemma~3.4]{Monks2006} in back tracing.
+
+\section{Coalescence on a dyadic progression}
+
+We first record the dependence of a finite trajectory on its starting
+residue class.
+
+\begin{lemma}\label{lem:finite-dyadic-prefix}
+For $c\in\mathbb Z_{>0}$, $k,t\in\mathbb N$, and $0\le j\le k$,
+\begin{align}
+T^j(c+2^kt)
+ &=T^j(c)+2^{k-j}3^{o_j(c)}t,
+ \label{eq:finite-dyadic-prefix}\\
+o_j(c+2^kt)&=o_j(c).
+ \label{eq:finite-dyadic-count}
+\end{align}
+\end{lemma}
+\begin{proof}
+The assertions hold at $j=0$. If $j<k$, the difference in
+\eqref{eq:finite-dyadic-prefix} is even, so the two current integers
+have the same parity. An even step divides the difference by two;
+an odd step multiplies it by $3/2$ and adds one to both odd counts.
+This proves the induction.
+\end{proof}
+
+In particular, the first $k$ parities are constant on each positive
+residue class modulo $2^k$. If a current value is $A+3^rt$, either
+parity can be prescribed by restricting $t$ to $\varepsilon+2u$,
+where $\varepsilon\in\{0,1\}$. After the prescribed actual step,
+the coefficient of $u$ is $3^r$ or $3^{r+1}$ according as that
+step is even or odd. Thus this prescription can be repeated, and
+each additional step doubles the parameter modulus.
+
+\begin{lemma}\label{lem:finite-pair}
+For every $n\in\mathbb N$, there are $k\in\mathbb N$ and
+$a\in\mathbb Z_{>0}$
+such that, for every $t\in\mathbb N$,
+\begin{align*}
+T^k(a+2^kt)&=T^k(a+2^kt+n),\\
+o_k(a+2^kt)&=o_k(a+2^kt+n).
+\end{align*}
+\end{lemma}
+\begin{proof}
+We use strong induction on $n$. For $n=0$, take $k=0$ and $a=1$.
+For $n=1$, the two trajectories
+\[
+\begin{aligned}
+4+8t&\longmapsto2+4t\longmapsto1+2t\longmapsto2+3t,\\
+5+8t&\longmapsto8+12t\longmapsto4+6t\longmapsto2+3t
+\end{aligned}
+\]
+each have one odd step. This gives $k=3$ and $a=4$.
+
+If $n=2m>0$, use the progression $a+2^kt$ for $m$ supplied
+by induction. The starts $2a+2^{k+1}t$ and
+$2a+2^{k+1}t+2m$ take one even step to that pair. They therefore
+coalesce after $k+1$ steps, with equal odd counts.
+
+It remains to treat odd $n>1$. Choose $m,c,d$ by
+\[
+\begin{array}{c|ccc}
+n\bmod4&m&c&d\\ \hline
+1&(3n+1)/4&1&2\\
+3&(3n-1)/4&2&1
+\end{array}
+\]
+so that $0<m<n$ and $3n+d=4m+c$.
+Let $a+2^kt$ be the progression for $m$.
+Because $2^k$ is invertible modulo three, some
+$q\in\{0,1,2\}$ makes $4(a+2^kq)-c$ divisible by three.
+The integer
+\[
+a'=\frac{4(a+2^kq)-c}{3}
+\]
+is positive. For $X=a'+2^{k+2}t$ and
+$Y=a+2^k(q+3t)$, we have
+\[
+3X+c=4Y,\qquad 3(X+n)+d=4(Y+m).
+\]
+If $3z+1=4w$, then $z\equiv1\pmod4$ and its next two
+steps are odd, even, with endpoint $w$.
+If $3z+2=4w$, then $z\equiv2\pmod4$ and its next two
+steps are even, odd, again with endpoint $w$.
+Hence $X$ and $X+n$ reach $Y$ and $Y+m$ after two steps,
+each having used one odd step. The induction hypothesis at parameter
+$q+3t$ finishes the construction.
+\end{proof}
+
+\subsection{Synchronizing affine families}
+
+To add an offset to a collection that already coalesces, we must
+synchronize its current trajectory with the common trajectory of the
+collection. Their coefficients in the remaining parameter can be
+different powers of three.
+
+\begin{lemma}\label{lem:finite-affine-synchronization}
+Let $A,B\in\mathbb Z_{>0}$ and $r,s\in\mathbb N$.
+There exist $\ell,t_0,Q\in\mathbb N$ and
+$C\in\mathbb Z_{>0}$ such that,
+for every $v\in\mathbb N$,
+\begin{equation}\label{eq:finite-affine-synchronization}
+T^\ell\bigl(A+3^r(t_0+2^\ell v)\bigr)
+=T^\ell\bigl(B+3^s(t_0+2^\ell v)\bigr)
+=C+3^Qv.
+\end{equation}
+The two length-$\ell$ trajectories have fixed odd counts $u,w$
+satisfying $r+u=s+w=Q$.
+\end{lemma}
+\begin{proof}
+Exchange the families if necessary so that $r\le s$.
+Initially their current values satisfy
+\[
+Y=3^dX+D,\qquad d=s-r,\qquad D=B-3^dA\in\mathbb Z.
+\]
+At every subsequent stage the coefficient of the remaining parameter
+in $X$ is a power of three and is therefore odd. We may prescribe its next
+parity, as above. The displayed relation determines the parity of $Y$.
+When $d>0$, the following steps reduce the relation to one with a
+smaller exponent.
+
+If $D\ne0$ is even, prescribe $X$ even. Both values take an even
+step, and
+\[
+Y'=3^dX'+D/2.
+\]
+Repeating this finitely many times makes $D$ odd. This also applies
+to negative $D$, by dividing out the power of two in $|D|$.
+If $D=0$, prescribe $X$ odd. Both values take an odd step, and
+\[
+Y'=3^dX'+\frac{1-3^d}{2}.
+\]
+The new constant is nonzero because $d>0$, so the preceding
+halving procedure makes it odd.
+Once $D$ is odd, prescribe $X$ odd. Then $Y$ is even, and
+\begin{equation}\label{eq:finite-ratio-reduction}
+X'=\frac{3X+1}{2},\qquad Y'=\frac Y2,
+\qquad
+Y'=3^{d-1}X'+\frac{D-3^{d-1}}2.
+\end{equation}
+The last constant is an integer and the exponent has decreased.
+There are finitely many steps at each fixed positive $d$ and finitely
+many decreases of $d$, so eventually $d=0$.
+
+The current values now have the same coefficient in the remaining
+parameter and differ by a constant integer $D$. If $D=0$, they
+are equal already. Otherwise, apply Lemma~\ref{lem:finite-pair}
+with gap $|D|$ to the smaller current value. Suppose its required
+progression is $a+2^kz$. The smaller value has the form
+$E+3^qu$, so the congruence
+\[
+E+3^qu_0\equiv a\pmod{2^k}
+\]
+has a solution. Choose a nonnegative representative $u_0$ large
+enough that $E+3^qu_0\ge a$. On the parameter class
+$u=u_0+2^kv$, the smaller value belongs to the positive tail of
+the required progression for every $v\ge0$.
+The next $k$ steps therefore make the two values equal.
+
+Each parameter restriction has modulus two for each added actual
+step. Their composition has the form $t=t_0+2^\ell v$, where
+$\ell$ is the common total number of steps. All bases and current
+values remain positive. By Lemma~\ref{lem:finite-dyadic-prefix},
+the resulting odd counts $u,w$ are independent of $v$, and the
+two final affine coefficients are $3^{r+u}$ and $3^{s+w}$.
+Equality at $v=0$ and $v=1$ forces these coefficients to agree.
+This proves \eqref{eq:finite-affine-synchronization} and
+$r+u=s+w=Q$.
+\end{proof}
+
+\begin{proposition}\label{prop:finite-pattern-coalescence}
+For every finite $F\subset\mathbb N$, there are $K,R\in\mathbb N$
+and $a,b\in\mathbb Z_{>0}$ such that, for every $n\in F$ and $t\in\mathbb N$,
+\begin{equation}\label{eq:finite-pattern-coalescence}
+T^K(a+2^Kt+n)=b+3^Rt,\qquad
+o_K(a+2^Kt+n)=R.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Enlarge $F$ to include zero, and enumerate its offsets starting with
+zero. For the initial singleton take $K=R=0$ and $a=b=1$.
+Suppose the assertion holds for the offsets already included.
+Their common current value on $a+2^Kt$ is $U(t)=b+3^Rt$.
+For the next offset $n$, Lemma~\ref{lem:finite-dyadic-prefix}
+gives
+\[
+T^K(a+2^Kt+n)=d+3^St,
+\qquad d=T^K(a+n)>0,\quad S=o_K(a+n).
+\]
+Apply Lemma~\ref{lem:finite-affine-synchronization} to these two
+affine families. On a class $t=t_0+2^\ell v$, they have the
+same image after $\ell$ additional steps. Every previously included
+trajectory starts those steps at exactly $U(t)$, so all previous
+equalities are preserved.
+
+The new starting progression is
+\[
+(a+2^Kt_0)+2^{K+\ell}v.
+\]
+Its modulus agrees with the new common time $K+\ell$.
+If the two added trajectories use $u,w$ odd steps, the last
+assertion of Lemma~\ref{lem:finite-affine-synchronization} gives
+$R+u=S+w$. Thus all total odd counts agree as well.
+The new endpoint has the required form $b'+3^{R+u}v$.
+Finite induction proves the proposition.
+\end{proof}
+
+\section{Equal heights by endpoint specialization}
+
+\begin{lemma}\label{lem:finite-power-two-residue}
+Let $b\in\mathbb Z_{>0}$ with $3\nmid b$, and let $R\in\mathbb N$.
+There are arbitrarily large $t\in\mathbb N$ for which
+$b+3^Rt$ is a power of two.
+\end{lemma}
+\begin{proof}
+We give the residue argument explicitly. For $m\ge1$,
+\begin{equation}\label{eq:finite-ternary-lift}
+4^{3^{m-1}}\equiv1+3^m\pmod{3^{m+1}}.
+\end{equation}
+The case $m=1$ is immediate. Cubing a number of the form
+$1+3^m(1+3c)$ proves the next case, since the terms beyond the
+linear term are divisible by $3^{m+2}$.
+
+Powers of two represent both units modulo three. Suppose
+$2^s\equiv b\pmod{3^m}$. Multiplying $2^s$ by
+$(4^{3^{m-1}})^j$, for $j=0,1,2$, changes its residue modulo
+$3^{m+1}$ by $j2^s3^m$, by \eqref{eq:finite-ternary-lift}.
+Since $3\nmid2^s$, these are the three possible lifts of its
+residue modulo $3^m$. One therefore represents $b$ modulo
+$3^{m+1}$. Induction gives $2^s\equiv b\pmod{3^R}$
+for every $R\ge1$; the case $R=0$ is immediate.
+
+The same identity gives
+$2^{2\cdot3^R}\equiv1\pmod{3^R}$.
+We may consequently increase $s$ by arbitrary multiples of
+$2\cdot3^R$ while preserving the residue. For all sufficiently
+large such exponents,
+\[
+t=\frac{2^s-b}{3^R}
+\]
+is a nonnegative integer, and these values of $t$ are unbounded.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:equal-heights}]
+We prove the stronger assertion for any finite set $F\subseteq\mathbb N$
+of offsets, which includes $F=\{0,\ldots,\ell-1\}$.
+Apply Proposition~\ref{prop:finite-pattern-coalescence} to
+$F\cup\{0,1\}$, obtaining $K,R,a,b$.
+We first show $3\nmid b$. An odd step has output congruent
+to two modulo three. Thus a current value divisible by three has
+only an even predecessor, which is also divisible by three.
+If $3\mid b$, every step in any length-$K$ trajectory ending
+at $b$ would be even, and its initial value would equal $2^Kb$.
+The distinct starts $a$ and $a+1$ both end at $b$, a
+contradiction.
+
+By Lemma~\ref{lem:finite-power-two-residue}, choose $t\ge1$
+as large as necessary, with $b+3^Rt=2^s$, and put
+$x=a+2^Kt$. The common endpoint after $K$ steps is $2^s$.
+After $s$ further even steps, all trajectories reach one, with
+total odd count $R$. Taking $t$ large ensures
+$x>\max\{1,B\}$.
+
+It remains to check that this is the first visit to one.
+For $j<K$, Lemma~\ref{lem:finite-dyadic-prefix} gives
+\[
+T^j(x+n)=T^j(a+n)+2^{K-j}3^{o_j(a+n)}t>1.
+\]
+For $j=K+q<K+s$, the value is $2^{s-q}>1$.
+Thus $h(x+n)=H=K+s$ and $o_H(x+n)=R$ for every $n\in F$.
+Taking $F=\{0,\ldots,\ell-1\}$ gives the theorem.
+\end{proof}
+
+For the unshortened map that sends odd $x$ to $3x+1$, each
+of the $R$ odd steps above expands to an odd step followed by an
+even step. The corresponding first hitting time is therefore
+$H+R$, also common to the whole pattern. The inserted intermediate
+values are greater than one, so first arrival is preserved.
+
+
+\section{Formal verification}
+The independent artifact contains nine Lean modules, with 66 public
+theorems and lemmas and eight definitions. A fresh build and axiom
+audit checks all 74 declarations using Lean~4.27.0 and mathlib commit
+\begin{center}\scriptsize
+\code{a3a10db0e9d66acbebf76c5e6a135066525ac900}.
+\end{center}
+Only \code{propext}, \code{Classical.choice}, and \code{Quot.sound}
+are permitted. No proof placeholder, added mathematical axiom, or
+numerical search result is used as proof. The entry point is
+\path{formal/FinitePatternConvergence.lean}; its two theorems state
+the arbitrary finite-pattern result and the consecutive-run corollary.
+Both explicitly require every earlier iterate to exceed one.
+Appendix~\ref{app:lean} reproduces the definitions and theorem types.
+The elementary conversion to the unshortened map is a prose consequence;
+the Lean endpoints use $T$ as defined above.
+
+The \path{equal-collatz-heights/} directory contains the source, PDF,
+claim map, pinned verifier, and retained build report. The repository is
+\begin{center}\scriptsize
+\url{https://github.com/x1xhlol/collatz-two-coordinate-obstruction}.
+\end{center}
+From that directory, run \code{python3 verify.py} with
+\code{--mathlib-root} pointing to the pinned checkout and
+\code{--report} to an unused output path. The accompanying README gives
+the complete setup. Kernel acceptance verifies the formal proposition;
+matching that proposition to the mathematical statement is a separate
+reading task addressed by the appendix and claim map.
+
+\paragraph{Acknowledgments and use of AI.}
+The formalization uses Lean and mathlib. OpenAI Codex was used for
+mathematical exploration, proof development, verification scripts,
+and manuscript preparation. The claims are supported by the
+accompanying proof artifacts; this disclosure implies no endorsement
+by authors of the cited work.
+
+\begin{thebibliography}{9}\small\raggedright
+\bibitem{Garner1985} L. E. Garner.
+\emph{On heights in the Collatz $3n+1$ problem}.
+Discrete Mathematics \textbf{55}(1), 57--64, 1985.
+\url{https://doi.org/10.1016/S0012-365X(85)80020-0}.
+
+\bibitem{Gao1993} G.-G. Gao.
+\emph{On consecutive numbers of the same height in the Collatz problem}.
+Discrete Mathematics \textbf{112}(1--3), 261--267, 1993.
+\url{https://doi.org/10.1016/0012-365X(93)90240-T}.
+
+\bibitem{Monks2006} K. M. Monks.
+\emph{The sufficiency of arithmetic progressions for the $3x+1$ Conjecture}.
+Proceedings of the American Mathematical Society \textbf{134}(10),
+2861--2872, 2006.
+\url{https://doi.org/10.1090/S0002-9939-06-08567-4}.
+Author version:
+\url{https://monks.scranton.edu/files/pubs/SufficiencyRev4.pdf}.
+
+\bibitem{LaDue2018} M. D. LaDue.
+\emph{Clusters of integers with equal total stopping times in the $3x+1$ problem}.
+The Fibonacci Quarterly \textbf{56}(2), 156--162, 2018.
+\url{https://www.fq.math.ca/Papers1/56-2/ladue121517.pdf}.
+
+
+\bibitem{Lagarias2011} J. C. Lagarias.
+\emph{The $3x+1$ Problem: An Annotated Bibliography (1963--1999)}.
+arXiv:math/0309224v13, 2011, entry~72, p.~29.
+\url{https://arxiv.org/pdf/math/0309224v13}.
+
+\bibitem{EliaTucker2015} M. Elia and A. Tucker.
+\emph{Consecutive Integers and the Collatz Conjecture}.
+arXiv:1511.09141, 2015.
+\url{https://arxiv.org/abs/1511.09141}.
+
+\end{thebibliography}
+\clearpage\appendix
+\input{lean-statement-appendix.tex}
+\end{document}

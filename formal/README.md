@@ -12,12 +12,6 @@ These three declarations assume seven nonnegative real affine maps in two coordi
 
 Together these results exclude the stated full-context format in both orientations and the unrestricted reversed TOP step in two coordinates. They do not settle forward TOP, arctic arithmetic, higher dimensions, or Collatz.
 
-## Finite-pattern convergence
-
-[FinitePatternConvergence.lean](FinitePatternConvergence.lean) proves `CollatzPositiveProgression.every_finite_pattern_has_equal_first_hitting_times`: for every finite `F : Finset ℕ` and lower bound, some larger `x > 1` makes every `x + n`, `n ∈ F`, first reach 1 at a common finite time `H`, with a common odd count `R`. Its second declaration specializes to consecutive runs of every length.
-
-The underlying [coalescence theorem](FinitePatternCoalescence.lean) constructs `K, R, a, b`, with `a, b > 0`, such that every `a + 2^K*t + n` reaches `b + 3^R*t` after `K` steps with odd count `R`, for all `t ≥ 0` and `n ∈ F`. Nine new modules form the full dependency closure of the convergence entry point. They define and reason about the shortcut map itself: even `n` maps to `n/2`, odd `n` to `(3n+1)/2`. No convergence hypothesis appears in either theorem. The translating integer is existential; the result does not settle convergence from arbitrary fixed starts.
-
 ## Prerequisites and pinned dependencies
 
 Use Linux x86_64, Git, Python 3.10 or later, and [Elan](https://github.com/leanprover/elan#installation), which supplies `lean` and `lake`. The checker pins Lean 4.27.0, its compiler commit, and a Release build. The retained run used:
@@ -62,7 +56,7 @@ python3 verify.py \
 
 Use a new report filename for each run. The script accepts one to four workers and gives each Lean process one thread. The build root must exist and be writable.
 
-The checker rebuilds all 137 local modules in a fresh temporary directory using the pinned compiled mathlib dependencies. It inventories and queries the axioms of all 633 public theorems and lemmas and all 93 definitions in the inventory, for 726 audited declarations. These include both final obstruction families, the forward growth and contraction result, the three soundness lemmas, finite-pattern coalescence and convergence, and four auxiliary modules on conditional stationary profiles. The latter are retained as checked algebra rather than contributions claimed by the manuscript. It rejects proof placeholders, additional axioms, unexpected compiler output, cached local modules on the library path, and changes to guarded sources or dependencies during the run. The JSON report retains compiler output, commands, inventories, hashes, and axiom results. Temporary compiled modules are removed on completion.
+The checker rebuilds all 128 local modules in a fresh temporary directory using the pinned compiled mathlib dependencies. It inventories and queries the axioms of all 567 public theorems and lemmas and all 85 definitions in the inventory, for 652 audited declarations. These include both final obstruction families, the forward growth and contraction result, the three soundness lemmas, and four auxiliary modules on conditional stationary profiles. The latter are retained as checked algebra rather than contributions claimed by the manuscript. It rejects proof placeholders, additional axioms, unexpected compiler output, cached local modules on the library path, and changes to guarded sources or dependencies during the run. The JSON report retains compiler output, commands, inventories, hashes, and axiom results. Temporary compiled modules are removed on completion.
 
 The [retained combined report](../verification/rebuild.json) describes the environment of its run. The checker resolves the current source directory independently and has no dependency on historical reports or other checking scripts.
 
