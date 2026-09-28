@@ -1680,16 +1680,28 @@ Syracuse residue law, and checks the upper, lower, and maximum mass
 bounds. It constructs the infinite geometric random series as a
 measurable \(\mathbb Z_3\)-valued variable, proves that its Borel
 probability law has these cylinder masses, and verifies the affine
-stationarity equation and maximal-cylinder exponent.
+stationarity equation, uniqueness among stationary probability measures,
+and maximal-cylinder exponent.
 The first-hit development checks actual inverse-word weights, hitting-time
 classification, cycle weights, and the inverse-operator expansion. It
 proves the exact Green Dirichlet formula and finiteness, including the
 nonnegative interchange of sums and comparison with the ordinary
-\(p\)-series. The resolvent and the critical Green and harmonic
-implications from explicit analytic limit hypotheses are also checked. The analytic development checks the periodic convolution
-implication and derives the actual cylinder Abel limit from an assumed
-Cesàro limit, including the required summability. It also proves the
-scalar Green normalization limit and uniform power-weight error bound.
+\(p\)-series. The analytic development derives the weighted Dirichlet
+residue from a weighted logarithmic mean, and hence the critical Green
+limit and harmonic equation when the required means exist.
+The first-hit reconstruction and countable endpoint tails are checked
+in both periodic and nonperiodic cases. From an odd weighted logarithmic
+mean and absolute zero logarithmic density of odd-clock exceptions,
+the development identifies the actual cylinder depth average, Cesàro
+average, Abel average, and normalized Green limit. The full weighted
+mean follows from a checked halving recursion, including its possible
+single-target defect. The deterministic conversion between odd-step and
+elapsed shortcut clocks is also proved, with its correction bound derived
+uniformly from first-hit distinctness.
+First-passage weight and expectation transport are formalized, as are
+the odd harmonic normalizers and the two-scale criterion for existence
+of the actual odd weighted mean. The required normalized-window
+estimates remain explicit hypotheses of this criterion.
 The raw-to-shortcut
 map inclusion used in Theorem~\ref{thm:ct-positive-unit-support} and
 the predecessor description for multiples of three are also checked.
@@ -1698,15 +1710,16 @@ These checks do not yet formalize the complete analytic theorem chain.
 Separate Lean~4.30.0-rc2 replays check Mazur's real-threshold
 first-passage rate theorem at each required scale, and his original
 natural-density transport root. The local Lean~4.27.0 development
-does not yet connect these inputs to the density-existence arguments,
-Green and cylinder limit identification, or the additional Mazur
-interfaces. The repository's
+does not yet connect these inputs to density existence, the actual
+clock-exception estimates, or the additional Mazur interfaces. The
+Green and cylinder identification is checked conditional on the stated
+density and clock hypotheses. The repository's
 \texttt{paper/basin-lean-claims.md} records the exact declarations and
 remaining obligations. Its verifier builds the local proof files afresh
 and audits their axiom dependencies separately from the matrix and
-synchronization papers. The present batch comprises sixty-two modules
-and 474 public theorem and lemma declarations; the axiom audit also
-covers 105 definitions and named instances. The external replay records state
+synchronization papers. The present batch comprises ninety-eight modules
+and 678 public theorem and lemma declarations; the axiom audit also
+covers 138 definitions and named instances. The external replay records state
 their separate source and dependency pins.
 
 \section*{Acknowledgments}

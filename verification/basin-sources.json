@@ -1,11 +1,17 @@
 {
-  "audited_declaration_count": 579,
-  "public_declaration_count": 474,
-  "scope": "Partial basin-paper formalization: full abstract two-scale averaging, unconditional trajectory packing and correction products; actual infinite geometric Syracuse random series on the 3-adic integers, affine stationarity, finite cylinder law and maximal exponent; actual arithmetic endpoint tails, first-hit word/weight encoding, hitting-time classification, cycle weights, inverse-operator expansion, and full Green Dirichlet identity and finiteness; periodic convolution and the Cesaro-to-Abel implication for actual canonical cylinder masses; logarithmic cumulative bounds, scalar Green normalization, power-weight perturbation, and critical Green/harmonic implications from explicit limit hypotheses. External first-passage roots are separately replayed. Full density existence, first-hit clock laws, the weighted Dirichlet residue asymptotic, and the complete canonical-identification chain are not certified by this report. No Collatz conjecture proof is claimed.",
+  "audited_declaration_count": 816,
+  "public_declaration_count": 678,
+  "scope": "Partial basin-paper formalization: complete abstract two-scale averaging and actual odd-window weighted-mean criterion from explicit window estimates; unconditional uniform trajectory packing and correction bounds; the actual infinite geometric Syracuse 3-adic probability law, stationarity, uniqueness and optimal maximal-cylinder exponent; actual first-hit arithmetic reconstruction, endpoint tails, Green Dirichlet identity and finiteness; weighted logarithmic-mean-to-Dirichlet-residue implication; actual Green, cylinder Cesaro and Abel identification from explicit odd weighted density and absolute clock-exception hypotheses; deterministic odd-clock-to-shortcut-clock conversion. Density existence and clock laws from the external first-passage inputs, countable-label laws, boundary estimates and natural-density deductions are not yet certified. No Collatz conjecture proof is claimed.",
   "source_sha256": {
+    "ActualCanonicalIdentification": "ca286600e05881ba6b0d5cd2ea44b3df2290b20d703bf89617b5f1cc7328b492",
+    "ActualClockAdapter": "35e251a59821f1d93c10888f86bb38ff941ae067effcc96d6093e087f2cb7969",
     "ActualCycleWeights": "67c1a934ec745a22e410ab0da1a4b49bef1ab295ffc250365e3a4f46e43fed7d",
+    "ActualCylinderCesaroAbel": "ab05fd6856761b01d336fa02719ba8982cf852ca1a969544c6071f5ca082c17f",
+    "ActualFirstHitReconstruction": "398f63f976a06222e050560fa8abd9329a09ae7a007661446f5d7360bff4ea78",
+    "ActualGreenDensityLimit": "f6cc92ea2c11f836d37c92d514f18157f2a775e93cce7363f1dfb5b5d5ca8f04",
     "ActualGreenSeries": "01579cbc6f8ae2c1c48e132949d7b651542a854653949b8f13f5167cba3b5f99",
     "ActualInverseOperator": "71ce53518ff0945c9bbcd1f39ad5fa8687156c6fe5261ba5a2c20daa65461ca0",
+    "ActualWordDepth": "dbb046101ddc16b3364e2685802f180f0b5b65f3be7cdc0d18bd7e6f3d71f7f1",
     "AdmissibleCylinderWords": "980d8f83983d673350d77dfb0ff64c2b31ed12ff7514adb020b585e44b8a22d9",
     "ArithmeticCylinderCongruence": "fef1cb7cbd4a22d4d3d197d761fe36a6bdb2e77e43c9b817c1d297f7f020e1b1",
     "ArithmeticCylinderGrowth": "c66cc7f6eee48ac0e34c6758871f09e8ef574a557af2f33f814bed0c59770ff6",
@@ -21,22 +27,38 @@
     "CanonicalSyracuseRecursion": "efc5de7cba4ec58580a5e0f52d8785b04861876bce8499b9e0da45dd70db6804",
     "CanonicalSyracuseSeries": "25fc7e694f35e3517d74310616990f16e0738d7ba3cb444364f0371734be36ee",
     "CanonicalSyracuseStationarity": "ad3fd2eb9af881aed3457f09fcdb5afc3dc179303b45e05c15caae2fdba5ba1d",
+    "CanonicalSyracuseUnique": "31610d85fdad9912059d3f60d47c66a5257b4a5a10267ab5573771faad2c9d67",
+    "CanonicalTraceFromOddClock": "bc30cb065c15baaf2d687a73f27ee90906fb69177a4c4cd8664623b7ce286e80",
     "CesaroAbelLimit": "fbd2cc0a8befbcc1d74ec21093fea9087c29f8b2702289f8cc3f7f944135edbf",
+    "ClockCutoffBounds": "d5c564852e2302ef4e4c1d3e6236fa97388f4e7478aa163e5ab7695c83ddb4b1",
+    "ClockExceptionalDensity": "4a019713c5750cf54bdc75a5b239a5a669aee4f311ced8407eca4d2766b64b1a",
+    "ClockMeanSqueeze": "e1e20ee324f134c8f58f09c23da3955599be095ef3d9c4c7d371ad93e18eb12c",
     "CompatibleSyracuseResidues": "e90b2bc8b6c050d0a33ff890f23cc5b4e9848fedd113adbd3485770589c3df13",
     "CylinderExpansionBound": "910e5947855c2d08a22e10e2271c4fb46074fb4c851f751db25d25ed392a4c16",
     "CylinderHeadBound": "c5fdc150fbf09f11a44b4d6c98a098491875ab89327cac01f46a112f7c5b8dee",
     "CylinderLowerBranch": "a9d0fc25aa4ad2836f67151136126f5421c315d3686046d57010a385cd307e78",
+    "DirichletLaplaceIdentity": "fda99d7eaa5c162a6b53ed4cb87a93d7855d19431b4d1e490aac2de960081701",
+    "DirichletPowerPerturbation": "fd1f86ae7edeb66af2616d958868b4fca7b9e17e9eed87dab92a4560b1c04a79",
+    "DirichletSeriesReindex": "4096f073253993d86dd292b800b533a54417ca82b543625bae220ac479abac26",
     "DyadicPowerBounds": "1de0c6d7709436d88f3a9a8a628f9ce80980a68611365dc2cbcdbf689b04883b",
     "EndpointTailBounds": "57db9cb9a6f433be2f159a6febe0a337b869ea89babc87d2a4f5f45e7d3d6335",
     "FiniteBinomialTail": "0893de8029c9a17dfa0c726e50f8f0a2f3fc5be7cc9c8fef02eb1c1d10e9cd05",
     "FiniteCylinderMaximum": "9a44ced80d4d67ea35ea54696917518aa11c3332537457a980e2fa561ab24a68",
     "FiniteCylinderResidueLaw": "c051a85eba1736d6708c26e3768fa5d4018ea2268953384c892992a354e60b08",
+    "FiniteObservableTransport": "818be3b21df93ca45d9c2b159fd25cc591e15dd355b189cd1b27c4e0eca41f05",
     "FinitePathInverseWords": "c9d1c8af162547be1eb5e1c479f179f5719582aa36147b1ba1635ce8b829370d",
     "FiniteReciprocalPacking": "75e319c195f9885bf69ccfe820b9975c363175180ae3b2e2ba8e1be438fca299",
     "FiniteSyracuseSeries": "242eca460c3def32c4102247713ab7e5893b85d0479efe4b875b33046946090d",
     "FiniteSyracuseSeriesClosedForm": "72749c70f3fd89dce4e2a5eacc7f2cb8dcabbbd4925c8b85716926833b520195",
+    "FirstHitClockConversion": "9431894327b1018f61abbaaabdd3bc259a4bf5d61cf7573466e40e8150caacff",
     "FirstHitEndpointTail": "58154e7dfcf2eeeb2eb24ea060dd22ae30ad939d10b6fbe7f71b16c769f30af7",
+    "FirstHitHalving": "db2ee2d2d9ef4f89cb595a13ad9c569da49e475586e29b395dab315d8690a609",
+    "FirstHitHalvingMean": "36b4d2f1425128e98b55cd8bfe05afcec859fd9074f1700b4d6f73e3a462632c",
+    "FirstHitPartialBounds": "bd29002e78ba03ad130cacf33f223dc72a588ea5334ea200e6fdb74d479b6018",
+    "FirstHitWeightTransport": "b7a174edc3ac6511d153e1cb65a62d60d42a2facb566ef6eed67f7108cb233d5",
     "FirstHitWordWeights": "dc92a03fc91ad44ef5b952b7db68b407501539ddc25a3534e4aaeec92a37a3f9",
+    "FirstPassageExpectationTransport": "2068121fb3802ba51b2713b3a854ce56a0e7419b4826b26592dbc37466b27bc4",
+    "FirstPassageWeightStability": "9391a7355613e1fe578296afc05226b46edd9297744254c4071bd8a12fb214bb",
     "GeometricSequenceLaw": "4eb9fa3e07574875dc1d141314c0907cc820bbc7f4b2e4850dcddf9692e2522d",
     "GeometricSequenceSplit": "b2221f30ebd1b5058c827f477161cc52b4fc0d9bfcb70f551bd7bb8ab5911cc8",
     "GeometricWordTail": "503a00a46d73c9bc4df4060b2bda737d5b4e9e84e43e5c363325e0b6162c66d5",
@@ -44,8 +66,18 @@
     "GreenKernelScalars": "1c2e6810032b82d07a1b3ebee62b6957a24d4f708c05ad8595a195060932ea19",
     "HittingTimeClassification": "6cf74498136cfd57b06653f12ca377a33276e5955105f4fb3d7d2fbb88026665",
     "IncommensurableScales": "c160251f2888d5290e61e5ff101df7e2472c93a21fb237cfa60e82695bb6ce0c",
+    "LaplaceAbelianLimit": "d1f936252339f430ab781e42ece9fbf4f94fb14657e1a51439859614a2b89f13",
     "LogTimeMean": "855acaaa425b3f45c1be8c5ab7d8b2a1c0f3ca578222a1323b1f6a0dde66ab8a",
     "LogarithmicCumulative": "0fc7533039399c4c8a5a46bb072743de11be3ae5e1e51b56ccd3ca3af2a6123c",
+    "LogarithmicCumulativeIncrements": "1ea61130aff58e95f5950ade794330db84ed3b051d3dc35721eb3ad251cbce58",
+    "LogarithmicParity": "88a111d4faec50c6a9ae422adbef69cafe3ea5f1c066d50de4411f5020540b27",
+    "OddFullMean": "ca0b1972b1dbec73c7d74ef6d2f32268ffe915d7bc396cb845b1c30b161553c2",
+    "OddHarmonicCumulative": "77dd48c4d26d0485f7f89e61590f0b624c28d7da0a1698c48936a0c2f793bc42",
+    "OddTargetFirstPassageTransport": "11349e6562e4cc0814e80d9710c2266983cbf330291b551ed9bd2fc72befb6d6",
+    "OddWeightedMeanCriterion": "a712fee3acbdc9c89a6d4bcaea546e1953958bd01379284c6b3a98d70b0d01d3",
+    "OddWindowFiniteProbability": "d30b7eaca35efb523e975ab84e7e892c65a0dab212651e92e1e66ac4f917fe6c",
+    "OddWindowNormalization": "7b49d37ef0946e634f73f0b569cf425a03b61855699c6b4ceb0b926e70e136bd",
+    "OddWindowPassageComparison": "4ff112e2358ed61392d4a9461e962563897d9e94a26b82bb82d3eb50fd249d92",
     "OptimalCylinderPacking": "7424c207552ceba9f4bf2c2161280918e2c754956b7f3b385c856fa3bf66a1ee",
     "OptimalFiniteCylinderRate": "d3112ae0f5be5bd8425db6f22f38cb81ee7179399b66ac0209d56f846cfd7675",
     "OrbitCorrectionProduct": "b315556a52da6685cb814b560482fcf507a65514fa09d4f8c3b8a2b7ea49591b",
@@ -56,17 +88,60 @@
     "OrbitPackingParameters": "561393e6cd750cd104845a13c5fde0f8b869311dc61e4dd609342d4e5aac2032",
     "OrbitPackingParityCount": "ac70f16bad71122a4aaa8ecff9b48f91559a8314e334e47446636ff4c963184d",
     "OrbitPackingPowerRecurrence": "bc58c253c4c4874da2b8f512adaab4c942ebf6813330096907e795ce233d9503",
+    "PadicCylinderDetermining": "43e98fd80f8364a5fadf24c7ec1970ff748d10e313cff8c8c269e0d6543c74e7",
     "PadicSyracuseVariable": "8dc38a4637e2124562b947d852168da3f38bba85c384966ab24766c87688c1c3",
     "PeriodicLoopConvolution": "bbee3565c1bb752ea6625594c124449e16874de94d0ec95b80a752f4659784d5",
+    "SyracuseCylinderTransitions": "98dbe6584cc0f74d9fc6f9fe97f56a6b9fb5a73e8118b6753aa21a795658365a",
     "SyracuseVariableMeasurable": "3c8ac802df381ff533350af919432f6041880b2739aa49362e4937125918cec7",
     "TwoScaleAveraging": "f4c593fd39b32b1f5113b6a55e8945c8e7434f730619b61beef25f034e2419b4",
     "UniformOrbitCorrection": "806f3adf8a2f7e83c57968ba5a75abca6e96becfc128b918cb225fc1dbaf3be1",
     "UniformOrbitPacking": "fe83712ef5f4a1c8c37403a4efa4699277a01dc4868d8a21f2a578c467aeb38a",
     "UniformOrbitReciprocalPacking": "37f78382eabb34bbbb4811d8cc3e164c355511dd27d6d180e3fe9263863bd70d",
     "WeightPowerPerturbation": "13cf4427ed674d9b4ccbc544e0725368945d5821b09018b0b9701e0dde232ffb",
+    "WeightedClockMean": "4b0ca41d09c4a375abbc6226d0baf1becfd9bac033fc11a4f6bec093032c1918",
+    "WeightedDirichletAbelian": "00e98ee3305636b2c3e75608833a4701da5b3776e9fdc9ae20da46da5a491d0a",
     "WeightedKernelLimit": "88637beaf6ac50236b68ac344e84e2ccdf7f1050441b1f3484ddc1062d23ec9b"
   },
   "top_modules": {
+    "ActualCanonicalIdentification": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.actual_first_hit_mean_of_weighted_clock",
+        "CollatzCylinderPacking.Arithmetic.actual_canonical_limits_of_weighted_clock",
+        "CollatzCylinderPacking.Arithmetic.actual_canonical_identification",
+        "CollatzCylinderPacking.Arithmetic.oddFirstHitWeight_supported_on_odd_basin",
+        "CollatzCylinderPacking.Arithmetic.actual_weighted_clock_exception_mean",
+        "CollatzCylinderPacking.Arithmetic.actual_first_hit_mean_of_exception_density",
+        "CollatzCylinderPacking.Arithmetic.actual_canonical_identification_of_exception_density"
+      ],
+      "imports": [
+        "ActualClockAdapter",
+        "ActualCylinderCesaroAbel",
+        "ActualGreenDensityLimit",
+        "ClockExceptionalDensity"
+      ]
+    },
+    "ActualClockAdapter": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.oddFirstHitWeight_bounds",
+        "CollatzCylinderPacking.Arithmetic.firstHitOddDepth_of_first_hit",
+        "CollatzCylinderPacking.Arithmetic.actual_clock_term_eq",
+        "CollatzCylinderPacking.Arithmetic.actual_clock_summable",
+        "CollatzCylinderPacking.Arithmetic.actual_clock_tsum",
+        "CollatzCylinderPacking.Arithmetic.firstHitLogCutoff_eq_log",
+        "CollatzCylinderPacking.Arithmetic.firstHitLogCutoff_nonneg",
+        "CollatzCylinderPacking.Arithmetic.firstHitLogCutoff_lt_log_iff",
+        "CollatzCylinderPacking.Arithmetic.actual_clock_tail_term_eq",
+        "CollatzCylinderPacking.Arithmetic.actual_clock_tail_summable",
+        "CollatzCylinderPacking.Arithmetic.actual_clock_tail_tsum",
+        "CollatzCylinderPacking.Arithmetic.actual_clock_tail_bound",
+        "CollatzCylinderPacking.Arithmetic.actual_clock_tail_tendsto_zero",
+        "CollatzCylinderPacking.Arithmetic.actual_clock_normalized_tail_tendsto_zero"
+      ],
+      "imports": [
+        "FirstHitPartialBounds",
+        "ClockCutoffBounds"
+      ]
+    },
     "ActualCycleWeights": {
       "declarations": [
         "CollatzCylinderPacking.Arithmetic.orbitRatio_pos",
@@ -91,6 +166,53 @@
       "imports": [
         "HittingTimeClassification",
         "Mathlib.Analysis.SpecialFunctions.Pow.Real"
+      ]
+    },
+    "ActualCylinderCesaroAbel": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.canonical_cumulative_eq_arithmetic",
+        "CollatzCylinderPacking.Arithmetic.canonical_depth_mean_no_return_of_first_hit_mean",
+        "CollatzCylinderPacking.Arithmetic.canonical_depth_mean_periodic_of_first_hit_mean",
+        "CollatzCylinderPacking.Arithmetic.canonical_cesaro_no_return_of_first_hit_mean",
+        "CollatzCylinderPacking.Arithmetic.canonical_cesaro_periodic_of_first_hit_mean",
+        "CollatzCylinderPacking.Arithmetic.canonical_abel_no_return_of_first_hit_mean",
+        "CollatzCylinderPacking.Arithmetic.canonical_abel_periodic_of_first_hit_mean",
+        "CollatzCylinderPacking.Arithmetic.canonical_depth_mean_of_first_hit_mean",
+        "CollatzCylinderPacking.Arithmetic.canonical_cesaro_of_first_hit_mean",
+        "CollatzCylinderPacking.Arithmetic.canonical_abel_of_first_hit_mean"
+      ],
+      "imports": [
+        "FirstHitPartialBounds",
+        "ActualGreenSeries",
+        "PeriodicLoopConvolution",
+        "CanonicalCylinderAbel"
+      ]
+    },
+    "ActualFirstHitReconstruction": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.firstHitPartialTerm_nonneg",
+        "CollatzCylinderPacking.Arithmetic.firstHitPartialTerm_of_first_hit",
+        "CollatzCylinderPacking.Arithmetic.firstHitPartialTerm_eq_weight",
+        "CollatzCylinderPacking.Arithmetic.firstHitPartialTerm_summable",
+        "CollatzCylinderPacking.Arithmetic.odd_cumulative_no_return_hasSum",
+        "CollatzCylinderPacking.Arithmetic.arithmetic_cumulative_no_return",
+        "CollatzCylinderPacking.Arithmetic.oddCount_mul_period",
+        "CollatzCylinderPacking.Arithmetic.oddCount_hit_plus_periods",
+        "CollatzCylinderPacking.Arithmetic.odd_cumulative_periodic_hasSum",
+        "CollatzCylinderPacking.Arithmetic.arithmetic_cumulative_periodic"
+      ],
+      "imports": [
+        "ActualWordDepth"
+      ]
+    },
+    "ActualGreenDensityLimit": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.actual_green_density_limit",
+        "CollatzCylinderPacking.Arithmetic.actual_density_harmonic"
+      ],
+      "imports": [
+        "WeightedDirichletAbelian",
+        "GreenCriticalLimit"
       ]
     },
     "ActualGreenSeries": {
@@ -136,6 +258,26 @@
       ],
       "imports": [
         "ActualCycleWeights"
+      ]
+    },
+    "ActualWordDepth": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.valid_word_oddCount",
+        "CollatzCylinderPacking.Arithmetic.valid_word_endpoint_time_injective",
+        "CollatzCylinderPacking.Arithmetic.oddDepthHitTerm_nonneg",
+        "CollatzCylinderPacking.Arithmetic.odd_depth_hit_hasSum",
+        "CollatzCylinderPacking.Arithmetic.odd_depth_hit_tsum",
+        "CollatzCylinderPacking.Arithmetic.odd_depth_zero_hasSum",
+        "CollatzCylinderPacking.Arithmetic.odd_depth_hit_summable",
+        "CollatzCylinderPacking.Arithmetic.oddCumulativeHitTerm_eq_sum",
+        "CollatzCylinderPacking.Arithmetic.odd_cumulative_hit_summable",
+        "CollatzCylinderPacking.Arithmetic.oddCumulativeHitTerm_nonneg",
+        "CollatzCylinderPacking.Arithmetic.arithmetic_cumulative_word_identity"
+      ],
+      "imports": [
+        "ActualCycleWeights",
+        "ArithmeticCylinderGrowth",
+        "FirstHitEndpointTail"
       ]
     },
     "AdmissibleCylinderWords": {
@@ -371,6 +513,28 @@
         "GeometricSequenceSplit"
       ]
     },
+    "CanonicalSyracuseUnique": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.canonical_is_syracuse_stationary",
+        "CollatzCylinderPacking.Arithmetic.stationary_cylinder_real_recursion",
+        "CollatzCylinderPacking.Arithmetic.finite_half_contraction_zero",
+        "CollatzCylinderPacking.Arithmetic.stationary_probability_cylinders_eq",
+        "CollatzCylinderPacking.Arithmetic.syracuse_stationary_probability_unique",
+        "CollatzCylinderPacking.Arithmetic.eq_canonical_of_syracuse_stationary"
+      ],
+      "imports": [
+        "SyracuseCylinderTransitions"
+      ]
+    },
+    "CanonicalTraceFromOddClock": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.actual_canonical_identification_from_odd_density_clock"
+      ],
+      "imports": [
+        "FirstHitHalvingMean",
+        "ActualCanonicalIdentification"
+      ]
+    },
     "CesaroAbelLimit": {
       "declarations": [
         "CollatzCanonical.CesaroAbel.abelKernel_nonneg",
@@ -384,6 +548,49 @@
       "imports": [
         "WeightedKernelLimit",
         "Mathlib.Tactic.FieldSimp"
+      ]
+    },
+    "ClockCutoffBounds": {
+      "declarations": [
+        "CollatzCanonical.ClockSqueeze.logTerm_nonneg",
+        "CollatzCanonical.ClockSqueeze.logTerm_summable",
+        "CollatzCanonical.ClockSqueeze.logTerm_tsum",
+        "CollatzCanonical.ClockSqueeze.clockTerm_nonneg",
+        "CollatzCanonical.ClockSqueeze.clockBadWeight_nonneg",
+        "CollatzCanonical.ClockSqueeze.clock_lower_term",
+        "CollatzCanonical.ClockSqueeze.clock_lower_cumulative",
+        "CollatzCanonical.ClockSqueeze.clockTerm_le_weight",
+        "CollatzCanonical.ClockSqueeze.clock_upper_head_term",
+        "CollatzCanonical.ClockSqueeze.clock_upper_cumulative"
+      ],
+      "imports": [
+        "LogarithmicCumulative",
+        "ClockMeanSqueeze",
+        "Mathlib.Tactic.FieldSimp"
+      ]
+    },
+    "ClockExceptionalDensity": {
+      "declarations": [
+        "CollatzCanonical.ClockSqueeze.clockExceptionIndicator_nonneg",
+        "CollatzCanonical.ClockSqueeze.logarithmicCumulative_le_of_weight_le",
+        "CollatzCanonical.ClockSqueeze.clockBadWeight_le_indicator",
+        "CollatzCanonical.ClockSqueeze.weighted_clock_exception_mean",
+        "CollatzCanonical.ClockSqueeze.weighted_clock_mean_of_exception_density"
+      ],
+      "imports": [
+        "WeightedClockMean"
+      ]
+    },
+    "ClockMeanSqueeze": {
+      "declarations": [
+        "CollatzCanonical.ClockSqueeze.tendsto_of_clock_sandwich",
+        "CollatzCanonical.ClockSqueeze.scaled_cumulative_mean_tendsto",
+        "CollatzCanonical.ClockSqueeze.affine_cumulative_mean_tendsto",
+        "CollatzCanonical.ClockSqueeze.clock_mean_of_cumulative_bounds"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecificLimits.Normed",
+        "Mathlib.Tactic.Linarith"
       ]
     },
     "CompatibleSyracuseResidues": {
@@ -441,6 +648,46 @@
       ],
       "imports": [
         "AdmissibleCylinderWords"
+      ]
+    },
+    "DirichletLaplaceIdentity": {
+      "declarations": [
+        "CollatzCanonical.DirichletAbelian.laplaceIndicatorTerm_integrable",
+        "CollatzCanonical.DirichletAbelian.laplaceIndicatorTerm_nonneg",
+        "CollatzCanonical.DirichletAbelian.integral_laplaceIndicatorTerm",
+        "CollatzCanonical.DirichletAbelian.integral_laplaceIndicatorTerm_norm_summable",
+        "CollatzCanonical.DirichletAbelian.laplaceIndicatorTerm_tsum",
+        "CollatzCanonical.DirichletAbelian.dirichlet_laplace_identity"
+      ],
+      "imports": [
+        "LogarithmicCumulative",
+        "DirichletPowerPerturbation",
+        "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals",
+        "Mathlib.MeasureTheory.Integral.DominatedConvergence"
+      ]
+    },
+    "DirichletPowerPerturbation": {
+      "declarations": [
+        "CollatzCanonical.DirichletAbelian.shifted_power_summable",
+        "CollatzCanonical.DirichletAbelian.weighted_dirichlet_summable",
+        "CollatzCanonical.DirichletAbelian.powered_weight_dirichlet_summable",
+        "CollatzCanonical.DirichletAbelian.normalized_weight_power_error",
+        "CollatzCanonical.DirichletAbelian.powered_dirichlet_limit_of_normalized_zeta_bound"
+      ],
+      "imports": [
+        "WeightPowerPerturbation",
+        "Mathlib.Analysis.PSeries",
+        "Mathlib.Topology.Algebra.InfiniteSum.Ring"
+      ]
+    },
+    "DirichletSeriesReindex": {
+      "declarations": [
+        "CollatzCanonical.DirichletAbelian.powered_dirichlet_summable_all_nat",
+        "CollatzCanonical.DirichletAbelian.powered_dirichlet_reindex",
+        "CollatzCanonical.DirichletAbelian.subtract_one_tendsto_nhdsGT"
+      ],
+      "imports": [
+        "DirichletPowerPerturbation"
       ]
     },
     "DyadicPowerBounds": {
@@ -526,6 +773,17 @@
         "Mathlib.Data.ZMod.Basic"
       ]
     },
+    "FiniteObservableTransport": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.finiteMean_transport",
+        "CollatzCylinderPacking.Arithmetic.finiteMean_pushforward",
+        "CollatzCylinderPacking.Arithmetic.finiteMean_sub_le_fullL1",
+        "CollatzCylinderPacking.Arithmetic.finiteMean_two_passage_bound"
+      ],
+      "imports": [
+        "FirstPassageWeightStability"
+      ]
+    },
     "FinitePathInverseWords": {
       "declarations": [
         "CollatzCylinderPacking.Arithmetic.validBlock_of_odd_step",
@@ -581,6 +839,25 @@
         "FiniteSyracuseSeries"
       ]
     },
+    "FirstHitClockConversion": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.positive_of_hit_positive",
+        "CollatzCylinderPacking.Arithmetic.first_hit_path_injective",
+        "CollatzCylinderPacking.Arithmetic.exists_uniform_first_hit_correction_bound",
+        "CollatzCylinderPacking.Arithmetic.firstHitCorrectionProduct_of_first_hit",
+        "CollatzCylinderPacking.Arithmetic.exists_uniform_first_hit_log_correction_bound",
+        "CollatzCylinderPacking.Arithmetic.first_hit_log_identity",
+        "CollatzCylinderPacking.Arithmetic.first_hit_time_log_identity",
+        "CollatzCylinderPacking.Arithmetic.clock_log_four_thirds",
+        "CollatzCylinderPacking.Arithmetic.first_hit_centered_clock_identity",
+        "CollatzCylinderPacking.Arithmetic.first_hit_clock_conversion"
+      ],
+      "imports": [
+        "ActualClockAdapter",
+        "ActualInverseOperator",
+        "UniformOrbitCorrection"
+      ]
+    },
     "FirstHitEndpointTail": {
       "declarations": [
         "CollatzCylinderPacking.Arithmetic.first_hit_fixed_depth_tail_le",
@@ -590,6 +867,64 @@
       "imports": [
         "FirstHitWordWeights",
         "EndpointTailBounds"
+      ]
+    },
+    "FirstHitHalving": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_self",
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_halving",
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_halving_defect",
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_halving_defect_supported"
+      ],
+      "imports": [
+        "FirstHitWeightTransport"
+      ]
+    },
+    "FirstHitHalvingMean": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.firstHit_halving_cumulative_defect",
+        "CollatzCylinderPacking.Arithmetic.firstHit_odd_full_cumulative_recurrence",
+        "CollatzCylinderPacking.Arithmetic.firstHit_full_mean_of_odd_mean"
+      ],
+      "imports": [
+        "FirstHitHalving",
+        "LogarithmicParity",
+        "OddFullMean",
+        "ActualClockAdapter"
+      ]
+    },
+    "FirstHitPartialBounds": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.firstHitPartialTailTerm_nonneg",
+        "CollatzCylinderPacking.Arithmetic.firstHitPartialTailTerm_summable",
+        "CollatzCylinderPacking.Arithmetic.first_hit_partial_tail_bound",
+        "CollatzCylinderPacking.Arithmetic.first_hit_partial_endpoint_tail",
+        "CollatzCylinderPacking.Arithmetic.firstHitPartialTerm_le_reciprocal",
+        "CollatzCylinderPacking.Arithmetic.positiveReciprocalSum_le_nat",
+        "CollatzCylinderPacking.Arithmetic.positiveReciprocalSum_double",
+        "CollatzCylinderPacking.Arithmetic.positiveReciprocalSum_dyadic",
+        "CollatzCylinderPacking.Arithmetic.firstHitPartialSum_split",
+        "CollatzCylinderPacking.Arithmetic.first_hit_partial_sum_linear_bound",
+        "CollatzCylinderPacking.Arithmetic.first_hit_partial_sum_linear"
+      ],
+      "imports": [
+        "ActualFirstHitReconstruction"
+      ]
+    },
+    "FirstHitWeightTransport": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.pathCorrection_add",
+        "CollatzCylinderPacking.Arithmetic.pathWeight_add",
+        "CollatzCylinderPacking.Arithmetic.hit_iff_suffix_of_prefix_avoids",
+        "CollatzCylinderPacking.Arithmetic.firstHit_prepend",
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_prefix_factorization",
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_prefix_difference",
+        "CollatzCylinderPacking.Arithmetic.reciprocal_product_error_of_exp_bound",
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_uniform_prefix_transport"
+      ],
+      "imports": [
+        "FirstHitWordWeights",
+        "UniformOrbitCorrection"
       ]
     },
     "FirstHitWordWeights": {
@@ -607,6 +942,28 @@
       "imports": [
         "FinitePathInverseWords",
         "OrbitCorrectionProduct"
+      ]
+    },
+    "FirstPassageExpectationTransport": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_finite_passage_transport",
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_two_passage_expectation"
+      ],
+      "imports": [
+        "FiniteObservableTransport"
+      ]
+    },
+    "FirstPassageWeightStability": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.firstHit_prefix_injective",
+        "CollatzCylinderPacking.Arithmetic.OddBarrierPassage.first_hit",
+        "CollatzCylinderPacking.Arithmetic.OddBarrierPassage.prefix_injective",
+        "CollatzCylinderPacking.Arithmetic.OddBarrierPassage.landing_le_of_prefix_hit",
+        "CollatzCylinderPacking.Arithmetic.OddBarrierPassage.prefix_avoids_of_landing_gt",
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_uniform_barrier_stability"
+      ],
+      "imports": [
+        "FirstHitWeightTransport"
       ]
     },
     "GeometricSequenceLaw": {
@@ -734,6 +1091,23 @@
         "Mathlib.Tactic.Positivity"
       ]
     },
+    "LaplaceAbelianLimit": {
+      "declarations": [
+        "CollatzCanonical.LaplaceAbelian.exponential_first_moment_integrable",
+        "CollatzCanonical.LaplaceAbelian.exponential_first_moment",
+        "CollatzCanonical.LaplaceAbelian.scaled_laplace_integral_tendsto",
+        "CollatzCanonical.LaplaceAbelian.laplace_scaling_identity",
+        "CollatzCanonical.LaplaceAbelian.laplace_abelian_limit"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Basic",
+        "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
     "LogTimeMean": {
       "declarations": [
         "CollatzCanonical.TwoScale.logarithmicMean_bound",
@@ -770,6 +1144,108 @@
         "Mathlib.Tactic.Linarith",
         "Mathlib.Tactic.Positivity",
         "Mathlib.Tactic.Ring"
+      ]
+    },
+    "LogarithmicCumulativeIncrements": {
+      "declarations": [
+        "CollatzCanonical.DirichletAbelian.finite_harmonic_lower_bound",
+        "CollatzCanonical.DirichletAbelian.logarithmicCumulative_one_lower",
+        "CollatzCanonical.DirichletAbelian.logarithmicCumulative_complement",
+        "CollatzCanonical.DirichletAbelian.logarithmicCumulative_increment_bound"
+      ],
+      "imports": [
+        "LogarithmicCumulative"
+      ]
+    },
+    "LogarithmicParity": {
+      "declarations": [
+        "CollatzCanonical.Halving.allLogTerm_zero",
+        "CollatzCanonical.Halving.allLogTerm_summable",
+        "CollatzCanonical.Halving.allLogTerm_tsum",
+        "CollatzCanonical.Halving.allLogTerm_even_odd",
+        "CollatzCanonical.Halving.odd_logarithmic_cumulative",
+        "CollatzCanonical.Halving.even_logarithmic_term",
+        "CollatzCanonical.Halving.logarithmic_cumulative_parity"
+      ],
+      "imports": [
+        "ClockCutoffBounds"
+      ]
+    },
+    "OddFullMean": {
+      "declarations": [
+        "CollatzCanonical.OddFullMean.mean_tendsto_twice_of_half_shift"
+      ],
+      "imports": [
+        "TwoScaleAveraging"
+      ]
+    },
+    "OddHarmonicCumulative": {
+      "declarations": [
+        "CollatzCanonical.DirichletAbelian.odd_harmonic_prefix",
+        "CollatzCanonical.DirichletAbelian.oddLogarithmicCumulative_one_eq",
+        "CollatzCanonical.DirichletAbelian.oddLogarithmicCumulative_one_bound",
+        "CollatzCanonical.DirichletAbelian.odd_harmonic_window_mass_bound"
+      ],
+      "imports": [
+        "LogarithmicCumulativeIncrements"
+      ]
+    },
+    "OddTargetFirstPassageTransport": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.OddBarrierPassage.prefix_avoids_odd_target",
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_uniform_barrier_stability_of_odd_target",
+        "CollatzCylinderPacking.Arithmetic.firstHitWeight_odd_target_passage_expectation"
+      ],
+      "imports": [
+        "FirstPassageExpectationTransport"
+      ]
+    },
+    "OddWeightedMeanCriterion": {
+      "declarations": [
+        "CollatzCanonical.DirichletAbelian.odd_weighted_mean_of_normalized_windows",
+        "CollatzCanonical.DirichletAbelian.odd_firstHitWeight_mean_of_normalized_windows"
+      ],
+      "imports": [
+        "OddWindowNormalization",
+        "IncommensurableScales",
+        "FirstHitWordWeights"
+      ]
+    },
+    "OddWindowFiniteProbability": {
+      "declarations": [
+        "CollatzCanonical.DirichletAbelian.oddWindowNumerator_eq_sum",
+        "CollatzCanonical.DirichletAbelian.oddWindowMass_eq_sum",
+        "CollatzCanonical.DirichletAbelian.oddWindowProbability_nonneg",
+        "CollatzCanonical.DirichletAbelian.oddWindowProbability_mass",
+        "CollatzCanonical.DirichletAbelian.finiteMean_oddWindowProbability"
+      ],
+      "imports": [
+        "OddWindowNormalization",
+        "OddTargetFirstPassageTransport"
+      ]
+    },
+    "OddWindowNormalization": {
+      "declarations": [
+        "CollatzCanonical.DirichletAbelian.oddWindowNumerator_bounds",
+        "CollatzCanonical.DirichletAbelian.oddWindowMass_pos",
+        "CollatzCanonical.DirichletAbelian.oddWindowExpectation_bounds",
+        "CollatzCanonical.DirichletAbelian.harmonic_normalization_error",
+        "CollatzCanonical.DirichletAbelian.oddWindowExpectation_normalization",
+        "CollatzCanonical.DirichletAbelian.oddWindowNumerator_div_eq_windowMean",
+        "CollatzCanonical.DirichletAbelian.oddWindow_normalized_comparison",
+        "CollatzCanonical.DirichletAbelian.odd_windowMean_discrepancy_bound"
+      ],
+      "imports": [
+        "OddHarmonicCumulative",
+        "LogTimeMean"
+      ]
+    },
+    "OddWindowPassageComparison": {
+      "declarations": [
+        "CollatzCanonical.DirichletAbelian.oddWindow_firstHitWeight_passage_comparison"
+      ],
+      "imports": [
+        "OddWindowFiniteProbability"
       ]
     },
     "OptimalCylinderPacking": {
@@ -948,6 +1424,20 @@
         "Mathlib.Algebra.Order.Floor.Semiring"
       ]
     },
+    "PadicCylinderDetermining": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.padic_projection_reduce",
+        "CollatzCylinderPacking.Arithmetic.padic_projection_refines",
+        "CollatzCylinderPacking.Arithmetic.padic_cylinders_piSystem",
+        "CollatzCylinderPacking.Arithmetic.padic_residue_approximation_bound",
+        "CollatzCylinderPacking.Arithmetic.padic_residue_approximation_tendsto",
+        "CollatzCylinderPacking.Arithmetic.padic_cylinders_generate_borel",
+        "CollatzCylinderPacking.Arithmetic.padic_probability_eq_of_cylinders"
+      ],
+      "imports": [
+        "CanonicalSyracuseStationarity"
+      ]
+    },
     "PadicSyracuseVariable": {
       "declarations": [
         "CollatzCylinderPacking.Arithmetic.integer_residue_increment",
@@ -977,6 +1467,19 @@
         "Mathlib.Tactic.Linarith",
         "Mathlib.Tactic.Positivity",
         "Mathlib.Tactic.Ring"
+      ]
+    },
+    "SyracuseCylinderTransitions": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.padic_projection_measurable",
+        "CollatzCylinderPacking.Arithmetic.padic_projection_map_eq",
+        "CollatzCylinderPacking.Arithmetic.syracuseH_double",
+        "CollatzCylinderPacking.Arithmetic.syracuseH_cylinder_preimage",
+        "CollatzCylinderPacking.Arithmetic.syracuseJ_projection_approximation",
+        "CollatzCylinderPacking.Arithmetic.syracuseJ_cylinder_measure_eq"
+      ],
+      "imports": [
+        "PadicCylinderDetermining"
       ]
     },
     "SyracuseVariableMeasurable": {
@@ -1080,6 +1583,31 @@
         "Mathlib.Tactic.Linarith",
         "Mathlib.Tactic.Positivity",
         "Mathlib.Tactic.Ring"
+      ]
+    },
+    "WeightedClockMean": {
+      "declarations": [
+        "CollatzCanonical.ClockSqueeze.clockTail_nonneg",
+        "CollatzCanonical.ClockSqueeze.weighted_clock_mean"
+      ],
+      "imports": [
+        "ClockCutoffBounds"
+      ]
+    },
+    "WeightedDirichletAbelian": {
+      "declarations": [
+        "CollatzCanonical.DirichletAbelian.laplace_linear_majorant_integrable",
+        "CollatzCanonical.DirichletAbelian.normalized_laplace_linear_majorant",
+        "CollatzCanonical.DirichletAbelian.logarithmicCumulative_laplace_integrable",
+        "CollatzCanonical.DirichletAbelian.normalized_zeta_le",
+        "CollatzCanonical.DirichletAbelian.weighted_dirichlet_abelian_shifted",
+        "CollatzCanonical.DirichletAbelian.powered_weighted_dirichlet_abelian_shifted",
+        "CollatzCanonical.DirichletAbelian.weighted_dirichlet_abelian"
+      ],
+      "imports": [
+        "DirichletLaplaceIdentity",
+        "LaplaceAbelianLimit",
+        "DirichletSeriesReindex"
       ]
     },
     "WeightedKernelLimit": {
