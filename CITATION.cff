@@ -20,6 +20,13 @@ abstract: >-
   theorem on arbitrarily long consecutive runs with equal finite Collatz
   height and equal odd-step counts. Priority belongs to his earlier preprint,
   doi:10.5281/zenodo.23003526. The finite-pattern formulation is equivalent.
+  Section 10 gives analytic deductions from Tao's first-passage stabilization:
+  logarithmic basin densities, total-variation limits of countable orbit labels,
+  a fixed-target odd-step time law, and equality of the critical Green and
+  cylinder Cesaro and Abel limits at every positive integer. A counting
+  argument determines the optimal exponential rate of the largest stationary
+  cylinder mass. Section 10 is
+  not included in the Lean formalization.
   These results do not prove the Collatz conjecture.
 keywords:
   - Collatz conjecture
@@ -27,6 +34,8 @@ keywords:
   - matrix interpretations
   - Lean
   - formal verification
+  - logarithmic density
+  - first passage
 preferred-citation:
   type: article
   title: "Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system"

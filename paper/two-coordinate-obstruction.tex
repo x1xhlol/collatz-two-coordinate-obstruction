@@ -26,7 +26,7 @@
 \setlength{\parskip}{3pt}
 \setlength{\abovedisplayskip}{7pt plus 2pt minus 2pt}
 \setlength{\belowdisplayskip}{7pt plus 2pt minus 2pt}
-\hypersetup{pdftitle={Two-coordinate obstructions for affine interpretations of the Yolcu--Aaronson--Heule Collatz system},pdfauthor={Lucas Valbuena},pdfsubject={Lean-checked affine obstructions; an independent second proof of Said Duran's equal-height runs theorem}}
+\hypersetup{pdftitle={Two-coordinate obstructions for affine interpretations of the Yolcu--Aaronson--Heule Collatz system},pdfauthor={Lucas Valbuena},pdfsubject={Affine obstructions, an independent second proof of Said Duran's theorem, and first-passage consequences for canonical Collatz traces}}
 
 \begin{document}
 \thispagestyle{plain}
@@ -63,7 +63,16 @@ Section~9 gives an independent second proof of Said Duran's theorem
 on arbitrarily long consecutive runs with equal finite Collatz height
 and equal odd-step counts. Priority for that result belongs to his
 earlier preprint. The finite-pattern formulation is equivalent to the
-run statement. Lean~4 checks the results and their supporting algebra.
+run statement. Lean~4 checks these results and their supporting algebra.
+In a further analytic section, we deduce from Tao's first-passage
+stabilization the existence of logarithmic densities for fixed Collatz
+basins and total-variation limits for countable orbit labels.
+Weighted basin densities identify a finite critical Green limit at
+every positive integer. A first-hit time law then identifies it with
+the cylinder Ces\`aro and Abel limits. A counting argument gives the
+optimal exponential rate of the largest stationary cylinder mass.
+These analytic results have
+ordinary mathematical proofs and are not part of the Lean artifact.
 The unrestricted forward TOP problem, unrestricted higher dimensions,
 and the Collatz conjecture remain unresolved by these results.
 \end{abstract}
@@ -75,8 +84,9 @@ conjecture~\cite[Theorem~3.17]{yah}. Their construction turns a question
 about integer trajectories into a termination problem for eleven rules.
 The system, its arithmetic interpretation, and that equivalence are
 their results. This paper studies restrictions on possible
-matrix-interpretation proofs for their system and a separate
-synchronization property of finite patterns of Collatz starting values.
+matrix-interpretation proofs for their system, a synchronization
+property of finite patterns of Collatz starting values, and analytic
+consequences of first-passage stabilization for integer orbit basins.
 
 Rule removal builds a termination proof in stages. An interpretation
 orients all remaining rules weakly and a nonempty subset strictly;
@@ -133,9 +143,27 @@ formulation is equivalent by restricting a sufficiently long run.
 The translating
 integer is chosen by the construction; convergence from an arbitrary
 prescribed starting value is not a conclusion.
-All these results are formalized in Lean.
+The results through Section~\ref{sec:finite-patterns} are formalized in Lean.
 Appendix~\ref{app:lean-statements} reproduces the definitions and
 exact principal theorem types.
+
+Section~\ref{sec:canonical-traces} takes a different approach, using
+Tao's first-passage stabilization theorem~\cite{Tao2022}. Two
+incommensurable choices of its scale parameter imply logarithmic
+density limits for every fixed basin. An extension to countable orbit
+labels gives convergence in total variation. We control first-hit
+correction products by packing finite distinct orbit segments, obtain
+weighted basin densities, and identify the critical Green limit at
+every positive integer. Elementary local time concentration, transported
+through a sequence of scales, then identifies the cylinder Ces\`aro and
+Abel limits with the same function. We also prove
+\(2^{-k}\le\max_N\pi(N+3^k\mathbb Z_3)\le(2k+3)2^{-k}\)
+for Tao's stationary Syracuse law, determining its optimal uniform
+exponential cylinder exponent. The normalized function tends to
+zero uniformly among large ancestors of any fixed root. A divergent
+forward orbit leaves that fixed basin; controlling its changing
+targets remains a separate requirement. This section consists of
+analytic proofs and is not asserted to have been formalized in Lean.
 
 \subsection{Related work}
 Matrix-interpretation obstructions for Collatz rewriting already appear
@@ -201,6 +229,19 @@ omitting both dynamic-boundary rules. Section~\ref{sec:finite-patterns}
 adds an independent constructive proof and Lean formalization of
 Said Duran's previously established equal-height runs theorem;
 it claims no new existence result.
+
+The analytic input in Section~\ref{sec:canonical-traces} is Tao's
+first-passage stabilization and stationary Syracuse law
+\cite[Proposition~1.11, Lemma~1.12, and Remark~1.13]{Tao2022}.
+The passage to density limits uses two nearby scale parameters;
+the section records the parameter check in the published proof.
+Inselmann's trajectory estimates already give the sharp lower
+first-hit clock on a set of natural density one
+\cite[Theorems~1.1 and~1.10]{Inselmann2024}.
+Our time argument gives the corresponding full fixed-target
+asymptotic outside a set of logarithmic density zero and uses it
+to identify the canonical averages. It does not assert a uniform
+stopping-time bound.
 
 
 \section{The system and the interpretation format}
@@ -3027,7 +3068,13 @@ that an arbitrary prescribed starting integer reaches one or enters
 one of these patterns. In particular, it does not prove the Collatz
 conjecture.
 
+\input{canonical-first-passage-section.tex}
+
 \section{Formal statement, verification, and scope}
+The Lean artifact covers the results in Sections~2--9.
+Section~\ref{sec:canonical-traces} supplies analytic proofs using
+Tao's published theorem; its statements are not included in the
+formal build or axiom audit described here.
 The formalization uses Lean~4 and mathlib~\cite{lean4,mathlib}. The two
 main obstruction statements use matrices and offsets on
 \code{Fin 2} with values in $\R$; the results of
@@ -3105,7 +3152,7 @@ reproduces all three definitions and the principal theorem types.
 
 Each declaration reports only \code{propext}, \code{Classical.choice},
 and \code{Quot.sound}. No additional axiom or proof placeholder is used.
-The artifact contains the dependency closure of the paper's results
+The artifact contains the dependency closure of the paper's Lean results
 and the soundness lemmas below, together with four auxiliary modules
 on conditional stationary-profile obstructions that are not used in
 this paper. There are 137 local modules in total.
@@ -3175,6 +3222,9 @@ does not resolve unrestricted forward \textsc{top} removal.
 The finite-pattern theorem constructs infinitely many suitable
 translates of each prescribed pattern, but makes no convergence claim
 for all translates or for an arbitrary fixed starting value.
+The analytic section establishes density and canonical-trace limits,
+without proving positivity at every unit, ruling out positive-density
+divergent components, or excluding additional positive cycles.
 None of these results proves the Collatz conjecture.
 
 \section*{Acknowledgments}
@@ -3185,12 +3235,26 @@ uses Lean and mathlib, and I thank their developers and contributors.
 \section*{Use of AI}
 OpenAI Codex was used extensively for mathematical exploration,
 development of the Lean proofs and verification scripts, and preparation
-and revision of this manuscript. The proof claims are supported by the
-accompanying Lean artifacts, rather than by the system's assertions.
+and revision of this manuscript. The results of Sections~2--9 have
+the accompanying Lean artifacts. Section~\ref{sec:canonical-traces}
+has mathematical proofs with explicitly cited analytic inputs; it has
+not been checked by Lean. Automated review of those proofs does not
+constitute external peer review.
 This disclosure does not imply review or endorsement by the authors
 of the underlying rewriting system.
 
 \begin{thebibliography}{99}\small\raggedright
+\bibitem{Tao2022} T. Tao.
+\emph{Almost all orbits of the Collatz map attain almost bounded values}.
+Forum of Mathematics, Pi \textbf{10}, e12, 2022.
+\url{https://doi.org/10.1017/fmp.2022.8}.
+Numbered references follow arXiv v7:
+\url{https://arxiv.org/abs/1909.03562v7}.
+\bibitem{Inselmann2024} M. Inselmann.
+\emph{An Approximation of the Collatz Map and a Lower Bound for its
+Average Total Stopping Time}.
+Preprint, arXiv:2402.03276v3, 2024.
+\url{https://arxiv.org/abs/2402.03276v3}.
 \bibitem{yah} E. Yolcu, S. Aaronson, and M. J. H. Heule.
 \emph{An Automated Approach to the Collatz Conjecture}.
 Journal of Automated Reasoning \textbf{67}(2), Article 15, 2023.

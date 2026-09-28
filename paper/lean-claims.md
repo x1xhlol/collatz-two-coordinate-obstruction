@@ -1,7 +1,11 @@
 # Paper claims and Lean declarations
 
-This companion maps the results and substantive proof steps in
-[the paper](two-coordinate-obstruction.tex) to their Lean sources.
+This companion maps the formalized results and substantive proof steps in
+Sections 2–9 of [the paper](two-coordinate-obstruction.tex) to their Lean sources.
+Section 10's first-passage, density, time, and canonical-limit arguments are
+ordinary mathematical proofs and are **not included in the Lean artifact**.
+The verification report below does not establish those analytic results or
+formalize their external input from Tao's theorem.
 The paper states the supporting classifications and gives the algebraic arguments used in the proof. The table below maps those steps to the formal declarations. The [combined verification report](../verification/rebuild.json) records a fresh build of all 137 local modules and an axiom audit of 633 public theorems and lemmas plus 93 definitions. Only `propext`, `Classical.choice`, and `Quot.sound` are permitted. The standalone entry point is [verify.py](../verify.py).
 
 The fixed-decrement soundness remarks in Section 2.1 are formalized in [FullTwoSoundness.lean](../formal/FullTwoSoundness.lean), namespace `CollatzResearch.FullTwoSoundness`. The declarations `admissible_preserves_gap`, `weak_rule_gives_gap`, and `gap_wellFounded` are included in the combined audit. The general rule-removal theorem and the prior equivalence with Collatz are cited, not re-formalized by this artifact.

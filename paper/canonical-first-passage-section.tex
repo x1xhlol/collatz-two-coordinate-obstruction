@@ -1,0 +1,1272 @@
+\section{First-passage limits and canonical integer traces}
+\label{sec:canonical-traces}
+
+We now use Tao's first-passage stabilization theorem to study fixed
+integer basins. The arguments in this section are ordinary analytic
+proofs; they are not part of the Lean formalization. We prove
+existence of logarithmic basin densities, total-variation limits for
+countable orbit labels, and equality of two canonical critical traces
+at every positive integer. A final proposition characterizes the
+global sublinearity condition that remains unresolved.
+
+Continue to use the shortcut map \(T\) from
+Section~\ref{sec:finite-patterns}. Write
+\[
+ \mathcal B_N=\{q\ge1:T^j(q)=N\text{ for some }j\ge0\},
+ \qquad
+ H_E(X)=\sum_{\substack{q\le X\\q\in E}}\frac1q.
+\]
+The logarithmic density of \(E\), when it exists, is
+\(d_{\log}(E)=\lim_{X\to\infty}H_E(X)/\log X\).
+For odd sets we also use relative logarithmic density, whose
+denominator is
+\[
+ H_{\mathrm{odd}}(X)=\frac12\log X+O(1).
+\]
+A target is \emph{periodic} if it lies on a finite cycle; a
+nonperiodic target can still be eventually periodic. A
+\emph{divergent orbit} never enters a cycle. Its integer states
+are distinct and tend to infinity.
+Two positive integers belong to the same \emph{tail component}
+when their forward orbits eventually meet.
+
+\subsection{Uniform control of finite distinct trajectories}
+
+For a finite shortcut path \(x_0,\ldots,x_\ell\), define its
+correction product, excluding the terminal state, by
+\[
+ P(x_0,\ldots,x_\ell)
+ =\prod_{\substack{0\le i<\ell\\x_i\ {\rm odd}}}
+       \left(1+\frac1{3x_i}\right).
+\]
+If the path has \(r\) odd steps, then
+\begin{equation}\label{eq:ct-product}
+ x_\ell=\frac{3^r}{2^\ell}x_0P(x_0,\ldots,x_\ell).
+\end{equation}
+The bound below is uniform in the length and endpoints of a
+distinct path.
+
+\begin{lemma}\label{lem:ct-packing}
+Put
+\[
+ \beta=H_2(\log_3 2)<1,\qquad
+ H_2(t)=-t\log_2t-(1-t)\log_2(1-t).
+\]
+For every \(b\in(\beta,1)\), there are constants \(K_b,R_b<\infty\)
+such that every finite path of distinct positive states satisfies
+\begin{align}
+ \#\{i:x_i\le X\}&\le K_bX^b\qquad(X\ge1),\label{eq:ct-packing}\\
+ \sum_{\substack{i\\x_i\ge M}}\frac1{x_i}
+     &\le R_bM^{b-1}\qquad(M\ge1).\label{eq:ct-packing-tail}
+\end{align}
+In particular there is a constant \(P_0<\infty\), independent of
+the path, for which \(1\le P\le P_0\).
+\end{lemma}
+\begin{proof}
+Choose \(\rho\in(1/2,\log_3 2)\) with \(H_2(\rho)=b\), and put
+\(c=\rho\log_2 3<1\). Let
+\(A(X)=\#\{i:x_i\le X\}\) and \(h=\lfloor\log_2X\rfloor\).
+Length-\(h\) parity words correspond bijectively to residue classes
+modulo \(2^h\), by successive determination of the parity at each
+step. A word with \(r\) odd positions has affine slope
+\(3^r/2^h\) and offset at most \((3/2)^r-1\). Hence a start at
+most \(X\) with \(r\le\rho h\) has its \(h\)-step image below
+\(3\cdot3^{\rho h}\le3X^c\).
+
+Images whose complete \(h\)-step windows lie in the segment are
+distinct. At most \(h\) indices are too close to its terminal
+endpoint. The elementary binomial entropy bound gives at most
+\(2^{hH_2(\rho)}\) words with more than \(\rho h\) odd positions,
+and each residue class contains at most two possible starts in
+\([1,X]\). Consequently
+\[
+ A(X)\le A(3X^c)+2X^b+\lfloor\log_2X\rfloor.
+\]
+This also holds if the segment has length less than \(h\).
+Choose \(X_0\) so large that
+\(3^bX^{-b(1-c)}\le1/2\) and \(3X^c<X\) for \(X\ge X_0\).
+Since
+\(\log_2X\le X^b/(be\log2)\), strong induction on integer \(X\),
+using \(A(X)\le X\) in the initial range, proves
+\eqref{eq:ct-packing} for a sufficiently large constant \(K_b\).
+Taking integer parts handles real \(X\).
+
+Divide the states at least \(M\) into the shells
+\([2^jM,2^{j+1}M)\). Equation~\eqref{eq:ct-packing} gives
+\[
+ \sum_{x_i\ge M}\frac1{x_i}
+ \le K_b2^bM^{b-1}\sum_{j\ge0}2^{j(b-1)}
+ =:R_bM^{b-1}.
+\]
+Finally, \(\log P\le\frac13\sum_i1/x_i\), so one may take
+\(P_0=\exp(R_b/3)\).
+\end{proof}
+
+The same tail estimate applies to any subset of the states.
+In particular, if the odd source states of a distinct path all
+exceed \(M\), its correction product is
+\begin{equation}\label{eq:ct-prefix-product}
+ 1\le P\le\exp\!\left(\frac{R_b}{3}M^{b-1}\right).
+\end{equation}
+The intervening even states need not exceed \(M\).
+
+\subsection{The first-passage input at two scales}
+
+On positive odd integers let
+\[
+ S(q)=\frac{3q+1}{2^{v_2(3q+1)}},\qquad
+ \lambda=\log(4/3),\qquad \delta=\frac{\lambda}{2}.
+\]
+Let \(\tau_x(q)\) be the first \(S\)-time at a value at most \(x\),
+with value infinity on failure. Write \(\operatorname{Pass}_x(q)\)
+for that landing value, and give it the default value \(1\) on
+failure. For \(a>1\), let \(Q_y^{(a)}\) have logarithmic
+distribution on the odd integers in \([y,y^a]\).
+The default convention ensures the exact identity
+\begin{equation}\label{eq:ct-pass-compose}
+ \operatorname{Pass}_M\circ\operatorname{Pass}_x
+ =\operatorname{Pass}_M\qquad(1\le M\le x),
+\end{equation}
+including trajectories on which passage fails.
+
+\begin{proposition}[Tao's stabilization at the required scales]
+\label{prop:ct-tao-input}
+For each
+\[
+ a\in[1.0005,1.001]
+\]
+there are \(C,c>0\) such that, for all sufficiently large \(x\),
+\begin{align}
+ \Pr\bigl(\tau_x(Q_y^{(a)})=\infty\bigr)&\le Cx^{-c},
+       &&y=x^a,\ x^{a^2},\label{eq:ct-tao-failure}\\
+ d_{\rm TV}\!\left(
+ \mathcal L(\operatorname{Pass}_x(Q_{x^a}^{(a)})),
+ \mathcal L(\operatorname{Pass}_x(Q_{x^{a^2}}^{(a)}))
+ \right)&\le C(\log x)^{-c}.\label{eq:ct-tao-tv}
+\end{align}
+\end{proposition}
+\begin{proof}
+For \(a=1.001\), these are
+\cite[Proposition~1.11, equations~(1.19)--(1.20)]{Tao2022}.
+We record the parameter check needed to use a second scale.
+In the proof in \cite[Section~5]{Tao2022}, retain
+\[
+ n_0=\left\lfloor\frac{\log x}{10\log2}\right\rfloor,
+ \qquad
+ m_0=\left\lfloor\frac{a-1}{100}\log x\right\rfloor.
+\]
+The input Propositions~1.9 and~1.14 there are independent of \(a\).
+All numerical margins in Section~5 remain strict, uniformly on the
+displayed compact interval. Reduction of either source modulo
+\(2^{3n_0}\) has error
+\(O(x^{0.3-a}/\log x)\), smaller than the required \(x^{-0.3}\).
+The short-time upper exponent used after equation~(5.5) is at most
+\[
+ a^3+\frac{\log_2 3-1.9}{10}<0.971501<0.99.
+\]
+The passage window in equation~(5.9) has endpoints of order
+\((a-1)\log x/\lambda\) and
+\((a^3-1)\log x/\lambda\). Its lower endpoint is much larger
+than \(2m_0\), and its upper endpoint is below
+\(0.01044\log x<n_0\). The buffers
+\((\log x)^{0.6},(\log x)^{0.7},(\log x)^{0.8}\) are smaller
+than these linear margins. The affine offset is at most
+\(3^{n_0}=O(x^{(\log_2 3)/10})\), whereas the main term in the
+regular-valuation regime is at least
+\[
+ x^{\,a+(\log_2(3/4))/10-o(1)}.
+\]
+Thus the relative offset estimates used in equations~(5.13)--(5.19)
+also retain their margins.
+
+For completeness, the residue summation in Lemma~5.3 can be bounded
+uniformly without discarding the factor \(a_{m_0}\).
+With \(A=a_1+\cdots+a_{m_0}\), the ordinary contribution is bounded
+by a constant times \(2^{-A}a_{m_0}\), whose sum over all positive
+tuples is \(2\). The additional large-total contribution is at most
+\[
+ 3^n\Pr(G_1+\cdots+G_{m_0}>\tfrac12\log_2x),
+ \qquad \Pr(G_i=j)=2^{-j}.
+\]
+Exponential Markov at parameter \((\log2)/2\) bounds it by
+\[
+ x^{(\log_2 3)/10-1/4}(1+\sqrt2)^{m_0}=O(x^{-\eta})
+\]
+for some \(\eta>0\), since \(m_0\le10^{-5}\log x\).
+Finally \(m_0\asymp\log x\), the passage-window count and source
+normalization have the same factor \((a-1)\log y\), and
+\(n-m_0\ge m_0\). The application of Proposition~1.14 at depth
+\(m_0\), and the remaining concentration errors in that proof,
+therefore give the same negative power of \(\log x\).
+This verifies the stated parameter range by the published proof;
+it is not an additional hypothesis about its printed proposition.
+\end{proof}
+
+We use
+\begin{equation}\label{eq:ct-two-scales}
+ a=\frac{1001}{1000},\qquad b=\frac{2001}{2000}.
+\end{equation}
+Their logarithms have irrational ratio: equality of positive integer
+powers would contradict the exponent of the prime \(7\).
+
+\begin{lemma}[Two-scale averaging]\label{lem:ct-two-scale}
+Let \(V\) be a Banach space and \(A:[t_0,\infty)\to V\) satisfy
+\[
+ \|A(t)\|\le Lt+C,\qquad
+ \|A(t+h)-A(t)\|\le Lh+C\quad(h\ge0).
+\]
+For \(u>1\), put
+\[
+ p_u(t)=\frac{A(ut)-A(t)}{(u-1)t}.
+\]
+Suppose \(\log a/\log b\notin\mathbb Q\) and, uniformly as
+\(t\to\infty\),
+\[
+ \|p_a(at)-p_a(t)\|=O(t^{-c})\quad(c>0),\qquad
+ \|p_b(bt)-p_b(t)\|=o(1).
+\]
+Then \(A(t)/t\) converges in norm. Its error is
+\(O(t^{-\eta})\) for every \(0<\eta<\min\{c,1\}\).
+\end{lemma}
+\begin{proof}
+Set \(B(u)=e^{-u}A(e^u)\) and \(\ell=\log a\).
+The increment bounds imply boundedness of \(B\) and
+\[
+ \|B(v)-B(u)\|\le2L(v-u)+O(e^{-u})\quad(v\ge u).
+\]
+For
+\[
+ Q(u)=\frac{aB(u+\ell)-B(u)}{a-1}
+\]
+the first scale estimate reads
+\(\|Q(u+\ell)-Q(u)\|=O(e^{-cu})\).
+The geometric tail is summable, so completeness gives
+\[
+ P(u)=\lim_{k\to\infty}Q(u+k\ell),\quad
+ P(u+\ell)=P(u),\quad Q(u)-P(u)=O(e^{-cu}).
+\]
+Extend \(P\) periodically to all real \(u\). The exact recurrence
+\[
+ (B-P)(u+\ell)
+ =a^{-1}(B-P)(u)+(1-a^{-1})(Q-P)(u)
+\]
+shows, by iteration from one fixed interval of length \(\ell\),
+that \(B(u)-P(u)=O(e^{-\eta u})\) for every
+\(\eta<\min\{c,1\}\). The modulus for \(B\), shifted by \(k\ell\)
+and then passed to the limit, makes \(P\) Lipschitz.
+
+Put \(m=\log b\). The second scale estimate gives
+\[
+ bB(u+2m)-(b+1)B(u+m)+B(u)\longrightarrow0.
+\]
+Replace \(u\) by \(u+k\ell\) and use the preceding convergence to
+obtain the same expression with \(P\) equal to zero.
+For \(D(u)=P(u+m)-P(u)\), this says \(bD(u+m)=D(u)\).
+Backward iteration and boundedness force \(D=0\).
+Thus \(P\) has the two incommensurable periods \(\ell,m\);
+continuity makes it constant. The asserted convergence and rate follow.
+\end{proof}
+
+\subsection{Elementary local passage estimates}
+
+The following estimates concern the full unstopped valuation prefix.
+They do not assume independence after a hitting time.
+
+\begin{lemma}\label{lem:ct-local}
+Uniformly for \(a\in[1.0005,1.001]\), let \(Q\) have logarithmic
+distribution on the odd integers in either
+\([x^a,x^{a^2}]\) or \([x^{a^2},x^{a^3}]\).
+There are \(C,c>0\) such that
+\begin{align}
+ \Pr\!\left(\tau_x(Q)=\infty\ \text{or}\
+ \left|\tau_x(Q)-\frac{\log(Q/x)}{\lambda}\right|
+       >C(\log x)^{3/5}\right)
+ &\le C e^{-c(\log x)^{1/5}},\label{eq:ct-local-time}\\
+ \Pr\bigl(\operatorname{Pass}_x(Q)\le\sqrt x\bigr)
+ &\le Cx^{-c},\label{eq:ct-small-landing}\\
+ \sup_{m\le x}\Pr\bigl(\operatorname{Pass}_x(Q)=m\bigr)
+ &\le Cx^{-c}.\label{eq:ct-local-atoms}
+\end{align}
+The last two estimates include the default atom on passage failure.
+\end{lemma}
+\begin{proof}
+Put
+\[
+ R=\lfloor0.1\log x\rfloor,\qquad
+ B=\lfloor\tfrac12\log_2x\rfloor,\qquad
+ E=(\log x)^{3/5}.
+\]
+For the actual trajectory let
+\[
+ a_i=v_2(3S^{i-1}(Q)+1),\qquad A_k=\sum_{i=1}^k a_i.
+\]
+Reduction of either source law modulo \(2^{B+1}\) differs in total
+variation from the uniform odd-residue law by
+\begin{equation}\label{eq:ct-residue-error}
+ O\!\left(\frac{2^B}{x^a\log x}\right).
+\end{equation}
+Indeed the reciprocal sum in each residue class differs from its
+integral by \(O(x^{-a})\), while the source harmonic mass is a
+positive constant times \(\log x\), uniformly in the stated range.
+A prescribed positive valuation tuple of total \(A_R\le B\)
+occupies one odd residue class modulo \(2^{A_R+1}\); under the
+uniform law its probability is \(2^{-A_R}\). These tuples are
+disjoint. Their probabilities, and that of their complement, are
+therefore the same as for independent geometric variables
+\(\Pr(G_i=j)=2^{-j}\), up to \eqref{eq:ct-residue-error}.
+
+The moment generating function
+\[
+ \mathbb E e^{tG_i}=\frac{e^t}{2-e^t}\qquad(t<\log2)
+\]
+gives
+\[
+ \Pr\left(\left|\sum_{i=1}^kG_i-2k\right|>E\right)
+ \le2\exp\!\left(-c\min\{E^2/k,E\}\right).
+\]
+A union bound for \(k\le R\), and \(B/R\to5/\log2>7\), show
+that, outside probability \(Ce^{-c(\log x)^{1/5}}\),
+\begin{equation}\label{eq:ct-regular-prefix}
+ A_R\le B,\qquad |A_k-2k|\le E\quad(0\le k\le R).
+\end{equation}
+Here the geometric upper tail \(A_R>B\) and the residue error are
+polynomially small in \(x\).
+
+The exact affine formula is
+\[
+ S^k(Q)=3^k2^{-A_k}Q+F_k,\qquad 0\le F_k\le3^k.
+\]
+On \eqref{eq:ct-regular-prefix}, its main term is at least
+\(x^a(3/4)^R2^{-E}\), so the relative offset is at most
+\[
+ x^{0.1\log4-a}2^E\le x^{-4/5}
+\]
+for sufficiently large \(x\). Thus, uniformly for \(k\le R\),
+\begin{equation}\label{eq:ct-local-log-path}
+ \left|\log S^k(Q)-(\log Q-\lambda k)\right|\le E.
+\end{equation}
+The central crossing time satisfies
+\[
+ \frac{a-1}{\lambda}\log x
+ \le \frac{\log(Q/x)}{\lambda}
+ \le\frac{a^3-1}{\lambda}\log x
+ <0.01044\log x.
+\]
+Bracketing it by an error \(2E/\lambda+1\) stays inside
+\([0,R]\). Equation~\eqref{eq:ct-local-log-path} rules out an
+earlier crossing and guarantees a crossing by the upper endpoint.
+This proves \eqref{eq:ct-local-time}. It also bounds the landing
+below by \(x\exp(-3E-\lambda)\).
+
+For the polynomial estimates, we use a less precise good event.
+If \(\tau_x(Q)>R\), the product identity, with all its first \(R\)
+odd source states exceeding \(x\), implies
+\[
+ A_R\log2
+ <(a^3-1)\log x+R\log3+\frac{R}{3x}
+ \le1.8R\log2
+\]
+for large \(x\). The limiting upper bound for \(A_R/R\) is at most
+\[
+ \log_2 3+\frac{1.001^3-1}{0.1\log2}<1.63.
+\]
+Since \(B\ge6R\) eventually, the geometric lower and upper tails
+and \eqref{eq:ct-residue-error} give
+\begin{equation}\label{eq:ct-poly-good}
+ \Pr(\tau_x(Q)>R)+\Pr(A_R>B)\le Cx^{-c}.
+\end{equation}
+On the complementary event, a landing at most \(\sqrt x\) would
+require the last valuation, whose source is greater than \(x\),
+to exceed \(\frac12\log_2x+\log_2 3>B\). This proves
+\eqref{eq:ct-small-landing}, including failure.
+
+Finally fix a landing value \(m\). On the event
+\(\tau_x(Q)\le R,\ A_R\le B\), its stopped positive valuation
+tuple has total at most \(B\). The affine formula shows that this
+tuple and \(m\) determine at most one starting integer.
+There are \(\sum_{A=1}^B2^{A-1}<2^B\) such tuples, allowing all
+lengths. Each source atom has probability
+\(O(x^{-a}/\log x)\). Adding \eqref{eq:ct-poly-good} proves
+\eqref{eq:ct-local-atoms}.
+\end{proof}
+
+\subsection{Logarithmic laws for basins and countable labels}
+
+\begin{proposition}\label{prop:ct-label-laws}
+Let \(I\) be countable and let \(F\) assign a label in \(I\) to
+each positive odd integer. Suppose that, for all sufficiently large
+\(x\), successful first passage preserves its label:
+\[
+ F(q)=F(\operatorname{Pass}_x(q))
+ \quad\text{whenever }\tau_x(q)<\infty.
+\]
+Then the law of \(F\) under logarithmically uniform odd starts in
+\([1,X]\) converges in total variation to a probability on \(I\).
+This applies to tail components, global orbit minima, and every
+fixed first-passage location. Their limits also hold for all positive
+starts, with the same probabilities, after applying \(F\) to the odd
+part.
+\end{proposition}
+\begin{proof}
+In \(V=\ell^1(I)\), define
+\[
+ A_F(t)=\sum_{\substack{q\le e^t\\q\ {\rm odd}}}
+                       \frac{\delta_{F(q)}}q.
+\]
+Its norm is \(t/2+O(1)\), and its increments have norm
+at most \(h/2+O(e^{-t})\). Push
+\eqref{eq:ct-tao-tv} forward under \(F\); the discrepancy between
+the original and first-passage labels is supported on passage
+failure, controlled by \eqref{eq:ct-tao-failure}.
+The harmonic mass of the odd interval \([e^t,e^{at}]\) is
+\((a-1)t/2+O(e^{-t})\). With \(t=a\log x\), normalization gives
+\[
+ \|p_a(at)-p_a(t)\|_1=O(t^{-c})
+\]
+for each of the two scales in \eqref{eq:ct-two-scales}.
+Lemma~\ref{lem:ct-two-scale} gives norm convergence of \(A_F(t)/t\).
+The limiting vector is nonnegative and has norm \(1/2\); after
+multiplication by two it is a probability. Norm convergence gives
+total-variation convergence, uniformly over every subset of labels.
+In particular there is no loss of mass among countably many labels.
+
+For a component label, successful passage stays in the same
+component. For the global orbit minimum, every odd state before
+passage exceeds \(x\), while the landing is at most \(x\);
+an even intermediate state is followed by an odd state no larger
+than itself. The minimum is therefore preserved. For the label
+\(F=\operatorname{Pass}_M\) at fixed \(M\), use
+\eqref{eq:ct-pass-compose} for \(x\ge M\).
+
+These labels, extended by taking the odd part, are invariant under
+doubling. Write a positive start as \(2^hq\), \(q\) odd.
+For any fixed cutoff \(H\), the corresponding harmonic sum of
+label vectors is
+\[
+ \sum_{h=0}^H2^{-h}A_F(\log X-h\log2).
+\]
+The omitted starts are multiples of \(2^{H+1}\), with logarithmic
+proportion tending to \(2^{-H-1}\). First pass \(X\to\infty\),
+then \(H\to\infty\), to obtain the same limiting probability.
+\end{proof}
+
+Let \(\mu_{\rm tail}\) and \(\mu_{\min}\) denote the component
+and minimum probabilities. In particular every union of tail
+components has a logarithmic density, and
+\begin{equation}\label{eq:ct-min-tight}
+ d_{\log}\{q:\min_{j\ge0}T^j(q)>M\}
+       =\mu_{\min}((M,\infty))\longrightarrow0.
+\end{equation}
+For fixed \(M\), let \(\Lambda_M\) denote the limiting law of
+\(\operatorname{Pass}_M\) on odd starts. Equation
+\eqref{eq:ct-pass-compose} implies
+\[
+ (\operatorname{Pass}_L)_*\Lambda_M=\Lambda_L\qquad(L\le M).
+\]
+These probabilities do not determine the mass of any specified
+component or the probability of convergence to one.
+
+\begin{proposition}\label{prop:ct-basin-density}
+Every fixed shortcut basin \(\mathcal B_N\) has a logarithmic density.
+\end{proposition}
+\begin{proof}
+On successful first passage with \(x\ge N\), its membership can
+change only if the even target \(N\) is visited during the last
+halving chain and then omitted by the Syracuse acceleration.
+That event has landing \(\operatorname{oddpart}(N)\), and for
+\(x\ge N^2\) it is included in
+\(\operatorname{Pass}_x\le\sqrt x\).
+Thus for both source laws in Proposition~\ref{prop:ct-tao-input},
+the expectations of
+\(\mathbf1_{\mathcal B_N}(Q)\) and
+\(\mathbf1_{\mathcal B_N}(\operatorname{Pass}_x(Q))\)
+differ by \(O(x^{-c})\), using failure and
+\eqref{eq:ct-small-landing}. For an odd target there is no skipped
+crossing. This argument also covers the default value for a
+periodic target such as one.
+
+Applying \eqref{eq:ct-tao-tv} to the bounded indicator gives the
+two-scale estimates for
+\[
+ A_N(t)=\sum_{\substack{q\le e^t\\q\ {\rm odd},\,q\in\mathcal B_N}}
+                         \frac1q.
+\]
+Lemma~\ref{lem:ct-two-scale} proves convergence of \(2A_N(t)/t\).
+For a start \(2^hq\), membership agrees with that of its odd part
+unless its initial halving chain hits \(N\). These exceptional
+starts lie on the single ray
+\(\{2^h\operatorname{oddpart}(N):h\ge0\}\), of finite reciprocal
+sum. The finite-valuation decomposition in the preceding proof
+therefore gives the all-positive density with the same value.
+\end{proof}
+
+\subsection{Weighted densities and the Green limit}
+
+For \(q\in\mathcal B_N\), let \(P_N(q)\) be the correction product
+on the path to its first visit to \(N\), and define
+\[
+ w_N(q)=P_N(q)^{-1}\quad(q\in\mathcal B_N),\qquad
+ w_N(q)=0\quad(q\notin\mathcal B_N).
+\]
+The first-hit path is distinct, even when \(N\) is periodic.
+Lemma~\ref{lem:ct-packing} gives
+\begin{equation}\label{eq:ct-weight-bounds}
+ P_0^{-1}\mathbf1_{\mathcal B_N}
+          \le w_N\le\mathbf1_{\mathcal B_N}.
+\end{equation}
+
+\begin{proposition}\label{prop:ct-weighted-density}
+For every \(N\ge1\), the limit
+\[
+ D_N=\lim_{X\to\infty}\frac1{\log X}
+                    \sum_{q\le X}\frac{w_N(q)}q
+\]
+exists. The odd harmonic sum has limit \(D_N/2\), and
+\begin{equation}\label{eq:ct-D-density}
+ P_0^{-1}d_{\log}(\mathcal B_N)
+       \le D_N\le d_{\log}(\mathcal B_N).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Fix a packing exponent \(\gamma\in(\beta,1)\).
+On successful passage below \(x\), outside a skipped even target,
+first-hit paths concatenate:
+\[
+ w_N(q)=\frac{w_N(\operatorname{Pass}_x(q))}{P_{\rm prefix}}.
+\]
+This identity includes the case where both weights are zero.
+The prefix is distinct and its odd source states exceed \(x\).
+By \eqref{eq:ct-prefix-product},
+\[
+ |w_N(q)-w_N(\operatorname{Pass}_x(q))|
+                         \le Cx^{\gamma-1}.
+\]
+Use the bound one on failure or a skipped crossing. For the two
+source laws, their probabilities are \(O(x^{-c})\), as in
+Proposition~\ref{prop:ct-basin-density}. Hence, for fixed \(N\)
+and all sufficiently large \(x\),
+\[
+ |\mathbb E w_N(Q)-\mathbb E w_N(\operatorname{Pass}_x(Q))|
+                    \le Cx^{\gamma-1}+Cx^{-c}.
+\]
+Combined with \eqref{eq:ct-tao-tv}, this proves the two-scale
+estimates for
+\[
+ A(t)=\sum_{\substack{q\le e^t\\q\ {\rm odd}}}\frac{w_N(q)}q.
+\]
+This nonnegative scalar function satisfies the increment bounds in
+Lemma~\ref{lem:ct-two-scale}, which therefore gives its limiting mean.
+
+Initial halvings contribute no correction factor. Thus
+\(w_N(2^hq)=w_N(q)\) outside the same single exceptional ray as
+in the preceding proof. Its reciprocal sum is finite. The
+finite-valuation decomposition gives the full mean \(D_N\) and
+the factor \(1/2\) for the odd mean. Finally use
+\eqref{eq:ct-weight-bounds}.
+\end{proof}
+
+For \(1<s<2\), define the positive inverse operator and its
+Green sum by
+\begin{align}
+ (\mathcal R_s f)(v)
+   &=2^{-s}f(2v)
+      +(3/2)^s\mathbf1_{v\equiv2\ ({\rm mod}\ 3)}
+                                f((2v-1)/3),\label{eq:ct-Rs}\\
+ M_s(v)&=\sum_{j\ge0}\mathcal R_s^j\mathbf1(v),\qquad
+ \kappa_s=2^{-s}+\frac{(3/2)^s}{3},\qquad
+ C_s(v)=(1-\kappa_s)M_s(v).\label{eq:ct-Green-def}
+\end{align}
+Strict convexity gives \(\kappa_s<1\) on \(1<s<2\), and
+\begin{equation}\label{eq:ct-kappa-expansion}
+ 1-\kappa_s=\delta(s-1)+O((s-1)^2).
+\end{equation}
+If \(N\) is periodic, let \(\ell_N\) be its shortcut period,
+\(r_N\) its number of odd steps, and
+\(\beta_N=3^{r_N}/2^{\ell_N}\). The return map has a strictly
+positive affine offset, so \(0<\beta_N<1\). Put
+\[
+ B_N=
+ \begin{cases}
+ 1,&N\text{ nonperiodic},\\
+ (1-\beta_N)^{-1},&N\text{ periodic}.
+ \end{cases}
+\]
+This scalar \(B_N\) is distinct from the basin \(\mathcal B_N\).
+
+\begin{theorem}\label{thm:ct-Green}
+At every positive integer the Green sum is finite for \(1<s<2\),
+and its critical limit exists:
+\begin{equation}\label{eq:ct-Green-value}
+ g(N):=\lim_{s\downarrow1}C_s(N)=\delta B_N N D_N.
+\end{equation}
+It is a finite nonnegative function satisfying
+\begin{equation}\label{eq:ct-critical-harmonic}
+ g(v)=\frac12g(2v)
+       +\frac32\mathbf1_{v\equiv2\ ({\rm mod}\ 3)}g((2v-1)/3).
+\end{equation}
+Moreover \(g(N)>0\) if and only if \(d_{\log}(\mathcal B_N)>0\).
+\end{theorem}
+\begin{proof}
+The inverse word corresponding to the first hit from \(q\) has
+weight \((N/(qP_N(q)))^s\), by \eqref{eq:ct-product}.
+At a nonperiodic target no endpoint can hit it at two different
+times. At a periodic target all later hits are obtained by complete
+cycle traversals. Consequently
+\begin{equation}\label{eq:ct-first-hit-Dirichlet}
+ M_s(N)=
+ \begin{cases}
+ N^s\displaystyle\sum_{q\ge1}w_N(q)^s q^{-s},
+                       &N\text{ nonperiodic},\\[4pt]
+ \displaystyle\frac{N^s}{1-\beta_N^s}
+          \sum_{q\ge1}w_N(q)^s q^{-s},
+                       &N\text{ periodic}.
+ \end{cases}
+\end{equation}
+This proves finiteness by comparison with \(\zeta(s)\).
+
+Write \(A(t)=\sum_{q\le e^t}w_N(q)/q=D_Nt+o(t)\).
+For \(\varepsilon=s-1>0\), Stieltjes integration by parts gives
+\[
+ \varepsilon\sum_{q\ge1}w_N(q)q^{-1-\varepsilon}
+       =\varepsilon^2\int_0^\infty e^{-\varepsilon t}A(t)\,dt
+       \longrightarrow D_N.
+\]
+The convention at zero includes a possible atom \(q=1\).
+The bound \(A(t)\le t+O(1)\) justifies the change of variables
+and dominated convergence. For \(0\le w\le1\),
+\[
+ 0\le w-w^s
+ =\int_1^s(-w^r\log w)\,dr\le\frac{s-1}{e}.
+\]
+Thus replacing \(w_N\) by \(w_N^s\) in the preceding Abelian limit
+changes it by at most
+\((s-1)^2\zeta(s)/e\to0\).
+Equations~\eqref{eq:ct-kappa-expansion} and
+\eqref{eq:ct-first-hit-Dirichlet} prove \eqref{eq:ct-Green-value}.
+
+The resolvent equation is \(M_s=1+\mathcal R_sM_s\).
+It has only two inverse branches at any fixed integer, so passage
+to the finite pointwise limits gives
+\eqref{eq:ct-critical-harmonic}. The positivity equivalence follows
+from \eqref{eq:ct-D-density}.
+\end{proof}
+
+\subsection{Uniform bounds for backward basins}
+
+\begin{proposition}\label{prop:ct-basin-boundary}
+There is a function \(\varepsilon(M)=O((\log M)^{-c})\to0\)
+such that
+\begin{equation}\label{eq:ct-small-ancestor}
+ \mathcal B_v\cap[1,M]=\varnothing
+       \quad\Longrightarrow\quad
+ d_{\log}(\mathcal B_v)\le\varepsilon(M).
+\end{equation}
+Consequently, for every fixed positive root \(n\),
+\begin{equation}\label{eq:ct-fixed-basin-boundary}
+ \lim_{\substack{v\to\infty\\v\in\mathcal B_n}}
+ d_{\log}(\mathcal B_v)=0,\qquad
+ \lim_{\substack{v\to\infty\\v\in\mathcal B_n}}\frac{g(v)}v=0.
+\end{equation}
+Both limits are uniform over the indicated targets.
+\end{proposition}
+\begin{proof}
+Fix \(a=1.001\), suppress its superscript on \(Q_y\), and write
+\[
+ \nu_x=\mathcal L(\operatorname{Pass}_x(Q_{x^a})),\qquad
+ x_j=M^{a^j}.
+\]
+Pushing \eqref{eq:ct-tao-tv} through \(\operatorname{Pass}_M\),
+and using \eqref{eq:ct-pass-compose}, gives
+\[
+ d_{\rm TV}\bigl((\operatorname{Pass}_M)_*\nu_{x^{a}},
+                 (\operatorname{Pass}_M)_*\nu_x\bigr)
+             \le C(\log x)^{-c}\qquad(x\ge M).
+\]
+The sum along \(x_j\) is at most
+\(C(\log M)^{-c}/(1-a^{-c})\). Combining it with the local
+atom estimate \eqref{eq:ct-local-atoms} at \(M\) proves, uniformly
+in \(j\) and \(m\le M\),
+\[
+ \Pr(\operatorname{Pass}_M(Q_{x_j^a})=m)
+       \le C M^{-c}+C'(\log M)^{-c}=:\eta(M).
+\]
+For
+\(E_{M,m}=\{q\text{ odd}:\operatorname{Pass}_M(q)=m\}\),
+the source intervals \([x_j^a,x_j^{a^2}]\) tile
+\([M^a,\infty)\), apart from shared endpoints.
+A final partial interval ending at \(X\) is contained in its full
+interval, whose right endpoint is at most \(X^a\).
+Shared endpoints have finite total reciprocal mass. Hence
+\[
+ H_{E_{M,m}}(X)\le\eta(M)H_{\rm odd}(X^a)+O_M(1)
+\]
+with an error independent of \(m\), and the relative odd upper
+logarithmic density is at most \(a\eta(M)\).
+
+Now suppose \(\mathcal B_v\cap[1,M]=\varnothing\), let
+\(u=\operatorname{oddpart}(v)\), and put
+\(m_v=\operatorname{Pass}_M(u)\). The value \(m_v=1\) is allowed
+when passage fails. Every odd start reaching \(v\) has no state
+at most \(M\) before that hit. Its first odd landing at most \(M\)
+is consequently the same as that of \(u\), or both passages fail.
+For an arbitrary start whose initial halving chain already reaches
+\(v\), its odd part is exactly \(u\). Therefore
+\[
+ \mathcal B_v\subseteq\{2^hq:h\ge0,\ q\in E_{M,m_v}\}.
+\]
+The dyadic closure of an odd set of relative upper logarithmic
+density at most \(d\) has ordinary upper density at most \(d\):
+sum finitely many valuations and bound the omitted starts by
+multiples of \(2^{H+1}\), then let \(H\to\infty\).
+This proves \eqref{eq:ct-small-ancestor} with
+\(\varepsilon(M)=a\eta(M)\).
+
+For fixed \(q,n\), the intersection of the forward orbit of \(q\)
+with \(\mathcal B_n\) is finite. If nonempty, that orbit reaches
+\(n\); its prefix is finite, and a later return to \(\mathcal B_n\)
+would make \(n\) periodic, leaving only one finite cycle.
+Thus
+\[
+ F_{M,n}=\bigcup_{q\le M}
+       \bigl(\{T^j(q):j\ge0\}\cap\mathcal B_n\bigr)
+\]
+is finite. Above its maximum, every \(v\in\mathcal B_n\) has
+no ancestor at most \(M\), so
+\eqref{eq:ct-small-ancestor} gives the first limit in
+\eqref{eq:ct-fixed-basin-boundary}.
+Only finitely many targets in \(\mathcal B_n\) can be periodic:
+any such target and \(n\) lie on the same finite cycle.
+For all the remaining targets,
+\[
+ \frac{g(v)}v=\delta D_v\le\delta d_{\log}(\mathcal B_v).
+\]
+This proves the second limit.
+\end{proof}
+
+\subsection{A first-hit law for the number of odd steps}
+
+For \(q\in\mathcal B_N\), let \(k_N(q)\) count the odd source
+states before the first shortcut visit to \(N\). For odd \(q,N\)
+this is the first Syracuse hitting time. For an even target it
+includes the last odd step even when the hit occurs before the end
+of its halving chain.
+
+\begin{proposition}\label{prop:ct-time-law}
+For every fixed \(N\ge1\) and \(\epsilon>0\), the odd set
+\begin{equation}\label{eq:ct-time-exception}
+ \left\{q\in\mathcal B_N,\ q\ {\rm odd}:
+   \left|k_N(q)-\frac{\log q}{\lambda}\right|
+                      >\frac{\epsilon\log q}{\lambda}\right\}
+\end{equation}
+has logarithmic density zero.
+\end{proposition}
+\begin{proof}
+Again fix \(a=1.001\). On the same reference source
+\(Q_{x^a}\), apply \eqref{eq:ct-local-time} at thresholds
+\(x\) and \(y=x^{1/a}\). Its interval is
+\([x^a,x^{a^2}]=[y^{a^2},y^{a^3}]\), so both local estimates
+apply. With probability at least
+\(1-Ce^{-c(\log x)^{1/5}}\), both passages succeed and
+\[
+ \tau_y(Q_{x^a})-\tau_x(Q_{x^a})
+       =\frac{\log x-\log y}{\lambda}
+                       +O((\log x)^{3/5}).
+\]
+On this event the difference is exactly
+\(\tau_y(\operatorname{Pass}_x(Q_{x^a}))\).
+Thus the displayed stage estimate is an event about a single
+landing variable with law \(\nu_x\).
+
+Fix a large bottom threshold \(M\), put \(x_i=M^{a^i}\), and
+start from \(Q=Q_{x_j^a}\). Telescoping
+\eqref{eq:ct-tao-tv} and using \eqref{eq:ct-pass-compose} give
+\begin{equation}\label{eq:ct-stage-TV}
+ d_{\rm TV}\bigl(\mathcal L(\operatorname{Pass}_{x_i}(Q)),
+                 \nu_{x_i}\bigr)
+ \le C\sum_{r=i}^{j-1}(\log x_r)^{-c}
+ \le C'(\log x_i)^{-c}\qquad(i\le j).
+\end{equation}
+At \(i=j\) the laws agree. A union bound for the stage events,
+transferred under \eqref{eq:ct-stage-TV}, together with the local
+top passage estimate, has total error at most
+\[
+ Ce^{-c(\log x_j)^{1/5}}
+ +\sum_{i=1}^j
+   \left(Ce^{-c(\log x_{i-1})^{1/5}}
+                           +C'(\log x_i)^{-c}\right)
+ \le C''(\log M)^{-c'}
+\]
+uniformly in \(j\). Only marginal total variation is needed,
+since each stage event is a function of its own landing variable.
+No independence between stages is asserted.
+
+On the simultaneous good event, top success and success of every
+stage permit exact time concatenation. The main terms telescope,
+and
+\[
+ \sum_{i=0}^j(\log x_i)^{3/5}
+       \le C_a(\log Q)^{3/5}.
+\]
+It follows that
+\begin{equation}\label{eq:ct-global-time-M}
+ \Pr\left(\tau_M(Q)=\infty\ \text{or}\
+  \left|\tau_M(Q)-\frac{\log Q-\log M}{\lambda}\right|
+                   >C_a(\log Q)^{3/5}\right)
+       \le C''(\log M)^{-c'}.
+\end{equation}
+The default-valued identities were used only to compare landing
+laws; actual time concatenation is performed on the successful event.
+
+Take \(M\ge N\). Among the finitely many odd \(u\le M\) in
+\(\mathcal B_N\), let \(R_{M,N}\) be the maximum of \(k_N(u)\),
+or zero if there are none. For an odd \(q>M\) in \(\mathcal B_N\),
+passage below \(M\) must succeed. If it occurs before the first
+visit to \(N\), counts concatenate. If an even \(N\) is first
+visited inside the final halving chain of that passage, its odd-step
+count is already exactly \(\tau_M(q)\). Therefore
+\begin{equation}\label{eq:ct-final-count}
+ 0\le k_N(q)-\tau_M(q)\le R_{M,N}.
+\end{equation}
+For fixed \(M,N,\epsilon\), the bounded terms
+\(R_{M,N}+(\log M)/\lambda\) and the \(O((\log q)^{3/5})\) error
+are smaller than \(\epsilon\log q/\lambda\) on all sufficiently
+high source intervals. By \eqref{eq:ct-global-time-M},
+the probability of \eqref{eq:ct-time-exception} on each such
+interval is at most \(C''(\log M)^{-c'}\).
+
+The intervals \([x_j^a,x_j^{a^2}]\) tile \([M^a,\infty)\).
+As in Proposition~\ref{prop:ct-basin-boundary}, covering the last
+partial interval costs at most the multiplicative factor \(a\)
+in logarithmic mass. Thus the odd-relative upper density of
+\eqref{eq:ct-time-exception} is at most
+\(aC''(\log M)^{-c'}\). The set does not depend on \(M\);
+letting \(M\to\infty\) proves the claim.
+\end{proof}
+
+The conclusion is an absolute zero-density statement, also when
+\(\mathcal B_N\) has density zero. Multiplying its harmonic
+summands by any weights in \([0,1]\) preserves it. No bound
+uniform over all starting integers or all targets is asserted.
+
+The corresponding lower-clock constraint is also consistent with
+Inselmann's natural-density trajectory estimate
+\cite[Theorem~1.10]{Inselmann2024}. The two-sided fixed-target law
+above uses the transported upper-time estimate as well.
+
+\begin{proposition}[Conversion of the first-hit clocks]
+\label{prop:ct-clock-conversion}
+Let \(\ell_N(q)\) be the shortcut first hitting time of \(N\).
+For every fixed \(N\), in logarithmic density on all positive starts
+in \(\mathcal B_N\),
+\[
+ k_N(q)=\frac{\log q}{\lambda}+o(\log q),\qquad
+ \ell_N(q)=\frac{2\log q}{\lambda}+o(\log q).
+\]
+Precisely, for each positive error tolerance the set violating either
+corresponding relative error bound has logarithmic density zero.
+\end{proposition}
+\begin{proof}
+Write \(q=2^hu\) with \(u\) odd. Outside the single ray whose
+initial halving chain hits \(N\), one has
+\(k_N(q)=k_N(u)\) and \(\ell_N(q)=h+\ell_N(u)\).
+The ray has finite reciprocal sum. For every fixed \(h\),
+\(\log q-\log u=h\log2\) is bounded; hence
+Proposition~\ref{prop:ct-time-law} gives the odd-clock conclusion
+on that valuation class. Finitely many such classes suffice,
+because the remaining starts have upper logarithmic density at most
+\(2^{-H-1}\), which tends to zero with the cutoff.
+
+The exact first-hit product formula is
+\[
+ \ell_N(q)\log2
+ =k_N(q)\log3+\log q-\log N+\log P_N(q).
+\]
+Since \(1\le P_N(q)\le P_0\), its last two terms beyond
+\(\log q\) are bounded for fixed \(N\).
+The identity \(\log3+\lambda=\log4=2\log2\) gives the
+shortcut-clock coefficient.
+\end{proof}
+
+\subsection{Stationary cylinders and their maximal mass}
+
+We define the stationary measure explicitly so that its values at
+ordinary integers require no choice of an almost-everywhere density.
+Let \(G_1,G_2,\ldots\) be independent with
+\(\Pr(G_i=a)=2^{-a}\), \(a\ge1\), and put
+\begin{equation}\label{eq:ct-pi-series}
+ X=\sum_{j\ge1}3^{j-1}2^{-(G_1+\cdots+G_j)}
+       \quad\text{in }\mathbb Z_3,\qquad \pi=\mathcal L(X).
+\end{equation}
+The series converges \(3\)-adically. Its projection modulo \(3^k\)
+is Tao's Syracuse random variable
+\cite[Section~1.4, equations~(1.22)--(1.24)]{Tao2022},
+after reversal of the independent valuation coordinates.
+The memoryless geometric law gives
+\[
+ \pi=\tfrac12 H_*\pi+\tfrac12 J_*\pi,\qquad
+ H(x)=x/2,\qquad J(x)=(3x+1)/2.
+\]
+For \(v\in\mathbb Z_3\), define
+\begin{equation}\label{eq:ct-rho}
+ \rho_k(v)=3^k\pi(v+3^k\mathbb Z_3),\qquad \rho_0(v)=1.
+\end{equation}
+The stationary equation gives, for \(k\ge1\),
+\begin{equation}\label{eq:ct-cylinder-recursion}
+ \rho_k(v)=\frac12\rho_k(2v)
+       +\frac32\mathbf1_{v\equiv2\ ({\rm mod}\ 3)}
+                           \rho_{k-1}((2v-1)/3).
+\end{equation}
+Indeed the inverse image under \(J\) is empty outside its unit
+class, and in that class a depth-\(k\) cylinder pulls back to a
+depth-\((k-1)\) cylinder.
+
+Iterating the first term, its remainder tends to zero since
+\(\rho_k\le3^k\). Thus for positive integer \(v\),
+\begin{equation}\label{eq:ct-odd-blocks}
+ \rho_k(v)=\mathcal S_1^k\mathbf1(v),\qquad
+ (\mathcal S_s f)(v)
+ =\sum_{\substack{a\ge1\\2^av\equiv1\ ({\rm mod}\ 3)}}
+       (3/2^a)^s f((2^av-1)/3).
+\end{equation}
+Every integral argument in this formula is a positive odd integer.
+An inverse word of depth \(k\), with exponents of total
+\(A=a_1+\cdots+a_k\), has weight \(3^k2^{-A}\).
+Read forward, it is a shortcut path with \(k\) odd steps and
+total length \(A\). Distinct words with the same \(A\) have
+distinct endpoints, because an endpoint determines its forward
+path and hence its parity word.
+
+\begin{proposition}\label{prop:ct-cylinder-max}
+For \(k\ge1\), let
+\[
+ q_k=\max_{v\bmod3^k}\pi(v+3^k\mathbb Z_3).
+\]
+Then
+\begin{equation}\label{eq:ct-cylinder-max}
+ 2^{-k}\le q_k\le(2k+3)2^{-k}.
+\end{equation}
+Consequently
+\[
+ \lim_{k\to\infty}\frac{-\log q_k}{k\log3}=\log_3 2.
+\]
+For every \(\theta<\log_3 2\) there is \(C_\theta\) such that
+\(\pi(v+3^k\mathbb Z_3)\le C_\theta3^{-\theta k}\)
+for all \(v,k\); no exponent larger than \(\log_3 2\) has
+this property.
+\end{proposition}
+\begin{proof}
+Choose a positive representative \(N\) of a cylinder. For fixed
+\(k,A\), an admissible inverse word ends at an odd integer \(m\)
+with
+\[
+ T^A(m)=N=\frac{3^k}{2^A}m+b,\qquad
+ 0\le b\le(3/2)^k-1.
+\]
+The offset bound follows by induction, since even steps divide
+the current offset and odd steps replace it by \(3b/2+1/2\).
+The possible endpoints therefore lie in an interval of length
+strictly less than \(2^{A-k}\). Its odd integers number at most
+\(2^{A-k-1}+1\). By the fixed-length injectivity just noted,
+the contribution of this total \(A\) to the cylinder probability
+\(3^{-k}\rho_k(N)\) is at most
+\[
+ 2^{-A}(2^{A-k-1}+1).
+\]
+Summing \(k\le A<5k\) gives at most
+\((2k+2)2^{-k}\). For the remaining words, discard admissibility.
+Their total cylinder mass is at most
+\[
+ \Pr(G_1+\cdots+G_k\ge5k)
+ \le(2/3)^{5k}\bigl(\mathbb E(3/2)^{G_1}\bigr)^k
+ =(32/81)^k\le2^{-k}.
+\]
+This proves the upper bound.
+
+On the event \(G_1=\cdots=G_k=1\), of probability \(2^{-k}\),
+the projection of \eqref{eq:ct-pi-series} modulo \(3^k\) is
+\[
+ \sum_{j=1}^k3^{j-1}2^{-j}=(3/2)^k-1\equiv-1\pmod{3^k}.
+\]
+This proves the lower bound. Taking logarithms gives the limiting
+exponent. The polynomial factor \(2k+3\) can be absorbed in
+\(3^{(\log_3 2-\theta)k}\) for every strictly smaller \(\theta\).
+The lower bound excludes any larger exponent. The bounds retain
+a possible polynomial loss at the endpoint exponent.
+\end{proof}
+
+This estimate controls stationary cylinders uniformly. It does not
+provide an integer-height estimate uniform in the depth \(k\).
+To control depth averages at fixed integers, we use the endpoint
+representation and the first-hit time law.
+
+\subsection{Identification of the cylinder and Green limits}
+
+For \(0<z<1\), set
+\[
+ \mathcal A_z(N)=(1-z)\sum_{k\ge0}z^k\rho_k(N).
+\]
+We first give the cutoff estimate that will control exceptional
+first-hit times.
+
+\begin{lemma}\label{lem:ct-endpoint-tail}
+The total weight of inverse odd-block words of depths
+\(1\le k\le K\) and endpoints greater than \(N2^{6K}\) is at most
+\begin{equation}\label{eq:ct-endpoint-tail}
+ \frac98(64/81)^K.
+\end{equation}
+Moreover \(\rho_k(N)\le5kN+(64/81)^k\) for \(k\ge1\), so
+\(\mathcal A_z(N)\) is finite.
+\end{lemma}
+\begin{proof}
+For a depth-\(k\) word of total length \(A\), its endpoint
+satisfies \(m\le2^AN/3^k\). An endpoint greater than \(N2^{6K}\)
+therefore requires \(A>6K\). Discarding admissibility and summing
+over compositions gives total weight at most
+\[
+ \sum_{k=1}^K3^k\Pr(G_1+\cdots+G_k>6K)
+ \le(2/3)^{6K}\sum_{k=1}^K9^k
+ \le\frac98(64/81)^K.
+\]
+For a fixed depth \(k\), apply the same Markov estimate to
+the complementary tail \(A\ge6k\); its bound is
+\((64/81)^k\). For each
+\(k\le A<6k\), endpoints are distinct positive integers below
+\(2^AN/3^k\), all with weight \(3^k2^{-A}\). Their combined
+weight is at most \(N\). There are \(5k\) such lengths, proving
+the remaining assertions.
+\end{proof}
+
+\begin{theorem}\label{thm:ct-canonical-identification}
+For every positive integer \(N\),
+\begin{equation}\label{eq:ct-canonical-identification}
+ \lim_{K\to\infty}\frac1K\sum_{k=0}^K\rho_k(N)
+ =\lim_{z\uparrow1}\mathcal A_z(N)
+ =\lim_{s\downarrow1}C_s(N)
+ =g(N)=\delta B_NND_N.
+\end{equation}
+No convergence of the individual sequence \(\rho_k(N)\) is
+asserted.
+\end{theorem}
+\begin{proof}
+The inverse odd-block expansion has a precise interpretation in
+terms of odd starting endpoints. A first-hit path from odd \(q\)
+to \(N\) has depth \(k_N(q)\) and weight \(Nw_N(q)/q\).
+For an even target the last block stops at \(N\) without necessarily
+continuing to its odd part; its exponent still counts exactly the
+shortcut steps in that block. Thus the representation remains exact.
+
+Define the first-hit partial sum
+\[
+ F_N(K)=N\sum_{\substack{q\ {\rm odd},\,q\in\mathcal B_N\\
+                       k_N(q)\le K}}\frac{w_N(q)}q.
+\]
+For a nonperiodic target its terms are distinct inverse endpoints.
+For a periodic target it still selects only the first-hit word of
+each endpoint. In both cases
+Lemma~\ref{lem:ct-endpoint-tail} bounds its part with
+\(q>N2^{6K}\) by \eqref{eq:ct-endpoint-tail}.
+Within that cutoff the exceptional set in
+Proposition~\ref{prop:ct-time-law} contributes \(o(K)\), since
+its reciprocal sum is \(o(\log(N2^{6K}))\) and \(0\le w_N\le1\).
+
+Outside that exceptional set, for \(0<\epsilon<1\),
+\[
+ (1-\epsilon)\frac{\log q}{\lambda}
+       \le k_N(q)\le
+ (1+\epsilon)\frac{\log q}{\lambda}.
+\]
+Hence all good basin endpoints below
+\(\exp(\lambda K/(1+\epsilon))\) are counted, while every good
+counted endpoint is below
+\(\exp(\lambda K/(1-\epsilon))\).
+By Proposition~\ref{prop:ct-weighted-density},
+\[
+ \sum_{\substack{q\le X\\q\ {\rm odd}}}\frac{w_N(q)}q
+       =\frac{D_N}{2}\log X+o(\log X).
+\]
+The cutoff, the \(o(K)\) exceptional contribution, and this identity
+give
+\[
+ \frac{\delta ND_N}{1+\epsilon}
+ \le\liminf_{K\to\infty}\frac{F_N(K)}K
+ \le\limsup_{K\to\infty}\frac{F_N(K)}K
+ \le\frac{\delta ND_N}{1-\epsilon}.
+\]
+Letting \(\epsilon\downarrow0\) proves
+\begin{equation}\label{eq:ct-first-hit-Cesaro}
+ F_N(K)/K\longrightarrow\delta ND_N.
+\end{equation}
+Independently of the time law, the same cutoff and \(w_N\le1\)
+give \(F_N(K)\le C_N(K+1)\).
+
+If \(N\) is nonperiodic, every odd endpoint hits it only once.
+Therefore
+\[
+ \sum_{k=0}^K\rho_k(N)=F_N(K)+O_N(1).
+\]
+The bounded correction is the depth-zero term: for odd \(N\) it
+is already the endpoint \(q=N\), and for even \(N\) it is an
+extra singleton term.
+If \(N\) is periodic, later visits repeat its cycle. Each endpoint
+then contributes at depths \(k_N(q)+r_Nj\), with weights multiplied
+by \(\beta_N^j\). Thus
+\[
+ \sum_{k=0}^K\rho_k(N)
+ =\sum_{j=0}^{\lfloor K/r_N\rfloor}
+                   \beta_N^jF_N(K-r_Nj)+O_N(1).
+\]
+The domination \(F_N(K)\le C_N(K+1)\) permits dominated
+convergence against the geometric series after division by \(K\).
+Equation~\eqref{eq:ct-first-hit-Cesaro} gives the Cesàro limit
+\(\delta ND_N/(1-\beta_N)\).
+
+In either case, summation by parts gives the elementary Abelian
+implication from a convergent Cesàro mean to
+\(\mathcal A_z(N)\to g(N)\). The value agrees with
+Theorem~\ref{thm:ct-Green}, proving all of
+\eqref{eq:ct-canonical-identification}.
+\end{proof}
+
+There is a useful check on the normalization. Every finite inverse
+word is uniquely partitioned, in traversal order, as
+\[
+ D^{a_1-1}F\cdots D^{a_k-1}F D^j,\qquad
+ a_i\ge1,\quad j\ge0,
+\]
+where \(D(v)=2v\) and \(F(v)=(2v-1)/3\) is used only when
+integral. The last run contributes \(2^{-sj}\).
+Summing these nonnegative finite-word weights by Tonelli, and then
+the geometric series in \(j\), yields
+\[
+ M_s(N)=\frac1{1-2^{-s}}\sum_{k\ge0}\mathcal S_s^k\mathbf1(N).
+\]
+With \(\kappa'_s=3^{s-1}/(2^s-1)\), one has
+\[
+ C_s(N)=(1-\kappa'_s)\sum_{k\ge0}\mathcal S_s^k\mathbf1(N),
+ \qquad 1-\kappa'_s=\lambda(s-1)+O((s-1)^2).
+\]
+This agrees with \eqref{eq:ct-canonical-identification}: odd
+endpoints have harmonic mean \(D_N/2\), and
+\(\lambda D_N/2=\delta D_N\). No limit at a moving integer
+target was interchanged with a critical parameter limit.
+
+\subsection{Forward component mass and the remaining global condition}
+
+A tail component is called divergent if its orbits never enter a
+cycle; otherwise it is the basin of a finite cycle. The next
+proposition makes the remaining global estimate precise.
+
+\begin{proposition}\label{prop:ct-forward-components}
+Let \(\mathcal C\) be a divergent component and
+\(n_j=T^j(n)\) any forward orbit in it. Then
+\[
+ d_{\log}(\mathcal B_{n_j})\longrightarrow\mu_{\rm tail}(\mathcal C).
+\]
+The normalized trace has a component-dependent limit \(L_{\mathcal C}\)
+with
+\begin{equation}\label{eq:ct-component-ratio}
+ \frac{\delta}{P_0}\mu_{\rm tail}(\mathcal C)
+       \le L_{\mathcal C}
+       :=\lim_{j\to\infty}\frac{g(n_j)}{n_j}
+       \le\delta\mu_{\rm tail}(\mathcal C).
+\end{equation}
+The following conditions are equivalent:
+\begin{enumerate}
+\item \(g(v)=o(v)\) as \(v\to\infty\) through nonperiodic targets;
+\item every divergent component has \(\mu_{\rm tail}\)-mass zero;
+\item the eventually-periodic set has logarithmic density one;
+\item \(g\) vanishes on every divergent component.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+The basins \(\mathcal B_{n_j}\) increase and exhaust \(\mathcal C\),
+but this alone would not justify continuity of logarithmic density.
+Fix \(M\). Each of the finitely many \(u\le M\) in \(\mathcal C\)
+meets the chosen spine. Thus, for some finite \(J(M)\), every such
+\(u\) reaches \(n_j\) for \(j\ge J(M)\). It follows that
+\[
+ \mathcal C\setminus\mathcal B_{n_j}
+       \subseteq\{q:\min_{i\ge0}T^i(q)>M\}
+                    \qquad(j\ge J(M)).
+\]
+Equation~\eqref{eq:ct-min-tight} and the existence of the relevant
+densities prove the asserted basin-density limit.
+
+For \(q\in\mathcal C\), Lemma~\ref{lem:ct-packing} gives a
+convergent whole-orbit product
+\[
+ P_\infty(q)=
+ \prod_{\substack{i\ge0\\T^i(q)\ {\rm odd}}}
+        \left(1+\frac1{3T^i(q)}\right),
+ \qquad 1\le P_\infty(q)\le P_0.
+\]
+Set \(W_{\mathcal C}(q)=1/P_\infty(q)\) on \(\mathcal C\) and
+zero elsewhere. On \(\mathcal B_{n_j}\), first-hit factorization
+gives
+\[
+ W_{\mathcal C}(q)=\frac{w_{n_j}(q)}{P_\infty(n_j)},
+             \qquad P_\infty(n_j)\longrightarrow1.
+\]
+The observables
+\(W_{\mathcal C}\mathbf1_{\mathcal B_{n_j}}\) increase, and
+their logarithmic means are \(D_{n_j}/P_\infty(n_j)\).
+Their error from \(W_{\mathcal C}\) is bounded by
+\(\mathbf1_{\mathcal C\setminus\mathcal B_{n_j}}\), whose
+density tends to zero. Consequently the full weighted mean exists:
+\[
+ d_{\mathcal C}
+ =\lim_{X\to\infty}\frac1{\log X}
+       \sum_{\substack{q\le X\\q\in\mathcal C}}
+                       \frac1{qP_\infty(q)}
+ =\lim_{j\to\infty}D_{n_j}.
+\]
+Formula~\eqref{eq:ct-Green-value} gives
+\(L_{\mathcal C}=\delta d_{\mathcal C}\), and the bounds on
+\(P_\infty\) prove \eqref{eq:ct-component-ratio}.
+
+Condition 1 implies 2 by applying
+\eqref{eq:ct-component-ratio} along each divergent spine.
+Conditions 2 and 3 are equivalent by countable additivity of
+\(\mu_{\rm tail}\): bounded integer orbits are exactly the
+eventually periodic ones, and they form the union of the periodic
+components.
+
+Assume condition 2 and fix \(\epsilon>0\). Choose finitely many
+periodic components \(\mathcal C_1,\ldots,\mathcal C_r\) whose
+total mass exceeds \(1-\epsilon\). For a cycle point \(c_i\) in
+each one, \(\mathcal C_i=\mathcal B_{c_i}\).
+The uniform fixed-basin limit
+\eqref{eq:ct-fixed-basin-boundary} makes \(g(v)/v\) at most
+\(\epsilon\) at all sufficiently large targets in their finite
+union. At a nonperiodic target outside that union, its basin is
+contained in the complement, so
+\[
+ \frac{g(v)}v\le\delta d_{\log}(\mathcal B_v)
+ \le\delta\mu_{\rm tail}\!\left(
+          \mathcal C_1^c\cap\cdots\cap\mathcal C_r^c\right)
+ \le\delta\epsilon.
+\]
+This proves condition 1. Finally condition 2 forces density zero
+for every basin in a divergent component, hence \(g=0\) there by
+\eqref{eq:ct-Green-value}. Conversely a positive-mass divergent
+component has positive limiting ratio in
+\eqref{eq:ct-component-ratio}, so cannot satisfy condition 4.
+\end{proof}
+
+The restriction to nonperiodic targets avoids an unproved bound
+on the cycle factors \((1-\beta_N)^{-1}\) across hypothetical
+additional cycles. The equivalent global condition in
+Proposition~\ref{prop:ct-forward-components} has not been proved.
+It would still permit nonempty divergent components of logarithmic
+density zero, on which the canonical trace would vanish.
+If, in addition, \(g(N)>0\) held at every positive integer unit,
+those components would be excluded. Every positive orbit reaches
+such a unit after finitely many steps: after removing factors of two,
+an odd multiple of three has its next shortcut value prime to three.
+An exclusion of additional positive cycles would still be needed
+to obtain convergence to one.
+
+Thus the results of this section give canonical limits and their
+precise density interpretation. They establish neither global
+sublinearity nor positivity at every unit, and they do not prove
+the Collatz conjecture.
