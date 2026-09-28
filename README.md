@@ -20,7 +20,9 @@ The literature comparison uses Shaik’s **6 September 2026 version 4.0.0**, Nas
 
 The [matrix and synchronization claim map](paper/lean-claims.md) identifies the checked declarations in the first two papers. Their combined closure contains **137 Lean modules, 633 public theorem/lemma declarations, and 93 audited definitions**. Four auxiliary modules on conditional stationary profiles are retained as checked algebra outside the papers’ contributions. The [rebuild report](verification/rebuild.json) records the build and axiom audit.
 
-The [basin claim map](paper/basin-lean-claims.md) records the partial formalization of the third paper, including the precise missing analytic steps. Its sources, inventory, and rebuild report are separate from the original closure. A successful check of these modules does not certify the full basin-density paper or its external theorem interfaces.
+The [basin claim map](paper/basin-lean-claims.md) records the partial formalization of the third paper, including the precise missing analytic steps. It currently contains **35 modules, 251 public theorem/lemma declarations, and 55 audited definitions**, covering uniform trajectory packing, correction-product convergence, and the finite Syracuse residue law. Its sources, inventory, and rebuild report are separate from the original closure. A successful check of these modules does not certify the full basin-density paper or its external theorem interfaces.
+
+A [separate replay](external/mazur-alpha-2001-2000/REPLAY-REPORT.md) checks Mazur’s real-threshold first-passage rate theorem at **α = 2001/2000**. The original **α = 1001/1000** theorem and natural-density transport root also passed a fresh 578-module rebuild. The replay includes source, the patch, attribution, and a portable verifier; it uses Lean 4.30.0-rc2 and has its own dependency pins.
 
 Use Lean **4.27.0** and mathlib commit **`a3a10db0e9d66acbebf76c5e6a135066525ac900`**. Dependency setup is described in [formal/README.md](formal/README.md). Both scopes use the same [verifier](verify.py), which creates fresh local compiled modules and permits only `propext`, `Classical.choice`, and `Quot.sound`:
 
@@ -50,6 +52,6 @@ The rewriting system and its equivalence to the Collatz conjecture are due to Yo
 
 ## License and archival releases
 
-The Lean source, verification scripts, and repository documentation outside `paper/` are licensed under the [MIT License](LICENSE). The papers, including their LaTeX sources and PDFs, are licensed under [CC BY 4.0](paper/LICENSE); code excerpts retain the code's MIT license. Referenced works and any third-party material retain their original rights.
+The original Lean source, verification scripts, and repository documentation outside `paper/` and `external/` are licensed under the [MIT License](LICENSE). The [Mazur companion and second-scale adaptation](external/mazur-alpha-2001-2000/REPLAY-REPORT.md) retain [Apache 2.0](external/mazur-alpha-2001-2000/LICENSE) and the [Advameg notice](external/mazur-alpha-2001-2000/NOTICE), with separately licensed upstream material identified there. The adapted Sharpe parity module retains its MIT copyright and license notice. The papers, including their LaTeX sources and PDFs, are licensed under [CC BY 4.0](paper/LICENSE); code excerpts retain the code's MIT license. Referenced works and any third-party material retain their original rights.
 
 [GitHub releases](https://github.com/x1xhlol/collatz-two-coordinate-obstruction/releases) bundle the three standalone PDFs, sources, and verification reports. The connected Zenodo integration archives each published repository release. Its DOI identifies the complete release; each paper remains separately titled and attributed within that archive.

@@ -1,0 +1,6 @@
+/home/ubuntu/collatz-global-descent-20260927/mazur-alpha-2001-2000/source/Erdos1135/Tao/Section5/AffineAtomDenominatorComparison.lean:23:5: warning: unused variable `hmass`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/ubuntu/collatz-global-descent-20260927/mazur-alpha-2001-2000/source/Erdos1135/Tao/Section5/AffineAtomDenominatorComparison.lean:72:5: warning: unused variable `hmass`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

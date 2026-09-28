@@ -1,0 +1,6 @@
+/home/ubuntu/collatz-global-descent-20260927/mazur-alpha-2001-2000/source/Erdos1135/Tao/Section5/ReversePrefixScalar.lean:127:31: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/ubuntu/collatz-global-descent-20260927/mazur-alpha-2001-2000/source/Erdos1135/Tao/Section5/ReversePrefixScalar.lean:132:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

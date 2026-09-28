@@ -1,0 +1,3 @@
+'Erdos1135.Tao.taoProp111RealFirstPassageStabilizationRate_checked' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

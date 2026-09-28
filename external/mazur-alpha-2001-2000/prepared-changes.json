@@ -1,0 +1,57 @@
+{
+  "Erdos1135/Tao/Probability/LogWindowEndpoints.lean": {
+    "original_bytes": 10194,
+    "modified_bytes": 10486,
+    "modification_notice": true
+  },
+  "Erdos1135/Tao/Section5/PassSchedule.lean": {
+    "original_bytes": 9151,
+    "modified_bytes": 9442,
+    "modification_notice": true
+  },
+  "Erdos1135/Tao/Section5/PassScheduleFacts.lean": {
+    "original_bytes": 16250,
+    "modified_bytes": 16559,
+    "modification_notice": true
+  },
+  "Erdos1135/Tao/Section5/PowerInteriorFacts.lean": {
+    "original_bytes": 9484,
+    "modified_bytes": 9777,
+    "modification_notice": true
+  },
+  "Erdos1135/Tao/Section5/ReversePrefixScalar.lean": {
+    "original_bytes": 8951,
+    "modified_bytes": 9248,
+    "modification_notice": true
+  },
+  "Erdos1135/Tao/Section5/Prop111NaturalRate.lean": {
+    "original_bytes": 14599,
+    "modified_bytes": 14892,
+    "modification_notice": true
+  },
+  "Erdos1135/Tao/Section5/Geom2HighWeightScalar.lean": {
+    "original_bytes": 5225,
+    "modified_bytes": 5588,
+    "modification_notice": true
+  },
+  "Erdos1135/Tao/Probability/LogWindowQuarterMass.lean": {
+    "added": true,
+    "modified_bytes": 3219,
+    "modification_notice": true
+  },
+  "Erdos1135/Tao/Probability/LogWindowEventualMassLower.lean": {
+    "original_bytes": 6857,
+    "modified_bytes": 7151,
+    "modification_notice": true
+  },
+  "Erdos1135/Tao/Section5/PowerInteriorBoundaryMass.lean": {
+    "original_bytes": 12699,
+    "modified_bytes": 12993,
+    "modification_notice": true
+  },
+  "Erdos1135/Tao/Section5/PassNormalizer.lean": {
+    "original_bytes": 14297,
+    "modified_bytes": 14596,
+    "modification_notice": true
+  }
+}

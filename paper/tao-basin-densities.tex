@@ -148,9 +148,12 @@ one finite trajectory of distinct states used here.
 Mazur's formalization of Tao~\cite{MazurTao2026} includes the
 first-passage stabilization theorem, rather than only Tao's final
 almost-boundedness conclusion. Its checked source fixes the scale
-parameter at \(\alpha=1001/1000\). It therefore supplies the standard
-scale but does not by itself check our extension to a second
-incommensurable scale in Proposition~\ref{prop:ct-tao-input}.
+parameter at \(\alpha=1001/1000\). We rebuilt that theorem and
+adapted its checked source to \(\alpha=2001/2000\), retaining the
+real-threshold first-passage and rate conclusions. The two separate
+Lean checks supply exactly the scales used in
+Proposition~\ref{prop:ct-tao-input}; they do not assert a formally
+checked continuum of scale parameters.
 His natural-density transport theorem~\cite{MazurNatural2026}
 compares uniform and logarithmic first-passage laws on the same
 source block. Section~\ref{sec:ct-mazur-consequences} uses that
@@ -278,7 +281,7 @@ including trajectories on which passage fails.
 \label{prop:ct-tao-input}
 For each
 \[
- a\in[1.0005,1.001]
+ a\in\left\{\frac{1001}{1000},\frac{2001}{2000}\right\}
 \]
 there are \(C,c>0\) such that, for all sufficiently large \(x\),
 \begin{align}
@@ -302,7 +305,8 @@ In the proof in \cite[Section~5]{Tao2022}, retain
 \]
 The input Propositions~1.9 and~1.14 there are independent of \(a\).
 All numerical margins in Section~5 remain strict, uniformly on the
-displayed compact interval. Reduction of either source modulo
+compact interval \([1.0005,1.001]\) containing both scales.
+Reduction of either source modulo
 \(2^{3n_0}\) has error
 \(O(x^{0.3-a}/\log x)\), smaller than the required \(x^{-0.3}\).
 The short-time upper exponent used after equation~(5.5) is at most
@@ -343,8 +347,14 @@ normalization have the same factor \((a-1)\log y\), and
 \(n-m_0\ge m_0\). The application of Proposition~1.14 at depth
 \(m_0\), and the remaining concentration errors in that proof,
 therefore give the same negative power of \(\log x\).
-This verifies the stated parameter range by the published proof;
+This verifies both required scales by the published proof;
 it is not an additional hypothesis about its printed proposition.
+The accompanying replay of Mazur's Lean sources checks the two
+scales separately. Its source law is the reciprocal-weighted law
+on the inclusive odd interval \([y,y^a]\), and its first-passage
+location uses the same default value \(1\) as above. Its distance
+is full \(\ell^1\), so its bound implies
+\eqref{eq:ct-tao-tv} with our total-variation convention.
 \end{proof}
 
 We use
@@ -1658,26 +1668,35 @@ proving the Collatz conjecture, is not achieved here.
 
 The accompanying Lean development verifies Lemma~\ref{lem:ct-two-scale}
 in its original Banach-valued form, including the convergence rate,
-and checks the irrational ratio of the two numerical scales. It also
-checks the counting-recursion bootstrap, actual shortcut affine and
-endpoint bounds, injectivity of certified exponent words, the finite
-head estimate, and the unrestricted infinite geometric-word tail in
-the cylinder argument. The cylinder upper bound is formally assembled
-under an explicit expansion equality; its identification with the
-stationary measure remains a separate obligation. The raw-to-shortcut
+and checks the irrational ratio of the two numerical scales.
+The trajectory development proves the parity count, entropy bound,
+and actual counting recurrence, thereby closing the uniform packing
+and reciprocal-tail estimates in Lemma~\ref{lem:ct-packing}.
+It also proves the uniform finite correction-product bound, infinite
+product convergence on distinct orbits, and the forward-tail limit.
+The cylinder development defines the full countable arithmetic word
+law, proves its expansion and identification with the explicit finite
+Syracuse residue law, and checks the upper, lower, and maximum mass
+bounds. Identifying those finite laws with the infinite stationary
+probability measure on \(\mathbb Z_3\) remains a separate obligation.
+The raw-to-shortcut
 map inclusion used in Theorem~\ref{thm:ct-positive-unit-support} and
 the predecessor description for multiples of three are also checked.
 
 These checks do not yet formalize the complete analytic theorem chain.
-In particular the arithmetic two-scale input, density-existence
-arguments, Green and cylinder limit identification, and the additional
-Mazur interfaces have not been connected in Lean. The repository's
+Separate Lean~4.30.0-rc2 replays check Mazur's real-threshold
+first-passage rate theorem at each required scale, and his original
+natural-density transport root. The local Lean~4.27.0 development
+does not yet connect these inputs to the density-existence arguments,
+Green and cylinder limit identification, or the additional Mazur
+interfaces. The repository's
 \texttt{paper/basin-lean-claims.md} records the exact declarations and
 remaining obligations. Its verifier builds the local proof files afresh
 and audits their axiom dependencies separately from the matrix and
-synchronization papers. The present batch comprises eleven modules and
-eighty public theorem and lemma declarations; the axiom audit also
-covers twenty-two definitions.
+synchronization papers. The present batch comprises thirty-five modules
+and 251 public theorem and lemma declarations; the axiom audit also
+covers fifty-five definitions. The external replay records state
+their separate source and dependency pins.
 
 \section*{Acknowledgments}
 The main first-passage input and stationary Syracuse law are due to
@@ -1685,6 +1704,9 @@ Terence Tao. The natural-density and positivity deductions use the
 separate results of Lech Mazur. The related-work discussion credits
 Idris Ali Shaik, Hiroyuki Nashida, and Manuel Inselmann for their
 descent and stopping-time results.
+The formal parity-vector counting module adapts M.~Sharpe's Lean
+proofs under their MIT license; its source retains the attribution
+and license notice.
 
 \section*{Use of AI}
 OpenAI Codex was used extensively for mathematical exploration and
@@ -1698,8 +1720,9 @@ by the authors of the cited works.
 Copyright \textcopyright\ 2026 Lucas Valbuena.
 This paper and its LaTeX source are licensed under
 \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
-Attribution 4.0 International (CC BY 4.0)}. The accompanying code is
-licensed under the MIT License.
+Attribution 4.0 International (CC BY 4.0)}. The original accompanying
+code is licensed under MIT. Imported proof sources retain their own
+licenses; the Mazur replay in the repository uses Apache~2.0.
 
 \begin{thebibliography}{99}\small\raggedright
 \bibitem{Tao2022} T. Tao.

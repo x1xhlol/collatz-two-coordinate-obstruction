@@ -1,0 +1,3 @@
+/home/ubuntu/collatz-global-descent-20260927/mazur-alpha-2001-2000/source/Erdos1135/Tao/Section5/AffineAtomPointMass.lean:63:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`

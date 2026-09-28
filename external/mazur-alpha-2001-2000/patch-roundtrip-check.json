@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "method": "Apply unified diff with patch --batch --fuzz=0 -p1 to exact original source files; compare every result byte for byte to audited source snapshot.",
+  "patch_sha256": "a4fd6bebb47493455881af354ec52cb166f6ab7d457f479222aabf441348f99d",
+  "files": {
+    "Erdos1135/Tao/Probability/LogWindowEndpoints.lean": "8e04a543b32b8eb1a7c751f67a1b2dde384d3e911dccd4ebb70a3e72194a9986",
+    "Erdos1135/Tao/Section5/PassSchedule.lean": "2b49e7cb5f10cfe2030f9b65576971906087e1d008c555b0be17db3d7fabc47c",
+    "Erdos1135/Tao/Section5/PassScheduleFacts.lean": "da68ea55f0021fdf9a5f320a1cf069eb9fef0177745e3237e549214f2dbb7ab0",
+    "Erdos1135/Tao/Section5/PowerInteriorFacts.lean": "4ca3b59ff8650a62ea13ea6d33d82d0cedb0a00bfed794012f077e00dd84fe1f",
+    "Erdos1135/Tao/Section5/ReversePrefixScalar.lean": "d8e9a0073fb5dc59f8d9540b74a28bced512c5115b85f14d13e3202e01b1f56e",
+    "Erdos1135/Tao/Section5/Prop111NaturalRate.lean": "89ed71d711ec8ecc2b89ea4ab3beceeaf88ea65051cd582370910b9f9022b6e9",
+    "Erdos1135/Tao/Section5/Geom2HighWeightScalar.lean": "50bcaf9c3cbfea4b1c70cc26419f285f464c574f1e7948041452ba30013cd44a",
+    "Erdos1135/Tao/Probability/LogWindowQuarterMass.lean": "65421754f95d7870447f7b1d4da4ed88eae81ecdd60bfa6b5757b2126b625d8c",
+    "Erdos1135/Tao/Probability/LogWindowEventualMassLower.lean": "74e63f546c670c9e3a552f536dfdb6a1753ce6d3d08874b203adb471751a1414",
+    "Erdos1135/Tao/Section5/PowerInteriorBoundaryMass.lean": "3f0be2246bc36931a0941fabb629806a4ebd7fdbcb451c63edcb396e71dbc594",
+    "Erdos1135/Tao/Section5/PassNormalizer.lean": "69227eb36b7317b0f5dca554db95ecffbc4b3732a1236d9a69a0dcb2cb4b7712"
+  }
+}

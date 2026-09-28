@@ -1,19 +1,43 @@
 {
-  "audited_declaration_count": 102,
-  "public_declaration_count": 80,
-  "scope": "Partial formalization of the basin-density paper. Checks the complete abstract Banach-valued two-scale averaging lemma with its rate, irrationality of the specified scale ratio, the counting-recurrence bootstrap and its power-law specialization, actual shortcut affine and endpoint-count bounds, admissible parity-word encoding and injectivity, the finite endpoint head sum, the unconditional infinite geometric-word tail, and raw-to-shortcut reachability and 3-divisible target bridges. The cylinder bound is checked under an explicit head-plus-tail expansion equality; that equality for the stationary measure remains unformalized. Arithmetic first-passage estimates, basin-density existence, weighted Green limits, canonical-limit identification, and the external Mazur theorem interfaces are not certified by this report. No Collatz conjecture proof is claimed.",
+  "audited_declaration_count": 306,
+  "public_declaration_count": 251,
+  "scope": "Partial formalization of the basin-density paper. Checks the complete abstract Banach-valued two-scale averaging lemma and its rate; irrationality of the specified scale ratio; unconditional uniform packing and reciprocal tails for all finite positive distinct shortcut paths, including the actual parity and entropy recurrence; absolute correction-product bounds and convergence along positive injective infinite orbits; actual countable geometric-word arithmetic mass, its finite Syracuse residue-law identification and explicit prefix-sum formula, and upper, lower, and maximum mass bounds; and elementary raw-to-shortcut and divisible-by-three target bridges. The infinite stationary probability measure on the 3-adic integers has not been identified in Lean with these finite laws. First-passage arithmetic inputs are separately checked by external replay artifacts, not this scope. Basin-density existence, weighted Green limits, canonical-limit identification, and the additional Mazur theorem interfaces are not certified by this report. No Collatz conjecture proof is claimed.",
   "source_sha256": {
     "AdmissibleCylinderWords": "980d8f83983d673350d77dfb0ff64c2b31ed12ff7514adb020b585e44b8a22d9",
+    "ArithmeticCylinderCongruence": "fef1cb7cbd4a22d4d3d197d761fe36a6bdb2e77e43c9b817c1d297f7f020e1b1",
+    "ArithmeticCylinderLaw": "f51395dbeadec99adc0c1cd0af4eeda1ede1a242d6b21537e52c6a71b15b9053",
+    "ArithmeticCylinderLower": "a9110f08377dcf13990186f1c71ff64fbd50689637dec9ed94bbf1c90e226afb",
+    "ArithmeticCylinderResidues": "3af2d7c702b6ef9f0053a0791919fabae541ee9f86af56850fd9dcaf9a704035",
+    "ArithmeticInverseBlocks": "219cd6200ee2eedf3883db345f50e07898b2267ac89f46f1d14780547b7a8625",
+    "ArithmeticInverseTuples": "bd0d5c0b20175f7e22f8b199cd4aeb494d290ddcea0cee5cf4b10e51e4f911dd",
+    "ArithmeticWordFibers": "fce4b2c91de09a3ca00c85f789fb3239ad279a0412c9ecd2be76c9403566f8de",
     "BasinMapBridges": "ccdb2e2f8b2b302c7282154f7d38629fb7ab7b79512c7d3811165527712cdc32",
     "CylinderExpansionBound": "910e5947855c2d08a22e10e2271c4fb46074fb4c851f751db25d25ed392a4c16",
     "CylinderHeadBound": "c5fdc150fbf09f11a44b4d6c98a098491875ab89327cac01f46a112f7c5b8dee",
+    "CylinderLowerBranch": "a9d0fc25aa4ad2836f67151136126f5421c315d3686046d57010a385cd307e78",
+    "DyadicPowerBounds": "1de0c6d7709436d88f3a9a8a628f9ce80980a68611365dc2cbcdbf689b04883b",
+    "FiniteBinomialTail": "0893de8029c9a17dfa0c726e50f8f0a2f3fc5be7cc9c8fef02eb1c1d10e9cd05",
+    "FiniteCylinderMaximum": "9a44ced80d4d67ea35ea54696917518aa11c3332537457a980e2fa561ab24a68",
+    "FiniteCylinderResidueLaw": "c051a85eba1736d6708c26e3768fa5d4018ea2268953384c892992a354e60b08",
+    "FiniteReciprocalPacking": "75e319c195f9885bf69ccfe820b9975c363175180ae3b2e2ba8e1be438fca299",
+    "FiniteSyracuseSeries": "242eca460c3def32c4102247713ab7e5893b85d0479efe4b875b33046946090d",
+    "FiniteSyracuseSeriesClosedForm": "72749c70f3fd89dce4e2a5eacc7f2cb8dcabbbd4925c8b85716926833b520195",
     "GeometricWordTail": "503a00a46d73c9bc4df4060b2bda737d5b4e9e84e43e5c363325e0b6162c66d5",
     "IncommensurableScales": "c160251f2888d5290e61e5ff101df7e2472c93a21fb237cfa60e82695bb6ce0c",
     "LogTimeMean": "855acaaa425b3f45c1be8c5ab7d8b2a1c0f3ca578222a1323b1f6a0dde66ab8a",
     "OptimalCylinderPacking": "7424c207552ceba9f4bf2c2161280918e2c754956b7f3b385c856fa3bf66a1ee",
+    "OrbitCorrectionProduct": "b315556a52da6685cb814b560482fcf507a65514fa09d4f8c3b8a2b7ea49591b",
+    "OrbitPackingActualRecurrence": "5839afbcf6a035049c0353ac8df5ee93104d3db7afb4fdccbec3ce4485a46ef6",
     "OrbitPackingBootstrap": "8650a874e5f906142e0d73d64ecb5f5ea422a3652400a0ed4a886288cb69825e",
+    "OrbitPackingEntropy": "dd5453b194f547464ec0d162413ac2c706a4e9d6b2f682c6d0f55bb4fa450d96",
+    "OrbitPackingFiniteRecurrence": "4bd1735598d92055bde837c9508e653c75380f7d0e2c1ce71095e22118da6e80",
+    "OrbitPackingParameters": "561393e6cd750cd104845a13c5fde0f8b869311dc61e4dd609342d4e5aac2032",
+    "OrbitPackingParityCount": "ac70f16bad71122a4aaa8ecff9b48f91559a8314e334e47446636ff4c963184d",
     "OrbitPackingPowerRecurrence": "bc58c253c4c4874da2b8f512adaab4c942ebf6813330096907e795ce233d9503",
-    "TwoScaleAveraging": "f4c593fd39b32b1f5113b6a55e8945c8e7434f730619b61beef25f034e2419b4"
+    "TwoScaleAveraging": "f4c593fd39b32b1f5113b6a55e8945c8e7434f730619b61beef25f034e2419b4",
+    "UniformOrbitCorrection": "806f3adf8a2f7e83c57968ba5a75abca6e96becfc128b918cb225fc1dbaf3be1",
+    "UniformOrbitPacking": "fe83712ef5f4a1c8c37403a4efa4699277a01dc4868d8a21f2a578c467aeb38a",
+    "UniformOrbitReciprocalPacking": "37f78382eabb34bbbb4811d8cc3e164c355511dd27d6d180e3fe9263863bd70d"
   },
   "top_modules": {
     "AdmissibleCylinderWords": {
@@ -32,6 +56,114 @@
       ],
       "imports": [
         "OptimalCylinderPacking",
+        "Mathlib.Algebra.BigOperators.Group.List.Basic"
+      ]
+    },
+    "ArithmeticCylinderCongruence": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.validBlock_iff_congruence",
+        "CollatzCylinderPacking.Arithmetic.compatible_cons_block",
+        "CollatzCylinderPacking.Arithmetic.compatible_cons_iff_tail",
+        "CollatzCylinderPacking.Arithmetic.validTuple_iff_compatible",
+        "CollatzCylinderPacking.Arithmetic.validWord_iff_compatible"
+      ],
+      "imports": [
+        "ArithmeticCylinderResidues"
+      ]
+    },
+    "ArithmeticCylinderLaw": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.arithmeticTerm_nonneg",
+        "CollatzCylinderPacking.Arithmetic.arithmeticTerm_le_probability",
+        "CollatzCylinderPacking.Arithmetic.arithmeticTerm_summable",
+        "CollatzCylinderPacking.Arithmetic.arithmeticHeadTerm_summable",
+        "CollatzCylinderPacking.Arithmetic.arithmeticTerm_split",
+        "CollatzCylinderPacking.Arithmetic.arithmeticHeadTerm_tsum",
+        "CollatzCylinderPacking.Arithmetic.arithmetic_head_fiberwise",
+        "CollatzCylinderPacking.Arithmetic.arithmetic_mass_expansion",
+        "CollatzCylinderPacking.Arithmetic.arithmetic_mass_upper"
+      ],
+      "imports": [
+        "ArithmeticWordFibers",
+        "CylinderExpansionBound"
+      ]
+    },
+    "ArithmeticCylinderLower": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.validBlock_of_identity",
+        "CollatzCylinderPacking.Arithmetic.inverseValue_of_identity",
+        "CollatzCylinderPacking.Arithmetic.validTuple_ones",
+        "CollatzCylinderPacking.Arithmetic.allOneWord_list",
+        "CollatzCylinderPacking.Arithmetic.allOneWord_length",
+        "CollatzCylinderPacking.Arithmetic.allOneWord_valid",
+        "CollatzCylinderPacking.Arithmetic.arithmetic_mass_lower"
+      ],
+      "imports": [
+        "ArithmeticCylinderLaw"
+      ]
+    },
+    "ArithmeticCylinderResidues": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.validBlock_modEq",
+        "CollatzCylinderPacking.Arithmetic.inverse_modEq",
+        "CollatzCylinderPacking.Arithmetic.validTuple_modEq",
+        "CollatzCylinderPacking.Arithmetic.validWord_modEq",
+        "CollatzCylinderPacking.Arithmetic.arithmetic_mass_modEq"
+      ],
+      "imports": [
+        "ArithmeticCylinderLaw",
+        "Mathlib.Data.Nat.ModEq"
+      ]
+    },
+    "ArithmeticInverseBlocks": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.step_two_mul",
+        "CollatzCylinderPacking.Arithmetic.even_run",
+        "CollatzCylinderPacking.Arithmetic.block_path",
+        "CollatzCylinderPacking.Arithmetic.inverse_identity",
+        "CollatzCylinderPacking.Arithmetic.inverse_positive",
+        "CollatzCylinderPacking.Arithmetic.inverse_odd",
+        "CollatzCylinderPacking.Arithmetic.inverse_block_admissible"
+      ],
+      "imports": [
+        "CylinderLowerBranch"
+      ]
+    },
+    "ArithmeticInverseTuples": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.iterate_add",
+        "CollatzCylinderPacking.Arithmetic.oddCount_add",
+        "CollatzCylinderPacking.Arithmetic.reverseItinerary_add",
+        "CollatzCylinderPacking.Arithmetic.validTuple_positive",
+        "CollatzCylinderPacking.Arithmetic.valid_tuple_path",
+        "CollatzCylinderPacking.Arithmetic.valid_tuple_admissible",
+        "CollatzCylinderPacking.Arithmetic.wordList_length",
+        "CollatzCylinderPacking.Arithmetic.wordList_sum",
+        "CollatzCylinderPacking.Arithmetic.wordList_positive",
+        "CollatzCylinderPacking.Arithmetic.wordList_injective",
+        "CollatzCylinderPacking.Arithmetic.wordList_ne_nil",
+        "CollatzCylinderPacking.Arithmetic.valid_word_admissible"
+      ],
+      "imports": [
+        "ArithmeticInverseBlocks",
+        "GeometricWordTail"
+      ]
+    },
+    "ArithmeticWordFibers": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.wordLength_ge_depth",
+        "CollatzCylinderPacking.Arithmetic.word_mem_box_of_length_lt",
+        "CollatzCylinderPacking.Arithmetic.mem_wordFiber",
+        "CollatzCylinderPacking.Arithmetic.mem_validFiber",
+        "CollatzCylinderPacking.Arithmetic.tupleFiber_card",
+        "CollatzCylinderPacking.Arithmetic.tupleFiber_sum",
+        "CollatzCylinderPacking.Arithmetic.tupleFiber_length",
+        "CollatzCylinderPacking.Arithmetic.tupleFiber_admissible",
+        "CollatzCylinderPacking.Arithmetic.mem_headSet",
+        "CollatzCylinderPacking.Arithmetic.headSet_fiber"
+      ],
+      "imports": [
+        "ArithmeticInverseTuples",
         "Mathlib.Algebra.BigOperators.Group.List.Basic"
       ]
     },
@@ -74,6 +206,126 @@
         "AdmissibleCylinderWords",
         "Mathlib.Tactic.FieldSimp",
         "Mathlib.Algebra.BigOperators.Group.Finset.Basic"
+      ]
+    },
+    "CylinderLowerBranch": {
+      "declarations": [
+        "CollatzCylinderPacking.LowerBranch.iterate_succ_first",
+        "CollatzCylinderPacking.LowerBranch.oddCount_succ_first",
+        "CollatzCylinderPacking.LowerBranch.reverseItinerary_succ_first",
+        "CollatzCylinderPacking.LowerBranch.step_two_mul_sub_one",
+        "CollatzCylinderPacking.LowerBranch.all_odd_run",
+        "CollatzCylinderPacking.LowerBranch.encode_ones",
+        "CollatzCylinderPacking.LowerBranch.all_one_branch_admissible"
+      ],
+      "imports": [
+        "AdmissibleCylinderWords"
+      ]
+    },
+    "DyadicPowerBounds": {
+      "declarations": [
+        "CollatzCanonical.DyadicBounds.binaryLogFloor_bounds",
+        "CollatzCanonical.DyadicBounds.two_power_le_real_power",
+        "CollatzCanonical.DyadicBounds.three_real_power_eq_two_real_power",
+        "CollatzCanonical.DyadicBounds.three_power_le_real_power",
+        "CollatzCanonical.DyadicBounds.three_floor_power_le_real_power",
+        "CollatzCanonical.DyadicBounds.three_power_le_nat_power",
+        "CollatzCanonical.DyadicBounds.two_power_le_nat_power"
+      ],
+      "imports": [
+        "OrbitPackingPowerRecurrence",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "FiniteBinomialTail": {
+      "declarations": [
+        "CollatzCanonical.BinomialTail.binomial_weighted_sum",
+        "CollatzCanonical.BinomialTail.weighted_binomial_tail",
+        "CollatzCanonical.BinomialTail.chernoff_binomial_tail",
+        "CollatzCanonical.BinomialTail.entropy_binomial_tail",
+        "CollatzCanonical.BinomialTail.binary_entropy_binomial_tail"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Data.Nat.Choose.Sum",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "FiniteCylinderMaximum": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.maximum_residue_mass_bounds"
+      ],
+      "imports": [
+        "FiniteCylinderResidueLaw",
+        "Mathlib.Data.Finset.Lattice.Fold"
+      ]
+    },
+    "FiniteCylinderResidueLaw": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.validWord_iff_wordResidue",
+        "CollatzCylinderPacking.Arithmetic.residueTerm_nonneg",
+        "CollatzCylinderPacking.Arithmetic.residueTerm_summable",
+        "CollatzCylinderPacking.Arithmetic.arithmetic_mass_eq_residueMass",
+        "CollatzCylinderPacking.Arithmetic.residue_mass_nonneg",
+        "CollatzCylinderPacking.Arithmetic.residue_mass_total",
+        "CollatzCylinderPacking.Arithmetic.positive_representative",
+        "CollatzCylinderPacking.Arithmetic.residue_mass_upper",
+        "CollatzCylinderPacking.Arithmetic.residue_mass_lower"
+      ],
+      "imports": [
+        "ArithmeticCylinderCongruence",
+        "ArithmeticCylinderLower",
+        "Mathlib.Data.ZMod.Basic"
+      ]
+    },
+    "FiniteReciprocalPacking": {
+      "declarations": [
+        "CollatzCanonical.ReciprocalPacking.dyadicIndex_bounds",
+        "CollatzCanonical.ReciprocalPacking.shell_budget_identity",
+        "CollatzCanonical.ReciprocalPacking.tailConstant_nonneg",
+        "CollatzCanonical.ReciprocalPacking.finite_reciprocal_tail",
+        "CollatzCanonical.ReciprocalPacking.finite_indexed_reciprocal_tail"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Analysis.SpecificLimits.Normed",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "FiniteSyracuseSeries": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.powerTwoUnit_coe",
+        "CollatzCylinderPacking.Arithmetic.truncatedSeries_cleared",
+        "CollatzCylinderPacking.Arithmetic.wordResidue_eq_truncatedSeries",
+        "CollatzCylinderPacking.Arithmetic.arithmetic_mass_eq_series_law"
+      ],
+      "imports": [
+        "FiniteCylinderResidueLaw"
+      ]
+    },
+    "FiniteSyracuseSeriesClosedForm": {
+      "declarations": [
+        "CollatzCylinderPacking.Arithmetic.powerTwoUnit_pow",
+        "CollatzCylinderPacking.Arithmetic.inverse_powerTwoUnit",
+        "CollatzCylinderPacking.Arithmetic.truncatedSeries_closedForm",
+        "CollatzCylinderPacking.Arithmetic.wordResidue_closedForm"
+      ],
+      "imports": [
+        "FiniteSyracuseSeries"
       ]
     },
     "GeometricWordTail": {
@@ -149,6 +401,48 @@
         "Mathlib.Tactic.Positivity"
       ]
     },
+    "OrbitCorrectionProduct": {
+      "declarations": [
+        "CollatzCanonical.Correction.summable_log_correction",
+        "CollatzCanonical.Correction.product_eq_exp_sum",
+        "CollatzCanonical.Correction.product_bounds",
+        "CollatzCanonical.Correction.product_positive",
+        "CollatzCanonical.Correction.tail_product_tendsto_one",
+        "CollatzCanonical.Correction.finite_product_bounds",
+        "CollatzCanonical.Correction.oddCorrection_nonneg",
+        "CollatzCanonical.Correction.step_pos",
+        "CollatzCanonical.Correction.iterate_pos",
+        "CollatzCanonical.Correction.oddCorrection_le_third_reciprocal",
+        "CollatzCanonical.Correction.orbit_product_bounds",
+        "CollatzCanonical.Correction.step_correction_identity",
+        "CollatzCanonical.Correction.iterate_correction_identity",
+        "CollatzCanonical.Correction.iterate_add",
+        "CollatzCanonical.Correction.orbit_corrections_summable",
+        "CollatzCanonical.Correction.forward_orbit_product_tendsto_one",
+        "CollatzCanonical.Correction.product_prefix_tail",
+        "CollatzCanonical.Correction.orbit_product_prefix_tail",
+        "CollatzCanonical.Correction.finite_orbit_product_bounds",
+        "CollatzCanonical.Correction.finite_orbit_product_le_of_reciprocal_bound"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Exp",
+        "Mathlib.Topology.Algebra.InfiniteSum.Real",
+        "Mathlib.Topology.Algebra.InfiniteSum.NatInt",
+        "OptimalCylinderPacking"
+      ]
+    },
+    "OrbitPackingActualRecurrence": {
+      "declarations": [
+        "CollatzOrbitPackingActualRecurrence.prefixCount_power_recurrence",
+        "CollatzOrbitPackingActualRecurrence.uniform_finite_distinct_packing_of_parameters"
+      ],
+      "imports": [
+        "OrbitPackingFiniteRecurrence",
+        "FiniteBinomialTail",
+        "DyadicPowerBounds"
+      ]
+    },
     "OrbitPackingBootstrap": {
       "declarations": [
         "CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget",
@@ -162,6 +456,79 @@
         "Mathlib.Analysis.SpecialFunctions.Pow.Real",
         "Mathlib.Tactic.Linarith",
         "Mathlib.Tactic.Ring"
+      ]
+    },
+    "OrbitPackingEntropy": {
+      "declarations": [
+        "CollatzOrbitPackingEntropy.odd_count_chernoff_bound",
+        "CollatzOrbitPackingEntropy.odd_count_binary_entropy_bound",
+        "CollatzOrbitPackingEntropy.subset_double_range_binary_entropy_bound"
+      ],
+      "imports": [
+        "OrbitPackingParityCount",
+        "FiniteBinomialTail"
+      ]
+    },
+    "OrbitPackingFiniteRecurrence": {
+      "declarations": [
+        "CollatzOrbitPackingFiniteRecurrence.iterate_add",
+        "CollatzOrbitPackingFiniteRecurrence.step_positive",
+        "CollatzOrbitPackingFiniteRecurrence.iterate_positive",
+        "CollatzOrbitPackingFiniteRecurrence.prefixCount_mono",
+        "CollatzOrbitPackingFiniteRecurrence.prefixCount_le",
+        "CollatzOrbitPackingFiniteRecurrence.small_start_endpoint",
+        "CollatzOrbitPackingFiniteRecurrence.terminal_card_le",
+        "CollatzOrbitPackingFiniteRecurrence.finite_counting_recurrence"
+      ],
+      "imports": [
+        "OrbitPackingParityCount",
+        "Mathlib.Order.Interval.Finset.Nat"
+      ]
+    },
+    "OrbitPackingParameters": {
+      "declarations": [
+        "CollatzCanonical.PackingParameters.threshold_mem",
+        "CollatzCanonical.PackingParameters.entropy_pos",
+        "CollatzCanonical.PackingParameters.entropy_half",
+        "CollatzCanonical.PackingParameters.entropy_lt_one",
+        "CollatzCanonical.PackingParameters.continuousOn_entropy",
+        "CollatzCanonical.PackingParameters.beta_pos",
+        "CollatzCanonical.PackingParameters.beta_lt_one",
+        "CollatzCanonical.PackingParameters.exists_entropy_parameter",
+        "CollatzCanonical.PackingParameters.admissible_parameter_bounds",
+        "CollatzCanonical.PackingParameters.exists_packing_parameters"
+      ],
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Topology.Order.IntermediateValue",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "OrbitPackingParityCount": {
+      "declarations": [
+        "CollatzOrbitPackingParityCount.iterate_succ_start",
+        "CollatzOrbitPackingParityCount.modEq_of_two_mul",
+        "CollatzOrbitPackingParityCount.parity_of_modEq",
+        "CollatzOrbitPackingParityCount.modEq_of_parity",
+        "CollatzOrbitPackingParityCount.oddCount_eq_sum",
+        "CollatzOrbitPackingParityCount.oddCount_modEq",
+        "CollatzOrbitPackingParityCount.oddCount_eq_card",
+        "CollatzOrbitPackingParityCount.oddPositions_injective",
+        "CollatzOrbitPackingParityCount.parity_pattern_realized",
+        "CollatzOrbitPackingParityCount.card_oddCount",
+        "CollatzOrbitPackingParityCount.card_oddCount_filter",
+        "CollatzOrbitPackingParityCount.card_oddCount_filter_double",
+        "CollatzOrbitPackingParityCount.card_subset_double_range_le"
+      ],
+      "imports": [
+        "OptimalCylinderPacking",
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Nat.ModEq",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise"
       ]
     },
     "OrbitPackingPowerRecurrence": {
@@ -203,6 +570,48 @@
         "Mathlib.Tactic.NormNum",
         "Mathlib.Tactic.FieldSimp",
         "Mathlib.Tactic.Module"
+      ]
+    },
+    "UniformOrbitCorrection": {
+      "declarations": [
+        "CollatzCanonical.UniformCorrection.finite_family_product_bounds",
+        "CollatzCanonical.UniformCorrection.finite_correction_sum_le_reciprocal_tail",
+        "CollatzCanonical.UniformCorrection.uniform_finite_path_correction_bounds",
+        "CollatzCanonical.UniformCorrection.exists_uniform_finite_path_product_bound",
+        "CollatzCanonical.UniformCorrection.uniform_distinct_orbit_reciprocal_bounds",
+        "CollatzCanonical.UniformCorrection.distinct_orbit_reciprocal_summable",
+        "CollatzCanonical.UniformCorrection.distinct_orbit_correction_hasProd",
+        "CollatzCanonical.UniformCorrection.distinct_orbit_correction_prefix_tendsto",
+        "CollatzCanonical.UniformCorrection.exists_uniform_finite_and_infinite_product_bound",
+        "CollatzCanonical.UniformCorrection.distinct_orbit_product_prefix_tail",
+        "CollatzCanonical.UniformCorrection.distinct_orbit_forward_product_tendsto_one"
+      ],
+      "imports": [
+        "UniformOrbitReciprocalPacking",
+        "OrbitCorrectionProduct"
+      ]
+    },
+    "UniformOrbitPacking": {
+      "declarations": [
+        "CollatzUniformOrbitPacking.uniform_finite_distinct_orbit_packing",
+        "CollatzUniformOrbitPacking.realPrefixCount_eq_floor",
+        "CollatzUniformOrbitPacking.uniform_real_cutoff_packing",
+        "CollatzUniformOrbitPacking.uniform_finite_path_packing"
+      ],
+      "imports": [
+        "OrbitPackingActualRecurrence",
+        "OrbitPackingParameters"
+      ]
+    },
+    "UniformOrbitReciprocalPacking": {
+      "declarations": [
+        "CollatzUniformOrbitReciprocalPacking.uniform_finite_path_reciprocal_tail",
+        "CollatzUniformOrbitReciprocalPacking.finite_path_positive",
+        "CollatzUniformOrbitReciprocalPacking.uniform_finite_path_reciprocal_bounds"
+      ],
+      "imports": [
+        "UniformOrbitPacking",
+        "FiniteReciprocalPacking"
       ]
     }
   }

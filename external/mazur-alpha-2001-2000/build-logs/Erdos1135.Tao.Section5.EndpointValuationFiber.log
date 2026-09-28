@@ -1,0 +1,12 @@
+/home/ubuntu/collatz-global-descent-20260927/mazur-alpha-2001-2000/source/Erdos1135/Tao/Section5/EndpointValuationFiber.lean:350:4: warning: Try `simp at hM` instead of `simpa using hM`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/ubuntu/collatz-global-descent-20260927/mazur-alpha-2001-2000/source/Erdos1135/Tao/Section5/EndpointValuationFiber.lean:376:4: warning: Try `simp at hM` instead of `simpa using hM`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/ubuntu/collatz-global-descent-20260927/mazur-alpha-2001-2000/source/Erdos1135/Tao/Section5/EndpointValuationFiber.lean:491:4: warning: Try `simp at hfalse` instead of `simpa using hfalse`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/ubuntu/collatz-global-descent-20260927/mazur-alpha-2001-2000/source/Erdos1135/Tao/Section5/EndpointValuationFiber.lean:493:4: warning: Try `simp at hM` instead of `simpa using hM`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`

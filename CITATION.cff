@@ -1,11 +1,12 @@
 cff-version: 1.2.0
 message: "Please cite the individual paper whose results you use; the three papers are listed below."
 type: software
-version: "2026.09.28.1"
+version: "2026.09.28.2"
 date-released: "2026-09-28"
 license:
   - MIT
   - CC-BY-4.0
+  - Apache-2.0
 title: "Collatz matrix obstructions, synchronization, and basin densities"
 authors:
   - family-names: Valbuena
