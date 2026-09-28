@@ -1,6 +1,6 @@
 # Collatz matrix obstructions, synchronization, and basin densities
 
-Three standalone papers by Lucas Valbuena are maintained here, with their LaTeX sources and formal verification artifacts.
+Three standalone papers are maintained here, with their LaTeX sources and formal verification artifacts.
 
 | Paper | Files | Verification scope |
 | --- | --- | --- |
