@@ -1,0 +1,15 @@
+'CollatzCanonical.RawOccupation.exists_finitePowerStep_clock_margin' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.finitePowerExponent_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.RawOccupation.finitePowerClockGrid_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.RawOccupation.finitePowerClockGrid_log_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.RawOccupation.finitePowerClockGrid_eventually_above' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.finitePowerClockGrid_eventual_budgets' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.finitePowerClockGrid_eventual_hypotheses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

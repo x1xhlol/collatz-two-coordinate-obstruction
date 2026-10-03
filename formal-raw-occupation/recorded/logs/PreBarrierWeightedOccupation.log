@@ -1,0 +1,7 @@
+'CollatzCanonical.RawOccupation.exists_uniform_preBarrier_firstHitWeight_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.preBarrier_occupation_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.RawOccupation.exists_finite_clock_grid_occupation_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

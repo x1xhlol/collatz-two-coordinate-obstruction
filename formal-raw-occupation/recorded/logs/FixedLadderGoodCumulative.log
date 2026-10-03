@@ -1,0 +1,15 @@
+'CollatzCanonical.RawOccupation.fixedLadderGoodEvent_failure_subset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.fixedLadderGoodEvent_failure_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.fixedLadderGoodEvent_closed_window_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.fixedLadderGoodEvent_failure_cumulative_envelope' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.fixedLadderGoodEvent_failure_normalized_cumulative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

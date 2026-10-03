@@ -1,0 +1,9 @@
+'CollatzCanonical.RawOccupation.clock_failure_coefficient_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.clock_failure_envelope_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.clock_failure_envelope_antitone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

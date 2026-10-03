@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "review_kind": "independent full source semantic review",
+  "module_hashes": {
+    "AlignedLadderOccupation": "d6ebafd2a8e8b88bb81124a10b303334cec3638005ef7d42fc7bfc6758825897",
+    "FiniteOccupationSourceMean": "7ac88d419c55e8dc017712a1586fa763d85a2d898d168afa875972619b43aeb8",
+    "FiniteOccupationEventLower": "ec8c9c723a010d7a22a6cafeffb49febcc55b7806d2f23d899806af8446382a2",
+    "FailureEnvelopeMonotonicity": "a4735d6e281084188ed3af0588537aac290dab27032b20c4ae475876e1e66b7e",
+    "UniformAlignedOccupationLower": "adb58a7b80516a94c51235e6b18dba8faf39f1b8990502e867f31f29963b0970"
+  },
+  "review_path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/FINITE-OCCUPATION-SOURCE-INTEGRATION-INDEPENDENT-REVIEW.txt",
+  "review_sha256": "827f7165e088e759cb643cb7cc807ae1799446635eeebcf3f4c8d640bdfe5465",
+  "kernel_replay": "separate foundation replay pending"
+}

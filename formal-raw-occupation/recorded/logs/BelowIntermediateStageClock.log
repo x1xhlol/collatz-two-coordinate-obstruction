@@ -1,0 +1,7 @@
+'CollatzCanonical.RawOccupation.real_stage_clock_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.RawOccupation.lower_clock_stage_error_sum_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.global_clock_good_lower_segment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,46 @@
+Portable raw-occupation replay: PASS
+3 October 2026. Execution and evidence certificate.
+
+Frozen verifier SHA256:
+1f3ba05131718321dd2b9086a98b211ca4692f21631a8850bb68634915c67f7f
+Frozen bundle manifest SHA256:
+e7d5e2c19b0a1ef95151e2962750c99665f28d67ca38996ee5eead06e290e6ed
+Completed hardened portable replay record SHA256:
+739e2c98cbc0632b5d889b13249e66b03427cb70a36a484aef25107f196daf00
+Native source manifest SHA256:
+efc8bc1226fb158341a4626eeafaf5c97b9284da1a2d137de38b7db035cbb230
+Explicitly supplied successful native replay-record SHA256:
+260930d45985dca3d8b7abe88fff1c8c73aa154893d5fa1476b5c76b0b70a79c
+
+The sixteen supplied sources are byte-identical to their frozen research
+source manifest and research replay. This portable run rebuilt them all
+in a new output directory and individually kernel-checked each. The
+separately generated whole-module audit was also compiled and checked:
+34 commands completed successfully. All 153 compiled application
+constants, including five private constants, use only propext,
+Classical.choice and Quot.sound. All 87 named and four private source
+declarations occur in the compiled audit. No compiler warnings occurred.
+
+Exactly 913 native modules form the authenticated endpoint dependency
+closure. Their source, imports, object and dependency fingerprints were
+checked before and after. Pinned clean library revisions and their
+package manifest were checked before and after. Only fresh application
+objects, that native object subset and pinned library caches were visible
+to Lean. Every application source, object and compiler/kernel log was
+rechecked before the PASS record was written. This is an additive replay,
+not a complete rebuild of native or library dependencies.
+
+The helper is executed from its hash-verified source bytes. An independent
+full driver/helper/metadata/provenance review passed under certificate
+PORTABLE-RAW-DRIVER-INDEPENDENT-REVIEW.txt SHA256
+cebb8b87d0d70f285b22ed1e8964743691da8286f5338545e1df513adcc5ef76.
+That review is separate from this execution, and does not claim another
+kernel replay. Seven recorded controls pass, including a validated stale
+helper cache which ordinary import executes but this verifier bypasses.
+
+The distributed record belongs to the hardened verifier and manifest
+above. The earlier exploratory run is excluded. No supplied Lean source
+changed between either run and the frozen research record. This package
+proves the stated actual raw-density eventual lower bound and finite
+conditional disjoint-future inequalities. It asserts no raw upper bound,
+finite normalized trace limit, or orbit classification.

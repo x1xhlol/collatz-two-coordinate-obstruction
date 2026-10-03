@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "review_kind": "Independent complete semantic source review of contributor-authored modules",
+  "source_hashes": {
+    "ClosedWindowCumulativeAdapter": "d1277a76f14adcd0cf88cf2e82d4c8f7c482825e45308fe99a7c788d4f6b359f",
+    "FixedLadderGoodCumulative": "06159b088161be1f7b9dfe8af12b2ac54715c0e163ebae01cbdeb93e9eb649e2",
+    "DivergentPostBarrierOccupation": "ad2310f56dac5d4bc85515f80a770572fd5d3b0487e08d479979abe1398b9509",
+    "ClockGridAsymptotics": "540e3a1fef2229f07e950d900a3b561246117a67130d4f26e2b311a33f6fc7a0",
+    "FinitePowerClockGrid": "efa3a7898632077efdd2ac0fc5646173087b61c5a476ed29dfff53486148e0b3",
+    "OccupationLowerValueLimit": "aa4b97ebd9134bb533a1cbaaf98fca8ba833fcf612f7ec8bf2296c48c40a48c6",
+    "RawOccupationAsymptoticLower": "ca12747a74ea409ead307fbd6823870cea2fd40c06231675bee1112d0f70b7ad"
+  },
+  "findings": {
+    "ClosedWindowCumulativeAdapter": "The fixed-base geometric-window allowance gives one arbitrary-source-cutoff cumulative envelope. The grid overshoot factor is a; odd normalization contributes a further factor 2. The finite initial grid portion is absorbed only into a fixed constant.",
+    "FixedLadderGoodCumulative": "The event is a fixed union of full globalClockGoodEvent ladders of height j at least n. Its complement is contained in every relevant same-source global failure event. The native endpoint and odd-event expectation bridges are exact. No endpoint-only clock replacement or assumed event mean is used.",
+    "DivergentPostBarrierOccupation": "Orbit injectivity transports backward through a source that hits the divergent root. Every pre-M target precedes the root visit when the odd root is at most M, making the finite forward target set disjoint. Exact first-hit-weight factorization gives the post-root observable on the entire basin, with zero contribution outside it.",
+    "ClockGridAsymptotics": "M and B are fixed before the target cutoff tends to infinity. The finite bottom remainder and logarithmic correction vanish after division by log R. A strict exponent margin absorbs the sublinear clock error and the additive one in the height budget.",
+    "FinitePowerClockGrid": "The explicit exponents decrease from a to a/(n+1). Taking n large gives one strict forward-growth margin that controls every stage and the final segment. The smallest power still tends to infinity for fixed a,n, so all barriers eventually exceed any fixed M. The transfer to natural cutoffs is valid.",
+    "OccupationLowerValueLimit": "The outer clipping is handled after division by a positive log R and preserves the nonnegative limiting coefficient. The packing factor tends to one with theta below one, and the finite-event failure coefficient tends to one with c positive. No uniformity in R and M is asserted.",
+    "RawOccupationAsymptoticLower": "For b below 1/clockDrift, first choose a in (max(0,b*clockDrift),1), then the finite grid n, then a single sufficiently large M, and finally let natural R tend to infinity. The finite source-event theorem and all grid budgets are discharged. The final eventual lower-comparison statement allows infinite raw growth and does not assume a finite real liminf."
+  },
+  "scope": "This certificate is a source-semantic review. Development compile outputs were clean with standard axioms, but the fresh kernel replay is recorded separately. No raw upper bound, capped saturation, uniform integrability, or universal eventual periodicity is claimed."
+}

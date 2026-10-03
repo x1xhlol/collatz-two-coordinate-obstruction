@@ -1,0 +1,76 @@
+Independent integrated raw-occupation publication review: PASS
+Reviewer: sibling_comparison. 3 October 2026.
+
+Scope: the complete new raw-occupation section and proof; related abstract
+and introduction additions; the raw formal-scope subsection; the new
+numbered-result and finite-construction theorem-map entries; the final
+raw replay paragraph; and the updated README. Existing density, packing
+and clock definitions were checked where the additions use them. This is
+a semantic and exposition review of the additions, not a new review of
+every pre-existing result or a separate kernel replay.
+
+Reviewed files:
+README.md
+  0b4a53f7bc323588aed3242835ee18044eec43351ec56895f877a5b2d6505361
+paper/basin-lean-claims.md
+  5d29b0531a1669da7b1b13f508ed56f063008d06759e22606da8c959137a1ef7
+paper/tao-basin-densities.tex
+  fd4d30029577df9cf33d873b548be204516e4e44da611e2ea21d9b542dce8923
+
+The integrated mathematical section differs from the fully reviewed
+standalone draft (4836a0abbc415d30f431325ff43aa6d7a233df3cbe42b58b116fccf4abe7219b)
+only by a three-line shortening of the intermediate-error explanation
+and blank lines. The shortening preserves summation below the chosen
+rung and independence from the original source height.
+
+The theorem precisely states eventual lower comparisons for every
+b<1/log(4/3), at integer cutoffs. Its lower-limit equivalent explicitly
+uses extended reals. The actual correction-weighted first-hit density,
+all-positive-odd target range, normalized odd-source mean, fixed-event
+finite union, successful-landing remainder, full pre-barrier injectivity,
+strict power-grid margin, and fixed packing exponent all match the
+frozen Lean chain. The source limit occurs at fixed target cutoff.
+There is no exchange of uncontrolled moving limits or removal of a cap.
+
+The integrated formal subsection now correctly states that grid
+parameters are chosen first and the bottom barrier is fixed before R
+grows; the barrier values themselves vary as powers of R. Its description
+of the additional injective-orbit result remains finite and conditional.
+The abstract, introduction, README and theorem map assert no raw upper
+bound, ratio convergence, capped equality or orbit classification.
+
+The new theorem-map row names the exact declaration
+CollatzCanonical.RawOccupation.actual_raw_occupation_eventual_lower
+and the correct portable source path. Its finite-construction row
+distinguishes exact finite source averaging from the conditional
+post-barrier factorization. The paper has 29 numbered theorem,
+proposition, lemma or corollary statements, matching the updated count.
+
+The verification numbers match the completed hardened portable record
+SHA256 739e2c98cbc0632b5d889b13249e66b03427cb70a36a484aef25107f196daf00:
+sixteen application modules plus one generated audit, seventeen fresh
+compilations and seventeen individual kernel checks, 153 audited
+constants including five private constants, 87 named and four private
+explicit declarations, and 913 authenticated reused native modules.
+The reported axiom sets contain only propext, Classical.choice and
+Quot.sound. The record binds the reviewed hardened manifest e7d5e2c19b0a1ef95151e2962750c99665f28d67ca38996ee5eead06e290e6ed.
+
+The prose clearly distinguishes fresh application work from native
+object and Mathlib/Lean cache reuse. The README command uses only the
+native application prerequisite and requires an explicit independently
+accepted native-record digest. Licensing links include the new bundle.
+The inverse Doob almost-sure clock and asymptotic divergent-component
+excess are explicitly outside this release's formal claims.
+
+No further semantic or exposition correction is required. PDF layout,
+the final artifact manifest and publication actions are separate checks.
+This review did not modify publication prose.
+
+
+The final checked attribution reflow places the endpoint filename in a
+separate “Its source is ...” sentence using texttt. Reversing exactly this
+reflow reproduces the previous paper pin; reversing the preceding sole
+path-to-texttt change reproduces the original reviewed integrated source.
+No mathematical text or theorem scope changed. The README and theorem
+map pins are unchanged, and the distributed replay record matches the
+completed hardened record cited above.

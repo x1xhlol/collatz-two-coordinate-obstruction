@@ -1,0 +1,24 @@
+Source licenses and attribution
+
+The 16 supplied Lean modules, local verification scripts and documentation
+retain the repository's MIT license: Copyright (c) 2026 Lucas Valbuena.
+The exact license is LICENSE-MIT. Frozen Lean source bytes are unchanged.
+The verifier and source-inventory helper adapt the MIT scripts in the
+separately published finite cylinder-energy and periodic-census bundles;
+their existing notices remain. Those application bundles are not proof
+dependencies of the raw-occupation sources.
+
+The native basin source bundle is an external prerequisite, not duplicated
+or relicensed here. It retains its full source-origin records, copyright
+notices, licenses and attribution, including the Apache-2.0 Gao
+formalization by Omar Javier Said Duran and the Apache-2.0
+predecessor-derived material of Lech Mazur. Refer to the pinned native
+prerequisite's SOURCE-LICENSES.md, notices and provenance records.
+This package relies on its proved interfaces and reuses authenticated
+objects. It does not describe those upstream results as new local work.
+
+Lean, Mathlib and their packages retain their own licenses. Their sources
+and compiled caches are external prerequisites. No binary caches are
+included in this additive source bundle. Research replay records and
+independent reviews retain their authorship and provenance descriptions;
+they are evidence records, not licenses for external material.

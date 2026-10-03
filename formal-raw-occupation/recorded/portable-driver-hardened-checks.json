@@ -1,0 +1,15 @@
+{
+  "bundle_manifest_sha256": "e7d5e2c19b0a1ef95151e2962750c99665f28d67ca38996ee5eead06e290e6ed",
+  "checks": {
+    "changed_helper_source_rejected": true,
+    "changed_source_rejected": true,
+    "extra_lean_source_rejected": true,
+    "missing_explicit_native_record_pin": true,
+    "stale_cache_fixture_would_execute_under_import": true,
+    "stale_helper_cache_bypassed": true,
+    "wrong_native_record_pin": true
+  },
+  "driver_sha256": "1f3ba05131718321dd2b9086a98b211ca4692f21631a8850bb68634915c67f7f",
+  "scope": "Read-only dependency rejection checks and isolated copied bundles, including a validated malicious stale-helper-cache fixture. Frozen public files unchanged.",
+  "status": "PASS"
+}

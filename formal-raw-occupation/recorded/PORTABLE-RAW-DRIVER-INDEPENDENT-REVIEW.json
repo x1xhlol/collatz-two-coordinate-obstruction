@@ -1,0 +1,19 @@
+{
+  "status": "PASS: independent full portable-driver review",
+  "review_sha256": "cebb8b87d0d70f285b22ed1e8964743691da8286f5338545e1df513adcc5ef76",
+  "files_sha256": {
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-raw-occupation/verify.py": "1f3ba05131718321dd2b9086a98b211ca4692f21631a8850bb68634915c67f7f",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-raw-occupation/bundle-manifest.json": "e7d5e2c19b0a1ef95151e2962750c99665f28d67ca38996ee5eead06e290e6ed",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-raw-occupation/audit_helpers.py": "7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-raw-occupation/README.md": "dd7ff827a2100fdf36d999d4a7f91b3d942420827de7be8fa1b1569cf4181987",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-raw-occupation/SOURCE-LICENSES.txt": "317adca5122ba62eb3d795396f03660cf31a555cd1846d5feebbf0a23bcb1e09",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-raw-occupation/LICENSE-MIT": "697bde3198556b7a17e0c507f0a92ce61b687a1069d4612236228a805e14f384",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-raw-occupation/provenance/source-provenance.json": "2856e0790be063c613e626f4e7806a5370853868642892b3060c44f642579872",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/portable-driver-hardened-checks.json": "ae74a9d8a0faa3fd1f867d0093c6b9701758c238ccab8e95d60ea021edeebf81"
+  },
+  "application_module_count": 16,
+  "required_native_module_count": 913,
+  "named_declaration_count": 87,
+  "private_declaration_count": 4,
+  "independent_kernel_replay": false
+}

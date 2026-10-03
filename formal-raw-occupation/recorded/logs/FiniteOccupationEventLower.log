@@ -1,0 +1,9 @@
+'CollatzCanonical.RawOccupation.occupation_plus_bad_event_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.occupation_cumulative_lower_with_bad_events' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.finite_occupation_density_lower_of_bad_envelopes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

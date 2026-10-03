@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "review_kind": "independent full semantic review",
+  "module_hashes": {
+    "RawOccupationAsymptoticLower": "ca12747a74ea409ead307fbd6823870cea2fd40c06231675bee1112d0f70b7ad",
+    "OccupationLowerValueLimit": "aa4b97ebd9134bb533a1cbaaf98fca8ba833fcf612f7ec8bf2296c48c40a48c6",
+    "FinitePowerClockGrid": "efa3a7898632077efdd2ac0fc5646173087b61c5a476ed29dfff53486148e0b3",
+    "ClockGridAsymptotics": "540e3a1fef2229f07e950d900a3b561246117a67130d4f26e2b311a33f6fc7a0",
+    "UniformAlignedOccupationLower": "adb58a7b80516a94c51235e6b18dba8faf39f1b8990502e867f31f29963b0970"
+  },
+  "review_path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/RAW-OCCUPATION-ASYMPTOTIC-LOWER-INDEPENDENT-REVIEW.txt",
+  "review_sha256": "9a7fbbe56d3f6c9a618d64c0f8298b964dfe90b114f96f967a2ce06a2a4c9246",
+  "endpoint": "CollatzCanonical.RawOccupation.actual_raw_occupation_eventual_lower",
+  "quantifier_statement": "for every real b<1/log(4/3), eventually natural R: b<=sum_odd_N_le_R(D_N)/log R",
+  "finite_real_liminf_assumed": false,
+  "kernel_replay": "separate integrated replay pending"
+}

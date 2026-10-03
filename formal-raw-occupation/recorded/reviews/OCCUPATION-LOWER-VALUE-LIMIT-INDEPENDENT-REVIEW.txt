@@ -1,0 +1,39 @@
+Independent semantic review: PASS
+Reviewer: sibling_comparison. 3 October 2026.
+
+Reviewed source: OccupationLowerValueLimit.lean
+SHA256: aa4b97ebd9134bb533a1cbaaf98fca8ba833fcf612f7ec8bf2296c48c40a48c6
+Scope: all three theorem statements and full proofs; the scalar lower
+value definition; the already reviewed clock-error limit; the native
+clockLadderFailureEnvelope definition and its decay theorem. The
+existing compilation log is clean and lists only propext,
+Classical.choice and Quot.sound for all three endpoints. This is a
+semantic/source review, not an independent kernel replay.
+
+finiteOccupationLowerValue_div_log_tendsto fixes P, theta, M, a and B.
+For natural R>=2, log R is positive, so the outer max can be divided
+through by log R. The identity log(R^a)=a log R and the fixed-bottom
+clock-error limit give max(0,beta*a/clockDrift), where
+beta=max(0,1-P*M^(theta-1)). Since beta>=0, a>=0 and clockDrift>0,
+this is the claimed beta*a/clockDrift. The proof retains the clipped
+lower value and does not identify it with actual density or occupation.
+P and M need not be positive for this purely scalar limit.
+
+preBarrier_weight_lower_tendsto_one uses theta<1 to make
+M^(theta-1) tend to zero. The positive-part operation is continuous and
+its limiting argument is 1, giving the asserted limit for every fixed
+real P. No rate uniform in P or theta is claimed.
+
+finiteOccupationLower_coefficient_tendsto fixes the grid length n and
+all constants before M tends to infinity. The preceding weight limit
+and native envelope decay under c>0 show that the finite-union failure
+factor tends to 1. Its product tends to a/clockDrift. The n+2 natural
+cast and the factor 2 and taoAlpha are retained exactly. Positivity of
+a or C is unnecessary for this limit; where needed for occupation
+inequalities it is supplied by their separate hypotheses.
+
+These are scalar limiting inputs for a later eventual lower comparison.
+They neither exchange the M and R limits nor assert a finite real
+liminf, a raw upper estimate, capped saturation, or uniform integrability.
+No source file was edited in this review.
+

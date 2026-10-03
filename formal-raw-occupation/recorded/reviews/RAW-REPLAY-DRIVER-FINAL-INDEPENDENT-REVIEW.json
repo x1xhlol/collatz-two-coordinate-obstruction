@@ -1,0 +1,13 @@
+{
+  "status": "PASS: final driver and manifest delta review",
+  "review_sha256": "4b14f46a432766870f79b08f22b46790688ddf5006551dcda68ef87455f20345",
+  "files_sha256": {
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/replay_raw_occupation.py": "1884822769068490a8bf3d1311f0567deab522980d34819e46139d54049603a5",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/audit_helpers.py": "7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/raw-source-manifest.json": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/RAW-REPLAY-DRIVER-INDEPENDENT-REVIEW.txt": "d3a9140cccd02d1dcfdb966535dae3b30dec06ba2662fdc569dbf225f215ce5b"
+  },
+  "named_declaration_count": 87,
+  "private_declaration_count": 4,
+  "independent_kernel_replay": false
+}

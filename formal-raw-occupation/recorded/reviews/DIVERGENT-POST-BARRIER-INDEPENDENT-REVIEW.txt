@@ -1,0 +1,43 @@
+Independent semantic review: PASS
+Reviewer: sibling_comparison. 3 October 2026.
+
+Reviewed source: DivergentPostBarrierOccupation.lean
+SHA256: ad2310f56dac5d4bc85515f80a770572fd5d3b0487e08d479979abe1398b9509
+Scope: all four theorem statements and proofs, their direct imports,
+and the native factorization, tail-component injectivity, and passage
+bridges they use. The existing compilation log has exactly the standard
+axioms propext, Classical.choice, Quot.sound and no warnings/errors.
+This is a semantic/source review, not an independent kernel replay.
+
+firstHitWeight_factor_through_divergent_root correctly propagates orbit
+injectivity from u to every source that reaches u. A future target cannot
+occur before that first hit: otherwise the two equal orbit values at
+indices i<A and A+j contradict injectivity. The existing first-hit prefix
+factorization then gives the stated exact product, including j=0.
+
+preBarrier_target_ne_divergent_future converts the successful Syracuse
+passage to its actual shortcut clock B. Since the odd root u<=M is hit
+at time A, the pre-barrier odd-source bound forces B<=A. Every counted
+Syracuse index i<T has shortcut clock C<B. Equality with a future state
+of u would force C=A+j by injectivity, an explicit contradiction. The
+proof does not confuse the accelerated and shortcut clocks.
+
+divergent_future_occupation_lower sums the exact factorization over the
+finite odd forward target set F contained in [0,R]. If q misses u its
+first-hit weight is zero, and occupation is nonnegative. Thus the theorem
+handles all sources without conditioning the final inequality on a hit.
+
+preBarrier_occupation_add_divergent_future uses the injective pre-passage
+segment indexed by Ico a T. Its image has exactly T-a targets and is
+disjoint from F by the preceding theorem. Both images lie in the actual
+oddTargetOccupation cutoff. Summing over their union therefore preserves
+both contributions without double counting. On sources missing u the
+post-root term vanishes and the previously proved pre-barrier bound applies.
+Natural subtraction handles a>=T, and no positivity of B is silently used.
+
+The module imports only PreBarrierWeightedOccupation and the retained
+native ShortcutTailComponents. It introduces no axiom, sorry, admitted
+analytic asymptotic, density claim, or orbit-classification assumption
+beyond the explicit injective-orbit hypotheses. It proves the finite
+pointwise additive occupation inequality; source/asymptotic passage is
+left to separate modules. No source file was edited in this review.

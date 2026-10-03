@@ -1,0 +1,89 @@
+Independent portable raw-occupation driver review: PASS
+Reviewer: sibling_comparison. 3 October 2026.
+
+Bundle: /home/ubuntu/collatz-two-coordinate-obstruction/formal-raw-occupation
+Final verify.py SHA256:
+1f3ba05131718321dd2b9086a98b211ca4692f21631a8850bb68634915c67f7f
+Final bundle-manifest.json SHA256:
+e7d5e2c19b0a1ef95151e2962750c99665f28d67ca38996ee5eead06e290e6ed
+audit_helpers.py SHA256:
+7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3
+
+Scope: full driver and helper source; all metadata, README and license
+scope; source provenance; exact endpoint import closure; generated
+all-constant audit; authentication and fresh build/replay logic; final
+helper-loading hardening; and the construction/results of seven negative
+controls. This is an independent source/process review, not another
+execution of the full portable kernel replay.
+
+The bundle is precisely the sixteen-module application closure of
+RawOccupationAsymptoticLower and DivergentPostBarrierOccupation. An
+independent closure walk recovered the same module order and exactly
+913 required native modules. All packaged file hashes matched. Every
+Lean source hash agrees with both the research manifest and retained
+research replay. Provenance record hashes agree with their referenced
+files. The source inventory has 87 named and 4 private declarations,
+with no anonymous instances.
+
+The driver requires an explicit native replay-record digest. It checks
+the native manifest pin, PASS status, the record's source manifest,
+toolchain and library identity, axiom list, and every required source
+and object. It reads actual native source imports, checks their recorded
+native edges and permitted library roots, checks native dependency
+fingerprints, and reconstructs application dependency fingerprints.
+The record pin is a caller-supplied pin to an already independently
+accepted native replay; it does not replace that native verification.
+
+Exactly the authenticated native object subset is exposed through a
+fresh symlink directory. The raw application directory is freshly
+created and does not reuse development objects. LEAN_PATH contains
+fresh application objects, that native subset and the selected pinned
+library caches. Inherited Lean path/plugin overrides are cleared.
+No periodic-census or cylinder-energy object directory is used.
+
+All sixteen supplied sources and the generated audit are compiled and
+individually run through leanchecker. Every local source copy is checked
+before compilation; object absence enforces fresh output. Nonzero
+commands, invalid output objects, source/axiom bypass indications and
+compiler warnings fail the run. The audit traverses every constant in
+each selected module's compiled module data, including generated/private
+constants. It allows only propext, Classical.choice and Quot.sound and
+checks all named/private source declarations against the compiled audit.
+
+Dependencies and clean pinned library sources are reauthenticated after
+the build. The package manifest must remain unchanged, all package hashes
+are checked again, and every copied source, object and compiler/kernel
+log is checked against its recorded hash before PASS. The manifest pins
+the driver itself. The record accurately distinguishes newly replayed
+applications from reused native and Lean/Mathlib objects.
+
+The final helper loader hashes the exact bytes it will execute, then
+uses ModuleType plus compile/exec on those bytes. It therefore bypasses
+cached Python bytecode. Reversing precisely this loader delta reproduces
+the prior fully read driver hash
+a6a04910f4889121f6951034d2da29830b9473a71a72490edb94e45b5093e1d6.
+No other driver behavior changed. The updated README accurately records
+this hardening; the Lean sources and dependency pins are unchanged.
+
+The negative-control construction and its PASS record were reviewed.
+It rejects missing and wrong native-record pins, a changed application
+source and an extra Lean module. In an isolated copied bundle, a cached
+helper fixture with matching timestamp and size was first demonstrated
+to execute under ordinary import. The hardened verifier successfully
+bypassed that fixture, then rejected modified helper source before exec.
+Thus the stale-cache test exercises a valid fixture rather than a cache
+Python would ignore anyway. Negative-control record SHA256:
+ae74a9d8a0faa3fd1f867d0093c6b9701758c238ccab8e95d60ea021edeebf81.
+
+The README's theorem scope is accurate: actual weighted first-hit
+densities, all positive odd targets, eventual lower comparisons, and
+a separate finite theorem conditional on an injective orbit. It claims
+no raw upper bound, normalized-mean convergence or orbit classification.
+The licensing/provenance description preserves upstream native notices
+and distinguishes local source licensing from external prerequisites.
+
+No defect remains in the reviewed final driver. The current portable
+execution result must be cited separately from its completed replay
+record. This certificate does not certify unexecuted future manifests
+or claim a complete native/Mathlib rebuild.
+

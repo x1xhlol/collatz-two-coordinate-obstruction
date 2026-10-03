@@ -1,0 +1,21 @@
+{
+  "status": "PASS: integrated raw-occupation publication scope",
+  "review_sha256": "3bb6f568621ba3103cc938451b4c45b18155c2252de3f3d967161b1762f7feda",
+  "files_sha256": {
+    "README.md": "0b4a53f7bc323588aed3242835ee18044eec43351ec56895f877a5b2d6505361",
+    "paper/basin-lean-claims.md": "5d29b0531a1669da7b1b13f508ed56f063008d06759e22606da8c959137a1ef7",
+    "paper/tao-basin-densities.tex": "fd4d30029577df9cf33d873b548be204516e4e44da611e2ea21d9b542dce8923",
+    "formal-raw-occupation/source/RawOccupationAsymptoticLower.lean": "ca12747a74ea409ead307fbd6823870cea2fd40c06231675bee1112d0f70b7ad",
+    "formal-raw-occupation/bundle-manifest.json": "e7d5e2c19b0a1ef95151e2962750c99665f28d67ca38996ee5eead06e290e6ed",
+    "formal-raw-occupation/recorded/replay-record.json": "739e2c98cbc0632b5d889b13249e66b03427cb70a36a484aef25107f196daf00"
+  },
+  "portable_replay_record_sha256": "739e2c98cbc0632b5d889b13249e66b03427cb70a36a484aef25107f196daf00",
+  "numbered_result_count": 29,
+  "new_application_module_count": 16,
+  "audited_constant_count": 153,
+  "audited_private_constant_count": 5,
+  "required_native_module_count": 913,
+  "independent_kernel_replay": false,
+  "prose_edited_by_reviewer": false,
+  "final_delta": "Endpoint filename moved to a separate texttt source-attribution sentence; inverse delta exactly reproduces the prior reviewed paper hash. Mathematical text and scope unchanged."
+}

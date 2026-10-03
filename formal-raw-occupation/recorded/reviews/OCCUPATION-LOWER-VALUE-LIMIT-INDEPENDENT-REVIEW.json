@@ -1,0 +1,13 @@
+{
+  "status": "PASS: independent full semantic source review",
+  "review_sha256": "71f23087d781ae8a813629daa3e264abd934d9a0bb5fbcaa9c5ca32d49144de9",
+  "files_sha256": {
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/OccupationLowerValueLimit.lean": "aa4b97ebd9134bb533a1cbaaf98fca8ba833fcf612f7ec8bf2296c48c40a48c6",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/OccupationLowerValueLimit.log": "b475763f07dfc209d512f9a8e320ba65b13c24f75af273a9513147422b4bb0d5",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/UniformAlignedOccupationLower.lean": "adb58a7b80516a94c51235e6b18dba8faf39f1b8990502e867f31f29963b0970",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/ClockGridAsymptotics.lean": "540e3a1fef2229f07e950d900a3b561246117a67130d4f26e2b311a33f6fc7a0",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/ClockLadderFailureBudget.lean": "30dfe3806bfc6af060caa54c9ddaa79572a4be26b210db4d95ace0be6b0b3579"
+  },
+  "named_theorem_count": 3,
+  "independent_kernel_replay": false
+}

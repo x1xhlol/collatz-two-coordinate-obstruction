@@ -1,0 +1,68 @@
+Independent semantic review: finite occupation source integration
+3 October 2026. Complete source read; independent kernel replay is separate.
+Outcome: PASS for the five modules pinned below.
+
+AlignedLadderOccupation.lean SHA256 d6ebafd2a8e8b88bb81124a10b303334cec3638005ef7d42fc7bfc6758825897
+FiniteOccupationSourceMean.lean SHA256 7ac88d419c55e8dc017712a1586fa763d85a2d898d168afa875972619b43aeb8
+FiniteOccupationEventLower.lean SHA256 ec8c9c723a010d7a22a6cafeffb49febcc55b7806d2f23d899806af8446382a2
+FailureEnvelopeMonotonicity.lean SHA256 a4735d6e281084188ed3af0588537aac290dab27032b20c4ae475876e1e66b7e
+UniformAlignedOccupationLower.lean SHA256 adb58a7b80516a94c51235e6b18dba8faf39f1b8990502e867f31f29963b0970
+
+AlignedLadderOccupation: logarithmic geometric bracketing supplies a base
+m in [M,M^taoAlpha) and an actual rung equal to each desired barrier x.
+The witness retains globalClockGoodEvent, its upper rung, and its aligned
+intermediate rung. Therefore the lower segment clock is inherited from
+actual first-passage stages. The bounded terminal remainder applies only
+to successful passages; no termination assertion for all integers below
+B is introduced. The replacement of log m and log x by log B and log R
+uses the positive domain and preserves the one common clock-error budget.
+The final occupation bound invokes actual finite confinement and first-hit
+weights; its inputs remain explicit finite stage budgets.
+
+FiniteOccupationSourceMean: oddTargetOccupation sums firstHitWeight N q
+over each odd target N<=R exactly once. Finite summation and the native
+odd-source weighted mean give normalized source limit sum D_N, including
+all odd targets. The leading factor is 2, because the unnormalized odd
+harmonic mean is 1/2. R is fixed throughout this source limit. No infinite
+target summation or exchange of two limits is performed.
+
+FiniteOccupationEventLower: the pointwise inequality L<=occupation+
+L*sum(bad indicators) is valid because L>=0 and occupation>=0. A failed
+conjunction contributes at least one indicator. All event weights refer
+to the same actual source. Finite union and eventual cumulative bounds
+suffice; no independence, event-density existence, or uniform exceptional
+mean is assumed. Passing the fixed-R source mean yields exactly
+L*(1-2*sum d_i)<=sum D_N. The error factor need not be positive for this
+valid lower inequality. All finite constants vanish only after the source
+cutoff tends to infinity at that fixed R.
+
+FailureEnvelopeMonotonicity: the denominators in the failure coefficient
+are positive for c>0 and taoAlpha>1. The two negative real powers decrease
+with M>1, and their coefficients are nonnegative. Thus the envelope at
+any aligned base m>=M is bounded by the common envelope at M.
+
+UniformAlignedOccupationLower: the n+2 events consist of one global event
+ensuring passage to common bottom M, plus one aligned event for each of
+the n+1 barriers. The fixed union over rungs j>=r retains all lower-stage
+clock information. On their conjunction the actual occupation inequality
+applies; its scalar lower value is clipped at zero using occupation
+nonnegativity. Failure allowances are bounded by E(M)*taoAlpha for each
+event, giving the exact factor 1-2*(n+2)*E(M)*taoAlpha. The common bound
+B=ceil(M^taoAlpha) contains every aligned base and does not depend on R.
+The final existential theorem obtains the native C,c,cutoff and all scale
+facts, and the packing constant, before choosing M,R,n or a grid. Only the
+explicit descending-height and stage-growth budgets remain as inputs.
+
+Aligned events and their finite source-envelope constants may depend on
+R and its grid. This is legitimate: the finite-source integration is
+completed separately at every fixed R. No target-uniform convergence rate
+is used. The theorem is a genuine finite density-sum lower bound, not an
+expected-occupation interchange or an assumed global grid conclusion.
+
+Also inspected in full for interface and semantics: PreBarrierWeightedOccupation
+and BoundedBottomPassageClock; the reviewer's two cumulative adapter sources
+and their native probability/endpoints prerequisites. Native sources and
+all five reviewed Lean files were unchanged. This certificate does not
+claim the eventual explicit-grid asymptotic or a Collatz conclusion; those
+require the separate scalar assembly and, for further conclusions, their
+own additional estimates.

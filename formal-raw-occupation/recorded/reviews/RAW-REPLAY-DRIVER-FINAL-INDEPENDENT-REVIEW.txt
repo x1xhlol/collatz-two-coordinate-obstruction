@@ -1,0 +1,44 @@
+Independent final replay-driver delta review: PASS
+Reviewer: sibling_comparison. 3 October 2026.
+
+Final driver SHA256:
+1884822769068490a8bf3d1311f0567deab522980d34819e46139d54049603a5
+Final sixteen-module manifest SHA256:
+2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1
+Unchanged helper SHA256:
+7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3
+
+This extends RAW-REPLAY-DRIVER-INDEPENDENT-REVIEW.txt, SHA256
+d3a9140cccd02d1dcfdb966535dae3b30dec06ba2662fdc569dbf225f215ce5b.
+
+Reversing precisely the final manifest-pin replacement and scope-sentence
+replacement reproduces the previously fully reviewed driver hash
+ca1985b136f1c8b7747b1a43fd3f2e2f8c9d7bd2c383a7c24cadd3e18e2aec09.
+There are no other driver changes.
+
+The manifest preserves the first twelve source pins and appends:
+- ClockGridAsymptotics, 540e3a1fef2229f07e950d900a3b561246117a67130d4f26e2b311a33f6fc7a0.
+- OccupationLowerValueLimit, aa4b97ebd9134bb533a1cbaaf98fca8ba833fcf612f7ec8bf2296c48c40a48c6.
+- FinitePowerClockGrid, efa3a7898632077efdd2ac0fc5646173087b61c5a476ed29dfff53486148e0b3.
+- RawOccupationAsymptoticLower, ca12747a74ea409ead307fbd6823870cea2fd40c06231675bee1112d0f70b7ad.
+
+I reran the source inventories for all sixteen modules. Every source pin
+matches, every local import precedes its importer, every other import is
+an authenticated native module or permitted library, and there are no
+anonymous instances or collisions with actual native object module names.
+The final inventory contains 87 named and 4 private declarations. The
+four additions contribute respectively 2, 3, 22 and 1 named declarations.
+
+I read the final scope sentence against RawOccupationAsymptoticLower:
+it accurately describes the eventual comparison for every
+b<1/clockDrift, using the actual odd-target density sum divided by log R,
+and the separate finite disjoint divergent-future inequalities. It
+expressly retains the absent raw upper bound, capped saturation,
+uniform-integrability estimate and universal eventual periodicity.
+
+The original driver review's authentication, audit, cache-reuse and
+fresh-replay scope therefore applies unchanged to the final packet.
+This is a source/delta review; this reviewer did not execute the fresh
+replay, and its PASS requires the separately generated execution record.
+No driver or Lean source was edited in this review.
+

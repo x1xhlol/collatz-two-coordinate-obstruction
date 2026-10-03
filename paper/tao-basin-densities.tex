@@ -57,7 +57,9 @@ limits of stationary Syracuse cylinder masses. The new density bound
 makes this function uniformly positive at all positive integers prime
 to three. At odd targets, it also bounds first-hit coefficients uniformly
 over positive depths and yields a finite cylinder-energy criterion for
-eventual periodicity. We also prove total-variation limits for countable orbit
+eventual periodicity. The first-passage clock also gives the raw occupation
+lower bound \(\liminf_{R\to\infty}(\log R)^{-1}\sum_{N\le R,\,N\ {\rm odd}}D_N
+\ge1/\log(4/3)\). We also prove total-variation limits for countable orbit
 labels, sharp exponential cylinder bounds, and a characterization of
 global sublinearity. The equivalent global condition and the exclusion
 of additional cycles remain open. The accompanying Lean proofs include
@@ -83,6 +85,10 @@ Section~\ref{sec:ct-finite-energy} applies the reciprocal density bound
 to first-hit coefficients at odd targets and every positive depth. It then gives an
 exact eventual-periodicity criterion using a finite cylinder-energy sum
 and return checks only through the same depth.
+Section~\ref{sec:ct-raw-occupation} uses the retained intermediate
+first-passage clocks to bound the sum of the actual weighted densities
+below a growing target cutoff. Its lower coefficient is the reciprocal
+of the Syracuse clock drift.
 
 The numbered results have accompanying Lean proofs. The formal scope
 section distinguishes the preceding native development from the new
@@ -2319,6 +2325,154 @@ allow cycles other than the known cycle through one; this criterion
 does not exclude them.
 
 
+\section{A lower bound for the raw occupation trace}
+\label{sec:ct-raw-occupation}
+
+Let \(D_N\) be the weighted first-hit density from
+Proposition~\ref{prop:ct-weighted-density}, and put
+\[
+ A(R)=\sum_{\substack{1\le N\le R\\N\ {\rm odd}}}D_N.
+\]
+The first-passage clock supplies a lower bound for this sum without
+assuming that any orbit eventually enters a cycle.
+
+\begin{theorem}\label{thm:ct-raw-occupation-lower}
+For every \(b<1/\lambda\), there is \(R_b\) such that
+\[
+ A(R)\ge b\log R\qquad(R\in\mathbb N,\ R\ge R_b).
+\]
+Equivalently, for integer cutoffs and with the lower limit taken in the extended reals,
+\begin{equation}\label{eq:ct-raw-occupation-lower}
+ \liminf_{R\to\infty}\frac{A(R)}{\log R}
+       \ge\frac1{\lambda}=\frac1{\log(4/3)}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For an odd source \(q\), define its weighted occupation of the
+finite target range by
+\[
+ O_R(q)=\sum_{\substack{1\le N\le R\\N\ {\rm odd}}}w_N(q).
+\]
+The target range is fixed in the source limit. The odd half-mean in
+Proposition~\ref{prop:ct-weighted-density} therefore gives the exact identity
+\begin{equation}\label{eq:ct-raw-occupation-mean}
+ \lim_{X\to\infty}\frac2{\log X}
+       \sum_{\substack{q\le X\\q\ {\rm odd}}}\frac{O_R(q)}q=A(R).
+\end{equation}
+
+Write \(\alpha=1001/1000\). The ladder construction in the proof of
+Proposition~\ref{prop:ct-time-law} retains the individual clocks below
+each intermediate rung. Its simultaneous failure allowance is bounded
+by a decreasing function \(e(M)\to0\), uniformly in the top rung and
+in ladder bases at least \(M\). On its good event, a passage between
+two successive rungs \(z_i=m^{\alpha^i}\) satisfies
+\[
+ \left|\tau_{z_i}(\operatorname{Pass}_{z_{i+1}}(q))
+       -\frac{\log z_{i+1}-\log z_i}{\lambda}\right|
+       \le C(\log z_{i+1})^{3/5}.
+\]
+Summing the stages below \(z_r\) gives an error of
+\(O((\log z_r)^{3/5})\) for passage from its landing to \(m\).
+This error is independent of the source height.
+
+Fix \(M\) above the common ladder cutoff, and set
+\(B=\lceil M^\alpha\rceil\). Among the finitely many positive odd
+integers at most \(B\) whose passage below \(M\)
+succeeds, let \(T_{M,B}\) be the largest such passage time. Integers
+whose passage fails are omitted. Thus \(T_{M,B}\) is finite without
+an assumption about their later orbits. If \(M\le m\le B\) and
+the source also reaches \(M\), the passage from its first landing
+below \(m\) to \(M\) takes at most \(T_{M,B}\) steps. Consequently
+the retained lower-stage clocks give
+\begin{equation}\label{eq:ct-raw-intermediate-clock}
+ \left|\tau_M(q)-\tau_x(q)-\frac{\log x}{\lambda}\right|
+       \le E_R,\qquad
+ E_R=C_\alpha(\log R)^{3/5}+T_{M,B}+\frac{\log B}{\lambda},
+\end{equation}
+whenever \(x\le R\) is a rung of such a good ladder. In particular,
+\(E_R/\log R\to0\) for fixed \(M\).
+
+Choose \(0<p<1\), then a nonnegative integer \(n\) so large that,
+with \(d=p/(n+1)\),
+\begin{equation}\label{eq:ct-raw-grid-margin}
+ p+\frac{d\log(3/2)}{\lambda}<1.
+\end{equation}
+Use the finite grid
+\[
+ x_i=R^{p-di}\quad(0\le i\le n).
+\]
+Its largest barrier is \(R^p\), its smallest is \(R^d\), and
+successive logarithms differ by \(d\log R\). Once \(R\) is
+large, every barrier exceeds \(M\). Each \(x_i\) can be written
+\(m_i^{\alpha^{r_i}}\) with \(M\le m_i<M^\alpha\).
+
+For each of these finitely many ladders, take the fixed source event
+that some good top rung lies at or above \(r_i\). The complement
+is contained in the failure event on every sufficiently high window
+of that ladder. Covering an arbitrary source cutoff by full windows
+gives upper odd-relative logarithmic density at most
+\(2\alpha e(M)\). Include also the good ladder with bottom \(M\)
+to ensure passage below \(M\). A union bound shows that all the
+required events hold outside a source set of upper odd-relative
+logarithmic density at most
+\begin{equation}\label{eq:ct-raw-grid-failure}
+ 2(n+2)\alpha e(M).
+\end{equation}
+The aligned bases and their finite initial windows may depend on
+\(R\); they are fixed before taking the source limit in
+\eqref{eq:ct-raw-occupation-mean}. No independence of events is used.
+
+On their intersection, subtracting the clocks in
+\eqref{eq:ct-raw-intermediate-clock} bounds the time between successive
+barriers by \(d\log R/\lambda+2E_R\). The last segment, from
+\(x_n\) to \(M\), takes at most \(d\log R/\lambda+E_R\).
+For every odd \(v\),
+\[
+ S(v)+1\le\tfrac32(v+1).
+\]
+Equation~\eqref{eq:ct-raw-grid-margin} and \(E_R=o(\log R)\) imply
+\[
+ (3/2)^{d\log R/\lambda+2E_R}(R^p+1)\le R+1
+\]
+for large \(R\). All odd states from the first \(x_0\)-landing up
+to, but excluding, the first \(M\)-landing therefore stay at most \(R\).
+
+The entire prefix before the first \(M\)-landing is injective:
+a repetition would prevent that passage. The counted states are
+therefore first visits even relative to the remote source prefix.
+All preceding odd states lie
+above \(M\). Fix \(\beta<\theta<1\), with \(\beta\) as in
+Lemma~\ref{lem:ct-packing}. Then
+Lemma~\ref{lem:ct-packing} bounds the reciprocal correction accumulated
+before every such target. There is one \(P\ge0\) for which its
+first-hit weight is at least
+\[
+ \beta_M=\max\{0,1-PM^{\theta-1}\},\qquad \beta_M\longrightarrow1.
+\]
+There are at least \(p\log R/\lambda-E_R\) of these visits.
+It follows that
+\[
+ O_R(q)\ge L_R:=
+ \max\{0,\beta_M(p\log R/\lambda-E_R)\}
+\]
+on the common good event, and \(O_R(q)\ge0\) on all sources.
+Apply \eqref{eq:ct-raw-occupation-mean} and the finite union bound
+\eqref{eq:ct-raw-grid-failure} at the same source cutoff. This gives
+\[
+ A(R)\ge L_R\bigl(1-2(n+2)\alpha e(M)\bigr).
+\]
+For fixed \(M\), divide by \(\log R\) and let \(R\to\infty\).
+Next let \(M\to\infty\), keeping \(p,n\) fixed. The resulting
+lower bound is \(p/\lambda\). Finally let \(p\uparrow1\).
+\end{proof}
+
+The theorem is a lower bound for the uncapped sum of the actual
+first-hit densities. It proves neither a matching upper bound nor
+convergence of the ratio. Contributions after the first small-barrier
+visit are not bounded by this argument. The divergent-component and
+cycle-exclusion questions therefore remain open.
+
+
 \section{Formal verification scope}
 
 The preceding native Lean 4.30.0-rc2 development gives checked declarations
@@ -2460,6 +2614,36 @@ clean tracked source trees were also checked. Upstream objects and
 Mathlib/Lean caches were reused; this
 was not a full upstream rebuild. Source hashes, commands, and results
 are in \path{formal-cylinder-energy/recorded/replay-record.json}.
+
+\subsection{The raw occupation extension}
+
+The theorem \path{actual_raw_occupation_eventual_lower} proves
+Theorem~\ref{thm:ct-raw-occupation-lower} for the finite sum of
+\path{actualFirstHitDensity} over every odd target at most the natural
+cutoff. Its source is \texttt{RawOccupationAsymptoticLower.lean}.
+Its conclusion is the eventual inequality for each
+\(b<1/\lambda\); it makes no finiteness assumption on the liminf.
+The proof retains the actual lower-stage events, averages the finite
+occupation sum at a fixed target cutoff, and then passes to the target
+limit with the grid parameters chosen first and the bottom barrier
+fixed before \(R\) grows.
+
+The bundle \path{formal-raw-occupation} contains 16 application modules.
+It also includes a finite factorization and disjointness theorem for
+the future of a specified injective orbit. This auxiliary theorem does
+not assert the existence of such an orbit or an asymptotic excess.
+All 16 modules and their generated whole-module audit were freshly
+compiled and individually replayed with \texttt{leanchecker}.
+The audit covers all 153 compiled constants, including five private
+constants and generated declarations. Only \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound} occur.
+
+The 913 required native modules were reused after source, object,
+import, and dependency-fingerprint authentication before and after
+the build. The Lean version and pinned library source revisions were
+also checked. Mathlib/Lean caches were reused; the upstream closure
+was not freshly rebuilt. The source hashes and results are recorded
+in \path{formal-raw-occupation/recorded/replay-record.json}.
 
 \section*{Acknowledgments}
 The main first-passage input and stationary Syracuse law are due to

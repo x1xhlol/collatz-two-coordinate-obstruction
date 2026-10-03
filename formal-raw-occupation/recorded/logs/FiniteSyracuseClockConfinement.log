@@ -1,0 +1,7 @@
+'CollatzCanonical.RawOccupation.syracuse_iterate_add_one_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.finite_clock_grid_step_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.RawOccupation.finite_clock_grid_confinement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

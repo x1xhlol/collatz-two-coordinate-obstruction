@@ -1,0 +1,9 @@
+'CollatzCanonical.RawOccupation.oddTargetOccupation_cumulative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.oddTargetOccupation_normalized_odd_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.le_oddTargetDensitySum_of_eventually_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

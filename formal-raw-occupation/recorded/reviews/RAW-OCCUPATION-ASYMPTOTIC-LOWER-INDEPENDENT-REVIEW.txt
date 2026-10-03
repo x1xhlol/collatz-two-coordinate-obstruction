@@ -1,0 +1,66 @@
+Independent semantic review: actual raw occupation asymptotic lower bound
+3 October 2026. Full source review; authenticated kernel replay is separate.
+Outcome: PASS.
+
+RawOccupationAsymptoticLower.lean SHA256 ca12747a74ea409ead307fbd6823870cea2fd40c06231675bee1112d0f70b7ad
+OccupationLowerValueLimit.lean SHA256 aa4b97ebd9134bb533a1cbaaf98fca8ba833fcf612f7ec8bf2296c48c40a48c6
+FinitePowerClockGrid.lean SHA256 efa3a7898632077efdd2ac0fc5646173087b61c5a476ed29dfff53486148e0b3
+ClockGridAsymptotics.lean SHA256 540e3a1fef2229f07e950d900a3b561246117a67130d4f26e2b311a33f6fc7a0
+UniformAlignedOccupationLower.lean SHA256 adb58a7b80516a94c51235e6b18dba8faf39f1b8990502e867f31f29963b0970
+
+Main reviewed endpoint:
+  actual_raw_occupation_eventual_lower (b : Real) (b < 1/clockDrift)
+asserts that eventually over natural R,
+  b <= (sum over odd N<=R of actualFirstHitDensity N) / log R.
+The finite sum includes all positive odd targets. clockDrift=log(4/3).
+There is no finite-real liminf hypothesis, nor an upper bound or claimed
+existence of a finite trace limit. Unbounded growth remains allowed.
+
+Quantifier and limit order checked:
+1. Choose theta strictly between the native packing exponent and 1, then
+   obtain the uniform packing/probability constants P,C,c,M0.
+2. Choose a strictly between max(0,b*clockDrift) and 1. Thus 0<a<1 and
+   b<a/clockDrift, including when b is negative.
+3. Choose the finite grid length n from its strict exponent margin. This
+   choice occurs before the base M and remains fixed as M grows.
+4. The product of the clipped pre-barrier weight and the n+2-event success
+   allowance tends to 1 as M tends to infinity. Choose ONE fixed M>=M0
+   making the full coefficient strictly exceed b. B=ceil(M^taoAlpha) is
+   then fixed as well. No bound for its finite terminal remainder is
+   required uniformly in M.
+5. Let the natural cutoff R tend to infinity with those choices fixed.
+   The explicit power grid eventually satisfies all five finite height
+   hypotheses. The scalar finite lower expression divided by log R tends
+   to the chosen coefficient. Intersect these eventual sets with R>=2.
+   Division by positive log R then gives the asserted comparison.
+
+The source averaging used to establish the finite density inequality has
+already been completed separately at every fixed R. Applying that finite
+inequality at large R involves no interchange of source and target limits,
+and no uniform convergence rate for the aligned source events.
+
+Clipping and signs checked in OccupationLowerValueLimit:
+The pre-barrier factor beta=max(0,1-P*M^(theta-1)) is nonnegative. For a>=0,
+beta*a/clockDrift is nonnegative, so the outer max with zero has the stated
+limit. For R>=2, positive log R permits moving division through max, and
+log(R^a)=a*log R is valid. The common finite clock error divided by log R
+vanishes with M,B fixed. The event-success factor f may have either sign;
+its R-limit is taken by multiplication of a convergent expression by the
+fixed scalar f. The proof never multiplies an inequality by f without a
+sign check: the earlier finite theorem already supplies the full product
+as a lower bound. Hence no hidden positivity assumption is needed here.
+
+The coefficient limit as M grows uses theta<1 and c>0, while n remains
+fixed. Both the pre-barrier clipped weight and success allowance tend to
+1. The final theorem's inherited constants satisfy their stronger native
+sign assumptions as well. Choosing a and M by strict inequalities gives
+room for the eventual R-limit comparison, and no endpoint equality at a=1
+or M=infinity is used.
+
+Review coverage: complete reads of RawOccupationAsymptoticLower and
+OccupationLowerValueLimit; complete earlier reads of ClockGridAsymptotics
+and the five source-integration modules; direct authorship of the explicit
+power grid, independently reviewed by root and foundation. This review
+adds no Lean declarations. No reviewed source was changed. It endorses
+the lower bound only, not an occupation upper bound, uniform integrability,
+a finite raw trace limit, or a Collatz conclusion.

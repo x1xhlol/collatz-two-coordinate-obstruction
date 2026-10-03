@@ -1,0 +1,15 @@
+{
+  "status": "PASS: independent full semantic source review",
+  "reviewed_source_sha256": "ad2310f56dac5d4bc85515f80a770572fd5d3b0487e08d479979abe1398b9509",
+  "review_sha256": "1744d737fbada096bd26cbafd768a632a197a42032e77c4697a9e912d590ce23",
+  "files_sha256": {
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/DivergentPostBarrierOccupation.lean": "ad2310f56dac5d4bc85515f80a770572fd5d3b0487e08d479979abe1398b9509",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/PreBarrierWeightedOccupation.lean": "a983807678ba531905bd244693d99e197d04f9c1112c05b79e1262f349f65732",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/DivergentPostBarrierOccupation.log": "d33488a8342829dd3ce72f4ac52b19151d7720c34624f64f5c0596e84070dd03",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/ShortcutTailComponents.lean": "5bda3b8ccb3ac074051383365ee10619f7db01f4d677e6725dd35299de32dab2",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/FirstHitWeightTransport.lean": "b7a174edc3ac6511d153e1cb65a62d60d42a2facb566ef6eed67f7108cb233d5",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/NativeTaoArithmeticBridge.lean": "8653c8bd4d0ae4fb35ecb8b00ab772705e360810e5d53c5153d2a2eb4514d9c5"
+  },
+  "named_theorem_count": 4,
+  "independent_kernel_replay": false
+}

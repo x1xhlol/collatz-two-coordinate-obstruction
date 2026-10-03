@@ -1,0 +1,10 @@
+{
+  "status": "PASS: independent full source review",
+  "review_sha256": "9028de498dd6412d97e6355204d4251a09c0770ca4ecd6e36a290e5c5faa40b5",
+  "files_sha256": {
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/ClockGridAsymptotics.lean": "540e3a1fef2229f07e950d900a3b561246117a67130d4f26e2b311a33f6fc7a0",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/AlignedLadderOccupation.lean": "d6ebafd2a8e8b88bb81124a10b303334cec3638005ef7d42fc7bfc6758825897",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/ClockGridAsymptotics.log": "7f026de2ec04a27e7bc038af645f90389a73622dd62e785c60d80d8526e5c054"
+  },
+  "independent_kernel_replay": false
+}

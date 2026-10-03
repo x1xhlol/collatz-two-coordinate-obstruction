@@ -1,0 +1,10 @@
+{
+  "status": "PASS: independent full source review",
+  "review_sha256": "d3a9140cccd02d1dcfdb966535dae3b30dec06ba2662fdc569dbf225f215ce5b",
+  "files_sha256": {
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/replay_raw_occupation.py": "ca1985b136f1c8b7747b1a43fd3f2e2f8c9d7bd2c383a7c24cadd3e18e2aec09",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/audit_helpers.py": "7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/raw-source-manifest.json": "30fe2da24bf67db9715e8adcdfe8269e2ccc94855b955227b8b2a0a5606cf022"
+  },
+  "independent_kernel_replay": false
+}

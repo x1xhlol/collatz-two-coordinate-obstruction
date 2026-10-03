@@ -1,0 +1,12 @@
+'CollatzCanonical.RawOccupation.firstHitWeight_factor_through_divergent_root' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.preBarrier_target_ne_divergent_future' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.divergent_future_occupation_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.preBarrier_occupation_add_divergent_future' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

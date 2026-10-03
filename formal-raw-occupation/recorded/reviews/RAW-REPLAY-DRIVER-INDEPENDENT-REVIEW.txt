@@ -1,0 +1,62 @@
+Independent replay-driver source review: PASS
+Reviewer: sibling_comparison. 3 October 2026.
+
+Reviewed driver: replay_raw_occupation.py
+SHA256: ca1985b136f1c8b7747b1a43fd3f2e2f8c9d7bd2c383a7c24cadd3e18e2aec09
+Reviewed source manifest SHA256:
+30fe2da24bf67db9715e8adcdfe8269e2ccc94855b955227b8b2a0a5606cf022
+Reviewed audit_helpers.py SHA256:
+7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3
+
+Scope: the full hardened driver, full helper, current twelve-module
+manifest and actual source inventories, generated Lean audit, dependency
+authentication, fresh build/replay commands and post-run authentication.
+No full replay was run by this reviewer; successful execution and all
+kernel outcomes require the separate replay record. This certificate
+does not certify future manifest extensions.
+
+The driver requires the retained native PASS record and pins both
+upstream records. It checks the selected Lean commit, pinned Mathlib and
+package revisions, absence of tracked source changes, package manifest,
+and each of 1602 recorded native source/object pairs. These checks recur
+after the new compilation and kernel work.
+
+The source manifest itself is pinned. It names each module exactly once
+and pins every source. The helper is authenticated and compiled directly
+from its verified source text, avoiding stale Python bytecode. Inventories
+check import order/dependency availability and record named and private
+declarations; the separate source scan rejects explicit bypass tokens.
+Current inventory contains 59 named and 4 private declarations, with no
+anonymous instances. All twelve source hashes match the manifest.
+
+Fresh output must not exist. Each copied source is checked before
+compilation and after all work. LEAN_PATH starts with that fresh output
+and uses authenticated native objects followed by the selected library
+caches; it excludes live raw, floor, energy and public development object
+directories. A read-only check of the actual native object directory
+found only the 1602 recorded modules plus RootAudit and no collisions
+with these twelve new module names.
+
+Each new module and the generated aggregate audit is freshly compiled
+and individually run through leanchecker. Nonzero exits, compiler/kernel
+warnings and a sorryAx compile-log occurrence fail the run. The generated
+audit traverses every constant attached to every selected module,
+including private and generated constants, and permits only propext,
+Classical.choice and Quot.sound. Parsed output is checked for module
+coverage, duplicate names and all inventoried named/private declarations.
+
+Before recording PASS, the driver repeats dependency authentication,
+checks the source manifest and helper, original and copied sources, every
+fresh object and log against the hashes observed at build time, and the
+driver against its entry hash. The record contains the inventories,
+all-constant axiom results, hashes, toolchain/library identities and the
+actual path used.
+
+The declared scope is accurate: this is an authenticated additive replay
+using prior native objects and Mathlib/Lean caches, not a complete
+upstream rebuild or separate authentication of every library binary.
+The driver does not promote finite occupation inequalities to an
+unproved upper bound, capped saturation, uniform integrability or
+universal eventual periodicity. No driver or Lean source was edited in
+this review.
+

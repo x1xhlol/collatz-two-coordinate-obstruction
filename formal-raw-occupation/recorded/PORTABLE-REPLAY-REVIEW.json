@@ -1,0 +1,19 @@
+{
+  "audited_constants": 153,
+  "bundle_manifest_sha256": "e7d5e2c19b0a1ef95151e2962750c99665f28d67ca38996ee5eead06e290e6ed",
+  "certificate_sha256": "a1e35c55d38bcba352ab5e6e6d24d98e7906bdbf6bc850f5eba62208d0077952",
+  "compiler_warnings": false,
+  "independent_driver_review_sha256": "cebb8b87d0d70f285b22ed1e8964743691da8286f5338545e1df513adcc5ef76",
+  "module_count": 16,
+  "named_source_declarations": 87,
+  "negative_checks_sha256": "ae74a9d8a0faa3fd1f867d0093c6b9701758c238ccab8e95d60ea021edeebf81",
+  "nonstandard_axioms": false,
+  "private_constants": 5,
+  "private_source_declarations": 4,
+  "replay_record_sha256": "739e2c98cbc0632b5d889b13249e66b03427cb70a36a484aef25107f196daf00",
+  "required_native_modules": 913,
+  "review_kind": "execution and evidence certificate; independent source/process review separately linked",
+  "status": "PASS",
+  "successful_compile_and_kernel_commands": 34,
+  "verifier_sha256": "1f3ba05131718321dd2b9086a98b211ca4692f21631a8850bb68634915c67f7f"
+}

@@ -1,0 +1,8 @@
+'CollatzCanonical.RawOccupation.exists_aligned_clock_base' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.RawOccupation.aligned_clock_witness_first_hit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.aligned_clock_witness_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.RawOccupation.exists_aligned_ladder_occupation_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

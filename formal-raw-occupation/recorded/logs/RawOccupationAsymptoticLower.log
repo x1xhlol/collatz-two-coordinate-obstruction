@@ -1,0 +1,3 @@
+'CollatzCanonical.RawOccupation.actual_raw_occupation_eventual_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

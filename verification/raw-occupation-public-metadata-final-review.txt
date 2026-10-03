@@ -1,0 +1,43 @@
+Independent final raw-occupation metadata check: PASS
+3 October 2026. Reviewer: sibling_comparison.
+
+Reviewed metadata:
+paper/artifact-manifest.json
+  ec6ab3bf192611f69c6af16a5697e0cab4b45f11af4c8548feef01c088a44bda
+verification/manuscript-raw-occupation-validation-20261003.json
+  31c93de35b716f5ae5ff008c723c42933def22f0afef967e9f9ee7651b8fb655
+
+All current paper, README, theorem-map, replay, source-manifest,
+package-index, negative-control and related-report digests match.
+The complete indexed sets contain 246 census, 95 energy and 88 raw
+bundle files, all with matching hashes. The old census and energy
+indexes are byte-identical to baseline commit
+5880993ec345ece7c5604bd64d48d1762b333e65. Their only extra local files
+are Git-ignored generated Python caches, outside the distributed indexes.
+All 1602 native source hashes match the retained native manifest.
+
+The baseline manuscript digest matches. All 28 prior numbered statements,
+proofs and theorem-map rows are byte-preserved, and the current manuscript
+has 29 numbered results. The recorded old/new proof digests and new
+section digest match. There are 108 unique labels, 145 references, no
+undefined references, and the README/theorem-map local links exist.
+
+The PDF has 34 pages, with 18013 extracted word boxes and none outside
+its page. This verifies the structural counts; the separately reported
+visual page review remains the parent's review.
+
+The hardened portable replay record agrees with the metadata: 16 new
+application modules plus the generated audit, 34 successful compilation/
+kernel commands, 153 compiled constants including 5 private constants,
+87 named and 4 private explicit declarations, and 913 authenticated
+native dependencies. Only the three standard axioms occur. All seven
+negative-control results are true. The record and source provenance
+retain additive replay and cache-reuse scope.
+
+The release's theorem descriptions and limitations correctly state the
+actual weighted-density raw lower bound, preserve the absent raw upper
+bound and orbit exclusions, and keep the inverse Doob almost-sure law
+and asymptotic divergent excess outside this formal release. No scope
+or count correction is needed. No frozen bundle or publication prose
+was edited by this check; no additional kernel replay was performed.
+

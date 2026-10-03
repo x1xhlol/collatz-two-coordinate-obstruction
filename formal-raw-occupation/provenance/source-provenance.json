@@ -1,0 +1,114 @@
+{
+  "AlignedLadderOccupation": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "d6ebafd2a8e8b88bb81124a10b303334cec3638005ef7d42fc7bfc6758825897"
+  },
+  "BelowIntermediateStageClock": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "01388f5d796306f613812045d7d69e8854333128a4a7608eaea40dc05479eed6"
+  },
+  "BoundedBottomPassageClock": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "6c63619e65e6075cf94c0824a2fc433e8cd8a242d8fc4a27e09019f72404bfe7"
+  },
+  "ClockGridAsymptotics": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "540e3a1fef2229f07e950d900a3b561246117a67130d4f26e2b311a33f6fc7a0"
+  },
+  "ClosedWindowCumulativeAdapter": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "d1277a76f14adcd0cf88cf2e82d4c8f7c482825e45308fe99a7c788d4f6b359f"
+  },
+  "DivergentPostBarrierOccupation": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "ad2310f56dac5d4bc85515f80a770572fd5d3b0487e08d479979abe1398b9509"
+  },
+  "FailureEnvelopeMonotonicity": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "a4735d6e281084188ed3af0588537aac290dab27032b20c4ae475876e1e66b7e"
+  },
+  "FiniteOccupationEventLower": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "ec8c9c723a010d7a22a6cafeffb49febcc55b7806d2f23d899806af8446382a2"
+  },
+  "FiniteOccupationSourceMean": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "7ac88d419c55e8dc017712a1586fa763d85a2d898d168afa875972619b43aeb8"
+  },
+  "FinitePowerClockGrid": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "efa3a7898632077efdd2ac0fc5646173087b61c5a476ed29dfff53486148e0b3"
+  },
+  "FiniteSyracuseClockConfinement": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "17420c25d852bc9e22c64d74e7eaaf7d0a6f5c0e154d09912d2ad4d3f7f7c40c"
+  },
+  "FixedLadderGoodCumulative": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "06159b088161be1f7b9dfe8af12b2ac54715c0e163ebae01cbdeb93e9eb649e2"
+  },
+  "OccupationLowerValueLimit": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "aa4b97ebd9134bb533a1cbaaf98fca8ba833fcf612f7ec8bf2296c48c40a48c6"
+  },
+  "PreBarrierWeightedOccupation": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "a983807678ba531905bd244693d99e197d04f9c1112c05b79e1262f349f65732"
+  },
+  "RawOccupationAsymptoticLower": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "ca12747a74ea409ead307fbd6823870cea2fd40c06231675bee1112d0f70b7ad"
+  },
+  "UniformAlignedOccupationLower": {
+    "research_replay": "provenance/research-replays/raw-occupation.json",
+    "research_replay_sha256": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "research_source_manifest": "provenance/research-source-manifest.json",
+    "research_source_manifest_sha256": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1",
+    "source_sha256": "adb58a7b80516a94c51235e6b18dba8faf39f1b8990502e867f31f29963b0970"
+  }
+}

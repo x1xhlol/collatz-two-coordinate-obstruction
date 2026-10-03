@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "scope": "Parent semantic review of all sixteen new Lean sources and the integrated new proof; final PDF review; preservation of previous statements, proofs, and formal bundles; independent package, fresh-artifact, and compiled-axiom inventory checks. Automated review is not external peer review.",
+  "baseline_repository_commit": "5880993ec345ece7c5604bd64d48d1762b333e65",
+  "baseline_source_sha256": "d5eefd691da5ce9ca22a3276429dde087aedf5e878eb978c7b2d94f4cfc92abb",
+  "artifacts_sha256": {
+    "README.md": "0b4a53f7bc323588aed3242835ee18044eec43351ec56895f877a5b2d6505361",
+    "paper/tao-basin-densities.tex": "fd4d30029577df9cf33d873b548be204516e4e44da611e2ea21d9b542dce8923",
+    "paper/tao-basin-densities.pdf": "9c7b482983c118291643285b5be2e3f17d7b5f9fbd54a4367ddf127ecdad546c",
+    "paper/basin-lean-claims.md": "5d29b0531a1669da7b1b13f508ed56f063008d06759e22606da8c959137a1ef7"
+  },
+  "proof_preservation": {
+    "unchanged_old_proofs": 28,
+    "unchanged_old_numbered_statements": 28,
+    "unchanged_old_claim_rows": 28,
+    "new_numbered_results": 1,
+    "total_numbered_results": 29,
+    "new_section_sha256": "2f1583652401b9b24fbda9c1e80c2a9f16ddaa18da95ac6d49473859b1be1023",
+    "old_proof_hashes": [
+      "39eb877182e45d801d965161e580dec0214d220b0e778cd0026272556b6d1671",
+      "06f20d90336346fff7c159bb2693f0be1fe0243e6f9f4d6690550d1755f499df",
+      "229090949e45159b29e4fe6f50a6563fdedd94c705c83da96e8c148b1870eaca",
+      "c3af9b70c46b33f28fb037cec6da1f017b384ef35859ec2f846895c285f269df",
+      "c9d36226482bf5f2c367ecad2d4c610fb5e73a5a23ff4b7ac22f939483d885cf",
+      "6d0ac71efa6ef0806c322d8af55cc5c005198d335d563fecd1fd57c18593524a",
+      "80fbbb37403f361f4b8baade401e81257bd6cd7836e38b532999bdb6ca1b3d42",
+      "12db88a72dd741f365e763464b1d466d156701526369a07f305f38768053486f",
+      "9f92b5f60ef09849a4fc0d2da2e94013616b4fcd3f083aa24de4c467e262fd96",
+      "ae88ed74f0172370bc3762a673f57dbaf161efebdf80c76b43d7253c23451a00",
+      "d73ed71884c0f7709d361f13f0bb653a84f8f47c3f50c69f33480fe2dd4e4670",
+      "2dc0860d3c73d56e859334abb90eef1fc8a342d6444a7bb0fa33208a2c106989",
+      "bd215dc0b702ed37d2b1fd3101567402d8c96ef2c9340fc9e4fe461a61dbb010",
+      "00402e7dc5c88f22bf2cff9b689d90ba4da3f11bd4dece7305c531a20509c878",
+      "67fdb2db64b9af6ce5c50e5023d037a45daef3d18d5d23fd26c2c0ce9bf34ba4",
+      "4d75042c5b563f7d46d3c35f19d34e2f2e2c0f0b2e247d7abb11ede2f422e5ee",
+      "e1b1fa08d3466e17f0b32afb31a17062346f58964bafe2d5c4db2c835d165372",
+      "3777c0947a8ae98e0cdaa9a337e95c26b5103e03edc0f5d0b899b8bee31fc6d1",
+      "b87a9a3e0d529b8b0c1f840a5559dbeb274cc8f3b8b12ceb52c76ecc76b3507e",
+      "b1a5b73fad734fe263cbeca06d03b79a95d459ddbda5d67116b0204df7f7b741",
+      "f9960e3137c3579f84312b9be66f8a38e111fc76e9584153999a49023786d180",
+      "8ac7d512b3906e84ca2549f0943f80da7624e9ba58758e853a555e78590a3747",
+      "a3347a794f16b6b8ef408695c873a3ae440f9ff84bec8d9170fe44bba40f1c7b",
+      "a1c9175a1525f3e06fe3435842af5f6906692569b99e8adee5a2a58c2a41cec1",
+      "acb3f19bfe1c4fa2ee1be9e13ad284bca6dd932381d1692fe8e35757e012d8d4",
+      "b417b6be0763b12bbfe2e9a7863653993cde42f4658325a2712b2911b6356e12",
+      "2bee23423beda620c1107f2fe8afd1bd404ea2bc8d0de847d494d65171d7baa0",
+      "587e53488ff1754fb9b25092f047f48a52009a029291e726f4d99885b796dcf8"
+    ],
+    "new_proof_sha256": "86657caacdda80b3ab92061babd5e1bf25d20a032fc855b4a8c87b2fb2598417",
+    "unchanged_native_source_hashes": 1602,
+    "earlier_formal_bundles_unchanged": true
+  },
+  "structure": {
+    "unique_labels": 108,
+    "references": 145,
+    "undefined_references": [],
+    "readme_and_claim_links_exist": true
+  },
+  "pdf": {
+    "pages": 34,
+    "visually_reviewed_pages": [
+      1,
+      28,
+      29,
+      30,
+      32,
+      33
+    ],
+    "visual_result": "Readable equations and prose; no clipping or overlap on reviewed pages. Final page 32 reviewed after the filename-layout correction.",
+    "tex_warning_lines": [],
+    "word_boxes": 18013,
+    "off_page_word_boxes": 0,
+    "author": "Lucas Valbuena"
+  },
+  "verification_summary": {
+    "new_application_modules": 16,
+    "generated_audit_modules": 1,
+    "successful_compiler_and_kernel_commands": 34,
+    "compiled_constants": 153,
+    "named_source_declarations": 87,
+    "private_source_declarations": 4,
+    "private_constants": 5,
+    "authenticated_reused_native_modules": 913,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "native_and_library_caches_reused": true,
+    "raw_bundle_indexed_files": 88,
+    "negative_verifier_controls": 7,
+    "fresh_source_object_and_log_hashes_rechecked": true
+  },
+  "related_reports": {
+    "verification/RAW-OCCUPATION-PUBLICATION-INDEPENDENT-REVIEW.json": "30a7db9d400b8cf76c8bd96b02d46033fb370e242ed2dd08cf789fe7caa5dabc",
+    "verification/RAW-OCCUPATION-PUBLICATION-INDEPENDENT-REVIEW.txt": "3bb6f568621ba3103cc938451b4c45b18155c2252de3f3d967161b1762f7feda",
+    "formal-raw-occupation/recorded/replay-record.json": "739e2c98cbc0632b5d889b13249e66b03427cb70a36a484aef25107f196daf00",
+    "formal-raw-occupation/recorded/PORTABLE-REPLAY-REVIEW.json": "93c9ea37c1a00e4a74592a3cd6211129b5d9f347cdbb571723a296476f0281ef",
+    "formal-raw-occupation/recorded/PORTABLE-RAW-DRIVER-INDEPENDENT-REVIEW.json": "612fdcfc4b84023bdc204e62be0521163d060ae2a4b3db1f23adef0bd73c0a02",
+    "formal-raw-occupation/recorded/portable-driver-hardened-checks.json": "ae74a9d8a0faa3fd1f867d0093c6b9701758c238ccab8e95d60ea021edeebf81",
+    "verification/PORTABLE-RAW-OCCUPATION-INDEPENDENT-PIN-REVIEW.json": "77b1965821612d9d93202a3a5e46ee89aa41d1f3564a2c9fc0695eccf0991eb0",
+    "formal-raw-occupation/bundle-manifest.json": "e7d5e2c19b0a1ef95151e2962750c99665f28d67ca38996ee5eead06e290e6ed",
+    "formal-raw-occupation/SHA256SUMS.json": "135a54b87e5313e9108646d0cce80518d4b528b9378bd299be545d7014f9e0ff"
+  },
+  "limitations": [
+    "No matching raw upper bound or convergence of the normalized occupation sum is proved.",
+    "No divergent orbit or additional cycle is excluded.",
+    "The inverse Doob almost-sure law and asymptotic divergent excess are outside this formal release.",
+    "The additive replay reuses authenticated native objects and pinned library caches."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "reviewer": "sibling_comparison",
+  "date": "2026-10-03",
+  "report_sha256": "f6f965bc8f4946d791938ca72b62578b4e4fc595aa8b130951b26ebb3d88900e",
+  "files_sha256": {
+    "paper/artifact-manifest.json": "ec6ab3bf192611f69c6af16a5697e0cab4b45f11af4c8548feef01c088a44bda",
+    "verification/manuscript-raw-occupation-validation-20261003.json": "31c93de35b716f5ae5ff008c723c42933def22f0afef967e9f9ee7651b8fb655",
+    "paper/tao-basin-densities.tex": "fd4d30029577df9cf33d873b548be204516e4e44da611e2ea21d9b542dce8923",
+    "paper/tao-basin-densities.pdf": "9c7b482983c118291643285b5be2e3f17d7b5f9fbd54a4367ddf127ecdad546c",
+    "README.md": "0b4a53f7bc323588aed3242835ee18044eec43351ec56895f877a5b2d6505361",
+    "paper/basin-lean-claims.md": "5d29b0531a1669da7b1b13f508ed56f063008d06759e22606da8c959137a1ef7"
+  },
+  "indexed_file_counts": {
+    "periodic_census": 246,
+    "cylinder_energy": 95,
+    "raw_occupation": 88
+  },
+  "native_sources_authenticated": 1602,
+  "old_statements_proofs_and_rows_preserved": 28,
+  "numbered_results": 29,
+  "unique_labels": 108,
+  "references": 145,
+  "undefined_references": 0,
+  "pdf_pages": 34,
+  "pdf_word_boxes": 18013,
+  "off_page_word_boxes": 0,
+  "new_application_modules": 16,
+  "compiler_and_kernel_commands": 34,
+  "compiled_constants": 153,
+  "private_constants": 5,
+  "named_source_declarations": 87,
+  "private_source_declarations": 4,
+  "reused_native_modules": 913,
+  "negative_controls": 7,
+  "frozen_bundle_edited": false,
+  "independent_kernel_replay": false
+}

@@ -1,0 +1,9 @@
+'CollatzCanonical.RawOccupation.real_first_hit_bounded_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.below_intermediate_clock_with_bottom_remainder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.global_clock_good_common_bottom_clock' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

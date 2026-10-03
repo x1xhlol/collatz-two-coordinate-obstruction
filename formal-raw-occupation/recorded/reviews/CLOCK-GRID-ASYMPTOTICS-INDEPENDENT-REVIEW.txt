@@ -1,0 +1,35 @@
+Independent semantic review: PASS
+Reviewer: sibling_comparison. 3 October 2026.
+
+Reviewed source: ClockGridAsymptotics.lean
+SHA256: 540e3a1fef2229f07e950d900a3b561246117a67130d4f26e2b311a33f6fc7a0
+Scope: both theorem statements and full proofs, the definition of
+commonBottomClockError and the pertinent aligned-ladder input. The
+existing compile log lists exactly propext, Classical.choice, Quot.sound
+for both endpoints. Its ring suggestion is informational, not a compiler
+warning or error. This is a semantic/source review, not an independent
+kernel replay.
+
+commonBottomClockError_div_log_tendsto_zero holds for every fixed real M
+and natural B. The error is a fixed multiple of (log R)^(3/5), plus a
+finite constant depending on M and B. For R>1, division by log R changes
+the first term to (log R)^(-2/5); the constant term tends to zero using
+the reciprocal logarithm. No positivity or uniformity in M or B is
+silently required. The log B convention at B=0 is harmless because B is
+fixed and the expression remains a finite real constant.
+
+clock_grid_uniform_growth_budget assumes a>=0 and the strict exponent
+margin a+log(3/2)*d/clockDrift<1. It divides the candidate exponential
+upper bound by log R and uses the first theorem to obtain precisely this
+limiting exponent. For R>1, R^a>=1 bounds R^a+1 by 2R^a. The explicit
+rpow/exponential identity then proves the whole product <=R, hence
+<=R+1. The argument permits arbitrary real d; a nonnegative d was not
+needed for the claimed implication. The strict margin is essential and
+is retained. The eventual cutoff depends on the fixed data and does not
+assert a rate uniform over moving M or B.
+
+The source adds no axioms or orbit hypotheses and claims only these
+elementary asymptotic error/growth facts. It does not assert the later
+occupation lower limit or any upper estimate. No source file was edited
+in this review.
+

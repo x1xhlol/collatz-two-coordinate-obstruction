@@ -1,0 +1,14 @@
+PASS: authenticated fresh raw-occupation replay.
+
+Replay record SHA-256: f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814
+Replay driver SHA-256: 1884822769068490a8bf3d1311f0567deab522980d34819e46139d54049603a5
+Source manifest SHA-256: 2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1
+
+16 source modules; 17 compilation/kernel units; 34 successful commands.
+153 audited constants; 5 private constants.
+87 public and 4 private explicit declarations are covered.
+Only propext, Classical.choice, and Quot.sound; zero warnings.
+
+For every real b < 1/clockDrift, eventually over natural R, b is at most the sum of actualFirstHitDensity N over odd N <= R divided by log R.
+
+Sixteen fresh source modules plus their generated all-constant audit were each compiled and independently kernel-checked. Pinned native source/object pairs and clean pinned libraries were authenticated before and after by the replay driver. This post-run review rechecked all recorded fresh source/object/log hashes, actual audit output, and exact public/private declaration coverage. Native objects and Mathlib/Lean caches were reused; this is an additive replay. No raw upper bound, capped saturation, uniform integrability, or universal eventual periodicity is asserted.
