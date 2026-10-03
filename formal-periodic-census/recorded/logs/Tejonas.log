@@ -1,0 +1,9 @@
+/home/ubuntu/collatz-periodic-census-portable-replay-oct3/source/Tejonas.lean:654:19: warning: `Finset.filter_card_add_filter_neg_card_eq_card` has been deprecated: Use `Finset.card_filter_add_card_filter_not` instead
+'TejonasGao.canon_paso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TejonasGao.suma_rep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TejonasGao.transporte' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TejonasGao.canon_modulo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TejonasGao.iter_collatz' depends on axioms: [propext, Quot.sound]
+'TejonasGao.fusion_clasica' depends on axioms: [propext, Quot.sound]
+'TejonasGao.conteo_bloques' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TejonasGao.gao' depends on axioms: [propext, Classical.choice, Quot.sound]

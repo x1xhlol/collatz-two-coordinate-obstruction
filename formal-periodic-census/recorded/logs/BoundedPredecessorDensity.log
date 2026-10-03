@@ -1,0 +1,15 @@
+'CollatzCanonical.BoundedInverseSeed.frozenSeedHeightMultiplier_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.predecessorSeedMultiplier_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.predecessorDensityFloor_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.predecessorDensityFloor_ge_exp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.generalTarget_predecessors_explicit_lower_density' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

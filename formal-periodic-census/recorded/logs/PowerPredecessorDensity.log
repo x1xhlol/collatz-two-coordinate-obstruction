@@ -1,0 +1,3 @@
+'CollatzCanonical.BoundedInverseSeed.generalTarget_predecessors_power_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

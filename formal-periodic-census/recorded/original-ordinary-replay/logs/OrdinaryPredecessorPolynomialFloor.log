@@ -1,0 +1,27 @@
+'CollatzCanonical.PeriodicCensusFloor.ordinary_count_natural_density_ge_shortcut' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_natural_density' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_ordinary_predecessor_polynomial_natural_density' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_count_natural_density_exists' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_iff_shortcut_hit_or_bypass' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_iterate' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.shortcut_basin_subset_ordinary_predecessors' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_lower_count' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_ordinary_predecessor_polynomial_lower_count' depends on axioms: [propext,
+ choice,
+ Quot.sound]

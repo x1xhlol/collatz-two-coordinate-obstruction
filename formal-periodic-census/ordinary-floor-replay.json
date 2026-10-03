@@ -1,0 +1,262 @@
+{
+  "axioms": {
+    "CollatzCanonical.PeriodicCensusFloor.exists_uniform_ordinary_predecessor_polynomial_lower_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.exists_uniform_ordinary_predecessor_polynomial_natural_density": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.mem_ordinary_predecessors_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.mem_ordinary_predecessors_iff._proof_1_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.mem_ordinary_predecessors_iff._proof_1_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.mem_ordinary_predecessors_iff._proof_1_3": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.natCount_eq_indicator_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_count_natural_density_exists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_count_natural_density_ge_shortcut": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_lower_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_lower_count._proof_1_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_lower_count._proof_1_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_natural_density": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_iff_shortcut_hit_or_bypass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_iff_shortcut_hit_or_bypass._proof_1_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_iff_shortcut_hit_or_bypass._proof_1_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_iterate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_step": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_step._proof_1_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_step._proof_1_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_3": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_4": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_5": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_6": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.shortcut_basin_prefix_le_ordinary_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.shortcut_basin_subset_ordinary_predecessors": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.shortcut_basin_subset_ordinary_predecessors._proof_1_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.shortcut_basin_subset_ordinary_predecessors._proof_1_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.shortcut_hits_trans": [
+      "propext"
+    ],
+    "CollatzCanonical.PeriodicCensusFloor.shortcut_targets_comparable": [
+      "propext"
+    ]
+  },
+  "base_record_sha256": "2f1b3ef7dc4b9fa2ebf500a7265b4d702767ada6a441244c58bdd79d4d4a3b94",
+  "builds": {
+    "OrdinaryFloorAxioms": {
+      "log_sha256": "9a89cb5039d21fca13e50b64e3fd3fb039fde31c88139462323d06362fcb279c",
+      "object_sha256": "907a5bece5a2ab07df679e25766977844b7bc2e56ffa4a7a5bc924f38036bb68",
+      "source_sha256": "cdff50d871acf1d5dda9084a241728cc1ac737bf5477d275ac2a5c64f4781ceb"
+    },
+    "OrdinaryFloorDiscovery": {
+      "log_sha256": "6dd56c3f38c886c5b2f6e588b568fb20ad37052e11e771377b7b4bedb204cc5c",
+      "object_sha256": "c1bf0a5ab26092f7e8c5ceccedef85ea9e1a0794b4849a86cffe8de566e80804",
+      "source_sha256": "6bedffce59178fb8c78bf092ddf67aa5bb08c7ddd4e1e33eb80684bddd35831b"
+    },
+    "OrdinaryPredecessorPolynomialFloor": {
+      "log_sha256": "e7d755cb91dea5c88eb7c2349394ecbd5efdff72dfe6504fe122ed7599baa3b4",
+      "object_sha256": "ab852df64b6a0acec368f285b8b1f63f9d2a52416956e803aea7bbea785ee71d",
+      "source_sha256": "d39d7c3032117460b63521307f04a594fea10834961e1817bb43ff741743c6f6"
+    }
+  },
+  "fresh_build_directory": "/dev/shm/collatz-ordinary-floor-fresh-cd_eldq4",
+  "kernel_exit_code": 0,
+  "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "lean_path": "/dev/shm/collatz-ordinary-floor-fresh-cd_eldq4:/dev/shm/collatz-periodic-census-fresh-vgu1zcx9:/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-bounded-seed-density:/dev/shm/collatz-gao-v430-package/modules:/home/ubuntu/collatz-native-basin-notice-build/modules:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/elan/toolchains/leanprover--lean4---v4.30.0-rc2/lib/lean",
+  "scope": "One additional ordinary-map module freshly compiled and kernel replayed against the authenticated ten-module fresh build; all public declarations axiom audited.",
+  "source_inventory": {
+    "anonymous_instance_lines": [],
+    "imports": [
+      "ActualBasinPolynomialFloor"
+    ],
+    "module": "OrdinaryPredecessorPolynomialFloor",
+    "named_declarations": [
+      {
+        "kind": "theorem",
+        "line": 16,
+        "name": "CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_step"
+      },
+      {
+        "kind": "theorem",
+        "line": 30,
+        "name": "CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_iterate"
+      },
+      {
+        "kind": "theorem",
+        "line": 36,
+        "name": "CollatzCanonical.PeriodicCensusFloor.shortcut_basin_subset_ordinary_predecessors"
+      },
+      {
+        "kind": "theorem",
+        "line": 47,
+        "name": "CollatzCanonical.PeriodicCensusFloor.natCount_eq_indicator_sum"
+      },
+      {
+        "kind": "theorem",
+        "line": 59,
+        "name": "CollatzCanonical.PeriodicCensusFloor.shortcut_basin_prefix_le_ordinary_count"
+      },
+      {
+        "kind": "theorem",
+        "line": 72,
+        "name": "CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_lower_count"
+      },
+      {
+        "kind": "theorem",
+        "line": 97,
+        "name": "CollatzCanonical.PeriodicCensusFloor.exists_uniform_ordinary_predecessor_polynomial_lower_count"
+      },
+      {
+        "kind": "theorem",
+        "line": 109,
+        "name": "CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass"
+      },
+      {
+        "kind": "theorem",
+        "line": 147,
+        "name": "CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_iff_shortcut_hit_or_bypass"
+      },
+      {
+        "kind": "theorem",
+        "line": 169,
+        "name": "CollatzCanonical.PeriodicCensusFloor.mem_ordinary_predecessors_iff"
+      },
+      {
+        "kind": "theorem",
+        "line": 183,
+        "name": "CollatzCanonical.PeriodicCensusFloor.shortcut_hits_trans"
+      },
+      {
+        "kind": "theorem",
+        "line": 190,
+        "name": "CollatzCanonical.PeriodicCensusFloor.shortcut_targets_comparable"
+      },
+      {
+        "kind": "theorem",
+        "line": 205,
+        "name": "CollatzCanonical.PeriodicCensusFloor.ordinary_count_natural_density_exists"
+      },
+      {
+        "kind": "theorem",
+        "line": 282,
+        "name": "CollatzCanonical.PeriodicCensusFloor.ordinary_count_natural_density_ge_shortcut"
+      },
+      {
+        "kind": "theorem",
+        "line": 292,
+        "name": "CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_natural_density"
+      },
+      {
+        "kind": "theorem",
+        "line": 301,
+        "name": "CollatzCanonical.PeriodicCensusFloor.exists_uniform_ordinary_predecessor_polynomial_natural_density"
+      }
+    ],
+    "private_declarations": [],
+    "sha256": "d39d7c3032117460b63521307f04a594fea10834961e1817bb43ff741743c6f6"
+  },
+  "status": "PASS"
+}

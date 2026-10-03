@@ -1,0 +1,18 @@
+'CollatzCanonical.BoundedInverseSeed.powerConductorFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.powerMixingDepth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.powerDensityFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.powerMixingDepth_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.powerConductorFloor_monotone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.powerMixingDepth_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.powerDensityFloor_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.powerDensityFloor_antitone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.powerDensityFloor_eq_depth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.powerDensityFloor_ge_exp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

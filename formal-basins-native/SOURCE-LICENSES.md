@@ -11,4 +11,4 @@ The following imported sources are excluded from that blanket MIT scope:
 
 The source archive URLs, checksums, package revisions, and namespace transformations are retained in the manifest and provenance files. Mathlib and its packages are external dependencies with their own licenses; their compiled caches are not distributed here.
 
-The external papers and images are outside the predecessor package's formal-source license. They are cited, not reproduced. The three papers authored in this repository remain under the separate CC BY 4.0 license in `paper/LICENSE`.
+The external papers and images are outside the predecessor package's formal-source license. They are cited, not reproduced. The manuscript authored in this repository remain under the separate CC BY 4.0 license in `paper/LICENSE`.

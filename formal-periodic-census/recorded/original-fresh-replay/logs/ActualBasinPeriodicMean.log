@@ -1,0 +1,9 @@
+'CollatzCanonical.PeriodicCensusFloor.actual_basin_sourceMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_basin_periodic_sourceMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_basin_oddTerminalFan_scaled_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

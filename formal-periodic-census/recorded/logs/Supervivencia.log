@@ -1,0 +1,6 @@
+'SupervivenciaGao.altura_armonica' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SupervivenciaGao.altura_paso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SupervivenciaGao.altura_media' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SupervivenciaGao.altura_acotada_por_vivos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SupervivenciaGao.supervivencia_armonica' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SupervivenciaGao.supervivencia_conteo' depends on axioms: [propext, Classical.choice, Quot.sound]

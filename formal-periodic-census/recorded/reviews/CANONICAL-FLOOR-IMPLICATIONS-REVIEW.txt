@@ -1,0 +1,151 @@
+Canonical floor: independent corollary review and cycle/divergence consequences
+3 October 2026. Source reading and analytic deductions; no manuscript edits.
+
+I read all of CanonicalTracePolynomialFloor.lean, its successful local
+compile log, BasinWeightedDensityComparison.lean, and
+ActualGreenDensityLimit.lean. I did not author this corollary module.
+No semantic issue was found. Its three printed declarations have only
+propext, Classical.choice and Quot.sound in their displayed axiom closures.
+This is not a claim of a fresh complete kernel replay by this reviewer.
+
+Write K = predecessorSeedMultiplier and choose P >= 1 from the existing
+same-target weighted-density comparison. The new statements give, with
+
+  a = 3/(128*K),    b = a/P,    c = delta*b,
+
+  d_N >= a/N,    D_N >= b/N,    g(N) >= c > 0
+
+at every positive unit N modulo three. Here d_N is actual basin density,
+D_N is the actual first-hit weighted density, and
+
+  g(N) = delta * gamma(N) * N * D_N.
+
+The cycle factor gamma is one off-cycle and 1/(1-beta) on-cycle. The
+existing positive-cycle ratio theorem gives 0 < beta < 1, so gamma >= 1.
+The code first divides d_N <= P*D_N by positive P, then multiplies by N
+and delta, and finally uses gamma >= 1. It covers periodic targets as well
+as off-cycle targets. No off-cycle identity has been applied on a cycle.
+
+These are the actual implications I can establish, and the limits of the
+known routes after incorporating them.
+
+1. Disjoint basins give a reciprocal packing budget
+
+For a finite set A of positive unit targets whose basins are pairwise
+disjoint, finite additivity of their established natural densities gives
+
+  a * sum_(N in A) 1/N <= sum_(N in A) d_N <= 1.
+
+Consequently every such countable family satisfies sum 1/N <= 1/a,
+interpreting the series as the supremum of finite subsums. This uses no
+countable additivity assumption for arbitrary natural-density sets.
+
+For pairwise disjoint side branches selected along an injective forward
+orbit, this yields a uniform reciprocal-height budget. A sibling of the
+form s=64*n+21 contributes at least a/(64*n+21), so the scale of the
+resulting constraint is sum 1/n < infinity. This does not force finitely
+many branches: a divergent height sequence can have a convergent reciprocal
+series. In fact the already accepted distinct-path packing bound is itself
+consistent with, and implies, reciprocal summability on an injective path.
+There is no inverse-logarithmic branch budget here.
+
+At two off-cycle unit sibling targets n and s=64*n+21, the unweighted and
+weighted floors combined only with d_n,D_n <= 1 give respectively
+
+  d_s/d_n >= a/s,    D_s/D_n >= b/s.
+
+They do not give a constant times 1/log n. The trace floor gives
+g(s)/g(n) >= c/g(n), and the off-cycle bound g(n)<=delta*n again gives
+only a reciprocal-height estimate. Any improvement needs information
+relating the masses at the two distinct targets.
+
+2. Cycle injections are quantitative but still fit the cycle slack
+
+For a primitive positive shortcut cycle n_0,...,n_(k-1), every phase is a
+unit. At a cycle edge, inverse harmonicity gives
+
+  g(n_(i+1)) = c_i*g(n_i) + R_i,
+
+where c_i is 1/2 at even sources and 3/2 at odd sources. All R_i are
+nonnegative. At an odd phase n_i, the other predecessor is 3*n_i+1,
+so R_i = g(3*n_i+1)/2 >= c/2. These predecessor vertices are outside
+the cycle but remain units, so the new uniform floor applies.
+
+Let beta=product c_i=3^r/2^k. The exact slack identity now implies
+
+  (1-beta)*g(n_0)
+    >= (c/2) * sum_(i:n_i odd) product_(j>i) c_j.
+
+This is a lower bound on the necessary cycle trace. It is not a
+contradiction: the same cycle has the scalar amplification
+gamma=1/(1-beta). There is no established upper comparison forcing the
+displayed right side above the available left side.
+
+One further consequence is available. Put v(n)=g(n)/n. At an odd cycle
+source the exact identity is
+
+  v(Tn) = [3*n*v(n) + g(3*n+1)]/(3*n+1),
+
+and at an even source v(Tn)>=v(n). Thus u(n)=v(n)-c satisfies
+u(Tn)>=a_i*u(n), with a_i=3*n/(3*n+1) at odd sources and a_i=1 at
+even sources. The product of these a_i over the cycle is beta<1,
+by the exact integer-cycle correction identity. Iterating once around
+the cycle gives u(n)>=beta*u(n), hence
+
+  g(n)/n >= c at every phase of every positive cycle.
+
+This stronger cycle lower bound follows from the new uniform floor, but
+it still supplies the same direction of information. The previous
+exclusion criterion needs a comparison of g(3*n+1) with g(n)/n at every
+odd phase, with enough strictness to prevent the cycle sum from vanishing.
+Knowing both quantities are at least c does not compare them. In
+particular, replacing the unknown g(n)/n by its lower bound in the
+subtracted term of the cycle-increment identity has the wrong direction.
+
+3. Divergent forward components remain compatible with the floor
+
+I read ComponentRatioLimit.lean and the existing divergent-component
+assessment to check this route. Along an injective positive orbit, the
+established forward limits are
+
+  d_(T^j n) -> component mass,
+  D_(T^j n) -> component weighted mass,
+  g(T^j n)/(T^j n) -> delta * component weighted mass.
+
+Unit-basin positivity makes the relevant component mass positive whenever
+such a component exists. The new floors strengthen finite-target lower
+bounds, but a positive limiting density and trace growing proportionally
+to forward height already satisfy them. The fixed-basin boundary theorem
+controls targets tending to infinity inside one inverse basin; it cannot
+be substituted for the unresolved upper boundary on an entire forward
+component.
+
+Similarly, the high-minimum construction inside a hypothetical divergent
+component chooses a unit predecessor r=r(M) whose basin avoids all values
+at most M. The new estimate gives high-minimum mass at least a/r(M), which
+is positive for each M. The chosen r grows with M, so this does not supply
+a positive lower bound independent of M and does not contradict the
+known vanishing high-minimum tail. No controlled small r(M) has been
+provided by that construction.
+
+4. Occupation and transport formulas retain their missing estimate
+
+The floor does bound the previously explicit endpoint factor:
+1/g(Y_k) <= 1/c for every continuing unit endpoint. This is useful upper
+control, but the whole-basin recoding criterion asks for a positive lower
+share of the occupation lying in a low-distortion event, with the actual
+height cutoff Y_k<=X. An upper bound on every reward does not prevent
+nearly all of the occupation from lying in the complementary event.
+
+For a paired likelihood, a lower bound on each of g(Y_k) and g(Y'_k)
+does not upper-bound their ratio, establish uniform integrability, or
+control the accumulated recoding distortion. The finite-prefix formulas
+and within-root change of measure remain valid; no new paired change of
+measure follows from the absolute floor alone.
+
+Conclusion of this review: the corollary module is valid and supplies a
+uniform positive trace floor, including on cycles. I found the new cycle
+ratio lower bound and the reciprocal antichain budget above. Neither
+closes a known cycle or divergence route. The missing relative mass and
+cycle-injection comparisons are still substantive. This assessment makes
+no Collatz-solution or near-solution claim.

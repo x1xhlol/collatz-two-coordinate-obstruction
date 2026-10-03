@@ -1,24 +1,24 @@
 {
-  "title": "Collatz matrix obstructions, synchronization, and basin densities: three papers and Lean artifacts",
+  "title": "Uniform lower bounds for Collatz predecessor densities: paper and Lean proofs",
   "creators": [
     {
       "name": "Valbuena, Lucas"
     }
   ],
-  "description": "<p>Three standalone papers with LaTeX sources, PDFs, Lean proof sources, and verification reports: (1) Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system; (2) An independent second proof of Said Duran’s equal-height Collatz runs theorem; (3) Collatz basin densities and canonical traces from first-passage stabilization.</p><p>The matrix and synchronization scope has 137 checked Lean modules and 633 public theorem/lemma declarations. The native basin bundle has 1,602 bundled Lean modules, including 281 local proof modules, 1,507 local theorem/lemma declarations, 275 definitions and named instances, and 5 separately audited upstream roots; its root audit checks 1,787 declarations. The actual first-passage inputs at alpha=1001/1000 and alpha=2001/2000 are connected to basin and label densities, first-hit clocks, Green limits, and cylinder Cesàro/Abel identification. Mazur’s separate natural-counting and predecessor theorems give natural-density limits and positivity at targets prime to three. The global sublinearity and eventual-periodicity conditions are proved equivalent, but neither is established. Additional cycles remain unexcluded. None of these papers proves the Collatz conjecture. Priority for the equal-height existence theorem belongs to Omar Javier Said Duran.</p><p>The recorded joint build distinguishes fresh compilation from exact dependency-checked object reuse. The default native verifier rebuilds all bundled modules. All audited roots use only the standard Lean axioms propext, Classical.choice, and Quot.sound.</p><p>Original code, scripts, and documentation use MIT. Imported formal sources in external/ and formal-basins-native/ retain their own licenses and separate Mazur, Advameg, and upstream notices; the source-license map identifies the Apache-2.0 packages. Papers and their LaTeX sources and PDFs use CC BY 4.0; code excerpts retain their code licenses. Third-party material retains its original rights. This DOI archives the complete repository release, containing the three individually titled papers.</p>",
-  "version": "2026.09.28.5",
-  "publication_date": "2026-09-28",
+  "description": "<p>Lucas Valbuena, Collatz basin densities and canonical traces from first-passage stabilization. The paper proves a uniform inverse-linear lower bound for the natural density of every positive shortcut basin whose target is prime to three. The ordinary-map predecessor natural density satisfies the same bound. Weighted first-hit densities and canonical traces have corresponding uniform lower bounds.</p><p>The proof uses Mazur's weighted predecessor construction, Said Duran's coalescence theorem, and periodic source averaging. The inverse-linear form was proposed by Wirsching. The density and canonical-limit foundations use Tao's first-passage theorem and Mazur's natural-counting transport. All inputs are credited separately. No claim of an exhaustive novelty search is made. Divergence and additional cycles remain unresolved; the paper does not prove the Collatz conjecture.</p><p>The archive contains the paper, LaTeX source, theorem map, native Lean foundation, and additive proof bundle. Verification records distinguish fresh compilation and individual kernel checks from authenticated reuse of pinned dependencies. Audited results use only propext, Classical.choice, and Quot.sound. The current collection omits the earlier standalone matrix-obstruction and independent-second-proof papers; those remain in earlier repository releases.</p><p>Original code and documentation use MIT. Imported and adapted formal sources retain their Apache-2.0 or other original licenses and notices. The paper and LaTeX source use CC BY 4.0. Automated proof development and review are disclosed and do not constitute external peer review.</p>",
+  "version": "2026.10.03.1",
+  "publication_date": "2026-10-03",
   "access_right": "open",
   "license": "mit",
   "upload_type": "software",
   "language": "eng",
   "keywords": [
     "Collatz conjecture",
+    "predecessor density",
+    "natural density",
+    "canonical traces",
     "Lean",
-    "formal verification",
-    "matrix interpretations",
-    "logarithmic density",
-    "first passage"
+    "formal verification"
   ],
   "related_identifiers": [
     {

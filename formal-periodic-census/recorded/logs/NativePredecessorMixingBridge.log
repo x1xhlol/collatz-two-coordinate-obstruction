@@ -1,0 +1,9 @@
+'CollatzCanonical.BoundedInverseSeed.native_predecessor_syracPMF_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.native_predecessor_fineScaleOscillation_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.predecessor_mixing_each_positive_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,158 @@
+'CollatzCanonical.GaoShortcut.basin_adjacent_difference_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.GaoShortcut.basin_adjacent_variation_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.basin_adjacent_variation_bound._proof_1_1' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.basin_adjacent_variation_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.GaoShortcut.basin_adjacent_variation_tendsto_zero._proof_1_1' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.basin_eq_of_good' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.basin_eq_of_good._proof_1_1' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.good' depends on axioms: [propext]
+'CollatzCanonical.GaoShortcut.goodProbability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.goodProbability_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.goodProbability_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.good_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.good_count_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.good_count_lower._simp_1_1' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.good_count_lower._simp_1_2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.good_iff' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.good_mod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.imp_nat' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.imp_nat._proof_1_1' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.instDecidableGood' depends on axioms: [propext]
+'CollatzCanonical.GaoShortcut.pair_iterate' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.prefix_avoids_of_large' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.prefix_avoids_of_large._proof_1_1' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.tm_nat' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.tm_nat._proof_1_1' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.GaoShortcut.tm_nat._proof_1_2' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_basin_adjacentVariation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_basin_oddTerminalFan_scaled_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_basin_oddTerminalFan_sourceMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_basin_periodic_sourceMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_basin_polynomial_lower_density' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_basin_sourceMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.adjacentVariation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.basinIndicator_abs_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.centered_weighted_mean_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_frozen_seed_eventual_periodic_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_frozen_seed_eventual_periodic_prefix._proof_1_1' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_frozen_seed_eventual_periodic_prefix._proof_1_2' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_frozen_seed_eventual_periodic_prefix._proof_1_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_frozen_seed_eventual_periodic_prefix._proof_1_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_frozen_seed_eventual_periodic_prefix._proof_1_5' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_frozen_seed_eventual_periodic_prefix._proof_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_frozen_seed_eventual_periodic_prefix._proof_1_7' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_frozen_seed_eventual_periodic_prefix._proof_1_8' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_firstHit_reciprocal_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_unit_canonical_trace_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.forwardGoodDepthShiftUnitMass_le_envelope_sources' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.frozen_seed_periodic_density_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.fullTerminal_fan_le_envelope' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.greenCycleFactor_one_ge_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.greenCycleFactor_one_ge_one._simp_1_1' depends on axioms: [propext]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_paired' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_paired._proof_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_periodic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_periodic._proof_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_scaled_source_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_scaled_source_limit._proof_1_1' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_weighted_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.periodic_weighted_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.periodic_weighted_mean._simp_1_2' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.periodic_zero_sum_prefix_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.periodic_zero_sum_prefix_bound._proof_1_1' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.sourceMean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.sourceMean.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.sourceMean_of_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.sourceMean_shift_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalEnvelope_source_sum_le_basin_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope._proof_1' depends on axioms: [propext]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_dominates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_fullMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_nat_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.weighted_centered_sum_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

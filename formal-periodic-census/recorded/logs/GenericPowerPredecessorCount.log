@@ -1,0 +1,3 @@
+'CollatzCanonical.BoundedInverseSeed.generalTarget_predecessors_seed_lower_density_at_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

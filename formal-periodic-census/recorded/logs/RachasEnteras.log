@@ -1,0 +1,6 @@
+'RachasEnterasGao.cuenta_baja' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RachasEnterasGao.cuenta_alta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RachasEnterasGao.cuenta_uniforme' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RachasEnterasGao.cola_uniforme' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RachasEnterasGao.racha_original' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RachasEnterasGao.cola_racha_original' depends on axioms: [propext, Classical.choice, Quot.sound]

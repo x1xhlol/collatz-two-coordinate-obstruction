@@ -3,6 +3,7 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array}
 \usepackage{lmodern,microtype,fancyhdr}
 \usepackage{fontspec,fancyvrb}
+\usepackage{xurl}
 \usepackage[hidelinks]{hyperref}
 \newfontfamily\leanappendixfont{DejaVuSansMono.ttf}
 \newtheorem{theorem}{Theorem}
@@ -26,7 +27,7 @@
 \setlength{\parskip}{3pt}
 \setlength{\abovedisplayskip}{7pt plus 2pt minus 2pt}
 \setlength{\belowdisplayskip}{7pt plus 2pt minus 2pt}
-\hypersetup{pdftitle={Collatz basin densities and canonical traces from first-passage stabilization},pdfauthor={Lucas Valbuena},pdfsubject={Consequences of Tao's first-passage stabilization for logarithmic densities and critical traces}}
+\hypersetup{pdftitle={Collatz basin densities and canonical traces from first-passage stabilization},pdfauthor={Lucas Valbuena},pdfsubject={Natural Collatz basin densities, a uniform inverse-linear lower bound, and canonical traces}}
 
 \begin{document}
 \thispagestyle{plain}
@@ -35,44 +36,53 @@
 \vspace{8pt}
 {\large Lucas Valbuena\par}
 \vspace{4pt}
-{\normalsize 28 September 2026}
+{\normalsize 3 October 2026}
 \end{center}
 \vspace{2pt}
 \begin{abstract}
-We deduce from Tao's first-passage stabilization that every fixed Collatz
-basin has a logarithmic density and that countable orbit labels have
-limits in total variation. Two incommensurable scale parameters remove
-the possible logarithmic oscillation left by one scale. Weighted basin
-densities give a finite critical Green limit at every positive integer.
-A first-hit time law then identifies this function with the Ces\`aro
-and Abel limits of normalized stationary Syracuse cylinder masses.
-For the largest cylinder mass we prove
-\(2^{-k}\le\max_N\pi(N+3^k\mathbb Z_3)\le(2k+3)2^{-k}\),
-which determines its optimal uniform exponential rate. The canonical
-function is sublinear uniformly among the large ancestors of any fixed
-root. Its global sublinearity on nonperiodic targets is equivalent to
-logarithmic density one of the eventually periodic set. Additional results of Mazur upgrade the basin and label limits to natural
-density and imply that the canonical function is positive exactly at
-integers prime to three. With that input, global sublinearity is
-equivalent to eventual periodicity of every orbit; this condition and
-the exclusion of additional cycles remain unresolved. The accompanying Lean development verifies the numbered results,
-connecting both first-passage scales and the additional Mazur inputs
-to the density, clock, and canonical-limit conclusions.
+Every fixed shortcut Collatz basin has a natural density \(d_N\). We
+prove the uniform lower bound \(d_N\ge3/(128K_{\rm seed}N)\) for
+all positive targets prime to three, where \(K_{\rm seed}\) is one
+fixed positive integer. The proof combines Mazur's weighted inverse
+construction with the coalescence theorem for consecutive integers
+proved by Said Duran in his work on Gao's conjecture. Coalescence makes
+each fixed basin asymptotically independent of periodic weights; the
+terminal weight can then be replaced by its mean before the residue
+level tends to infinity. This establishes the inverse-linear form
+proposed by Wirsching without a restriction to nonperiodic targets.
+The density limits come from Tao's first-passage stabilization at two
+scales and Mazur's natural-counting transport. Weighted basin densities
+identify a canonical function with critical Green, Ces\`aro, and Abel
+limits of stationary Syracuse cylinder masses. The new density bound
+makes this function uniformly positive at all positive integers prime
+to three. We also prove total-variation limits for countable orbit
+labels, sharp exponential cylinder bounds, and a characterization of
+global sublinearity. The equivalent global condition and the exclusion
+of additional cycles remain open. The accompanying Lean proofs include
+the new density and canonical-trace bounds. The result does not prove
+the Collatz conjecture.
 \end{abstract}
 
 \section{Introduction and notation}
 \label{sec:canonical-traces}
 
-We use Tao's first-passage stabilization theorem to study fixed integer
-basins. The numbered results have accompanying Lean proofs, with
-the external formal inputs and their interfaces checked in one native
-development. We prove
-existence of logarithmic basin densities, total-variation limits for
-countable orbit labels, and equality of two canonical critical traces
-at every positive integer. A final proposition characterizes the
-global sublinearity condition that remains unresolved. We then use
-separate results of Mazur to obtain natural-density limits and positivity
-at every target prime to three.
+We prove a uniform inverse-linear lower bound for the natural densities
+of all positive shortcut Collatz basins whose targets are prime to
+three. The earlier sections construct the densities and canonical
+traces from Tao's first-passage stabilization and Mazur's additional
+natural-counting theorem. Section~\ref{sec:ct-periodic-census-floor}
+uses Said Duran's coalescence proof for Gao's conjecture to replace
+periodic source weights by their averages. Combined with Mazur's
+weighted predecessor construction and a bounded choice of inverse
+seed, this gives one constant \(c>0\) with \(d_N\ge c/N\).
+The canonical trace is consequently bounded below by one positive
+constant on all positive integers prime to three.
+
+The numbered results have accompanying Lean proofs. The formal scope
+section distinguishes the preceding native development from the new
+extension and records the external source boundaries. Neither the
+uniform density bound nor the trace bound settles the remaining global
+sublinearity condition or excludes additional cycles.
 
 Use the shortcut Collatz map
 \[
@@ -1665,10 +1675,378 @@ orbits. Even that conclusion would still permit cycles other than
 the known cycle through one. Excluding such cycles, and hence
 proving the Collatz conjecture, is not achieved here.
 
+\section{A uniform inverse-linear lower bound for basin densities}
+\label{sec:ct-periodic-census-floor}
+
+Write \(d_N=d_{\rm nat}(\mathcal B_N)\), whose existence was proved in
+Theorem~\ref{thm:ct-natural-density-upgrade}. We now prove
+\(d_N\ge c/N\) with one positive constant for every \(N\ge1\)
+prime to three. The proof uses an additional input, the coalescence
+theorem for consecutive integers proved by Omar Javier Said Duran in
+his work on Gao's conjecture~\cite{SaidDuranGao2026,SaidDuranGaoFormal2026}.
+We use its precise shortcut-map form below. It makes each fixed basin
+asymptotically independent of every fixed periodic weight. This permits
+the auxiliary weight in Mazur's predecessor construction to be replaced
+by its mean, while the same inverse seed is retained at every residue
+level.
+
+\subsection{The coalescence input and adjacent basin variation}
+
+Let \(o_H(q)\) count the odd inputs among the first \(H\) shortcut
+steps from \(q\), and put
+\[
+ E_H=\{q\ge0:T^H(q)=T^H(q+1),\quad o_H(q)=o_H(q+1)\}.
+\]
+Here \(T\) is extended to zero by \(T(0)=0\), solely for the finite
+residue count. The event \(E_H\) is periodic modulo \(2^H\).
+Indeed, on a fixed parity word,
+\(T^H(q+2^Hj)=T^H(q)+3^{o_H(q)}j\), and the odd count is unchanged.
+The equal-count condition therefore preserves equality of the two
+endpoints under these translations. The converse follows by the same
+formula.
+
+The input from Said Duran's formalization is
+\begin{equation}\label{eq:ct-balanced-coalescence}
+ p_H:=2^{-H}\#(E_H\cap[0,2^H))\longrightarrow1.
+\end{equation}
+More precisely, its finite residue transport identifies \(p_H\) with
+the fusion probability of the pair process started at the consecutive
+pair; the theorem named \texttt{MartasGao.martas} proves convergence
+to one. The equality of that event with the two conditions defining
+\(E_H\) is checked in our shortcut-map bridge. Thus
+\eqref{eq:ct-balanced-coalescence} is credited to that external proof;
+it is not inferred from Tao's first-passage theorem.
+
+Set \(b_N(q)=\mathbf1_{\mathcal B_N}(q)\) for \(q\ge1\), and
+\(b_N(0)=0\). Define
+\[
+ V_N(X)=\sum_{0\le q<X}|b_N(q+1)-b_N(q)|.
+\]
+
+\begin{lemma}\label{lem:ct-basin-adjacent-variation}
+For every fixed \(N\ge1\),
+\begin{equation}\label{eq:ct-adjacent-variation}
+ V_N(X)=o(X).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Each shortcut step satisfies \(q\le2T(q)\), so
+\(q\le2^iT^i(q)\). If \(q>2^HN\), neither \(q\) nor \(q+1\)
+can reach \(N\) before time \(H\). Consequently their basin indicators
+equal those of their time-\(H\) endpoints. If also \(q\in E_H\),
+the endpoints agree and \(b_N(q)=b_N(q+1)\).
+
+The number of members of \(E_H\) below \(X\) is at least
+\(Xp_H-2^H\), by counting full periods. Each remaining adjacent
+difference is at most one. Hence
+\[
+ V_N(X)\le 2^HN+1+X(1-p_H)+2^H.
+\]
+For fixed \(H\), divide by \(X\) and take the upper limit as
+\(X\to\infty\). The result is at most \(1-p_H\). Now let
+\(H\to\infty\) and use \eqref{eq:ct-balanced-coalescence}.
+\end{proof}
+
+\begin{lemma}\label{lem:ct-periodic-basin-mean}
+For every real periodic function \(p\) on the nonnegative integers,
+of positive integer period \(M\),
+\begin{equation}\label{eq:ct-periodic-basin-mean}
+ \lim_{X\to\infty}\frac1X\sum_{0\le q<X}b_N(q)p(q)
+       =d_N\overline p,
+ \qquad
+ \overline p=\frac1M\sum_{q=0}^{M-1}p(q).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The partial sums \(Q(t)=\sum_{q<t}(p(q)-\overline p)\) are
+periodic and bounded. Discrete summation by parts gives
+\[
+ \sum_{q<X}b_N(q)(p(q)-\overline p)
+ =b_N(X-1)Q(X)
+   -\sum_{q=1}^{X-1}Q(q)(b_N(q)-b_N(q-1)).
+\]
+Its absolute value is at most \(\|Q\|_\infty(1+V_N(X))=o(X)\).
+The unweighted mean of \(b_N\) tends to \(d_N\), which proves
+the assertion. The modulus \(M\) is fixed when the limit is taken.
+\end{proof}
+
+\subsection{A bounded inverse seed}
+
+We recall the weighted input from Mazur's predecessor proof
+\cite[Proposition~3.1 and Appendix~A]{MazurPredecessors2026} in notation
+suited to the present count. There are fixed integers \(L\ge1\),
+\(q_0\ge1\), a unit residue \(y_0\pmod{3^{q_0}}\), and a constant
+\(C>0\). There are also nonnegative reference functions
+\(\varrho_k\) on \(\mathbb Z/3^k\mathbb Z\), with full-group mean
+\(2/3\), for which
+\begin{equation}\label{eq:ct-fan-mixing-input}
+ 3^{-k}\sum_{z\bmod3^k}
+ \left|\varrho_k(z)-\varrho_m(z\bmod3^m)\right|
+       \le\frac C{m^2}\qquad(k\ge m\ge1).
+\end{equation}
+The functions \(\varrho_k\) belong to the finite reference law in
+that construction. They are kept distinct in notation from the
+stationary cylinder sequence \(\rho_k\) used earlier in this paper.
+
+For every odd \(r>L\) in the residue \(y_0\), and every fixed
+\(m\ge1\), all sufficiently large \(X\) admit a finite family
+\(W\) of exact Syracuse inverse words ending at \(r\), integers
+\(k\ge m\), \(J\ge0\), and selected weights \(v_w\). If \(x_w\)
+is the positive odd source of \(w\), the properties needed here are
+\begin{align}
+ &3^k\le X,\qquad X\le x_w<32X,\qquad
+          0\le v_w,\qquad x_wv_w\le r,
+          \label{eq:ct-weighted-source-window}\\
+ &\frac23\le\sum_{w\in W}v_w
+          \sum_{j=0}^{J}4^{-j}\varrho_k(\Psi_j(x_w)),
+ \qquad
+ \Psi_j(x)=4^jx+\frac{4^j-1}{3}.
+ \label{eq:ct-weighted-source-input}
+\end{align}
+The last inequality is the source-charge bound for the selected
+path weight. It is the only upper bound on that weight used below.
+The cutoff may depend on \(r,m\). The constants, chosen residue,
+and seed threshold precede both choices. These statements are the
+external weighted-path and mixing input; the basin-density estimate
+proved below is a further deduction.
+
+For the fixed choice used here, set
+\begin{equation}\label{eq:ct-seed-multiplier}
+ K_{\rm seed}=4^{(L+3)3^{q_0}+1}.
+\end{equation}
+The formal construction fixes \(L=16^b\), \(b=2^{80}\), and takes
+\(q_0\) to be the backward conductor at its fixed initial marked
+generation. All are independent of the target. Their exact source
+definitions are recorded in Section~\ref{sec:ct-new-formal-scope};
+no numerical evaluation of this large constant is needed.
+
+\begin{lemma}\label{lem:ct-bounded-nonreturning-seed}
+For every positive integer \(a\) prime to three, there is an odd
+integer \(r\) such that
+\[
+ L<r\le K_{\rm seed}a,\qquad r\equiv y_0\pmod{3^{q_0}},
+\]
+whose ordinary Collatz orbit reaches \(a\), and whose Syracuse
+orbit has no positive return to \(r\).
+\end{lemma}
+\begin{proof}
+Choose \(e\in\{1,2\}\) with \(2^ea\equiv1\pmod3\), and put
+\[
+ R_t=\frac{2^ea4^t-1}{3}\qquad(t\ge0).
+\]
+For \(t\ge1\), these are positive odd integers. They reach \(a\)
+by one odd step followed by \(2t+e\) halvings. They all have the
+same next odd value, the odd part of \(a\).
+The identity
+\(v_3(4^h-1)=1+v_3(h)\) gives
+\[
+ v_3(R_{t+h}-R_t)=v_3(h).
+\]
+It follows that \(R_0,\ldots,R_{3^{q_0}-1}\) represent all residues
+modulo \(3^{q_0}\) exactly once, and that adding \(3^{q_0}\) to
+the index preserves the residue. Choose \(j<3^{q_0}\) representing
+\(y_0\), and use the two indices
+\[
+ t_1=j+(L+1)3^{q_0},\qquad
+ t_2=j+(L+2)3^{q_0}.
+\]
+Both exceed \(L\) and are at most \((L+3)3^{q_0}\).
+The sequence \(R_t\) is strictly increasing and \(R_t\ge t\), so
+both candidate roots exceed \(L\). Also
+\[
+ R_{t_i}\le4^{t_i+1}a\le K_{\rm seed}a.
+\]
+
+Two distinct points with the same successor cannot both be periodic
+under a deterministic map. If they were, their cycles would share
+that successor and hence be the same cycle, on which the successor
+has only one preceding point. At least one of the two candidate
+roots therefore has no positive Syracuse return. Choose it as \(r\).
+\end{proof}
+
+\subsection{The periodic terminal weight}
+
+For fixed \(m\ge1\), define
+\[
+ H_m(x)=\sum_{j=0}^{\infty}4^{-j}\varrho_m(\Psi_j(x)),\qquad
+ P_m(x)=\mathbf1_{x\ {\rm odd}}H_m(x).
+\]
+The first series converges because \(\varrho_m\) is a function on
+a finite group. Each \(\Psi_j\) permutes that group, as its slope
+\(4^j\) is invertible modulo \(3^m\). Thus
+\begin{equation}\label{eq:ct-terminal-fan-mean}
+ 3^{-m}\sum_{x\bmod3^m}H_m(x)
+       =\frac23\sum_{j\ge0}4^{-j}=\frac89.
+\end{equation}
+The function \(P_m\) has period \(2\cdot3^m\). Each ternary
+residue has one odd representative in a full such period, so its
+mean is \(4/9\). Lemma~\ref{lem:ct-periodic-basin-mean} gives
+\begin{equation}\label{eq:ct-terminal-fan-basin-limit}
+ \lim_{X\to\infty}\frac rX\sum_{0\le x<32X}b_N(x)P_m(x)
+       =\frac{128r}{9}d_N.
+\end{equation}
+Here \(r,N,m\) are fixed. The argument makes no assertion uniform
+in a growing modulus.
+
+\begin{lemma}\label{lem:ct-frozen-seed-prefix-bound}
+Fix \(N\ge1\) prime to three. One can choose the same odd seed
+\(r\) with \(0<r\le2K_{\rm seed}N\) so that, for every fixed
+\(m\ge1\) and all sufficiently large integer \(X\),
+\begin{equation}\label{eq:ct-frozen-seed-prefix-bound}
+ \frac23\le\frac rX\sum_{0\le x<32X}b_N(x)P_m(x)
+                   +\frac{44rC}{m^2}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Apply Lemma~\ref{lem:ct-bounded-nonreturning-seed} to \(a=2N\),
+and fix the resulting \(r\) before choosing \(m\). Every ordinary
+predecessor of \(2N\) belongs to the shortcut basin of \(N\), by
+the map comparison used in the preceding section.
+
+Take the data in \eqref{eq:ct-weighted-source-window}--\eqref{eq:ct-weighted-source-input}.
+Their sources are distinct. Indeed, two different hitting times at
+\(r\) from one source would give a positive Syracuse return at
+\(r\); at a fixed hitting time the deterministic orbit fixes all
+valuations in the word. Consequently, for every nonnegative function
+\(h\) on \(\mathbb Z/3^k\mathbb Z\),
+\begin{equation}\label{eq:ct-weighted-residue-census}
+ \sum_{w\in W}v_wh(x_w)
+ \le\frac rX\sum_{w\in W}h(x_w)
+ \le33r\,3^{-k}\sum_{z\bmod3^k}h(z).
+\end{equation}
+For the last inequality, a residue class has at most
+\(32X/3^k+1\le33X/3^k\) representatives below \(32X\).
+
+Apply \eqref{eq:ct-weighted-residue-census} to
+\[
+ h(z)=|\varrho_k(\Psi_j(z))
+             -\varrho_m(\Psi_j(z)\bmod3^m)|.
+\]
+The permutation \(\Psi_j\) preserves the full-group mean, so
+\eqref{eq:ct-fan-mixing-input} bounds this error by \(33rC/m^2\).
+Multiply by \(4^{-j}\) and sum over the selected terminal fan.
+Its coefficients total at most \(4/3\). Therefore
+\[
+ \frac23\le\sum_{w\in W}v_wH_m(x_w)+\frac{44rC}{m^2}.
+\]
+Since \(v_w\le r/X\), and the distinct sources are odd members
+of \(\mathcal B_N\) below \(32X\), the first term is at most
+the prefix sum in \eqref{eq:ct-frozen-seed-prefix-bound}.
+\end{proof}
+
+\begin{theorem}\label{thm:ct-inverse-linear-basin-floor}
+For every positive integer \(N\) prime to three,
+\begin{equation}\label{eq:ct-inverse-linear-basin-floor}
+ \boxed{\displaystyle
+ d_N\ge\frac{3}{128K_{\rm seed}N}.}
+\end{equation}
+The constant \(K_{\rm seed}\) is independent of \(N\).
+\end{theorem}
+\begin{proof}
+Fix the seed \(r\) from Lemma~\ref{lem:ct-frozen-seed-prefix-bound}.
+For each fixed \(m\), let \(X\to\infty\) in
+\eqref{eq:ct-frozen-seed-prefix-bound}, using
+\eqref{eq:ct-terminal-fan-basin-limit}. This gives
+\[
+ \frac23\le\frac{128r}{9}d_N+\frac{44rC}{m^2}.
+\]
+Now let \(m\to\infty\). The seed does not change, so the error
+tends to zero and \(d_N\ge3/(64r)\). Finally
+\(r\le2K_{\rm seed}N\) proves
+\eqref{eq:ct-inverse-linear-basin-floor}.
+\end{proof}
+
+\begin{proposition}\label{prop:ct-uniform-canonical-floor}
+The weighted first-hit density and canonical trace satisfy
+\begin{equation}\label{eq:ct-uniform-canonical-floor}
+ D_N\ge\frac{3}{128K_{\rm seed}P_0N},\qquad
+ g(N)\ge\frac{3\delta}{128K_{\rm seed}P_0}>0
+       \qquad(N\ge1,\ 3\nmid N).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:ct-D-density} and equality of natural and logarithmic
+basin densities give \(D_N\ge d_N/P_0\). This proves the first
+bound. For nonperiodic \(N\), the cycle factor \(B_N\) is one.
+For periodic \(N\), it is \((1-\beta_N)^{-1}\ge1\), since
+\(0<\beta_N<1\). The identity
+\(g(N)=\delta B_NND_N\) therefore gives the second bound.
+\end{proof}
+
+\begin{proposition}\label{prop:ct-ordinary-inverse-linear-floor}
+For every positive integer \(a\), the ordinary predecessor set
+\[
+ \mathcal P_C(a)=\{n\ge1:\operatorname{Col}^j(n)=a
+                         \text{ for some }j\ge0\}
+\]
+has a natural density \(d_C(a)\). If \(3\nmid a\), then
+\begin{equation}\label{eq:ct-ordinary-inverse-linear-floor}
+ d_C(a)\ge\frac{3}{128K_{\rm seed}a}.
+\end{equation}
+In particular, all sufficiently large integer cutoffs satisfy
+\begin{equation}\label{eq:ct-ordinary-eventual-count-floor}
+ \#\{1\le n<X:n\in\mathcal P_C(a)\}
+        \ge\frac{3X}{256K_{\rm seed}a}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+A shortcut orbit omits exactly the even output immediately following
+an ordinary odd step. An omitted occurrence of \(a\) must therefore
+have predecessor \((a-1)/3\), which is positive and odd precisely
+when \(a\equiv4\pmod6\). Hence
+\[
+ \mathcal P_C(a)=
+ \begin{cases}
+ \mathcal B_a\cup\mathcal B_{(a-1)/3},&a\equiv4\pmod6,\\
+ \mathcal B_a,&\text{otherwise}.
+ \end{cases}
+\]
+Any two forward basins are nested or disjoint. If a source reaches
+both targets, the target reached first subsequently reaches the other,
+which gives the required inclusion of basins. Thus the displayed
+union has natural density, either that of the larger basin or the
+sum of the two disjoint basin densities. Since it contains
+\(\mathcal B_a\), Theorem~\ref{thm:ct-inverse-linear-basin-floor}
+proves \eqref{eq:ct-ordinary-inverse-linear-floor}. Convergence of
+the ordinary counting proportion gives the smaller eventual bound
+\eqref{eq:ct-ordinary-eventual-count-floor}.
+\end{proof}
+
+Theorem~\ref{thm:ct-inverse-linear-basin-floor} applies to periodic
+targets as well as nonperiodic ones. It gives no upper estimate for
+a component's mass and no exclusion of additional cycles or divergent
+orbits. The global condition of the preceding section remains open.
+
+\subsection{Comparison with previous predecessor-density results}
+
+Wirsching formulated uniform positive predecessor density as a bound
+\(c/a\) with one positive constant, and proposed it for noncyclic
+targets prime to three~\cite[Definition~1 and Theorem~1]{Wirsching2003}.
+His theorem gives a sufficient condition; the preliminary manuscript
+explicitly leaves the assertion unproved. Mazur's theorem proves
+positive lower density for each eligible target and explicitly
+distinguishes the uniform \(c/a\) question
+\cite[Section~1.2]{MazurPredecessors2026}. The present proof uses his
+weighted inverse construction together with the additional coalescence
+input and the periodic mean argument.
+
+Shaik's separate positive-density paper
+\cite[Theorems~I.2 and~10.10]{ShaikPositive2026} gives an effective
+target-dependent positive lower density for reaching that target within
+\(c\log x\) ordinary steps, simultaneously for every fixed
+\(c>3/\log(4/3)\). Its one-period refinement improves the target
+score before applying the nonlinear density formula. It does not state
+a uniform inverse-linear density bound. Our theorem supplies that target
+dependence without a hitting-time bound. Tavares's work on Wirsching's
+program proves Conjectures~1 and~3 and leaves condition
+\((\star3)\) open~\cite{Tavares2026}. We do not claim to complete
+Wirsching's particular proposed argument or to have made an exhaustive
+priority comparison.
+
 \section{Formal verification scope}
 
-The accompanying Lean 4.30.0-rc2 development gives checked declarations
-for the numbered results in Sections 2--12. It includes the Banach-valued
+The preceding native Lean 4.30.0-rc2 development gives checked declarations
+for the numbered results before Section~\ref{sec:ct-periodic-census-floor}. It includes the Banach-valued
 two-scale averaging theorem and rate, uniform trajectory packing and
 correction products, both real-threshold first-passage scales, local
 clock and atom estimates, and the countable label laws. The actual
@@ -1698,7 +2076,7 @@ The predecessor source has a third namespace because its pinned baseline
 differs from the first-passage package. Imported sources retain their
 original attribution and licenses.
 
-The combined bundle contains 1,602 dependency modules,
+The recorded 28 September native bundle contains 1,602 dependency modules,
 including 281 local proof modules. Its root audit covers
 1,507 local theorem and lemma declarations,
 275 definitions and named instances, and
@@ -1708,18 +2086,89 @@ Only \texttt{propext}, \texttt{Classical.choice}, and
 The source manifest, dependency pins, theorem map, and recorded build
 are supplied in the repository. The recorded joint build identifies
 fresh compilation and exact dependency-checked reuse; the default
-verifier rebuilds all bundled modules. The earlier Lean 4.27 development
-is retained separately for reproducibility. The exact correspondence
+verifier rebuilds all bundled modules. Earlier releases retain the
+superseded Lean 4.27 development for reproducibility. The exact correspondence
 between manuscript statements and declarations is recorded in
 \texttt{paper/basin-lean-claims.md}.
+
+
+\subsection{The inverse-linear bound extension}
+\label{sec:ct-new-formal-scope}
+
+The new extension uses the same Lean 4.30.0-rc2 toolchain. Its
+shortcut bridge reads the balanced fusion event in Said Duran's
+formal artifact, version~1.0.0, rather than replacing the ordinary
+map by the shortcut map in the statement of his public theorem.
+The separately replayed compatibility port changes two square-root
+import names; its theorem statements and proof text are unchanged.
+The original artifact and its Apache~2.0 notices are retained.
+
+The fixed constant in \eqref{eq:ct-seed-multiplier} is the value named
+\texttt{predecessorSeedMultiplier}. Its parameters are specified by
+the following source definitions in the namespace
+\path{CollatzCanonical.BoundedInverseSeed}:
+\begin{quote}\small
+\begin{verbatim}
+b  := predecessorSeedBase = 2^80
+C  := explicitSyracuseMixingCoefficient
+G  := explicitLogarithmicSeedGeneration b C
+k0 := explicitSeedFloor b G / 4
+q0 := ndRootCoreBackwardConductor b k0 G
+L  := 16^b
+K_seed := 4^((L + 3) * 3^q0 + 1)
+\end{verbatim}
+\end{quote}
+The divisions in these source definitions are natural-number
+divisions. Some defining constants use classical choice; the Lean
+definitions are noncomputable. The displayed formula specifies one
+fixed positive integer. It is not a numerically evaluated constant
+or a claimed effective procedure for producing a cutoff for each
+target.
+
+The theorem
+\path{actual_basin_polynomial_lower_density} in
+\path{ActualBasinPolynomialFloor.lean} proves exactly
+\eqref{eq:ct-inverse-linear-basin-floor}, with hypotheses
+\(0<N\) and \(N\bmod3\ne0\). Its density is the natural limit of
+the actual shortcut-basin indicator from the native development.
+\path{CanonicalTracePolynomialFloor.lean} derives a uniform
+reciprocal floor for the weighted first-hit density and a positive
+constant lower bound for the same canonical value already identified
+with the Green and cylinder limits. These conclusions use no added
+Collatz hypothesis.
+
+The distributable extension contains 51 application modules: the
+26-module compatible Gao closure, 14 bounded-seed modules, and eleven
+new density modules. All 51 were freshly compiled and individually
+replayed with \texttt{leanchecker}. The audit covers all 1,697 compiled
+constants, including 89 private constants and the generated declarations.
+Their logical dependencies use only \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound}.
+
+The 1,458 required native source/object/dependency-fingerprint triples
+were authenticated against the pinned native manifest and replay record
+before and after the build. The native and library objects were reused;
+this was not a fresh rebuild of their entire closure. The record
+\path{formal-periodic-census/recorded/replay-record.json} identifies the
+source hashes, dependency pins, commands, and results. The earlier
+research replay records are retained separately in the same bundle.
+
+In \path{OrdinaryPredecessorPolynomialFloor.lean}, the theorem
+\path{exists_uniform_ordinary_predecessor_polynomial_natural_density}
+proves the ordinary-map density conclusion of
+Proposition~\ref{prop:ct-ordinary-inverse-linear-floor}. The eventual
+count with half the density coefficient is also checked. The ordinary
+and shortcut map definitions are related explicitly in this module.
 
 
 \section*{Acknowledgments}
 The main first-passage input and stationary Syracuse law are due to
 Terence Tao. The natural-density and positivity deductions use the
-separate results of Lech Mazur. The related-work discussion credits
-Idris Ali Shaik, Hiroyuki Nashida, and Manuel Inselmann for their
-descent and stopping-time results.
+separate results of Lech Mazur. The uniform density bound also uses Omar Javier Said Duran's formal
+proof of the coalescence result associated with Gao's conjecture.
+The inverse-linear predecessor-density question is due to G.\ J.\ Wirsching.
+The related-work discussion credits Idris Ali Shaik, Hiroyuki Nashida,
+and Manuel Inselmann for their density, descent, and stopping-time results.
 The formal parity-vector counting module adapts M.~Sharpe's Lean
 proofs under their MIT license; its source retains the attribution
 and license notice.
@@ -1738,8 +2187,8 @@ This paper and its LaTeX source are licensed under
 \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
 Attribution 4.0 International (CC BY 4.0)}. The original accompanying
 code is licensed under MIT. Imported proof sources retain their own
-licenses; the imported Mazur packages use Apache~2.0 with their separate
-retained notices.
+licenses; the imported Mazur and Said Duran packages use Apache~2.0
+with their separate retained notices.
 
 \begin{thebibliography}{99}\small\raggedright
 \bibitem{Tao2022} T. Tao.
@@ -1786,5 +2235,32 @@ Checked-source package \texttt{ca3dd0d63920411213403092aecc6946619eb082}.
 Preprint, version 1.0, 6 September 2026.
 \href{https://www.proofatlas.ai/formalizations/positive-lower-density-collatz-predecessors/}{ProofAtlas formalization and source}.
 Checked-source package \texttt{c290ac229b379d2b51026d3e86140496870d6f39}.
+\bibitem{Wirsching2003} G. J. Wirsching.
+\emph{On the problem of positive predecessor density in \(3n+1\) dynamics}.
+Discrete and Continuous Dynamical Systems \textbf{9}(3), 771--787, 2003.
+\url{https://doi.org/10.3934/dcds.2003.9.771}.
+The cited Definition~1 and Theorem~1 are also in the author's
+preliminary manuscript:
+\url{https://www.math.uni-bielefeld.de/baake/algdyn/posden.pdf}.
+\bibitem{SaidDuranGao2026} O. J. Said Duran.
+\emph{Consecutive integers coalesce with density one under the Collatz
+map: a formally verified proof of a conjecture of Gao}.
+Preprint, 27 September 2026.
+\url{https://doi.org/10.5281/zenodo.23003524}.
+\bibitem{SaidDuranGaoFormal2026} O. J. Said Duran.
+\emph{Formal proofs in Lean 4 of conjectures of Gao, Garner and Wu on
+consecutive integers in the Collatz problem}.
+Software, version 1.0.0, 27 September 2026.
+\url{https://doi.org/10.5281/zenodo.23003500}.
+\bibitem{ShaikPositive2026} I. A. Shaik.
+\emph{Positive density of Collatz convergence at every rate above
+\(3/\log(4/3)\)}.
+Preprint, version 1.0.0, 21 September 2026.
+\url{https://doi.org/10.5281/zenodo.22871622}.
+\bibitem{Tavares2026} R. A. Tavares.
+\emph{Wirsching's Positive-Predecessor-Density Program:
+Proofs of Conjectures 1 and 3}.
+Preprint, arXiv:2608.27617, 2026.
+\url{https://arxiv.org/abs/2608.27617}.
 \end{thebibliography}
 \end{document}

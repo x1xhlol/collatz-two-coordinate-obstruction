@@ -1,0 +1,2 @@
+'GaoLiteral.lagarias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GaoLiteral.conjetura_gao_literal' depends on axioms: [propext, Classical.choice, Quot.sound]

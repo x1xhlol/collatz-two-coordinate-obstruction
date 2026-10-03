@@ -1,0 +1,122 @@
+Independent conceptual review of the periodic-census polynomial-floor candidate
+3 October 2026. Reviewer: sibling-comparison agent.
+
+Scope: I read the full candidate
+collatz-periodic-census-polynomial-floor-candidate-oct3.txt and independently
+checked its source-charge substitution, constants, source inclusion and order
+of limits. This is an analytic audit of that candidate, not a Lean compilation
+record, a proof of Collatz or a publication update. Subsequent formal work is
+recorded in the individual Lean sources and their compiler logs.
+
+The analytic argument passes this review, conditional on the explicitly
+identified established inputs and the new periodic-source lemma being assembled
+with their actual interfaces. In particular, I found no hidden need for uniform
+convergence as the test period grows.
+
+1. Files read in full for the audit
+
+Under formal-basins-native/source/Erdos1135Predecessor/ND/PositiveDensity/:
+GeneralTargetTerminalCensus.lean; GeneralTargetSeedNonreturn.lean;
+GeneralTargetResidueCoverage.lean; GeneralTargetFrozenSeed.lean;
+GeneralTargetPredecessorCount.lean.
+
+Under research-2026.09.28-trace/formal-bounded-seed-density/:
+BoundedFrozenSeed.lean; BoundedPredecessorDensity.lean.
+
+Also read the complete candidate, the complete weighted-periodic-source-mixing
+note of October 2, and the balanced-coalescence/local-packing review through its
+periodic natural-mean and local-packing discussion. The deeper imported proofs
+of the marked mass and interval coverage are accepted existing inputs here;
+this audit does not claim a fresh reconstruction of all imported proofs.
+
+2. Frozen seed and terminal scale
+
+exists_bounded_generalTarget_uniform_twoThirds_seed places its existential root
+r before the universal quantifier over all sufficiently large later generations
+and their admissible physical scales. Its bound is r <= K_seed*a, with K_seed
+fixed by the initial base, initial generation and initial mixing constant.
+Setting ordinary target a=2N gives r <= 2 K_seed N. Terminal conductor m does
+not occur in this seed selection. Consequently the same r can be held fixed
+while m tends to infinity after the source-size limit.
+
+The natural-number seed bound and the nonreturning property are both carried by
+the bounded theorem. The older unbounded residue-coverage proof alone would
+not supply r <= K_seed*a, so the bounded replacement is a material input.
+
+For each fixed m the interval-cover argument used in
+generalTarget_publicCount_from_mass allows increasing the starting generation
+before selecting a generation for each sufficiently large X. This is enough
+to ensure k>=m; no simultaneous rate in m and X is needed. Positive marked mass
+supplies 3^k<=X through the existing conductor-room theorem.
+
+3. Source charge and inclusion
+
+fullTerminal_weighted_source_charge_of_nonreturningSeed accepts an arbitrary
+nonnegative function psi on natural sources. Hence the bounded periodic fan
+P_m is a valid choice without identifying incidence weights with first-hit
+correction weights. Its multiplicity control uses the nonreturning frozen
+root, not any density assertion.
+
+The same file's fullTerminal_reaches_target_of_seed_reaches applies to every
+full terminal incidence, not merely the marked subcollection. Its proof uses
+fullTerminalPath.sourceOdd and the path's actual Syracuse endpoint. Thus every
+charged source is positive and odd and reaches ordinary 2N. The existing
+doubled-target bridge then puts it in the shortcut basin B_N. The full source
+window is [X,32X). Since P_m is nonnegative, enlarging the charged set to all
+odd B_N sources below 32X is a valid upper bound.
+
+4. Coarse fan and error
+
+At fixed m, h_m is a bounded function on the finite residue space. The uniformly
+convergent series P_m(q)=sum_j 4^(-j) h_m(F_j(q)) has period 3^m and mean 8/9,
+because every residue fan F_j is a permutation and mean(h_m)=2/3.
+The finite J-term fan is bounded above by this same P_m, independently of J.
+
+Replacing h_k by h_m leaves an absolute error with uniform ternary mean at most
+epsilon_m=C_mix/m^2. For each j, the existing weighted residue census bounds
+the error by 33 r epsilon_m. Multiplication by the geometric coefficients and
+their sum at most 4/3 gives 44 r epsilon_m. Replacing the good subweight v by
+the full weight W is valid because 0<=v<=W and all coarse/error terms are
+nonnegative. This reproduces the source inequalities in
+GeneralTargetTerminalCensus without its pointwise-height loss 3^m.
+
+5. Natural periodic census and constants
+
+For a fixed positive target N, common-clock adjacent coalescence implies
+sublinear adjacent variation of 1_(B_N): outside the periodic bad edges and
+the finite set of starts hitting N by the common clock, the two membership
+values agree. The early-hit exception has target-uniform finite cardinality
+at each fixed clock. Periodic block cancellation then gives decorrelation
+from every fixed centered periodic test. Combining this with the established
+ordinary natural density d_N yields the required natural periodic source mean.
+The weighted note's logarithmic endpoint is not being used as a substitute for
+this natural mean; the unweighted variation proof supplies it directly.
+
+Because 3^m is odd, odd(q)*P_m(q) has period 2*3^m and mean (1/2)(8/9)=4/9.
+Therefore, for fixed m,
+
+  (r/X) sum_(q<32X) 1_(B_N)(q) odd(q) P_m(q)
+      -> (128r/9) d_N.
+
+The marked lower bound consequently gives
+
+  2/3 <= (128r/9) d_N + 44 r epsilon_m.
+
+Only after this source limit do we send m to infinity, keeping r fixed. The
+error vanishes and the arithmetic is
+
+  d_N >= (2/3)(9/(128r)) = 3/(64r)
+      >= 3/(128 K_seed N).
+
+Allowing the norm of P_m and the convergence threshold to grow with m is
+harmless in this ordered argument. There is no exchange of the two limits.
+
+6. Boundaries
+
+This argument gives an absolute density floor if formally assembled. It does
+not capture a prescribed fraction of the whole basin with the frozen packet.
+Two one-sided packet-to-basin inequalities cannot be divided to obtain the
+required relative sibling bound. No marked occupation estimate, cross-root
+absolute continuity, exclusion of divergence or cycle exclusion follows from
+this audit. It also makes no claim that the new analytic assembly was already
+Lean-checked when the candidate was written.

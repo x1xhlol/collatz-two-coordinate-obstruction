@@ -1,0 +1,3 @@
+'Hienas.puente' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Hienas.gao_de_lagarias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Hienas.d_de_lagarias' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,6 @@
+'CollatzCanonical.BoundedInverseSeed.actual_basin_density_ge_explicit_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.actual_basin_density_ge_explicit_exponential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

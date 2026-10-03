@@ -1,0 +1,6 @@
+'CollatzCanonical.PeriodicCensusFloor.frozen_seed_periodic_density_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_basin_polynomial_lower_density' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

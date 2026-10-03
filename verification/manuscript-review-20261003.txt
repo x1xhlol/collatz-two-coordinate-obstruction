@@ -1,0 +1,13 @@
+PASS — promoted basin manuscript review, 3 October 2026.
+
+All 17 proofs from repository commit 9630a5e1184427da96101bf826ef3f5fb5a49e36 remain byte-identical and in order. The complete previous mathematical body is preserved. The manuscript now has 24 proofs; all seven additions remain byte-identical to the version that received the prior independent mathematical/source-mapping review. That review checked the frozen seed potential, source injectivity, conductor quantifiers, residue error, terminal mean, sequential limits, and ordinary-map corollary; it did not repeat the external priority comparison.
+
+The rebuilt PDF has 28 pages, author Lucas Valbuena, 84 labels, 114 references, and 14 bibliography entries. No duplicate labels, undefined references/citations, unresolved PDF reference markers, private workspace paths, or TeX formatting warnings were found. Rendered pages 25–26, containing the changed formal scope, were inspected and have no clipping or overlap.
+
+The updated summary matches portable replay record 0d442ab3f21fe5ff9ec8e30a20e322a5fe058799d089f8e335d4744e1134a37c: 51 freshly compiled and individually kernel-replayed application modules, 1,697 audited constants including 89 private constants, and 1,458 authenticated native dependencies. The text correctly distinguishes reused native/library objects and places the superseded Lean 4.27 development in historical releases.
+
+paper/tao-basin-densities.tex SHA-256: 94b22591a3b5ae475bc1e7bb7d6ae102f2296262b6f8e59df93cbae66ac70daf
+paper/tao-basin-densities.pdf SHA-256: abde0c8e7b3b891a47d62fcdf70d5a99b133afa4e4898739c3a635beeeab2b76
+paper/basin-lean-claims.md SHA-256: 7156a9240a543d76c1bc4bd045571369d561bcff880a157b2928039cdf8dce5c
+
+This is a manuscript and record-consistency review, not a new Lean rebuild or a substitute for the final repository distribution check.

@@ -1,0 +1,6 @@
+'CollatzCanonical.PeriodicCensusFloor.fullTerminal_fan_le_envelope' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.forwardGoodDepthShiftUnitMass_le_envelope_sources' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,61 @@
+Source licenses and attribution
+
+Original local Lean modules, verification scripts and documentation retain
+the repository's MIT license: Copyright (c) 2026 Lucas Valbuena. The exact
+license is LICENSE-MIT. This statement does not relicense imported or
+adapted third-party material.
+
+Gao formalization (26 supplied modules)
+
+The modules listed in provenance/groups.json under "gao" originate in
+Omar Javier Said Duran's formal artifact, version 1.0.0, 27 September 2026,
+doi:10.5281/zenodo.23003500. Copyright 2026 Omar Javier Said Duran.
+They remain under Apache License 2.0; see licenses/LICENSE-GAO-APACHE-2.0.
+The original archive, original README containing its copyright and license
+statement, and original 26 Lean source files are retained under
+provenance/gao/. The archive contains no separate NOTICE file.
+
+The only compatibility changes affecting Lean imports are the replacement
+of Mathlib.Analysis.Real.Sqrt by Mathlib.Analysis.SpecialFunctions.Sqrt
+in Momentos.lean and Hienas.lean. Each supplied modified file carries a
+prominent comment describing that change and the packaging notice.
+No theorem statement or proof text changed. The exact earlier import-only
+patch, original hashes, previous compatible hashes and supplied hashes are
+retained. The other 24 Gao source files are byte-identical to the archive.
+The archive also contains four Garner/Wu modules outside the Gao closure;
+they are preserved in the original ZIP but are not application sources
+compiled by this bundle.
+
+Predecessor-derived work
+
+BoundedFrozenSeed.lean adapts Lech Mazur's GeneralTargetFrozenSeed proof.
+GenericSeedPredecessorCount.lean and GenericPowerPredecessorCount.lean
+adapt his GeneralTargetPositiveDensity count assembly. Their existing
+source notices identify the retained arguments and changed seed/terminal
+parameters; those source bytes and notices are preserved.
+
+FrozenSeedPeriodicPrefix.lean reuses the bounded seed/generation assembly,
+and TerminalFanCensus.lean follows the predecessor terminal census
+interfaces and argument. Their derivation is acknowledged here along
+with the new fixed periodic-envelope and basin-limit construction. These
+adaptations retain all rights in Mazur's predecessor-derived material;
+they are not described as wholly unrelated MIT code. Original local
+additions retain the Lucas Valbuena MIT attribution.
+
+Lech Mazur's predecessor release is licensed under Apache License 2.0.
+The exact license and notice supplied with the bounded-seed extension are
+retained as licenses/LICENSE-PREDECESSOR-APACHE-2.0 and
+licenses/NOTICE-PREDECESSOR. The retained native baseline license, notice,
+rights explanation and grant metadata are in provenance/bounded-seed/.
+Existing copyright and license headers have not been removed.
+
+External prerequisites
+
+The separately supplied native basin bundle retains its own source
+licenses, upstream notices, source-origin records and verifier. This
+additive package neither replaces nor changes them. Lean, Mathlib and
+their packages retain their own licenses. Their compiled caches and the
+native compiled cache are not included in this source bundle.
+
+Papers and images cited by the original packages are not included or
+relicensed by these source licenses.

@@ -1,0 +1,38 @@
+{
+  "bundle_files_modified_by_this_review": false,
+  "bundle_manifest_sha256": "c0d92d90ad3e6f477a7ccaa7d04d5048677657ae4e25da32b1339877e12e324a",
+  "full_runtime_replay_performed_by_this_review": false,
+  "material_findings": [],
+  "native_closure_count": 1458,
+  "package_module_count": 51,
+  "report_file": "INDEPENDENT-PORTABLE-VERIFIER-REVIEW.txt",
+  "report_sha256": "4019e84c61cf219e520ef512c2f205f8e97b411a8207dea4147ebff77914fd44",
+  "review_timestamp_utc": "2026-10-03T11:13:50.637294+00:00",
+  "reviewed_files_sha256": {
+    "NOTICE": "2bc2fe7da7a2c9915c1962fe2f6bf11b38fd937f0044b7bce191a1f470add5bf",
+    "README.md": "c60f7b567e1b3a5cbdbef90b2e5c4aa32aecf62ac481d7634d04b14e705aaeb8",
+    "SOURCE-LICENSES.txt": "96249007e20b3d91c7686cb5626ca3cc1889b43d556f63ed97eab86716455bb6",
+    "audit_helpers.py": "7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3",
+    "bundle-manifest.json": "c0d92d90ad3e6f477a7ccaa7d04d5048677657ae4e25da32b1339877e12e324a",
+    "licenses/LICENSE-GAO-APACHE-2.0": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "licenses/LICENSE-PREDECESSOR-APACHE-2.0": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "licenses/NOTICE-PREDECESSOR": "df7ac28e54e3eca1c35a456262f7cc82f4ab2c5e7352b1a1586d54fbb1105f6e",
+    "provenance/gao/upstream-1.0.0.zip": "a3c20737f2da4fc57a1dfcc9adbe7645d652a1668050b1f5fc6c37a905ebf9da",
+    "provenance/gao/upstream-record.json": "a9bd0cf467f4e818a85686c662050251f69840bd8eba82b03b702cfcf2134a63",
+    "provenance/groups.json": "bb2e16762db7924fd5e58af7692706e58703bba9e62af16caea2bd58f3f74283",
+    "provenance/source-origins.json": "5ca347c552b1da07f0303bedf4adb65c5dd8f8eb09b859fe7bd4505152b3e132",
+    "verify.py": "e40c4cab0b2a519b3a32f4aa8f776213ba5c03f08f6a08ed55a7f8f42c7593b5"
+  },
+  "scope": "Independent static verifier/provenance inspection and targeted package, closure-negative, source-byte, archive, license and notice checks; not a complete 51-module runtime replay.",
+  "status": "NO_SUBSTANTIVE_ISSUE_FOUND",
+  "targeted_checks": {
+    "frozen_new11_and_bounded14_bytes": "PASS",
+    "gao_license_bytes": "PASS",
+    "gao_original_source_copies": "PASS",
+    "gao_two_import_substitutions_plus_notices_only": "PASS",
+    "gao_zip_metadata_checksum": "PASS",
+    "missing_native_closure_entry_rejected": "PASS",
+    "package_integrity": "PASS",
+    "predecessor_license_notice_bytes": "PASS"
+  }
+}

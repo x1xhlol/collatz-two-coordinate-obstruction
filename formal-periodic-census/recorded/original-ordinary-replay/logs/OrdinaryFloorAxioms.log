@@ -1,0 +1,73 @@
+'CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_step._proof_1_1' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_5' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.mem_ordinary_predecessors_iff._proof_1_1' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_3' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_2' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.shortcut_basin_subset_ordinary_predecessors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_lower_count._proof_1_1' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_6' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_iff_shortcut_hit_or_bypass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_ordinary_predecessor_polynomial_lower_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.shortcut_targets_comparable' depends on axioms: [propext]
+'CollatzCanonical.PeriodicCensusFloor.shortcut_basin_subset_ordinary_predecessors._proof_1_2' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_iterate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_count_natural_density_exists' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_step' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.mem_ordinary_predecessors_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.shortcut_basin_prefix_le_ordinary_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_ordinary_predecessor_polynomial_natural_density' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.shortcut_basin_subset_ordinary_predecessors._proof_1_1' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.natCount_eq_indicator_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_lower_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_4' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_natural_density' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_predecessors_polynomial_lower_count._proof_1_2' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass._proof_1_1' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_count_natural_density_ge_shortcut' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.mem_ordinary_predecessors_iff._proof_1_3' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.mem_ordinary_predecessors_iff._proof_1_2' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_shortcut_step._proof_1_2' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.shortcut_hits_trans' depends on axioms: [propext]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_iff_shortcut_hit_or_bypass._proof_1_1' depends on axioms: [propext,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.raw_hit_implies_shortcut_hit_or_bypass' depends on axioms: [propext, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.ordinary_reaches_iff_shortcut_hit_or_bypass._proof_1_2' depends on axioms: [propext,
+ Quot.sound]

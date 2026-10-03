@@ -1,0 +1,183 @@
+{
+  "review_utc": "2026-10-03T10:43:44.987861+00:00",
+  "reviewer": "cycle_gap",
+  "result": "No gap found in the new derivation at the reviewed hashes; accepted inherited interfaces and deeper closure as scoped in text.",
+  "candidate": {
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/collatz-periodic-census-polynomial-floor-candidate-oct3.txt",
+    "sha256": "8facb3e68964892922db268626aea6a7f284611f0b6899c402d8addecac8ee24",
+    "bytes": 11597
+  },
+  "independently_reviewed_complete_new_sources": [
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/TerminalFanEnvelope.lean",
+      "sha256": "c905901d079545974256b9c8723a37c9f46b4ba82026af9125ed1c8905d57810",
+      "bytes": 4124
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/TerminalFanCensus.lean",
+      "sha256": "a105c0da85325709097f1d3ff65d03aa5eeff9e2dc7fc678f7c289cbf69e6fc7",
+      "bytes": 9322
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/FrozenSeedPeriodicPrefix.lean",
+      "sha256": "d23c9bd35b571d4b64a872f27dec9a4b3c70058b30351a82cb704612ce33030b",
+      "bytes": 6446
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/PeriodicSourceMean.lean",
+      "sha256": "aa258d8a1ddb25033383a45161e31b479ba952f5a84a119fd8c43ba38da4c349",
+      "bytes": 6003
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/OddTerminalFanMean.lean",
+      "sha256": "7409a0d47abdc2716d4aeaff1140d888be27a63e67838ffa1a9634d35f13f46f",
+      "bytes": 4893
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/ActualBasinPeriodicMean.lean",
+      "sha256": "d1dee620448251b69e95504b86fde746726a1f8d753687f5c557f2778f6f7b56",
+      "bytes": 2320
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/ActualBasinPolynomialFloor.lean",
+      "sha256": "756e9002202b7f6bf9f921953b6531d1b1dd27396c64c7db7d12e7315eba523c",
+      "bytes": 3053
+    }
+  ],
+  "reviewer_authored_bridge_sources_not_independently_reviewed": [
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/GaoShortcutBridge.lean",
+      "sha256": "9beaa614e4e3ba6a17d852b6fbc93d31fa2f3f452b11f564f4067c3958b17ba2",
+      "bytes": 5214
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/BasinAdjacentVariation.lean",
+      "sha256": "8a3818d6db57517da736dd9d717838d5b8d10e66a87978c9c059a70c5c57d609",
+      "bytes": 4692
+    }
+  ],
+  "inherited_sources_inspected_scope_in_text": [
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-bounded-seed-density/BoundedFrozenSeed.lean",
+      "sha256": "8fc979610d0805abaa6b3fc190bb732b26ba5514caa9d5968c064c31aadc4478",
+      "bytes": 6515
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-bounded-seed-density/BoundedPredecessorDensity.lean",
+      "sha256": "9d70853d18e685b6277c8d62467a29105edfdf6d94d92f23c109cf8781d19893",
+      "bytes": 2956
+    },
+    {
+      "path": "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/Erdos1135Predecessor/ND/PositiveDensity/GeneralTargetSeedNonreturn.lean",
+      "sha256": "e2f5766e9a5f612b3a0823e9a8b98335532f0a0aeec3488629b7c5c2219ec105",
+      "bytes": 8181
+    },
+    {
+      "path": "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/Erdos1135Predecessor/ND/PositiveDensity/GeneralTargetTerminalCensus.lean",
+      "sha256": "2c82520e1b096c0c8794de98e478b9c1e16293bfba44ac388d558058d5c474d6",
+      "bytes": 15377
+    },
+    {
+      "path": "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/NativePredecessorMapBridge.lean",
+      "sha256": "a2bc805f2ddb4aa1fd58938cc52fbf625e5bd661a1bac4816a9bbfbf6f732779",
+      "bytes": 2654
+    },
+    {
+      "path": "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/NaturalScalarPrefix.lean",
+      "sha256": "2b1870337e09c17a0fb7c43294ccf3e7670cb0e5c9d4d442add6b6818852600e",
+      "bytes": 4616
+    },
+    {
+      "path": "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/Erdos1135Predecessor/ND/PositiveDensity/Geom2ShiftedWideSymmetricTerminalWeightedCensus.lean",
+      "sha256": "db3a462f5c815698c9df61719ac475241d356703ca3f93a58fcd39de56a3e6ec",
+      "bytes": 12860
+    },
+    {
+      "path": "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/Erdos1135Predecessor/ND/PositiveDensity/Geom2ShiftedWideSymmetricReferenceDensityTransport.lean",
+      "sha256": "7858d0977562112450dedccb2574aee37a5f6263b375634e5a9e39e0c38a1d8d",
+      "bytes": 32720
+    }
+  ],
+  "compile_logs_inspected": [
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/TerminalFanEnvelope.log",
+      "sha256": "31721fdaf2e8c44fe209780299090477b61f4784560514ad1b27ce3b89e5ba7d",
+      "bytes": 636,
+      "contains_axiom_report": true,
+      "error_or_sorryAx_present": false
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/TerminalFanCensus.log",
+      "sha256": "3c189336b88b57b70f9ef6e5de9f13994b1e50f1f9b6e364f536b4e2b55f6c87",
+      "bytes": 279,
+      "contains_axiom_report": true,
+      "error_or_sorryAx_present": false
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/FrozenSeedPeriodicPrefix.log",
+      "sha256": "0a24b3a6834d39b4f291d426870f0fa9d6db6fcb820cc393fe54932f255c2232",
+      "bytes": 288,
+      "contains_axiom_report": true,
+      "error_or_sorryAx_present": false
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/PeriodicSourceMean.log",
+      "sha256": "fb64fda5b68cf014146ab66072d00e27572ecbf3dd22263400a5be02cf36086b",
+      "bytes": 239,
+      "contains_axiom_report": true,
+      "error_or_sorryAx_present": false
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/OddTerminalFanMean.log",
+      "sha256": "167c146709a21baedf13a92adccda10488106870dba0c816209d526aeba15b1d",
+      "bytes": 742,
+      "contains_axiom_report": true,
+      "error_or_sorryAx_present": false
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/ActualBasinPeriodicMean.log",
+      "sha256": "ea65dd5f1dfa755107c60ccae6313d1eedb434cd6d1427dde2a7a4cd03b722cf",
+      "bytes": 398,
+      "contains_axiom_report": true,
+      "error_or_sorryAx_present": false
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/ActualBasinPolynomialFloor.log",
+      "sha256": "e187571b6da7178d17b51262d6aaebd043161bb5001efac1c4c1b472b4a2a676",
+      "bytes": 273,
+      "contains_axiom_report": true,
+      "error_or_sorryAx_present": false
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/GaoShortcutBridge.log",
+      "sha256": "b924e254992df2da39beb5d324be34cbb5ccfdaff8661ede98243821ba039a6d",
+      "bytes": 390,
+      "contains_axiom_report": true,
+      "error_or_sorryAx_present": false
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/BasinAdjacentVariation.log",
+      "sha256": "17dd4806809d8905f634a7048c8b4a8ae0f682081e23b5dc3bde4a6867795241",
+      "bytes": 358,
+      "contains_axiom_report": true,
+      "error_or_sorryAx_present": false
+    }
+  ],
+  "reviewer_run_kernel_checks": {
+    "modules": [
+      "GaoShortcutBridge",
+      "BasinAdjacentVariation"
+    ],
+    "record": {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/gao-bridge-replay.json",
+      "sha256": "86b824f55475b652ddbb8cff8cea014b298e5c2f2b3c6b63ce11583e6b220496",
+      "bytes": 1914
+    },
+    "complete_new_closure_replayed_by_reviewer": false
+  },
+  "report": {
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/FULL-SEMANTIC-REVIEW.txt",
+    "sha256": "14edcc3acd697346ca42fa1dc94b79d88340f201aa013ecbaf421f43aeba3035",
+    "bytes": 10226
+  }
+}

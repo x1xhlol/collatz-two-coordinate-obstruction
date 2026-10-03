@@ -1,0 +1,2 @@
+'CollatzCanonical.PeriodicCensusFloor.periodic_weighted_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.sourceMean_of_shift' depends on axioms: [propext, Classical.choice, Quot.sound]

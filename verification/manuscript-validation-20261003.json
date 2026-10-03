@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "checked_at_utc": "2026-10-03T11:28:41.592073+00:00",
+  "scope": "Read-only manuscript preservation, references, PDF presentation, and verification-summary consistency review. This review does not replace the Lean replay or the final repository distribution check.",
+  "artifacts_sha256": {
+    "paper/tao-basin-densities.tex": "94b22591a3b5ae475bc1e7bb7d6ae102f2296262b6f8e59df93cbae66ac70daf",
+    "paper/tao-basin-densities.pdf": "abde0c8e7b3b891a47d62fcdf70d5a99b133afa4e4898739c3a635beeeab2b76",
+    "paper/basin-lean-claims.md": "7156a9240a543d76c1bc4bd045571369d561bcff880a157b2928039cdf8dce5c"
+  },
+  "baseline_repository_commit": "9630a5e1184427da96101bf826ef3f5fb5a49e36",
+  "baseline_source_sha256": "d5c61f228ece84aae6d565c777de84089c016073df19d7b0e6974e1cfa2bb258",
+  "proof_preservation": {
+    "baseline_proof_blocks": 17,
+    "current_proof_blocks": 24,
+    "added_proof_blocks": 7,
+    "all_baseline_proofs_preserved_byte_for_byte_and_in_order": true,
+    "full_previous_mathematical_body_preserved_byte_for_byte": true,
+    "all_24_proofs_match_independently_reviewed_frozen_copy": true,
+    "baseline_proof_sha256_in_order": [
+      "39eb877182e45d801d965161e580dec0214d220b0e778cd0026272556b6d1671",
+      "06f20d90336346fff7c159bb2693f0be1fe0243e6f9f4d6690550d1755f499df",
+      "229090949e45159b29e4fe6f50a6563fdedd94c705c83da96e8c148b1870eaca",
+      "c3af9b70c46b33f28fb037cec6da1f017b384ef35859ec2f846895c285f269df",
+      "c9d36226482bf5f2c367ecad2d4c610fb5e73a5a23ff4b7ac22f939483d885cf",
+      "6d0ac71efa6ef0806c322d8af55cc5c005198d335d563fecd1fd57c18593524a",
+      "80fbbb37403f361f4b8baade401e81257bd6cd7836e38b532999bdb6ca1b3d42",
+      "12db88a72dd741f365e763464b1d466d156701526369a07f305f38768053486f",
+      "9f92b5f60ef09849a4fc0d2da2e94013616b4fcd3f083aa24de4c467e262fd96",
+      "ae88ed74f0172370bc3762a673f57dbaf161efebdf80c76b43d7253c23451a00",
+      "d73ed71884c0f7709d361f13f0bb653a84f8f47c3f50c69f33480fe2dd4e4670",
+      "2dc0860d3c73d56e859334abb90eef1fc8a342d6444a7bb0fa33208a2c106989",
+      "bd215dc0b702ed37d2b1fd3101567402d8c96ef2c9340fc9e4fe461a61dbb010",
+      "00402e7dc5c88f22bf2cff9b689d90ba4da3f11bd4dece7305c531a20509c878",
+      "67fdb2db64b9af6ce5c50e5023d037a45daef3d18d5d23fd26c2c0ce9bf34ba4",
+      "4d75042c5b563f7d46d3c35f19d34e2f2e2c0f0b2e247d7abb11ede2f422e5ee",
+      "e1b1fa08d3466e17f0b32afb31a17062346f58964bafe2d5c4db2c835d165372"
+    ],
+    "added_proof_sha256_in_order": [
+      "3777c0947a8ae98e0cdaa9a337e95c26b5103e03edc0f5d0b899b8bee31fc6d1",
+      "b87a9a3e0d529b8b0c1f840a5559dbeb274cc8f3b8b12ceb52c76ecc76b3507e",
+      "b1a5b73fad734fe263cbeca06d03b79a95d459ddbda5d67116b0204df7f7b741",
+      "f9960e3137c3579f84312b9be66f8a38e111fc76e9584153999a49023786d180",
+      "8ac7d512b3906e84ca2549f0943f80da7624e9ba58758e853a555e78590a3747",
+      "a3347a794f16b6b8ef408695c873a3ae440f9ff84bec8d9170fe44bba40f1c7b",
+      "a1c9175a1525f3e06fe3435842af5f6906692569b99e8adee5a2a58c2a41cec1"
+    ],
+    "prior_frozen_source_sha256": "6144d0716be688f26cb5e4d6ba42401808c17e464e14030e9240579ce40bb44b",
+    "prior_independent_review": {
+      "date": "2026-10-03",
+      "result": "No material mathematical or source-mapping issue reported in the seven new proofs.",
+      "reviewed_points": [
+        "frozen seed potential and source injectivity",
+        "fixed seed and conductor quantifier order",
+        "44*r*C/m^2 residue error",
+        "4/9 terminal mean and sequential limits",
+        "ordinary-map density and eventual-count endpoints"
+      ],
+      "scope_note": "That review did not independently repeat the external priority comparison. Current proof blocks are byte-identical; only the verification narrative changed after that review."
+    }
+  },
+  "structure": {
+    "labels": 84,
+    "references": 114,
+    "bibliography_items": 14,
+    "duplicate_labels": [],
+    "undefined_references": [],
+    "undefined_citations": [],
+    "environment_counts": {
+      "theorem": 5,
+      "lemma": 8,
+      "proposition": 11,
+      "proof": 24
+    },
+    "all_environment_counts_balanced": true,
+    "standalone_no_input_or_include": true,
+    "prior_labels_retained": true
+  },
+  "pdf": {
+    "pages": 28,
+    "author": "Lucas Valbuena",
+    "rendered_pages_visually_inspected_this_review": [
+      25,
+      26
+    ],
+    "inspection": "Changed formal-scope pages are readable, with no clipping, overlap, broken equations, or displaced footers. Long identifiers wrap within the text area.",
+    "unresolved_reference_markers": false,
+    "replacement_characters": false,
+    "word_boxes_outside_pages": [],
+    "private_workspace_path_leaks": [],
+    "tex_warning_lines": [],
+    "tex_log_sha256": "c7e1609def1deed3f816a5a2a216e046c8ee20868dc898b26ed6fd475697f25d",
+    "prior_frozen_pdf_visual_review_pages": [
+      1,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ]
+  },
+  "verification_summary_crosscheck": {
+    "replay_record_sha256": "0d442ab3f21fe5ff9ec8e30a20e322a5fe058799d089f8e335d4744e1134a37c",
+    "record_status": "PASS",
+    "application_modules": 51,
+    "individual_kernel_replays": 51,
+    "audited_constants": 1697,
+    "audited_private_constants": 89,
+    "authenticated_native_dependencies": 1458,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "native_and_library_objects_reused": true,
+    "manuscript_correctly_distinguishes_fresh_application_build_from_native_reuse": true,
+    "legacy_lean_427_development_correctly_attributed_to_earlier_releases": true
+  },
+  "source_pdf_claimmap_unchanged_during_validation": true
+}

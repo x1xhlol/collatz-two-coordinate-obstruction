@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Two isolated negative controls; no original source or native dependency was changed.",
+  "bundle_manifest_sha256": "c0d92d90ad3e6f477a7ccaa7d04d5048677657ae4e25da32b1339877e12e324a",
+  "checks": {
+    "changed_native_record_pin": {
+      "rejected": true,
+      "exit_code": 1,
+      "expected_message": "Native replay-record pin mismatch"
+    },
+    "changed_extension_source": {
+      "rejected": true,
+      "exit_code": 1,
+      "expected_message": "Package file missing or changed: source/ActualBasinPolynomialFloor.lean"
+    }
+  }
+}

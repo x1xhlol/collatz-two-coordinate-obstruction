@@ -1,0 +1,72 @@
+Independent review of the periodic-census additive verifier and provenance
+
+Reviewed bundle: periodic-census-bundle-oct3
+Manifest SHA-256: c0d92d90ad3e6f477a7ccaa7d04d5048677657ae4e25da32b1339877e12e324a
+Reviewer role: independent foundation/source audit agent.
+
+Conclusion
+
+No substantive verifier or provenance issue was found in the reviewed draft.
+This conclusion covers the static inspection and targeted checks listed below.
+It is not evidence that the complete 51-module compilation and kernel replay
+has finished. That separate runtime evidence must come from the verifier's
+successful final replay record and its compiler/kernel logs.
+
+Verification scope inspected
+
+The package declares 51 application modules: 26 Gao compatibility modules,
+14 bounded-seed modules, and 11 periodic-census modules. The verifier checks
+frozen source bytes and imports, reconstructs a complete local topological
+order, and rejects unsupported source-level proof bypass declarations.
+
+The native manifest and reference replay record are pinned by fixed hashes.
+A separately rebuilt native record requires an explicit operator-supplied pin
+and prior independent verification. Each required native source, object, and
+dependency fingerprint is compared with that manifest and successful record.
+The toolchain version, Mathlib revision and manifest, package revisions, and
+clean tracked library sources are checked before and after the replay.
+
+The import path exposes fresh application objects and only the authenticated
+native object closure, alongside the explicitly reused pinned library caches.
+A new output directory is required; existing extension objects are not reused.
+Every supplied application module is compiled and passed individually to
+leanchecker. The generated audit walks moduleData.constNames for every supplied
+module, including private and generated constants, and runs collectAxioms on
+each constant. Only propext, Classical.choice, and Quot.sound are accepted.
+Named public source declarations are cross-checked against the compiled audit.
+The package, copied sources, fresh objects, and native dependencies are checked
+again before a PASS record is emitted.
+
+The verifier permits a missing unused Cli build cache. Cli's source revision
+and clean-tree checks remain active, and the actual application/native import
+closure contains no Cli module. Other required library cache directories must
+exist. The published scope correctly says that native and library caches are
+reused: this is not a fresh replay of the whole native/Mathlib closure.
+
+Targeted checks performed independently
+
+1. Ran verify.py --verify-package-only successfully for all 51 sources.
+2. Invoked native_closure against the pinned native manifest and obtained
+   exactly 1,458 required native modules. Removing one expected closure entry
+   in an in-memory test was correctly rejected. No bundle files were changed.
+3. Compared all 11 periodic-census and 14 bounded-seed supplied sources with
+   their frozen research sources: all were byte-identical.
+4. Checked the retained Gao ZIP against the MD5 in its retained upstream
+   metadata. All 26 original source copies matched files in that ZIP. The
+   retained Gao license matched the ZIP license exactly.
+5. Confirmed that only Momentos.lean and Hienas.lean differ from their archived
+   originals. After removing each new prominent modification comment, the sole
+   difference is the documented square-root import substitution. The other
+   24 Gao source copies are byte-identical to the archive.
+6. Compared the predecessor Apache license and notice with the retained
+   bounded-seed originals: both are byte-identical.
+7. Inspected README.md, SOURCE-LICENSES.txt, NOTICE, and source-origin records.
+   They distinguish original local MIT work from Gao and predecessor-derived
+   Apache material and explicitly acknowledge the adapted seed/census assembly.
+
+Limits
+
+This review does not replace the complete runtime replay, independently verify
+the trusted compiler binary or all cached library objects. It checks the stated
+verification boundary and preservation/mapping of
+attribution and license files. It found no mismatch with that stated boundary.

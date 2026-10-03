@@ -1,77 +1,79 @@
 {
-  "schema_version": 2,
-  "release_version": "2026.09.28.4",
+  "schema_version": 3,
+  "release_version": "2026.10.03.1",
+  "date": "2026-10-03",
   "author": "Lucas Valbuena",
   "public_repository": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction",
   "papers": [
     {
-      "title": "Two-coordinate obstructions for affine interpretations of the Yolcu–Aaronson–Heule Collatz system",
-      "source": "paper/two-coordinate-obstruction.tex",
-      "pdf": "paper/two-coordinate-obstruction.pdf",
-      "pages": 38,
-      "source_sha256": "d733b43efb01fcb869fbf6f53772d6073de493d17425c247761494c476b5c5b5",
-      "pdf_sha256": "e04aa7a7dda1639eec11fbba1658cc69865adc21090654b3355bf027585bae94"
-    },
-    {
-      "title": "An independent second proof of Said Duran's equal-height Collatz runs theorem",
-      "source": "paper/said-duran-second-proof.tex",
-      "pdf": "paper/said-duran-second-proof.pdf",
-      "pages": 8,
-      "source_sha256": "4ee82d891a5ff35a08b1977154cbfee9074465b46c97156a332de57efbaf7732",
-      "pdf_sha256": "516e966e91166d255b8a2094e470deee77caa90da4cba211dd791aa7cefdd10a"
-    },
-    {
       "title": "Collatz basin densities and canonical traces from first-passage stabilization",
       "source": "paper/tao-basin-densities.tex",
+      "source_sha256": "94b22591a3b5ae475bc1e7bb7d6ae102f2296262b6f8e59df93cbae66ac70daf",
       "pdf": "paper/tao-basin-densities.pdf",
-      "pages": 22,
-      "source_sha256": "7c557942a97a239e097ec9f0e8a1ca1576c58b3d3290a0854fab0a53745bb66b",
-      "pdf_sha256": "f3a32ba2196ef45f09a63330257eec8d48fe7c60064b8234ad8e6372ec8cde64"
+      "pdf_sha256": "abde0c8e7b3b891a47d62fcdf70d5a99b133afa4e4898739c3a635beeeab2b76",
+      "pages": 28,
+      "numbered_results": 24,
+      "theorem_map": "paper/basin-lean-claims.md",
+      "theorem_map_sha256": "7156a9240a543d76c1bc4bd045571369d561bcff880a157b2928039cdf8dce5c",
+      "main_result": "For one fixed positive integer K_seed and every positive target N prime to three, shortcut and ordinary predecessor natural densities are at least 3/(128*K_seed*N).",
+      "credit": "The inverse-linear form was proposed by Wirsching. The proof uses Mazur's weighted predecessor construction and Said Duran's coalescence theorem, alongside the density and canonical-limit foundations described in the paper."
     }
   ],
   "typesetting_tool": "Tectonic 0.17.0",
   "checks": {
-    "matrix_and_synchronization": {
+    "manuscript": {
       "status": "PASS",
-      "report": "verification/rebuild.json",
-      "report_sha256": "642d0bd8ed8ea31f6a6d1df342d13b618ced5e8c5a5ba207a3afb1662d41a7f3",
-      "modules": 137,
-      "public_declarations": 633,
-      "audited_declarations": 726
+      "report": "verification/manuscript-validation-20261003.json",
+      "report_sha256": "7f827943aa6533433808797136a3d54842dc2486ee7576852675cfdfa1709219",
+      "scope": "Read-only manuscript preservation, references, PDF presentation, and verification-summary consistency review. This review does not replace the Lean replay or the final repository distribution check."
     },
-    "local_basin_steps": {
+    "native_foundation": {
       "status": "PASS",
-      "report": "verification/basin-rebuild.json",
-      "report_sha256": "f5954971a6768618f5980389a22a3153bc4a7774bf7e9ef976a582534484e4a0",
-      "modules": 98,
-      "public_declarations": 678,
-      "audited_declarations": 816
+      "report": "verification/native-basin-rebuild.json",
+      "report_sha256": "260930d45985dca3d8b7abe88fff1c8c73aa154893d5fa1476b5c76b0b70a79c",
+      "modules": 1602,
+      "audited_declarations": 1787,
+      "source_manifest": "formal-basins-native/replay-manifest.json",
+      "source_manifest_sha256": "efc8bc1226fb158341a4626eeafaf5c97b9284da1a2d137de38b7db035cbb230",
+      "scope": "Recorded audit with authenticated exact dependency-closure reuse and a freshly compiled root audit. The current distribution preserves all 1602 pinned source hashes."
     },
-    "second_scale": {
+    "periodic_census_extension": {
       "status": "PASS",
-      "report": "external/mazur-alpha-2001-2000/rebuild-record.json",
-      "report_sha256": "94e09a052b15c5a4b3c1aaeec72e43390bd9321b142a3a30fdb085d1bb2ece79",
-      "modules": 382
-    },
-    "original_mazur_roots": {
-      "status": "PASS",
-      "report": "external/mazur-alpha-2001-2000/baseline-rebuild-record.json",
-      "report_sha256": "332dc90dee0513e7d4062d2fe12415d7bf972ba666d41d0382e48c4de52708b8",
-      "modules": 578
-    },
-    "second_scale_distribution": {
-      "status": "PASS",
-      "report": "verification/second-scale-distribution-audit.json",
-      "report_sha256": "e7f3ef3cbd0eca3c286d25702840f00a18e14188c78ea96f92df037e8c93adf4",
-      "modules": 382,
-      "method": "All published source/dependency/object hashes and dependency pins checked; RootAudit compiled afresh."
+      "report": "formal-periodic-census/recorded/replay-record.json",
+      "report_sha256": "0d442ab3f21fe5ff9ec8e30a20e322a5fe058799d089f8e335d4744e1134a37c",
+      "fresh_application_modules": 51,
+      "individual_kernel_replays": 51,
+      "audited_constants": 1697,
+      "audited_private_constants": 89,
+      "authenticated_native_dependencies": 1458,
+      "source_manifest": "formal-periodic-census/bundle-manifest.json",
+      "source_manifest_sha256": "c0d92d90ad3e6f477a7ccaa7d04d5048677657ae4e25da32b1339877e12e324a",
+      "complete_package_index": "formal-periodic-census/SHA256SUMS.json",
+      "complete_package_index_sha256": "153023613c0c0ab4adb0b09b4c6e4cf060fdd352a7aba333e3ddf1cb395cdc01",
+      "scope": "All 51 supplied application modules freshly compiled and individually kernel-replayed. All compiled constants, including private and generated constants, audited. Required native dependencies authenticated before and after the run. Pinned native and library caches reused; the full upstream closure was not freshly rebuilt."
     }
   },
+  "checked_theorem_dependency_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
   "proves_collatz_conjecture": false,
-  "full_basin_paper_formalized": false,
   "limitations": [
-    "External first-passage replays use Lean 4.30.0-rc2 and are separate from the local Lean 4.27.0 development.",
-    "Density-to-Green and conditional Green/cylinder identification are checked, together with the odd-window mean criterion, actual first-passage transport, and deterministic clock conversion. Connecting external first-passage estimates to density existence and global clock laws, countable-label laws, boundary estimates, and natural-density deductions remains unfinished.",
-    "The external companion contains an unused open-problem registry declaration with sorry; audited theorem roots do not use sorryAx."
-  ]
+    "The global divergence condition and exclusion of additional cycles remain unresolved.",
+    "The lower-bound constants are fixed Lean choices; no numerical value or uniform finite-cutoff estimate is asserted.",
+    "Novelty comparisons and automated semantic reviews are not external peer review or an exhaustive priority search.",
+    "Verification scope is stated per record; source/object authentication is distinguished from fresh compilation and individual kernel replay."
+  ],
+  "curation": {
+    "active_papers": 1,
+    "removed_from_current_collection": [
+      "Two-coordinate obstruction paper and its standalone formal development",
+      "Independent second proof of Said Duran's equal-height theorem and its standalone formal development",
+      "Superseded Lean 4.27 basin development"
+    ],
+    "reason": "Focus the current collection on the strongest density results. The removal is an editorial choice and does not declare the earlier checked results false.",
+    "preserved_in": "Git history and earlier releases",
+    "historical_dependency_provenance": "external/mazur-alpha-2001-2000"
+  }
 }

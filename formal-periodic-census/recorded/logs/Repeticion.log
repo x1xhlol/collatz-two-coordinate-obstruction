@@ -1,0 +1,4 @@
+'RepeticionGao.media_busca' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RepeticionGao.media_fallos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RepeticionGao.busca_cota' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RepeticionGao.fallos_cota' depends on axioms: [propext, Classical.choice, Quot.sound]

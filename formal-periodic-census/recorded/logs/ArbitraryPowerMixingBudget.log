@@ -1,0 +1,6 @@
+'CollatzCanonical.BoundedInverseSeed.power_mixing_as_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.power_mixing_square_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

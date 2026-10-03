@@ -1,0 +1,193 @@
+Semantic review of the periodic-census polynomial basin-density floor
+3 October 2026
+
+Result and scope
+
+I found no mathematical gap in the new candidate's polynomial-floor argument
+or in its implementation in the seven modules listed below. The final theorem
+proves, for the existing actual shortcut basin density d_N,
+
+  3 / (128 * predecessorSeedMultiplier * N) <= d_N
+
+for every natural N with 0 < N and N % 3 != 0. The multiplier is the fixed,
+positive, target-independent integer defined in BoundedPredecessorDensity.
+This is an absolute density floor. It is not a proof of Collatz, a comparison
+between two different basin densities, or the requested inverse-logarithmic
+relative sibling estimate.
+
+This review is independent of the authorship of the seven modules:
+
+  TerminalFanEnvelope.lean
+  TerminalFanCensus.lean
+  FrozenSeedPeriodicPrefix.lean
+  PeriodicSourceMean.lean
+  OddTerminalFanMean.lean
+  ActualBasinPeriodicMean.lean
+  ActualBasinPolynomialFloor.lean
+
+I read each of these complete source files and the complete candidate text.
+I also read the complete BoundedFrozenSeed, BoundedPredecessorDensity,
+GeneralTargetSeedNonreturn, GeneralTargetTerminalCensus, and
+NativePredecessorMapBridge sources, and the relevant reference-density and
+terminal-fan definitions and mean identities. I checked the connection to
+the pre-existing actual-basin natural-density theorem. This is a review of
+the new derivation and its stated imported interfaces, not a claim that I
+have independently audited every proof in the entire upstream dependency
+closure. I separately read ANALYTIC-REVIEW.txt after doing the checks; that
+report is corroboration, not a substitute for my reading of the sources.
+
+Independence disclosure: I authored GaoShortcutBridge.lean and
+BasinAdjacentVariation.lean. Those two modules supply the coalescence-to-
+variation input consumed by ActualBasinPeriodicMean. I inspected, compiled,
+and individually kernel-replayed them, but my checks of those two modules
+must not be described as an independent review. Another reviewer must cover
+that authorship boundary. This review checks that the other seven modules
+consume their exposed theorem with the correct map, basin indicator,
+normalization, and quantifiers. The accompanying JSON records the exact
+source hashes, the evidence inspected, and this distinction.
+
+1. Freeze one seed before choosing the terminal conductor
+
+The quantifier order in exists_bounded_generalTarget_uniform_twoThirds_seed
+is sufficient. At ordinary target 2*N, with predecessorSeedBase,
+predecessorSeedGeneration and explicitSyracuseMixingCoefficient fixed once,
+it gives one positive odd seed r satisfying r <= K_seed*(2*N), reaching
+ordinary target 2*N and having no positive Syracuse return. The same seed
+has good marked mass at least 2/3 at every sufficiently large generation
+and every admissible physical scale. The existential seed is outside the
+universal later-generation statement and outside the later choice of m.
+
+FrozenSeedPeriodicPrefix preserves this order exactly. It chooses r first,
+then takes an arbitrary m >= 1. Its generation threshold
+Gmark + 2*m + 20*10^9 provides the quarter-conductor room. For every integer
+X above a finite m-dependent height, interval coverage gives an admissible
+generation n, which is allowed to depend on X. The positive marked mass
+gives 3^k <= X at the actual terminal conductor k. Thus the census hypotheses
+are met for every sufficiently large X, not just for a subsequence. No
+threshold depending on m is retained in the eventual density coefficient.
+
+The fixed seed multiplier may be enormous. Its numerical size is irrelevant
+to this quantifier issue: it is independent of target N and terminal m.
+
+2. Keep a fixed bounded periodic fan
+
+For fixed m, terminalFanEnvelope sums the actual residue fan h_m(F_j(y))
+against 4^(-j), where h_m is the full ternary reference-density function.
+Nonnegativity and the finite height bound (2/3)*3^m prove summability,
+finite-fan domination, and the bound (8/9)*3^m. The fan residue map is a
+permutation for every j, so it preserves the normalized full ternary mean.
+The imported mean of h_m is 2/3. Exchanging the finite residue sum and the
+summable series therefore gives the envelope mean (4/3)*(2/3) = 8/9.
+
+This is the full ternary mean, not a mean conditioned on unit residues.
+OddTerminalFanMean correctly pairs q and q+3^m in one period 2*3^m.
+Because 3^m is odd, exactly one member of each pair is odd, and both have
+the same residue modulo 3^m. The odd-masked envelope consequently has
+ordinary mean 4/9. Its period, mean and nonnegativity are all implemented
+explicitly. No fan depth growing with X enters the periodic-mean theorem.
+
+3. High-conductor error and multiplicity
+
+TerminalFanCensus applies the existing weighted residue census to the
+absolute high/low-conductor difference after each fan permutation. The
+uniform L1 error is epsilon = C_mix/m^2 for every k >= m. Each fan term
+costs at most 33*r*epsilon for the singleton seed state. The geometric
+coefficient sum is at most 4/3, giving precisely 44*r*epsilon.
+
+The code first bounds the good-core subweight by the original incidence
+weight; the fan values are nonnegative, which is the needed direction.
+It then replaces the finite fixed-m fan by the nonnegative envelope.
+It does not equate these incidence weights with unrelated first-hit or
+canonical correction weights.
+
+The imported fullTerminal_weighted_source_charge_of_nonreturningSeed
+allows an arbitrary nonnegative source test. Its proof uses the seed's
+nonreturn condition to eliminate repeated incidence multiplicity before
+passing to the finite set of physical sources. The new code supplies the
+envelope as that test and obtains r/X times its source sum. I checked the
+source-charge proof's nonreturn hypothesis, equal hitting-time argument,
+and word/source injectivity; this is not a hidden bounded-multiplicity
+assumption in the new derivation.
+
+4. Extend sources to the actual shortcut basin
+
+Every charged source is positive and odd, lies below 32*X, and reaches r
+under the ordinary predecessor map. The seed reaches ordinary 2*N.
+NativePredecessorMapBridge converts this double-target reachability into
+membership in the actual shortcut basin of N. This target conversion is
+explicit in terminalEnvelope_source_sum_le_basin_prefix.
+
+The finite source set is extended to the entire natural prefix q < 32*X,
+weighted by basinIndicator N q and the odd mask. Every added summand is
+nonnegative. The direction is an upper bound on the constructed packet;
+it asserts no lower capture of the whole basin by that packet. In
+particular, this step cannot be reversed or divided between two targets.
+Including q=0 in the formal prefix makes no difference to the intended
+positive-start sum because its odd mask is zero.
+
+5. Periodic source averaging
+
+PeriodicSourceMean proves the needed generic fact rather than assuming
+independence from congruence classes. A centered periodic test has uniformly
+bounded partial sums. Summation by parts bounds its weighted prefix sum by
+C + C*adjacentVariation(w,X) when |w| <= 1. Dividing by X, sublinear
+adjacent variation makes the centered contribution tend to zero. The
+uncentered part uses the ordinary mean of w. The bound C may depend on the
+fixed periodic test, its period, and its height; no uniformity in m is used.
+
+ActualBasinPeriodicMean supplies the actual basin indicator's 0/1 bound,
+its pre-existing natural density, and the actual-basin adjacent-variation
+theorem from the disclosed bridge. It also proves the harmless shift from
+the existing mean over q+1 to the mean over q in Finset.range X. Therefore
+the generic conditional theorem becomes an unconditional theorem for the
+existing actualBasinDensity, with no remaining decorrelation hypothesis.
+
+For fixed m and fixed r, OddTerminalFanMean composes the mean limit with
+X |-> 32*X and checks the scale conversion. The resulting limit is
+
+  (r/X) * sum_(q<32X) basinIndicator(N,q)*oddTerminalFan(m,q)
+    -> (128*r/9)*d_N.
+
+The factor 128/9 is 32 times the odd-masked mean 4/9. There is no missing
+parity factor or denominator normalization.
+
+6. Take the two limits in the correct order
+
+ActualBasinPolynomialFloor first fixes m >= 1 and takes X to infinity in
+the eventual prefix inequality. Its use of ge_of_tendsto preserves
+
+  2/3 <= (128*r/9)*d_N + 44*r*C_mix/m^2.
+
+It then lets m tend to infinity with the same r, C_mix and N still fixed.
+The remaining error tends to zero. This proves d_N >= 3/(64*r), and
+r <= 2*K_seed*N gives the stated 3/(128*K_seed*N) floor. The positivity
+conditions needed for division follow from the seed's strict positivity.
+The final target assumptions are exactly 0 < N and N % 3 != 0.
+
+The source and conductor limits are not interchanged. Neither uniform
+source convergence in m nor any effective convergence rate is needed.
+
+Verification and remaining boundary
+
+At the source hashes in FULL-SEMANTIC-REVIEW.json, the available compile
+logs for all nine new modules report only propext, Classical.choice and
+Quot.sound for the printed declarations; in particular the final
+actual_basin_polynomial_lower_density closure contains no sorryAx or
+added analytic axiom. The final endpoint's successful local compilation
+was observed directly. I ran the separate kernel checker on my two bridge
+modules; those runs exited successfully and are recorded in
+gao-bridge-replay.json. I did not run a fresh full closure replay for all
+seven independently reviewed modules as part of this semantic review.
+Any root-run complete replay should be reported separately and bound to
+its own manifest.
+
+The candidate text retains its original scratch-status sentences saying
+that formalization is not yet complete. Those sentences describe the state
+when the candidate was written, not the later compiled endpoint reviewed
+here. The text itself has been left unchanged. Optional packing-weight
+and canonical-scalar corollaries mentioned there are not conclusions of
+ActualBasinPolynomialFloor and are outside this review's formal endpoint.
+
+No claim is made that the absolute floor supplies the missing whole-basin
+relative comparison, removes nontrivial cycles, proves every orbit reaches
+one, or solves Collatz.

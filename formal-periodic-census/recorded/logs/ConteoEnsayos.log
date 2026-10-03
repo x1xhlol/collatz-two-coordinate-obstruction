@@ -1,0 +1,6 @@
+'ConteoEnsayosGao.muchas_fallos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConteoEnsayosGao.cota_muchas' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConteoEnsayosGao.supervivencia_por_entradas' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConteoEnsayosGao.cuenta_prefijo' depends on axioms: [propext, Quot.sound]
+'ConteoEnsayosGao.cuenta_reinicio' depends on axioms: [propext, Quot.sound]
+'ConteoEnsayosGao.completa_bloques' depends on axioms: [propext, Classical.choice, Quot.sound]
