@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "reviewer": "foundation_audit",
+  "record_sha256": "ae38aa978e2a61e4f651c6c9de329b251fe7824444ff2f38fbbfcc729d61f4af",
+  "script_sha256": "1e4dafcb54233f7049d2644006e375f8a9ec93a741c0363b4545a3bcbb764ab2",
+  "certificate_sha256": "48199662be51642dd3c579350221ec875c49ebda921e5e406f45e092206cb2f7",
+  "modules": [
+    "FirstHitCutCapacity",
+    "SyracuseUnitNonperiodicFan",
+    "SyracuseFirstHitGeometry",
+    "ExactFirstHitCoefficient",
+    "GammaFreeFirstHitCoefficient"
+  ],
+  "source_hashes": {
+    "FirstHitCutCapacity": "852c31b790428a2e9503a065cd13b601d21446f1cecb087bde2364041f02e17a",
+    "SyracuseUnitNonperiodicFan": "89c85018153dc056553a0f8869f21ecdff260b23a96a567c598cea558fa413c9",
+    "SyracuseFirstHitGeometry": "0994f637fea5e6ef40b30b3e87d7135d20d43b91d82bc71ef18345e66c74946a",
+    "ExactFirstHitCoefficient": "758dea9365132cc09ae026ab5a02470b52e7c5b08e3a66b35ad26a305f397cee",
+    "GammaFreeFirstHitCoefficient": "1f842c70baeefa532e7093635e5a16cfe3842dd886934ea38c1112b4041f902d"
+  },
+  "kernel_and_compile_all_pass": true,
+  "audited_constant_count": 81,
+  "explicit_theorem_definition_count": 43,
+  "audited_private_constant_count": 0,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "authenticated_native_source_and_object_count": 1602,
+  "authenticated_floor_source_and_object_count": 52,
+  "scope": "Five new first-hit modules (FirstHitCutCapacity, SyracuseUnitNonperiodicFan, SyracuseFirstHitGeometry, ExactFirstHitCoefficient, GammaFreeFirstHitCoefficient) and the all-constant audit were freshly compiled and individually kernel-replayed. Previously replayed native and floor source/object hashes were checked before and after. Pinned Mathlib/package revisions and clean tracked source trees were checked before and after. Mathlib and Lean caches reused; no complete upstream rebuild.",
+  "independence": "Runner authored the fan helper; root and sibling separately reviewed that frozen helper. Other four modules independently replayed.",
+  "not_claimed": [
+    "density-square summability",
+    "sublinear masked energy",
+    "universal eventual periodicity",
+    "cycle classification"
+  ]
+}

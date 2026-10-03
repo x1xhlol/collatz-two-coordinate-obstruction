@@ -1,0 +1,7 @@
+'CollatzCanonical.PeriodicCensusFloor.equal_depth_nonperiodic_leaves_disjoint' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.firstHit_cut_coefficient_bound' depends on axioms: [propext, choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.finite_unit_nonperiodic_firstHit_coefficient_bound' depends on axioms: [propext,
+ choice,
+ Quot.sound]

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "reviewer": "sibling_comparison",
+  "kind": "independent semantic source review",
+  "source": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/MaskedEnergyBoundaryLimit.lean",
+  "source_sha256": "bc2feda728f562220efa3946a8c7cb26e77abb0238fab1be25c186f0908675e8",
+  "certificate_sha256": "5bd46f76d6b107ccaaab869fc986092009a83ccdb170a9aa092f81e782cd5322",
+  "claims": [
+    "linear budget",
+    "arbitrary diverging barrier no-ancestor decay",
+    "exact normalized total/residual iff"
+  ],
+  "fresh_replay": "separate four-module replay; not asserted by this certificate"
+}

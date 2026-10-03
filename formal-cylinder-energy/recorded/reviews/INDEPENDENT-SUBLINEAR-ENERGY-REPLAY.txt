@@ -1,0 +1,62 @@
+INDEPENDENT SUBLINEAR NONPERIODIC CYLINDER ENERGY REPLAY
+2026-10-03 UTC. Reviewer: foundation_audit.
+STATUS: PASS, fresh additive compile, all-constant axiom audit, and kernel replay.
+Exact source, script, and output-record hashes are in the companion JSON.
+
+FRESHLY REBUILT MODULES IN DEPENDENCY ORDER
+ CycleTraceRatioFloor: 10 constants.
+ FiniteCylinderEnergyImplication: 16 constants.
+ CylinderForwardPropagation: 11 constants.
+ NonperiodicSyracuseSpine: 9 constants.
+ ShiftedCesaroEnergyExclusion: 5 constants.
+ SublinearNonperiodicCylinderEnergy: 9 constants.
+Total: 60 constants, including all generated constants found in the module
+tables. The four newly assigned modules account for34 of these constants;
+the remaining26 are freshly rebuilt established dependencies.
+
+Each module was compiled from a fresh copy of its exact frozen source and
+then individually accepted by leanchecker. The all-constant audit module
+was also freshly compiled and accepted by leanchecker. Every audited
+constant uses only the allowed axioms propext, Classical.choice, Quot.sound.
+No sorryAx or extra axiom was present. There were no private constants in
+these six module tables.
+
+The replay authenticated1602 native,52 floor, and2 reciprocal-core source
+and object pairs before and after the run. Their prior replay records and
+the native manifest were hash-pinned. The Lean revision, Mathlib revision,
+package revisions, lake manifest, and clean tracked library trees were
+checked. Mathlib and Lean caches were reused; this is an additive replay,
+not a complete rebuild of those libraries or previously replayed modules.
+
+Artifact directory:
+ sublinear-nonperiodic-cylinder-energy-fresh-replay/
+Script:
+ replay_sublinear_nonperiodic_cylinder_energy.py
+
+SEMANTIC SCOPE CHECK
+The final theorem's sole energy premise is the actual finite positive odd
+nonperiodic square energy divided by k+1 tending to zero. Its conclusion
+is UniversalEventualPeriodicity. It does not assert the energy premise,
+identify the eventual cycle, or exclude infinitely many possible cycles.
+
+The final module and shifted-Cesaro helper were read during this replay.
+Their logical connection is as stated: exact-depth forward propagation
+places K+1 distinct states of one actual injective odd spine into a common
+positive cylinder head; Jensen bounds the square of the positive fixed-root
+Cesaro mean by this energy and a vanishing finite-prefix error. Sublinear
+energy contradicts the native positive trace on a unit root. The generic
+helper keeps its hypotheses explicit and is instantiated by actual map
+lemmas in the final theorem. Full independent semantic review of all four
+new modules was separately assigned to sibling_comparison; this certificate
+does not substitute a broader semantic audit for the replay actually done.
+
+No native/public source was edited. The new theorem remains conditional;
+the required sublinear energy bound is still an open research obligation.
+
+METADATA CORRECTION
+After the root review, the replay record scope description and the script
+scope string were corrected to enumerate all four new modules and both
+rebuilt dependencies. The record retains the original executed script hash
+and original record hash in its metadata-correction entry. No mathematical
+source, object, log, axiom audit, dependency pin, or verification result
+changed, and no recompilation was needed.

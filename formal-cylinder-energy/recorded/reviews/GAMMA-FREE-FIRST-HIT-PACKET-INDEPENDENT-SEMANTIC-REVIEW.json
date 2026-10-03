@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "reviewer": "sibling_comparison",
+  "review_kind": "independent semantic source review of all five frozen modules",
+  "fresh_replay_performed_by_this_review": false,
+  "fresh_replay_owner": "foundation_audit",
+  "author_source_edited": false,
+  "modules": {
+    "FirstHitCutCapacity": {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/FirstHitCutCapacity.lean",
+      "sha256": "852c31b790428a2e9503a065cd13b601d21446f1cecb087bde2364041f02e17a",
+      "inspected_author_log_sha256": "f2559634b54144143cc97af4da509236db7fe6b4550cf2d9ca478ea8c537c077"
+    },
+    "SyracuseUnitNonperiodicFan": {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/SyracuseUnitNonperiodicFan.lean",
+      "sha256": "89c85018153dc056553a0f8869f21ecdff260b23a96a567c598cea558fa413c9",
+      "inspected_author_log_sha256": "835b84e61c7f47617750a27226821088afd3925ffd56b1dca71d1f002f5488d4"
+    },
+    "SyracuseFirstHitGeometry": {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/SyracuseFirstHitGeometry.lean",
+      "sha256": "0994f637fea5e6ef40b30b3e87d7135d20d43b91d82bc71ef18345e66c74946a",
+      "inspected_author_log_sha256": "6ff6b891aa13070ed1409dc0eb745c3c0124ba35905c3c57c45606e782d89a67"
+    },
+    "ExactFirstHitCoefficient": {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/ExactFirstHitCoefficient.lean",
+      "sha256": "758dea9365132cc09ae026ab5a02470b52e7c5b08e3a66b35ad26a305f397cee",
+      "inspected_author_log_sha256": "8836a29574c062e367af602ca8226b44d6600669979d1226b81b06c21e6d71d6"
+    },
+    "GammaFreeFirstHitCoefficient": {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/GammaFreeFirstHitCoefficient.lean",
+      "sha256": "1f842c70baeefa532e7093635e5a16cfe3842dd886934ea38c1112b4041f902d",
+      "inspected_author_log_sha256": "3f8754c7dc3e4f08636c3348ac0ae5b3cdc9380f1f1af03565440aba7ddccacf"
+    }
+  },
+  "supporting_reviews": {
+    "FIRST-HIT-CUT-CAPACITY": {
+      "text_sha256": "b9c5f38f27623b8d232858feeeb2af5b8b7e49707eaffef8e5c0823d4937986b",
+      "json_sha256": "620233148b53793e1bd41121bbc0e69340562136b351e03e3ee41c016359d684"
+    },
+    "SYRACUSE-UNIT-NONPERIODIC-FAN": {
+      "text_sha256": "b27d5faaa83f400b68c42654e10b6fb2b609c014e10ec3f86c9dae50f87acab4",
+      "json_sha256": "9872cc1d92347e98408d66f9bb68fd98d69185965ee30135963bcbf37a83d6d6"
+    },
+    "SYRACUSE-FIRST-HIT-GEOMETRY": {
+      "text_sha256": "bd86345d7b92e7fa9a89a11cf6358fec551832240c6a53bb98ecb5f1b82fd6ba",
+      "json_sha256": "297d3a6f58261416eb7c0ea80ed8b5031431a79b057e41472f36f96d18c992ef"
+    },
+    "EXACT-FIRST-HIT-COEFFICIENT": {
+      "text_sha256": "383987456d87e3dfb0859523744cae6e7d9542699a4b22a39e800100fce57666",
+      "json_sha256": "ca90e6ed71756c5c0a9a82d2bc26c567272ac209d261f48e8110f8a7c99d08bf"
+    }
+  },
+  "final_review_sha256": "d97373ae6f0476a93375da0f021eeb0e3f193fdca9b6f3d7a0c032b89925b5e7",
+  "formal_constant": "64/b, where b is the native uniform reciprocal first-hit floor",
+  "analytic_report_constant_not_claimed_by_formal_proof": "64/(3b)",
+  "scope": [
+    "all positive odd targets at positive exact first-hit depth",
+    "actual cylinder bound only under finite no-Syracuse-return mask through current depth"
+  ],
+  "no_unconditional_sublinear_energy_or_eventual_periodicity_claim": true
+}

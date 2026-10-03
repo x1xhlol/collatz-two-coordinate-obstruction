@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "reviewer": "foundation_audit; independent of the equivalence module author; author of the imported sufficiency helper",
+  "source": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/MaskedEnergyPeriodicityEquivalence.lean",
+  "source_sha256": "592b15a8ac3903dd3b13cbdcefd6317af732c77a5b4e14bbdd6b1bed3cf8559d",
+  "scope": "Complete semantic review of all six explicit declarations. Fresh extension replay is separately recorded.",
+  "findings": [
+    "An eventual period (entry time A, period p > 0) confines the whole forward orbit to the finite preperiod and one period, including j=A and A=0.",
+    "Failure of NoSmallAncestor supplies a positive seed q <= real M; Nat.le_floor places it in Icc 1 (floor M). The finite union over these seeds contains every target with a small ancestor, including cycle values.",
+    "The Gamma-free finite-return bound h_K(N) <= L D_N and D_N <= basin_N <= 1 give a uniform square bound L^2 on every masked target. The fixed-M residual is at most the cardinality of the finite target union times L^2.",
+    "The normalized full energy is bounded by C_M/(K+1) + 5 L epsilon(M). For each positive tolerance b, epsilon(M) < b/(10 L) is selected first and K is then made large for the fixed C_M. Positivity and nonnegativity assumptions are used with the correct signs.",
+    "The exact masked energy criterion follows by combining this necessity with the separately reviewed sufficiency helper. The final small-ancestor criterion uses the already frozen moving-barrier decomposition in the correct equivalence direction.",
+    "The result is conditional equivalence with UniversalEventualPeriodicity. It neither proves either side unconditionally nor excludes additional periodic cycles."
+  ]
+}

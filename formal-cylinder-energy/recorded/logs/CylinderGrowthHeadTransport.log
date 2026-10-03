@@ -1,0 +1,7 @@
+'CollatzCanonical.PeriodicCensusFloor.valid_odd_target_word_endpoint_unique' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.finite_cylinderGrowthHead_transport' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.cylinder_le_growthHead_add_tail' depends on axioms: [propext, choice, Quot.sound]

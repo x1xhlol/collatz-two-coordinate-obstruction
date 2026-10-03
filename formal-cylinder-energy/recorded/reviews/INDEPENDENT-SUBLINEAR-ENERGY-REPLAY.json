@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "reviewer": "foundation_audit",
+  "review_sha256": "6ce1744b8704083aaa1b2ca86b325a9d8dcbbe9ae8182a77dea4939f5d4cfe76",
+  "replay_record_sha256": "31c1cfa941f1e4c360ca071cc02b3057b5cee7fe02fac08558cdc86b6a2181ba",
+  "replay_script_sha256": "13dc5b6c0dbeb54d8a425671916e97918c47d43a883ea651b0e3395e275156b7",
+  "source_hashes": {
+    "CycleTraceRatioFloor": "46d92b8305b2468facaf50df4395db3b594f6114ff49e7afa893bee79f66b6a2",
+    "FiniteCylinderEnergyImplication": "f3605d1ddfde326f67328fc974070ea4c7207de095ca726366f11afdb8bd44a5",
+    "CylinderForwardPropagation": "953841b16156ac5af2516f35932c2c1cfe00d9955829963980f85c5f0a314414",
+    "NonperiodicSyracuseSpine": "5b3f674c358185f24ee1cb79594c30bb3d4bbe039336187fbd4e968563ac60f7",
+    "ShiftedCesaroEnergyExclusion": "375c9a7e8c7eb85c75838fa0b15e1f380080ce1f769713b6679b9c3f915e62b4",
+    "SublinearNonperiodicCylinderEnergy": "b3b3472b94c46a260336194e170d09321a7fa53f7239b5cfc46ba14da770a61b"
+  },
+  "module_constant_counts": {
+    "CycleTraceRatioFloor": 10,
+    "FiniteCylinderEnergyImplication": 16,
+    "CylinderForwardPropagation": 11,
+    "NonperiodicSyracuseSpine": 9,
+    "ShiftedCesaroEnergyExclusion": 5,
+    "SublinearNonperiodicCylinderEnergy": 9
+  },
+  "audited_constant_count": 60,
+  "new_module_constant_count": 34,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "semantic_scope": "Final module and shifted-Cesaro helper independently read; full four-module semantic audit delegated separately to sibling_comparison",
+  "does_not_claim": [
+    "sublinear_energy_premise",
+    "classification_of_cycles",
+    "unconditional_Collatz_theorem"
+  ],
+  "executed_replay_script_sha256": "ef120761c1e48b372f2187079c11941cd46102453b406ab0c1d8f68e2a25922d",
+  "metadata_correction": "Scope-description-only correction after root review; no recompilation or mathematical artifact changes."
+}

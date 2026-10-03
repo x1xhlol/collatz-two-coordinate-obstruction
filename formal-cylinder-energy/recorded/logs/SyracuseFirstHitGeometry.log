@@ -1,0 +1,4 @@
+'CollatzCanonical.PeriodicCensusFloor.shortcut_firstHit_odd_depth_iff_syrFirstHit' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.syrFirstHit_coefficient_succ' depends on axioms: [propext, choice, Quot.sound]

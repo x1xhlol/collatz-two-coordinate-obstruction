@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "reviewer": "foundation_audit; author of MaskedEnergySufficiency and the replay driver; independent semantic reviewer of MaskedEnergyPeriodicityEquivalence. Root and sibling_comparison independently reviewed the sufficiency module; root independently reviewed the equivalence module and replay driver.",
+  "record": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/masked-energy-periodicity-equivalence-fresh-replay/replay-record.json",
+  "record_sha256": "5390dac928513fa3f7c85f65c676b2d4e6fbdfb502a3de96768015f75d576768",
+  "driver": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/replay_masked_energy_periodicity_equivalence.py",
+  "driver_sha256": "68a37f50fc44fc714908f5e021fc2e6fa39b9826c92e6473e384bd1c7001e1f3",
+  "source_hashes": {
+    "MaskedEnergySufficiency": "1ee078169b31dbdd54736263072ac496fe6f12084eefad03b3037ef4eca3dbbc",
+    "MaskedEnergyPeriodicityEquivalence": "592b15a8ac3903dd3b13cbdcefd6317af732c77a5b4e14bbdd6b1bed3cf8559d"
+  },
+  "fresh_compile_and_kernel_successes": 6,
+  "warnings": 0,
+  "audited_constant_count": 13,
+  "explicit_declaration_count": 10,
+  "private_constant_count": 0,
+  "module_counts": {
+    "MaskedEnergySufficiency": {
+      "all_constants": 6,
+      "explicit_declarations": 4
+    },
+    "MaskedEnergyPeriodicityEquivalence": {
+      "all_constants": 7,
+      "explicit_declarations": 6
+    }
+  },
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "checks": [
+    "Both source modules and the generated whole-module audit were freshly compiled and each freshly replayed with leanchecker in an initially absent output directory.",
+    "All source hashes, generated audit source, compiled object hashes, compilation logs, kernel logs, declaration coverage, exit codes, and absence of warnings or nonstandard axioms were rechecked against the completed replay record.",
+    "Before and after replay, dependency source/object hashes were authenticated for native 1602 modules, floor 52, Gamma-free 5, masked-energy 4, sublinear-energy 6, and reciprocal-core 2; live source copies of all four recent packets also matched.",
+    "Pinned Lean and Mathlib revisions, dependency revisions, package manifest and clean tracked library source trees were checked. Upstream objects and standard library caches were reused; this is an additive replay, not a complete upstream rebuild.",
+    "The fresh module directory precedes authenticated upstream object directories on LEAN_PATH. The live experimental source directory is absent.",
+    "The reviewed equivalence identifies sublinear finite masked energy, and equivalently its small-ancestor residual along any diverging barrier, with universal eventual periodicity. It proves neither side without the other and permits multiple periodic cycles."
+  ],
+  "scope": "The two new extension modules and their all-constant audit were freshly compiled and individually kernel-replayed. Previously replayed native (1602), floor (52), Gamma-free (5), masked no-small-ancestor energy (4), sublinear nonperiodic energy (6), and reciprocal core (2) source/object hashes were checked before and after; live frozen sources for all four recent packets were also checked. Pinned Mathlib/package revisions, package manifest, and clean tracked source trees were checked before and after. Those authenticated upstream objects and Mathlib/Lean caches were reused; no complete upstream rebuild. The high-cap, moving-cap, row-equality, and source-nonsummability packets are not dependencies and were not rebuilt. This packet proves two conditional equivalences with UniversalEventualPeriodicity, not either side unconditionally or uniqueness of the periodic cycle."
+}

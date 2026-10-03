@@ -1,0 +1,53 @@
+INDEPENDENT FULL PROOF REVIEW: NEW FINITE ENERGY SECTION
+3 October 2026. PASS.
+
+Reviewed new-energy-section.tex, SHA256
+444e0a4d549c40a24f52d77996c601be99f14e094b66a02ecccf4bec330f1925.
+I read every statement and proof in this section and checked the
+existing first-hit partial sum and basin-boundary interfaces in the
+surrounding manuscript. This is a semantic proof review, not a second
+typesetting or portable Lean replay certificate. I did not edit the
+manuscript or its proof sources.
+
+The coefficient definition agrees with the established F_N convention:
+shortcut first-hit time and its odd-input count are distinguished, and
+odd endpoints convert that count exactly to Syracuse first-hit depth.
+Depth zero is excluded from the bound. Periodic targets are allowed.
+
+The short selected fan is valid even at y=1. Two of q,4q+1,16q+5
+are units, and at most one is periodic; the selected nonperiodic unit
+has exponent at most six. The coefficient sum is at most 3c_N(y),
+while its selected branch is at least 3c_N(y)/64. Prepending that
+branch preserves first-hit depth, because an earlier visit would make
+the selected source periodic. Distinct successor groups select distinct
+sources. Equal-depth nonperiodic endpoints have disjoint full basins;
+the same nonperiodicity guarantees first-hit weight factorization.
+The reciprocal D floor then gives the exact constant 64/b_* without
+introducing a cycle factor.
+
+The no-return mask includes the endpoint depth K. It excludes exactly
+the earlier-target-return obstruction needed to identify all depth-K
+inverse words with first-hit words; periodic points of period greater
+than K remain admissible. No global periodicity decision is hidden.
+
+The mass proof charges each (target, valuation word) to its actual odd
+source once across all targets. Source height is at most 2^(6K), the
+normalized weight is at most 1/q, and the omitted geometric tail is
+(64/81)^K/N. The harmonic bounds and the displayed budget are valid.
+This is a mass bound, so interpolation with the masked amplitude bound
+proves each energy inequality with the stated constants and quantifiers.
+
+For eventual periodicity, M is fixed before K; its forward seed union
+is finite, so its contribution is bounded independently of K. Only
+after taking the limsup is M increased. Conversely, a fixed divergent
+odd unit root supplies K distinct masked targets below 3^K eventually.
+Actual forward propagation has multiplier product 3u_i/(3u_i+1), whose
+infinite product is positive by reciprocal packing. Finite Jensen and
+the established fixed-root Cesaro theorem give a strictly positive
+normalized energy liminf. No pointwise cylinder convergence or moving
+target-limit exchange is assumed.
+
+The moving-barrier statement follows directly from the uniform finite
+inequality and epsilon(M_K)->0. The final scope sentence correctly
+leaves the small-ancestor limit unproved and permits unknown cycles.
+No correction requested.

@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "reviewer": "foundation_audit",
+  "packet": "actual masked cylinder energy outside small forward ancestors",
+  "replay_record_sha256": "5b535f75e2c7be201fb3d6833cf905dd55207538e9f2560d7f15c7df4be33b10",
+  "driver_sha256": "36252ee363e284e40a5cb89b96c2938faf6519de2afc465e20189653a8080349",
+  "source_hashes": {
+    "OddDyadicReciprocalBudget": "eb28fe59d36ea7be8834566d804863cbf3c6df06344c7ed4612502746544c2ff",
+    "CylinderGrowthHeadTransport": "5dd5d69893e6b5d493a084ea273466dd59bceafeb222914a31910aa7c0782f9e",
+    "MaskedCylinderNoSmallAncestorEnergy": "906740371ec4d2c803b694328bccfc3332c05a88a7bf5bf0e105eb446bcf30f1",
+    "MaskedEnergyBoundaryLimit": "bc2feda728f562220efa3946a8c7cb26e77abb0238fab1be25c186f0908675e8"
+  },
+  "all_constants_audited": 39,
+  "private_constants_audited": 0,
+  "explicit_declarations_audited": 29,
+  "module_constant_counts": {
+    "OddDyadicReciprocalBudget": 7,
+    "CylinderGrowthHeadTransport": 12,
+    "MaskedCylinderNoSmallAncestorEnergy": 15,
+    "MaskedEnergyBoundaryLimit": 5
+  },
+  "module_explicit_counts": {
+    "OddDyadicReciprocalBudget": 4,
+    "CylinderGrowthHeadTransport": 9,
+    "MaskedCylinderNoSmallAncestorEnergy": 11,
+    "MaskedEnergyBoundaryLimit": 5
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "fresh_compile_and_kernel_results": {
+    "OddDyadicReciprocalBudget": {
+      "compile_exit_code": 0,
+      "kernel_exit_code": 0
+    },
+    "CylinderGrowthHeadTransport": {
+      "compile_exit_code": 0,
+      "kernel_exit_code": 0
+    },
+    "MaskedCylinderNoSmallAncestorEnergy": {
+      "compile_exit_code": 0,
+      "kernel_exit_code": 0
+    },
+    "MaskedEnergyBoundaryLimit": {
+      "compile_exit_code": 0,
+      "kernel_exit_code": 0
+    },
+    "MaskedNoSmallAncestorEnergyAudit": {
+      "compile_exit_code": 0,
+      "kernel_exit_code": 0
+    }
+  },
+  "dependency_authentication": {
+    "authenticated_native_source_and_object_count": 1602,
+    "authenticated_floor_source_and_object_count": 52,
+    "authenticated_gamma_source_and_object_count": 5
+  },
+  "scope": "Every module listed in this record and its all-constant audit was freshly compiled and individually kernel-replayed. Previously replayed native, floor, and Gamma-free source/object hashes were checked before and after; live frozen Gamma-free sources were also checked. Pinned Mathlib/package revisions, package manifest, and clean tracked source trees were checked before and after. Those authenticated upstream objects and Mathlib/Lean caches were reused; no complete upstream rebuild. The high-cap, moving-cap, row-equality, and source-nonsummability packets are not dependencies and were not rebuilt.",
+  "review_scope": "The replay author authored CylinderGrowthHeadTransport and MaskedCylinderNoSmallAncestorEnergy; root and sibling_comparison independently reviewed those sources. Root authored the reciprocal helper and boundary-limit extension; foundation_audit and sibling_comparison independently reviewed them. This certificate reports independently authenticated fresh replay, not independent authorship of all proofs.",
+  "mathematical_scope": "For all positive depths K, no-return-masked odd targets below 3^K with no positive ancestor at most M have square energy at most L*epsilon(M)*[2+3K+(64/81)^K*(1+2K)], with uniform L>0 and epsilon tending to zero at a logarithmic power rate. The bound uses actual finite word transport and retains the small-ancestor energy in an exact partition. Every barrier M(K) tending to infinity makes the normalized no-ancestor energy vanish; total normalized energy vanishes iff the small-ancestor residual does. No residual decay or Collatz termination is asserted."
+}

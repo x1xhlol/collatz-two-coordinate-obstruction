@@ -1,0 +1,36 @@
+INDEPENDENT PORTABLE CYLINDER-ENERGY VERIFIER REVIEW
+3 October 2026. PASS.
+
+Reviewed the complete verify.py (SHA-256
+3f62cf8e58f09fe2d10ec04b0e2774caeb8805720903c20bb6156ed71948f54e)
+and audit_helpers.py (SHA-256
+7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3),
+including the native import-inventory compatibility correction. The native
+manifest records application imports only. The verifier compares that
+subsequence exactly and rejects every other nonlibrary import.
+
+The package inventory is the exact 17-module endpoint closure. Dependency
+closure and recursive fingerprints are reconstructed from the pinned
+manifests. Native and periodic-census records must be PASS and mutually
+consistent, and each required source and object is authenticated. The
+fresh import path exposes only the 40 required periodic-census and 1,566
+native objects plus pinned library caches. Source modules and a generated
+all-constant audit are freshly compiled and individually kernel-checked;
+only propext, Classical.choice and Quot.sound are allowed. Named source
+declarations are reconciled with the compiled audit. Dependencies, source
+copies, objects and logs are reauthenticated before recording PASS.
+
+I independently ran package validation, all required upstream source/object
+authentication, and 13 negative controls. Altered application/native source,
+extra application source, missing closure members, altered recursive
+fingerprints, an unpinned import, module shadowing, wrong record pins,
+altered native/floor objects and an explicitly pinned failed record were
+all rejected at the intended checks. The test driver uses temporary copies
+or isolated dependency paths and does not mutate the original bundles.
+The corresponding JSON records the exact inputs and all rejection messages.
+
+This review and its controls do not themselves run Lean. The separately
+recorded fresh replay supplies compilation and kernel evidence. The full
+native and library closures are authenticated reused dependencies, not
+claimed freshly rebuilt here. Human-readable paths retained in old records
+are provenance only; caller-supplied directories locate replay inputs.

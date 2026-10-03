@@ -1,0 +1,6 @@
+'CollatzCanonical.PeriodicCensusFloor.diagonal_cesaro_square_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.sublinear_energy_excludes_diagonal_cesaro' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

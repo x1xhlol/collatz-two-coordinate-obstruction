@@ -1,0 +1,9 @@
+'CollatzCanonical.PeriodicCensusFloor.finite_sum_square_le_of_cesaro' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_normalized_trace_square_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.finite_cylinder_square_energy_consequences' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

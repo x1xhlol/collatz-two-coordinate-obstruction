@@ -1,0 +1,87 @@
+{
+  "CycleTraceRatioFloor": {
+    "research_replay": "provenance/research-replays/sublinear-nonperiodic-cylinder-energy.json",
+    "research_replay_sha256": "31c1cfa941f1e4c360ca071cc02b3057b5cee7fe02fac08558cdc86b6a2181ba",
+    "source_sha256": "46d92b8305b2468facaf50df4395db3b594f6114ff49e7afa893bee79f66b6a2"
+  },
+  "CylinderForwardPropagation": {
+    "research_replay": "provenance/research-replays/sublinear-nonperiodic-cylinder-energy.json",
+    "research_replay_sha256": "31c1cfa941f1e4c360ca071cc02b3057b5cee7fe02fac08558cdc86b6a2181ba",
+    "source_sha256": "953841b16156ac5af2516f35932c2c1cfe00d9955829963980f85c5f0a314414"
+  },
+  "CylinderGrowthHeadTransport": {
+    "research_replay": "provenance/research-replays/masked-no-small-ancestor-energy.json",
+    "research_replay_sha256": "5b535f75e2c7be201fb3d6833cf905dd55207538e9f2560d7f15c7df4be33b10",
+    "source_sha256": "5dd5d69893e6b5d493a084ea273466dd59bceafeb222914a31910aa7c0782f9e"
+  },
+  "ExactFirstHitCoefficient": {
+    "research_replay": "provenance/research-replays/gamma-free-first-hit-coefficient.json",
+    "research_replay_sha256": "ae38aa978e2a61e4f651c6c9de329b251fe7824444ff2f38fbbfcc729d61f4af",
+    "source_sha256": "758dea9365132cc09ae026ab5a02470b52e7c5b08e3a66b35ad26a305f397cee"
+  },
+  "FiniteCylinderEnergyImplication": {
+    "research_replay": "provenance/research-replays/sublinear-nonperiodic-cylinder-energy.json",
+    "research_replay_sha256": "31c1cfa941f1e4c360ca071cc02b3057b5cee7fe02fac08558cdc86b6a2181ba",
+    "source_sha256": "f3605d1ddfde326f67328fc974070ea4c7207de095ca726366f11afdb8bd44a5"
+  },
+  "FirstHitCutCapacity": {
+    "research_replay": "provenance/research-replays/gamma-free-first-hit-coefficient.json",
+    "research_replay_sha256": "ae38aa978e2a61e4f651c6c9de329b251fe7824444ff2f38fbbfcc729d61f4af",
+    "source_sha256": "852c31b790428a2e9503a065cd13b601d21446f1cecb087bde2364041f02e17a"
+  },
+  "GammaFreeFirstHitCoefficient": {
+    "research_replay": "provenance/research-replays/gamma-free-first-hit-coefficient.json",
+    "research_replay_sha256": "ae38aa978e2a61e4f651c6c9de329b251fe7824444ff2f38fbbfcc729d61f4af",
+    "source_sha256": "1f842c70baeefa532e7093635e5a16cfe3842dd886934ea38c1112b4041f902d"
+  },
+  "MaskedCylinderNoSmallAncestorEnergy": {
+    "research_replay": "provenance/research-replays/masked-no-small-ancestor-energy.json",
+    "research_replay_sha256": "5b535f75e2c7be201fb3d6833cf905dd55207538e9f2560d7f15c7df4be33b10",
+    "source_sha256": "906740371ec4d2c803b694328bccfc3332c05a88a7bf5bf0e105eb446bcf30f1"
+  },
+  "MaskedEnergyBoundaryLimit": {
+    "research_replay": "provenance/research-replays/masked-no-small-ancestor-energy.json",
+    "research_replay_sha256": "5b535f75e2c7be201fb3d6833cf905dd55207538e9f2560d7f15c7df4be33b10",
+    "source_sha256": "bc2feda728f562220efa3946a8c7cb26e77abb0238fab1be25c186f0908675e8"
+  },
+  "MaskedEnergyPeriodicityEquivalence": {
+    "research_replay": "provenance/research-replays/masked-energy-periodicity-equivalence.json",
+    "research_replay_sha256": "5390dac928513fa3f7c85f65c676b2d4e6fbdfb502a3de96768015f75d576768",
+    "source_sha256": "592b15a8ac3903dd3b13cbdcefd6317af732c77a5b4e14bbdd6b1bed3cf8559d"
+  },
+  "MaskedEnergySufficiency": {
+    "research_replay": "provenance/research-replays/masked-energy-periodicity-equivalence.json",
+    "research_replay_sha256": "5390dac928513fa3f7c85f65c676b2d4e6fbdfb502a3de96768015f75d576768",
+    "source_sha256": "1ee078169b31dbdd54736263072ac496fe6f12084eefad03b3037ef4eca3dbbc"
+  },
+  "NonperiodicSyracuseSpine": {
+    "research_replay": "provenance/research-replays/sublinear-nonperiodic-cylinder-energy.json",
+    "research_replay_sha256": "31c1cfa941f1e4c360ca071cc02b3057b5cee7fe02fac08558cdc86b6a2181ba",
+    "source_sha256": "5b3f674c358185f24ee1cb79594c30bb3d4bbe039336187fbd4e968563ac60f7"
+  },
+  "OddDyadicReciprocalBudget": {
+    "research_replay": "provenance/research-replays/masked-no-small-ancestor-energy.json",
+    "research_replay_sha256": "5b535f75e2c7be201fb3d6833cf905dd55207538e9f2560d7f15c7df4be33b10",
+    "source_sha256": "eb28fe59d36ea7be8834566d804863cbf3c6df06344c7ed4612502746544c2ff"
+  },
+  "ShiftedCesaroEnergyExclusion": {
+    "research_replay": "provenance/research-replays/sublinear-nonperiodic-cylinder-energy.json",
+    "research_replay_sha256": "31c1cfa941f1e4c360ca071cc02b3057b5cee7fe02fac08558cdc86b6a2181ba",
+    "source_sha256": "375c9a7e8c7eb85c75838fa0b15e1f380080ce1f769713b6679b9c3f915e62b4"
+  },
+  "SublinearNonperiodicCylinderEnergy": {
+    "research_replay": "provenance/research-replays/sublinear-nonperiodic-cylinder-energy.json",
+    "research_replay_sha256": "31c1cfa941f1e4c360ca071cc02b3057b5cee7fe02fac08558cdc86b6a2181ba",
+    "source_sha256": "b3b3472b94c46a260336194e170d09321a7fa53f7239b5cfc46ba14da770a61b"
+  },
+  "SyracuseFirstHitGeometry": {
+    "research_replay": "provenance/research-replays/gamma-free-first-hit-coefficient.json",
+    "research_replay_sha256": "ae38aa978e2a61e4f651c6c9de329b251fe7824444ff2f38fbbfcc729d61f4af",
+    "source_sha256": "0994f637fea5e6ef40b30b3e87d7135d20d43b91d82bc71ef18345e66c74946a"
+  },
+  "SyracuseUnitNonperiodicFan": {
+    "research_replay": "provenance/research-replays/gamma-free-first-hit-coefficient.json",
+    "research_replay_sha256": "ae38aa978e2a61e4f651c6c9de329b251fe7824444ff2f38fbbfcc729d61f4af",
+    "source_sha256": "89c85018153dc056553a0f8869f21ecdff260b23a96a567c598cea558fa413c9"
+  }
+}

@@ -1,0 +1,76 @@
+ROOT SEMANTIC REVIEW: SUBLINEAR ODD NONPERIODIC CYLINDER ENERGY
+2026-10-03 UTC. Research packet only.
+
+Result: semantic PASS for the four frozen source modules listed below.
+The independent isolated compilation, kernel replay, declaration audit and
+dependency authentication are recorded separately; this note does not
+substitute for that replay.
+
+Sources read in full:
+CylinderForwardPropagation.lean
+  953841b16156ac5af2516f35932c2c1cfe00d9955829963980f85c5f0a314414
+NonperiodicSyracuseSpine.lean
+  5b3f674c358185f24ee1cb79594c30bb3d4bbe039336187fbd4e968563ac60f7
+ShiftedCesaroEnergyExclusion.lean
+  375c9a7e8c7eb85c75838fa0b15e1f380080ce1f769713b6679b9c3f915e62b4
+SublinearNonperiodicCylinderEnergy.lean
+  b3b3472b94c46a260336194e170d09321a7fa53f7239b5cfc46ba14da770a61b
+
+The final theorem has exactly one explicit additional premise: the finite
+sum of (canonicalRho k n / n)^2 over positive odd nonperiodic n <= 3^k,
+divided by k+1, tends to zero. The predicate excludes points that themselves
+lie on cycles; it still includes transient points that later enter a cycle.
+The conclusion is the native UniversalEventualPeriodicity: each positive
+shortcut orbit reaches some positive-period return point. It neither
+identifies that cycle nor bounds the number of cycles.
+
+The forward inequality is obtained from the actual fair recursion, with
+each odd shortcut step consuming exactly one cylinder depth. Normalizing
+uses the native pathWeight identity, where pathWeight is the reciprocal
+of the correction product. The native uniform distinct-path product
+bound supplies a positive survival constant for an injective orbit.
+No survival or propagation assumption remains in the final theorem.
+
+The odd unit root is reached on the same hypothetical injective shortcut
+component. Strictness of the actual Syracuse clock supplies distinct odd
+targets; the component argument supplies their nonperiodicity. The simple
+height bound S^j(u) <= 2^j u puts the first K+1 targets inside 3^(K+C)
+for a fixed C with u <= 3^C. The endpoint takes C=u>0.
+
+At target depth K+C, the source depths are K+C-j, j=0,...,K. They are all
+positive, as required by the propagation theorem. The image sum counts
+each target once. Squaring preserves order because the propagated terms
+are nonnegative. This proves the actual diagonal lower bound used by the
+generic helper.
+
+The averaging helper restores the fixed omitted prefix of length C and
+applies finite Jensen to the full prefix. Its normalized omitted square
+sum tends to zero. Fixed-root Cesaro convergence and the strictly positive
+actual trace at a positive unit force a positive limiting square mean.
+No pointwise convergence of the cylinder densities, moving-root limit,
+or interchange of two unbounded limits is used.
+
+Native definitions and identities reread for this review include
+UniversalEventualPeriodicity, exists_uniform_finite_path_product_bound,
+pathCorrection, pathWeight and hitting_path_weight. The existing complete
+FiniteCylinderEnergyImplication source was also reread before its helper
+was reused. Sibling's separate semantic review covers the clock bridge.
+
+The decay premise is OPEN. The theorem is a weaker sufficient condition
+than a uniform bound on all positive cylinder square energies, but is
+not an unconditional exclusion of divergence and is not a Collatz proof.
+No newly formalized converse or sharp component coefficient is asserted.
+
+Independent replay inspected after completion: PASS. The four new modules,
+the two existing energy dependencies, and the all-constant audit all have
+zero compilation and individual kernel-check exit codes. All 60 audited
+declarations use only propext, Classical.choice and Quot.sound. The record
+authenticates 1602 native, 52 floor and 2 reciprocal-core source/object pairs
+before and after; pinned library/toolchain caches were reused. This was
+an additive replay, not a rebuild of the entire upstream dependency tree.
+
+Final replay-record SHA-256:
+31c1cfa941f1e4c360ca071cc02b3057b5cee7fe02fac08558cdc86b6a2181ba
+The final record corrects only a stale scope-description string and retains
+the original executed-script hash and the original result-record hash.
+No source, object, log, axiom or dependency result changed in that correction.

@@ -1,0 +1,198 @@
+{
+  "status": "PASS",
+  "modules": [
+    "MaskedEnergySufficiency",
+    "MaskedEnergyPeriodicityEquivalence"
+  ],
+  "results": {
+    "MaskedEnergySufficiency": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.886809704825282,
+      "source_sha256": "1ee078169b31dbdd54736263072ac496fe6f12084eefad03b3037ef4eca3dbbc",
+      "object_sha256": "a9b544fdb842d29dcd9dd35b7ea2961501feba1001be80ea04ae421315ff537e",
+      "compile_log_sha256": "166e25a2a1cac699c149dffda5ac3af7739fdd089d9b29acbeb7902cdb705bed",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 9.017892563017085,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "MaskedEnergyPeriodicityEquivalence": {
+      "compile_exit_code": 0,
+      "compile_seconds": 9.051555533194914,
+      "source_sha256": "592b15a8ac3903dd3b13cbdcefd6317af732c77a5b4e14bbdd6b1bed3cf8559d",
+      "object_sha256": "4517478055aae6db80afb1a9031a30b1d7528871774b802ad348ed84be14817e",
+      "compile_log_sha256": "243d78214450e0485e98d3c0dfa1c2dccb0468da0df28735e0b6f459b8511f52",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 8.599795668851584,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "MaskedEnergyPeriodicityEquivalenceAudit": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.464381085941568,
+      "source_sha256": "e91b96f9f65f827e691c5cb6ea2b672cb2b5a95e5335914c778d46b5dd7e25fd",
+      "object_sha256": "41ea7b81c7823db25b3272299754e3f08b54b8072d3868ab92634074eb7ec25a",
+      "compile_log_sha256": "6c42e6b06c7c6e845dd6d311f8c98351e6b3b3e319917e4af1bef74549c80d85",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 8.579298980999738,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "source_hashes": {
+    "MaskedEnergySufficiency": "1ee078169b31dbdd54736263072ac496fe6f12084eefad03b3037ef4eca3dbbc",
+    "MaskedEnergyPeriodicityEquivalence": "592b15a8ac3903dd3b13cbdcefd6317af732c77a5b4e14bbdd6b1bed3cf8559d"
+  },
+  "declarations": {
+    "CollatzCanonical.PeriodicCensusFloor.nonperiodic_no_syracuse_return": {
+      "module": "MaskedEnergySufficiency",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.universal_eventual_periodicity_of_sublinear_masked_energy": {
+      "module": "MaskedEnergySufficiency",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.positiveOddNonperiodic_energy_le_masked_energy": {
+      "module": "MaskedEnergySufficiency",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.masked_canonicalRho_zero_of_multiple_three": {
+      "module": "MaskedEnergySufficiency",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.positiveOddNonperiodic_energy_le_masked_energy._proof_1_1": {
+      "module": "MaskedEnergySufficiency",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.positiveOddNonperiodic_energy_le_masked_energy._proof_1_2": {
+      "module": "MaskedEnergySufficiency",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.masked_energy_sublinear_iff_universal_eventual_periodicity": {
+      "module": "MaskedEnergyPeriodicityEquivalence",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.fixed_small_ancestor_energy_bounded_of_universal_eventual_periodicity": {
+      "module": "MaskedEnergyPeriodicityEquivalence",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.small_ancestor_targets_finite_of_universal_eventual_periodicity": {
+      "module": "MaskedEnergyPeriodicityEquivalence",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.forward_orbit_finite_of_eventually_periodic": {
+      "module": "MaskedEnergyPeriodicityEquivalence",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.NoSmallAncestor.eq_1": {
+      "module": "MaskedEnergyPeriodicityEquivalence",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.masked_energy_sublinear_of_universal_eventual_periodicity": {
+      "module": "MaskedEnergyPeriodicityEquivalence",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.small_ancestor_energy_sublinear_iff_universal_eventual_periodicity": {
+      "module": "MaskedEnergyPeriodicityEquivalence",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "audited_constant_count": 13,
+  "audited_private_constant_count": 0,
+  "record_pins": {
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/masked-no-small-ancestor-energy-fresh-replay/replay-record.json": "5b535f75e2c7be201fb3d6833cf905dd55207538e9f2560d7f15c7df4be33b10",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/sublinear-nonperiodic-cylinder-energy-fresh-replay/replay-record.json": "31c1cfa941f1e4c360ca071cc02b3057b5cee7fe02fac08558cdc86b6a2181ba",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/periodic-reciprocal-fresh-replay/replay-record.json": "5ad43a08321e8a1b1be6dd3a0710482fe1dbe4ea74ec5fa73d1f0eeddc7e8ef5",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/gamma-free-first-hit-coefficient-fresh-replay/replay-record.json": "ae38aa978e2a61e4f651c6c9de329b251fe7824444ff2f38fbbfcc729d61f4af",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/replay-manifest.json": "efc8bc1226fb158341a4626eeafaf5c97b9284da1a2d137de38b7db035cbb230",
+    "/home/ubuntu/collatz-native-basin-notice-build/replay-record.json": "260930d45985dca3d8b7abe88fff1c8c73aa154893d5fa1476b5c76b0b70a79c",
+    "/home/ubuntu/collatz-periodic-census-portable-replay-oct3/replay-record.json": "0d442ab3f21fe5ff9ec8e30a20e322a5fe058799d089f8e335d4744e1134a37c"
+  },
+  "authenticated_native_source_and_object_count": 1602,
+  "authenticated_floor_source_and_object_count": 52,
+  "authenticated_gamma_source_and_object_count": 5,
+  "authenticated_masked_source_and_object_count": 4,
+  "authenticated_sublinear_source_and_object_count": 6,
+  "authenticated_core_source_and_object_count": 2,
+  "lean_path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/masked-energy-periodicity-equivalence-fresh-replay/modules:/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/masked-no-small-ancestor-energy-fresh-replay/modules:/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/sublinear-nonperiodic-cylinder-energy-fresh-replay/modules:/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/gamma-free-first-hit-coefficient-fresh-replay/modules:/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/periodic-reciprocal-fresh-replay/modules:/home/ubuntu/collatz-periodic-census-portable-replay-oct3/modules:/home/ubuntu/collatz-native-basin-notice-build/modules:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/elan/toolchains/leanprover--lean4---v4.30.0-rc2/lib/lean",
+  "lean_version": "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "mathlib_revision": "5450b53e5ddc75d46418fabb605edbf36bd0beb6",
+  "dependency_revisions": {
+    "Cli": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "Qq": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809",
+    "aesop": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+    "batteries": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+    "importGraph": "cdab3938ccabbdb044be6896e251b5814bec932e",
+    "plausible": "86210d4ad1b08b086d0bd638637a75246523dbb8",
+    "proofwidgets": "2db6054a44326f8c0230ee0570e2ddb894816511"
+  },
+  "mathlib_lake_manifest_sha256": "71f9e393a23807b33a5369e8f45888debe0cb79e872188b8dfbe308175e6d90c",
+  "script_sha256": "68a37f50fc44fc714908f5e021fc2e6fa39b9826c92e6473e384bd1c7001e1f3",
+  "scope": "The two new extension modules and their all-constant audit were freshly compiled and individually kernel-replayed. Previously replayed native (1602), floor (52), Gamma-free (5), masked no-small-ancestor energy (4), sublinear nonperiodic energy (6), and reciprocal core (2) source/object hashes were checked before and after; live frozen sources for all four recent packets were also checked. Pinned Mathlib/package revisions, package manifest, and clean tracked source trees were checked before and after. Those authenticated upstream objects and Mathlib/Lean caches were reused; no complete upstream rebuild. The high-cap, moving-cap, row-equality, and source-nonsummability packets are not dependencies and were not rebuilt. This packet proves two conditional equivalences with UniversalEventualPeriodicity, not either side unconditionally or uniqueness of the periodic cycle."
+}

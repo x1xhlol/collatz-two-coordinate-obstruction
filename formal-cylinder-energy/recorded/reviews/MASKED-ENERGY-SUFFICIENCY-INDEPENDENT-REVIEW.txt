@@ -1,0 +1,21 @@
+Independent semantic review: finite masked energy sufficiency
+3 October 2026. Reviewer: sibling_comparison. Result: PASS.
+Source SHA256: 1ee078169b31dbdd54736263072ac496fe6f12084eefad03b3037ef4eca3dbbc
+
+All source lines read. A positive Syracuse return implies an ordinary
+shortcut return at its actual valuation clock, which is at least the
+positive Syracuse depth. Thus every globally nonperiodic odd target
+satisfies the finite return mask.
+
+The old energy uses an inclusive endpoint 3^K. For K>0 that endpoint
+is divisible by three. On the mask, the native zero first-hit density
+and Gamma-free cylinder bound force its cylinder density to zero.
+No point outside the old nonperiodic head is removed by this step.
+The remaining strict numerical head is a subset of the new finite mask,
+and nonnegative square summands give old energy <= new masked energy.
+Division by K+1 and an eventual squeeze transfer the previously checked
+sublinear nonperiodic-energy implication to the new masked energy.
+
+The theorem remains conditional on the explicit energy-decay hypothesis.
+No UEP or sublinear-energy estimate is asserted unconditionally.
+Compilation and whole-module axiom/kernel replay are separate checks.

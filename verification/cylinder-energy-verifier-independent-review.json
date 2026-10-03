@@ -1,0 +1,83 @@
+{
+  "authenticated_counts": {
+    "floor": 40,
+    "native": 1566
+  },
+  "bundle_manifest_sha256": "a8a9a4d0689840080a415dddb3d3e2d8e2e9a51c690b09791eae4cd492a74d0b",
+  "driver_sha256": "50a10da55dba1507ef0795dd8a83a563577f6a01029b8b64875d95f7076962de",
+  "helper_sha256": "7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3",
+  "record_pins": {
+    "floor": "0d442ab3f21fe5ff9ec8e30a20e322a5fe058799d089f8e335d4744e1134a37c",
+    "native": "260930d45985dca3d8b7abe88fff1c8c73aa154893d5fa1476b5c76b0b70a79c"
+  },
+  "scope": "Independent full verifier/helper source review plus package and upstream positive authentication and 13 mutation controls. Does not compile or kernel-replay Lean.",
+  "status": "PASS",
+  "tests": [
+    {
+      "rejection": "Package file missing or changed: source/CylinderGrowthHeadTransport.lean",
+      "status": "PASS",
+      "test": "changed application source"
+    },
+    {
+      "rejection": "Package Lean source inventory mismatch",
+      "status": "PASS",
+      "test": "unlisted application source"
+    },
+    {
+      "rejection": "Required native closure differs from the frozen inventory",
+      "status": "PASS",
+      "test": "omitted native closure member"
+    },
+    {
+      "rejection": "Required floor closure differs from the frozen inventory",
+      "status": "PASS",
+      "test": "omitted floor closure member"
+    },
+    {
+      "rejection": "Application dependency fingerprint mismatch: MaskedEnergyPeriodicityEquivalence",
+      "status": "PASS",
+      "test": "changed recursive dependency fingerprint"
+    },
+    {
+      "rejection": "Import outside authenticated sources and pinned libraries: UnpinnedForeignProof",
+      "status": "PASS",
+      "test": "foreign imported application"
+    },
+    {
+      "rejection": "Application module shadows an authenticated dependency",
+      "status": "PASS",
+      "test": "dependency shadows an application"
+    },
+    {
+      "rejection": "Native replay-record pin mismatch",
+      "status": "PASS",
+      "test": "wrong native replay pin"
+    },
+    {
+      "rejection": "Periodic-census replay-record pin mismatch",
+      "status": "PASS",
+      "test": "wrong floor replay pin"
+    },
+    {
+      "rejection": "Native source mismatch: ActualAllStartLabelLaw",
+      "status": "PASS",
+      "test": "changed native dependency source"
+    },
+    {
+      "rejection": "Native object mismatch: ActualAllStartLabelLaw",
+      "status": "PASS",
+      "test": "changed native dependency object"
+    },
+    {
+      "rejection": "Periodic-census object mismatch: ActualBasinPeriodicMean",
+      "status": "PASS",
+      "test": "changed floor dependency object"
+    },
+    {
+      "rejection": "Dependency record is not PASS",
+      "status": "PASS",
+      "test": "explicitly pinned failed replay record"
+    }
+  ],
+  "verifier_sha256": "3f62cf8e58f09fe2d10ec04b0e2774caeb8805720903c20bb6156ed71948f54e"
+}

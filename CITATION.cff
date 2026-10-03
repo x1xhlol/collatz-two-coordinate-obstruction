@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite the accompanying paper and the external results it uses."
 type: software
-version: "2026.10.03.1"
+version: "2026.10.03.2"
 date-released: "2026-10-03"
 license:
   - MIT
@@ -20,9 +20,12 @@ abstract: >-
   bound at those targets. The proof combines Mazur's predecessor construction,
   Said Duran's coalescence theorem, and periodic source averaging. The paper
   also develops density and canonical-limit foundations from Tao's
-  first-passage theorem and Mazur's natural-counting transport. The repository
-  includes Lean sources, pinned dependencies, reproducible checks, and precise
-  attribution. Divergence and additional cycles remain unresolved.
+  first-passage theorem and Mazur's natural-counting transport. It
+  also proves a uniform exact first-hit coefficient bound for odd targets
+  and a finite cylinder-energy criterion equivalent to universal eventual periodicity.
+  The repository includes Lean sources, pinned dependencies, reproducible
+  checks, and precise attribution. The energy decay condition and additional
+  cycles remain unresolved.
 keywords:
   - Collatz conjecture
   - predecessor density

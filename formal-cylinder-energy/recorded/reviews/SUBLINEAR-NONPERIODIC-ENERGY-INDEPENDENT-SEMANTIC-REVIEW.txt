@@ -1,0 +1,86 @@
+Independent semantic review of the actual sublinear nonperiodic energy implication
+2026-10-03 — PASS on the pinned sources below.
+
+Reviewed independently: CylinderForwardPropagation.lean,
+NonperiodicSyracuseSpine.lean, and SublinearNonperiodicCylinderEnergy.lean.
+The reviewer authored ShiftedCesaroEnergyExclusion.lean; that helper is
+included in the packet pins but is not represented as independently
+authored-and-reviewed here. Root separately reviewed the full helper and
+reported mathematical/semantic PASS. A separate agent handles the fresh
+combined compilation, kernel checks and all-constant axiom audit.
+
+The statement keeps the needed input explicit:
+
+  positiveOddNonperiodicCylinderSquareEnergy(k)/(k+1) -> 0
+    implies UniversalEventualPeriodicity.
+
+The energy sums the actual rho_k(n)^2/n^2 over positive odd n<=3^k that
+are themselves nonperiodic. It does not exclude transient points merely
+because they eventually reach a cycle. No energy-decay proof is supplied,
+and the conclusion does not identify or bound the set of positive cycles.
+
+Checks of the arithmetic and quantifiers:
+
+* The fair-cylinder recursion supplies an even shortcut factor 1/2 at
+  unchanged cylinder depth, and an odd shortcut factor 3/2 at depth+1.
+  The even step requires positive starting cylinder depth; the finite-path
+  induction preserves this hypothesis.
+
+* The native finite-path weight identity turns the propagated factor into
+  pathWeight(A,u)/u after dividing by the actual positive endpoint.
+  The uniform reciprocal correction-product theorem applies because an
+  injective positive shortcut orbit supplies a distinct positive finite
+  path at every length. Taking its reciprocal gives one c>0 independent
+  of the root, path length and cylinder depth.
+
+* The native Syracuse clock records exactly j odd shortcut steps, so the
+  odd-depth propagation statement is at k+j, without an unproved clock
+  approximation or hitting-time estimate.
+
+* Every injective positive shortcut orbit reaches an odd unit root: strip
+  powers of two and take one Syracuse step. Component transport preserves
+  injectivity. No positive-odd assumption is silently imposed on the
+  original arbitrary starting integer.
+
+* Native clock strict monotonicity plus shortcut injectivity makes the
+  Syracuse spine injective. Every spine state is nonperiodic because a
+  return there would force a repeated state in the original orbit.
+
+* For odd u, S(u)<=2u. Consequently S^j(u)<=2^j u. A fixed C with
+  u<=3^C places the first K+1 distinct spine states inside 1,...,3^(K+C).
+  The final proof chooses C=u, which is positive and satisfies the bound.
+
+* For j<=K, the source depth K+C-j is positive, and adding j recovers
+  exactly K+C. Squaring the nonnegative propagated values and injecting
+  the finite spine into the energy head proves the reversed diagonal
+  bound required by the generic helper.
+
+* The actual fixed-root Cesaro cylinder limit is used at the positive odd
+  unit u. Its limit is positive by actual_trace_positive_iff_unit. No
+  unaveraged cylinder convergence, uniform target convergence, or
+  sublinearity of the canonical trace is assumed.
+
+* The generic helper restores the fixed square prefix 0,...,C-1, applies
+  finite Jensen at K+C, divides by K+C+1 and passes to the known limits.
+  Its conclusion contradicts c^2 L^2>0. It needs no sign assumption on
+  its generic input sequence; the arithmetic squaring step separately
+  verifies nonnegativity of the actual cylinders.
+
+Pinned source SHA-256 values:
+
+CylinderForwardPropagation.lean
+953841b16156ac5af2516f35932c2c1cfe00d9955829963980f85c5f0a314414
+
+NonperiodicSyracuseSpine.lean
+5b3f674c358185f24ee1cb79594c30bb3d4bbe039336187fbd4e968563ac60f7
+
+ShiftedCesaroEnergyExclusion.lean
+375c9a7e8c7eb85c75838fa0b15e1f380080ce1f769713b6679b9c3f915e62b4
+
+SublinearNonperiodicCylinderEnergy.lean
+b3b3472b94c46a260336194e170d09321a7fa53f7239b5cfc46ba14da770a61b
+
+The final arithmetic cleanup from a combined tactic to sequential `ring`
+was reread and does not change the mathematical argument. Compiler logs
+for the current sources report only standard axioms. This text is a
+semantic review, not a claim of an independent full dependency rebuild.

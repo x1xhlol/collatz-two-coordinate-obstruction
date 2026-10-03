@@ -1,0 +1,18 @@
+'CollatzCanonical.PeriodicCensusFloor.forward_orbit_finite_of_eventually_periodic' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.small_ancestor_targets_finite_of_universal_eventual_periodicity' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.fixed_small_ancestor_energy_bounded_of_universal_eventual_periodicity' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.masked_energy_sublinear_of_universal_eventual_periodicity' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.masked_energy_sublinear_iff_universal_eventual_periodicity' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.small_ancestor_energy_sublinear_iff_universal_eventual_periodicity' depends on axioms: [propext,
+ choice,
+ Quot.sound]

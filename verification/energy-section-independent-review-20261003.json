@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "review_sha256": "76ac503796207cf310f26081dbc34ebea5c1419b2d6fcb420ea60d2ae416e013",
+  "reviewed": "new-energy-section.tex",
+  "reviewed_sha256": "444e0a4d549c40a24f52d77996c601be99f14e094b66a02ecccf4bec330f1925",
+  "scope": "Full new-section statements/proofs and relevant inherited interfaces; no second build or formal replay."
+}

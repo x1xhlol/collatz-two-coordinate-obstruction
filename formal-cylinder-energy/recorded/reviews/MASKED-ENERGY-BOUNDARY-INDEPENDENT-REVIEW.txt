@@ -1,0 +1,21 @@
+Independent semantic review: MaskedEnergyBoundaryLimit.lean
+3 October 2026. Reviewer: sibling_comparison. Result: PASS.
+
+Source SHA256: bc2feda728f562220efa3946a8c7cb26e77abb0238fab1be25c186f0908675e8
+All 75 lines read, together with the full imported masked-energy module.
+
+The geometric remainder is at most one, so the explicit L1 budget is
+at most 3+5K, hence 5(K+1), including K=0. Both filtered energies are
+nonnegative sums of squares. The existing uniform decomposition chooses
+L and epsilon before all depths and barriers. For every barrier M(K)
+tending to infinity, division of its bound by K+1 gives domination by
+5L epsilon(M(K)), which tends to zero. The proof uses K>0 only eventually.
+
+The total/subset equivalence follows exactly from the finite partition:
+subtract the vanishing no-small-ancestor energy in one direction and add
+it in the other. No rate or monotonicity assumption on the barrier is used.
+No sublinear estimate for the remaining small-ancestor energy is assumed.
+
+This certificate is a semantic source review. Authenticated compilation,
+whole-module axiom enumeration and independent kernel replay are owned
+by the separate four-module masked-no-small-ancestor replay record.

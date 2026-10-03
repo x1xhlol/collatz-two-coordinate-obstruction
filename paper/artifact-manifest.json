@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "release_version": "2026.10.03.1",
+  "release_version": "2026.10.03.2",
   "date": "2026-10-03",
   "author": "Lucas Valbuena",
   "public_repository": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction",
@@ -8,24 +8,25 @@
     {
       "title": "Collatz basin densities and canonical traces from first-passage stabilization",
       "source": "paper/tao-basin-densities.tex",
-      "source_sha256": "94b22591a3b5ae475bc1e7bb7d6ae102f2296262b6f8e59df93cbae66ac70daf",
+      "source_sha256": "d5eefd691da5ce9ca22a3276429dde087aedf5e878eb978c7b2d94f4cfc92abb",
       "pdf": "paper/tao-basin-densities.pdf",
-      "pdf_sha256": "abde0c8e7b3b891a47d62fcdf70d5a99b133afa4e4898739c3a635beeeab2b76",
-      "pages": 28,
-      "numbered_results": 24,
+      "pdf_sha256": "169e9ce3f17d19a8e9bfd00f83a3a15548c4f836a3cb191d43f30323cd734e15",
+      "pages": 31,
+      "numbered_results": 28,
       "theorem_map": "paper/basin-lean-claims.md",
-      "theorem_map_sha256": "7156a9240a543d76c1bc4bd045571369d561bcff880a157b2928039cdf8dce5c",
+      "theorem_map_sha256": "3e8a7dc5699c942cd23954deece986d76d64269a23dfd3769ae03ac93c01e709",
       "main_result": "For one fixed positive integer K_seed and every positive target N prime to three, shortcut and ordinary predecessor natural densities are at least 3/(128*K_seed*N).",
-      "credit": "The inverse-linear form was proposed by Wirsching. The proof uses Mazur's weighted predecessor construction and Said Duran's coalescence theorem, alongside the density and canonical-limit foundations described in the paper."
+      "credit": "The inverse-linear form was proposed by Wirsching. The proof uses Mazur's weighted predecessor construction and Said Duran's coalescence theorem, alongside the density and canonical-limit foundations described in the paper.",
+      "additional_results": "Uniform exact first-hit coefficient bound at positive odd targets, including periodic targets; actual finite cylinder-mass transport and energy decomposition; an exact finite-energy criterion equivalent to universal eventual periodicity, with unconditional normalized decay outside every diverging ancestor barrier."
     }
   ],
   "typesetting_tool": "Tectonic 0.17.0",
   "checks": {
     "manuscript": {
       "status": "PASS",
-      "report": "verification/manuscript-validation-20261003.json",
-      "report_sha256": "7f827943aa6533433808797136a3d54842dc2486ee7576852675cfdfa1709219",
-      "scope": "Read-only manuscript preservation, references, PDF presentation, and verification-summary consistency review. This review does not replace the Lean replay or the final repository distribution check."
+      "report": "verification/manuscript-energy-validation-20261003.json",
+      "report_sha256": "dd785554b555a410f2bc84be2dc3a14497e66e92406f98db4a801956c694ba79",
+      "scope": "Parent full semantic read of the four new proofs and their formal interfaces, final PDF review, immutable-proof preservation, portable replay and distribution checks. Automated review is not external peer review."
     },
     "native_foundation": {
       "status": "PASS",
@@ -51,6 +52,26 @@
       "complete_package_index": "formal-periodic-census/SHA256SUMS.json",
       "complete_package_index_sha256": "153023613c0c0ab4adb0b09b4c6e4cf060fdd352a7aba333e3ddf1cb395cdc01",
       "scope": "All 51 supplied application modules freshly compiled and individually kernel-replayed. All compiled constants, including private and generated constants, audited. Required native dependencies authenticated before and after the run. Pinned native and library caches reused; the full upstream closure was not freshly rebuilt."
+    },
+    "finite_cylinder_energy_extension": {
+      "status": "PASS",
+      "report": "formal-cylinder-energy/recorded/replay-record.json",
+      "report_sha256": "6237b76e79ac588e19cfcb1be25ae09460e4f36c107fe22331b9e674d9d59786",
+      "fresh_application_modules": 17,
+      "individual_application_kernel_replays": 17,
+      "generated_audit_compiled_and_kernel_replayed": true,
+      "audited_constants": 193,
+      "audited_explicit_declarations": 118,
+      "audited_private_constants": 0,
+      "authenticated_floor_dependencies": 40,
+      "authenticated_native_dependencies": 1566,
+      "source_manifest": "formal-cylinder-energy/bundle-manifest.json",
+      "source_manifest_sha256": "a8a9a4d0689840080a415dddb3d3e2d8e2e9a51c690b09791eae4cd492a74d0b",
+      "complete_package_index": "formal-cylinder-energy/SHA256SUMS.json",
+      "complete_package_index_sha256": "b640253b5cbd423b31c07887bdee145741c0a32827d6c6a05cda4a038f12208a",
+      "verifier_negative_controls_report": "verification/cylinder-energy-verifier-independent-review.json",
+      "verifier_negative_controls_report_sha256": "30ce8cd0551bdeb4563d38dd9f4639b92e33c950c7db2ce6c1e8619c9c919a3c",
+      "scope": "All 17 bundled application modules and their generated whole-module audit were freshly compiled and individually kernel-replayed. All application constants, including private and generated constants, were audited. Required periodic-census (40) and native (1566) objects were reused after pinned source/object/import and dependency-fingerprint authentication before and after. Pinned Mathlib/Lean caches were reused; this is not a fresh rebuild of the entire upstream closure."
     }
   },
   "checked_theorem_dependency_axioms": [
@@ -60,7 +81,7 @@
   ],
   "proves_collatz_conjecture": false,
   "limitations": [
-    "The global divergence condition and exclusion of additional cycles remain unresolved.",
+    "Sublinear masked cylinder energy, equivalently universal eventual periodicity, remains unresolved. The equivalence does not exclude additional cycles.",
     "The lower-bound constants are fixed Lean choices; no numerical value or uniform finite-cutoff estimate is asserted.",
     "Novelty comparisons and automated semantic reviews are not external peer review or an exhaustive priority search.",
     "Verification scope is stated per record; source/object authentication is distinguished from fresh compilation and individual kernel replay."

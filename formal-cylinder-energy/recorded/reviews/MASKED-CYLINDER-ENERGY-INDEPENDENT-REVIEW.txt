@@ -1,0 +1,45 @@
+Independent semantic review: PASS
+Date: 2026-10-03
+Reviewer: sibling_comparison
+
+All three application sources were read in full. The relevant native
+valid-word, endpoint-bound, odd-clock, length-tail, harmonic-prefix,
+Gamma-free finite-return-mask, and basin-boundary interfaces were checked.
+
+1. Fixed odd depth gives a global source injection across different odd
+   target roots and words. Equal odd count at odd endpoints fixes the
+   shortcut time; the deterministic path and native word injection then
+   fix both target and word. A periodic source does not invalidate this.
+2. Validity and target height N<=3^K give source q<=2^(6K) for head words.
+   Their normalized coefficient is at most 1/q. Thus the finite source
+   harmonic budget is paid once across all targets, yielding 2+3K.
+3. The full arithmetic length tail remains (64/81)^K/N. Summing it over
+   targets costs at most (64/81)^K(1+2K), with the exact positive endpoint
+   and zero conventions retained by the harmonic helper.
+4. The normalized cylinder is nonnegative. A pointwise amplitude H
+   therefore converts its full l1 bound into a squared-energy bound by
+   h^2<=Hh. No density-square sum or overlapping-basin sum is substituted.
+5. GammaFreeFirstHitCoefficient supplies h_K(N)<=L D_N when there is no
+   Syracuse return through depth K. This includes cycles of period>K;
+   global nonperiodicity is not an additional premise.
+6. The native boundary function uniformly bounds D_N by epsilon(M) for
+   NoSmallAncestor N M, and has the retained logarithmic-power rate.
+   Constants L and epsilon are fixed before the target set, K, and M.
+7. The final named energy partition is exact. The complementary part is
+   precisely targets reached from positive seeds at most M. No upper
+   estimate for that exceptional forward-orbit energy is assumed.
+
+The named head uses N<3^K; the finite helper permits N<=3^K. All final
+finite estimates require K>0. The exact budget is
+  2+3K+(64/81)^K(1+2K).
+No source error or semantic defect was found. This certificate records
+independent semantic review; fresh compilation, kernel checking, and
+all-constant axiom accounting are recorded separately by the replay owner.
+
+Frozen source pins:
+OddDyadicReciprocalBudget.lean
+  eb28fe59d36ea7be8834566d804863cbf3c6df06344c7ed4612502746544c2ff
+CylinderGrowthHeadTransport.lean
+  5dd5d69893e6b5d493a084ea273466dd59bceafeb222914a31910aa7c0782f9e
+MaskedCylinderNoSmallAncestorEnergy.lean
+  906740371ec4d2c803b694328bccfc3332c05a88a7bf5bf0e105eb446bcf30f1

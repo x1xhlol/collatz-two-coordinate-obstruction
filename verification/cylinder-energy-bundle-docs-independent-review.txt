@@ -1,0 +1,48 @@
+Independent documentation and scope review: finite cylinder energy bundle
+Date: 2026-10-03
+Reviewer: cycle_gap, independent of the bundle author
+Status: PASS after one corrected license-reference filename.
+
+Reviewed README.md and SOURCE-LICENSES.txt against the exact source definitions,
+main endpoint proofs, bundle inventory, retained provenance records, and the
+prerequisite license descriptions. This is a documentation/semantic-scope
+review, not a replacement for the separate portable verifier audit or replay.
+
+The strict head 0<N<3^K, odd-target condition, and inclusive return exclusion
+1<=j<=K are accurate. The finite mask can include periodic targets with period
+larger than K. The first-hit coefficient theorem covers positive exact depths
+and periodic targets; transfer to full cylinder density requires this mask.
+The older nonperiodic energy has the inclusive endpoint 3^K. The sufficiency
+proof removes that endpoint using zero actual cylinder mass for K>0.
+
+The energy is a finite sum of actual (canonicalRho K N/N)^2. The stated mass
+budget 2+3K+(64/81)^K(1+2K) is the actual first-power mass estimate for positive
+K, and the README correctly distinguishes it from limiting basin densities.
+The two equivalences assert universal eventual periodicity of positive
+shortcut orbits, not convergence to the known cycle or uniqueness of cycles.
+The barrier function is any real-valued M(K) tending to +infinity. Only the
+normalized no-small-ancestor portion vanishes unconditionally; decay of the
+remaining small-ancestor portion is the equivalent open criterion.
+
+The manifest contains exactly 17 application modules (five coefficient,
+four finite transport/energy, six older implication, two equivalence), 40
+reused periodic-census modules, and 1,566 reused native modules. All 17 supplied
+source hashes match both the research sources and their provenance entries;
+the four historical replay-record digests match. The manifest's file hashes
+all match at review time. The README accurately describes additive replay and
+reuse of Lean/Mathlib/native caches, without claiming fresh checking of the
+entire imported closure. Detailed verifier behavior is separately audited.
+
+MIT attribution to Lucas Valbuena is retained for original local material.
+External Gao and predecessor-derived material retains its upstream Apache-2.0
+attribution and notices in the prerequisites. No external source is relicensed
+by this package. The only requested correction was the native prerequisite's
+license-reference extension: SOURCE-LICENSES.md rather than SOURCE-LICENSES.txt.
+The final text names both prerequisite filenames accurately.
+
+Reviewed pins:
+README.md 5f2e22e6d89539b5e59d3acead4d051d1e4d8c4fa309b46f2ad08ff27adcd6e6
+SOURCE-LICENSES.txt 4a6d8480bd3096c816f36c00ec1af04dabf6f3399bfd07532f862675f7b4c89e
+LICENSE-MIT 697bde3198556b7a17e0c507f0a92ce61b687a1069d4612236228a805e14f384
+bundle-manifest.json a8a9a4d0689840080a415dddb3d3e2d8e2e9a51c690b09791eae4cd492a74d0b
+provenance/source-provenance.json 471c3c0aedb18405bbc805d41c510d7f2811ed1106223c1cb235c03ce8200ae2

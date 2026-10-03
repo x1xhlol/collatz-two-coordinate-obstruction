@@ -1,0 +1,26 @@
+{
+  "checks": [
+    "Full README, CFF and Zenodo text read. Exact first-hit coefficient scope now explicitly restricts to odd targets; README states positive depth. UEP equivalence, remaining small-ancestor decay condition and unresolved additional cycles are described correctly.",
+    "All 95 staged distribution files are byte-identical to the public copies. The only added distribution file is its complete SHA256SUMS.json index, whose 95 hashes all match.",
+    "Public package-only validation and all 65 recorded artifact checksums pass. Bundle manifest and final replay-record pins match the verified run.",
+    "The 17 application modules, generated audit, 193 constants, 118 explicit declarations, zero private constants, 40 reused floor modules and 1566 reused native modules agree across the package, report and artifact manifest. Fresh checks and authenticated reuse are distinguished.",
+    "All 15 local README links exist. CFF and Zenodo parse and agree with the artifact manifest on release version 2026.10.03.2 and date 2026-10-03.",
+    "All 24 artifact/report linked-file hash checks pass. The final PDF has 31 pages; its LaTeX source has 28 numbered theorem/lemma/proposition/corollary environments, matching the README and reports.",
+    "Scope is metadata, paths, copied distribution and recorded-evidence consistency. The earlier full manuscript proof reviews remain the evidence for proof correctness. No public file was edited during this review."
+  ],
+  "reviewer": "foundation_audit; independent final metadata/distribution consistency read; package and verifier author. This is not a new full manuscript-proof audit.",
+  "sha256": {
+    ".zenodo.json": "3b6a9c509629d051ba7ac975c6437e8403704778f64dc9e507200bec1f5f946f",
+    "CITATION.cff": "f72eb219bd754aafb63ee48519f8220eab887cf6fbb6a5ae073d0561bfac2e4f",
+    "README.md": "e7e166d3e08a7d2c7e19f572759f4113b6418ce8e2806d4647b32bf9e7052e19",
+    "formal-cylinder-energy/SHA256SUMS.json": "b640253b5cbd423b31c07887bdee145741c0a32827d6c6a05cda4a038f12208a",
+    "formal-cylinder-energy/bundle-manifest.json": "a8a9a4d0689840080a415dddb3d3e2d8e2e9a51c690b09791eae4cd492a74d0b",
+    "formal-cylinder-energy/recorded/replay-record.json": "6237b76e79ac588e19cfcb1be25ae09460e4f36c107fe22331b9e674d9d59786",
+    "paper/artifact-manifest.json": "2d729793f93a5de5fd2226cba017e25a7ac84e046a857b89a9add5ba8babe7b9",
+    "paper/basin-lean-claims.md": "3e8a7dc5699c942cd23954deece986d76d64269a23dfd3769ae03ac93c01e709",
+    "paper/tao-basin-densities.pdf": "169e9ce3f17d19a8e9bfd00f83a3a15548c4f836a3cb191d43f30323cd734e15",
+    "paper/tao-basin-densities.tex": "d5eefd691da5ce9ca22a3276429dde087aedf5e878eb978c7b2d94f4cfc92abb",
+    "verification/manuscript-energy-validation-20261003.json": "dd785554b555a410f2bc84be2dc3a14497e66e92406f98db4a801956c694ba79"
+  },
+  "status": "PASS"
+}

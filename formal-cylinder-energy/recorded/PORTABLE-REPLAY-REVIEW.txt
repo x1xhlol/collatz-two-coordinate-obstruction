@@ -1,0 +1,18 @@
+Finite cylinder-energy portable replay review
+Status: PASS
+Reviewer: foundation_audit; package/verifier author and author of some included Lean modules. Independent semantic reviews of the frozen sources are retained. Root independently reviewed the portable verifier and ran 13 mutation controls; cycle_gap independently reviewed package documentation and source preservation.
+Manifest SHA-256: a8a9a4d0689840080a415dddb3d3e2d8e2e9a51c690b09791eae4cd492a74d0b
+Verifier SHA-256: 3f62cf8e58f09fe2d10ec04b0e2774caeb8805720903c20bb6156ed71948f54e
+Replay record SHA-256: 6237b76e79ac588e19cfcb1be25ae09460e4f36c107fe22331b9e674d9d59786
+Fresh: 17 application modules plus audit, all 18 compiled and individually kernel-replayed.
+Audit: 193 constants, all 118 explicit declarations, zero private constants; standard three axioms only.
+Warnings: none.
+
+- The 17 application source copies preserve the frozen bytes from the four earlier research replay records. The two reciprocal-budget modules are not in the actual import closure and are omitted.
+- The final package manifest, source inventory, import inventory, exact endpoint dependency closure and recursive fingerprints passed before and after the fresh run.
+- All 17 application modules and the generated whole-module audit compiled and passed individual leanchecker replay in a new directory. Every compiled application constant was enumerated and audited; all 118 explicit source declarations were covered.
+- No compiler or kernel errors, warnings or nonstandard axioms were found. All 18 source/object/compilation-log/kernel-log hash sets were independently rechecked against the completed record.
+- Exactly 40 periodic-census and 1566 native source/object pairs were authenticated before and after, with pinned successful replay records and native dependency fingerprints. Only the authenticated object subsets appeared on isolated upstream import paths.
+- Pinned Lean/Mathlib/package revisions, the Mathlib package manifest and clean tracked dependency source trees were checked. Existing upstream objects and library caches were reused; this is an additive replay, not a complete upstream rebuild.
+- An earlier incomplete run was interrupted only to correct a pinned license-document filename. None of its output objects or logs was used in the final run or retained in this evidence archive.
+- The theorem is a conditional equivalence with universal eventual periodicity, which permits additional periodic cycles. Neither sublinear masked energy nor universal eventual periodicity is proved unconditionally.

@@ -1,0 +1,172 @@
+GAMMA-FREE FIRST-HIT PACKET: INDEPENDENT SEMANTIC REVIEW
+3 October 2026. Reviewer: sibling_comparison. Verdict: PASS.
+
+All five frozen modules were read in full. The four supporting modules
+also have separate pinned semantic reviews. This final report checks
+the complete aggregation and the scope of the exported conclusions.
+No author source was edited. This is not a fresh authenticated replay;
+foundation_audit owns the separate fresh packet replay.
+
+Frozen source bindings
+
+FirstHitCutCapacity.lean
+  852c31b790428a2e9503a065cd13b601d21446f1cecb087bde2364041f02e17a
+SyracuseUnitNonperiodicFan.lean
+  89c85018153dc056553a0f8869f21ecdff260b23a96a567c598cea558fa413c9
+SyracuseFirstHitGeometry.lean
+  0994f637fea5e6ef40b30b3e87d7135d20d43b91d82bc71ef18345e66c74946a
+ExactFirstHitCoefficient.lean
+  758dea9365132cc09ae026ab5a02470b52e7c5b08e3a66b35ad26a305f397cee
+GammaFreeFirstHitCoefficient.lean
+  1f842c70baeefa532e7093635e5a16cfe3842dd886934ea38c1112b4041f902d
+
+1. Exact proved conclusion and numerical constant
+
+The packet defines a_k(N) as the sum over positive odd sources whose
+ACTUAL FIRST shortcut hit of N has exactly k odd steps. Its nonzero
+summands equal N*firstHitWeight N q/q, or equivalently 3^k/2^A for the
+actual first-hit shortcut time A.
+
+For one native global b>0 with D_q>=b/q at all positive unit q, it proves
+
+  a_k(N) <= (64/b)*N*D_N
+
+for every positive odd N and k>=1, including periodic targets. The
+exported existential theorem chooses the same constant C=64/b before
+quantifying over all targets and depths. Oddness already gives N>0.
+
+The actual cylinder bound rho_k(N)<=C*N*D_N additionally assumes
+
+  Syracuse^j(N)!=N for every 1<=j<=k.
+
+This includes all odd nonperiodic targets and periodic targets whose
+least odd period exceeds k. A return exactly at k is excluded by the
+mask. The packet does not bound unrestricted all-hit coefficients on
+short-cycle targets by D_N.
+
+The formal constant is 64/b. The analytic report's sharper 64/(3b)
+is NOT the constant proved by this implementation. The factor-three
+loss is explained by the valid larger exponent sum in section 2 below.
+
+2. Finite fan coefficient estimate
+
+finite_syracuse_fan_geometric_bound takes a finite collection of odd
+sources with the same Syracuse successor. Their exponents are positive
+and are distinct by syracuse_predecessor_exponent_injective. It compares
+their sum to the full geometric series over ALL positive exponents:
+
+  sum_Q 2^(-a(q)) <= sum_(a>=1)2^(-a)=1.
+
+The code inserts exponent zero into the finite exponent set, compares
+to the full nonnegative geometric tsum (which equals 2), and subtracts
+the zero-exponent term. Positivity of odd-source exponents justifies
+that insertion as a disjoint extra term.
+
+finite_firstHit_fan_bound uses the exact first-hit successor coefficient
+identity lambda(q)=3*2^(-a(q))*lambda(y). The parent coefficient is
+nonnegative, so the finite fan mass is at most 3*lambda(y).
+
+short_predecessor_coefficient_bound uses a(q*)<=6, hence
+2^(-a(q*))>=1/64, and the same exact coefficient identity. It proves
+
+  3*lambda(y)<=64*lambda(q*).
+
+Combining these two inequalities gives the factor 64 from each finite
+fan to its selected representative. No parity-residue improvement of
+the geometric series is asserted in this formal bound.
+
+3. Selected representatives are a genuine finite cut
+
+For an arbitrary finite collection Q of exact depth-(k+1) first-hit
+sources, the proof forms the FINITE parent image Y=Syracuse(Q).
+Every parent in Y is positive odd and not divisible by 3. The selected
+leaf theorem therefore supplies a unit nonperiodic odd predecessor
+q* of that parent with exponent at most 6.
+
+The original source's first-hit predicate gives the parent's exact
+first-hit depth k. syrFirstHit_prepend_nonperiodic gives a genuine
+depth-(k+1) first hit from q*. In particular q*=N is ruled out by a
+positive return to q*, rather than being silently included as a
+positive-depth first hit at a periodic target.
+
+The selected leaf need not belong to Q. Distinct parents nevertheless
+give distinct selected leaves because a selected leaf has exactly its
+specified Syracuse successor. The proof establishes this injection
+before replacing a sum over parents by a sum over the selected image P.
+
+Each member of P is converted to an actual shortcut FirstHit at its
+native clock, with oddCount=k+1. The finite cut-capacity theorem then
+applies to P. Its nonperiodic hypothesis means no positive return at
+the leaf; it does NOT mean that the leaf never eventually enters a
+cycle. Thus its use is valid for periodic endpoints as well.
+
+Fiberwise summation of Q by its first successor, the factor-64 fan
+comparison, and cut capacity give
+
+  sum_Q lambda(q)<=64*N*D_N/b.
+
+Only the selected LEAVES need be units. No unit-modulo-three assumption
+on N appears in the final theorem. For odd N divisible by 3, a positive
+depth leaf cannot exist; the same finite proof remains valid.
+
+4. Infinite coefficient and density normalizations
+
+exactFirstHitCoefficient_le_density begins with native-backed
+summability of the exact term. To bound an arbitrary finite partial
+sum it filters that finite set to its nonzero exact-depth odd sources,
+uses the exact shortcut/Syracuse first-hit equivalence, and applies
+the uniform finite theorem just proved. The summable tsum is then
+bounded by the same number.
+
+This is a finite-partial-sum argument on nonnegative coefficients.
+It makes no countable-additivity claim about natural density and does
+not take a source-mean limit uniformly in a moving target or depth.
+
+The capacity theorem uses full-source logarithmic means tending to
+actualFirstHitDensity, and the native reciprocal floor is stated for
+that same density. Oddness restricts the LEAF coefficient sum, not
+the source mean used to measure a selected leaf's full basin. There
+is no omitted odd-source factor of two in the conversion.
+
+5. Final exported theorems discharge the floor
+
+exists_uniform_odd_exact_firstHit_coefficient_bound obtains the native
+exists_uniform_firstHit_reciprocal_floor once and sets C=64/b>0.
+Any positive k is rewritten as j+1 and the exact coefficient estimate
+is applied. The bound has no residual unproved floor assumption.
+
+exists_uniform_odd_masked_cylinder_bound makes the same native choice
+and uses the independently reviewed finite-no-return reconstruction
+to replace rho_k by a_k. It does not assert that all targets satisfy
+that mask. No approximation of a cycle factor is involved.
+
+6. Assumption and axiom audit scope
+
+The source contains no bounded harmonic-target assumption, no uniform
+rho/g majorant, no Green cycle-factor bound, no eventual-periodicity
+assumption, and no inference from cumulative Cesaro convergence to a
+pointwise coefficient estimate. The only infinite coefficient passage
+uses already proved summability plus finite bounds.
+
+Author compile logs for all five sources were inspected. The printed
+theorems report only propext, choice/Classical.choice, and Quot.sound.
+This semantic review does not replace the independent fresh replay
+that authenticates the dependency closure, recompiles frozen sources,
+checks their objects, and audits every new declaration. Those results
+must be reported under their own replay record.
+
+Supporting semantic reviews
+
+FIRST-HIT-CUT-CAPACITY-INDEPENDENT-SEMANTIC-REVIEW.txt
+  b9c5f38f27623b8d232858feeeb2af5b8b7e49707eaffef8e5c0823d4937986b
+SYRACUSE-UNIT-NONPERIODIC-FAN-INDEPENDENT-SEMANTIC-REVIEW.txt
+  b27d5faaa83f400b68c42654e10b6fb2b609c014e10ec3f86c9dae50f87acab4
+SYRACUSE-FIRST-HIT-GEOMETRY-INDEPENDENT-SEMANTIC-REVIEW.txt
+  bd86345d7b92e7fa9a89a11cf6358fec551832240c6a53bb98ecb5f1b82fd6ba
+EXACT-FIRST-HIT-COEFFICIENT-INDEPENDENT-SEMANTIC-REVIEW.txt
+  383987456d87e3dfb0859523744cae6e7d9542699a4b22a39e800100fce57666
+
+The packet proves a new uniform first-hit coefficient bound and a
+finite-mask cylinder bound. It does not prove the separate sublinear
+nonperiodic energy estimate, remove actual short-cycle returns, or
+establish universal eventual periodicity.

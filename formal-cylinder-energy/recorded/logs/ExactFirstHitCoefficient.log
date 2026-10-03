@@ -1,0 +1,4 @@
+'CollatzCanonical.PeriodicCensusFloor.exactFirstHitCoefficient_succ' depends on axioms: [propext, choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.canonicalRho_eq_exactFirstHitCoefficient_of_finite_no_return' depends on axioms: [propext,
+ choice,
+ Quot.sound]

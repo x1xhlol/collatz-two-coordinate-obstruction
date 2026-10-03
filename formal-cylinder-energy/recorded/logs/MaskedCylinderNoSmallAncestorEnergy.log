@@ -1,0 +1,10 @@
+'CollatzCanonical.PeriodicCensusFloor.finite_odd_cylinderHead_mass_bound' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_noSmallAncestor_masked_energy_bound' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.maskedCylinderHeadEnergy_split' depends on axioms: [propext, choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_maskedEnergy_decomposition' depends on axioms: [propext,
+ choice,
+ Quot.sound]

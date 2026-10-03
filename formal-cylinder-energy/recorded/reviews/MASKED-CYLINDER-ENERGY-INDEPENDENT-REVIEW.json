@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "reviewer": "sibling_comparison",
+  "source_sha256": {
+    "OddDyadicReciprocalBudget": "eb28fe59d36ea7be8834566d804863cbf3c6df06344c7ed4612502746544c2ff",
+    "CylinderGrowthHeadTransport": "5dd5d69893e6b5d493a084ea273466dd59bceafeb222914a31910aa7c0782f9e",
+    "MaskedCylinderNoSmallAncestorEnergy": "906740371ec4d2c803b694328bccfc3332c05a88a7bf5bf0e105eb446bcf30f1"
+  },
+  "certificate": "MASKED-CYLINDER-ENERGY-INDEPENDENT-REVIEW.txt",
+  "certificate_sha256": "009743131a1affc0382c3a4ca4bb03b213328d851cd06b32819199b13eeea783",
+  "scope": "Independent full semantic review; fresh kernel replay recorded separately."
+}

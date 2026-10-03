@@ -1,0 +1,77 @@
+Gamma-free first-hit coefficient packet: fresh replay and review
+3 October 2026. Replay runner: foundation_audit. Result: PASS.
+
+Fresh output
+ gamma-free-first-hit-coefficient-fresh-replay/replay-record.json
+ SHA256 ae38aa978e2a61e4f651c6c9de329b251fe7824444ff2f38fbbfcc729d61f4af
+Replay driver
+ replay_gamma_free_first_hit_coefficient.py
+ SHA256 1e4dafcb54233f7049d2644006e375f8a9ec93a741c0363b4545a3bcbb764ab2
+
+Frozen modules, rebuilt in dependency order
+
+FirstHitCutCapacity
+ 852c31b790428a2e9503a065cd13b601d21446f1cecb087bde2364041f02e17a
+SyracuseUnitNonperiodicFan
+ 89c85018153dc056553a0f8869f21ecdff260b23a96a567c598cea558fa413c9
+SyracuseFirstHitGeometry
+ 0994f637fea5e6ef40b30b3e87d7135d20d43b91d82bc71ef18345e66c74946a
+ExactFirstHitCoefficient
+ 758dea9365132cc09ae026ab5a02470b52e7c5b08e3a66b35ad26a305f397cee
+GammaFreeFirstHitCoefficient
+ 1f842c70baeefa532e7093635e5a16cfe3842dd886934ea38c1112b4041f902d
+
+Each of the five modules and the generated all-constant audit module
+compiled from a fresh copied source tree and passed leanchecker.
+The audit covers 81 constants, including generated declarations:
+ FirstHitCutCapacity 11
+ SyracuseUnitNonperiodicFan 29
+ SyracuseFirstHitGeometry 12
+ ExactFirstHitCoefficient 20
+ GammaFreeFirstHitCoefficient 9
+There are 43 explicit theorem/definition declarations and no private
+constants in the audited packet. Every audited axiom set is a subset
+of propext, Classical.choice, Quot.sound; no sorryAx occurs.
+
+Before and after the replay, the driver authenticated all 1,602 native
+and 52 floor source/object pairs against their pinned successful replay
+records. It also authenticated the native manifest, pinned Lean and
+Mathlib versions, package revisions, package manifest, and clean tracked
+library source trees. Newly copied sources and live frozen sources were
+checked again after replay. Mathlib/Lean caches were reused; this is not
+a complete upstream rebuild.
+
+Semantic scope checked
+
+The final unconditional theorem asserts one C>0, independent of target,
+depth, period and return multiplier, such that for positive odd-depth
+first-hit coefficients at odd targets,
+ exactFirstHitCoefficient k N <= C*N*actualFirstHitDensity N, k>0.
+The implementation takes C=64/b from the established reciprocal floor.
+It uses a slightly larger constant than the analytic 64/(3b) fan bound.
+
+The finite-mask theorem transfers this same form of bound to canonicalRho
+k N when the actual Syracuse orbit has no return at any time 1,...,k.
+The inclusive endpoint correctly excludes least period exactly k.
+The coefficient is proved to be the increment of the native cumulative
+first-hit sum. No Cesaro-to-pointwise inference is used.
+
+The proof uses a finite weighted cut of full basins, an actual unit
+nonperiodic predecessor of exponent at most six, preservation of odd
+first-hit depth, finite fiber aggregation and a justified nonnegative
+tsum passage. Odd targets and k>0 are retained in the final APIs.
+There is no bound claimed for unrestricted repeated-hit coefficients
+by the cycle-factor-free density at short-period targets.
+
+Review independence
+
+Foundation authored SyracuseUnitNonperiodicFan and independently
+replayed the other four authors' modules. Root and sibling_comparison
+separately read and passed the frozen fan helper. Foundation also read
+the exact coefficient and finite aggregation APIs during this replay;
+separate root/sibling semantic reviews are tracked independently.
+The entire packet's kernel and axiom checks are recorded above.
+
+This packet does not prove density-square summability, sublinear masked
+energy, universal eventual periodicity, or classification of cycles.
+Those remain separate from the proved coefficient and finite-mask bounds.

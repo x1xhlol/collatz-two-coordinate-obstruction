@@ -1,0 +1,32 @@
+AUTHENTICATED MASKED NO-SMALL-ANCESTOR ENERGY FRESH REPLAY
+Status: PASS
+Reviewer: foundation_audit
+
+For all positive depths K, no-return-masked odd targets below 3^K with no positive ancestor at most M have square energy at most L*epsilon(M)*[2+3K+(64/81)^K*(1+2K)], with uniform L>0 and epsilon tending to zero at a logarithmic power rate. The bound uses actual finite word transport and retains the small-ancestor energy in an exact partition. Every barrier M(K) tending to infinity makes the normalized no-ancestor energy vanish; total normalized energy vanishes iff the small-ancestor residual does. No residual decay or Collatz termination is asserted.
+
+Replay record SHA256: 5b535f75e2c7be201fb3d6833cf905dd55207538e9f2560d7f15c7df4be33b10
+Driver SHA256: 36252ee363e284e40a5cb89b96c2938faf6519de2afc465e20189653a8080349
+
+All four source modules and their generated all-constant audit were freshly compiled and individually kernel-replayed (ten successful commands). Audit: 39 constants, 29 explicit declarations, zero private constants. Every axiom set is a subset of propext, Classical.choice, Quot.sound. No sorryAx or other nonstandard axiom occurs.
+
+OddDyadicReciprocalBudget.lean
+SHA256 eb28fe59d36ea7be8834566d804863cbf3c6df06344c7ed4612502746544c2ff
+Audited constants 7, explicit declarations 4
+
+CylinderGrowthHeadTransport.lean
+SHA256 5dd5d69893e6b5d493a084ea273466dd59bceafeb222914a31910aa7c0782f9e
+Audited constants 12, explicit declarations 9
+
+MaskedCylinderNoSmallAncestorEnergy.lean
+SHA256 906740371ec4d2c803b694328bccfc3332c05a88a7bf5bf0e105eb446bcf30f1
+Audited constants 15, explicit declarations 11
+
+MaskedEnergyBoundaryLimit.lean
+SHA256 bc2feda728f562220efa3946a8c7cb26e77abb0238fab1be25c186f0908675e8
+Audited constants 5, explicit declarations 5
+
+Before and after the new builds, the replay authenticated 1602 native source/object pairs, 52 floor source/object pairs, and five Gamma-free source/object pairs and their live frozen sources. It pinned the three dependency records plus native manifest, Lean revision, Mathlib revision, package revisions, clean tracked library sources, and package manifest. Every copied/live new source pin and every output source/object/log hash was rechecked.
+
+The replay author authored CylinderGrowthHeadTransport and MaskedCylinderNoSmallAncestorEnergy; root and sibling_comparison independently reviewed those sources. Root authored the reciprocal helper and boundary-limit extension; foundation_audit and sibling_comparison independently reviewed them. This certificate reports independently authenticated fresh replay, not independent authorship of all proofs.
+
+Every module listed in this record and its all-constant audit was freshly compiled and individually kernel-replayed. Previously replayed native, floor, and Gamma-free source/object hashes were checked before and after; live frozen Gamma-free sources were also checked. Pinned Mathlib/package revisions, package manifest, and clean tracked source trees were checked before and after. Those authenticated upstream objects and Mathlib/Lean caches were reused; no complete upstream rebuild. The high-cap, moving-cap, row-equality, and source-nonsummability packets are not dependencies and were not rebuilt.

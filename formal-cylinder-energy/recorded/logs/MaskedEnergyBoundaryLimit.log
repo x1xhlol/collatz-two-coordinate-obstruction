@@ -1,0 +1,9 @@
+'CollatzCanonical.PeriodicCensusFloor.cylinderHeadL1Budget_le_linear' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.moving_barrier_noSmallAncestor_energy_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.masked_energy_sublinear_iff_smallAncestor_energy_sublinear' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

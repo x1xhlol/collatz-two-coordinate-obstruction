@@ -1,0 +1,20 @@
+Masked-energy periodicity equivalence additive replay certificate
+Status: PASS
+Reviewer scope: foundation_audit; author of MaskedEnergySufficiency and the replay driver; independent semantic reviewer of MaskedEnergyPeriodicityEquivalence. Root and sibling_comparison independently reviewed the sufficiency module; root independently reviewed the equivalence module and replay driver.
+Record: /home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/masked-energy-periodicity-equivalence-fresh-replay/replay-record.json
+Record SHA-256: 5390dac928513fa3f7c85f65c676b2d4e6fbdfb502a3de96768015f75d576768
+Driver SHA-256: 68a37f50fc44fc714908f5e021fc2e6fa39b9826c92e6473e384bd1c7001e1f3
+Fresh checks: two modules plus audit, each compilation and kernel replay successful.
+Coverage: 13 constants, all 10 explicit declarations, zero private constants; standard three axioms only.
+Warnings: none.
+
+- Both source modules and the generated whole-module audit were freshly compiled and each freshly replayed with leanchecker in an initially absent output directory.
+- All source hashes, generated audit source, compiled object hashes, compilation logs, kernel logs, declaration coverage, exit codes, and absence of warnings or nonstandard axioms were rechecked against the completed replay record.
+- Before and after replay, dependency source/object hashes were authenticated for native 1602 modules, floor 52, Gamma-free 5, masked-energy 4, sublinear-energy 6, and reciprocal-core 2; live source copies of all four recent packets also matched.
+- Pinned Lean and Mathlib revisions, dependency revisions, package manifest and clean tracked library source trees were checked. Upstream objects and standard library caches were reused; this is an additive replay, not a complete upstream rebuild.
+- The fresh module directory precedes authenticated upstream object directories on LEAN_PATH. The live experimental source directory is absent.
+- The reviewed equivalence identifies sublinear finite masked energy, and equivalently its small-ancestor residual along any diverging barrier, with universal eventual periodicity. It proves neither side without the other and permits multiple periodic cycles.
+
+Source hashes:
+MaskedEnergySufficiency: 1ee078169b31dbdd54736263072ac496fe6f12084eefad03b3037ef4eca3dbbc
+MaskedEnergyPeriodicityEquivalence: 592b15a8ac3903dd3b13cbdcefd6317af732c77a5b4e14bbdd6b1bed3cf8559d

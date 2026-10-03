@@ -1,0 +1,6 @@
+'CollatzCanonical.PeriodicCensusFloor.nonperiodic_cylinder_spine_energy_lower' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.universal_eventual_periodicity_of_sublinear_odd_nonperiodic_energy' depends on axioms: [propext,
+ choice,
+ Quot.sound]

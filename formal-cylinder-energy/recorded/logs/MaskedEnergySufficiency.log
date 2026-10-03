@@ -1,0 +1,6 @@
+'CollatzCanonical.PeriodicCensusFloor.positiveOddNonperiodic_energy_le_masked_energy' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.universal_eventual_periodicity_of_sublinear_masked_energy' depends on axioms: [propext,
+ choice,
+ Quot.sound]

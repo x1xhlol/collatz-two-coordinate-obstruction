@@ -1,0 +1,12 @@
+'CollatzCanonical.PeriodicCensusFloor.finite_odd_firstHit_coefficient_bound' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exactFirstHitCoefficient_le_density' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_odd_exact_firstHit_coefficient_bound' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_odd_masked_cylinder_bound' depends on axioms: [propext,
+ choice,
+ Quot.sound]

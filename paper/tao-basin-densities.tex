@@ -55,7 +55,9 @@ scales and Mazur's natural-counting transport. Weighted basin densities
 identify a canonical function with critical Green, Ces\`aro, and Abel
 limits of stationary Syracuse cylinder masses. The new density bound
 makes this function uniformly positive at all positive integers prime
-to three. We also prove total-variation limits for countable orbit
+to three. At odd targets, it also bounds first-hit coefficients uniformly
+over positive depths and yields a finite cylinder-energy criterion for
+eventual periodicity. We also prove total-variation limits for countable orbit
 labels, sharp exponential cylinder bounds, and a characterization of
 global sublinearity. The equivalent global condition and the exclusion
 of additional cycles remain open. The accompanying Lean proofs include
@@ -77,6 +79,10 @@ weighted predecessor construction and a bounded choice of inverse
 seed, this gives one constant \(c>0\) with \(d_N\ge c/N\).
 The canonical trace is consequently bounded below by one positive
 constant on all positive integers prime to three.
+Section~\ref{sec:ct-finite-energy} applies the reciprocal density bound
+to first-hit coefficients at odd targets and every positive depth. It then gives an
+exact eventual-periodicity criterion using a finite cylinder-energy sum
+and return checks only through the same depth.
 
 The numbered results have accompanying Lean proofs. The formal scope
 section distinguishes the preceding native development from the new
@@ -2043,6 +2049,276 @@ program proves Conjectures~1 and~3 and leaves condition
 Wirsching's particular proposed argument or to have made an exhaustive
 priority comparison.
 
+\section{First-hit coefficients and a finite energy criterion}
+\label{sec:ct-finite-energy}
+
+The reciprocal density bound also controls the mass at each positive
+first-hit depth. Set
+\[
+ b_*:=\frac{3}{128K_{\rm seed}P_0},\qquad L_*:=\frac{64}{b_*}.
+\]
+Thus \(D_q\ge b_*/q\) for every positive \(q\) prime to three.
+For an odd target \(N\), the condition \(k_N(q)=k\) means that
+for some shortcut time \(A\ge0\),
+\[
+ T^A(q)=N,\qquad T^i(q)\ne N\quad(0\le i<A),\qquad
+ \#\{0\le i<A:T^i(q)\ {\rm odd}\}=k.
+\]
+When \(q\) is odd, this is equivalent to \(S^k(q)=N\) and
+\(S^j(q)\ne N\) for \(0\le j<k\). Thus \(A\) counts shortcut
+steps and \(k\) counts the odd inputs before the first hit.
+For \(k\ge0\), define
+\begin{equation}\label{eq:ct-exact-first-hit-coefficient}
+ a_k(N):=N\sum_{\substack{q\in\mathcal B_N,\ q\ {\rm odd}\\
+                         k_N(q)=k}}\frac{w_N(q)}q.
+\end{equation}
+The sum is finite as a real number, since it is bounded by the
+first-hit partial sum \(F_N(k)\) used in
+\eqref{eq:ct-first-hit-Cesaro}. In particular,
+\(a_k(N)=F_N(k)-F_N(k-1)\) for \(k\ge1\).
+Each endpoint is counted only at its first visit, even when \(N\)
+is periodic.
+
+\begin{proposition}\label{prop:ct-first-hit-depth-bound}
+For every positive odd target \(N\) and every \(k\ge1\),
+\begin{equation}\label{eq:ct-first-hit-depth-bound}
+ a_k(N)\le L_*ND_N.
+\end{equation}
+This includes periodic targets. If
+\(S^j(N)\ne N\) for \(1\le j\le k\), then
+\begin{equation}\label{eq:ct-finite-return-cylinder-bound}
+ \rho_k(N)=a_k(N)\le L_*ND_N.
+\end{equation}
+\end{proposition}
+\begin{proof}
+We first construct a short nonperiodic predecessor of any odd
+\(y\) prime to three. Choose \(a\in\{1,2\}\) such that
+\(q=(2^ay-1)/3\) is a positive odd integer. The three integers
+\[
+ q,\qquad 4q+1,\qquad 16q+5
+\]
+all have Syracuse successor \(y\), with exponents
+\(a,a+2,a+4\le6\). Their residues modulo three are distinct,
+so two are prime to three. Two distinct periodic odd points cannot have the same Syracuse
+successor, since its predecessor on the cycle is unique. At least one
+of these two integers is therefore nonperiodic. Denote such a
+choice by \(s_y\).
+
+For a first-hit endpoint write \(c_N(q)=Nw_N(q)/q\).
+If \(S(q)=y\) and the first hit of \(N\) from \(q\) has positive
+depth, its first step gives
+\[
+ c_N(q)=3\,2^{-v_2(3q+1)}c_N(y).
+\]
+For fixed \(y\), distinct predecessors have distinct positive
+exponents. Hence every finite set \(Q_y\) of such predecessors
+satisfies
+\begin{equation}\label{eq:ct-first-hit-fan-comparison}
+ \sum_{q\in Q_y}c_N(q)\le3c_N(y)\le64c_N(s_y).
+\end{equation}
+Here \(s_y\) is also a first-hit endpoint at the same depth as
+the members of \(Q_y\). Indeed, \(y\) first reaches \(N\) one
+step earlier. If prepending \(s_y\) introduced an earlier visit
+to \(N\), then \(s_y\) would lie on a cycle, contrary to its
+choice.
+
+Let \(P\) be any finite set of nonperiodic odd endpoints, prime
+to three, whose first hits of \(N\) all have depth \(k\).
+Their full backward basins are pairwise disjoint. A common
+ancestor of two endpoints would make one reach the other.
+A positive Syracuse lag would then add to its first-hit depth,
+contradicting equality of the depths. The first-hit paths do
+concatenate here: visiting \(N\) before reaching a nonperiodic
+endpoint would force that endpoint to be periodic.
+The same observation gives, on \(\mathcal B_s\),
+\(w_N(x)=w_N(s)w_s(x)\). Finite addition of the weighted
+logarithmic means therefore yields
+\[
+ \sum_{s\in P}w_N(s)D_s\le D_N,\qquad
+ \sum_{s\in P}c_N(s)\le\frac{ND_N}{b_*}.
+\]
+Now take any finite set of depth-\(k\) first-hit endpoints and
+group them by their successor \(y\). Every such \(y\) is prime
+to three. The selected \(s_y\) are distinct, because their
+successors are distinct. Applying
+\eqref{eq:ct-first-hit-fan-comparison} and the last bound gives
+at most \(64ND_N/b_*\). Taking the supremum over the finite
+sets proves \eqref{eq:ct-first-hit-depth-bound}.
+
+Finally, a depth-\(k\) inverse word that visits \(N\) before its
+terminal step supplies a positive Syracuse return of length at
+most \(k\). Under the stated no-return condition every such
+word is a first-hit word. The inverse-word representation of
+\(\rho_k\) then gives \eqref{eq:ct-finite-return-cylinder-bound}.
+\end{proof}
+
+Write \(h_K(N)=\rho_K(N)/N\) for positive targets and put
+\[
+ \mathfrak B_K:=2+3K+(64/81)^K(1+2K).
+\]
+The next bound sums actual cylinder mass over different roots.
+
+\begin{lemma}\label{lem:ct-cylinder-head-mass}
+For every \(K\ge1\) and every finite set \(Q\) of positive odd
+integers at most \(3^K\),
+\begin{equation}\label{eq:ct-cylinder-head-mass}
+ \sum_{N\in Q}h_K(N)\le\mathfrak B_K\le5(K+1).
+\end{equation}
+\end{lemma}
+\begin{proof}
+In the inverse-word expansion at \(N\), retain the words of
+depth \(K\) whose total shortcut length \(A\) is less than
+\(6K\), and let \(G_K(N)\) be their contribution to \(h_K(N)\).
+The same geometric tail estimate used in
+Lemma~\ref{lem:ct-endpoint-tail} gives
+\[
+ 0\le G_K(N)\le h_K(N)
+       \le G_K(N)+\frac{(64/81)^K}{N}.
+\]
+A retained word with odd starting endpoint \(q\) has normalized
+weight \(3^K2^{-A}/N\). Its affine endpoint formula gives
+\[
+ q\le\frac{2^AN}{3^K}\le2^{6K},\qquad
+ \frac{3^K2^{-A}}N\le\frac1q.
+\]
+The map from the pair consisting of a target and a retained word
+to \(q\) is injective. The starting point determines its actual
+\(K\)-step Syracuse endpoint and the valuation word along that
+path. This argument also applies to periodic endpoints.
+Consequently one finite set \(R\) of distinct odd sources
+accounts for the entire retained sum:
+\[
+ \sum_{N\in Q}G_K(N)\le\sum_{q\in R}\frac1q
+   \le\sum_{\substack{1\le q\le2^{6K}\\q\ {\rm odd}}}\frac1q
+   \le2+3K.
+\]
+The last inequality follows from the elementary odd harmonic
+bound \(\sum_{q\le Y,\ q\ {\rm odd}}q^{-1}
+\le2+\tfrac12\log Y\) for \(Y\ge2\).
+Also \(\sum_{N\in Q}N^{-1}\le1+K\log3\le1+2K\).
+Summing the tail proves the first inequality in
+\eqref{eq:ct-cylinder-head-mass}. Since \((64/81)^K\le1\),
+the budget is at most \(3+5K\le5(K+1)\).
+\end{proof}
+
+For \(K\ge1\), define the finite return mask and its energy by
+\begin{align}
+ \mathcal F_K&:=\{N:1\le N<3^K,\ N\ {\rm odd},\
+                  S^j(N)\ne N\ (1\le j\le K)\},
+                 \label{eq:ct-finite-return-mask}\\
+ E_K&:=\sum_{N\in\mathcal F_K}h_K(N)^2.
+                 \label{eq:ct-masked-energy}
+\end{align}
+A cycle point belongs to this mask when its odd period exceeds
+\(K\). Thus membership does not require deciding whether an
+orbit ever returns. For \(M\ge1\), split the sum into
+\[
+ E_K=E_K^{\rm no}(M)+E_K^{\rm small}(M),
+\]
+where the first term uses targets with
+\(\mathcal B_N\cap[1,M]=\varnothing\), and the second uses the
+remaining targets. The second set lies on the forward orbits
+of the finitely many positive seeds at most \(M\).
+
+\begin{proposition}\label{prop:ct-masked-energy-cut}
+Choose one nonnegative boundary function \(\varepsilon(M)\to0\)
+as in Proposition~\ref{prop:ct-basin-boundary}. Uniformly for
+\(K\ge1\) and \(M\ge1\),
+\begin{align}
+ E_K&\le L_*\mathfrak B_K,\label{eq:ct-masked-energy-linear}\\
+ E_K^{\rm no}(M)&\le L_*\varepsilon(M)\mathfrak B_K,
+                    \label{eq:ct-no-ancestor-energy}\\
+ E_K&\le E_K^{\rm small}(M)+L_*\varepsilon(M)\mathfrak B_K.
+                    \label{eq:ct-energy-decomposition}
+\end{align}
+The constants are chosen before \(K\) and \(M\).
+\end{proposition}
+\begin{proof}
+On \(\mathcal F_K\), Proposition~\ref{prop:ct-first-hit-depth-bound}
+gives \(0\le h_K(N)\le L_*D_N\le L_*\).
+If the target has no ancestor at most \(M\), then
+\(D_N\le d_N\le\varepsilon(M)\).
+For nonnegative terms bounded by \(H\), their sum of squares
+is at most \(H\) times their sum. Apply
+Lemma~\ref{lem:ct-cylinder-head-mass} to the full mask and to
+its no-ancestor subset, with \(H=L_*\) and
+\(H=L_*\varepsilon(M)\), respectively. The exact partition
+then gives \eqref{eq:ct-energy-decomposition}.
+\end{proof}
+
+\begin{theorem}\label{thm:ct-masked-energy-periodicity}
+Every positive orbit is eventually periodic if and only if
+\begin{equation}\label{eq:ct-masked-energy-periodicity}
+ \frac{E_K}{K+1}\longrightarrow0.
+\end{equation}
+For every choice \(M_K\ge1\) with \(M_K\to\infty\),
+\begin{equation}\label{eq:ct-moving-ancestor-energy}
+ \frac{E_K^{\rm no}(M_K)}{K+1}\longrightarrow0,
+\end{equation}
+and \eqref{eq:ct-masked-energy-periodicity} is equivalent to
+\(E_K^{\rm small}(M_K)/(K+1)\to0\).
+\end{theorem}
+\begin{proof}
+Equation~\eqref{eq:ct-no-ancestor-energy} bounds the expression
+in \eqref{eq:ct-moving-ancestor-energy} by
+\(5L_*\varepsilon(M_K)\). The exact partition gives the
+equivalence of the two normalized energy limits.
+
+Suppose first that every positive orbit is eventually periodic.
+For each fixed \(M\), the set
+\[
+ \mathcal A_M:=\bigcup_{1\le q\le M}\{T^j(q):j\ge0\}
+\]
+is finite. Every summand of \(E_K^{\rm small}(M)\) is at most
+\(L_*^2\), so this energy is bounded by
+\(L_*^2|\mathcal A_M|\), independently of \(K\).
+Equation~\eqref{eq:ct-energy-decomposition} implies
+\[
+ \limsup_{K\to\infty}\frac{E_K}{K+1}
+       \le5L_*\varepsilon(M).
+\]
+Let \(M\to\infty\). The order of limits uses only finiteness
+of each fixed union \(\mathcal A_M\); it requires no uniform
+bound on the times at which its seeds enter cycles.
+
+Conversely, suppose there is a divergent orbit. After finitely
+many steps it contains an odd \(u\) prime to three. Put
+\(u_j=S^j(u)\). These values are distinct, and the reciprocal
+packing bound in Lemma~\ref{lem:ct-packing} gives
+\[
+ \omega:=\prod_{i\ge0}\frac{3u_i}{3u_i+1}>0.
+\]
+Appending the actual path from \(u\) to \(u_j\) to every
+inverse word ending at \(u\) gives, for \(0\le j<K\),
+\[
+ h_K(u_j)\ge
+ \left(\prod_{i<j}\frac{3u_i}{3u_i+1}\right)h_{K-j}(u)
+ \ge\omega h_{K-j}(u).
+\]
+The multiplier follows by multiplying the single-step identity
+\(3\,2^{-v_2(3u_i+1)}u_i/u_{i+1}=3u_i/(3u_i+1)\).
+All terms in the inverse-word sums are nonnegative.
+Also \(u_j+1\le(3/2)^j(u+1)\), so \(u_j<3^K\) for
+\(j<K\) once \(K\) is sufficiently large. Each \(u_j\) is
+nonperiodic and therefore belongs to \(\mathcal F_K\).
+It follows that
+\[
+ \frac{E_K}{K+1}\ge
+ \omega^2\frac{K}{K+1}
+       \left(\frac1K\sum_{\ell=1}^K h_\ell(u)\right)^2.
+\]
+By Theorem~\ref{thm:ct-canonical-identification}, the mean in
+parentheses tends to \(g(u)/u=\delta D_u>0\).
+This contradicts \eqref{eq:ct-masked-energy-periodicity}.
+\end{proof}
+
+The theorem gives a criterion involving only finitely many targets
+and finitely many return checks at each depth. The small-ancestor
+energy limit remains unproved. Eventual periodicity would still
+allow cycles other than the known cycle through one; this criterion
+does not exclude them.
+
+
 \section{Formal verification scope}
 
 The preceding native Lean 4.30.0-rc2 development gives checked declarations
@@ -2160,6 +2436,30 @@ Proposition~\ref{prop:ct-ordinary-inverse-linear-floor}. The eventual
 count with half the density coefficient is also checked. The ordinary
 and shortcut map definitions are related explicitly in this module.
 
+
+\subsection{The first-hit and finite-energy extension}
+
+The bundle \path{formal-cylinder-energy} contains 17 application
+modules for Section~\ref{sec:ct-finite-energy}. The exact first-hit
+and finite-mask definitions, bounds, and both eventual-periodicity
+implications are matched to compiled declarations in
+\path{paper/basin-lean-claims.md}. The equivalent energy-decay
+conditions remain hypotheses.
+
+All 17 modules and the generated whole-module audit were freshly
+compiled and individually replayed with \texttt{leanchecker}.
+The audit covers all 193 compiled constants, including all 118 explicit
+declarations, with no private constants. Only \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound} occur.
+
+The exact reused closure contains 40 periodic-census modules and
+1,566 native modules. Their source and object hashes, imports, and
+recursive dependency fingerprints were authenticated before and
+after the build. The Lean version, library source revisions, and
+clean tracked source trees were also checked. Upstream objects and
+Mathlib/Lean caches were reused; this
+was not a full upstream rebuild. Source hashes, commands, and results
+are in \path{formal-cylinder-energy/recorded/replay-record.json}.
 
 \section*{Acknowledgments}
 The main first-passage input and stationary Syracuse law are due to

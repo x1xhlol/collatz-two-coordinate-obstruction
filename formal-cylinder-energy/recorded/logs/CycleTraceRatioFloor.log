@@ -1,0 +1,6 @@
+'CollatzCanonical.PeriodicCensusFloor.harmonic_cycle_linear_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_uniform_cyclic_trace_ratio_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

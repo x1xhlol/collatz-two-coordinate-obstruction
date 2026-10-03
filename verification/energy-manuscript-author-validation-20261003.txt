@@ -1,0 +1,25 @@
+Final energy-manuscript validation: PASS
+3 October 2026. Validator: sibling_comparison.
+
+The final isolated source, PDF and claim map are pinned in the accompanying JSON.
+All 24 earlier statement blocks, proof blocks and claim-map rows are byte-identical.
+Four new numbered results have full proofs and exact compiled endpoints.
+The independently reviewed mathematical section is unchanged. All 40 new cited
+endpoint names were found in the frozen portable source closure.
+
+The final PDF has 31 pages, 16713 text boxes and no boxes outside page bounds.
+There are 101 unique labels, 133 references and 14 bibliography entries; no
+unresolved citations/references or TeX warnings remain. Author: Lucas Valbuena.
+Pages 1 and 25-30 were regenerated from this exact final PDF. The new mathematics
+and final verification page were visually reviewed; all review images are pinned.
+
+Portable replay record 6237b76e79ac588e19cfcb1be25ae09460e4f36c107fe22331b9e674d9d59786
+was directly inspected: 17 applications plus audit, 36 successful compile/kernel
+commands, 193 compiled constants, all 118 explicit declarations, zero private
+constants, standard axioms only. Authenticated upstream reuse: 40 periodic-census
+and 1,566 native modules. The Lean version, library source revisions, package
+manifest and clean tracked sources were checked; library caches were reused.
+Individual library binary authentication and a full upstream rebuild are not claimed.
+
+No equivalent energy decay or eventual-periodicity condition is asserted true.
+Additional positive cycles remain unexcluded. No growing-cap theorem was added.

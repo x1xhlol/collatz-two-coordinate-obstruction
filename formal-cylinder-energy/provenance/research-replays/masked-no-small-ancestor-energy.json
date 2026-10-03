@@ -1,0 +1,437 @@
+{
+  "status": "PASS",
+  "modules": [
+    "OddDyadicReciprocalBudget",
+    "CylinderGrowthHeadTransport",
+    "MaskedCylinderNoSmallAncestorEnergy",
+    "MaskedEnergyBoundaryLimit"
+  ],
+  "results": {
+    "OddDyadicReciprocalBudget": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.78877635486424,
+      "source_sha256": "eb28fe59d36ea7be8834566d804863cbf3c6df06344c7ed4612502746544c2ff",
+      "object_sha256": "05346a2239834a30360d19edd2c5e002bffbe6cc24b2641cc091990f37b2038f",
+      "compile_log_sha256": "9b5b15a0d256f8c2e52f80a074cd1318d587ea56fd5371741359b1f9c6efef60",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.393250566208735,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "CylinderGrowthHeadTransport": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.104349651141092,
+      "source_sha256": "5dd5d69893e6b5d493a084ea273466dd59bceafeb222914a31910aa7c0782f9e",
+      "object_sha256": "3b7c8403569ab376ce8d056c282282e5ef1b6b87f1becca54a3f9584165096c5",
+      "compile_log_sha256": "b8100546a403e2ceefd9ba683228fbf5947cca68ca3509978accc26cfeb67312",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.959465914173052,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "MaskedCylinderNoSmallAncestorEnergy": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.986907375976443,
+      "source_sha256": "906740371ec4d2c803b694328bccfc3332c05a88a7bf5bf0e105eb446bcf30f1",
+      "object_sha256": "0620cc6fc9dc83b1684357df7233505dbb6897eca936c415f746bfe069f203be",
+      "compile_log_sha256": "4a150c7202a3a73da7d8fac953ad9e34d5ac223764694d448f00580b369d458f",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.257878476055339,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "MaskedEnergyBoundaryLimit": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.139421012951061,
+      "source_sha256": "bc2feda728f562220efa3946a8c7cb26e77abb0238fab1be25c186f0908675e8",
+      "object_sha256": "985ec5d08b92904aae83bcaaa6d21948628d32e7a2291af390653e8c53b9669e",
+      "compile_log_sha256": "1faffae278e700b9cb1c66ac6acb948504b1a186064101a3d1c597c83327e347",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.346686499891803,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "MaskedNoSmallAncestorEnergyAudit": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.170891270972788,
+      "source_sha256": "3be2325e73342110b0bc87d6814afdd4d585085dbfc00eaf32b531bcef00175d",
+      "object_sha256": "416873678cd20dfb6d39415cd048605982157756f7546ef06b7250410a9d6bd2",
+      "compile_log_sha256": "570fee6cfd3cfcb12078ed33c4abb8d17225f46898bc2129e68721cb88f69936",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.2422698410227895,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "source_hashes": {
+    "OddDyadicReciprocalBudget": "eb28fe59d36ea7be8834566d804863cbf3c6df06344c7ed4612502746544c2ff",
+    "CylinderGrowthHeadTransport": "5dd5d69893e6b5d493a084ea273466dd59bceafeb222914a31910aa7c0782f9e",
+    "MaskedCylinderNoSmallAncestorEnergy": "906740371ec4d2c803b694328bccfc3332c05a88a7bf5bf0e105eb446bcf30f1",
+    "MaskedEnergyBoundaryLimit": "bc2feda728f562220efa3946a8c7cb26e77abb0238fab1be25c186f0908675e8"
+  },
+  "declarations": {
+    "CollatzCanonical.PeriodicCensusFloor.finite_ternary_reciprocal_budget": {
+      "module": "OddDyadicReciprocalBudget",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.finite_odd_reciprocal_le_odd_harmonic_prefix._proof_1_1": {
+      "module": "OddDyadicReciprocalBudget",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.finite_odd_reciprocal_le_odd_harmonic_prefix": {
+      "module": "OddDyadicReciprocalBudget",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.finite_reciprocal_le_harmonic_prefix._proof_1_1": {
+      "module": "OddDyadicReciprocalBudget",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.finite_odd_dyadic_reciprocal_budget": {
+      "module": "OddDyadicReciprocalBudget",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.finite_ternary_reciprocal_budget._proof_1_1": {
+      "module": "OddDyadicReciprocalBudget",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.finite_reciprocal_le_harmonic_prefix": {
+      "module": "OddDyadicReciprocalBudget",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.growthHead_endpoint_bound": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.valid_word_normalized_weight_le_reciprocal": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderGrowthHead._proof_2": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.finite_cylinderGrowthHead_transport": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.valid_odd_target_word_endpoint_unique": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinder_le_growthHead_add_tail": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderGrowthHead._proof_1": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderGrowthHead_nonneg": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.odd_endpoint_time_eq_of_oddCount_eq": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderGrowthHead_le_cylinder": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderGrowthHead.eq_1": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderGrowthHead": {
+      "module": "CylinderGrowthHeadTransport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.maskedNoSmallAncestorEnergy": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderHeadL1Budget._proof_1": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderHeadL1Budget._proof_4": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderHeadL1Budget": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.exists_uniform_noSmallAncestor_masked_energy_bound": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.exists_uniform_maskedEnergy_decomposition": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.finite_odd_cylinderHead_energy_of_amplitude": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.maskedOddCylinderHead": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.finite_odd_cylinderHead_mass_bound": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.maskedSmallAncestorEnergy": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.exists_uniform_masked_cylinderHead_energy_bound": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.maskedCylinderHeadEnergy": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderHeadL1Budget._proof_2": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderHeadL1Budget._proof_3": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.maskedCylinderHeadEnergy_split": {
+      "module": "MaskedCylinderNoSmallAncestorEnergy",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.cylinderHeadL1Budget_le_linear": {
+      "module": "MaskedEnergyBoundaryLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.maskedNoSmallAncestorEnergy_nonneg": {
+      "module": "MaskedEnergyBoundaryLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.masked_energy_sublinear_iff_smallAncestor_energy_sublinear": {
+      "module": "MaskedEnergyBoundaryLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.maskedSmallAncestorEnergy_nonneg": {
+      "module": "MaskedEnergyBoundaryLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.PeriodicCensusFloor.moving_barrier_noSmallAncestor_energy_tendsto_zero": {
+      "module": "MaskedEnergyBoundaryLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "audited_constant_count": 39,
+  "audited_private_constant_count": 0,
+  "record_pins": {
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/gamma-free-first-hit-coefficient-fresh-replay/replay-record.json": "ae38aa978e2a61e4f651c6c9de329b251fe7824444ff2f38fbbfcc729d61f4af",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/replay-manifest.json": "efc8bc1226fb158341a4626eeafaf5c97b9284da1a2d137de38b7db035cbb230",
+    "/home/ubuntu/collatz-native-basin-notice-build/replay-record.json": "260930d45985dca3d8b7abe88fff1c8c73aa154893d5fa1476b5c76b0b70a79c",
+    "/home/ubuntu/collatz-periodic-census-portable-replay-oct3/replay-record.json": "0d442ab3f21fe5ff9ec8e30a20e322a5fe058799d089f8e335d4744e1134a37c"
+  },
+  "authenticated_native_source_and_object_count": 1602,
+  "authenticated_floor_source_and_object_count": 52,
+  "authenticated_gamma_source_and_object_count": 5,
+  "lean_path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/masked-no-small-ancestor-energy-fresh-replay/modules:/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-periodic-census-floor-oct3/gamma-free-first-hit-coefficient-fresh-replay/modules:/home/ubuntu/collatz-periodic-census-portable-replay-oct3/modules:/home/ubuntu/collatz-native-basin-notice-build/modules:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/elan/toolchains/leanprover--lean4---v4.30.0-rc2/lib/lean",
+  "lean_version": "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "mathlib_revision": "5450b53e5ddc75d46418fabb605edbf36bd0beb6",
+  "dependency_revisions": {
+    "Cli": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "Qq": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809",
+    "aesop": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+    "batteries": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+    "importGraph": "cdab3938ccabbdb044be6896e251b5814bec932e",
+    "plausible": "86210d4ad1b08b086d0bd638637a75246523dbb8",
+    "proofwidgets": "2db6054a44326f8c0230ee0570e2ddb894816511"
+  },
+  "mathlib_lake_manifest_sha256": "71f9e393a23807b33a5369e8f45888debe0cb79e872188b8dfbe308175e6d90c",
+  "script_sha256": "36252ee363e284e40a5cb89b96c2938faf6519de2afc465e20189653a8080349",
+  "scope": "Every module listed in this record and its all-constant audit was freshly compiled and individually kernel-replayed. Previously replayed native, floor, and Gamma-free source/object hashes were checked before and after; live frozen Gamma-free sources were also checked. Pinned Mathlib/package revisions, package manifest, and clean tracked source trees were checked before and after. Those authenticated upstream objects and Mathlib/Lean caches were reused; no complete upstream rebuild. The high-cap, moving-cap, row-equality, and source-nonsummability packets are not dependencies and were not rebuilt."
+}

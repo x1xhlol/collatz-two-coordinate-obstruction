@@ -1,0 +1,6 @@
+'CollatzCanonical.PeriodicCensusFloor.finite_odd_dyadic_reciprocal_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.finite_ternary_reciprocal_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
