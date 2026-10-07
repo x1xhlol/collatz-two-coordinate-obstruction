@@ -1,0 +1,18 @@
+Source licenses and attribution
+
+The 8 supplied Lean modules, local verification scripts and documentation
+retain the repository's MIT license: Copyright (c) 2026 Lucas Valbuena.
+The exact license is LICENSE-MIT. Frozen Lean source bytes are unchanged.
+The verifier adapts the reviewed public raw-occupation and cylinder-energy
+verifiers; the exact-byte source-inventory helper is retained unchanged.
+
+The native basin and raw-occupation bundles are external prerequisites,
+not duplicated or relicensed here. They retain their original notices,
+source-origin records, and licenses, including the Apache-2.0 Gao work by
+Omar Javier Said Duran and predecessor-derived material of Lech Mazur.
+Those upstream results are used through proved interfaces and authenticated
+objects; this package does not describe them as new local work.
+
+Lean, Mathlib and their packages retain their own licenses. Their sources
+and caches are external prerequisites. No compiled caches are included.
+Research records and reviews retain their original authorship and scope.

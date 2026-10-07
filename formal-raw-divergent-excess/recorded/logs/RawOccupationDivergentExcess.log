@@ -1,0 +1,12 @@
+'CollatzCanonical.RawOccupation.DivergentExcess.divergentTraceExcess_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.DivergentExcess.divergentTraceExcess_pos_of_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.DivergentExcess.actual_raw_occupation_divergent_eventual_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.DivergentExcess.actual_raw_occupation_strict_baseline_excess_of_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

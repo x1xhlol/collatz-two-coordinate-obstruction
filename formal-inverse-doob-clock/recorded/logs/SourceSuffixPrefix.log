@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.suffix_hit_clock' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.endpoint_eq_of_common_ancestor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.eq_of_common_ancestor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

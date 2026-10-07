@@ -1,0 +1,46 @@
+Independent semantic review: actual inverse Doob base
+3 October 2026. Result: PASS for both frozen modules below.
+
+I read both complete source files, their empty successful compilation
+logs, the native predecessor classification, actual Green value definition
+and harmonicity, unit-support criterion, fixed-basin boundary theorem,
+and the Mathlib trajectory constructor and history-successor identity.
+
+ActualOddInverseRow uses the full Green potential delta*Gamma(n)*n*D_n.
+Its index a counts the extra dyadic steps, so the inverse Syracuse
+valuation is a+1 and the branch coefficient is 3/2^(a+1). The guarded
+endpoint is exactly (2^(a+1)*n-1)/3. Nonnegativity follows from the native
+positive endpoint classification; no invalid branch is assigned mass.
+The finite dyadic harmonic telescope is exact. The dyadic endpoint tends
+to infinity while staying in the fixed basin of n; the native ratio
+boundary therefore sends its rescaled remainder to zero. This proves
+HasSum of all branch masses equal to the actual potential, with no
+unproved interchange or missing mass at infinite dyadic depth.
+
+ActualInverseDoobLaw normalizes these summable nonnegative real masses
+as an actual PMF. Its support proof excludes invalid residue branches,
+zero states, even endpoints, and multiples of three. Mapping the exponent
+PMF to endpoints is valid without an injectivity assumption; this module
+does not yet assert a collision-free endpoint atom formula. Invalid
+starting states are assigned the stated pure fallback, while all positive
+unit states use the actual normalized row.
+
+The transition and history kernels are measurable on the countable
+state spaces, probability kernels at every input, and depend on the
+current endpoint exactly as defined. Mathlib's trajMeasure applied to
+dirac n gives a genuine path probability. The final compProd identity
+is the imported finite-history successor property for precisely these
+kernels; no conditional-independence assertion beyond that API is assumed.
+
+Scope: the potential includes the periodic Green cycle factor. Therefore
+this construction at a periodic root is the ordinary full-trace Doob law,
+not yet the killed first-hit law. For nonperiodic roots and descendants
+it reduces to the required density potential after the separate native
+cycle-factor simplification. These modules alone do not establish the
+nonperiodic source-cylinder formula, source total-variation limit, or the
+almost-sure height clock. No fresh kernel replay or complete constant/axiom
+audit is claimed by this semantic certificate.
+
+Reviewed source pins:
+ActualOddInverseRow.lean 6cbd562e86a3122eb6ed738ae7475b23516cc3ef88b534086dce52ec1945b31d
+ActualInverseDoobLaw.lean 2eeefc2815ef8c8c4ad895e0142b70b5bc768d3ebd02199b6cd7780a29fff74f

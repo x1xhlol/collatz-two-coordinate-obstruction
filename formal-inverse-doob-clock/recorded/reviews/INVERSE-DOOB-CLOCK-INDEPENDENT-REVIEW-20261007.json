@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "date": "2026-10-07",
+  "reviewer": "Independent delegated source and replay reviewer /root/clock_review_oct7",
+  "review_type": "Independent semantic review of every one of the 26 pinned source modules, replay-driver review, and independent current-file pin/output audit. This is an agent review, not an independent human review or a second full compilation/kernel replay.",
+  "root_validation_used_as_evidence": false,
+  "endpoint": "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_inverse_height_clock_ae",
+  "hypotheses": [
+    "n > 0",
+    "n % 3 != 0",
+    "n % 2 = 1",
+    "Nonperiodic n: there is no r > 0 such that shortcut iterate r n = n"
+  ],
+  "conclusion": "For pathLaw n-almost every actual inverse path x, Real.log (x k) / k tends to Real.log (4/3) as k tends to infinity.",
+  "nonperiodic_scope": "The root is not itself periodic. It may later enter a cycle. No divergent-orbit assumption is present.",
+  "fresh_source_module_count": 26,
+  "source_lines_read": 2516,
+  "replayed_units_including_audit": 27,
+  "recorded_successful_compile_and_kernel_commands": 54,
+  "all_compiled_constants_audited": 307,
+  "named_source_declarations_audited": 195,
+  "private_compiled_constants": 0,
+  "private_source_declarations": 0,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "replay_record_sha256": "a34b0a931ecdac7f5f0956930ccb0b89fbecdb81bc6899cfa8e683cbe688b478",
+  "driver_sha256": "939381f9f74a6daca5af7922ffdbfcb8cbd9a778e78e5093b6d135898ad0b6c1",
+  "source_manifest_sha256": "5486a823e7cbc75885546c19d2cb2183d4d2bd35916f3f58105402b58adc7fcb",
+  "audit_helpers_sha256": "7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3",
+  "all_constant_audit_source_sha256": "e540f9c9bfcebc70db1eda825d969a464e82e30d31c25adbc4a8bd927d9deaed",
+  "all_constant_audit_log_sha256": "ce4e2deb3db38afd7cce10383285571465c0753560360493f07278a0a2e2624a",
+  "endpoint_object_sha256": "e03cd80ba6dcea21ae405e0f96732dceb7daa300d70d1093086a736c270499f9",
+  "independent_pin_audit_script": "independent-review-20261007/independent_pin_audit.py",
+  "independent_pin_audit_script_sha256": "4941b8b38cd359a4ac9eac1343af42e7c801d9495b185c1b77bd6b3c4fb90a80",
+  "independent_pin_audit_result": "independent-review-20261007/independent-pin-audit-result.json",
+  "independent_pin_audit_result_sha256": "656ba50780a4afe9d4447fb11701cada6a8c08967d438cac61df49169089cb64",
+  "independently_rehashed_unique_files": 3433,
+  "source_hashes": {
+    "ActualOddInverseRow": "6cbd562e86a3122eb6ed738ae7475b23516cc3ef88b534086dce52ec1945b31d",
+    "ActualInverseDoobLaw": "2eeefc2815ef8c8c4ad895e0142b70b5bc768d3ebd02199b6cd7780a29fff74f",
+    "NonperiodicCylinderSource": "1d6df8b1d3e73ecf8aa223066c6a574252ea1d0582aef88083fcf4538c579c7d",
+    "InverseBranchCylinder": "39801276b9fe4575727adef2cbb24afe87fc55e191ab76be55d3b3a504b8da23",
+    "FinitePathCylinder": "b15ba11d3738c7aa5a887dd454ca95f76a1d68e97fb802c5e1de42a2fffda310",
+    "ActualTransitionAtom": "b843925064ab1c529159b692ec39adb55c20577ae68a8c8bb295af0d57eecd27",
+    "NonperiodicFiniteCylinder": "7302c98a17d70869ed1d0e2e2f77d9e19a22d8e991606682ace47cc95634d782",
+    "ActualPathSupport": "473a3705a7c6cea6bdaa118a362e6be3b4a045881a540bced2fd8b5361917f41",
+    "FinitePrefixIndex": "102354a9eb7663dab187ebd92a98fc247e0912f40d397f15a722e2ad3423ff60",
+    "CountableScheffe": "dc009db4644f77012ab08d0b36d37f74b5e2986ee920b65f4226f38f1be427e5",
+    "CountableMassSqueeze": "c4dfac497e48c0f489fe18836e95461d9a4ff20e701b17aa65a77c0e0e10be14",
+    "FinitePrefixSourceMass": "1ac25bf1cc69c839b2195ae4778ec769214ef63ec673bab420153d6026ee35f3",
+    "SourceSuffixPrefix": "0d36358b037c1cd7a0e691401eed2d56dbfe6b34ef5038dceaa2b1c77cab379a",
+    "FinitePrefixSourceBound": "a3febecd3f2bfaf29c696cd997eace4e02aa41b77658fdc47878417c9e4d9ddf",
+    "ActualFinitePrefixTV": "8a57f34dbe70a2a1334010b41a5d1455bc99e0c8ad956d36092f4dd6fbe4d853",
+    "ActualPrefixEvents": "59a30965d76bb10d54f0325dcb81218761cf6d13dea044f33c5e9c82dc701999",
+    "LastVisitGeometry": "7a2a23d3c41756df89710aebf22139e997c39720306d80667efcf873894dc249",
+    "ActualLastVisitLaw": "303201a60adc8ee185b47617b278917ef62ae5df45caae65f3c6c7d4fe3b446c",
+    "InverseClockGeometry": "59d2e21cc080d13d3b25ebe4495b60842c34156207875fa7224a9919a9fd341e",
+    "ActualInversePathGrowth": "e4f5285c219f58b8c3258e7d2457e94c35380619bad304d92c4c6bfc35234901",
+    "InverseClockRefinement": "1f9dd6c1da7a1e7afb04f12209ed23176f205e1e63f15392aab0aaea3b05f496",
+    "LadderClockLimit": "74a0f51c3a03aa4307711998a9e489ad1ea0ce39a3cd9f9fe96c19ab3aa04c5b",
+    "FiniteLadderClockEvent": "b9a958c427709f56da640f3a19c82c5cb7f0e01ff321a81602aced10630ac0cf",
+    "SourceLastVisitClock": "1e8b68e74af065effed5f6ac6c26de8df4c6adb438f3f5978764cea675692a9e",
+    "ActualLadderClock": "61fe00f6fcd76bb6d5070b9938fd32d7de72f2f91d26909a4fec1eff6f0f46ea",
+    "ActualInverseHeightClock": "47f870a0d3b377a13d3ec50fc03c94e02ea78d01f04db60e31413271ec0e381c"
+  },
+  "semantic_findings": [
+    {
+      "location": "ActualOddInverseRow.lean:11; ActualInverseDoobLaw.lean:11",
+      "finding": "The potential is the actual critical Green density h(n)=delta*greenCycleFactor(1,n)*n*actualFirstHitDensity(n). For a guarded inverse branch q=(2^(a+1)*n-1)/3, its unnormalized mass is 3*h(q)/2^(a+1). The dyadic harmonic telescope has a proved vanishing remainder, so division by the strictly positive actual h(n) produces a normalized PMF."
+    },
+    {
+      "location": "ActualInverseDoobLaw.lean:41",
+      "finding": "transitionPMF maps this exponent PMF to the actual integer predecessor. Positive unit states remain positive odd units. The fallback pure measure at invalid states is never used from the endpoint theorem's roots. pathLaw is the Ionescu-Tulcea trajectory law with Dirac initial state and the actual transition kernel; it is a probability measure."
+    },
+    {
+      "location": "NonperiodicCylinderSource.lean:11; InverseBranchCylinder.lean:24; NonperiodicFiniteCylinder.lean:32",
+      "finding": "No positive root return makes every successful hit of that root unique and every inverse ancestor nonperiodic. Only under that hypothesis is the cycle factor removed. The actual finite-cylinder probability telescopes to firstHitWeight(n,x_k)*actualFirstHitDensity(x_k)/actualFirstHitDensity(n)."
+    },
+    {
+      "location": "FinitePrefixSourceMass.lean:44; FinitePrefixSourceBound.lean:23; ActualFinitePrefixTV.lean:29",
+      "finding": "The source is the actual first-hit correction weight on odd integers, with logarithmic 1/q weights and normalization 2/(actualFirstHitDensity(n)*t). The factor 2 is required because the odd logarithmic mean is actualFirstHitDensity(n)/2. Disjoint fixed-depth source supports, the full-source upper bound tending to 1, and countable mass squeeze establish fixed-prefix total variation. No uniformity in a growing prefix length is asserted or used."
+    },
+    {
+      "location": "LastVisitGeometry.lean:52; FiniteLadderClockEvent.lean:14",
+      "finding": "The last-visit depth bound is a maximum over the finite set of odd successful endpoints below the barrier. It requires no termination claim for all bounded integers. Every barrier last-visit variable, and every finite set of ladder-clock inequalities, is determined by a fixed finite inverse prefix."
+    },
+    {
+      "location": "SourceLastVisitClock.lean:98; SourceLastVisitClock.lean:137",
+      "finding": "The source-to-last-visit identity is exact: actualBarrierTime(R,q)+lastVisitIndex(n,floor(R),x)=firstHitOddDepth(n,q). An allegedly earlier source passage below R yields a successful endpoint below R, whose remaining depth lies within the retained prefix; this contradicts maximality of the inverse last visit. Thus no early low source visit is omitted."
+    },
+    {
+      "location": "ActualLadderClock.lean:12; FiniteLadderClockEvent.lean:72",
+      "finding": "A single fixedLadderGoodEvent witness controls every retained lower stage. Combining the exact passage/last-visit identity with the lower-segment clock bound gives all finite ladder inequalities simultaneously. The failure envelope is 2*clockLadderFailureEnvelope(C,c,M)*taoAlpha/actualFirstHitDensity(n), independent of the number I of retained stages. It is not multiplied by I."
+    },
+    {
+      "location": "LadderClockLimit.lean:103; LadderClockLimit.lean:128; ActualLadderClock.lean:62",
+      "finding": "The complements of finite clock events form an increasing union, so the same failure bound passes to the limiting clock event. Shifting the bottom along a fixed reference grid preserves that limiting event exactly. Sending the shifted bottom to infinity sends the explicit failure envelope to zero. Each finite bottom remainder vanishes after normalization at that fixed bottom; no exchange of the bottom and height limits is needed."
+    },
+    {
+      "location": "InverseClockRefinement.lean:25; InverseClockRefinement.lean:68",
+      "finding": "For beta_r=taoAlpha^(1/(r+1)), finitely many reference grids interlace into the beta_r grid, and beta_r tends to 1. The proof intersects only countably many almost-sure events indexed by natural r and a finite residue class; it does not claim an uncountable simultaneous intersection over all real bases."
+    },
+    {
+      "location": "ActualInversePathGrowth.lean:9; InverseClockGeometry.lean:195; ActualInverseHeightClock.lean:14",
+      "finding": "The actual inverse branches give log(x_k+1) <= log(x_t+1)+log(3/2)*(t-k). Exact last-visit barriers and this deterministic bound squeeze the height rate between expressions converging to clockDrift. The endpoint is precisely the almost-sure height limit log(4/3) for the stated actual law."
+    }
+  ],
+  "driver_findings": [
+    "The reviewed driver pins the source manifest, helper, native manifest/record, raw manifest/record, Lean revision, Mathlib revision, dependency revisions, and package manifest. It authenticates frozen dependencies before and after compilation.",
+    "The output directory must be absent before replay. All 26 canonical sources are copied and hash-checked; imports are restricted to earlier pinned modules, authenticated upstream modules, and standard package roots. LEAN_PATH starts with the fresh clock objects, then frozen raw and native objects, and then the pinned library cache paths. The live clock source/object directory is absent.",
+    "Every source module and the generated all-constant audit unit is compiled and passed to leanchecker separately. Both return codes are required to be zero. Sources, objects, compile logs, and kernel logs are rehashed before the PASS record is emitted.",
+    "The generated auditor traverses every constant name in every requested compiled module, including generated/private constants, and collectAxioms audits transitive dependencies. The independent checker parsed all 307 audit lines and matched them exactly to the record; all 195 named source declarations are covered and every axiom is standard.",
+    "The independent checker rehashed all 27 clock units' four outputs, all 1602 frozen native source/object pairs, all 17 frozen raw replay units' four outputs, the 16 raw canonical sources, all record pins, the drivers/helpers, and the package manifest. It also checked the exact file sets, diagnostics, inventories, revisions, and clean tracked package sources. All checks passed."
+  ],
+  "upstream_reuse": "Accepted authenticated frozen native and raw replay artifacts plus Lean/Mathlib/package caches. This review did not rebuild the 1602-module upstream dependency tree or independently review all of its proofs; selected imported definitions and normalization/clock interfaces were inspected. The checked endpoint's transitive axiom list is standard.",
+  "not_proved": [
+    "Uniform integrability of normalized physical-cutoff occupation",
+    "Convergence of expected physical-cutoff occupation",
+    "A raw occupation upper bound or capped saturation theorem",
+    "A periodic killed-law height-clock theorem",
+    "Every forward orbit is eventually periodic",
+    "No additional positive cycles exist",
+    "The Collatz conjecture"
+  ],
+  "publication_assessment": "This is a substantial completed additive theorem packet, suitable for publication with its exact probabilistic statement and dependency/replay scope. The review does not certify external novelty or replace human peer review. Public packaging should preserve source and evidence pins and supply the project's portable replay entrypoint, because the reviewed local driver intentionally contains absolute workspace paths.",
+  "failures_found": []
+}

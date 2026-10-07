@@ -1,0 +1,42 @@
+Independent semantic review: inverse height clock geometry
+3 October 2026. Result: PASS for all five frozen theorem statements and proofs.
+
+The bracket lemma correctly derives k/(B*beta)<=L<=k/A from the two
+clock inequalities and s<k<=t. The lower height bound then follows from
+log(Y_k)>=L. The upper bound uses Y_t+1<=2 exp(beta L), the backward
+log-growth inequality, and positivity of beta*(1+gB). Its coefficient
+beta*(1+gB)/A-g and the residual log(2)/k are exact. Natural subtraction
+is converted to real subtraction only under k<=t; every division uses
+the stated positive denominator. The zero-state branch of log monotonicity
+is handled explicitly and introduces no additional orbit assumption.
+
+The uniform-clock theorem uses the first grid index whose clock is at
+least k. Such an index exists because A*base*beta^j diverges. Its preceding
+index has clock less than k by minimality. No unstated monotonicity of
+sigma is needed. The cut and after-cut hypotheses give the two requisite
+height bounds, and the exponent-grid shift is exactly beta times the
+preceding level.
+
+The eventual-clock theorem shifts to a fixed valid grid tail and absorbs
+its offset into the positive new base. The clock-limit theorem chooses
+positive A=q-1/m and B=q+1/m after m is sufficiently large; the resulting
+lower/upper coefficients converge to the displayed band, and log(2)/k
+vanishes. The final refining-grid theorem chooses one sufficiently fine
+grid for each fixed open neighborhood of 1/q and invokes that band.
+Only beta_r>1 and beta_r->1 are required, not monotone refinement or a
+uniform convergence rate across grids. Each base may depend on its grid.
+
+The final conclusion is exactly log(Y_k)/k->1/q under the supplied grid
+last-clock limits, cut/after-cut statements, and backward-growth condition.
+These are conditional deterministic geometry theorems. This file alone
+does not prove the actual inverse path law, the required ladder-clock
+transfer, or an almost-sure event on which the hypotheses hold, and it
+makes no expectation or uniform-integrability deduction.
+
+I read the full source and the successful compilation/axiom log. Each of
+the five printed theorem endpoints uses only propext, Classical.choice,
+and Quot.sound; the log contains no warning or error. This certificate
+is an independent semantic/log review, not an independent kernel replay.
+
+Source SHA256: 59d2e21cc080d13d3b25ebe4495b60842c34156207875fa7224a9919a9fd341e
+Compilation log SHA256: 675662e1bc42f42052667cd8b899bbf82d748e2b3ffccfaa73f8babd78a901dc

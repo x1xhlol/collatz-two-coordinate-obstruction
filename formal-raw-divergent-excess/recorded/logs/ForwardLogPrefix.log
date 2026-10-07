@@ -1,0 +1,6 @@
+'CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

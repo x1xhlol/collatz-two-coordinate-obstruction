@@ -1,0 +1,13 @@
+'CollatzCanonical.RawOccupation.syracuse_injective_of_shortcut_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.forward_firstHitWeight_ge_wholeOrbit_inverse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.oddForwardPrefix_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.RawOccupation.oddForwardPrefix_mem_properties' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.oddForwardPrefix_weight_sum_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

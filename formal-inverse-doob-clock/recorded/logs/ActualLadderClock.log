@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.InverseDoob.validPrefix_finiteLadderClockEvent_of_source_good' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.actual_finite_ladder_clock_failure_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.actual_reference_ladder_clock_ae' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

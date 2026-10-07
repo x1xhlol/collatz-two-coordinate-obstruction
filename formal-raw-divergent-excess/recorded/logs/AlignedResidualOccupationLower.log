@@ -1,0 +1,3 @@
+'CollatzCanonical.RawOccupation.DivergentExcess.exists_aligned_residual_occupation_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

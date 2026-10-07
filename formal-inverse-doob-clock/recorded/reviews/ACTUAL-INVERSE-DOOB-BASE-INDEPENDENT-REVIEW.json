@@ -1,0 +1,23 @@
+{
+  "status": "FULL INDEPENDENT SEMANTIC REVIEW PASS",
+  "review_sha256": "3b67803f63850504da14e976ca3f1024b8c5a57d5d810055e528873ac758ffb2",
+  "source_hashes": {
+    "ActualOddInverseRow.lean": "6cbd562e86a3122eb6ed738ae7475b23516cc3ef88b534086dce52ec1945b31d",
+    "ActualInverseDoobLaw.lean": "2eeefc2815ef8c8c4ad895e0142b70b5bc768d3ebd02199b6cd7780a29fff74f"
+  },
+  "inspected_input_hashes": {
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/ActualInverseOperator.lean": "71ce53518ff0945c9bbcd1f39ad5fa8687156c6fe5261ba5a2c20daa65461ca0",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/ActualUnitSupport.lean": "24d111f0669022c3d68f92fa6e197da19d3fe89f78de6fca6fc138f5e80e6fa1",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/FixedBasinGreenBoundary.lean": "bfe6519f005c000ed1ee411b91dccc3d832fcc348df57b1a2927c9364d300ce6",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/ActualGreenDensityLimit.lean": "f6cc92ea2c11f836d37c92d514f18157f2a775e93cce7363f1dfb5b5d5ca8f04",
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/source/ActualUnconditionalGreen.lean": "6c5bffbf81317e242782f9626138deb67f0115fb42d9d2b52e1a529eb1de8232",
+    "/dev/shm/collatz-mazur-rebuild/mathlib4/Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean": "4b783133d52caa4b43d774dd24a4e5a8a5ffdb0d508d27b35e7ad21395477afe"
+  },
+  "successful_compile_log_hashes": {
+    "ActualOddInverseRow.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ActualInverseDoobLaw.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "new_kernel_replay_claimed": false,
+  "complete_axiom_audit_claimed": false,
+  "periodic_killed_first_hit_identification_claimed": false
+}

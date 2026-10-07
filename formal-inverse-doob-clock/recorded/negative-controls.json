@@ -1,0 +1,116 @@
+{
+  "bundle_manifest_sha256": "5286334a072368bed6565dea18e22b81eade8b2722c983b6d828b05814cc4a25",
+  "checks": {
+    "changed_application_source": {
+      "exit_code": 1,
+      "expected_diagnostic": "Package file missing or changed: source/",
+      "output_sha256": "eba62a52c668e9c4a495de6b8a41397f4fa64c4389656d8b4ea4fb65b19df88f",
+      "passed": true
+    },
+    "changed_helper_source_rejected_before_exec": {
+      "exit_code": 1,
+      "expected_diagnostic": "Source-inventory helper hash mismatch",
+      "output_sha256": "b0a84264fd56707e840593e748a9bf7e55dbd44deb0413f838c7cc2b1da5dde1",
+      "passed": true
+    },
+    "changed_native_dependency_object": {
+      "exit_code": 1,
+      "expected_diagnostic": "Native object mismatch: ActualBasinDensity",
+      "output_sha256": "e0a665d7035c3e451e546a81b7d3081e2375ef91fbf6fe15e2bc7c8eb6da030b",
+      "passed": true
+    },
+    "changed_raw_dependency_object": {
+      "exit_code": 1,
+      "expected_diagnostic": "Raw-occupation object mismatch: BelowIntermediateStageClock",
+      "output_sha256": "ffdf01f2ffb9b587749ca4d1a4cf5280887e8167aab4b2743ff2ff5558333aca",
+      "passed": true
+    },
+    "changed_raw_dependency_source": {
+      "exit_code": 1,
+      "expected_diagnostic": "Raw-occupation source mismatch: BelowIntermediateStageClock",
+      "output_sha256": "685dc8452e5a06dcaba3edbc50b36094595454e2bce8a35c54a1b267ff4098e2",
+      "passed": true
+    },
+    "extra_application_source": {
+      "exit_code": 1,
+      "expected_diagnostic": "Package Lean source inventory mismatch",
+      "output_sha256": "5424c34037e9c983ae195c9bb2c3efbc46a428606e3f66d2002a0ea3d1877e89",
+      "passed": true
+    },
+    "missing_explicit_native_record_pin": {
+      "exit_code": 1,
+      "expected_diagnostic": "--native-record-sha256 is required",
+      "output_sha256": "f297f69c6adfe17e7ed94f426d0ef72638ea777b0cae026f7d1b706cf13d4f5d",
+      "passed": true
+    },
+    "missing_explicit_raw_record_pin": {
+      "exit_code": 1,
+      "expected_diagnostic": "--raw-record-sha256 is required",
+      "output_sha256": "d23dfbe3d82cdd4a2fe52a8d4998c99720a06a4e5bad26919400471e39811f18",
+      "passed": true
+    },
+    "raw_replay_bound_to_different_native_record": {
+      "exit_code": 1,
+      "expected_diagnostic": "Raw-occupation replay used a different native replay",
+      "output_sha256": "dc3ca220c51dd9211a618f5aa11d5bec02f99d211f18ff8259ac7005522dea4f",
+      "passed": true
+    },
+    "stale_helper_bytecode_fixture_executes_under_ordinary_import": {
+      "matching_source_size": 5154,
+      "passed": true,
+      "pyc_sha256": "043c8ff799c4acbf5fab7935370f766ea76da0d7e0bb9132986945e6141cff9c",
+      "restored_helper_sha256": "7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3",
+      "source_timestamp_seconds": 1791369167
+    },
+    "verified_byte_loader_bypasses_stale_helper_bytecode": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "wrong_native_record_pin": {
+      "exit_code": 1,
+      "expected_diagnostic": "Native replay-record pin mismatch",
+      "output_sha256": "cbfcf4964c12fadd3d1fceb552cd465ac099bb66d0c6ea670c304cb73f216358",
+      "passed": true
+    },
+    "wrong_raw_record_pin": {
+      "exit_code": 1,
+      "expected_diagnostic": "Raw replay-record pin mismatch",
+      "output_sha256": "6621be9cad691618987438913021416323269dd4844699d960271cb8811989d1",
+      "passed": true
+    }
+  },
+  "driver_sha256": "53bfa15414a8578d80e4f4b4ef2cf55055c6a92ce8768a9310aea9c2348051d9",
+  "negative_control_script_sha256": "5b86dfcbc1f5bb95d5ca52d069967d95e2d3078c1d24008f47ea11d7f38efe5a",
+  "packet": "formal-inverse-doob-clock",
+  "scope": "Isolated-copy rejection controls and a validated stale-bytecode fixture. No accepted bundle, source, object, or replay record was modified. An already-existing output directory prevents accidental compilation if a negative guard fails.",
+  "source_hashes": {
+    "ActualFinitePrefixTV": "8a57f34dbe70a2a1334010b41a5d1455bc99e0c8ad956d36092f4dd6fbe4d853",
+    "ActualInverseDoobLaw": "2eeefc2815ef8c8c4ad895e0142b70b5bc768d3ebd02199b6cd7780a29fff74f",
+    "ActualInverseHeightClock": "47f870a0d3b377a13d3ec50fc03c94e02ea78d01f04db60e31413271ec0e381c",
+    "ActualInversePathGrowth": "e4f5285c219f58b8c3258e7d2457e94c35380619bad304d92c4c6bfc35234901",
+    "ActualLadderClock": "61fe00f6fcd76bb6d5070b9938fd32d7de72f2f91d26909a4fec1eff6f0f46ea",
+    "ActualLastVisitLaw": "303201a60adc8ee185b47617b278917ef62ae5df45caae65f3c6c7d4fe3b446c",
+    "ActualOddInverseRow": "6cbd562e86a3122eb6ed738ae7475b23516cc3ef88b534086dce52ec1945b31d",
+    "ActualPathSupport": "473a3705a7c6cea6bdaa118a362e6be3b4a045881a540bced2fd8b5361917f41",
+    "ActualPrefixEvents": "59a30965d76bb10d54f0325dcb81218761cf6d13dea044f33c5e9c82dc701999",
+    "ActualTransitionAtom": "b843925064ab1c529159b692ec39adb55c20577ae68a8c8bb295af0d57eecd27",
+    "CountableMassSqueeze": "c4dfac497e48c0f489fe18836e95461d9a4ff20e701b17aa65a77c0e0e10be14",
+    "CountableScheffe": "dc009db4644f77012ab08d0b36d37f74b5e2986ee920b65f4226f38f1be427e5",
+    "FiniteLadderClockEvent": "b9a958c427709f56da640f3a19c82c5cb7f0e01ff321a81602aced10630ac0cf",
+    "FinitePathCylinder": "b15ba11d3738c7aa5a887dd454ca95f76a1d68e97fb802c5e1de42a2fffda310",
+    "FinitePrefixIndex": "102354a9eb7663dab187ebd92a98fc247e0912f40d397f15a722e2ad3423ff60",
+    "FinitePrefixSourceBound": "a3febecd3f2bfaf29c696cd997eace4e02aa41b77658fdc47878417c9e4d9ddf",
+    "FinitePrefixSourceMass": "1ac25bf1cc69c839b2195ae4778ec769214ef63ec673bab420153d6026ee35f3",
+    "InverseBranchCylinder": "39801276b9fe4575727adef2cbb24afe87fc55e191ab76be55d3b3a504b8da23",
+    "InverseClockGeometry": "59d2e21cc080d13d3b25ebe4495b60842c34156207875fa7224a9919a9fd341e",
+    "InverseClockRefinement": "1f9dd6c1da7a1e7afb04f12209ed23176f205e1e63f15392aab0aaea3b05f496",
+    "LadderClockLimit": "74a0f51c3a03aa4307711998a9e489ad1ea0ce39a3cd9f9fe96c19ab3aa04c5b",
+    "LastVisitGeometry": "7a2a23d3c41756df89710aebf22139e997c39720306d80667efcf873894dc249",
+    "NonperiodicCylinderSource": "1d6df8b1d3e73ecf8aa223066c6a574252ea1d0582aef88083fcf4538c579c7d",
+    "NonperiodicFiniteCylinder": "7302c98a17d70869ed1d0e2e2f77d9e19a22d8e991606682ace47cc95634d782",
+    "SourceLastVisitClock": "1e8b68e74af065effed5f6ac6c26de8df4c6adb438f3f5978764cea675692a9e",
+    "SourceSuffixPrefix": "0d36358b037c1cd7a0e691401eed2d56dbfe6b34ef5038dceaa2b1c77cab379a"
+  },
+  "status": "PASS",
+  "successful_checks": 13
+}

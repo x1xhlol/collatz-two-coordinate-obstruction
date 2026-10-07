@@ -1,0 +1,14 @@
+{
+  "status": "FULL INDEPENDENT SEMANTIC REVIEW PASS",
+  "review_sha256": "5363b428928baff61c03281fa7dfae355d510ab6d603822a6192d84b7ac6e7ce",
+  "source_sha256": "59d2e21cc080d13d3b25ebe4495b60842c34156207875fa7224a9919a9fd341e",
+  "compile_log_sha256": "675662e1bc42f42052667cd8b899bbf82d748e2b3ffccfaa73f8babd78a901dc",
+  "theorems_reviewed": 5,
+  "printed_endpoint_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "independent_kernel_replay": false,
+  "actual_ladder_transfer_proved_by_reviewed_file": false
+}

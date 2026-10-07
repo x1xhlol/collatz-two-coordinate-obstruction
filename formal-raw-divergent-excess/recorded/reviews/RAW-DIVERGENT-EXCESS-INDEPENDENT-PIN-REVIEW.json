@@ -1,0 +1,18 @@
+{
+  "audited_constants": 63,
+  "authenticated_native_source_object_pairs": 1602,
+  "authenticated_raw_source_object_units": 17,
+  "certificate_sha256": "5c89a2b3fec69f88c14a1bf44d1af0509b3859f4225e688c4a27f07c51c564da",
+  "driver_sha256": "c2519040057eff2198c9fa020aed46774cde42d710d8ed72e52282034207c689",
+  "fresh_units": 9,
+  "frozen_raw_source_modules": 16,
+  "named_source_declarations": 26,
+  "private_constants": 5,
+  "private_source_declarations": 4,
+  "replay_record_sha256": "a11e100189af2f3ba09c8e8222f7203b2fe832c2cd3e81f5c3fc5e81a2b30e4c",
+  "review": "Independent complete record and artifact pin verification, not another kernel replay",
+  "scope": "Every fresh source/object/compiler/kernel log; actual generated audit output and source inventory; all pinned records and current upstream source/object bytes; fixed raw source and driver pins; and clean pinned library source revisions/package manifest rechecked. No public baseline sources changed.",
+  "source_manifest_sha256": "f153366e6f779c3669b1d904467925c8ba62e296207a1b70910296a37328471c",
+  "status": "PASS",
+  "successful_compile_and_kernel_commands": 18
+}

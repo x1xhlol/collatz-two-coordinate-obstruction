@@ -36,7 +36,7 @@
 \vspace{8pt}
 {\large Lucas Valbuena\par}
 \vspace{4pt}
-{\normalsize 3 October 2026}
+{\normalsize 7 October 2026}
 \end{center}
 \vspace{2pt}
 \begin{abstract}
@@ -59,7 +59,10 @@ to three. At odd targets, it also bounds first-hit coefficients uniformly
 over positive depths and yields a finite cylinder-energy criterion for
 eventual periodicity. The first-passage clock also gives the raw occupation
 lower bound \(\liminf_{R\to\infty}(\log R)^{-1}\sum_{N\le R,\,N\ {\rm odd}}D_N
-\ge1/\log(4/3)\). We also prove total-variation limits for countable orbit
+\ge1/\log(4/3)\), with a strictly larger lower coefficient if a divergent
+orbit exists. At each positive odd nonperiodic root prime to three, the
+actual inverse Markov law satisfies \(\log Y_k/k\to\log(4/3)\)
+almost surely. We also prove total-variation limits for countable orbit
 labels, sharp exponential cylinder bounds, and a characterization of
 global sublinearity. The equivalent global condition and the exclusion
 of additional cycles remain open. The accompanying Lean proofs include
@@ -88,7 +91,11 @@ and return checks only through the same depth.
 Section~\ref{sec:ct-raw-occupation} uses the retained intermediate
 first-passage clocks to bound the sum of the actual weighted densities
 below a growing target cutoff. Its lower coefficient is the reciprocal
-of the Syracuse clock drift.
+of the Syracuse clock drift. A divergent orbit would force a strict
+excess over that coefficient. Section~\ref{sec:ct-inverse-clock}
+constructs the actual inverse Markov law and proves its almost-sure
+height clock by transferring finite source events to inverse paths.
+The theorem gives no matching upper bound for the raw occupation trace.
 
 The numbered results have accompanying Lean proofs. The formal scope
 section distinguishes the preceding native development from the new
@@ -2473,6 +2480,227 @@ visit are not bounded by this argument. The divergent-component and
 cycle-exclusion questions therefore remain open.
 
 
+\subsection{The extra contribution of a divergent orbit}
+\label{sec:ct-raw-divergent-excess}
+
+A divergent orbit would contribute beyond the lower bound just proved.
+For an odd starting point \(u\) with an injective shortcut orbit, retain
+the whole-orbit correction \(P_\infty(u)\) from
+Proposition~\ref{prop:ct-forward-components} and put
+\[
+ \eta(u)=\frac{D_u}{P_\infty(u)\log(3/2)}.
+\]
+
+\begin{theorem}\label{thm:ct-raw-divergent-excess}
+Let \(u\) be positive and odd, and suppose its shortcut orbit is
+injective. For every \(b<1/\lambda+\eta(u)\),
+\[
+ A(R)\ge b\log R
+ \qquad\text{for all sufficiently large integers }R.
+\]
+If \(3\nmid u\), then \(\eta(u)>0\). In particular, a divergent
+positive orbit would force a strict excess over \(1/\lambda\) in
+the lower limit of \(A(R)/\log R\).
+\end{theorem}
+\begin{proof}
+Write \(u_j=S^j(u)\). The values \(u_j\) are distinct and odd.
+For a finite set \(F\) of these values below \(R\), define
+\[
+ V_F(q)=w_u(q)\sum_{N\in F}w_N(u),\qquad
+ Z_{R,F}(q)=O_R(q)-V_F(q).
+\]
+The first-hit paths concatenate on \(\mathcal B_u\). If a source
+reaching \(u\) had visited a future \(N\) before \(u\), then
+\(u\) and \(N\) would lie on a cycle. Thus
+\(w_N(q)=w_u(q)w_N(u)\) there. Off \(\mathcal B_u\),
+\(V_F(q)=0\). Consequently \(Z_{R,F}\ge0\) on every source,
+and its odd logarithmic source mean is exactly
+\[
+ A(R)-D_u\sum_{N\in F}w_N(u).
+\]
+
+Choose the bottom barrier in the preceding proof with \(M\ge u\).
+For a source reaching \(u\), every first visit to a member of \(F\)
+occurs at or after its first passage below \(M\). These visits are disjoint
+from the pre-barrier visits counted in that proof. On the common good
+event, therefore, \(Z_{R,F}(q)\ge L_R\). Averaging the nonnegative
+residual gives
+\begin{equation}\label{eq:ct-raw-residual-lower}
+ A(R)\ge L_R\bigl(1-2(n+2)\alpha e(M)\bigr)
+              +D_u\sum_{N\in F}w_N(u).
+\end{equation}
+The second term is the full source mean of \(V_F\); it is not
+restricted to the good event.
+
+Fix \(0<a<1\), use the grid parameter \(p=a\), and put
+\[
+ J_R=\left\lfloor\frac{a\log R}{\log(3/2)}\right\rfloor,
+ \qquad F_R=\{u_j:0\le j<J_R\}.
+\]
+The growth bound \(u_j+1\le(3/2)^j(u+1)\) places \(F_R\)
+below \(R\) for all sufficiently large \(R\). Each first-hit
+weight \(w_{u_j}(u)\) is at least \(1/P_\infty(u)\), so
+\[
+ \sum_{N\in F_R}w_N(u)\ge\frac{J_R}{P_\infty(u)},
+ \qquad \frac{J_R}{\log R}\longrightarrow\frac a{\log(3/2)}.
+\]
+Apply \eqref{eq:ct-raw-residual-lower} with this finite set at each
+fixed \(R\). First take the source limit, then let \(R\to\infty\)
+with \(M\) fixed. Sending \(M\to\infty\) gives the lower
+coefficient \(a/\lambda+a\eta(u)\). Let \(a\uparrow1\).
+Positivity of \(D_u\) for \(3\nmid u\) and the finite positive
+correction product prove \(\eta(u)>0\). Every divergent positive
+orbit reaches an odd integer prime to three, so the last assertion
+follows.
+\end{proof}
+
+A matching upper bound of \(1/\lambda\) would exclude divergent
+orbits by this theorem. That upper bound remains unproved.
+
+\section{An almost-sure clock for the actual inverse law}
+\label{sec:ct-inverse-clock}
+
+Fix a positive odd nonperiodic root \(n\) prime to three. Every
+integer ancestor of \(n\) is nonperiodic. On its continuing inverse
+tree, define
+\begin{equation}\label{eq:ct-inverse-kernel}
+ Q_x\!\left(\frac{2^a x-1}{3}\right)
+   =\frac{3}{2^a}\,
+     \frac{g((2^a x-1)/3)}{g(x)}
+ \qquad(a\ge1),
+\end{equation}
+where only positive integral predecessors prime to three are retained.
+Each retained predecessor is odd. The expanded harmonic identity for
+\(g\) makes these probabilities sum to one. Indeed, iteration of
+the two-branch harmonic equation leaves a dyadic remainder
+\(2^{-j}g(2^j x)\), which tends to zero by the fixed-basin
+boundary estimate. The trace is positive on the retained states.
+Thus \eqref{eq:ct-inverse-kernel} defines a Markov law
+\(\mathbb Q_n\) on infinite paths \(Y_0=n,Y_1,Y_2,\ldots\),
+with \(S(Y_{k+1})=Y_k\).
+
+\begin{theorem}\label{thm:ct-inverse-height-clock}
+For \(\mathbb Q_n\)-almost every actual inverse path,
+\begin{equation}\label{eq:ct-inverse-height-clock}
+ \frac{\log Y_k}{k}\longrightarrow\lambda=\log(4/3).
+\end{equation}
+The nonperiodicity hypothesis means that the root has no positive
+return time. Its forward orbit may later enter a cycle.
+\end{theorem}
+\begin{proof}
+We first identify finite prefixes of this law with actual source
+averages. If \(y_0=n,\ldots,y_K\) is a valid inverse prefix,
+telescoping \eqref{eq:ct-inverse-kernel} and using
+\(g(y)=\delta yD_y\) at nonperiodic targets gives
+\begin{equation}\label{eq:ct-inverse-prefix-law}
+ \mathbb Q_n(Y_i=y_i\text{ for }0\le i\le K)
+       =\frac{w_n(y_K)D_{y_K}}{D_n}.
+\end{equation}
+First-hit factorization identifies the right side with
+\[
+ \lim_{X\to\infty}\frac2{D_n\log X}
+       \sum_{\substack{q\le X,\ q\ {\rm odd}\\q\in\mathcal B_{y_K}}}
+                          \frac{w_n(q)}q.
+\]
+Different valid prefixes of a fixed depth have disjoint source basins.
+Their finite-source masses have total at most the full normalized
+basin sum, which tends to one. The limit probabilities in
+\eqref{eq:ct-inverse-prefix-law} sum to one. A finite-head and
+small-tail argument therefore upgrades pointwise convergence to
+total variation on the countable prefix set. The depth \(K\) is
+fixed in this limit.
+
+For a real barrier \(r\ge n\), let
+\[
+ T_n(r)=\max\{k_n(y):y\le r,\ y\text{ odd},\ y\in\mathcal B_n\},
+ \qquad \sigma_r=\max\{k:Y_k\le r\}.
+\]
+The first maximum is over a finite nonempty set. Along an actual
+inverse path, \(k_n(Y_k)=k\), so every visit below \(r\) occurs
+by time \(T_n(r)\). In particular \(\sigma_r\) is finite and
+depends only on that finite prefix. For a source \(q\) whose
+reversed first-hit path has the retained prefix, the exact identity is
+\begin{equation}\label{eq:ct-source-last-visit}
+ \tau_r(q)+\sigma_r=k_n(q).
+\end{equation}
+An earlier source passage below \(r\) would leave a successful
+endpoint below \(r\) with remaining depth at most \(T_n(r)\).
+It would therefore already occur in the retained prefix, contrary
+to maximality of \(\sigma_r\). This verifies the identity even
+when the source path makes several visits below the barrier.
+
+Use the same fixed \(\alpha=1001/1000\) and simultaneous ladder
+events as in the raw occupation proof. For a sufficiently large fixed
+\(M\ge n\), put \(x_i=M^{\alpha^i}\). Subtracting
+\eqref{eq:ct-source-last-visit} at \(M\) and at \(x_i\)
+cancels the remote source time. The retained lower-stage clocks give
+\begin{equation}\label{eq:ct-inverse-ladder-error}
+ \left|\sigma_{x_i}-\frac{\log x_i}{\lambda}\right|
+ \le C_\alpha(\log x_i)^{3/5}
+                +T_n(M)+\frac{\log M}{\lambda}.
+\end{equation}
+For any finite \(I\), all the inequalities with \(i\le I\)
+are determined by the prefix of depth
+\(\max_{i\le I}T_n(x_i)\). A single good source ladder controls
+them simultaneously. The odd-relative logarithmic failure allowance
+is at most \(2\alpha e(M)\). Since \(0\le w_n\le1\),
+the normalized source mass of failure is at most
+\(2\alpha e(M)/D_n\). The fixed-prefix total-variation limit
+transfers this bound to \(\mathbb Q_n\), independently of \(I\).
+Increasing \(I\) gives the same bound for failure of any one of
+the inequalities in \eqref{eq:ct-inverse-ladder-error}.
+
+Now fix any reference base \(M>1\). Replacing it by
+\(M^{\alpha^J}\) deletes a finite initial part of the same grid.
+For each fixed \(J\), the finite bottom correction in
+\eqref{eq:ct-inverse-ladder-error} disappears after division by
+\(\log x_i\) as \(i\to\infty\). The limiting event is
+unchanged by the deletion. Its failure probability is consequently
+at most \(2\alpha e(M^{\alpha^J})/D_n\) for every sufficiently
+large \(J\). Letting \(J\to\infty\) proves
+\begin{equation}\label{eq:ct-inverse-reference-clock}
+ \frac{\sigma_{M^{\alpha^i}}}{\log(M^{\alpha^i})}
+                  \longrightarrow\frac1\lambda
+                  \qquad\mathbb Q_n\text{-almost surely}.
+\end{equation}
+No bound uniform in the bottom correction \(T_n(M)\) is needed.
+
+It remains to recover height at each depth from the last-visit clocks.
+For each integer \(L\ge1\), let \(\beta=\alpha^{1/L}\),
+choose \(b=n+1\), and interlace the \(L\) grids with bases
+\(\exp(b\beta^l)\), \(0\le l<L\). This gives the grid
+\(z_j=\exp(b\beta^j)\), with
+\(\sigma_{z_j}/\log z_j\to1/\lambda\). Only countably
+many reference bases are used as \(L\) varies, so all these
+limits hold on one event of probability one.
+
+For large \(k\), choose the first \(j\) with
+\(\sigma_{z_j}\ge k\). Then
+\(\sigma_{z_{j-1}}<k\le\sigma_{z_j}\) and
+\(Y_k>z_{j-1}\). The actual forward growth bound also gives
+\[
+ \log(Y_k+1)\le\log(z_j+1)
+           +\log(3/2)(\sigma_{z_j}-k).
+\]
+Using the two neighboring last-visit clocks in these inequalities
+yields
+\[
+ \frac\lambda\beta
+ \le\liminf_{k\to\infty}\frac{\log Y_k}{k}
+ \le\limsup_{k\to\infty}\frac{\log Y_k}{k}
+ \le\lambda+(\beta-1)\log2.
+\]
+Finally \(L\to\infty\) gives \(\beta\downarrow1\), proving
+\eqref{eq:ct-inverse-height-clock}.
+\end{proof}
+
+The theorem concerns the probability law of actual inverse branches
+at each fixed root. It supplies no expectation limit for occupation
+below a moving height cutoff. Such a passage would require control
+of rare paths with unusually many visits, which is not established
+here. The raw occupation upper bound and cycle exclusion remain open.
+
+
 \section{Formal verification scope}
 
 The preceding native Lean 4.30.0-rc2 development gives checked declarations
@@ -2644,6 +2872,47 @@ the build. The Lean version and pinned library source revisions were
 also checked. Mathlib/Lean caches were reused; the upstream closure
 was not freshly rebuilt. The source hashes and results are recorded
 in \path{formal-raw-occupation/recorded/replay-record.json}.
+
+\subsection{The divergent-excess and inverse-clock extensions}
+
+The eight modules in \path{formal-raw-divergent-excess} extend the
+finite factorization to Theorem~\ref{thm:ct-raw-divergent-excess}.
+The endpoint is \path{actual_raw_occupation_divergent_eventual_lower}.
+Its source is \texttt{RawOccupationDivergentExcess.lean}.
+It assumes that \(u\) is odd and its shortcut orbit is injective.
+It uses the actual weighted density and whole-orbit correction in
+\(\eta(u)\). The unit hypothesis makes this excess strictly positive.
+All source, clock, and forward-prefix estimates are discharged.
+The hypothesis that an injective orbit exists is retained.
+
+The 26 modules in \path{formal-inverse-doob-clock} construct the
+actual normalized predecessor law and its infinite path measure.
+They prove fixed-prefix total variation from the weighted odd-source
+means, finite dependence of last visits, and the exact passage identity
+\eqref{eq:ct-source-last-visit}. The endpoint
+\path{actual_inverse_height_clock_ae} in
+\path{ActualInverseHeightClock.lean} proves
+Theorem~\ref{thm:ct-inverse-height-clock} with no extra clock or
+probability hypothesis. Nonperiodicity means no positive shortcut
+return; it does not mean failure of eventual periodicity.
+
+Every application module in both bundles and each generated whole-module
+audit was freshly compiled and individually replayed with
+\texttt{leanchecker}. The excess audit covers 63 compiled constants,
+including five private constants. The clock audit covers 307 compiled
+constants, with none private. Generated declarations are included in
+both inventories. Only \texttt{propext}, \texttt{Classical.choice},
+and \texttt{Quot.sound} occur in their logical dependencies.
+
+The excess bundle authenticates and reuses 15 raw-occupation modules
+and 1,528 native modules. The clock bundle authenticates and reuses
+four raw-occupation modules and 1,496 native modules. Both check the
+required source and object hashes, imports, dependency fingerprints,
+toolchain, and library source revisions before and after compilation.
+Mathlib/Lean caches are reused. These are additive replays; neither
+rebuilds the full upstream closure. Each bundle supplies a portable
+verifier and a \path{recorded/replay-record.json} with its source pins,
+commands, outputs, and audit inventory.
 
 \section*{Acknowledgments}
 The main first-passage input and stationary Syracuse law are due to

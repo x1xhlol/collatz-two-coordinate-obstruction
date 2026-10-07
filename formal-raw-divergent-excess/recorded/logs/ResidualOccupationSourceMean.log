@@ -1,0 +1,9 @@
+'CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation_cumulative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation_normalized_odd_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

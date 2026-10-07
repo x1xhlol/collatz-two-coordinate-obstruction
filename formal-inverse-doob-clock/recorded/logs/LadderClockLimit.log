@@ -1,0 +1,21 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+'CollatzCylinderPacking.Arithmetic.InverseDoob.clockScale_compose' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimitEvent_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimit_of_all_errors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimit_compl_le_of_finite_errors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ae_ladderClockLimit_of_shifted_finite_errors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

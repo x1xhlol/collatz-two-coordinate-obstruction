@@ -1,0 +1,98 @@
+{
+  "bundle_manifest_sha256": "4fe085b3d2694aa8eb9ab592dc6a6623da5a3d4149dd9c2ccf8202b99ba0dabf",
+  "checks": {
+    "changed_application_source": {
+      "exit_code": 1,
+      "expected_diagnostic": "Package file missing or changed: source/",
+      "output_sha256": "45301e97557928a5f28a11f5f5e1cece3d93b9ac8ae7bf88c2e3fae4df689300",
+      "passed": true
+    },
+    "changed_helper_source_rejected_before_exec": {
+      "exit_code": 1,
+      "expected_diagnostic": "Source-inventory helper hash mismatch",
+      "output_sha256": "727996b8dcd5b1c0faad54ed37e2bed36cba85cb089df5629592379963ae32be",
+      "passed": true
+    },
+    "changed_native_dependency_object": {
+      "exit_code": 1,
+      "expected_diagnostic": "Native object mismatch: ActualAllStartLabelLaw",
+      "output_sha256": "9d68ca22b6b0f9a89ded4e9c600abc08d55d1238f8987e61146d8fcd38522a9d",
+      "passed": true
+    },
+    "changed_raw_dependency_object": {
+      "exit_code": 1,
+      "expected_diagnostic": "Raw-occupation object mismatch: AlignedLadderOccupation",
+      "output_sha256": "e4d81640101bfd0436e11cc4be5662abd6cfa15882589c6dca41d18276783918",
+      "passed": true
+    },
+    "changed_raw_dependency_source": {
+      "exit_code": 1,
+      "expected_diagnostic": "Raw-occupation source mismatch: AlignedLadderOccupation",
+      "output_sha256": "b1755228a400fb4ce41289af586d0418a45efc2bd18413d3f94667441545f433",
+      "passed": true
+    },
+    "extra_application_source": {
+      "exit_code": 1,
+      "expected_diagnostic": "Package Lean source inventory mismatch",
+      "output_sha256": "f75971226f6d58ee66de8e2db1efe3d64a3459d7e63e858bd9101bdf4ba4685d",
+      "passed": true
+    },
+    "missing_explicit_native_record_pin": {
+      "exit_code": 1,
+      "expected_diagnostic": "--native-record-sha256 is required",
+      "output_sha256": "96fd6c80eccc2a6263ff9fac2efb55c105548ca7b56fe73874e2b9f36ebf1f81",
+      "passed": true
+    },
+    "missing_explicit_raw_record_pin": {
+      "exit_code": 1,
+      "expected_diagnostic": "--raw-record-sha256 is required",
+      "output_sha256": "7047d25da84f0c9d26cda44cb7cf5da65f3d1c665dc3f1b30f2394a07264ded7",
+      "passed": true
+    },
+    "raw_replay_bound_to_different_native_record": {
+      "exit_code": 1,
+      "expected_diagnostic": "Raw-occupation replay used a different native replay",
+      "output_sha256": "6339e007f0d44414a207f4b1c8ce3b51761dbf62f8b6d1f5b102c51946f6529e",
+      "passed": true
+    },
+    "stale_helper_bytecode_fixture_executes_under_ordinary_import": {
+      "matching_source_size": 5154,
+      "passed": true,
+      "pyc_sha256": "a136a44eb972d9c44aace866defcc25c3c08cf0f76627b835d9d6cd158e22f07",
+      "restored_helper_sha256": "7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3",
+      "source_timestamp_seconds": 1791369166
+    },
+    "verified_byte_loader_bypasses_stale_helper_bytecode": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "wrong_native_record_pin": {
+      "exit_code": 1,
+      "expected_diagnostic": "Native replay-record pin mismatch",
+      "output_sha256": "955010930094984fc725e6846df2e9884b042f0ad97685f98cdbe6af9aa1cb41",
+      "passed": true
+    },
+    "wrong_raw_record_pin": {
+      "exit_code": 1,
+      "expected_diagnostic": "Raw replay-record pin mismatch",
+      "output_sha256": "3d15df1fbe82fd9fa2800617bb2d9b457fbe207cbf34d9101f32d626456404db",
+      "passed": true
+    }
+  },
+  "driver_sha256": "53bfa15414a8578d80e4f4b4ef2cf55055c6a92ce8768a9310aea9c2348051d9",
+  "negative_control_script_sha256": "5b86dfcbc1f5bb95d5ca52d069967d95e2d3078c1d24008f47ea11d7f38efe5a",
+  "packet": "formal-raw-divergent-excess",
+  "scope": "Isolated-copy rejection controls and a validated stale-bytecode fixture. No accepted bundle, source, object, or replay record was modified. An already-existing output directory prevents accidental compilation if a negative guard fails.",
+  "source_hashes": {
+    "AlignedResidualOccupationLower": "5fa1a104c45323fdc5b21e4542a2550d62a20dcd4e3028ff680b41610c5dd9ff",
+    "AsymptoticResidualWithPrefix": "dbb3888a094049b1aa709adb0b9bc32be46a701b753ffb7694083592474bb1a8",
+    "FiniteObservableEventLower": "ed2babe4a047258ee46b085c55a2358ea0864754be038be9a4a4314d64c6473f",
+    "ForwardLogPrefix": "62201717a7309922045d2498550ee1100d29b82119b5426beaca5a8f1973930c",
+    "ForwardOddPrefix": "0926f625c96016ed45ff09e123932d42c08b4034fe88c32153318b4e6fc8293c",
+    "RawOccupationDivergentExcess": "cd960a0e5c290a1bcbd5b82cd0059c6b44c6dd8e06123ac0b9b6165f31a6dd2d",
+    "ResidualOccupationSourceMean": "c82f171fc761ad3488a3761400dfb4f71501ced5a10bb6c4fdaa7ce40b36e15d",
+    "UniformResidualDensityLower": "66933e9291cbddb2dba35fae8f0e86ebe3fb86800cfd5620d29b60c1b8aba7c8"
+  },
+  "status": "PASS",
+  "successful_checks": 13
+}

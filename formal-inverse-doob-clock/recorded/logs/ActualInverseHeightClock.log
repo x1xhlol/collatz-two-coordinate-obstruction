@@ -1,0 +1,3 @@
+'CollatzCylinderPacking.Arithmetic.InverseDoob.actual_inverse_height_clock_ae' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

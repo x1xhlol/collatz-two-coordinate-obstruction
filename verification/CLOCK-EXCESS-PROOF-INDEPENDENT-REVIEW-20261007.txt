@@ -1,0 +1,202 @@
+INDEPENDENT PROOF REVIEW OF THE CLOCK AND DIVERGENT-EXCESS DRAFTS
+7 October 2026. Read-only mathematical/source audit; no new Lean replay.
+
+Verdict: both theorem statements and proof mechanisms agree with the
+inspected native arithmetic endpoints. One wording correction was requested
+in the excess proof: replace "after its first passage below M" by "at or
+after its first passage below M". The author made that correction, which
+is present in the hashed draft below. The first M-landing can itself be u.
+The baseline excludes that landing, so this correction does not change
+the proof or its coefficient. No additional mathematical defect was found.
+
+Drafts read in full, with hashes at the end of the source comparison:
+  paper-divergent-excess-section-20261007.tex
+  SHA256 055d797a7a38c2457a9db9d26d09b50f1f6044a93ddcd497ab1d5fb5845ee7b9
+  paper-inverse-clock-section-20261007.tex
+  SHA256 305dc7b5cef1f4594d1f38305f94d9f93a2cfbc58dfa5073e02fdb6920ecd7c2
+
+I checked the existing paper's actual definitions of D_N, w_N, A(R),
+lambda, delta, P_infinity, the first-hit odd clock, the full raw-baseline
+proof, the fixed-basin Green boundary, and the forward-component product.
+All 26 inverse-clock module hashes matched doob-clock-source-manifest.json;
+all eight excess module hashes matched excess-source-manifest.json.
+This authenticates the inspected sources against their manifests. It is
+not a claim to have rerun their compiler or kernel replay.
+
+1. Divergent-excess proof
+
+The native endpoint is actual_raw_occupation_divergent_eventual_lower in
+formal-raw-divergent-excess-oct3/RawOccupationDivergentExcess.lean. It assumes
+Odd u and injectivity of the actual shortcut orbit and concludes the
+eventual ratio bound for every real b strictly below
+
+  1/clockDrift + actualFirstHitDensity u /
+                  (wholeOrbitCorrection u * log(3/2)).
+
+For R eventually greater than one, multiplication by log R converts this
+to the draft's displayed A(R)>=b log R. Odd u supplies positivity in Lean;
+the paper states it explicitly. Injectivity makes u a divergent root,
+which is enough to use the paper's P_infinity from the component proof.
+The product is finite and at least one. The native coefficient and the
+paper's eta(u) are therefore exactly the same, with no delta factor.
+
+The finite future set has distinct odd targets because Syracuse time
+embeds strictly into shortcut time. For sources reaching u, a prior visit
+to a future target would force a shortcut repetition and hence contradict
+the root's injectivity. First-hit weights factor exactly, including the
+target u itself. For sources not reaching u, V_F is zero. Thus the
+pointwise residual is nonnegative before any averaging or good-event
+restriction.
+
+The good descending contribution ends strictly before the first landing
+at or below M. Every selected future target is first visited at or after
+that landing, since u<=M. Their target sets are disjoint. This proves
+Z_(R,F)>=L_R on the good event while preserving nonnegativity elsewhere.
+The extra term is averaged on the entire root basin, including all bad
+sources. Restricting it to good sources would lose the advertised exact
+coefficient; the draft correctly does not do so.
+
+For fixed R and F, odd logarithmic normalization is 2/log X. The weight
+w_u has ordinary odd harmonic mean D_u/2, so V_F contributes exactly
+D_u sum_F w_N(u). The residual's normalized mean is A(R) minus that term.
+The same finite common-source union bound as the raw theorem therefore
+gives precisely the draft's residual lower bound, with failure factor
+2(n+2) alpha e(M). No independence or event density limit is assumed.
+
+The logarithmic prefix J_R=floor(a log R/log(3/2)) has J_R/log R converging
+to a/log(3/2). The actual growth bound puts every j<J_R target below R
+eventually, since a<1 and u is fixed. Each forward first-hit correction is
+at most P_infinity(u), so the reciprocal weight is at least its inverse.
+The root term therefore contributes a eta(u) in the lower coefficient.
+The grid p=a contributes a/lambda. First the source limit is taken at
+fixed finite R,F_R and fixed aligned ladders; then R tends to infinity
+with the bottom barrier fixed; then M tends to infinity with a and its
+chosen finite grid size n fixed; finally a tends to one. These are the
+same quantifiers discharged in AsymptoticResidualWithPrefix.lean.
+For clarity, an explicit sentence fixing n after a and before M would
+be harmless, but the reference to the preceding grid proof is sufficient.
+
+The strict excess uses only the native unit positivity of D_u. A divergent
+positive orbit reaches an odd unit: halve to an odd state and, if that
+state is divisible by three, take one Syracuse step. Its tail stays
+injective. The final scope statement correctly leaves the matching upper
+bound unproved and does not infer either divergent exclusion or cycle
+exclusion.
+
+Files read in full for this part:
+  RawOccupationDivergentExcess.lean
+  AsymptoticResidualWithPrefix.lean
+  ForwardLogPrefix.lean
+  ForwardOddPrefix.lean
+  ResidualOccupationSourceMean.lean
+  AlignedResidualOccupationLower.lean
+  UniformResidualDensityLower.lean
+  FiniteObservableEventLower.lean
+  formal-raw-occupation-oct3/DivergentPostBarrierOccupation.lean
+
+2. Inverse law and finite source normalization
+
+The native inverse index a>=0 counts the even steps after the odd step;
+the paper's exponent a>=1 is that index plus one. Thus its branch
+(2^a x-1)/3 and coefficient 3/2^a are correct. Every retained endpoint is
+positive, odd, and prime to three. Terms at nonunit endpoints have zero
+trace. Expanding harmonicity leaves 2^(-j)g(2^j x); these targets all lie
+in the fixed basin of x, so the paper's boundary theorem sends the
+remainder to zero. The row sums to one. Countable-state Markov extension
+is represented in the native file by Kernel.trajMeasure.
+
+All inverse ancestors of a nonperiodic root are nonperiodic. At those
+states g(y)=delta yD_y, so delta cancels in every telescoping prefix.
+The affine product identity converts the remaining coefficient into
+w_n(y_K). The cylinder mass is exactly w_n(y_K)D_(y_K)/D_n.
+
+The source limit has factor 2/(D_n log X), because the mean is over odd
+sources. First-hit factorization on the endpoint basin supplies the same
+cylinder mass. Distinct valid prefixes at fixed depth have disjoint
+endpoint basins: a common source would force a single deterministic
+reverse suffix, using nonperiodicity for uniqueness of the hit. The
+finite-source total is bounded above by the normalized full root mass,
+which tends to one. Pointwise limits have total mass one. Hence a finite
+head carrying almost all limiting probability also forces the empirical
+tail small, proving total variation on the countable prefix set. No
+uniformity in growing K or uncontrolled exchange of infinite sums is
+used. The draft's shorter squeeze is exactly the native one; separate
+estimates for omitted shallow sources are unnecessary here.
+
+3. Last visits, transfer, and probability-one reference clocks
+
+For real r>=n the finite set defining T_n(r) is nonempty and includes n.
+It can include nonunit endpoints, which only makes the bound larger.
+Every retained visit has first-hit odd depth equal to its inverse index.
+All visits at height at most r therefore occur within the fixed prefix
+of depth T_n(r), so sigma_r is finite and measurable from that prefix.
+The real cutoffs correspond exactly to floor cutoffs in the Lean files.
+
+For any odd source reaching the endpoint of a retained prefix long
+enough to contain T_n(r), the first passage at or below r occurs at
+k_n(q)-sigma_r. An earlier low state has remaining depth at most T_n(r),
+so would appear later in that reverse prefix, contradicting maximality.
+This proves tau_r(q)+sigma_r=k_n(q), even for paths that reenter the
+barrier many times. Sources need not have any prescribed remote height.
+
+Subtracting at M and x_i removes the full remote source depth. The native
+lower-segment clock has error bounded by C_alpha(log x_i)^(3/5); adding
+the bottom last visit costs at most T_n(M), and shifting the main term
+adds log M/lambda. These are exactly the three terms in the draft.
+
+For any finite I, take a prefix at least max_(i<=I)T_n(x_i). A single
+simultaneous good ladder controls every stated inequality. The existing
+odd-relative failure allowance 2 alpha e(M), weighted by w_n<=1 and
+normalized by D_n, becomes 2 alpha e(M)/D_n. This matches
+actual_finite_ladder_clock_failure_probability with no missing factor
+of two. Fixed-prefix total variation transfers the bound. The failure
+events increase with I, so continuity of probability preserves the same
+bound for their union. It is not an infinite union bound over stages.
+
+Replacing a fixed base M>1 by M^(alpha^J) removes J initial grid terms.
+The reference-limit event is unchanged exactly. For each fixed J its
+bottom correction is finite and vanishes relative to log x_i as i grows.
+The failure bound tends to zero as J increases. Therefore each fixed
+reference grid has its limit almost surely. This is the native shifted
+finite-error argument, not an unjustified claim that one fixed good
+ladder itself has probability one.
+
+4. From reference clocks to every inverse height
+
+For each integer L>=1, beta=alpha^(1/L)>1. With b=n+1, the L bases
+exp(b beta^l) interlace exactly into exp(b beta^j). They all exceed n.
+Only countably many bases are used over all L and l, so their almost-sure
+events may be intersected. Finite interlacing gives the last-visit limit
+on each refined grid.
+
+Its last visits tend to infinity, so for sufficiently large k the least
+j with sigma_(z_j)>=k exists and is positive. Maximality implies
+Y_k>z_(j-1). In the other direction, Y_k is an actual forward Syracuse
+iterate of Y_(sigma_(z_j))<=z_j after sigma_(z_j)-k steps. Thus the
+growth inequality in the draft has the correct direction; inverse paths
+themselves are not assumed monotone in height.
+
+Writing g=log(3/2), the lower rate bound is lambda/beta. The upper bound
+is beta lambda+(beta-1)g=lambda+(beta-1)log2, because lambda+g=log2.
+Taking all integer L and sending beta down to one gives the claimed
+almost-sure log Y_k/k limit. The native endpoint
+actual_inverse_height_clock_ae has exactly the same four root hypotheses.
+The paper correctly explains that nonperiodic means the root itself has
+no positive return; its forward orbit can later enter a cycle.
+
+The final paragraph correctly withholds expectation convergence,
+uniform control across roots, a moving-height occupation upper bound,
+and all cycle exclusion. The statement is about the actual integer
+inverse law, not an unconditioned affine random walk or a Haar law.
+
+Files read in full for the inverse-law argument and its decisive bridges:
+  ActualOddInverseRow.lean, ActualInverseDoobLaw.lean
+  NonperiodicFiniteCylinder.lean, FinitePrefixSourceMass.lean
+  FinitePrefixSourceBound.lean, ActualFinitePrefixTV.lean
+  ActualLastVisitLaw.lean, SourceLastVisitClock.lean
+  FiniteLadderClockEvent.lean, ActualLadderClock.lean
+  LadderClockLimit.lean, ActualInversePathGrowth.lean
+  InverseClockRefinement.lean, ActualInverseHeightClock.lean
+
+No publication file, draft, or frozen formal module was mutated by this
+review. The single wording correction was sent to the parent author.

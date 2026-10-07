@@ -1,0 +1,42 @@
+'CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.hit_clock' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.firstHitOddDepth_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.visit_depth_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.no_visit_after_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.finite_visits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.lastVisit_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.lastVisit_mono' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.le_lastVisit_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_prefix_congr' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_eq_prefixFunction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.measurable_lastVisitIndex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_event_preimage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_lastVisitIndex_event' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,56 @@
+Independent semantic review: discharged raw divergent-excess endpoint
+3 October 2026. Research-only supplemental formalization.
+Outcome: PASS. This source review is separate from fresh kernel replay.
+
+ForwardLogPrefix.lean SHA256 62201717a7309922045d2498550ee1100d29b82119b5426beaca5a8f1973930c
+RawOccupationDivergentExcess.lean SHA256 cd960a0e5c290a1bcbd5b82cd0059c6b44c6dd8e06123ac0b9b6165f31a6dd2d
+
+ForwardLogPrefix defines J_a(R)=floor_nat(a*log R/log(3/2)). For a>=0,
+its normalized value tends to a/log(3/2). The proof restricts to natural
+R>=2 before dividing: log R>0 and the argument of the natural floor is
+nonnegative. The floor error is bounded by 1, which becomes o(1) after
+division by log R. The squeeze bounds and their directions are correct.
+
+For fixed u and a<1, log(u+1)/log R+a eventually lies below 1. Combining
+this with floor<=argument proves the stronger eventual bound
+(3/2)^J_a(R)*(u+1)<=R, hence the required <=R+1. All logarithms and products
+used in the monotonicity step have positive arguments. The proof includes
+a=0 and does not require a convergence rate uniform in u or a.
+
+RawOccupationDivergentExcess defines
+  E(u)=D_u/(wholeOrbitCorrection(u)*log(3/2)).
+For an odd root with injective shortcut orbit, wholeOrbitCorrection(u)>=1
+by the native theorem, and log(3/2)>0. Since D_u>=0, E(u)>=0. When the root
+is a unit modulo 3, the native ActualUnitSupport theorem gives D_u>0, so
+E(u)>0. That native interface was inspected directly; the proof does not
+confuse weighted first-hit density with a different trace or basin value.
+
+The final theorem fixes an actual odd root and its injective shortcut
+orbit. For every b<1/clockDrift+E(u), it sets H=1/clockDrift+E(u)>0 and
+chooses 0<a<1 with b<a*H. This works for negative b as well. The elementary
+identity a*H=a/clockDrift+D_u*a/(log(3/2)*wholeOrbitCorrection(u)) matches
+the preceding prefix-rate adapter exactly. Both prefix hypotheses are
+then discharged by the new floor-logarithmic theorems. Therefore all
+source-mean and finite prefix-rate inputs are discharged; only the stated
+actual root assumptions and b comparison remain.
+
+The result is the eventual natural-cutoff comparison
+  b <= (sum over odd N<=R of actualFirstHitDensity N)/log R.
+It assumes no finite-real liminf or normalized-mean convergence and allows
+unbounded growth. For unit roots, the midpoint between the baseline and
+the baseline plus E(u) supplies the stated strictly larger eventual lower
+bound. No uniform positive excess independent of the root is claimed.
+
+This final certificate supplements the complete six-module review
+RESIDUAL-OCCUPATION-PREFIX-INDEPENDENT-REVIEW.txt SHA256
+6501035c7ee460bc01294dc7b1d1710d27b5fddad2ff70b3cf13f3b27996edbf.
+Together the source reviews cover all eight supplementary modules.
+The finite residual argument averages the whole post-root observable,
+without a good-event loss, at each fixed R before taking R to infinity.
+That previously reviewed order of limits is preserved here.
+
+Neither endpoint asserts that an injective Collatz orbit exists. Conversely,
+no raw occupation upper bound is supplied, so these conditional excess
+inequalities do not exclude such an orbit. The sixteen-source public
+baseline packet is unchanged; these eight modules remain separate
+research sources. No reviewed source was modified by this review.

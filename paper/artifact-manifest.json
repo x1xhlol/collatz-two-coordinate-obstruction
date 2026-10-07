@@ -1,32 +1,32 @@
 {
   "schema_version": 3,
-  "release_version": "2026.10.03.3",
-  "date": "2026-10-03",
+  "release_version": "2026.10.07.1",
+  "date": "2026-10-07",
   "author": "Lucas Valbuena",
   "public_repository": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction",
   "papers": [
     {
       "title": "Collatz basin densities and canonical traces from first-passage stabilization",
       "source": "paper/tao-basin-densities.tex",
-      "source_sha256": "fd4d30029577df9cf33d873b548be204516e4e44da611e2ea21d9b542dce8923",
+      "source_sha256": "fa4e6c790002bdbb32c1679eb0b833574e110f0462f16a0e2303594137822850",
       "pdf": "paper/tao-basin-densities.pdf",
-      "pdf_sha256": "9c7b482983c118291643285b5be2e3f17d7b5f9fbd54a4367ddf127ecdad546c",
-      "pages": 34,
-      "numbered_results": 29,
+      "pdf_sha256": "eba6e34319e3f42c0ca2748b81349d808abbbcacdcd3bf38d9f946936eab13d3",
+      "pages": 37,
+      "numbered_results": 31,
       "theorem_map": "paper/basin-lean-claims.md",
-      "theorem_map_sha256": "5d29b0531a1669da7b1b13f508ed56f063008d06759e22606da8c959137a1ef7",
+      "theorem_map_sha256": "03ee66ad959fbabeff1c1a25facd81b1d023ee51a3fd128e3c9ee86f0f06039f",
       "main_result": "For one fixed positive integer K_seed and every positive target N prime to three, shortcut and ordinary predecessor natural densities are at least 3/(128*K_seed*N).",
       "credit": "The inverse-linear form was proposed by Wirsching. The proof uses Mazur's weighted predecessor construction and Said Duran's coalescence theorem, alongside the density and canonical-limit foundations described in the paper.",
-      "additional_results": "Uniform exact first-hit coefficient bound at positive odd targets, including periodic targets; actual finite cylinder-mass transport and energy decomposition; an exact finite-energy criterion equivalent to universal eventual periodicity, with unconditional normalized decay outside every diverging ancestor barrier. Unconditional raw occupation lower bound: for every b<1/log(4/3), the sum of actual weighted first-hit densities over odd N≤R is at least b log R for all sufficiently large integer R."
+      "additional_results": "Uniform exact first-hit coefficient bound at positive odd targets, including periodic targets; actual finite cylinder-mass transport and energy decomposition; an exact finite-energy criterion equivalent to universal eventual periodicity, with unconditional normalized decay outside every diverging ancestor barrier. Unconditional raw occupation lower bound: for every b<1/log(4/3), the sum of actual weighted first-hit densities over odd N≤R is at least b log R for all sufficiently large integer R. A specified injective odd orbit forces the additional lower coefficient D_u/(P_infinity(u)*log(3/2)), strictly positive at unit roots. Under the actual inverse Doob law at every positive odd nonperiodic unit root, log(Y_k)/k tends almost surely to log(4/3)."
     }
   ],
   "typesetting_tool": "Tectonic 0.17.0",
   "checks": {
     "manuscript": {
       "status": "PASS",
-      "report": "verification/manuscript-raw-occupation-validation-20261003.json",
-      "report_sha256": "31c93de35b716f5ae5ff008c723c42933def22f0afef967e9f9ee7651b8fb655",
-      "scope": "Parent semantic review of the sixteen new sources and integrated proof; final PDF review; preservation of all 28 previous statements and proofs and the earlier formal bundles; package and fresh-artifact verification. Automated review is not external peer review."
+      "report": "verification/manuscript-clock-excess-validation-20261007.json",
+      "report_sha256": "2de20dcb8b7e6e2e3a30d444d1e09c3a8a8cfcefa6feb9c6898c8661ba3e228b",
+      "scope": "Root semantic review of both proof packets and portable driver, current artifact rehashing and all-constant audit verification, manuscript preservation, link/reference checks, and PDF inspection. No additional full replay or human peer review is claimed."
     },
     "native_foundation": {
       "status": "PASS",
@@ -92,6 +92,52 @@
       "verifier_negative_controls_report": "formal-raw-occupation/recorded/portable-driver-hardened-checks.json",
       "verifier_negative_controls_report_sha256": "ae74a9d8a0faa3fd1f867d0093c6b9701758c238ccab8e95d60ea021edeebf81",
       "scope": "All 16 bundled application modules and their generated whole-module audit were freshly compiled and individually kernel-replayed. All 153 compiled constants, including private and generated constants, were audited. Exactly 913 required native objects were reused after source/object/import and dependency-fingerprint authentication before and after. Pinned Mathlib/Lean caches were reused; this is not a fresh rebuild of the entire upstream closure. No periodic-census or cylinder-energy application objects are used."
+    },
+    "raw_divergent_excess_extension": {
+      "status": "PASS",
+      "report": "formal-raw-divergent-excess/recorded/replay-record.json",
+      "report_sha256": "0c7bf8bbf99978101a3501607c22d05c9e71d01a40361454cb32b580f84e6e86",
+      "fresh_application_modules": 8,
+      "individual_application_kernel_replays": 8,
+      "generated_audit_compiled_and_kernel_replayed": true,
+      "successful_compiler_and_kernel_commands": 18,
+      "audited_constants": 63,
+      "audited_named_source_declarations": 26,
+      "audited_private_source_declarations": 4,
+      "audited_private_constants": 5,
+      "authenticated_raw_occupation_dependencies": 15,
+      "authenticated_native_dependencies": 1528,
+      "source_manifest": "formal-raw-divergent-excess/bundle-manifest.json",
+      "source_manifest_sha256": "4fe085b3d2694aa8eb9ab592dc6a6623da5a3d4149dd9c2ccf8202b99ba0dabf",
+      "complete_package_index": "formal-raw-divergent-excess/SHA256SUMS.json",
+      "complete_package_index_sha256": "d0f6a00f474d64ede5bfb23bc78ef497d0e7fc72f1f55216b596752f2ff14e4b",
+      "verifier_negative_controls_report": "formal-raw-divergent-excess/recorded/negative-controls.json",
+      "verifier_negative_controls_report_sha256": "73a9866053e81af8218768cff799aca2b94cb748bd9722e742e7fd2faeac3674",
+      "negative_controls": 13,
+      "scope": "All 8 frozen application sources and the generated all-constant audit were freshly compiled and individually kernel-replayed. All 63 compiled constants use only the three standard axioms. The exact 15-module raw-occupation and 1528-module native closures were reused after source/object/import/fingerprint checks before and after compilation. Both prerequisite records are explicitly pinned and share the same native replay. Pinned Lean/Mathlib caches are reused; this is not a full upstream rebuild."
+    },
+    "inverse_doob_clock_extension": {
+      "status": "PASS",
+      "report": "formal-inverse-doob-clock/recorded/replay-record.json",
+      "report_sha256": "80a8462ad6d0a926388d421cf155cfed6759d6bbc576812b5945bd6f990c212d",
+      "fresh_application_modules": 26,
+      "individual_application_kernel_replays": 26,
+      "generated_audit_compiled_and_kernel_replayed": true,
+      "successful_compiler_and_kernel_commands": 54,
+      "audited_constants": 307,
+      "audited_named_source_declarations": 195,
+      "audited_private_source_declarations": 0,
+      "audited_private_constants": 0,
+      "authenticated_raw_occupation_dependencies": 4,
+      "authenticated_native_dependencies": 1496,
+      "source_manifest": "formal-inverse-doob-clock/bundle-manifest.json",
+      "source_manifest_sha256": "5286334a072368bed6565dea18e22b81eade8b2722c983b6d828b05814cc4a25",
+      "complete_package_index": "formal-inverse-doob-clock/SHA256SUMS.json",
+      "complete_package_index_sha256": "cca560548e76dc8c5ddbdf265929bcbe4802c028efae634adcb4a55ca9967361",
+      "verifier_negative_controls_report": "formal-inverse-doob-clock/recorded/negative-controls.json",
+      "verifier_negative_controls_report_sha256": "f2d935a0a9c178c357f170a8aba472acd1430c1ae922d191b2d44c52d18fb2f0",
+      "negative_controls": 13,
+      "scope": "All 26 frozen application sources and the generated all-constant audit were freshly compiled and individually kernel-replayed. All 307 compiled constants use only the three standard axioms. The exact 4-module raw-occupation and 1496-module native closures were reused after source/object/import/fingerprint checks before and after compilation. Both prerequisite records are explicitly pinned and share the same native replay. Pinned Lean/Mathlib caches are reused; this is not a full upstream rebuild."
     }
   },
   "checked_theorem_dependency_axioms": [
@@ -103,6 +149,7 @@
   "limitations": [
     "Sublinear masked cylinder energy, equivalently universal eventual periodicity, remains unresolved. The equivalence does not exclude additional cycles.",
     "The raw occupation lower bound supplies no matching raw upper bound or convergence of the normalized sum; it does not exclude divergent orbits.",
+    "The inverse height clock is almost sure at each fixed positive odd nonperiodic unit root; no expected occupation limit or uniform integrability follows. The divergent-excess theorem retains the hypothetical injective orbit as an assumption.",
     "The lower-bound constants are fixed Lean choices; no numerical value or uniform finite-cutoff estimate is asserted.",
     "Novelty comparisons and automated semantic reviews are not external peer review or an exhaustive priority search.",
     "Verification scope is stated per record; source/object authentication is distinguished from fresh compilation and individual kernel replay."

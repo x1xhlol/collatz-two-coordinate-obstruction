@@ -1,0 +1,94 @@
+CLOCK AND DIVERGENT-EXCESS PUBLICATION: INDEPENDENT INTEGRATED REVIEW
+7 October 2026. Result: PASS for the frozen staged public integration.
+
+Reviewer and independence
+
+This review was performed by occupation_research_oct7. I did not author
+these inverse-clock or divergent-excess proof packets, their portable
+verifier, or the new public manuscript proofs. I authored separate,
+unpublished marked-phase research during this session; that report is
+not included in this publication. My review is automated and is not
+external human peer review or an endorsement by cited authors.
+
+Scope read
+
+I read all changed mathematical and scope prose in README.md,
+paper/basin-lean-claims.md, and paper/tao-basin-densities.tex against
+commit 951d99acceb8762f005a155b2f5689a4866d561d, including both new theorem
+statements and complete written proofs. I read both new bundle READMEs,
+recorded READMEs, source-license maps, manifest structures and pins,
+source-provenance records, the final artifact manifest, and the final
+root validation record. I also checked the actual endpoint declarations
+and the actual ladder probability interface supporting the manuscript.
+The separate complete packet/source review remains distinct evidence.
+
+Mathematical and editorial findings
+
+1. The divergent-excess theorem retains an actual injective shortcut
+orbit. Its extra coefficient is D_u/(P_infinity(u)*log(3/2)); positivity
+additionally uses a unit root. The residual is nonnegative on every
+source and its full source mean is retained, while pre-barrier and
+forward-prefix contributions are disjoint. The written order of limits
+and logarithmic prefix bound agree with the formal endpoint. No
+injective orbit is asserted to exist.
+
+2. The inverse-clock theorem concerns the actual continuing law at a
+fixed positive odd nonperiodic unit root. Nonperiodicity means no
+positive return at that root and permits later entry into a cycle.
+The proof uses the actual normalized harmonic predecessor row, fixed
+finite-prefix source total variation, finite last-visit dependence,
+shared ladder events, shifted bases, and countably interlaced grids.
+The source normalization 2/(D_n log X), the failure bound denominator
+D_n, and the final drift log(4/3) are consistent. The proof does not
+infer convergence of expected occupation from almost-sure growth.
+
+3. No matching raw upper bound, unmarked uniform integrability,
+universal eventual periodicity, extra-cycle exclusion, or full Collatz
+proof is claimed. The root and new bundle scope statements agree.
+
+4. All 29 previous numbered statement-and-proof blocks are byte
+preserved; all 29 old theorem-map rows are byte preserved. Exactly two
+numbered results were added, for a total of 31. The two blank lines
+which originally broke the newly appended Markdown table rows were
+reported to the author and removed before the final metadata freeze.
+There are no missing local Markdown links, duplicate LaTeX labels,
+undefined LaTeX references, or unresolved bibliography keys. The final
+PDF metadata reports 37 pages and Lucas Valbuena as author.
+
+5. The paper retains Lucas Valbuena attribution, its AI-use disclosure,
+and credits to Tao, Mazur, Said Duran, Wirsching, and the other cited
+contributors. Frozen source bytes and source-origin/license notices
+are preserved. Imported work is not presented as newly authored local
+proof. The review distinguishes automated review from peer review and
+fresh application replays from authenticated upstream cache reuse.
+
+Independent integrity checks
+
+Both portable --verify-package-only commands passed. Independently of
+those commands I rehashed every new bundle manifest/index entry and
+recorded checksum entry, every public application source against its
+research source and provenance pins, every recorded build/kernel log,
+all required native and raw source subsets, and the final manifest's
+path/hash pairs. The source modules total 34. The recorded all-constant
+audit logs were independently parsed: all 307 clock and 63 excess
+entries exactly match both the portable records and frozen research
+inventories, including five private excess constants. Their axioms
+are confined to propext, Classical.choice, and Quot.sound. Recorded
+command exit codes, warning fields, source inventories, dependency
+subsets, run manifests, replay hashes, and negative-control record
+pins agree. No compiled Lean objects or caches are distributed.
+
+The final artifact manifest and root-validation hashes match the
+explicit final-metadata notice. Their paper, PDF, README, and claim-map
+hashes match the current files. The artifact manifest explicitly has
+proves_collatz_conjecture=false. git diff --check passed.
+
+Verification boundaries
+
+I did not repeat a full Lean replay, rebuild upstream libraries,
+re-execute the negative controls, or independently render and visually
+inspect the PDF. The retained records and root validation identify
+those earlier executions and visual checks. I inspected their scope
+and authenticated the evidence; I do not represent those actions as
+new executions by this reviewer. No public source, prose, or manifest
+was modified during this review. Only these review records were added.

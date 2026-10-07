@@ -1,0 +1,70 @@
+Independent raw divergent-excess research driver review: PASS
+3 October 2026. Full source/process review before the fresh execution.
+
+Driver replay_raw_divergent_excess.py SHA256:
+c2519040057eff2198c9fa020aed46774cde42d710d8ed72e52282034207c689
+Supplement source manifest SHA256:
+f153366e6f779c3669b1d904467925c8ba62e296207a1b70910296a37328471c
+Source-inventory helper SHA256:
+7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3
+
+Pinned native manifest/replay and raw-occupation manifest/replay records
+are checked before use and after execution. The native and raw replay
+statuses must be PASS. Each of the 1602 native source/object pairs and
+all seventeen raw replay units (sixteen modules plus its generated audit)
+have their source and object bytes checked. The live frozen sixteen raw
+source files and prior raw replay driver are checked against the accepted
+raw record as well. This is authentication of previously verified replay
+objects; no fresh native or raw-base compilation is claimed here.
+
+The fixed Lean commit is checked and its actual version recorded. Mathlib
+and package source revisions, clean tracked states and package manifest
+are checked before and after the run. Library compiled caches are reused
+within the stated trusted prerequisite scope.
+
+The helper is loaded from one byte read: those exact bytes are hashed
+against the source manifest before being compiled and executed. No cached
+Python helper bytecode is imported. I inspected the complete driver
+before this change and the exact loader delta afterward. The helper
+source itself was fully read in the preceding raw-occupation driver
+reviews. Independent inventory extraction finds eight supplied modules,
+26 named and four private declarations, with no anonymous instances.
+The manifest hashes, source hashes and explicit import order all agree.
+
+The driver rejects unpinned or duplicate modules, out-of-order/unreplayed
+imports, bypass tokens and anonymous source instances. Output must be a
+new directory. Each supplied source is copied, checked against its pin,
+and checked again before fresh compilation. LEAN_PATH is constructed
+from the fresh supplementary objects, authenticated completed raw/native
+builds and pinned libraries. Inherited Lean path and plugin overrides are
+cleared. It includes no live raw/excess development object directory,
+periodic-census, energy or public application object directory.
+
+Actual upstream object inventory checked during this review: the raw
+build contains exactly its seventeen recorded units. The native build
+contains its 1602 recorded source modules plus the unimported RootAudit
+object; no added library-shadow module was present. The new source import
+checks do not permit RootAudit as an application dependency.
+
+Each of the eight supplementary modules and its generated audit is
+compiled and separately checked with leanchecker, yielding eighteen
+required successful commands. Compiler/kernel warnings or command
+failures abort. The generated audit visits every compiled constant owned
+by each supplementary module, including generated/private declarations,
+and permits only propext, Classical.choice and Quot.sound. It checks all
+named and private source declarations against the compiled inventory.
+
+Before PASS, the driver repeats dependency authentication and rechecks
+the source manifest, helper, live supplementary sources, copied sources,
+fresh objects, compiler/kernel logs and its own script hash. The record
+includes all counts, declarations, source inventories, pins, paths and
+precise additive-replay scope. The final theorem scope is described
+accurately: conditional actual raw excess for odd injective roots, positive
+for unit roots, with no existence assertion or occupation upper bound.
+
+This certificate approves the reviewed driver for its stated fixed
+research environment. It does not claim that the fresh run has already
+completed, nor a portable verifier or an upstream rebuild. Its subsequent
+execution and completed record require their own evidence. All eight
+Lean sources and the sixteen-source public baseline packet were unchanged
+by this review.

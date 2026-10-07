@@ -1,0 +1,15 @@
+{
+  "certificate_sha256": "6501035c7ee460bc01294dc7b1d1710d27b5fddad2ff70b3cf13f3b27996edbf",
+  "kernel_replay": "separate pending",
+  "kind": "independent complete source semantic review",
+  "modules": {
+    "AlignedResidualOccupationLower": "5fa1a104c45323fdc5b21e4542a2550d62a20dcd4e3028ff680b41610c5dd9ff",
+    "AsymptoticResidualWithPrefix": "dbb3888a094049b1aa709adb0b9bc32be46a701b753ffb7694083592474bb1a8",
+    "FiniteObservableEventLower": "ed2babe4a047258ee46b085c55a2358ea0864754be038be9a4a4314d64c6473f",
+    "ForwardOddPrefix": "0926f625c96016ed45ff09e123932d42c08b4034fe88c32153318b4e6fc8293c",
+    "ResidualOccupationSourceMean": "c82f171fc761ad3488a3761400dfb4f71501ced5a10bb6c4fdaa7ce40b36e15d",
+    "UniformResidualDensityLower": "66933e9291cbddb2dba35fae8f0e86ebe3fb86800cfd5620d29b60c1b8aba7c8"
+  },
+  "scope": "six research-only residual/prefix modules; explicit prefix-rate and growth hypotheses remain at adapter endpoint",
+  "status": "PASS"
+}

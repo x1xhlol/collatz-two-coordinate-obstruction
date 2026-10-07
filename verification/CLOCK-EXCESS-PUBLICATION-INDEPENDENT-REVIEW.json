@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-07T10:49:25.453716+00:00",
+  "reviewer": "occupation_research_oct7",
+  "baseline_commit": "951d99acceb8762f005a155b2f5689a4866d561d",
+  "scope": "Independent integrated mathematical/editorial read and source/evidence integrity review; no new full Lean replay, upstream rebuild, negative-control execution, or independent PDF visual inspection.",
+  "authorship_boundary": "Reviewer did not author the two proof packets, portable verifier, or new manuscript proofs; separately authored unpublished marked-phase research is outside this release.",
+  "review_sha256": "d99ec0eef5cc4008eca8dc4678f0214de5eacbbce0e4adb7ee40e83e787d34eb",
+  "artifact_manifest_sha256": "a8cf31c0b9b6e941215a002549a1d95d9591771504855bcf2da866604477654e",
+  "root_validation_sha256": "2de20dcb8b7e6e2e3a30d444d1e09c3a8a8cfcefa6feb9c6898c8661ba3e228b",
+  "artifacts_sha256": {
+    "README.md": "75f37a98b0629199d595f28ca6deb6d9c04911856507ce0aa992c0157161ea3f",
+    "paper/tao-basin-densities.tex": "fa4e6c790002bdbb32c1679eb0b833574e110f0462f16a0e2303594137822850",
+    "paper/tao-basin-densities.pdf": "eba6e34319e3f42c0ca2748b81349d808abbbcacdcd3bf38d9f946936eab13d3",
+    "paper/basin-lean-claims.md": "03ee66ad959fbabeff1c1a25facd81b1d023ee51a3fd128e3c9ee86f0f06039f"
+  },
+  "old_statement_and_proof_blocks_preserved": 29,
+  "old_claim_rows_preserved": 29,
+  "numbered_results": 31,
+  "pdf_pages": 37,
+  "table_breaks_corrected": true,
+  "missing_local_links": [],
+  "undefined_references": [],
+  "duplicate_labels": [],
+  "unresolved_bibliography_keys": [],
+  "artifact_manifest_path_hash_pairs_checked": 25,
+  "packets": {
+    "formal-inverse-doob-clock": {
+      "modules": 26,
+      "compiled_constants": 307,
+      "private_compiled_constants": 0,
+      "native_source_subset": 1496,
+      "raw_source_subset": 4,
+      "record_sha256": "80a8462ad6d0a926388d421cf155cfed6759d6bbc576812b5945bd6f990c212d",
+      "manifest_sha256": "5286334a072368bed6565dea18e22b81eade8b2722c983b6d828b05814cc4a25",
+      "package_index_sha256": "cca560548e76dc8c5ddbdf265929bcbe4802c028efae634adcb4a55ca9967361",
+      "research_declarations_exact_match": true,
+      "audit_log_declarations_exact_match": true,
+      "package_only_check": "PASS",
+      "negative_control_evidence_checks": 13
+    },
+    "formal-raw-divergent-excess": {
+      "modules": 8,
+      "compiled_constants": 63,
+      "private_compiled_constants": 5,
+      "native_source_subset": 1528,
+      "raw_source_subset": 15,
+      "record_sha256": "0c7bf8bbf99978101a3501607c22d05c9e71d01a40361454cb32b580f84e6e86",
+      "manifest_sha256": "4fe085b3d2694aa8eb9ab592dc6a6623da5a3d4149dd9c2ccf8202b99ba0dabf",
+      "package_index_sha256": "d0f6a00f474d64ede5bfb23bc78ef497d0e7fc72f1f55216b596752f2ff14e4b",
+      "research_declarations_exact_match": true,
+      "audit_log_declarations_exact_match": true,
+      "package_only_check": "PASS",
+      "negative_control_evidence_checks": 13
+    }
+  },
+  "only_standard_axioms": true,
+  "proves_collatz_conjecture": false,
+  "public_sources_modified": false,
+  "git_diff_check": "PASS",
+  "limits": [
+    "No matching raw occupation upper bound or expected occupation convergence.",
+    "Injective forward orbit remains a hypothesis.",
+    "Inverse AS law is fixed-root and nonperiodic-unit scoped.",
+    "Additional positive cycles remain unresolved."
+  ]
+}

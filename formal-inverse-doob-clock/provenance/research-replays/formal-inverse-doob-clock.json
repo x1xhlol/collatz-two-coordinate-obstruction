@@ -1,0 +1,4300 @@
+{
+  "status": "PASS",
+  "modules": [
+    "ActualOddInverseRow",
+    "ActualInverseDoobLaw",
+    "NonperiodicCylinderSource",
+    "InverseBranchCylinder",
+    "FinitePathCylinder",
+    "ActualTransitionAtom",
+    "NonperiodicFiniteCylinder",
+    "ActualPathSupport",
+    "FinitePrefixIndex",
+    "CountableScheffe",
+    "CountableMassSqueeze",
+    "FinitePrefixSourceMass",
+    "SourceSuffixPrefix",
+    "FinitePrefixSourceBound",
+    "ActualFinitePrefixTV",
+    "ActualPrefixEvents",
+    "LastVisitGeometry",
+    "ActualLastVisitLaw",
+    "InverseClockGeometry",
+    "ActualInversePathGrowth",
+    "InverseClockRefinement",
+    "LadderClockLimit",
+    "FiniteLadderClockEvent",
+    "SourceLastVisitClock",
+    "ActualLadderClock",
+    "ActualInverseHeightClock"
+  ],
+  "results": {
+    "ActualOddInverseRow": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.98876648186706,
+      "source_sha256": "6cbd562e86a3122eb6ed738ae7475b23516cc3ef88b534086dce52ec1945b31d",
+      "object_sha256": "d9e6e8efb6021e0e6f2982eb1589d673072e1a1f4a89c224e22c56e853759cad",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.180531655903906,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ActualInverseDoobLaw": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.997430064948276,
+      "source_sha256": "2eeefc2815ef8c8c4ad895e0142b70b5bc768d3ebd02199b6cd7780a29fff74f",
+      "object_sha256": "773da3aab65e247b2e57d7361b62d8eea2416a02e8c7307b63d8a34aaaaf513f",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.255351555999368,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "NonperiodicCylinderSource": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.506741899996996,
+      "source_sha256": "1d6df8b1d3e73ecf8aa223066c6a574252ea1d0582aef88083fcf4538c579c7d",
+      "object_sha256": "74e25a091cd58645a83fbec15bdad12ba123f9a00025c58cdc8c78b545b19cc6",
+      "compile_log_sha256": "7512b1cd139ccdd3516975d5e0d371239c94baa5a8f12681c45c86e1fba030f9",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.064397545997053,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "InverseBranchCylinder": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.479760758113116,
+      "source_sha256": "39801276b9fe4575727adef2cbb24afe87fc55e191ab76be55d3b3a504b8da23",
+      "object_sha256": "9c981819295165e8e72014bfeef781a6316ef5cbd862314918cd1b24b072649c",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.978814534144476,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "FinitePathCylinder": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.709737248020247,
+      "source_sha256": "b15ba11d3738c7aa5a887dd454ca95f76a1d68e97fb802c5e1de42a2fffda310",
+      "object_sha256": "4c1a6c499629c057bbef3b18576cbe2adbbffdf9b8bface01fdb2c93985590c2",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.984048057114705,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ActualTransitionAtom": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.183690163074061,
+      "source_sha256": "b843925064ab1c529159b692ec39adb55c20577ae68a8c8bb295af0d57eecd27",
+      "object_sha256": "006bb9f2c58754430e56edc029b63537874fab12312b1342a4686597b3e72437",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.96167332585901,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "NonperiodicFiniteCylinder": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.090548294829205,
+      "source_sha256": "7302c98a17d70869ed1d0e2e2f77d9e19a22d8e991606682ace47cc95634d782",
+      "object_sha256": "2397f791c392afc3e373e52099ecb1a49fdf04942af37603d474caa3d3250135",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.281582583906129,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ActualPathSupport": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.51257969904691,
+      "source_sha256": "473a3705a7c6cea6bdaa118a362e6be3b4a045881a540bced2fd8b5361917f41",
+      "object_sha256": "cdd6e13e869fa0ccf7d6813e6fac1727397effcd8062264504f3f034fbdab1e2",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.122536082053557,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "FinitePrefixIndex": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.628547318978235,
+      "source_sha256": "102354a9eb7663dab187ebd92a98fc247e0912f40d397f15a722e2ad3423ff60",
+      "object_sha256": "b2378068379d88b51aa0194c99f1ef8a98557b5578c2324ecc0db65892c34850",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.034638707991689,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "CountableScheffe": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.065155236050487,
+      "source_sha256": "dc009db4644f77012ab08d0b36d37f74b5e2986ee920b65f4226f38f1be427e5",
+      "object_sha256": "248ddb54ebabc72a9322bc17921249db7c72dae4f20c9ef66bc14a8da76a786b",
+      "compile_log_sha256": "7e593d1b4c9c5704dca83f1138266ec062d50f5bbfc20fd3754ba5582a78db01",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.609647908015177,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "CountableMassSqueeze": {
+      "compile_exit_code": 0,
+      "compile_seconds": 3.834551492938772,
+      "source_sha256": "c4dfac497e48c0f489fe18836e95461d9a4ff20e701b17aa65a77c0e0e10be14",
+      "object_sha256": "a23ae6f9dddec9e5a6f4b8baeb39ff4f19d31d6393a8be6b8167940700f74b1e",
+      "compile_log_sha256": "3d542efe189f614511567814957b78656ab200fbd23fae7875e5b43fb4df44e9",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.644481664989144,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "FinitePrefixSourceMass": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.638775377999991,
+      "source_sha256": "1ac25bf1cc69c839b2195ae4778ec769214ef63ec673bab420153d6026ee35f3",
+      "object_sha256": "602e4c5f7d036356fc319104b63cc24136e2ef6779170edc736a560a4bc966c8",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.157330128131434,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "SourceSuffixPrefix": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.8714206260629,
+      "source_sha256": "0d36358b037c1cd7a0e691401eed2d56dbfe6b34ef5038dceaa2b1c77cab379a",
+      "object_sha256": "d065958099fec09138d9597bb6a8130ea76c80c65d60ba4941d47c33ca6a3994",
+      "compile_log_sha256": "ac04b2d88a35002d800564c319cdccca3b6f1b7a5e4d72711dd999e103c3382d",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.252965411171317,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "FinitePrefixSourceBound": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.605063383933157,
+      "source_sha256": "a3febecd3f2bfaf29c696cd997eace4e02aa41b77658fdc47878417c9e4d9ddf",
+      "object_sha256": "ae718977df1060a606b58731829557cb381813a40cbc97929fc5db5b0e5a14ef",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 13.277402124134824,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ActualFinitePrefixTV": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.647494398057461,
+      "source_sha256": "8a57f34dbe70a2a1334010b41a5d1455bc99e0c8ad956d36092f4dd6fbe4d853",
+      "object_sha256": "b9ab308be436953b04643b96c286ae882a5854c07c3685621e2f0129175ae507",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.495121320011094,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ActualPrefixEvents": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.331338526215404,
+      "source_sha256": "59a30965d76bb10d54f0325dcb81218761cf6d13dea044f33c5e9c82dc701999",
+      "object_sha256": "0ee725d46ed516d35dc50e1a753bd0aae7c62a1b6458cc50469e4ae1b4a643f6",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.507646111072972,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LastVisitGeometry": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.333503406960517,
+      "source_sha256": "7a2a23d3c41756df89710aebf22139e997c39720306d80667efcf873894dc249",
+      "object_sha256": "2f0a63144833f016be149f1a9bf1ab6ea4ae7eaf407ae4df6ee3b6a491b63660",
+      "compile_log_sha256": "961577206a9d7e0cb7b3f5a0406c1cd9a6289dba6796ffc6faf87120d0c37e59",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.449029677780345,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ActualLastVisitLaw": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.32421093294397,
+      "source_sha256": "303201a60adc8ee185b47617b278917ef62ae5df45caae65f3c6c7d4fe3b446c",
+      "object_sha256": "f4ac25893a734cb98fac6062db3cf035ee17e67b63eb4f9465fe94f64bd576e6",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.223955617984757,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "InverseClockGeometry": {
+      "compile_exit_code": 0,
+      "compile_seconds": 12.764683689922094,
+      "source_sha256": "59d2e21cc080d13d3b25ebe4495b60842c34156207875fa7224a9919a9fd341e",
+      "object_sha256": "f8783a82ab7dc3bdf6f61b8ae95beae529030c7be7e3f92a5ac1a7cbabba9757",
+      "compile_log_sha256": "675662e1bc42f42052667cd8b899bbf82d748e2b3ffccfaa73f8babd78a901dc",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.8905061178375036,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ActualInversePathGrowth": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.607555877882987,
+      "source_sha256": "e4f5285c219f58b8c3258e7d2457e94c35380619bad304d92c4c6bfc35234901",
+      "object_sha256": "d8d0da2a5bc8868cca856b142312faa831f2fe6fecf8b940af3f87dab714bbf9",
+      "compile_log_sha256": "7cbbd4a4c0eefaef255da317327ab2e5de16fd895ec9454333b73f0a504a8bd8",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.131301359040663,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "InverseClockRefinement": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.402418612036854,
+      "source_sha256": "1f9dd6c1da7a1e7afb04f12209ed23176f205e1e63f15392aab0aaea3b05f496",
+      "object_sha256": "9fb0152b48fef582543538e2c868f931a5925ab58ee54d749ef3d3a46bbfbefe",
+      "compile_log_sha256": "12985c94b5a907131017d4bfec177ed48b934e6b10fa37d552db5bc396a04f36",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.866813773056492,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LadderClockLimit": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.5916277770884335,
+      "source_sha256": "74a0f51c3a03aa4307711998a9e489ad1ea0ce39a3cd9f9fe96c19ab3aa04c5b",
+      "object_sha256": "f6e0bd8c789cee26e9a45ce8ae6f4072df3f35a74a40af1e2786725461c8de1f",
+      "compile_log_sha256": "645cef33c5e0b380d73eb55123541c1d56dec886068fffdb7ddabd2d36a74718",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.234523497056216,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "FiniteLadderClockEvent": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.096127361990511,
+      "source_sha256": "b9a958c427709f56da640f3a19c82c5cb7f0e01ff321a81602aced10630ac0cf",
+      "object_sha256": "0685152f5d7ae26faddc925d62e0b8c45edafab5f5d4338db2a771688b131446",
+      "compile_log_sha256": "9abab02685e1dfedf07b8760ac66efd0c940d723d45182bbbcd7d41de3c3cd02",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.270214925985783,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "SourceLastVisitClock": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.235057790065184,
+      "source_sha256": "1e8b68e74af065effed5f6ac6c26de8df4c6adb438f3f5978764cea675692a9e",
+      "object_sha256": "1af6161249e2c577d84a98796805debb1507501beb0e7b67edafb1ef89168d2b",
+      "compile_log_sha256": "e6f190cd1ca5fb870c1c9dada12c972d6ebb8ef939b489f4fc6063717e4eb422",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.31020179297775,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ActualLadderClock": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.602833695011213,
+      "source_sha256": "61fe00f6fcd76bb6d5070b9938fd32d7de72f2f91d26909a4fec1eff6f0f46ea",
+      "object_sha256": "99ffc84e8c44cca22db2ab0e6571d867226c20b9c5c1423673c9396d69b8aac0",
+      "compile_log_sha256": "6cf8490e4f05670ba754b5eaff43824aac1e38a348730aebe72425d7c395e9f2",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.196286947000772,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ActualInverseHeightClock": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.757981139002368,
+      "source_sha256": "47f870a0d3b377a13d3ec50fc03c94e02ea78d01f04db60e31413271ec0e381c",
+      "object_sha256": "e03cd80ba6dcea21ae405e0f96732dceb7daa300d70d1093086a736c270499f9",
+      "compile_log_sha256": "02db98eabcc36b9703030050ccf2b187afecee402efde0325dc0fff856a2a4fb",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.036066916072741,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "InverseDoobClockAudit": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.1953311818651855,
+      "source_sha256": "e540f9c9bfcebc70db1eda825d969a464e82e30d31c25adbc4a8bd927d9deaed",
+      "object_sha256": "dd5cb2b96bfee38b01252a0247ebab82a40a29a01760f5f0106961d9304fc428",
+      "compile_log_sha256": "ce4e2deb3db38afd7cce10383285571465c0753560360493f07278a0a2e2624a",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.035400851862505,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "source_hashes": {
+    "ActualOddInverseRow": "6cbd562e86a3122eb6ed738ae7475b23516cc3ef88b534086dce52ec1945b31d",
+    "ActualInverseDoobLaw": "2eeefc2815ef8c8c4ad895e0142b70b5bc768d3ebd02199b6cd7780a29fff74f",
+    "NonperiodicCylinderSource": "1d6df8b1d3e73ecf8aa223066c6a574252ea1d0582aef88083fcf4538c579c7d",
+    "InverseBranchCylinder": "39801276b9fe4575727adef2cbb24afe87fc55e191ab76be55d3b3a504b8da23",
+    "FinitePathCylinder": "b15ba11d3738c7aa5a887dd454ca95f76a1d68e97fb802c5e1de42a2fffda310",
+    "ActualTransitionAtom": "b843925064ab1c529159b692ec39adb55c20577ae68a8c8bb295af0d57eecd27",
+    "NonperiodicFiniteCylinder": "7302c98a17d70869ed1d0e2e2f77d9e19a22d8e991606682ace47cc95634d782",
+    "ActualPathSupport": "473a3705a7c6cea6bdaa118a362e6be3b4a045881a540bced2fd8b5361917f41",
+    "FinitePrefixIndex": "102354a9eb7663dab187ebd92a98fc247e0912f40d397f15a722e2ad3423ff60",
+    "CountableScheffe": "dc009db4644f77012ab08d0b36d37f74b5e2986ee920b65f4226f38f1be427e5",
+    "CountableMassSqueeze": "c4dfac497e48c0f489fe18836e95461d9a4ff20e701b17aa65a77c0e0e10be14",
+    "FinitePrefixSourceMass": "1ac25bf1cc69c839b2195ae4778ec769214ef63ec673bab420153d6026ee35f3",
+    "SourceSuffixPrefix": "0d36358b037c1cd7a0e691401eed2d56dbfe6b34ef5038dceaa2b1c77cab379a",
+    "FinitePrefixSourceBound": "a3febecd3f2bfaf29c696cd997eace4e02aa41b77658fdc47878417c9e4d9ddf",
+    "ActualFinitePrefixTV": "8a57f34dbe70a2a1334010b41a5d1455bc99e0c8ad956d36092f4dd6fbe4d853",
+    "ActualPrefixEvents": "59a30965d76bb10d54f0325dcb81218761cf6d13dea044f33c5e9c82dc701999",
+    "LastVisitGeometry": "7a2a23d3c41756df89710aebf22139e997c39720306d80667efcf873894dc249",
+    "ActualLastVisitLaw": "303201a60adc8ee185b47617b278917ef62ae5df45caae65f3c6c7d4fe3b446c",
+    "InverseClockGeometry": "59d2e21cc080d13d3b25ebe4495b60842c34156207875fa7224a9919a9fd341e",
+    "ActualInversePathGrowth": "e4f5285c219f58b8c3258e7d2457e94c35380619bad304d92c4c6bfc35234901",
+    "InverseClockRefinement": "1f9dd6c1da7a1e7afb04f12209ed23176f205e1e63f15392aab0aaea3b05f496",
+    "LadderClockLimit": "74a0f51c3a03aa4307711998a9e489ad1ea0ce39a3cd9f9fe96c19ab3aa04c5b",
+    "FiniteLadderClockEvent": "b9a958c427709f56da640f3a19c82c5cb7f0e01ff321a81602aced10630ac0cf",
+    "SourceLastVisitClock": "1e8b68e74af065effed5f6ac6c26de8df4c6adb438f3f5978764cea675692a9e",
+    "ActualLadderClock": "61fe00f6fcd76bb6d5070b9938fd32d7de72f2f91d26909a4fec1eff6f0f46ea",
+    "ActualInverseHeightClock": "47f870a0d3b377a13d3ec50fc03c94e02ea78d01f04db60e31413271ec0e381c"
+  },
+  "declarations": {
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass_nonneg": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_potential_remainder_tendsto_zero._simp_1_3": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.iterate_dyadic": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass._proof_1": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass._proof_2": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_potential_remainder_tendsto_zero._simp_1_6": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_potential_remainder_tendsto_zero._simp_1_7": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_potential_remainder_tendsto_zero._simp_1_4": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_potential_remainder_tendsto_zero._simp_1_2": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.potential_pos_of_unit": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.potential": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass_hasSum": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_potential_remainder_tendsto_zero._simp_1_5": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_row_telescope": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_potential_remainder_tendsto_zero": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.iterate_dyadic._proof_1_1": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.potential_nonneg": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_potential_remainder_tendsto_zero._simp_1_1": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass_tsum": {
+      "module": "ActualOddInverseRow",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_support": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF_support": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF._proof_2": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF.congr_simp": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.historyKernel_isMarkov": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF.eq_1": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.historyKernel._proof_2": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.historyKernel._proof_1": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF._proof_1": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass.eq_1": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_history_successor": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionKernel_isMarkov": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.historyKernel": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF_of_unit": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF._proof_1": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": []
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_apply": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionKernel._proof_1": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionKernel": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_isProbability": {
+      "module": "ActualInverseDoobLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.normalized_suffixSourceWeight_mean": {
+      "module": "NonperiodicCylinderSource",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.firstHit_of_nonperiodic": {
+      "module": "NonperiodicCylinderSource",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.Nonperiodic": {
+      "module": "NonperiodicCylinderSource",
+      "visibility": "public",
+      "axioms": []
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.nonperiodic_ancestor": {
+      "module": "NonperiodicCylinderSource",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.firstHitWeight_through_nonperiodic": {
+      "module": "NonperiodicCylinderSource",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.odd_suffixSourceWeight_mean": {
+      "module": "NonperiodicCylinderSource",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.suffixSourceWeight.eq_1": {
+      "module": "NonperiodicCylinderSource",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.suffixSourceWeight": {
+      "module": "NonperiodicCylinderSource",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.suffixSourceWeight_factor": {
+      "module": "NonperiodicCylinderSource",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_nonperiodic_cylinder._simp_1_3": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint_block": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_nonperiodic_cylinder._simp_1_1": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint_block._proof_1_1": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.potential.eq_1": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_nonperiodic_cylinder._simp_1_5": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.potential_of_nonperiodic": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass_eq_weighted_density": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_nonperiodic_cylinder._simp_1_2": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_nonperiodic_cylinder._simp_1_4": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_nonperiodic_cylinder._simp_1_7": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_nonperiodic_cylinder._simp_1_6": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_source_limit": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_nonperiodic_cylinder": {
+      "module": "InverseBranchCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_finite_projection": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_prefix_succ._proof_1_1": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSet": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": []
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_eq_traj": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_prefixSet": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_prefix_product": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_prefix_zero._proof_1_1": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_prefix_succ": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSet_eq_preimage": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw.eq_1": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_prefix_zero": {
+      "module": "FinitePathCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF_inverseEndpoint": {
+      "module": "ActualTransitionAtom",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint_injective_on_guard": {
+      "module": "ActualTransitionAtom",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF_nonperiodic_atom": {
+      "module": "ActualTransitionAtom",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._simp_1_6": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._simp_1_7": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.ancestor._proof_1_2": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._simp_1_5": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._simp_1_8": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._simp_1_9": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.restrict": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._simp_1_11": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_source_limit": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.ancestor": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._proof_1_4": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.ancestor._proof_1_1": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._simp_1_10": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._proof_1_2": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._proof_1_3": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder._proof_1_1": {
+      "module": "NonperiodicFiniteCylinder",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_initial_ae": {
+      "module": "ActualPathSupport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_step_support_ae": {
+      "module": "ActualPathSupport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_actual_steps_ae": {
+      "module": "ActualPathSupport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF_support_ae": {
+      "module": "ActualPathSupport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_all_step_support_ae": {
+      "module": "ActualPathSupport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_ae": {
+      "module": "ActualPathSupport",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF._proof_2": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF._proof_3": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.PrefixIndex": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF._proof_1": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF_toReal_summable": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.congr._proof_1_1": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF_toReal_tsum": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixExtend._proof_1": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixExtend_apply": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.congr._proof_1_2": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF_apply": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF_eq_zero_of_invalid": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixExtend": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.restrict_prefixExtend": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.congr": {
+      "module": "FinitePrefixIndex",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "ActualInverseDoob.tendsto_tsum_abs_sub_of_nonneg": {
+      "module": "CountableScheffe",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "ActualInverseDoob.tendsto_tsum_of_nonneg_of_mass_upper_bound": {
+      "module": "CountableMassSqueeze",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "ActualInverseDoob.tendsto_tsum_abs_sub_of_nonneg_of_mass_upper_bound": {
+      "module": "CountableMassSqueeze",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_of_invalid": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.fullSourceMass": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_nonneg": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight.eq_1": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_of_valid": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_nonneg": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.fullSourceMass_tendsto": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass.eq_1": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass._proof_1": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_tendsto": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.logarithmicCumulative_sum": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight": {
+      "module": "FinitePrefixSourceMass",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.odd": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.oddCount_strict_of_odd_endpoint._proof_1_3": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.suffix_hit_clock._proof_1_3": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.oddCount_strict_of_odd_endpoint._proof_1_2": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.hit_clock": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.suffix_hit_clock._proof_1_2": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.odd._proof_1_1": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.odd_endpoint_time_eq_of_oddCount_eq._proof_1_1": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.suffix_hit_clock._proof_1_4": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.odd_endpoint_time_eq_of_oddCount_eq._proof_1_2": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.suffix_hit_clock": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.oddCount_strict_of_odd_endpoint": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.odd_endpoint_time_eq_of_oddCount_eq": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.suffix_hit_clock._proof_1_1": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.oddCount_strict_of_odd_endpoint._proof_1_1": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.eq_of_common_ancestor": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.endpoint_eq_of_common_ancestor._proof_1_1": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.suffix_hit_clock._proof_1_5": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.endpoint_eq_of_common_ancestor": {
+      "module": "SourceSuffixPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_summable": {
+      "module": "FinitePrefixSourceBound",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixIndex_eq_of_common_ancestor": {
+      "module": "FinitePrefixSourceBound",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_tsum_le": {
+      "module": "FinitePrefixSourceBound",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_sum_le": {
+      "module": "FinitePrefixSourceBound",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.fullSourceMass.eq_1": {
+      "module": "FinitePrefixSourceBound",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_sum_le": {
+      "module": "FinitePrefixSourceBound",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_sum_le._simp_1_2": {
+      "module": "FinitePrefixSourceBound",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_prefix_source_mass_tendsto_one": {
+      "module": "ActualFinitePrefixTV",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_fixed_prefix_total_variation": {
+      "module": "ActualFinitePrefixTV",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_prefix_event_probability_le_of_eventual_add": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.abs_tsum_indicator_sub_le._simp_1_1": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.abs_tsum_indicator_sub_le": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixEventSourceMass.eq_1": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_nonzero": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_prefixEvent": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixEventSourceMass": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_event_sum_le": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixEvent_probability_tsum": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixEventSourceMass_le_bad": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.abs_tsum_indicator_sub_le._simp_1_2": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixEvent": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_prefix_event_source_limit": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixEvent.eq_1": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finset_sum_le_of_unique_nonzero": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_prefix_event_probability_le": {
+      "module": "ActualPrefixEvents",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.no_visit_after_bound": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit_congr": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.le_finiteLastVisit._proof_1_1": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_eq_prefixFunction": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.lastVisit_spec": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.lastVisit_mono": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit_mem._simp_1_1": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.hit_clock._proof_1_1": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.boundedHitEndpoints": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit_mem": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.visit_depth_le._proof_1_1": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_lastVisitIndex_event": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_le_bound": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.le_lastVisit_of_visit": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.measurable_lastVisitIndex": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitPrefixFunction._proof_1": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitPrefixFunction": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.finite_visits": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_event_preimage": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_prefix_congr": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.odd": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit_mem._simp_1_2": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.firstHitOddDepth_eq": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitDepthBound": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.le_lastVisit_iff": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit_le": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit_mem._proof_1_3": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.le_finiteLastVisit": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.injective": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.hit_clock": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.lastVisit_spec._proof_1_1": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.no_visit_after_bound._proof_1_1": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.visit_depth_le": {
+      "module": "LastVisitGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_injective_ae": {
+      "module": "ActualLastVisitLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_lastVisit_spec_ae": {
+      "module": "ActualLastVisitLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_isActualInversePath_ae": {
+      "module": "ActualLastVisitLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_finite_visits_ae": {
+      "module": "ActualLastVisitLaw",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.height_bounds_of_uniform_last_clocks._proof_1_4": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.height_bounds_of_uniform_last_clocks._proof_1_1": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.bracket_height_bounds._simp_1_4": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.bracket_height_bounds._simp_1_7": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.bracket_height_bounds._simp_1_2": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.bracket_height_bounds._simp_1_6": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.eventual_height_bounds_of_eventual_last_clocks": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.eventual_height_bounds_of_eventual_last_clocks._proof_1_1": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.height_bounds_of_uniform_last_clocks": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.bracket_height_bounds._simp_1_3": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.bracket_height_bounds._simp_1_5": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.height_bounds_of_uniform_last_clocks._proof_1_2": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.height_bounds_of_uniform_last_clocks._proof_1_3": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.eventual_height_band_of_last_clock_limit": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.bracket_height_bounds._simp_1_1": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.bracket_height_bounds": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.height_clock_of_refining_last_clock_grids": {
+      "module": "InverseClockGeometry",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.log_growth_over_gap": {
+      "module": "ActualInversePathGrowth",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.log_three_halves_nonneg": {
+      "module": "ActualInversePathGrowth",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.log_backward_growth": {
+      "module": "ActualInversePathGrowth",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint_forward_growth._proof_1_1": {
+      "module": "ActualInversePathGrowth",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.log_growth_over_gap._proof_1_1": {
+      "module": "ActualInversePathGrowth",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint_forward_growth": {
+      "module": "ActualInversePathGrowth",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint_log_forward_growth": {
+      "module": "ActualInversePathGrowth",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.interlaced_exp_power": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.tendsto_of_finite_interlacing": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.ae_refined_clock_limits": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio.eq_1": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.ae_height_clock_of_reference_limits": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio_pow._proof_1_1": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio_pow": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio_tendsto_one": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refined_clock_limit_of_reference_limits._proof_1_1": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refined_clock_limit_of_reference_limits": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio_one_lt": {
+      "module": "InverseClockRefinement",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_ladderClockLimitEvent": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimitEvent.eq_1": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimitEvent": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderLastClock.eq_1": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderLastClockError": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimit_of_all_errors": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimitEvent_shift": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderLastClockError._proof_1": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderClockEvent": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderClockEvent_antitone": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimit_compl_le_of_finite_errors": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ae_ladderClockLimit_of_shifted_finite_errors": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderLastClockError._proof_2": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.clockScale_compose": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderLastClockError_normalized_tendsto_zero": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderLastClock": {
+      "module": "LadderClockLimit",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderClock_failure_probability_of_source_good": {
+      "module": "FiniteLadderClockEvent",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitDepthBound_le_ladderPrefixDepth._proof_1_1": {
+      "module": "FiniteLadderClockEvent",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderClockEvent_compl_eq_prefixEvent": {
+      "module": "FiniteLadderClockEvent",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderBadPrefixes": {
+      "module": "FiniteLadderClockEvent",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.logarithmicCumulative_oddEventWeight": {
+      "module": "FiniteLadderClockEvent",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderClockEvent_prefix_congr": {
+      "module": "FiniteLadderClockEvent",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_finiteLadderClockEvent": {
+      "module": "FiniteLadderClockEvent",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderPrefixDepth": {
+      "module": "FiniteLadderClockEvent",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitDepthBound_le_ladderPrefixDepth": {
+      "module": "FiniteLadderClockEvent",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.oddEventWeight_odd_mask": {
+      "module": "FiniteLadderClockEvent",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.visit_depth_le": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.source_first_passage_eq_reverse_lastVisit._proof_1_2": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.source_first_passage_eq_reverse_lastVisit._proof_1_3": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.le_source_depth": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.syracuse_of_odd_shortcut_hit": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.source_syracuse_suffix": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.firstHitOddDepth_eq": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.source_depth_split": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.le_source_depth._proof_1_1": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.source_syracuse_suffix._proof_1_1": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.source_first_passage_eq_reverse_lastVisit._proof_1_1": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.source_first_passage_eq_reverse_lastVisit": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.source_first_passage_eq_reverse_lastVisit._proof_1_4": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.syracuse_firstHitOddDepth": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.source_barrier_clock_add_lastVisit": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.firstHitOddDepth_syracuse_tail": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.visit_depth_le._proof_1_1": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.le_lastVisit_of_visit": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.lastVisit_mem": {
+      "module": "SourceLastVisitClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.validPrefix_finiteLadderClockEvent_of_source_good._proof_1_2": {
+      "module": "ActualLadderClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.validPrefix_finiteLadderClockEvent_of_source_good": {
+      "module": "ActualLadderClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_finite_ladder_clock_failure_probability": {
+      "module": "ActualLadderClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_reference_ladder_clock_ae": {
+      "module": "ActualLadderClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.validPrefix_finiteLadderClockEvent_of_source_good._proof_1_1": {
+      "module": "ActualLadderClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_inverse_height_clock_ae": {
+      "module": "ActualInverseHeightClock",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "audited_constant_count": 307,
+  "audited_private_constant_count": 0,
+  "record_pins": {
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/replay-manifest.json": "efc8bc1226fb158341a4626eeafaf5c97b9284da1a2d137de38b7db035cbb230",
+    "/home/ubuntu/collatz-native-basin-notice-build/replay-record.json": "260930d45985dca3d8b7abe88fff1c8c73aa154893d5fa1476b5c76b0b70a79c",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/raw-occupation-fresh-replay/replay-record.json": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/raw-source-manifest.json": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1"
+  },
+  "source_manifest_sha256": "5486a823e7cbc75885546c19d2cb2183d4d2bd35916f3f58105402b58adc7fcb",
+  "audit_helpers_sha256": "7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3",
+  "source_inventory": {
+    "ActualOddInverseRow": {
+      "module": "ActualOddInverseRow",
+      "sha256": "6cbd562e86a3122eb6ed738ae7475b23516cc3ef88b534086dce52ec1945b31d",
+      "imports": [
+        "ActualUnitSupport",
+        "FixedBasinGreenBoundary",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.potential",
+          "kind": "def",
+          "line": 11
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.potential_nonneg",
+          "kind": "theorem",
+          "line": 14
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.potential_pos_of_unit",
+          "kind": "theorem",
+          "line": 21
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint",
+          "kind": "def",
+          "line": 26
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass",
+          "kind": "def",
+          "line": 28
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass_nonneg",
+          "kind": "theorem",
+          "line": 32
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.iterate_dyadic",
+          "kind": "theorem",
+          "line": 39
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_row_telescope",
+          "kind": "theorem",
+          "line": 47
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.dyadic_potential_remainder_tendsto_zero",
+          "kind": "theorem",
+          "line": 78
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass_hasSum",
+          "kind": "theorem",
+          "line": 98
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass_tsum",
+          "kind": "theorem",
+          "line": 108
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ActualInverseDoobLaw": {
+      "module": "ActualInverseDoobLaw",
+      "sha256": "2eeefc2815ef8c8c4ad895e0142b70b5bc768d3ebd02199b6cd7780a29fff74f",
+      "imports": [
+        "ActualOddInverseRow",
+        "Mathlib.Probability.Kernel.IonescuTulcea.Traj"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF",
+          "kind": "def",
+          "line": 11
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_apply",
+          "kind": "theorem",
+          "line": 20
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_support",
+          "kind": "theorem",
+          "line": 23
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF",
+          "kind": "def",
+          "line": 41
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF_of_unit",
+          "kind": "theorem",
+          "line": 46
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF_support",
+          "kind": "theorem",
+          "line": 51
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionKernel",
+          "kind": "def",
+          "line": 61
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionKernel_isMarkov",
+          "kind": "instance",
+          "line": 65
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.historyKernel",
+          "kind": "def",
+          "line": 68
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.historyKernel_isMarkov",
+          "kind": "instance",
+          "line": 72
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw",
+          "kind": "def",
+          "line": 75
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_isProbability",
+          "kind": "instance",
+          "line": 78
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_history_successor",
+          "kind": "theorem",
+          "line": 82
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "NonperiodicCylinderSource": {
+      "module": "NonperiodicCylinderSource",
+      "sha256": "1d6df8b1d3e73ecf8aa223066c6a574252ea1d0582aef88083fcf4538c579c7d",
+      "imports": [
+        "ActualInverseDoobLaw",
+        "FirstHitWeightTransport"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.Nonperiodic",
+          "kind": "def",
+          "line": 11
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.nonperiodic_ancestor",
+          "kind": "theorem",
+          "line": 13
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.firstHit_of_nonperiodic",
+          "kind": "theorem",
+          "line": 20
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.firstHitWeight_through_nonperiodic",
+          "kind": "theorem",
+          "line": 27
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.suffixSourceWeight",
+          "kind": "def",
+          "line": 36
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.suffixSourceWeight_factor",
+          "kind": "theorem",
+          "line": 40
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.odd_suffixSourceWeight_mean",
+          "kind": "theorem",
+          "line": 50
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.normalized_suffixSourceWeight_mean",
+          "kind": "theorem",
+          "line": 69
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "InverseBranchCylinder": {
+      "module": "InverseBranchCylinder",
+      "sha256": "39801276b9fe4575727adef2cbb24afe87fc55e191ab76be55d3b3a504b8da23",
+      "imports": [
+        "NonperiodicCylinderSource"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint_block",
+          "kind": "theorem",
+          "line": 10
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.potential_of_nonperiodic",
+          "kind": "theorem",
+          "line": 24
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseRowMass_eq_weighted_density",
+          "kind": "theorem",
+          "line": 28
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_nonperiodic_cylinder",
+          "kind": "theorem",
+          "line": 51
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.exponentPMF_source_limit",
+          "kind": "theorem",
+          "line": 63
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "FinitePathCylinder": {
+      "module": "FinitePathCylinder",
+      "sha256": "b15ba11d3738c7aa5a887dd454ca95f76a1d68e97fb802c5e1de42a2fffda310",
+      "imports": [
+        "InverseBranchCylinder"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_eq_traj",
+          "kind": "theorem",
+          "line": 10
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_finite_projection",
+          "kind": "theorem",
+          "line": 15
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSet",
+          "kind": "def",
+          "line": 20
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSet_eq_preimage",
+          "kind": "theorem",
+          "line": 23
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_prefixSet",
+          "kind": "theorem",
+          "line": 34
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_prefix_zero",
+          "kind": "theorem",
+          "line": 38
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_prefix_succ",
+          "kind": "theorem",
+          "line": 50
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_prefix_product",
+          "kind": "theorem",
+          "line": 83
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ActualTransitionAtom": {
+      "module": "ActualTransitionAtom",
+      "sha256": "b843925064ab1c529159b692ec39adb55c20577ae68a8c8bb295af0d57eecd27",
+      "imports": [
+        "InverseBranchCylinder"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint_injective_on_guard",
+          "kind": "theorem",
+          "line": 7
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF_inverseEndpoint",
+          "kind": "theorem",
+          "line": 18
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF_nonperiodic_atom",
+          "kind": "theorem",
+          "line": 33
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "NonperiodicFiniteCylinder": {
+      "module": "NonperiodicFiniteCylinder",
+      "sha256": "7302c98a17d70869ed1d0e2e2f77d9e19a22d8e991606682ace47cc95634d782",
+      "imports": [
+        "FinitePathCylinder",
+        "ActualTransitionAtom"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix",
+          "kind": "def",
+          "line": 11
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.restrict",
+          "kind": "theorem",
+          "line": 15
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.ancestor",
+          "kind": "theorem",
+          "line": 19
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_cylinder",
+          "kind": "theorem",
+          "line": 29
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_source_limit",
+          "kind": "theorem",
+          "line": 63
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ActualPathSupport": {
+      "module": "ActualPathSupport",
+      "sha256": "473a3705a7c6cea6bdaa118a362e6be3b4a045881a540bced2fd8b5361917f41",
+      "imports": [
+        "NonperiodicFiniteCylinder"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.transitionPMF_support_ae",
+          "kind": "theorem",
+          "line": 9
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_step_support_ae",
+          "kind": "theorem",
+          "line": 15
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_all_step_support_ae",
+          "kind": "theorem",
+          "line": 27
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_initial_ae",
+          "kind": "theorem",
+          "line": 31
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_actual_steps_ae",
+          "kind": "theorem",
+          "line": 37
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_validPrefix_ae",
+          "kind": "theorem",
+          "line": 52
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "FinitePrefixIndex": {
+      "module": "FinitePrefixIndex",
+      "sha256": "102354a9eb7663dab187ebd92a98fc247e0912f40d397f15a722e2ad3423ff60",
+      "imports": [
+        "ActualPathSupport"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.PrefixIndex",
+          "kind": "abbrev",
+          "line": 9
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixExtend",
+          "kind": "def",
+          "line": 11
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixExtend_apply",
+          "kind": "theorem",
+          "line": 14
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.restrict_prefixExtend",
+          "kind": "theorem",
+          "line": 17
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.congr",
+          "kind": "theorem",
+          "line": 22
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF",
+          "kind": "def",
+          "line": 33
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF_apply",
+          "kind": "theorem",
+          "line": 38
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF_eq_zero_of_invalid",
+          "kind": "theorem",
+          "line": 44
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF_toReal_summable",
+          "kind": "theorem",
+          "line": 54
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finitePrefixPMF_toReal_tsum",
+          "kind": "theorem",
+          "line": 58
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "CountableScheffe": {
+      "module": "CountableScheffe",
+      "sha256": "dc009db4644f77012ab08d0b36d37f74b5e2986ee920b65f4226f38f1be427e5",
+      "imports": [
+        "Mathlib.Analysis.Normed.Group.Tannery",
+        "Mathlib.Topology.Order.Lattice",
+        "Mathlib.Tactic"
+      ],
+      "named_declarations": [
+        {
+          "name": "ActualInverseDoob.tendsto_tsum_abs_sub_of_nonneg",
+          "kind": "theorem",
+          "line": 9
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "CountableMassSqueeze": {
+      "module": "CountableMassSqueeze",
+      "sha256": "c4dfac497e48c0f489fe18836e95461d9a4ff20e701b17aa65a77c0e0e10be14",
+      "imports": [
+        "CountableScheffe"
+      ],
+      "named_declarations": [
+        {
+          "name": "ActualInverseDoob.tendsto_tsum_of_nonneg_of_mass_upper_bound",
+          "kind": "theorem",
+          "line": 9
+        },
+        {
+          "name": "ActualInverseDoob.tendsto_tsum_abs_sub_of_nonneg_of_mass_upper_bound",
+          "kind": "theorem",
+          "line": 35
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "FinitePrefixSourceMass": {
+      "module": "FinitePrefixSourceMass",
+      "sha256": "1ac25bf1cc69c839b2195ae4778ec769214ef63ec673bab420153d6026ee35f3",
+      "imports": [
+        "FinitePrefixIndex",
+        "CountableScheffe"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight",
+          "kind": "def",
+          "line": 11
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_nonneg",
+          "kind": "theorem",
+          "line": 16
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_of_valid",
+          "kind": "theorem",
+          "line": 26
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_of_invalid",
+          "kind": "theorem",
+          "line": 35
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass",
+          "kind": "def",
+          "line": 40
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.fullSourceMass",
+          "kind": "def",
+          "line": 44
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_nonneg",
+          "kind": "theorem",
+          "line": 48
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_tendsto",
+          "kind": "theorem",
+          "line": 56
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.fullSourceMass_tendsto",
+          "kind": "theorem",
+          "line": 78
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.logarithmicCumulative_sum",
+          "kind": "theorem",
+          "line": 89
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "SourceSuffixPrefix": {
+      "module": "SourceSuffixPrefix",
+      "sha256": "0d36358b037c1cd7a0e691401eed2d56dbfe6b34ef5038dceaa2b1c77cab379a",
+      "imports": [
+        "NonperiodicFiniteCylinder",
+        "FirstHitEndpointTail"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.odd",
+          "kind": "theorem",
+          "line": 8
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.suffix_hit_clock",
+          "kind": "theorem",
+          "line": 17
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.hit_clock",
+          "kind": "theorem",
+          "line": 42
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.oddCount_strict_of_odd_endpoint",
+          "kind": "theorem",
+          "line": 48
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.odd_endpoint_time_eq_of_oddCount_eq",
+          "kind": "theorem",
+          "line": 56
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.endpoint_eq_of_common_ancestor",
+          "kind": "theorem",
+          "line": 66
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.eq_of_common_ancestor",
+          "kind": "theorem",
+          "line": 89
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "FinitePrefixSourceBound": {
+      "module": "FinitePrefixSourceBound",
+      "sha256": "a3febecd3f2bfaf29c696cd997eace4e02aa41b77658fdc47878417c9e4d9ddf",
+      "imports": [
+        "FinitePrefixSourceMass",
+        "SourceSuffixPrefix"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixIndex_eq_of_common_ancestor",
+          "kind": "theorem",
+          "line": 11
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_sum_le",
+          "kind": "theorem",
+          "line": 21
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_sum_le",
+          "kind": "theorem",
+          "line": 46
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_summable",
+          "kind": "theorem",
+          "line": 58
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceMass_tsum_le",
+          "kind": "theorem",
+          "line": 62
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ActualFinitePrefixTV": {
+      "module": "ActualFinitePrefixTV",
+      "sha256": "8a57f34dbe70a2a1334010b41a5d1455bc99e0c8ad956d36092f4dd6fbe4d853",
+      "imports": [
+        "FinitePrefixSourceBound",
+        "CountableMassSqueeze"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_prefix_source_mass_tendsto_one",
+          "kind": "theorem",
+          "line": 10
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_fixed_prefix_total_variation",
+          "kind": "theorem",
+          "line": 28
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ActualPrefixEvents": {
+      "module": "ActualPrefixEvents",
+      "sha256": "59a30965d76bb10d54f0325dcb81218761cf6d13dea044f33c5e9c82dc701999",
+      "imports": [
+        "ActualFinitePrefixTV"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixEvent",
+          "kind": "def",
+          "line": 10
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_prefixEvent",
+          "kind": "theorem",
+          "line": 13
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixEventSourceMass",
+          "kind": "def",
+          "line": 17
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixEvent_probability_tsum",
+          "kind": "theorem",
+          "line": 20
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.abs_tsum_indicator_sub_le",
+          "kind": "theorem",
+          "line": 42
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_prefix_event_source_limit",
+          "kind": "theorem",
+          "line": 61
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finset_sum_le_of_unique_nonzero",
+          "kind": "theorem",
+          "line": 72
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_nonzero",
+          "kind": "theorem",
+          "line": 88
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixSourceWeight_event_sum_le",
+          "kind": "theorem",
+          "line": 94
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.prefixEventSourceMass_le_bad",
+          "kind": "theorem",
+          "line": 118
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_prefix_event_probability_le",
+          "kind": "theorem",
+          "line": 146
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_prefix_event_probability_le_of_eventual_add",
+          "kind": "theorem",
+          "line": 157
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "LastVisitGeometry": {
+      "module": "LastVisitGeometry",
+      "sha256": "7a2a23d3c41756df89710aebf22139e997c39720306d80667efcf873894dc249",
+      "imports": [
+        "InverseBranchCylinder",
+        "Mathlib.Data.Finset.Lattice.Fold"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath",
+          "kind": "def",
+          "line": 10
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.hit_clock",
+          "kind": "theorem",
+          "line": 14
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.firstHitOddDepth_eq",
+          "kind": "theorem",
+          "line": 29
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.injective",
+          "kind": "theorem",
+          "line": 35
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.odd",
+          "kind": "theorem",
+          "line": 42
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.boundedHitEndpoints",
+          "kind": "def",
+          "line": 52
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitDepthBound",
+          "kind": "def",
+          "line": 57
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.visit_depth_le",
+          "kind": "theorem",
+          "line": 60
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.no_visit_after_bound",
+          "kind": "theorem",
+          "line": 71
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.finite_visits",
+          "kind": "theorem",
+          "line": 78
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit",
+          "kind": "def",
+          "line": 85
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex",
+          "kind": "def",
+          "line": 88
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit_le",
+          "kind": "theorem",
+          "line": 91
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.le_finiteLastVisit",
+          "kind": "theorem",
+          "line": 99
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit_mem",
+          "kind": "theorem",
+          "line": 104
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.lastVisit_spec",
+          "kind": "theorem",
+          "line": 115
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_le_bound",
+          "kind": "theorem",
+          "line": 128
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.le_lastVisit_of_visit",
+          "kind": "theorem",
+          "line": 132
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.lastVisit_mono",
+          "kind": "theorem",
+          "line": 137
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.le_lastVisit_iff",
+          "kind": "theorem",
+          "line": 142
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLastVisit_congr",
+          "kind": "theorem",
+          "line": 152
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_prefix_congr",
+          "kind": "theorem",
+          "line": 160
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitPrefixFunction",
+          "kind": "def",
+          "line": 165
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_eq_prefixFunction",
+          "kind": "theorem",
+          "line": 170
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.measurable_lastVisitIndex",
+          "kind": "theorem",
+          "line": 178
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitIndex_event_preimage",
+          "kind": "theorem",
+          "line": 187
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_lastVisitIndex_event",
+          "kind": "theorem",
+          "line": 194
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ActualLastVisitLaw": {
+      "module": "ActualLastVisitLaw",
+      "sha256": "303201a60adc8ee185b47617b278917ef62ae5df45caae65f3c6c7d4fe3b446c",
+      "imports": [
+        "ActualPathSupport",
+        "LastVisitGeometry"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_isActualInversePath_ae",
+          "kind": "theorem",
+          "line": 10
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_injective_ae",
+          "kind": "theorem",
+          "line": 15
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_lastVisit_spec_ae",
+          "kind": "theorem",
+          "line": 20
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.pathLaw_finite_visits_ae",
+          "kind": "theorem",
+          "line": 27
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "InverseClockGeometry": {
+      "module": "InverseClockGeometry",
+      "sha256": "59d2e21cc080d13d3b25ebe4495b60842c34156207875fa7224a9919a9fd341e",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+        "Mathlib.Tactic"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.bracket_height_bounds",
+          "kind": "theorem",
+          "line": 10
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.height_bounds_of_uniform_last_clocks",
+          "kind": "theorem",
+          "line": 61
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.eventual_height_bounds_of_eventual_last_clocks",
+          "kind": "theorem",
+          "line": 110
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.eventual_height_band_of_last_clock_limit",
+          "kind": "theorem",
+          "line": 142
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.height_clock_of_refining_last_clock_grids",
+          "kind": "theorem",
+          "line": 195
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ActualInversePathGrowth": {
+      "module": "ActualInversePathGrowth",
+      "sha256": "e4f5285c219f58b8c3258e7d2457e94c35380619bad304d92c4c6bfc35234901",
+      "imports": [
+        "LastVisitGeometry",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Tactic"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint_forward_growth",
+          "kind": "theorem",
+          "line": 9
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.inverseEndpoint_log_forward_growth",
+          "kind": "theorem",
+          "line": 23
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.log_growth_over_gap",
+          "kind": "theorem",
+          "line": 32
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.IsActualInversePath.log_backward_growth",
+          "kind": "theorem",
+          "line": 46
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.log_three_halves_nonneg",
+          "kind": "theorem",
+          "line": 52
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "InverseClockRefinement": {
+      "module": "InverseClockRefinement",
+      "sha256": "1f9dd6c1da7a1e7afb04f12209ed23176f205e1e63f15392aab0aaea3b05f496",
+      "imports": [
+        "InverseClockGeometry",
+        "Mathlib.MeasureTheory.Measure.MeasureSpace",
+        "Mathlib.Order.Filter.Finite"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.tendsto_of_finite_interlacing",
+          "kind": "theorem",
+          "line": 11
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio",
+          "kind": "def",
+          "line": 25
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio_one_lt",
+          "kind": "theorem",
+          "line": 28
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio_pow",
+          "kind": "theorem",
+          "line": 33
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio_tendsto_one",
+          "kind": "theorem",
+          "line": 37
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.interlaced_exp_power",
+          "kind": "theorem",
+          "line": 47
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refined_clock_limit_of_reference_limits",
+          "kind": "theorem",
+          "line": 55
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.ae_refined_clock_limits",
+          "kind": "theorem",
+          "line": 68
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.ae_height_clock_of_reference_limits",
+          "kind": "theorem",
+          "line": 93
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "LadderClockLimit": {
+      "module": "LadderClockLimit",
+      "sha256": "74a0f51c3a03aa4307711998a9e489ad1ea0ce39a3cd9f9fe96c19ab3aa04c5b",
+      "imports": [
+        "ActualLastVisitLaw",
+        "BoundedBottomPassageClock",
+        "NativeTargetClockWindows",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+        "Mathlib.MeasureTheory.MeasurableSpace.MeasurablyGenerated"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderLastClock",
+          "kind": "def",
+          "line": 15
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderLastClockError",
+          "kind": "def",
+          "line": 18
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderClockEvent",
+          "kind": "def",
+          "line": 22
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimitEvent",
+          "kind": "def",
+          "line": 27
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_ladderClockLimitEvent",
+          "kind": "theorem",
+          "line": 31
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.clockScale_compose",
+          "kind": "theorem",
+          "line": 38
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimitEvent_shift",
+          "kind": "theorem",
+          "line": 43
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderLastClockError_normalized_tendsto_zero",
+          "kind": "theorem",
+          "line": 51
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimit_of_all_errors",
+          "kind": "theorem",
+          "line": 76
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderClockEvent_antitone",
+          "kind": "theorem",
+          "line": 103
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderClockLimit_compl_le_of_finite_errors",
+          "kind": "theorem",
+          "line": 108
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ae_ladderClockLimit_of_shifted_finite_errors",
+          "kind": "theorem",
+          "line": 128
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "FiniteLadderClockEvent": {
+      "module": "FiniteLadderClockEvent",
+      "sha256": "b9a958c427709f56da640f3a19c82c5cb7f0e01ff321a81602aced10630ac0cf",
+      "imports": [
+        "LadderClockLimit",
+        "ActualPrefixEvents",
+        "FixedLadderGoodCumulative"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ladderPrefixDepth",
+          "kind": "def",
+          "line": 14
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.lastVisitDepthBound_le_ladderPrefixDepth",
+          "kind": "theorem",
+          "line": 17
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderClockEvent_prefix_congr",
+          "kind": "theorem",
+          "line": 22
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderBadPrefixes",
+          "kind": "def",
+          "line": 34
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderClockEvent_compl_eq_prefixEvent",
+          "kind": "theorem",
+          "line": 38
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.measurableSet_finiteLadderClockEvent",
+          "kind": "theorem",
+          "line": 50
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.oddEventWeight_odd_mask",
+          "kind": "theorem",
+          "line": 56
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.logarithmicCumulative_oddEventWeight",
+          "kind": "theorem",
+          "line": 66
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.finiteLadderClock_failure_probability_of_source_good",
+          "kind": "theorem",
+          "line": 72
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "SourceLastVisitClock": {
+      "module": "SourceLastVisitClock",
+      "sha256": "1e8b68e74af065effed5f6ac6c26de8df4c6adb438f3f5978764cea675692a9e",
+      "imports": [
+        "SourceSuffixPrefix",
+        "LastVisitGeometry",
+        "ShortcutOddEndpoints",
+        "NativeSyracuseClockBridge",
+        "BoundedBottomPassageClock"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.syracuse_of_odd_shortcut_hit",
+          "kind": "theorem",
+          "line": 12
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.syracuse_firstHitOddDepth",
+          "kind": "theorem",
+          "line": 18
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.firstHitOddDepth_eq",
+          "kind": "theorem",
+          "line": 25
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.source_depth_split",
+          "kind": "theorem",
+          "line": 31
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.le_source_depth",
+          "kind": "theorem",
+          "line": 40
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.source_syracuse_suffix",
+          "kind": "theorem",
+          "line": 47
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.firstHitOddDepth_syracuse_tail",
+          "kind": "theorem",
+          "line": 59
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.visit_depth_le",
+          "kind": "theorem",
+          "line": 79
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.le_lastVisit_of_visit",
+          "kind": "theorem",
+          "line": 89
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.lastVisit_mem",
+          "kind": "theorem",
+          "line": 94
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.source_first_passage_eq_reverse_lastVisit",
+          "kind": "theorem",
+          "line": 98
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.source_barrier_clock_add_lastVisit",
+          "kind": "theorem",
+          "line": 137
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ActualLadderClock": {
+      "module": "ActualLadderClock",
+      "sha256": "61fe00f6fcd76bb6d5070b9938fd32d7de72f2f91d26909a4fec1eff6f0f46ea",
+      "imports": [
+        "SourceLastVisitClock",
+        "FiniteLadderClockEvent"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.validPrefix_finiteLadderClockEvent_of_source_good",
+          "kind": "theorem",
+          "line": 12
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_finite_ladder_clock_failure_probability",
+          "kind": "theorem",
+          "line": 50
+        },
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_reference_ladder_clock_ae",
+          "kind": "theorem",
+          "line": 62
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ActualInverseHeightClock": {
+      "module": "ActualInverseHeightClock",
+      "sha256": "47f870a0d3b377a13d3ec50fc03c94e02ea78d01f04db60e31413271ec0e381c",
+      "imports": [
+        "ActualLadderClock",
+        "ActualInversePathGrowth",
+        "InverseClockRefinement"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCylinderPacking.Arithmetic.InverseDoob.actual_inverse_height_clock_ae",
+          "kind": "theorem",
+          "line": 14
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    }
+  },
+  "named_declaration_count": 195,
+  "private_declaration_count": 0,
+  "authenticated_native_source_and_object_count": 1602,
+  "authenticated_raw_source_module_count": 16,
+  "authenticated_raw_source_and_object_unit_count": 17,
+  "lean_path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-inverse-doob-clock-oct3/inverse-doob-clock-fresh-replay/modules:/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/raw-occupation-fresh-replay/modules:/home/ubuntu/collatz-native-basin-notice-build/modules:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/elan/toolchains/leanprover--lean4---v4.30.0-rc2/lib/lean",
+  "lean_version": "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "mathlib_revision": "5450b53e5ddc75d46418fabb605edbf36bd0beb6",
+  "dependency_revisions": {
+    "Cli": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "Qq": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809",
+    "aesop": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+    "batteries": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+    "importGraph": "cdab3938ccabbdb044be6896e251b5814bec932e",
+    "plausible": "86210d4ad1b08b086d0bd638637a75246523dbb8",
+    "proofwidgets": "2db6054a44326f8c0230ee0570e2ddb894816511"
+  },
+  "mathlib_lake_manifest_sha256": "71f9e393a23807b33a5369e8f45888debe0cb79e872188b8dfbe308175e6d90c",
+  "script_sha256": "939381f9f74a6daca5af7922ffdbfcb8cbd9a778e78e5093b6d135898ad0b6c1",
+  "scope": "All twenty-six pinned inverse-Doob law, source-TV, deterministic geometry, and actual almost-sure height-clock modules and their all-constant audit were freshly compiled and individually kernel-replayed. Native 1602 source/object pairs and the sixteen raw-occupation sources plus seventeen upstream replay units were authenticated before and after. Clean pinned Mathlib/package source revisions and manifests were checked. Authenticated upstream objects and Mathlib/Lean caches were reused; this is an additive replay. No live development object directory was in LEAN_PATH. The actual continuing inverse law retains the Green cycle factor. At every positive odd nonperiodic root coprime to three, actual_inverse_height_clock_ae proves that log(x_k)/k tends almost surely to clockDrift. Source-event bounds, clock identities, grid refinement, and all probability inputs are discharged. This does not prove a periodic killed-law theorem, convergence of expected occupation, uniform integrability, universal eventual periodicity, or the Collatz conjecture."
+}

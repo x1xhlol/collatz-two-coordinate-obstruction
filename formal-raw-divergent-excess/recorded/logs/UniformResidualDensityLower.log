@@ -1,0 +1,6 @@
+'CollatzCanonical.RawOccupation.DivergentExcess.finite_residual_density_lower_from_ladders' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.RawOccupation.DivergentExcess.exists_uniform_finite_occupation_density_lower_with_divergent_future' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

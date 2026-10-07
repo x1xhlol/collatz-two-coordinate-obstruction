@@ -1,0 +1,15 @@
+'CollatzCylinderPacking.Arithmetic.InverseDoob.syracuse_of_odd_shortcut_hit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ValidPrefix.source_syracuse_suffix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.firstHitOddDepth_syracuse_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.source_first_passage_eq_reverse_lastVisit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.source_barrier_clock_add_lastVisit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

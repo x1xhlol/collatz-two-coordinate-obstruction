@@ -1,0 +1,24 @@
+{
+  "status": "PASS: root full source semantic review",
+  "date": "2026-10-03",
+  "sources": {
+    "FiniteObservableEventLower": "ed2babe4a047258ee46b085c55a2358ea0864754be038be9a4a4314d64c6473f",
+    "ResidualOccupationSourceMean": "c82f171fc761ad3488a3761400dfb4f71501ced5a10bb6c4fdaa7ce40b36e15d",
+    "AlignedResidualOccupationLower": "5fa1a104c45323fdc5b21e4542a2550d62a20dcd4e3028ff680b41610c5dd9ff",
+    "UniformResidualDensityLower": "66933e9291cbddb2dba35fae8f0e86ebe3fb86800cfd5620d29b60c1b8aba7c8",
+    "ForwardOddPrefix": "0926f625c96016ed45ff09e123932d42c08b4034fe88c32153318b4e6fc8293c",
+    "ForwardLogPrefix": "62201717a7309922045d2498550ee1100d29b82119b5426beaca5a8f1973930c",
+    "AsymptoticResidualWithPrefix": "dbb3888a094049b1aa709adb0b9bc32be46a701b753ffb7694083592474bb1a8",
+    "RawOccupationDivergentExcess": "cd960a0e5c290a1bcbd5b82cd0059c6b44c6dd8e06123ac0b9b6165f31a6dd2d"
+  },
+  "checks": [
+    "The post-root observable is subtracted globally and leaves a nonnegative residual, so no good-event restriction attenuates its exact root mean.",
+    "Finite source averaging takes place with the target cutoff and forward prefix fixed.",
+    "Aligned clock ladders, common-source bad-event union, and strict grid budgets use the already reviewed raw packet without changing its sources.",
+    "The forward Syracuse prefix is injective under the actual shortcut injectivity hypothesis and every weight is at least the reciprocal of wholeOrbitCorrection.",
+    "The floor prefix has logarithmic rate a/log(3/2) and satisfies the explicit positive-height budget for a<1.",
+    "Choosing a before the bottom M and then R discharges every prefix rate/growth and clock event input.",
+    "The final excess coefficient D_u/(wholeOrbitCorrection u*log(3/2)) is positive for an odd unit root."
+  ],
+  "scope": "Conditional quantitative lower bound under injectivity of the specified actual orbit. No upper bound, orbit classification, or existence of a divergent orbit is asserted. Compilation and fresh replay are separate records."
+}

@@ -1,0 +1,924 @@
+{
+  "status": "PASS",
+  "modules": [
+    "FiniteObservableEventLower",
+    "ResidualOccupationSourceMean",
+    "AlignedResidualOccupationLower",
+    "UniformResidualDensityLower",
+    "ForwardOddPrefix",
+    "ForwardLogPrefix",
+    "AsymptoticResidualWithPrefix",
+    "RawOccupationDivergentExcess"
+  ],
+  "results": {
+    "FiniteObservableEventLower": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.504981834907085,
+      "source_sha256": "ed2babe4a047258ee46b085c55a2358ea0864754be038be9a4a4314d64c6473f",
+      "object_sha256": "8d64420bcb27bfd7865424bd42b4281147c65f09da9cf10f47d6d2d78e62562c",
+      "compile_log_sha256": "7ba89201c0ebf45c1bd5354dba08fca8f4a031e6b23efcf5283f021dbbf085ab",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.8443084640894085,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ResidualOccupationSourceMean": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.146305098896846,
+      "source_sha256": "c82f171fc761ad3488a3761400dfb4f71501ced5a10bb6c4fdaa7ce40b36e15d",
+      "object_sha256": "4e3ab9da01d857987944f99103cb900ce73ed8ac24748523b57ecfd094a990dc",
+      "compile_log_sha256": "26df4cce579ca70778da61a82ef143664fcdb5bc1fcfd3e151f827db9a8b9e37",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.089917841833085,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "AlignedResidualOccupationLower": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.380295983981341,
+      "source_sha256": "5fa1a104c45323fdc5b21e4542a2550d62a20dcd4e3028ff680b41610c5dd9ff",
+      "object_sha256": "3567a7f93f53f6aab8f4891a9a72be3b2d9c4f176658f06d925a1ad692e6117c",
+      "compile_log_sha256": "ada3318314129bad52ebb09bd9bff08151f904e49020f047c207ae271e5edd78",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.765030854847282,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "UniformResidualDensityLower": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.5633310079574585,
+      "source_sha256": "66933e9291cbddb2dba35fae8f0e86ebe3fb86800cfd5620d29b60c1b8aba7c8",
+      "object_sha256": "c44683f645cd78669d76971f1d47d2a9d60c938b4331225763451b88f91c3fd0",
+      "compile_log_sha256": "f49d3258140895435d73118913fe226f5386f2160b94e3d41702704745148068",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.866008081007749,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ForwardOddPrefix": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.678750918945298,
+      "source_sha256": "0926f625c96016ed45ff09e123932d42c08b4034fe88c32153318b4e6fc8293c",
+      "object_sha256": "f023e7402733b854534fa3c90e933caa4db7153d61ac1c9b4f396a005bf1e836",
+      "compile_log_sha256": "c5588097fa9109606f5c961b059d325473f6b4df2082b32db130bf4ec2fa4aaf",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.776169579941779,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ForwardLogPrefix": {
+      "compile_exit_code": 0,
+      "compile_seconds": 5.939213757170364,
+      "source_sha256": "62201717a7309922045d2498550ee1100d29b82119b5426beaca5a8f1973930c",
+      "object_sha256": "f525b0771ca04b433b7d87e6951bd2ab1cfe9291ff88b137d3173abaf77983f5",
+      "compile_log_sha256": "412e2ac462ba4663dc4eb46e5a5de6536a6b72b740780fba23a08049239ec9f9",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.783761867089197,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "AsymptoticResidualWithPrefix": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.781257763039321,
+      "source_sha256": "dbb3888a094049b1aa709adb0b9bc32be46a701b753ffb7694083592474bb1a8",
+      "object_sha256": "1737f72b9daa22732cacb9870b8cf35125a90cb60be8ef44e9c37a5cc0152d0b",
+      "compile_log_sha256": "0976b526e3b7c28f7c42db5c4f3ac15619b4f76293d3d585e2c399ede19daa02",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.999281342839822,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "RawOccupationDivergentExcess": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.7265754961408675,
+      "source_sha256": "cd960a0e5c290a1bcbd5b82cd0059c6b44c6dd8e06123ac0b9b6165f31a6dd2d",
+      "object_sha256": "3964da81dba53eaf3163f5359190408d33c7805e7a38fb295de421121b7af9e3",
+      "compile_log_sha256": "bbfa92783de36abae4990d3c2eb8152b3db03bab4677d86aa881050dd443a67f",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 7.061403963947669,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "RawDivergentExcessAudit": {
+      "compile_exit_code": 0,
+      "compile_seconds": 4.093986473046243,
+      "source_sha256": "a2f1ded074102d8d81fd128859a844db63d5ca36d41ede7e135f50ebb9342d9c",
+      "object_sha256": "83365bffb6c426632d253fef643b3d13e4c30463b2f84ef2f894390b5a57216e",
+      "compile_log_sha256": "f8e7e2701acaf3bf4eef6ebf386cae9104712e0d967f276e80ff64d88de2a017",
+      "kernel_exit_code": 0,
+      "kernel_seconds": 6.927462969906628,
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "source_hashes": {
+    "FiniteObservableEventLower": "ed2babe4a047258ee46b085c55a2358ea0864754be038be9a4a4314d64c6473f",
+    "ResidualOccupationSourceMean": "c82f171fc761ad3488a3761400dfb4f71501ced5a10bb6c4fdaa7ce40b36e15d",
+    "AlignedResidualOccupationLower": "5fa1a104c45323fdc5b21e4542a2550d62a20dcd4e3028ff680b41610c5dd9ff",
+    "UniformResidualDensityLower": "66933e9291cbddb2dba35fae8f0e86ebe3fb86800cfd5620d29b60c1b8aba7c8",
+    "ForwardOddPrefix": "0926f625c96016ed45ff09e123932d42c08b4034fe88c32153318b4e6fc8293c",
+    "ForwardLogPrefix": "62201717a7309922045d2498550ee1100d29b82119b5426beaca5a8f1973930c",
+    "AsymptoticResidualWithPrefix": "dbb3888a094049b1aa709adb0b9bc32be46a701b753ffb7694083592474bb1a8",
+    "RawOccupationDivergentExcess": "cd960a0e5c290a1bcbd5b82cd0059c6b44c6dd8e06123ac0b9b6165f31a6dd2d"
+  },
+  "declarations": {
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_observable_mean_lower_of_bad_envelopes._simp_1_3": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_observable_mean_lower_of_bad_envelopes._simp_1_1": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "_private.FiniteObservableEventLower.0.CollatzCanonical.RawOccupation.DivergentExcess.odd_cumulative_add": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "private",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "_private.FiniteObservableEventLower.0.CollatzCanonical.RawOccupation.DivergentExcess.odd_cumulative_const_mul": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "private",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_observable_mean_lower_of_bad_envelopes._simp_1_5": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_observable_mean_lower_of_bad_envelopes._simp_1_6": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_observable_mean_lower_of_bad_envelopes._simp_1_4": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_observable_mean_lower_of_bad_envelopes._simp_1_7": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_observable_mean_lower_of_bad_envelopes._simp_1_2": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "_private.FiniteObservableEventLower.0.CollatzCanonical.RawOccupation.DivergentExcess.odd_cumulative_mono._simp_1_1": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "private",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.observable_cumulative_lower_with_bad_events": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "_private.FiniteObservableEventLower.0.CollatzCanonical.RawOccupation.DivergentExcess.odd_cumulative_mono": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "private",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "_private.FiniteObservableEventLower.0.CollatzCanonical.RawOccupation.DivergentExcess.odd_cumulative_sum": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "private",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.observable_plus_bad_event_bound": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_observable_mean_lower_of_bad_envelopes": {
+      "module": "FiniteObservableEventLower",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation_nonneg": {
+      "module": "ResidualOccupationSourceMean",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation_normalized_odd_mean": {
+      "module": "ResidualOccupationSourceMean",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.futureWeightSum": {
+      "module": "ResidualOccupationSourceMean",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation_cumulative": {
+      "module": "ResidualOccupationSourceMean",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation": {
+      "module": "ResidualOccupationSourceMean",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.exists_aligned_residual_occupation_lower": {
+      "module": "AlignedResidualOccupationLower",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_residual_density_lower_from_ladders._proof_1_1": {
+      "module": "UniformResidualDensityLower",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_residual_density_lower_from_ladders._proof_1_2": {
+      "module": "UniformResidualDensityLower",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_residual_density_lower_from_ladders._proof_1_3": {
+      "module": "UniformResidualDensityLower",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.finite_residual_density_lower_from_ladders": {
+      "module": "UniformResidualDensityLower",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.exists_uniform_finite_occupation_density_lower_with_divergent_future": {
+      "module": "UniformResidualDensityLower",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.syracuse_injective_of_shortcut_injective": {
+      "module": "ForwardOddPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardPrefix_weight_sum_lower": {
+      "module": "ForwardOddPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardPrefix.eq_1": {
+      "module": "ForwardOddPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardPrefix_mem_properties": {
+      "module": "ForwardOddPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.forward_firstHitWeight_ge_wholeOrbit_inverse": {
+      "module": "ForwardOddPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardPrefix": {
+      "module": "ForwardOddPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardPrefix_card": {
+      "module": "ForwardOddPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget._simp_1_4": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto._simp_1_2": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget._simp_1_6": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto._simp_1_4": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget._simp_1_2": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto._simp_1_7": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto._simp_1_6": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget._simp_1_7": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength._proof_2": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto._simp_1_5": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget._simp_1_5": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto._simp_1_3": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget._simp_1_3": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto._proof_1_1": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget._proof_1_1": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength._proof_1": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto._simp_1_8": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget._simp_1_8": {
+      "module": "ForwardLogPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.actual_raw_occupation_lower_with_prefix_rate._proof_1_1": {
+      "module": "AsymptoticResidualWithPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.actual_raw_occupation_lower_with_prefix_rate": {
+      "module": "AsymptoticResidualWithPrefix",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.actual_raw_occupation_strict_baseline_excess_of_unit": {
+      "module": "RawOccupationDivergentExcess",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.divergentTraceExcess_nonneg": {
+      "module": "RawOccupationDivergentExcess",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.divergentTraceExcess._proof_2": {
+      "module": "RawOccupationDivergentExcess",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.divergentTraceExcess": {
+      "module": "RawOccupationDivergentExcess",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.divergentTraceExcess_pos_of_unit": {
+      "module": "RawOccupationDivergentExcess",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.divergentTraceExcess._proof_1": {
+      "module": "RawOccupationDivergentExcess",
+      "visibility": "public",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "CollatzCanonical.RawOccupation.DivergentExcess.actual_raw_occupation_divergent_eventual_lower": {
+      "module": "RawOccupationDivergentExcess",
+      "visibility": "public",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "audited_constant_count": 63,
+  "audited_private_constant_count": 5,
+  "record_pins": {
+    "/home/ubuntu/collatz-two-coordinate-obstruction/formal-basins-native/replay-manifest.json": "efc8bc1226fb158341a4626eeafaf5c97b9284da1a2d137de38b7db035cbb230",
+    "/home/ubuntu/collatz-native-basin-notice-build/replay-record.json": "260930d45985dca3d8b7abe88fff1c8c73aa154893d5fa1476b5c76b0b70a79c",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/raw-occupation-fresh-replay/replay-record.json": "f2852527b47fbdefde5e669ef974cd5dd0bfecabc35fd2ea75a6cd6908a9a814",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/raw-source-manifest.json": "2c5c5d27182beb062d73e81448281715e0315726066b8d19e7bf3d8f810239e1"
+  },
+  "source_manifest_sha256": "f153366e6f779c3669b1d904467925c8ba62e296207a1b70910296a37328471c",
+  "audit_helpers_sha256": "7c8f74fc37a5d97b5f0db5b39db5c8c33e6e2a28fbf270f12154d38c93b119f3",
+  "source_inventory": {
+    "FiniteObservableEventLower": {
+      "module": "FiniteObservableEventLower",
+      "sha256": "ed2babe4a047258ee46b085c55a2358ea0864754be038be9a4a4314d64c6473f",
+      "imports": [
+        "FiniteOccupationSourceMean",
+        "NativeOddEventDensity",
+        "ClosedWindowMeanLimit"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.observable_plus_bad_event_bound",
+          "kind": "theorem",
+          "line": 53
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.observable_cumulative_lower_with_bad_events",
+          "kind": "theorem",
+          "line": 76
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.finite_observable_mean_lower_of_bad_envelopes",
+          "kind": "theorem",
+          "line": 91
+        }
+      ],
+      "private_declarations": [
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.odd_cumulative_mono",
+          "kind": "theorem",
+          "line": 12
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.odd_cumulative_const_mul",
+          "kind": "theorem",
+          "line": 23
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.odd_cumulative_add",
+          "kind": "theorem",
+          "line": 33
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.odd_cumulative_sum",
+          "kind": "theorem",
+          "line": 43
+        }
+      ],
+      "anonymous_instance_lines": []
+    },
+    "ResidualOccupationSourceMean": {
+      "module": "ResidualOccupationSourceMean",
+      "sha256": "c82f171fc761ad3488a3761400dfb4f71501ced5a10bb6c4fdaa7ce40b36e15d",
+      "imports": [
+        "FiniteObservableEventLower",
+        "DivergentPostBarrierOccupation"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.futureWeightSum",
+          "kind": "def",
+          "line": 12
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation",
+          "kind": "def",
+          "line": 15
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation_nonneg",
+          "kind": "theorem",
+          "line": 18
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation_cumulative",
+          "kind": "theorem",
+          "line": 24
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.residualOccupation_normalized_odd_mean",
+          "kind": "theorem",
+          "line": 38
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "AlignedResidualOccupationLower": {
+      "module": "AlignedResidualOccupationLower",
+      "sha256": "5fa1a104c45323fdc5b21e4542a2550d62a20dcd4e3028ff680b41610c5dd9ff",
+      "imports": [
+        "ResidualOccupationSourceMean",
+        "AlignedLadderOccupation",
+        "UniformAlignedOccupationLower"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.exists_aligned_residual_occupation_lower",
+          "kind": "theorem",
+          "line": 15
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "UniformResidualDensityLower": {
+      "module": "UniformResidualDensityLower",
+      "sha256": "66933e9291cbddb2dba35fae8f0e86ebe3fb86800cfd5620d29b60c1b8aba7c8",
+      "imports": [
+        "AlignedResidualOccupationLower",
+        "FixedLadderGoodCumulative",
+        "FailureEnvelopeMonotonicity"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.finite_residual_density_lower_from_ladders",
+          "kind": "theorem",
+          "line": 13
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.exists_uniform_finite_occupation_density_lower_with_divergent_future",
+          "kind": "theorem",
+          "line": 91
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ForwardOddPrefix": {
+      "module": "ForwardOddPrefix",
+      "sha256": "0926f625c96016ed45ff09e123932d42c08b4034fe88c32153318b4e6fc8293c",
+      "imports": [
+        "DivergentPostBarrierOccupation",
+        "ComponentWholeOrbitWeight"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCanonical.RawOccupation.syracuse_injective_of_shortcut_injective",
+          "kind": "theorem",
+          "line": 11
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.forward_firstHitWeight_ge_wholeOrbit_inverse",
+          "kind": "theorem",
+          "line": 19
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.oddForwardPrefix",
+          "kind": "def",
+          "line": 37
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.oddForwardPrefix_card",
+          "kind": "theorem",
+          "line": 40
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.oddForwardPrefix_mem_properties",
+          "kind": "theorem",
+          "line": 46
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.oddForwardPrefix_weight_sum_lower",
+          "kind": "theorem",
+          "line": 62
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "ForwardLogPrefix": {
+      "module": "ForwardLogPrefix",
+      "sha256": "62201717a7309922045d2498550ee1100d29b82119b5426beaca5a8f1973930c",
+      "imports": [
+        "ForwardOddPrefix",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCanonical.RawOccupation.oddForwardLogLength",
+          "kind": "def",
+          "line": 9
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.oddForwardLogLength_div_log_tendsto",
+          "kind": "theorem",
+          "line": 12
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.oddForwardLogLength_eventual_growth_budget",
+          "kind": "theorem",
+          "line": 42
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "AsymptoticResidualWithPrefix": {
+      "module": "AsymptoticResidualWithPrefix",
+      "sha256": "dbb3888a094049b1aa709adb0b9bc32be46a701b753ffb7694083592474bb1a8",
+      "imports": [
+        "UniformResidualDensityLower",
+        "ForwardOddPrefix",
+        "OccupationLowerValueLimit",
+        "FinitePowerClockGrid",
+        "FixedBasinGreenBoundary"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.actual_raw_occupation_lower_with_prefix_rate",
+          "kind": "theorem",
+          "line": 14
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    },
+    "RawOccupationDivergentExcess": {
+      "module": "RawOccupationDivergentExcess",
+      "sha256": "cd960a0e5c290a1bcbd5b82cd0059c6b44c6dd8e06123ac0b9b6165f31a6dd2d",
+      "imports": [
+        "AsymptoticResidualWithPrefix",
+        "ForwardLogPrefix",
+        "ActualUnitSupport"
+      ],
+      "named_declarations": [
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.divergentTraceExcess",
+          "kind": "def",
+          "line": 12
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.divergentTraceExcess_nonneg",
+          "kind": "theorem",
+          "line": 15
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.divergentTraceExcess_pos_of_unit",
+          "kind": "theorem",
+          "line": 22
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.actual_raw_occupation_divergent_eventual_lower",
+          "kind": "theorem",
+          "line": 33
+        },
+        {
+          "name": "CollatzCanonical.RawOccupation.DivergentExcess.actual_raw_occupation_strict_baseline_excess_of_unit",
+          "kind": "theorem",
+          "line": 54
+        }
+      ],
+      "private_declarations": [],
+      "anonymous_instance_lines": []
+    }
+  },
+  "named_declaration_count": 26,
+  "private_declaration_count": 4,
+  "authenticated_native_source_and_object_count": 1602,
+  "authenticated_raw_source_module_count": 16,
+  "authenticated_raw_source_and_object_unit_count": 17,
+  "lean_path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-divergent-excess-oct3/raw-divergent-excess-fresh-replay/modules:/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-occupation-oct3/raw-occupation-fresh-replay/modules:/home/ubuntu/collatz-native-basin-notice-build/modules:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/mathlib4/.lake/build/lib/lean:/dev/shm/collatz-mazur-rebuild/elan/toolchains/leanprover--lean4---v4.30.0-rc2/lib/lean",
+  "lean_version": "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "mathlib_revision": "5450b53e5ddc75d46418fabb605edbf36bd0beb6",
+  "dependency_revisions": {
+    "Cli": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "Qq": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809",
+    "aesop": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+    "batteries": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+    "importGraph": "cdab3938ccabbdb044be6896e251b5814bec932e",
+    "plausible": "86210d4ad1b08b086d0bd638637a75246523dbb8",
+    "proofwidgets": "2db6054a44326f8c0230ee0570e2ddb894816511"
+  },
+  "mathlib_lake_manifest_sha256": "71f9e393a23807b33a5369e8f45888debe0cb79e872188b8dfbe308175e6d90c",
+  "script_sha256": "c2519040057eff2198c9fa020aed46774cde42d710d8ed72e52282034207c689",
+  "scope": "Eight supplementary research modules and their all-constant audit were freshly compiled and individually kernel-replayed. The previously replayed sixteen raw-occupation source modules and generated audit objects, all live frozen raw source pins, and 1602 native source/object pairs were authenticated before and after. Pinned clean Mathlib/package source revisions and package manifest were checked before and after. Authenticated upstream objects and Mathlib/Lean caches were reused; this is an additive replay, not a complete upstream rebuild. No live raw development object directory, floor, cylinder-energy, or public application object directory was in LEAN_PATH. For an odd root with injective shortcut orbit, the final theorem gives every eventual raw-trace lower comparison below 1/clockDrift + actualFirstHitDensity u/(wholeOrbitCorrection u*log(3/2)); the excess is positive when u is a unit modulo three. This does not assert existence of such an injective root, a raw upper bound, capped saturation, uniform integrability, or universal eventual periodicity."
+}

@@ -1,0 +1,13 @@
+{
+  "certificate_sha256": "92ad8fdffba306abb328b911a121a4458043361419810f43a84c0c435c261e69",
+  "endpoint": "CollatzCanonical.RawOccupation.DivergentExcess.actual_raw_occupation_divergent_eventual_lower",
+  "kernel_replay": "separate foundation replay pending",
+  "kind": "independent full source semantic review",
+  "module_hashes": {
+    "ForwardLogPrefix": "62201717a7309922045d2498550ee1100d29b82119b5426beaca5a8f1973930c",
+    "RawOccupationDivergentExcess": "cd960a0e5c290a1bcbd5b82cd0059c6b44c6dd8e06123ac0b9b6165f31a6dd2d"
+  },
+  "prior_six_module_certificate_sha256": "6501035c7ee460bc01294dc7b1d1710d27b5fddad2ff70b3cf13f3b27996edbf",
+  "scope": "all prefix-rate/growth hypotheses discharged; conditional on actual odd injective root; strict excess only with unit condition",
+  "status": "PASS"
+}

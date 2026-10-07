@@ -1,0 +1,300 @@
+{
+  "date": "2026-10-07",
+  "reviewer": "independent cycle-research agent",
+  "verdict": "pass after author corrected after to at-or-after",
+  "review_scope": "Full mathematical proof, normalization, quantifiers, source binding, theorem scope; no new compiler/kernel replay",
+  "draft_and_report_hashes": {
+    "paper-divergent-excess-section-20261007.tex": "055d797a7a38c2457a9db9d26d09b50f1f6044a93ddcd497ab1d5fb5845ee7b9",
+    "paper-inverse-clock-section-20261007.tex": "305dc7b5cef1f4594d1f38305f94d9f93a2cfbc58dfa5073e02fdb6920ecd7c2",
+    "paper-clock-excess-independent-proof-review-20261007.txt": "0c78c0b017e293fd25845798a3f7e9f66ad5a8b630adcca38caf6a2df2b6fe84"
+  },
+  "existing_paper_sha256": "fd4d30029577df9cf33d873b548be204516e4e44da611e2ea21d9b542dce8923",
+  "packets": [
+    {
+      "packet": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-inverse-doob-clock-oct3",
+      "manifest_sha256": "5486a823e7cbc75885546c19d2cb2183d4d2bd35916f3f58105402b58adc7fcb",
+      "modules": [
+        {
+          "module": "ActualOddInverseRow",
+          "expected": "6cbd562e86a3122eb6ed738ae7475b23516cc3ef88b534086dce52ec1945b31d",
+          "source": "6cbd562e86a3122eb6ed738ae7475b23516cc3ef88b534086dce52ec1945b31d",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "6cbd562e86a3122eb6ed738ae7475b23516cc3ef88b534086dce52ec1945b31d",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ActualInverseDoobLaw",
+          "expected": "2eeefc2815ef8c8c4ad895e0142b70b5bc768d3ebd02199b6cd7780a29fff74f",
+          "source": "2eeefc2815ef8c8c4ad895e0142b70b5bc768d3ebd02199b6cd7780a29fff74f",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "2eeefc2815ef8c8c4ad895e0142b70b5bc768d3ebd02199b6cd7780a29fff74f",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "NonperiodicCylinderSource",
+          "expected": "1d6df8b1d3e73ecf8aa223066c6a574252ea1d0582aef88083fcf4538c579c7d",
+          "source": "1d6df8b1d3e73ecf8aa223066c6a574252ea1d0582aef88083fcf4538c579c7d",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "1d6df8b1d3e73ecf8aa223066c6a574252ea1d0582aef88083fcf4538c579c7d",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "InverseBranchCylinder",
+          "expected": "39801276b9fe4575727adef2cbb24afe87fc55e191ab76be55d3b3a504b8da23",
+          "source": "39801276b9fe4575727adef2cbb24afe87fc55e191ab76be55d3b3a504b8da23",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "39801276b9fe4575727adef2cbb24afe87fc55e191ab76be55d3b3a504b8da23",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "FinitePathCylinder",
+          "expected": "b15ba11d3738c7aa5a887dd454ca95f76a1d68e97fb802c5e1de42a2fffda310",
+          "source": "b15ba11d3738c7aa5a887dd454ca95f76a1d68e97fb802c5e1de42a2fffda310",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "b15ba11d3738c7aa5a887dd454ca95f76a1d68e97fb802c5e1de42a2fffda310",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ActualTransitionAtom",
+          "expected": "b843925064ab1c529159b692ec39adb55c20577ae68a8c8bb295af0d57eecd27",
+          "source": "b843925064ab1c529159b692ec39adb55c20577ae68a8c8bb295af0d57eecd27",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "b843925064ab1c529159b692ec39adb55c20577ae68a8c8bb295af0d57eecd27",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "NonperiodicFiniteCylinder",
+          "expected": "7302c98a17d70869ed1d0e2e2f77d9e19a22d8e991606682ace47cc95634d782",
+          "source": "7302c98a17d70869ed1d0e2e2f77d9e19a22d8e991606682ace47cc95634d782",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "7302c98a17d70869ed1d0e2e2f77d9e19a22d8e991606682ace47cc95634d782",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ActualPathSupport",
+          "expected": "473a3705a7c6cea6bdaa118a362e6be3b4a045881a540bced2fd8b5361917f41",
+          "source": "473a3705a7c6cea6bdaa118a362e6be3b4a045881a540bced2fd8b5361917f41",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "473a3705a7c6cea6bdaa118a362e6be3b4a045881a540bced2fd8b5361917f41",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "FinitePrefixIndex",
+          "expected": "102354a9eb7663dab187ebd92a98fc247e0912f40d397f15a722e2ad3423ff60",
+          "source": "102354a9eb7663dab187ebd92a98fc247e0912f40d397f15a722e2ad3423ff60",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "102354a9eb7663dab187ebd92a98fc247e0912f40d397f15a722e2ad3423ff60",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "CountableScheffe",
+          "expected": "dc009db4644f77012ab08d0b36d37f74b5e2986ee920b65f4226f38f1be427e5",
+          "source": "dc009db4644f77012ab08d0b36d37f74b5e2986ee920b65f4226f38f1be427e5",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "dc009db4644f77012ab08d0b36d37f74b5e2986ee920b65f4226f38f1be427e5",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "CountableMassSqueeze",
+          "expected": "c4dfac497e48c0f489fe18836e95461d9a4ff20e701b17aa65a77c0e0e10be14",
+          "source": "c4dfac497e48c0f489fe18836e95461d9a4ff20e701b17aa65a77c0e0e10be14",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "c4dfac497e48c0f489fe18836e95461d9a4ff20e701b17aa65a77c0e0e10be14",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "FinitePrefixSourceMass",
+          "expected": "1ac25bf1cc69c839b2195ae4778ec769214ef63ec673bab420153d6026ee35f3",
+          "source": "1ac25bf1cc69c839b2195ae4778ec769214ef63ec673bab420153d6026ee35f3",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "1ac25bf1cc69c839b2195ae4778ec769214ef63ec673bab420153d6026ee35f3",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "SourceSuffixPrefix",
+          "expected": "0d36358b037c1cd7a0e691401eed2d56dbfe6b34ef5038dceaa2b1c77cab379a",
+          "source": "0d36358b037c1cd7a0e691401eed2d56dbfe6b34ef5038dceaa2b1c77cab379a",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "0d36358b037c1cd7a0e691401eed2d56dbfe6b34ef5038dceaa2b1c77cab379a",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "FinitePrefixSourceBound",
+          "expected": "a3febecd3f2bfaf29c696cd997eace4e02aa41b77658fdc47878417c9e4d9ddf",
+          "source": "a3febecd3f2bfaf29c696cd997eace4e02aa41b77658fdc47878417c9e4d9ddf",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "a3febecd3f2bfaf29c696cd997eace4e02aa41b77658fdc47878417c9e4d9ddf",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ActualFinitePrefixTV",
+          "expected": "8a57f34dbe70a2a1334010b41a5d1455bc99e0c8ad956d36092f4dd6fbe4d853",
+          "source": "8a57f34dbe70a2a1334010b41a5d1455bc99e0c8ad956d36092f4dd6fbe4d853",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "8a57f34dbe70a2a1334010b41a5d1455bc99e0c8ad956d36092f4dd6fbe4d853",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ActualPrefixEvents",
+          "expected": "59a30965d76bb10d54f0325dcb81218761cf6d13dea044f33c5e9c82dc701999",
+          "source": "59a30965d76bb10d54f0325dcb81218761cf6d13dea044f33c5e9c82dc701999",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "59a30965d76bb10d54f0325dcb81218761cf6d13dea044f33c5e9c82dc701999",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "LastVisitGeometry",
+          "expected": "7a2a23d3c41756df89710aebf22139e997c39720306d80667efcf873894dc249",
+          "source": "7a2a23d3c41756df89710aebf22139e997c39720306d80667efcf873894dc249",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "7a2a23d3c41756df89710aebf22139e997c39720306d80667efcf873894dc249",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ActualLastVisitLaw",
+          "expected": "303201a60adc8ee185b47617b278917ef62ae5df45caae65f3c6c7d4fe3b446c",
+          "source": "303201a60adc8ee185b47617b278917ef62ae5df45caae65f3c6c7d4fe3b446c",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "303201a60adc8ee185b47617b278917ef62ae5df45caae65f3c6c7d4fe3b446c",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "InverseClockGeometry",
+          "expected": "59d2e21cc080d13d3b25ebe4495b60842c34156207875fa7224a9919a9fd341e",
+          "source": "59d2e21cc080d13d3b25ebe4495b60842c34156207875fa7224a9919a9fd341e",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "59d2e21cc080d13d3b25ebe4495b60842c34156207875fa7224a9919a9fd341e",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ActualInversePathGrowth",
+          "expected": "e4f5285c219f58b8c3258e7d2457e94c35380619bad304d92c4c6bfc35234901",
+          "source": "e4f5285c219f58b8c3258e7d2457e94c35380619bad304d92c4c6bfc35234901",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "e4f5285c219f58b8c3258e7d2457e94c35380619bad304d92c4c6bfc35234901",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "InverseClockRefinement",
+          "expected": "1f9dd6c1da7a1e7afb04f12209ed23176f205e1e63f15392aab0aaea3b05f496",
+          "source": "1f9dd6c1da7a1e7afb04f12209ed23176f205e1e63f15392aab0aaea3b05f496",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "1f9dd6c1da7a1e7afb04f12209ed23176f205e1e63f15392aab0aaea3b05f496",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "LadderClockLimit",
+          "expected": "74a0f51c3a03aa4307711998a9e489ad1ea0ce39a3cd9f9fe96c19ab3aa04c5b",
+          "source": "74a0f51c3a03aa4307711998a9e489ad1ea0ce39a3cd9f9fe96c19ab3aa04c5b",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "74a0f51c3a03aa4307711998a9e489ad1ea0ce39a3cd9f9fe96c19ab3aa04c5b",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "FiniteLadderClockEvent",
+          "expected": "b9a958c427709f56da640f3a19c82c5cb7f0e01ff321a81602aced10630ac0cf",
+          "source": "b9a958c427709f56da640f3a19c82c5cb7f0e01ff321a81602aced10630ac0cf",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "b9a958c427709f56da640f3a19c82c5cb7f0e01ff321a81602aced10630ac0cf",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "SourceLastVisitClock",
+          "expected": "1e8b68e74af065effed5f6ac6c26de8df4c6adb438f3f5978764cea675692a9e",
+          "source": "1e8b68e74af065effed5f6ac6c26de8df4c6adb438f3f5978764cea675692a9e",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "1e8b68e74af065effed5f6ac6c26de8df4c6adb438f3f5978764cea675692a9e",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ActualLadderClock",
+          "expected": "61fe00f6fcd76bb6d5070b9938fd32d7de72f2f91d26909a4fec1eff6f0f46ea",
+          "source": "61fe00f6fcd76bb6d5070b9938fd32d7de72f2f91d26909a4fec1eff6f0f46ea",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "61fe00f6fcd76bb6d5070b9938fd32d7de72f2f91d26909a4fec1eff6f0f46ea",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ActualInverseHeightClock",
+          "expected": "47f870a0d3b377a13d3ec50fc03c94e02ea78d01f04db60e31413271ec0e381c",
+          "source": "47f870a0d3b377a13d3ec50fc03c94e02ea78d01f04db60e31413271ec0e381c",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "47f870a0d3b377a13d3ec50fc03c94e02ea78d01f04db60e31413271ec0e381c",
+          "snapshot_matches_manifest": true
+        }
+      ]
+    },
+    {
+      "packet": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-raw-divergent-excess-oct3",
+      "manifest_sha256": "f153366e6f779c3669b1d904467925c8ba62e296207a1b70910296a37328471c",
+      "modules": [
+        {
+          "module": "FiniteObservableEventLower",
+          "expected": "ed2babe4a047258ee46b085c55a2358ea0864754be038be9a4a4314d64c6473f",
+          "source": "ed2babe4a047258ee46b085c55a2358ea0864754be038be9a4a4314d64c6473f",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "ed2babe4a047258ee46b085c55a2358ea0864754be038be9a4a4314d64c6473f",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ResidualOccupationSourceMean",
+          "expected": "c82f171fc761ad3488a3761400dfb4f71501ced5a10bb6c4fdaa7ce40b36e15d",
+          "source": "c82f171fc761ad3488a3761400dfb4f71501ced5a10bb6c4fdaa7ce40b36e15d",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "c82f171fc761ad3488a3761400dfb4f71501ced5a10bb6c4fdaa7ce40b36e15d",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "AlignedResidualOccupationLower",
+          "expected": "5fa1a104c45323fdc5b21e4542a2550d62a20dcd4e3028ff680b41610c5dd9ff",
+          "source": "5fa1a104c45323fdc5b21e4542a2550d62a20dcd4e3028ff680b41610c5dd9ff",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "5fa1a104c45323fdc5b21e4542a2550d62a20dcd4e3028ff680b41610c5dd9ff",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "UniformResidualDensityLower",
+          "expected": "66933e9291cbddb2dba35fae8f0e86ebe3fb86800cfd5620d29b60c1b8aba7c8",
+          "source": "66933e9291cbddb2dba35fae8f0e86ebe3fb86800cfd5620d29b60c1b8aba7c8",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "66933e9291cbddb2dba35fae8f0e86ebe3fb86800cfd5620d29b60c1b8aba7c8",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ForwardOddPrefix",
+          "expected": "0926f625c96016ed45ff09e123932d42c08b4034fe88c32153318b4e6fc8293c",
+          "source": "0926f625c96016ed45ff09e123932d42c08b4034fe88c32153318b4e6fc8293c",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "0926f625c96016ed45ff09e123932d42c08b4034fe88c32153318b4e6fc8293c",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "ForwardLogPrefix",
+          "expected": "62201717a7309922045d2498550ee1100d29b82119b5426beaca5a8f1973930c",
+          "source": "62201717a7309922045d2498550ee1100d29b82119b5426beaca5a8f1973930c",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "62201717a7309922045d2498550ee1100d29b82119b5426beaca5a8f1973930c",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "AsymptoticResidualWithPrefix",
+          "expected": "dbb3888a094049b1aa709adb0b9bc32be46a701b753ffb7694083592474bb1a8",
+          "source": "dbb3888a094049b1aa709adb0b9bc32be46a701b753ffb7694083592474bb1a8",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "dbb3888a094049b1aa709adb0b9bc32be46a701b753ffb7694083592474bb1a8",
+          "snapshot_matches_manifest": true
+        },
+        {
+          "module": "RawOccupationDivergentExcess",
+          "expected": "cd960a0e5c290a1bcbd5b82cd0059c6b44c6dd8e06123ac0b9b6165f31a6dd2d",
+          "source": "cd960a0e5c290a1bcbd5b82cd0059c6b44c6dd8e06123ac0b9b6165f31a6dd2d",
+          "source_matches_manifest": true,
+          "recorded_snapshot": "cd960a0e5c290a1bcbd5b82cd0059c6b44c6dd8e06123ac0b9b6165f31a6dd2d",
+          "snapshot_matches_manifest": true
+        }
+      ]
+    }
+  ],
+  "no_public_mutation": true,
+  "no_frozen_formal_mutation": true
+}

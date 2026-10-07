@@ -1,0 +1,88 @@
+Independent semantic review: residual occupation and divergent prefixes
+3 October 2026. Research-only supplementary sources.
+Outcome: PASS for the six sources below. Fresh kernel replay is separate.
+
+FiniteObservableEventLower.lean SHA256 ed2babe4a047258ee46b085c55a2358ea0864754be038be9a4a4314d64c6473f
+ResidualOccupationSourceMean.lean SHA256 c82f171fc761ad3488a3761400dfb4f71501ced5a10bb6c4fdaa7ce40b36e15d
+AlignedResidualOccupationLower.lean SHA256 5fa1a104c45323fdc5b21e4542a2550d62a20dcd4e3028ff680b41610c5dd9ff
+UniformResidualDensityLower.lean SHA256 66933e9291cbddb2dba35fae8f0e86ebe3fb86800cfd5620d29b60c1b8aba7c8
+ForwardOddPrefix.lean SHA256 0926f625c96016ed45ff09e123932d42c08b4034fe88c32153318b4e6fc8293c
+AsymptoticResidualWithPrefix.lean SHA256 dbb3888a094049b1aa709adb0b9bc32be46a701b753ffb7694083592474bb1a8
+
+FiniteObservableEventLower correctly generalizes the earlier occupation
+union estimate to an arbitrary observable nonnegative on odd sources.
+Only odd sources enter its mean. A failed good-event conjunction supplies
+at least one bad indicator; on the conjunction the stated lower bound
+applies. The same finite cumulative calculation gives L*(1-2*sum d)<=A.
+There is no independence assumption or assumption of individual event
+means. A normalized mean is explicitly required for the observable and
+is discharged by the next module for the actual residual.
+
+ResidualOccupationSourceMean subtracts the entire root-basin future
+observable firstHitWeight(u,q)*sum_F firstHitWeight(N,u) from the finite
+occupation sum. Injectivity of the root's shortcut orbit and the stated
+finite forward-target conditions make this residual nonnegative for all
+sources q. For sources outside the root basin the subtracted term is
+zero. Exact finite linearity and the native odd-source mean yield
+sum_odd_N<=R D_N - D_u*sum_F firstHitWeight(N,u).
+The target cutoff and finite F are fixed during this source limit.
+
+AlignedResidualOccupationLower applies the previously checked disjoint
+pre-barrier/post-root target inequality. Requiring odd u<=M puts the
+root after the first successful M-passage. Shortcut injectivity prevents
+its future from meeting the earlier pre-barrier target segment. The
+same actual aligned clock events and finite confinement bound give the
+baseline after subtraction. Clipping at zero uses global residual
+nonnegativity; no subtraction of an uncontrolled bad-source contribution
+is made.
+
+UniformResidualDensityLower uses n+2 actual fixed ladder events and their
+common-base failure envelope, exactly as the baseline packet does. The
+union loss multiplies only the pre-barrier scalar lower value. Averaging
+the nonnegative residual retains the WHOLE term D_u*sum_F weights when it
+is added back. In particular no good-event mask or failure factor is
+silently attached to that extra term. This is justified on every source,
+including sources outside the good events. The native constants are
+chosen before M, grid, cutoff, root and finite forward target set. Only
+explicit finite grid budgets remain at the first endpoint.
+
+ForwardOddPrefix uses strict increase of the shortcut clock to inherit
+Syracuse injectivity. Its image of {0,...,J-1} therefore has J distinct
+odd targets. The growth budget (3/2)^J*(u+1)<=R+1 places every such target
+below R; use of J instead of J-1 is conservative and correct. Every target
+is reached by the actual shortcut time. The native whole-orbit correction
+factorization and lower bound 1 for each tail imply every forward
+first-hit weight is at least 1/wholeOrbitCorrection(u). Thus the prefix
+weight sum is at least J/wholeOrbitCorrection(u). The zero-length prefix
+and depth-zero target are both handled correctly. The native correction
+lemmas apply to positive roots with injective shortcut orbits; no periodic
+orbit is accidentally included.
+
+AsymptoticResidualWithPrefix accepts an explicit natural prefix length
+J(R) with its two clearly stated elementary hypotheses: its normalized
+length tends to a/log(3/2), and its forward-growth budget eventually holds.
+With 0<a<1, the explicit power grid discharges the finite occupation grid
+conditions. Choose n first; then choose ONE M above both the native cutoff
+and u, making the fixed-M coefficient large enough; then let R grow.
+The finite set F=oddForwardPrefix(u,J(R)) varies with R, but its source
+mean was already taken separately for each finite R. There is no source
+and target limit interchange. Nonnegative D_u permits replacement of the
+future weight sum by J(R)/wholeOrbitCorrection(u). Division is performed
+only for R>=2, where log R>0. The resulting eventual comparison holds for
+every b below a/clockDrift + D_u*a/(log(3/2)*wholeOrbitCorrection(u)).
+No finite-real liminf hypothesis appears.
+
+The six-module endpoint still states its elementary prefix-rate and
+height-budget hypotheses explicitly. This certificate does not claim
+the subsequent floor-logarithmic prefix discharge or the a->1 endpoint;
+those require their own source review. All statements are conditional on
+an injective positive odd root. The extra term can be zero if D_u=0;
+strictly positive excess needs positivity of D_u, for example an additional
+unit-root condition with its inherited density floor. No injective orbit
+is asserted to exist, and no raw upper bound or Collatz conclusion follows.
+
+Review scope: full reads of all six files, the previously reviewed
+sixteen-module baseline interfaces, and the full native
+ComponentWholeOrbitWeight.lean correction interface. No source was
+modified. All supplementary work remains outside the frozen sixteen-source
+public raw-occupation package.

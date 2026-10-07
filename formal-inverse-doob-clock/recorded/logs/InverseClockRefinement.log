@@ -1,0 +1,24 @@
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.tendsto_of_finite_interlacing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio_one_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refiningRatio_tendsto_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.interlaced_exp_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.refined_clock_limit_of_reference_limits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.ae_refined_clock_limits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.ae_height_clock_of_reference_limits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

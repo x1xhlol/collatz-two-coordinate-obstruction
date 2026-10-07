@@ -1,0 +1,15 @@
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.bracket_height_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.height_bounds_of_uniform_last_clocks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.eventual_height_bounds_of_eventual_last_clocks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.eventual_height_band_of_last_clock_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.InverseDoob.ClockGeometry.height_clock_of_refining_last_clock_grids' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
