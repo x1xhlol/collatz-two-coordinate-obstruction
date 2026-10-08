@@ -1,0 +1,2177 @@
+--- a/source/Erdos1135/Tao/Fourier/Basic.lean
++++ b/source/Erdos1135/Tao/Fourier/Basic.lean
+@@ -1,5 +1,7 @@
+ import Erdos1135.Tao.Syracuse.Syrac
+ import Mathlib.Analysis.Fourier.ZMod
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ /-!
+ # Finite Fourier Conventions For Tao's Syracuse Route
+@@ -127,7 +129,9 @@
+       ((2 / 3 : ℝ) : ℂ) := by
+     rw [syracPMF_one_apply_two]
+     rw [ENNReal.toReal_ofReal (by norm_num : 0 ≤ (2 / 3 : ℝ))]
+-  simp [pmfComplexMass, h0, h1, h2]
++  simp only [pmfComplexMass]
++  rw [h0, h1, h2]
++  simp
+ 
+ private theorem zmod9_univ :
+     (Finset.univ : Finset (ZMod (3 ^ 2))) = {0, 1, 2, 3, 4, 5, 6, 7, 8} := by
+@@ -230,7 +234,9 @@
+       ((22 / 63 : ℝ) : ℂ) := by
+     rw [syracPMF_two_apply_eight]
+     rw [ENNReal.toReal_ofReal (by norm_num : 0 ≤ (22 / 63 : ℝ))]
+-  simp [pmfComplexMass, h0, h1, h2, h3, h4, h5, h6, h7, h8]
++  simp only [pmfComplexMass]
++  rw [h0, h1, h2, h3, h4, h5, h6, h7, h8]
++  simp
+ 
+ end Tao
+ end Erdos1135
+--- a/source/Erdos1135/Tao/Fourier/Lemma74CanonicalClaimStar.lean
++++ b/source/Erdos1135/Tao/Fourier/Lemma74CanonicalClaimStar.lean
+@@ -41,7 +41,7 @@
+     Delta q hrho hqNear
+   have hheight' : q.lReal - w.topLeft.lReal ≤ rho := by
+     simpa [Delta, taoSection7CanonicalTriangle,
+-      TaoSection7TopLeftWitness.triangle] using hheight
++      TaoSection7TopLeftWitness.triangle, TaoSection7Triangle.topLeft, w] using hheight
+   have hblueL : blue.l ≤ q.l := by
+     dsimp [blue, w]
+     omega
+@@ -141,7 +141,7 @@
+       · simpa [Delta, taoSection7CanonicalTriangle,
+           TaoSection7TopLeftWitness.triangle] using le_of_eq hxL
+       · simpa [Delta, taoSection7CanonicalTriangle,
+-          TaoSection7TopLeftWitness.triangle, mul_comm] using hxWeight
++          TaoSection7TopLeftWitness.triangle, TaoSection7Triangle.topLeft, mul_comm] using hxWeight
+       · simpa [mul_comm] using hscalar.log_nine_weak
+   have hcolumnTopBlack :=
+     taoSection7SourceBlackInDomain_geometryBlack w.columnTop_black
+@@ -196,7 +196,7 @@
+     Delta q hrho hqNear
+   have hcornerGap' : w.topLeft.jReal - q.jReal ≤ rho := by
+     simpa [Delta, taoSection7CanonicalTriangle,
+-      TaoSection7TopLeftWitness.triangle] using hcornerGap
++      TaoSection7TopLeftWitness.triangle, TaoSection7Triangle.topLeft, w] using hcornerGap
+   have hqGreenJ : (q.j : ℕ) ≤ (green.j : ℕ) := by
+     dsimp [green, pred]
+     have hjNat : (q.j : ℕ) < (w.topLeft.j : ℕ) := by exact_mod_cast hj
+@@ -232,7 +232,7 @@
+       let x := (green.upN (k + 1)).right
+       have hxjW : x.j = w.topLeft.j := by
+         have h := congrArg (fun z : TaoSection7Point => z.j) hpredRight
+-        simpa [x, green] using h
++        simpa [x, green, TaoSection7Point.upN, TaoSection7Point.right] using h
+       have hxj : x.j = Delta.cornerJ := by
+         simpa [Delta, w, taoSection7CanonicalTriangle,
+           TaoSection7TopLeftWitness.triangle] using hxjW
+@@ -257,14 +257,14 @@
+       · simpa [Delta, w, taoSection7CanonicalTriangle,
+           TaoSection7TopLeftWitness.triangle] using hxl
+       · simpa [Delta, taoSection7CanonicalTriangle,
+-          TaoSection7TopLeftWitness.triangle, mul_comm] using hxWeight
++          TaoSection7TopLeftWitness.triangle, TaoSection7Triangle.topLeft, mul_comm] using hxWeight
+       · simpa [mul_comm] using hscalar.log_two_weak
+     · have htopLe : w.topLeft.l ≤ q.l := le_of_not_gt hbelow
+       have hheight := taoSection7Near_height_above_corner_le
+         Delta q hrho hqNear
+       have hheight' : q.lReal - w.topLeft.lReal ≤ rho := by
+         simpa [Delta, taoSection7CanonicalTriangle,
+-          TaoSection7TopLeftWitness.triangle] using hheight
++          TaoSection7TopLeftWitness.triangle, TaoSection7Triangle.topLeft, w] using hheight
+       have hqPredJ : (q.j : ℕ) ≤ (pred.j : ℕ) := by
+         exact hqGreenJ
+       have hpredWeight :
+@@ -277,7 +277,7 @@
+           linarith
+         have hvertical : q.lReal - pred.lReal ≤ rho := by
+           dsimp [pred]
+-          simpa using hheight'
++          exact hheight'
+         have hlog9 : 0 ≤ Real.log (9 : ℝ) :=
+           (Real.log_pos (by norm_num)).le
+         have hlog2 : 0 ≤ Real.log (2 : ℝ) :=
+--- a/source/Erdos1135/Tao/Fourier/Lemma74CanonicalCoherence.lean
++++ b/source/Erdos1135/Tao/Fourier/Lemma74CanonicalCoherence.lean
+@@ -81,7 +81,7 @@
+   let above : TaoSection7Point := ⟨q.1.j, Lp + 1⟩
+   have hcornerL : Delta.cornerL = Lp := by rfl
+   have hqLower : q.1.l ≤ Lp := by
+-    simpa [hcornerL] using TaoSection7Triangle.mem_height_le hq
++    exact TaoSection7Triangle.mem_height_le hq
+   have htopMem : Delta.Mem top := by
+     apply TaoSection7Triangle.mem_northwest_of_mem hq
+     · simpa [top] using hq.1
+@@ -127,7 +127,7 @@
+       · simpa [hrj] using hq.1
+       · simp [hrj]
+       · exact hrl
+-      · simpa [hcornerL] using hru
++      · exact hru
+     exact (hblackOn r (by simpa [Delta] using hrMem)).2
+   have hunique := taoSection7CanonicalLStar_unique
+     hxi hscalar q Lp hqLower hvertical (by simpa [above] using haboveWhite)
+@@ -157,7 +157,7 @@
+     have hcorner := hq.1
+     exact_mod_cast (show Delta.cornerJ ≤ q.1.j from hcorner)
+   have hqLower : q.1.l ≤ Lp := by
+-    simpa [hcornerL] using TaoSection7Triangle.mem_height_le hq
++    exact TaoSection7Triangle.mem_height_le hq
+   have hsuffix : taoSection7BlackSuffix black q.1.j Lq a := by
+     intro r hleft hright
+     let x : TaoSection7Point := ⟨r, Lq⟩
+--- a/source/Erdos1135/Tao/Fourier/Lemma74ClaimStarMetric.lean
++++ b/source/Erdos1135/Tao/Fourier/Lemma74ClaimStarMetric.lean
+@@ -159,11 +159,11 @@
+     Delta q hrho hqOut hqNear hj hl
+   have hDgt : Delta.size < D := by
+     simpa [D, Delta, w, taoSection7CanonicalTriangle,
+-      TaoSection7TopLeftWitness.triangle,
++      TaoSection7TopLeftWitness.triangle, TaoSection7Triangle.topLeft,
+       taoSection7CanonicalTopLeftWitness] using hbounds.1
+   have hDupper : D ≤ Delta.size + (Real.log 9 + Real.log 2) * rho := by
+     simpa [D, Delta, w, taoSection7CanonicalTriangle,
+-      TaoSection7TopLeftWitness.triangle,
++      TaoSection7TopLeftWitness.triangle, TaoSection7Triangle.topLeft,
+       taoSection7CanonicalTopLeftWitness] using hbounds.2
+   have htop := taoSection7CanonicalTopLeft_abs_eq hxi hscalar p
+   have hpredEq :
+--- a/source/Erdos1135/Tao/Fourier/Lemma74ClaimStarPropagation.lean
++++ b/source/Erdos1135/Tao/Fourier/Lemma74ClaimStarPropagation.lean
+@@ -125,7 +125,7 @@
+     (henvelope : epsilon * Real.exp E ≤ (1 / 100 : ℝ)) :
+     TaoSection7WeakBlack (taoSection7SourceTheta n xi) q := by
+   have haTheta : |taoSection7SourceTheta n xi a| ≤ epsilon := by
+-    simpa [taoSection7SourceBlackPoint, taoSection7Black] using ha
++    exact ha
+   unfold TaoSection7WeakBlack
+   calc
+     |taoSection7SourceTheta n xi q| ≤
+--- a/source/Erdos1135/Tao/Fourier/Section7Character.lean
++++ b/source/Erdos1135/Tao/Fourier/Section7Character.lean
+@@ -1,5 +1,7 @@
+ import Erdos1135.Tao.Fourier.DecayStatement
+ import Erdos1135.Tao.Probability.Pascal
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ /-!
+ # Section 7 Character Surface
+@@ -347,7 +349,8 @@
+ 
+ private theorem norm_taoForwardDFTKernel {n : ℕ} (x ξ : ZMod (3 ^ n)) :
+     ‖taoForwardDFTKernel x ξ‖ = 1 := by
+-  simp [taoForwardDFTKernel, ZMod.stdAddChar]
++  change ‖(ZMod.toCircle (-(x * ξ)) : ℂ)‖ = 1
++  exact Circle.norm_coe _
+ 
+ /-- The two-point conditional average from Tao equation (7.4) at `b = 3`. -/
+ noncomputable def taoSection7PairAverage
+--- a/source/Erdos1135/Tao/Fourier/Section7PairExpansion.lean
++++ b/source/Erdos1135/Tao/Fourier/Section7PairExpansion.lean
+@@ -11,6 +11,8 @@
+ -/
+ 
+ open scoped BigOperators
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ namespace Erdos1135
+ namespace Tao
+@@ -70,7 +72,7 @@
+   rw [List.getD_eq_getElem as (1 : ℕ+) hi]
+   have hsum := List.sum_take_succ
+     (as.map fun a : ℕ+ => (a : ℕ)) i (by simp [hi])
+-  simpa [taoTupleWeight, ← List.map_eq_flatMap, List.map_take] using hsum
++  simpa [taoTupleWeight, ← List.map_eq_flatMap, List.map_take, Function.comp_def] using hsum
+ 
+ private theorem sum_range_two_mul
+     {R : Type*} [AddCommMonoid R] (f : ℕ → R) (m : ℕ) :
+@@ -322,7 +324,7 @@
+                     omega
+                   · exact congrArg Int.ofNat hweight
+                 · exact hgetD
+-              · congr 3 <;> simp [taoTupleWeight, add_assoc]
++              · congr 3; simp [taoTupleWeight, add_assoc]
+ 
+ private theorem taoSection7PairExpansionFrom_odd_eq_product_mul_terminal :
+     ∀ (m : ℕ) (N : ℕ) (xi : ZMod (3 ^ N))
+@@ -352,10 +354,7 @@
+             | nil => rfl
+             | cons b bs => simp at hlen
+           subst tail
+-          have hj : (⟨(j : ℕ) + 0, Nat.add_pos_left j.2 0⟩ : ℕ+) = j := by
+-            apply Subtype.ext
+-            rfl
+-          simp [taoSection7PairExpansionFrom, taoTupleWeight, hj]
++          simp [taoSection7PairExpansionFrom, taoTupleWeight]
+           apply congrArg
+             (fun x : ZMod (3 ^ N) => taoForwardDFTKernel x xi)
+           apply congrArg₂ (taoSection7PairX N)
+@@ -450,7 +449,7 @@
+                           (s + taoTupleWeight
+                             ((a₁ :: a₂ :: tail).take 2))))
+                       ((a₁ :: a₂ :: tail).getD 1 1) := by
+-                congr 3 <;> simp [taoTupleWeight, add_assoc]
++                congr 3; simp [taoTupleWeight, add_assoc]
+               exact
+                 (congrArg₂ (· * ·) hhead
+                   (congrArg₂ (· * ·) hprod hterm)).trans (by ring)
+--- a/source/Erdos1135/Tao/Fourier/Section7PairExpectation.lean
++++ b/source/Erdos1135/Tao/Fourier/Section7PairExpectation.lean
+@@ -9,6 +9,8 @@
+ -/
+ 
+ open scoped BigOperators
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ namespace Erdos1135
+ namespace Tao
+@@ -217,7 +219,7 @@
+       rw [Summable.tsum_prod' hsum hfiber]
+       apply tsum_congr
+       intro b
+-      simp only [Prod.fst, Prod.snd]
++      simp only []
+       rw [tsum_mul_left]
+ 
+ private theorem taoSection7PairExpansionExpectation_add_two_eq_pair_tsum
+@@ -341,7 +343,7 @@
+       rw [Summable.tsum_prod' hsum hfiber]
+       apply tsum_congr
+       intro a
+-      simp only [Prod.fst, Prod.snd]
++      simp only []
+       rw [tsum_mul_left]
+ 
+ private theorem taoSection7Pair_tsum_eq_fiber_tsum
+@@ -393,7 +395,7 @@
+     rintro ⟨b, a⟩
+     simp only [Function.uncurry_apply_pair, F, M]
+     by_cases h : b = (a.1 : ℕ) + (a.2 : ℕ)
+-    · rw [if_pos h, if_pos h, norm_mul, norm_mul]
++    · rw [ite_eq_left h, ite_eq_left h, norm_mul, norm_mul]
+       have hphase : ‖taoSection7PairPhase N xi
+           (taoSection7PairX N j (Int.ofNat (s + b))) a.2‖ = 1 := by
+         unfold taoSection7PairPhase
+@@ -411,7 +413,7 @@
+     intro a
+     simp only [F]
+     by_cases h : b = (a.1 : ℕ) + (a.2 : ℕ)
+-    · rw [if_pos h, norm_mul, norm_mul]
++    · rw [ite_eq_left h, norm_mul, norm_mul]
+       have hphase : ‖taoSection7PairPhase N xi
+           (taoSection7PairX N j (Int.ofNat (s + b))) a.2‖ = 1 := by
+         unfold taoSection7PairPhase
+@@ -458,10 +460,10 @@
+       by_cases h : (a.1 : ℕ) + (a.2 : ℕ) = b
+       · have h' : b = (a.1 : ℕ) + (a.2 : ℕ) := h.symm
+         simp only [F]
+-        rw [if_pos h, if_pos h']
++        rw [ite_eq_left h, ite_eq_left h']
+       · have h' : ¬b = (a.1 : ℕ) + (a.2 : ℕ) := by omega
+         simp only [F]
+-        rw [if_neg h, if_neg h']
++        rw [ite_eq_right h, ite_eq_right h']
+         simp
+ 
+ theorem norm_taoSection7PairExpansionExpectation_le_one
+--- a/source/Erdos1135/Tao/Fourier/Section7PairFiber.lean
++++ b/source/Erdos1135/Tao/Fourier/Section7PairFiber.lean
+@@ -130,7 +130,7 @@
+         ∑' p : {p : ℕ+ × ℕ+ //
+           b = (p.1 : ℕ) + (p.2 : ℕ)},
+           (taoSection7Geom2PairPMF p.1).toReal := by
+-      simpa only [Set.indicator, Set.mem_setOf_eq] using
++      simpa only [Set.indicator, Set.mem_ofPred_eq, Set.coe_ofPred] using
+         (tsum_subtype
+           {p : ℕ+ × ℕ+ | b = (p.1 : ℕ) + (p.2 : ℕ)}
+           (fun p => (taoSection7Geom2PairPMF p).toReal)).symm
+@@ -305,7 +305,7 @@
+   · have hphase : ‖taoSection7PairPhase n xi x a.2‖ = 1 := by
+       unfold taoSection7PairPhase
+       exact norm_taoForwardDFTKernel_eq_one _ _
+-    simp only [hsum, if_true, norm_mul, Complex.norm_real, hphase, mul_one]
++    simp only [hsum, ite_true, norm_mul, Complex.norm_real, hphase, mul_one]
+     simp [abs_of_nonneg ENNReal.toReal_nonneg]
+   · simp [hsum, ENNReal.toReal_nonneg]
+ 
+@@ -358,12 +358,12 @@
+   · subst b
+     rw [taoSection7PairFiberCharacterMass_three_eq]
+     have hcond : (3 : ℕ) = 3 ∧ 0 < (j : ℕ) := ⟨rfl, j.2⟩
+-    rw [taoSection7SourceFThreeFactor, dif_pos hcond]
++    rw [taoSection7SourceFThreeFactor, dite_eq_left hcond]
+     rw [norm_mul, Complex.norm_real]
+     have hj : (⟨(j : ℕ), hcond.2⟩ : ℕ+) = j := Subtype.ext rfl
+     rw [hj]
+     simp
+-  · rw [taoSection7SourceFThreeFactor, dif_neg (by tauto)]
++  · rw [taoSection7SourceFThreeFactor, dite_eq_right (by tauto)]
+     simpa using norm_taoSection7PairFiberCharacterMass_le_sourceMass n xi
+       (taoSection7PairX n j (Int.ofNat (s + b))) b
+ 
+--- a/source/Erdos1135/Tao/Fourier/Section7ProductPenalty.lean
++++ b/source/Erdos1135/Tao/Fourier/Section7ProductPenalty.lean
+@@ -59,7 +59,7 @@
+       have hhere : ¬(b = 3 ∧ W j (Int.ofNat (s + b))) := by
+         rintro ⟨_hb, hw⟩
+         exact hW j _ (by omega) hw
+-      rw [taoSection7WhiteHitCountFrom, if_neg hhere]
++      rw [taoSection7WhiteHitCountFrom, ite_eq_right hhere]
+       simpa using ih (j + 1) (s + b) (by
+         intro k l hk
+         exact hW k l (by omega))
+@@ -202,7 +202,7 @@
+       by_cases hhit : b = 3 ∧ W j (Int.ofNat (s + b))
+       · rw [taoSection7FactorProductFrom, taoSection7WhiteHitPenaltyFrom,
+           taoSection7WhiteHitCountFrom]
+-        rw [if_pos hhit]
++        rw [ite_eq_left hhit]
+         have htail_nonneg :
+             0 ≤ taoSection7FactorProductFrom F (j + 1) (s + b) bs :=
+           taoSection7FactorProductFrom_nonneg hFnonneg (j + 1) (s + b) bs
+@@ -222,7 +222,7 @@
+                 rw [exp_penalty_step]
+       · rw [taoSection7FactorProductFrom, taoSection7WhiteHitPenaltyFrom,
+           taoSection7WhiteHitCountFrom]
+-        rw [if_neg hhit]
++        rw [ite_eq_right hhit]
+         have htail_bound := ih (j + 1) (s + b)
+         calc
+           F j s b * taoSection7FactorProductFrom F (j + 1) (s + b) bs
+--- a/source/Erdos1135/Tao/Fourier/Section7SourceDomain.lean
++++ b/source/Erdos1135/Tao/Fourier/Section7SourceDomain.lean
+@@ -218,14 +218,14 @@
+             b = 3 ∧
+               taoSection7SourceWhiteWCutoff n xi epsilon J j (Int.ofNat (s + b)) :=
+           hW.mpr hraw
+-        rw [if_pos hcut, if_pos hraw]
++        rw [ite_eq_left hcut, ite_eq_left hraw]
+         exact congrArg (fun t : ℕ => 1 + t) (ih (j + 1) (s + b) htail)
+       · have hcut :
+             ¬ (b = 3 ∧
+               taoSection7SourceWhiteWCutoff n xi epsilon J j (Int.ofNat (s + b))) := by
+           intro h
+           exact hraw (hW.mp h)
+-        rw [if_neg hcut, if_neg hraw]
++        rw [ite_eq_right hcut, ite_eq_right hraw]
+         exact congrArg (fun t : ℕ => 0 + t) (ih (j + 1) (s + b) htail)
+ 
+ /-- The finite source count is unchanged by cutoff gating before the cutoff. -/
+--- a/source/Erdos1135/Tao/Fourier/Section7SourceFThreeQFinite.lean
++++ b/source/Erdos1135/Tao/Fourier/Section7SourceFThreeQFinite.lean
+@@ -29,7 +29,8 @@
+ theorem norm_taoForwardDFTKernel_eq_one
+     {N : ℕ} [NeZero N] (x xi : ZMod N) :
+     ‖taoForwardDFTKernel x xi‖ = 1 := by
+-  simp [taoForwardDFTKernel, ZMod.stdAddChar]
++  change ‖(ZMod.toCircle (-(x * xi)) : ℂ)‖ = 1
++  exact Circle.norm_coe _
+ 
+ /-- The two-point conditional average at `b = 3` is bounded by `1`. -/
+ theorem norm_taoSection7PairAverage_le_one
+@@ -82,10 +83,10 @@
+     ∀ j s b, taoSection7SourceFThreeFactor n xi j s b ≤ 1 := by
+   intro j s b
+   by_cases h : b = 3 ∧ 0 < j
+-  · rw [taoSection7SourceFThreeFactor, dif_pos h]
++  · rw [taoSection7SourceFThreeFactor, dite_eq_left h]
+     exact norm_taoSection7FThree_le_one
+       n xi (taoSection7PairX n ⟨j, h.2⟩ (Int.ofNat (s + b)))
+-  · rw [taoSection7SourceFThreeFactor, dif_neg h]
++  · rw [taoSection7SourceFThreeFactor, dite_eq_right h]
+ 
+ theorem taoSection7SourceFThreeFactor_hit_bound
+     (n : ℕ) (xi : ZMod (3 ^ n)) {epsilon : ℝ}
+@@ -97,7 +98,7 @@
+   intro j s b hhit
+   rcases hhit with ⟨hb, hj, hwhite⟩
+   unfold taoSection7SourceFThreeFactor
+-  rw [dif_pos ⟨hb, hj⟩]
++  rw [dite_eq_left ⟨hb, hj⟩]
+   exact norm_taoSection7FThree_point_le_exp_neg_cube_of_white
+     n xi ⟨j, hj⟩ (Int.ofNat (s + b)) hepsilon0 hepsilon1 hwhite
+ 
+--- a/source/Erdos1135/Tao/Fourier/TV.lean
++++ b/source/Erdos1135/Tao/Fourier/TV.lean
+@@ -144,7 +144,7 @@
+   have hnontriv :
+       AddChar.mulShift (ZMod.stdAddChar (N := N)) (-k) ≠ 0 := by
+     have hkneg : (-k) ≠ 0 := by simpa using neg_ne_zero.mpr hk
+-    simpa using (ZMod.isPrimitive_stdAddChar N hkneg)
++    simpa only [AddChar.one_eq_zero] using (ZMod.isPrimitive_stdAddChar N hkneg)
+   have hsum :
+       (∑ j : ZMod N, AddChar.mulShift (ZMod.stdAddChar (N := N)) (-k) j) = 0 :=
+     AddChar.sum_eq_zero_iff_ne_zero.mpr hnontriv
+@@ -154,10 +154,10 @@
+     ZMod.dft (pmfComplexMass (PMF.uniformOfFintype (ZMod N))) k =
+       if k = 0 then 1 else 0 := by
+   by_cases hk : k = 0
+-  · rw [if_pos hk]
++  · rw [ite_eq_left hk]
+     simpa [hk] using
+       dft_pmfComplexMass_apply_zero (N := N) (PMF.uniformOfFintype (ZMod N))
+-  · rw [if_neg hk]
++  · rw [ite_eq_right hk]
+     rw [ZMod.dft_apply]
+     simp_rw [pmfComplexMass_uniformOfFintype_zmod]
+     simp_rw [smul_eq_mul]
+@@ -180,10 +180,10 @@
+         intro k _hk
+         rw [dft_uniformOfFintype_apply]
+         by_cases hk0 : k = 0
+-        · rw [if_pos hk0, if_pos hk0]
++        · rw [ite_eq_left hk0, ite_eq_left hk0]
+           rw [hk0, dft_pmfComplexMass_apply_zero]
+           simp
+-        · rw [if_neg hk0, if_neg hk0]
++        · rw [ite_eq_right hk0, ite_eq_right hk0]
+           simp
+ 
+ theorem sum_if_ne_zero_eq_sum_erase_zero {N : ℕ} [NeZero N] (f : ZMod N → ℝ) :
+--- a/source/Erdos1135/Tao/Probability/CountableMarkov.lean
++++ b/source/Erdos1135/Tao/Probability/CountableMarkov.lean
+@@ -111,8 +111,8 @@
+   by_cases ha : a ∈ E
+   · have hcut : cutoff ≤ F a := le_of_lt ha
+     have hmem : cutoff < F a := by simpa [E] using ha
+-    simp only [Set.indicator, Set.mem_setOf_eq, hmem, if_true, one_mul]
+-    exact mul_le_mul_left' hcut _
++    simp only [Set.indicator, Set.mem_ofPred_eq, hmem, ite_true, one_mul]
++    exact mul_le_mul_right hcut _
+   · have hnot : ¬ cutoff < F a := by simpa [E] using ha
+     simp [Set.indicator, hnot]
+ 
+@@ -129,8 +129,8 @@
+   intro a
+   by_cases ha : a ∈ E
+   · have hcut : cutoff ≤ F a := by simpa [E] using ha
+-    simp only [Set.indicator, Set.mem_setOf_eq, hcut, if_true, one_mul]
+-    exact mul_le_mul_left' hcut _
++    simp only [Set.indicator, Set.mem_ofPred_eq, hcut, ite_true, one_mul]
++    exact mul_le_mul_right hcut _
+   · have hnot : ¬ cutoff ≤ F a := by simpa [E] using ha
+     simp [Set.indicator, hnot]
+ 
+--- a/source/Erdos1135/Tao/Probability/Finite.lean
++++ b/source/Erdos1135/Tao/Probability/Finite.lean
+@@ -1,6 +1,6 @@
+ import Mathlib.Probability.ProbabilityMassFunction.Constructions
+ import Mathlib.Probability.Distributions.Uniform
+-import Mathlib.Data.ENNReal.BigOperators
++import Mathlib.Basic.ENNReal.BigOperators
+ import Mathlib.Algebra.Order.BigOperators.Group.Finset
+ 
+ /-!
+@@ -268,8 +268,8 @@
+       · intro h
+         exact h.symm
+     by_cases hb : b = f a
+-    · rw [if_pos (hiff.mpr hb), if_pos hb]
+-    · rw [if_neg (fun hmem => hb (hiff.mp hmem)), if_neg hb]
++    · rw [ite_eq_left (hiff.mpr hb), ite_eq_left hb]
++    · rw [ite_eq_right (fun hmem => hb (hiff.mp hmem)), ite_eq_right hb]
+       rfl
+   · intro a
+     by_cases hb : b = f a <;>
+@@ -371,11 +371,11 @@
+       apply Finset.sum_congr rfl
+       intro a _ha
+       by_cases ha : (q a).toReal ≤ (p a).toReal
+-      · simp only [E, Set.mem_setOf_eq, if_pos ha,
++      · simp only [E, Set.mem_ofPred_eq, ite_eq_left ha,
+           abs_of_nonneg (sub_nonneg.mpr ha)]
+         ring
+       · have hap : (p a).toReal ≤ (q a).toReal := le_of_not_ge ha
+-        simp only [E, Set.mem_setOf_eq, if_neg ha,
++        simp only [E, Set.mem_ofPred_eq, ite_eq_right ha,
+           abs_of_nonpos (sub_nonpos.mpr hap)]
+         ring
+     _ = 2 * (∑ a, if a ∈ E then
+--- a/source/Erdos1135/Tao/Probability/Geom.lean
++++ b/source/Erdos1135/Tao/Probability/Geom.lean
+@@ -3,6 +3,8 @@
+ import Mathlib.Analysis.SpecificLimits.Normed
+ import Mathlib.Probability.Distributions.Geometric
+ 
++set_option backward.isDefEq.respectTransparency false
++
+ /-!
+ # Positive-Support Geometric Distribution
+ 
+@@ -13,6 +15,7 @@
+ namespace Erdos1135
+ namespace Tao
+ 
++set_option linter.deprecated false in
+ /-- Zero-based `Geom(2)` on natural numbers, with mass `2^-(n+1)`. -/
+ noncomputable def geom2Nat : PMF ℕ :=
+   ProbabilityTheory.geometricPMF (p := (1 / 2 : ℝ)) (by norm_num) (by norm_num)
+@@ -23,13 +26,11 @@
+ 
+ theorem geom2Nat_apply_toReal (n : ℕ) :
+     (geom2Nat n).toReal = (1 / 2 : ℝ) ^ (n + 1) := by
+-  change (ENNReal.ofReal (ProbabilityTheory.geometricPMFReal (1 / 2 : ℝ) n)).toReal =
++  change (ENNReal.ofReal (((1 - (1 / 2 : ℝ)) ^ n * (1 / 2 : ℝ)))).toReal =
+     (1 / 2 : ℝ) ^ (n + 1)
+   rw [ENNReal.toReal_ofReal]
+-  · unfold ProbabilityTheory.geometricPMFReal
+-    ring
+-  · unfold ProbabilityTheory.geometricPMFReal
+-    positivity
++  · ring
++  · positivity
+ 
+ theorem geom2PNat_apply_eq_geom2Nat_pred (a : ℕ+) :
+     geom2PNat a = geom2Nat ((a : ℕ) - 1) := by
+@@ -38,7 +39,7 @@
+   · have heq : a = (⟨(a : ℕ) - 1 + 1, Nat.succ_pos ((a : ℕ) - 1)⟩ : ℕ+) := by
+       apply Subtype.ext
+       exact (Nat.succ_pred_eq_of_pos a.2).symm
+-    rw [if_pos heq]
++    rw [ite_eq_left heq]
+   · intro n hn
+     by_cases h : a = (⟨n + 1, Nat.succ_pos n⟩ : ℕ+)
+     · have hn' : n = (a : ℕ) - 1 := by
+@@ -120,6 +121,7 @@
+       rw [h']
+       norm_num
+ 
++set_option linter.deprecated false in
+ /-- Zero-based `Geom(4)` on natural numbers, with success probability `1/4`. -/
+ noncomputable def geom4Nat : PMF ℕ :=
+   ProbabilityTheory.geometricPMF (p := (1 / 4 : ℝ)) (by norm_num) (by norm_num)
+@@ -130,13 +132,11 @@
+ 
+ theorem geom4Nat_apply_toReal (n : ℕ) :
+     (geom4Nat n).toReal = (1 / 4 : ℝ) * (3 / 4 : ℝ) ^ n := by
+-  change (ENNReal.ofReal (ProbabilityTheory.geometricPMFReal (1 / 4 : ℝ) n)).toReal =
++  change (ENNReal.ofReal (((1 - (1 / 4 : ℝ)) ^ n * (1 / 4 : ℝ)))).toReal =
+     (1 / 4 : ℝ) * (3 / 4 : ℝ) ^ n
+   rw [ENNReal.toReal_ofReal]
+-  · unfold ProbabilityTheory.geometricPMFReal
+-    ring
+-  · unfold ProbabilityTheory.geometricPMFReal
+-    positivity
++  · ring
++  · positivity
+ 
+ theorem geom4PNat_apply_eq_geom4Nat_pred (j : ℕ+) :
+     geom4PNat j = geom4Nat ((j : ℕ) - 1) := by
+@@ -145,7 +145,7 @@
+   · have heq : j = (⟨(j : ℕ) - 1 + 1, Nat.succ_pos ((j : ℕ) - 1)⟩ : ℕ+) := by
+       apply Subtype.ext
+       exact (Nat.succ_pred_eq_of_pos j.2).symm
+-    rw [if_pos heq]
++    rw [ite_eq_left heq]
+   · intro n hn
+     by_cases h : j = (⟨n + 1, Nat.succ_pos n⟩ : ℕ+)
+     · have hn' : n = (j : ℕ) - 1 := by
+--- a/source/Erdos1135/Tao/Probability/Geom2CenteredMoment.lean
++++ b/source/Erdos1135/Tao/Probability/Geom2CenteredMoment.lean
+@@ -167,7 +167,6 @@
+       (((a : ℕ) : ℝ) - 2) + taoGeom2CenteredListWeight as := by
+   unfold taoGeom2CenteredListWeight taoTupleWeight
+   simp
+-  push_cast
+   ring
+ 
+ theorem taoGeom2CenteredExpMoment_ennreal
+@@ -207,7 +206,7 @@
+   | zero =>
+       unfold taoPMFENNExpectation
+       rw [tsum_eq_single []]
+-      · simp [geom2PNatListPMF, taoGeom2CenteredListWeight]
++      · simp [geom2PNatListPMF, taoGeom2CenteredListWeight, taoTupleWeight]
+       · intro as hne
+         simp [geom2PNatListPMF, hne]
+   | succ N ih =>
+@@ -359,7 +358,6 @@
+     _ = Real.exp (8 * t ^ 2 * N) := by
+       rw [← Real.exp_nat_mul]
+       congr 1
+-      push_cast
+       ring
+ 
+ /-- One-sided upper tail from the positive centered MGF. -/
+@@ -380,7 +378,7 @@
+       {as | cutoff < F as} =
+         {as | lambda < taoGeom2CenteredListWeight as} := by
+     ext as
+-    simp only [Set.mem_setOf_eq, F, cutoff]
++    simp only [Set.mem_ofPred_eq, F, cutoff]
+     rw [ENNReal.ofReal_lt_ofReal_iff (Real.exp_pos _)]
+     rw [Real.exp_lt_exp]
+     constructor <;> intro h <;> nlinarith
+@@ -413,7 +411,6 @@
+       _ = Real.exp (8 * t ^ 2 * N) := by
+         rw [← Real.exp_nat_mul]
+         congr 1
+-        push_cast
+         ring
+   calc
+     ((geom2PNatListPMF N).toOuterMeasure
+@@ -444,7 +441,7 @@
+       {as | cutoff < F as} =
+         {as | taoGeom2CenteredListWeight as < -lambda} := by
+     ext as
+-    simp only [Set.mem_setOf_eq, F, cutoff]
++    simp only [Set.mem_ofPred_eq, F, cutoff]
+     rw [ENNReal.ofReal_lt_ofReal_iff (Real.exp_pos _)]
+     rw [Real.exp_lt_exp]
+     constructor <;> intro h <;> nlinarith
+@@ -477,7 +474,6 @@
+       _ = Real.exp (8 * t ^ 2 * N) := by
+         rw [← Real.exp_nat_mul]
+         congr 1
+-        push_cast
+         ring
+   calc
+     ((geom2PNatListPMF N).toOuterMeasure
+@@ -504,7 +500,7 @@
+   have hevent :
+       {as | lambda < |taoGeom2CenteredListWeight as|} = Epos ∪ Eneg := by
+     ext as
+-    simp only [Set.mem_setOf_eq, Set.mem_union, Epos, Eneg]
++    simp only [Set.mem_ofPred_eq, Set.mem_union, Epos, Eneg]
+     by_cases hweight : 0 ≤ taoGeom2CenteredListWeight as
+     · rw [abs_of_nonneg hweight]
+       constructor
+@@ -634,7 +630,7 @@
+     (∑' as : List ℕ+, (geom2PNatListPMF 0 as).toReal *
+         Real.exp (t * taoGeom2CenteredListWeight as)) = 1 := by
+   rw [tsum_eq_single []]
+-  · simp [geom2PNatListPMF, taoGeom2CenteredListWeight]
++  · simp [geom2PNatListPMF, taoGeom2CenteredListWeight, taoTupleWeight]
+   · intro as hne
+     simp [geom2PNatListPMF, hne]
+ 
+--- a/source/Erdos1135/Tao/Probability/Geom2ListProjectivity.lean
++++ b/source/Erdos1135/Tao/Probability/Geom2ListProjectivity.lean
+@@ -21,7 +21,8 @@
+       rw [Nat.zero_add]
+       change PMF.map (fun as : List ℕ+ => as.take 0)
+           (geom2PNatListPMF L) = PMF.pure []
+-      convert PMF.map_const (geom2PNatListPMF L) ([] : List ℕ+) using 1
++      simpa only [List.take_zero, Function.const_def] using
++        PMF.map_const (geom2PNatListPMF L) ([] : List ℕ+)
+   | succ r ih =>
+       rw [Nat.succ_add]
+       change PMF.map (fun as : List ℕ+ => as.take (r + 1))
+@@ -147,8 +148,8 @@
+       apply congrArg (PMF.bind (geom2PNatListPMF K))
+       funext pre
+       rw [PMF.map_comp]
+-      simpa [Function.comp_def] using
+-        (PMF.map_id (geom2PNatListPMF N))
++      rw [show (Prod.snd ∘ fun future : List ℕ+ => (pre, future)) = id from rfl]
++      exact PMF.map_id (geom2PNatListPMF N)
+     _ = geom2PNatListPMF N := PMF.bind_const _ _
+ 
+ theorem geom2PNatListPMF_map_take_low_eq_of_le
+--- a/source/Erdos1135/Tao/Probability/HoldExpWeight.lean
++++ b/source/Erdos1135/Tao/Probability/HoldExpWeight.lean
+@@ -309,7 +309,7 @@
+             (3 / 4 : ℝ) *
+               taoSection7Geom4FirstHitMass
+                 ⟨pre.length + 1, Nat.succ_pos pre.length⟩ := by
+-        simpa using
++        exact
+           taoSection7Geom4FirstHitMass_succ
+             ⟨pre.length + 1, Nat.succ_pos pre.length⟩
+       rw [taoSection7PreHoldWeightedMass,
+@@ -543,8 +543,8 @@
+           apply tsum_congr
+           intro pre
+           by_cases hlen : pre.length = m
+-          · rw [if_pos hlen]
+-            rw [if_pos hlen]
++          · rw [ite_eq_left hlen]
++            rw [ite_eq_left hlen]
+             rw [taoSection7PascalPrimeSourcePathMass_mul_preHoldExpWeight_eq_exp_mul_weightedPathMass]
+           · simp [hlen]
+     _ =
+--- a/source/Erdos1135/Tao/Renewal/CanonicalFirstPassageEndpoint.lean
++++ b/source/Erdos1135/Tao/Renewal/CanonicalFirstPassageEndpoint.lean
+@@ -80,7 +80,7 @@
+         ∑' a : {a : α // f a = b}, if b = f a then p a else 0 := by
+       apply tsum_congr
+       intro a
+-      rw [if_pos a.property.symm]
++      rw [ite_eq_left a.property.symm]
+     _ = ∑' a : α, if b = f a then p a else 0 := by
+       have hsupp :
+           Function.support (fun a : α => if b = f a then p a else 0) ⊆
+--- a/source/Erdos1135/Tao/Renewal/CanonicalFirstPassageHorizontal.lean
++++ b/source/Erdos1135/Tao/Renewal/CanonicalFirstPassageHorizontal.lean
+@@ -42,7 +42,7 @@
+         lemma77CanonicalFirstPassageEndpointPMF start s (r, ell) := by
+   rw [lemma77CanonicalFirstPassageHorizontalPMF,
+     pmf_map_apply_eq_tsum_fiber]
+-  simpa using ((lemma77HorizontalFiberEquiv r).tsum_eq
++  exact ((lemma77HorizontalFiberEquiv r).tsum_eq
+     (fun x => lemma77CanonicalFirstPassageEndpointPMF start s x.1)).symm
+ 
+ /-- Integers strictly above `s` are canonically indexed by a nonnegative
+--- a/source/Erdos1135/Tao/Renewal/CanonicalFirstPassageLocalizedMass.lean
++++ b/source/Erdos1135/Tao/Renewal/CanonicalFirstPassageLocalizedMass.lean
+@@ -53,7 +53,7 @@
+       1 = (p.toOuterMeasure (H ∪ V)).toReal +
+         (p.toOuterMeasure ((H ∪ V)ᶜ)).toReal := by
+     have h := congrArg ENNReal.toReal hsplitENN
+-    simpa [huniv, ENNReal.toReal_add, hfinite, Set.diff_eq] using h
++    simpa [huniv, ENNReal.toReal_add, hfinite, Set.sdiff_eq] using h
+   linarith
+ 
+ /-- One absolute radius makes each canonical coordinate tail at most one
+@@ -201,10 +201,7 @@
+       (lemma77CanonicalFirstPassageHorizontalPMF start s).toOuterMeasure
+         (lemma77CanonicalHorizontalDeviationEvent s
+           ((B : ℝ) * Real.sqrt (1 + (s : ℝ)))) := by
+-    simpa [p, horizontalBad, lemma77CanonicalFirstPassageHorizontalPMF] using
+-      (PMF.toOuterMeasure_map_apply Prod.fst p
+-        (lemma77CanonicalHorizontalDeviationEvent s
+-          ((B : ℝ) * Real.sqrt (1 + (s : ℝ))))).symm
++    simp [p, horizontalBad, lemma77CanonicalFirstPassageHorizontalPMF]
+   have hH : (p.toOuterMeasure horizontalBad).toReal ≤ 1 / 4 := by
+     rw [hHorizontalLift]
+     exact ENNReal.toReal_mono ENNReal.ofReal_ne_top (htail start s).1 |>.trans_eq
+--- a/source/Erdos1135/Tao/Renewal/CanonicalFirstPassageTails.lean
++++ b/source/Erdos1135/Tao/Renewal/CanonicalFirstPassageTails.lean
+@@ -406,7 +406,7 @@
+     · rw [Set.indicator_of_mem hr]
+       simpa [major, H, S, Eg, El, g, l] using
+         lemma77HorizontalPointwiseKernel_le_tailProduct ha hb hC ht hr
+-    · simp only [Set.indicator, hr, if_false]
++    · simp only [Set.indicator, hr, ite_false]
+       unfold major
+       positivity
+   have hsum_le := hfiltered.tsum_le_tsum hpoint hmajor
+@@ -557,7 +557,7 @@
+     ℕ × ℕ ≃ {x : ℕ × ℤ // x ∈ lemma77CanonicalVerticalOvershootTailEvent s T} where
+   toFun x :=
+     ⟨(x.1, (s : ℤ) + (T : ℤ) + (x.2 : ℤ)), by
+-      simp only [lemma77CanonicalVerticalOvershootTailEvent, Set.mem_setOf_eq]
++      simp only [lemma77CanonicalVerticalOvershootTailEvent, Set.mem_ofPred_eq]
+       omega⟩
+   invFun x :=
+     (x.1.1, (x.1.2 - (s : ℤ) - (T : ℤ)).toNat)
+@@ -569,7 +569,7 @@
+   right_inv x := by
+     rcases x with ⟨⟨r, ell⟩, hx⟩
+     simp only [lemma77CanonicalVerticalOvershootTailEvent,
+-      Set.mem_setOf_eq] at hx
++      Set.mem_ofPred_eq] at hx
+     apply Subtype.ext
+     change (r, (s : ℤ) + (T : ℤ) +
+       (ell - (s : ℤ) - (T : ℤ)).toNat) = (r, ell)
+--- a/source/Erdos1135/Tao/Renewal/CanonicalFirstPassageTerminal.lean
++++ b/source/Erdos1135/Tao/Renewal/CanonicalFirstPassageTerminal.lean
+@@ -308,7 +308,7 @@
+           (lemma77HorizontalShift732 (r : ℤ) q) (s - lp))
+     · exact lemma77EndpointTerminalSplitRow_summable start r s overshoot
+   rw [hreal]
+-  unfold Lemma77TerminalCoordinate
++  unfold lemma77TerminalCoordinateMass Lemma77TerminalCoordinate
+   rw [ENNReal.tsum_sigma']
+   apply tsum_congr
+   intro q
+@@ -316,7 +316,7 @@
+   apply Finset.sum_congr rfl
+   intro lp hlp
+   have hlp_lt : lp < s + 1 := by simpa using hlp
+-  rw [dif_pos hlp_lt]
++  rw [dite_eq_left hlp_lt]
+   rw [ENNReal.tsum_sigma']
+   change (∑' n : ℕ,
+       ∑' pref : Lemma77TerminalPrefixFiber start r s q lp n,
+--- a/source/Erdos1135/Tao/Renewal/GeometryBridge.lean
++++ b/source/Erdos1135/Tao/Renewal/GeometryBridge.lean
+@@ -58,12 +58,13 @@
+         (taoSection7SourceWhiteWCutoff n xi epsilon J) p ↔
+       taoSection7SourcePointInDomain J p.toPoint ∧
+         taoSection7SourceWhitePoint n xi epsilon p.toPoint := by
++  rcases p with ⟨⟨j, hj⟩, l⟩
+   constructor
+   · intro h
+     rcases h with ⟨_hj, hJ, hwhite⟩
+     exact ⟨hJ, by simpa [TaoSection7RenewalPoint.toPoint] using hwhite⟩
+   · rintro ⟨hJ, hwhite⟩
+-    exact ⟨p.j.property, hJ,
++    exact ⟨hj, hJ,
+       by simpa [TaoSection7RenewalPoint.toPoint] using hwhite⟩
+ 
+ theorem taoSection7SourceWhiteRenewal_cutoff_domain
+--- a/source/Erdos1135/Tao/Renewal/HoldFirstPassagePMF.lean
++++ b/source/Erdos1135/Tao/Renewal/HoldFirstPassagePMF.lean
+@@ -95,7 +95,7 @@
+   have hKmem : P K :=
+     ⟨hfirst.K_pos, hKle, by simpa [hpath_K] using hfirst.crosses⟩
+   have hex : ∃ k, P k := ⟨K, hKmem⟩
+-  rw [lemma79VerticalFirstPassageCut, dif_pos hex]
++  rw [lemma79VerticalFirstPassageCut, dite_eq_left hex]
+   apply Nat.le_antisymm
+   · exact Nat.find_min' hex hKmem
+   · by_contra hnot
+@@ -128,9 +128,9 @@
+       0 < K ∧ K ≤ full.length ∧
+         start.l + (gap : ℤ) <
+           (taoSection7RenewalPathPoint start full K).l
+-  · rw [lemma79VerticalFirstPassageCut, dif_pos h]
++  · rw [lemma79VerticalFirstPassageCut, dite_eq_left h]
+     exact (Nat.find_spec h).2.1
+-  · rw [lemma79VerticalFirstPassageCut, dif_neg h]
++  · rw [lemma79VerticalFirstPassageCut, dite_eq_right h]
+     exact Nat.zero_le full.length
+ 
+ /-- A positive named cut carries its exact first-passage certificate. -/
+@@ -151,11 +151,11 @@
+     by_contra hnone
+     have hzero : K = 0 := by
+       dsimp [K]
+-      rw [lemma79VerticalFirstPassageCut, dif_neg (by simpa [P] using hnone)]
++      rw [lemma79VerticalFirstPassageCut, dite_eq_right (by simpa [P] using hnone)]
+     exact (Nat.ne_of_gt hpos) hzero
+   have hKfind : K = Nat.find hex := by
+     dsimp [K]
+-    rw [lemma79VerticalFirstPassageCut, dif_pos (by simpa [P] using hex)]
++    rw [lemma79VerticalFirstPassageCut, dite_eq_left (by simpa [P] using hex)]
+   have hspec : P K := by
+     rw [hKfind]
+     exact Nat.find_spec hex
+@@ -225,7 +225,7 @@
+   have hBmem : P B := ⟨by simp [B], hBlen, hcross⟩
+   have hex : ∃ K, P K := ⟨B, hBmem⟩
+   have hcut : lemma79VerticalFirstPassageCut start gap full = Nat.find hex := by
+-    rw [lemma79VerticalFirstPassageCut, dif_pos hex]
++    rw [lemma79VerticalFirstPassageCut, dite_eq_left hex]
+   rw [show lemma79DecodeHoldSourcePrefixes src = full from rfl, hcut]
+   exact ⟨(Nat.find_spec hex).1, Nat.find_min' hex hBmem⟩
+ 
+--- a/source/Erdos1135/Tao/Renewal/HoldIID.lean
++++ b/source/Erdos1135/Tao/Renewal/HoldIID.lean
+@@ -260,8 +260,8 @@
+       rw [Nat.zero_add]
+       change PMF.map (fun hs : List TaoSection7RenewalPoint => hs.take 0)
+           (taoSection7HoldListPMF L) = PMF.pure []
+-      convert PMF.map_const (taoSection7HoldListPMF L)
+-        ([] : List TaoSection7RenewalPoint) using 1
++      simpa only [List.take_zero, Function.const_def] using
++        PMF.map_const (taoSection7HoldListPMF L) ([] : List TaoSection7RenewalPoint)
+   | succ K ih =>
+       rw [Nat.succ_add]
+       change PMF.map (fun hs : List TaoSection7RenewalPoint => hs.take (K + 1))
+--- a/source/Erdos1135/Tao/Renewal/HoldPMF.lean
++++ b/source/Erdos1135/Tao/Renewal/HoldPMF.lean
+@@ -140,8 +140,10 @@
+   congr
+   funext m
+   rw [PMF.map_comp]
+-  convert PMF.map_const (taoSection7PascalPrimeSourceListPMF m)
+-    (⟨m + 1, Nat.succ_pos m⟩ : ℕ+) using 1
++  change (taoSection7PascalPrimeSourceListPMF m).map
++    (fun _ => (⟨m + 1, Nat.succ_pos m⟩ : ℕ+)) =
++      PMF.pure (⟨m + 1, Nat.succ_pos m⟩ : ℕ+)
++  exact PMF.map_const (taoSection7PascalPrimeSourceListPMF m) _
+ 
+ /-- Alias using the source note's shorter wording for the first-index law. -/
+ def taoSection7Hold_firstIndex_law_eq_geom4PNat : Prop :=
+--- a/source/Erdos1135/Tao/Renewal/Lemma710Complementary.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma710Complementary.lean
+@@ -857,8 +857,7 @@
+       local_average := hlocal
+       average_window_total := htotal
+       scale_comparison := hscale }
+-  · simpa [Lemma710LargeEndpointNearCenterEvent] using
+-      lemma710OutsideEprimeNearSigmaCover_restrict_largeEvent hcoverEndpoint
++  · exact lemma710OutsideEprimeNearSigmaCover_restrict_largeEvent hcoverEndpoint
+   · exact
+       oneCenterJKernelBound_of_stoppedTailBound_identification
+         (μ := μ) (p := p) (C := C)
+--- a/source/Erdos1135/Tao/Renewal/Lemma710EprimeProbability.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma710EprimeProbability.lean
+@@ -1,4 +1,6 @@
+ import Erdos1135.Tao.Renewal.Lemma710PostStoppedKernel
++
++set_option linter.defProp false
+ 
+ /-!
+ # Lemma 7.10 Exceptional-Event Probability Socket
+@@ -2909,8 +2911,7 @@
+             PostKVerticalTailBad FirstPassageHorizontalBad
+             PostKHorizontalTailBad)
+         ≤ eventMass ResidualBad + eventMass Rest₁ := by
+-    simpa [Lemma710EprimeExceptionalUnion, Rest₁] using
+-      hmass.union_le_add ResidualBad Rest₁
++    exact hmass.union_le_add ResidualBad Rest₁
+   have h1 :
+       eventMass Rest₁ ≤
+         eventMass FirstPassageVerticalBad + eventMass Rest₂ := by
+--- a/source/Erdos1135/Tao/Renewal/Lemma77EndpointAssembly.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma77EndpointAssembly.lean
+@@ -591,7 +591,9 @@
+         ∑ hs ∈ T, (taoSection7HoldListPMF n hs).toReal := by
+     dsimp [U]
+     rw [Finset.sum_map]
+-    simpa [emb] using
++    change (∑ x : {hs // hs ∈ T}, (taoSection7HoldListPMF n x.1).toReal) =
++      ∑ hs ∈ T, (taoSection7HoldListPMF n hs).toReal
++    simpa only [Finset.univ_eq_attach] using
+       (Finset.sum_attach T (fun hs =>
+         (taoSection7HoldListPMF n hs).toReal))
+   have hfiber_summable :
+--- a/source/Erdos1135/Tao/Renewal/Lemma77FirstPassageEndpoint.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma77FirstPassageEndpoint.lean
+@@ -161,8 +161,8 @@
+       · intro h
+         exact h.symm
+     by_cases hb : b = f ω
+-    · rw [if_pos (hiff.mpr hb), if_pos hb]
+-    · rw [if_neg (fun hmem => hb (hiff.mp hmem)), if_neg hb]
++    · rw [ite_eq_left (hiff.mpr hb), ite_eq_left hb]
++    · rw [ite_eq_right (fun hmem => hb (hiff.mp hmem)), ite_eq_right hb]
+       rfl
+   · intro ω
+     by_cases hb : b = f ω <;>
+@@ -199,8 +199,8 @@
+       · intro h
+         exact ⟨(Prod.ext_iff.mp h).1.symm, (Prod.ext_iff.mp h).2.symm⟩
+     by_cases hpair : (n, hs) = (K ω, pre ω)
+-    · rw [if_pos (hiff.mpr hpair), if_pos hpair]
+-    · rw [if_neg (fun hmem => hpair (hiff.mp hmem)), if_neg hpair]
++    · rw [ite_eq_left (hiff.mpr hpair), ite_eq_left hpair]
++    · rw [ite_eq_right (fun hmem => hpair (hiff.mp hmem)), ite_eq_right hpair]
+       rfl
+   · intro ω
+     by_cases hpair : (n, hs) = (K ω, pre ω) <;>
+--- a/source/Erdos1135/Tao/Renewal/Lemma77LocalLimit.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma77LocalLimit.lean
+@@ -144,9 +144,9 @@
+   classical
+   by_cases hmem :
+       hs ∈ lemma77HoldPrefixSignedEndpointEvent start n j ell
+-  · rw [lemma77HoldPrefixSignedEndpointMassSummand, if_pos hmem]
++  · rw [lemma77HoldPrefixSignedEndpointMassSummand, ite_eq_left hmem]
+     exact lemma77HoldListPMF_toReal_eq_zero_of_length_ne h
+-  · rw [lemma77HoldPrefixSignedEndpointMassSummand, if_neg hmem]
++  · rw [lemma77HoldPrefixSignedEndpointMassSummand, ite_eq_right hmem]
+ 
+ /--
+ Atomization of signed iid `Hold` endpoint mass as a real `tsum` over all list
+@@ -164,9 +164,9 @@
+   intro hs
+   by_cases hmem :
+       hs ∈ lemma77HoldPrefixSignedEndpointEvent start n j ell
+-  · rw [lemma77HoldPrefixSignedEndpointMassSummand, if_pos hmem]
++  · rw [lemma77HoldPrefixSignedEndpointMassSummand, ite_eq_left hmem]
+     simp [Set.indicator, hmem]
+-  · rw [lemma77HoldPrefixSignedEndpointMassSummand, if_neg hmem]
++  · rw [lemma77HoldPrefixSignedEndpointMassSummand, ite_eq_right hmem]
+     simp [Set.indicator, hmem]
+ 
+ /--
+@@ -1802,7 +1802,7 @@
+     (hn : 0 < n) :
+     lemma77ScalarProductTailTerm a x n =
+       Real.exp (-(a * (n : ℝ)) - a * (x ^ 2 / (n : ℝ))) / (n : ℝ) := by
+-  rw [lemma77ScalarProductTailTerm, if_neg (Nat.ne_of_gt hn)]
++  rw [lemma77ScalarProductTailTerm, ite_eq_right (Nat.ne_of_gt hn)]
+ 
+ /-- Product-tail terms are nonnegative. -/
+ theorem lemma77ScalarProductTailTerm_nonneg (a x : ℝ) (n : ℕ) :
+@@ -2902,7 +2902,7 @@
+             Real.exp (-((a / 2) * (n : ℝ))) := by
+       rw [← Real.exp_add, Real.exp_le_exp]
+       nlinarith
+-    rw [lemma77ScalarProductTailTerm, if_neg hn]
++    rw [lemma77ScalarProductTailTerm, ite_eq_right hn]
+     calc
+       Real.exp (-(a * (n : ℝ)) - a * (x ^ 2 / (n : ℝ))) / (n : ℝ)
+           ≤ Real.exp (-(a * (n : ℝ)) - a * (x ^ 2 / (n : ℝ))) := by
+@@ -5113,7 +5113,7 @@
+   have hmul := mul_le_mul_of_nonneg_left hsum hfactor_nonneg
+   unfold lemma77HeightPotentialKernel
+   dsimp [x, y, H] at hmul ⊢
+-  unfold taoLemma22GaussianWeight at hmul ⊢
++  unfold taoLemma22GaussianWeight
+   simp [mul_add, mul_assoc, mul_left_comm, mul_comm] at hmul ⊢
+   exact hmul
+ 
+--- a/source/Erdos1135/Tao/Renewal/Lemma77PascalComposition.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma77PascalComposition.lean
+@@ -339,7 +339,7 @@
+       · intro b hb
+         rw [List.mem_iff_get] at hb
+         rcases hb with ⟨i, rfl⟩
+-        simpa [preList] using z.2.1 (Fin.cast (by simp [preList]) i)
++        simpa [preList, Fin.cast] using z.2.1 (Fin.cast (by simp [preList]) i)
+     let q : Lemma77OrderedPairRefinement pre.1 := fun i => by
+       let k : Fin r := Fin.cast pre.2.1 i
+       refine ⟨z.1.2 k - 1, ?_⟩
+--- a/source/Erdos1135/Tao/Renewal/Lemma77PascalFormula.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma77PascalFormula.lean
+@@ -57,7 +57,7 @@
+     (hj : 0 < j) (hs : s < 2 * j + 1) :
+     lemma77HeightPotentialMass start (j : ℤ) s = 0 := by
+   rw [lemma77HeightPotentialMass_eq_rawTerminalMass start hj]
+-  letI : IsEmpty (Lemma77RawTerminalFiber j s) :=
++  let : IsEmpty (Lemma77RawTerminalFiber j s) :=
+     ⟨fun bs => (Nat.not_le_of_lt hs)
+       (lemma77RawTerminalFiber_sum_lower_bound bs)⟩
+   simp
+--- a/source/Erdos1135/Tao/Renewal/Lemma77PascalGaussian.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma77PascalGaussian.lean
+@@ -826,7 +826,7 @@
+   have hpiece := lemma77HeightPotentialMass_eq_piecewise start j s
+   by_cases h00 : j = 0 ∧ s = 0
+   · rcases h00 with ⟨rfl, rfl⟩
+-    rw [if_pos (show (0 : ℕ) = 0 ∧ (0 : ℕ) = 0 by simp)] at hpiece
++    rw [ite_eq_left (show (0 : ℕ) = 0 ∧ (0 : ℕ) = 0 by simp)] at hpiece
+     rw [hpiece]
+     norm_num [lemma77HeightPotentialKernel, taoLemma22GaussianWeight]
+   · by_cases h13 : j = 1 ∧ s = 3
+@@ -836,7 +836,7 @@
+       · exact lemma77HeightPotentialMass_le_kernel_of_support
+           start hsupp.1 hsupp.2
+       · have hzero : lemma77HeightPotentialMass start (j : ℤ) s = 0 := by
+-          simp only [if_neg h00, if_neg h13, if_neg hsupp] at hpiece
++          simp only [ite_eq_right h00, ite_eq_right h13, ite_eq_right hsupp] at hpiece
+           exact hpiece
+         rw [hzero]
+         exact lemma77HeightPotentialKernel_nonneg (by norm_num) (j : ℤ) s
+--- a/source/Erdos1135/Tao/Renewal/Lemma77PascalPotential.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma77PascalPotential.lean
+@@ -886,7 +886,7 @@
+         lemma77HoldSourcePrefixSignedEndpointEvent
+           start n (j : ℤ) (s : ℤ) := by
+     simpa [hlen] using hmem'
+-  rw [lemma77HoldSourcePrefixSignedEndpointMassSummand, if_pos hmem]
++  rw [lemma77HoldSourcePrefixSignedEndpointMassSummand, ite_eq_left hmem]
+   calc
+     (taoSection7HoldSourcePrefixListPMF n
+         (lemma77SourceHistory pres.1)).toReal =
+@@ -989,7 +989,7 @@
+     exact lemma77CanonicalSourceSummand_eq_rawWordMass
+       start (n + 1) j s pres
+   apply (lemma77PositiveSourceRawHistoryEquiv n j s).summable_iff.mp
+-  simpa [Function.comp_apply] using hsourceraw
++  simpa [Function.comp_def] using hsourceraw
+ 
+ /-- Summing all positive epochs is exactly summing all terminal words. -/
+ theorem lemma77_sum_rawTerminalEpochMass_eq_rawTerminalMass
+@@ -1079,7 +1079,7 @@
+     (start : TaoSection7RenewalPoint) {n j s : ℕ} (hjn : j < n) :
+     lemma77HoldPrefixSignedEndpointMass start n (j : ℤ) (s : ℤ) = 0 := by
+   rw [lemma77HoldPrefixSignedEndpointMass_eq_tsum_length_fiber]
+-  letI : IsEmpty
++  let : IsEmpty
+       {hs : List TaoSection7RenewalPoint //
+         hs ∈ lemma77HoldPrefixSignedEndpointLengthEvent
+           start n (j : ℤ) (s : ℤ)} :=
+--- a/source/Erdos1135/Tao/Renewal/Lemma77PotentialCore.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma77PotentialCore.lean
+@@ -328,7 +328,7 @@
+     (hjn : j < (n : ℤ)) :
+     lemma77HoldPrefixSignedEndpointMass start n j ell = 0 := by
+   rw [lemma77HoldPrefixSignedEndpointMass_eq_tsum_length_fiber]
+-  letI : IsEmpty
++  let : IsEmpty
+       {hs : List TaoSection7RenewalPoint //
+         hs ∈ lemma77HoldPrefixSignedEndpointLengthEvent start n j ell} :=
+     ⟨by
+@@ -358,7 +358,7 @@
+   · have hz : ∀ n, lemma77HoldPrefixSignedEndpointMass start n j ell = 0 := by
+       intro n
+       exact lemma77HoldPrefixSignedEndpointMass_eq_zero_of_j_neg hj
+-    simpa [hz]
++    simp [hz]
+   · apply summable_of_ne_finset_zero (s := Finset.range (j.toNat + 1))
+     intro n hn
+     apply lemma77HoldPrefixSignedEndpointMass_eq_zero_of_lt_epoch
+--- a/source/Erdos1135/Tao/Renewal/Lemma77TerminalHoldMoment.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma77TerminalHoldMoment.lean
+@@ -121,7 +121,7 @@
+       exact
+         taoSection7PascalPrimeSourceListPMF_apply_length_toReal_eq_sourcePathMass
+           pre
+-    rw [if_pos hlen, hpmf]
++    rw [ite_eq_left hlen, hpmf]
+     exact
+       taoSection7PascalPrimeSourcePathMass_mul_preHoldExpWeight_eq_exp_mul_weightedPathMass
+         alpha pre
+--- a/source/Erdos1135/Tao/Renewal/Lemma79AllRBound.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79AllRBound.lean
+@@ -31,7 +31,7 @@
+       unfold lemma79PMFENNExpectation
+       apply ENNReal.tsum_le_tsum
+       intro omega
+-      exact mul_le_mul_left' (hF omega) _
++      exact mul_le_mul_right (hF omega) _
+     _ = (∑' omega, mu omega) * C := by
+       unfold lemma79PMFENNExpectation
+       exact ENNReal.tsum_mul_right
+--- a/source/Erdos1135/Tao/Renewal/Lemma79CutoffStatistic.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79CutoffStatistic.lean
+@@ -226,7 +226,7 @@
+       have hcount := lemma79CutoffWhiteCount_congr
+         (n := n) (xi := xi) (epsilon := epsilon) (C := C)
+         (hpoint := hpoint t ht)
+-      simpa [hcount]
++      simp [hcount]
+ 
+ /-- The canonical cutoff trace of a Hold path is determined by `full.take C`. -/
+ theorem lemma79HoldPathCutoffTrace_take
+--- a/source/Erdos1135/Tao/Renewal/Lemma79FirstEntryCount.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79FirstEntryCount.lean
+@@ -35,12 +35,12 @@
+               (Finset.Icc 1 p).sum (fun _q => 1) := by
+                 apply Finset.sum_congr rfl
+                 intro q hq
+-                rw [if_pos (hbefore q (by
++                rw [ite_eq_left (hbefore q (by
+                   have hle := (Finset.mem_Icc.mp hq).2
+                   omega))]
+           _ = (Finset.Icc 1 p).card := by simp
+           _ = p := by simp
+-      rw [lemma79PositiveWhiteCount_succ, hprefix, if_neg hat]
++      rw [lemma79PositiveWhiteCount_succ, hprefix, ite_eq_right hat]
+       simp
+ 
+ /-- Hold paths are horizontally monotone, including after their list clamps. -/
+@@ -103,12 +103,12 @@
+         ⟨hqDomain, hqBlack⟩
+       exact hfirst.2 q hqp ((hcover (pointAt q)).mp hqBlackDomain)
+     refine ⟨(pointAt q).j.property, hqDomain, ?_⟩
+-    simpa [taoSection7SourceWhitePoint] using hqWhitePoint
++    exact hqWhitePoint
+   have hat : ¬ W p := by
+     rintro ⟨_hpj, _hpC, hpWhite⟩
+     have hpWhitePoint :
+         taoSection7SourceWhitePoint n xi epsilon (pointAt p) := by
+-      simpa [taoSection7SourceWhitePoint] using hpWhite
++      exact hpWhite
+     exact (taoSection7SourceWhitePoint_iff_not_blackPoint.mp hpWhitePoint)
+       hentryBlack.2
+   change taoSection7Case3PositiveWhiteCount W p = p.pred
+--- a/source/Erdos1135/Tao/Renewal/Lemma79InclusiveTrace.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79InclusiveTrace.lean
+@@ -171,7 +171,7 @@
+           taoSection7Triangle_eq_of_familyPairwiseDisjoint_mem
+             hpair hDelta.1 hDelta'.1 hDelta.2.1
+               (by simpa [hstart_eq] using hDelta'.2.1)
+-        simp only [lemma79BoundedTailScan, dif_pos hhit, dif_pos hhit']
++        simp only [lemma79BoundedTailScan, dite_eq_left hhit, dite_eq_left hhit']
+         rw [hDelta_eq]
+         apply congrArg
+           (fun tail => (start, lemma79TriangleOfAfterHit hhit') :: tail)
+@@ -186,7 +186,7 @@
+           intro hhit'
+           apply hhit
+           simpa [TaoSection7Case3AfterTriangleHit, hstart_eq] using hhit'
+-        simp only [lemma79BoundedTailScan, dif_neg hhit, dif_neg hhit']
++        simp only [lemma79BoundedTailScan, dite_eq_right hhit, dite_eq_right hhit']
+         exact ih (q := q) (old := old) (start := start + 1)
+           (by
+             intro t hle hlt
+@@ -216,8 +216,8 @@
+         have hDelta_eq : lemma79TriangleOfHit hhit = lemma79TriangleOfHit hhit' :=
+           taoSection7Triangle_eq_of_familyPairwiseDisjoint_mem
+             hpair hDelta.1 hDelta'.1 hDelta.2
+-              (by simpa [hstart_eq] using hDelta'.2)
+-        simp only [lemma79BoundedInitialScan, dif_pos hhit, dif_pos hhit']
++              (by simpa [lemma79TriangleOfHit, hstart_eq] using hDelta'.2)
++        simp only [lemma79BoundedInitialScan, dite_eq_left hhit, dite_eq_left hhit']
+         rw [hDelta_eq]
+         apply congrArg
+           (fun tail => (start, lemma79TriangleOfHit hhit') :: tail)
+@@ -232,7 +232,7 @@
+           intro hhit'
+           apply hhit
+           simpa [TaoSection7Case3TriangleHit, hstart_eq] using hhit'
+-        simp only [lemma79BoundedInitialScan, dif_neg hhit, dif_neg hhit']
++        simp only [lemma79BoundedInitialScan, dite_eq_right hhit, dite_eq_right hhit']
+         exact ih (start := start + 1)
+           (by
+             intro t hle hlt
+--- a/source/Erdos1135/Tao/Renewal/Lemma79OneStepBound.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79OneStepBound.lean
+@@ -153,7 +153,7 @@
+       intro full
+       by_cases hfull : taoSection7HoldListPMF B full = 0
+       · simp [hfull]
+-      · exact mul_le_mul_left' (hvalue full hfull) _
++      · exact mul_le_mul_right (hvalue full hfull) _
+     have htoTower :
+         lemma79PMFENNExpectation
+             (taoSection7HoldListPMF B)
+@@ -190,7 +190,7 @@
+               lemma79PMFENNExpectation
+                 (lemma79RawHoldFirstPassagePrefixPMF J entry gap)
+                 prefixWeight) := by
+-      simpa [family, longAtom, towerIntegrand] using
++      simpa [family, longAtom, towerIntegrand, entry] using
+         (lemma79_holdList_firstEntryKey_firstPassageFixedTailWeightedExpectation_le
+           (origin := origin) (entry := entry) (family := family)
+           (C := J) (B := B) (p := p) (gap := gap) (J := J)
+@@ -249,13 +249,13 @@
+                 lemma79PMFENNExpectation
+                   (lemma79RawHoldFirstPassagePrefixPMF J entry gap)
+                   prefixWeight)) * prefactor :=
+-          mul_le_mul_right' htower prefactor
++          mul_le_mul_left htower prefactor
+         _ ≤ ((taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               (ENNReal.ofReal (Real.exp epsilon) *
+                 ENNReal.ofReal lemma79R2ContractionFactor)) * prefactor :=
+-          mul_le_mul_right'
+-            (mul_le_mul_left'
+-              (mul_le_mul_left' hprefix
++          mul_le_mul_left
++            (mul_le_mul_right
++              (mul_le_mul_right hprefix
+                 (ENNReal.ofReal (Real.exp epsilon)))
+               ((taoSection7HoldListPMF B).toOuterMeasure longAtom))
+             prefactor
+@@ -265,7 +265,7 @@
+           ac_rfl
+         _ ≤ (taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               ENNReal.ofReal (Real.exp epsilon) :=
+-          mul_le_mul_left' hscalarENN _
++          mul_le_mul_right hscalarENN _
+     have hExpPull :=
+       lemma79_holdList_keyAtom_cutoffTailMomentENN_expectation_eq_of_le
+         hJB origin family hpair (some (p, entryPoint))
+--- a/source/Erdos1135/Tao/Renewal/Lemma79PostExitFreshTail.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79PostExitFreshTail.lean
+@@ -289,7 +289,7 @@
+           (D * lemma79PMFENNExpectation
+             (lemma79RawHoldFirstPassagePrefixPMF J entry gap)
+             prefixWeight) :=
+-      mul_le_mul_left' htower _
++      mul_le_mul_right htower _
+ 
+ end Lemma79TailExpectation
+ end TaoSection7Case3SourceStoppingRun
+--- a/source/Erdos1135/Tao/Renewal/Lemma79R2EndpointContraction.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79R2EndpointContraction.lean
+@@ -72,13 +72,13 @@
+   classical
+   have hexp0 : 0 ≤ Real.exp (-1) := (Real.exp_pos _).le
+   have hexp1 : Real.exp (-1) ≤ 1 := by
+-    simpa using Real.exp_le_exp.mpr (show (-1 : ℝ) ≤ 0 by norm_num)
++    simp
+   have hdiff0 : 0 ≤ 1 - Real.exp (-1) := sub_nonneg.mpr hexp1
+   have hone :
+       ENNReal.ofReal (Real.exp (-1)) +
+           ENNReal.ofReal (1 - Real.exp (-1)) = 1 := by
+     rw [← ENNReal.ofReal_add hexp0 hdiff0]
+-    convert ENNReal.ofReal_one using 1 <;> ring
++    rw [show Real.exp (-1) + (1 - Real.exp (-1)) = 1 by ring, ENNReal.ofReal_one]
+   have hpoint :
+       lemma79R2EndpointWeight White =
+         fun omega =>
+@@ -142,7 +142,7 @@
+       1 = (mu.toOuterMeasure White).toReal +
+         (mu.toOuterMeasure Whiteᶜ).toReal := by
+     have h := congrArg ENNReal.toReal hsplitENN
+-    simpa [huniv, ENNReal.toReal_add, hfinite, Set.diff_eq] using h
++    simpa [huniv, ENNReal.toReal_add, hfinite, Set.sdiff_eq] using h
+   have hcompReal :
+       (mu.toOuterMeasure Whiteᶜ).toReal ≤ (1 / 2 : ℝ) := by
+     linarith
+@@ -164,7 +164,7 @@
+     _ = ENNReal.ofReal lemma79R2ContractionFactor := by
+       have hexp0 : 0 ≤ Real.exp (-1) := (Real.exp_pos _).le
+       have hexp1 : Real.exp (-1) ≤ 1 := by
+-        simpa using Real.exp_le_exp.mpr (show (-1 : ℝ) ≤ 0 by norm_num)
++        simp
+       have hdiff0 : 0 ≤ 1 - Real.exp (-1) := sub_nonneg.mpr hexp1
+       rw [← ENNReal.ofReal_mul (p := (1 / 2 : ℝ))
+         (q := 1 - Real.exp (-1)) (by norm_num)]
+--- a/source/Erdos1135/Tao/Renewal/Lemma79R2MasterAtom.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79R2MasterAtom.lean
+@@ -180,7 +180,8 @@
+     have hdecoded :=
+       lemma79FirstExitCertificate_of_decodedHoldSource
+         origin old p src hentry hroom
+-    simpa [full, entry, gap, Kfull, lemma79HoldFirstExitCut, hcut] using hdecoded
++    simpa [full, entry, gap, Kfull, suffix, lemma79HoldPathPointAt,
++      lemma79HoldFirstExitCut, hcut] using hdecoded
+   have hblockTake : block.take K = suffix.take K := by
+     dsimp [block]
+     rw [List.take_take]
+--- a/source/Erdos1135/Tao/Renewal/Lemma79R2MasterTransport.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79R2MasterTransport.lean
+@@ -95,7 +95,7 @@
+           (lemma79HoldPathHeadKey start family J) key =
+         (fun full : List TaoSection7RenewalPoint => full.take J) ⁻¹' Event := by
+     ext full
+-    simp only [Event, lemma79KeyAtom, Set.mem_setOf_eq, Set.mem_univ,
++    simp only [Event, lemma79KeyAtom, Set.mem_ofPred_eq, Set.mem_univ,
+       true_and, Set.mem_preimage]
+     rw [lemma79HoldPathHeadKey_take]
+   calc
+@@ -149,7 +149,7 @@
+       apply congrArg (lemma79PMFENNExpectation (taoSection7HoldListPMF B))
+       funext full
+       have hmem : full ∈ Event ↔ full.take J ∈ Event := by
+-        simp only [Event, lemma79KeyAtom, Set.mem_setOf_eq, Set.mem_univ,
++        simp only [Event, lemma79KeyAtom, Set.mem_ofPred_eq, Set.mem_univ,
+           true_and]
+         rw [lemma79HoldPathHeadKey_take]
+       have hstat :
+--- a/source/Erdos1135/Tao/Renewal/Lemma79R2Pointwise.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79R2Pointwise.lean
+@@ -105,7 +105,7 @@
+       lemma79CutoffTailMoment
+           (lemma79HoldPathRestartPointAt start full (p + K))
+           family n xi epsilon C 1 ≤ Real.exp epsilon := by
+-    simpa [lemma79HoldPathRestartPointAt] using
++    exact
+       (lemma79HoldPathCutoffTailMoment_one_le_exp_total
+         (n := n) (C := C) (xi := xi) (epsilon := epsilon)
+         (family := family)
+@@ -171,7 +171,7 @@
+       lemma79CutoffTailMoment
+           (lemma79HoldPathRestartPointAt start full (p + K))
+           family n xi epsilon C 1 ≤ Real.exp epsilon := by
+-    simpa [lemma79HoldPathRestartPointAt] using
++    exact
+       (lemma79HoldPathCutoffTailMoment_one_le_exp_total
+         (n := n) (C := C) (xi := xi) (epsilon := epsilon)
+         (family := family)
+@@ -233,10 +233,10 @@
+       taoSection7SourceWhiteWCutoff n xi epsilon C
+         ((lemma79HoldPathRestartPointAt start full p K).j : ℕ)
+         (lemma79HoldPathRestartPointAt start full p K).l
+-  · rw [if_pos hwhite]
++  · rw [ite_eq_left hwhite]
+     exact lemma79HoldPathCutoffTailMoment_two_le_of_firstExit_white
+       hpair hcover hlen hexit htrace hwhite
+-  · rw [if_neg hwhite, mul_one]
++  · rw [ite_eq_right hwhite, mul_one]
+     exact lemma79HoldPathCutoffTailMoment_two_le_of_firstExit
+       hpair hcover hlen hexit htrace
+ 
+--- a/source/Erdos1135/Tao/Renewal/Lemma79R2PositiveKeyBound.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79R2PositiveKeyBound.lean
+@@ -208,7 +208,7 @@
+                     family n xi epsilon J 2 ≤
+                   Real.exp (-(p.pred : ℝ) + 2 * epsilon) *
+                     Real.exp (-1) := by
+-              rw [if_pos hwhiteGlobal] at hreal
++              rw [ite_eq_left hwhiteGlobal] at hreal
+               exact hreal
+             unfold lemma79HoldPathCutoffTailMomentENN
+             calc
+@@ -238,7 +238,7 @@
+                     (lemma79HoldPathPointAt origin full)
+                     family n xi epsilon J 2 ≤
+                   Real.exp (-(p.pred : ℝ) + 2 * epsilon) := by
+-              rw [if_neg hwhiteGlobal, mul_one] at hreal
++              rw [ite_eq_right hwhiteGlobal, mul_one] at hreal
+               exact hreal
+             unfold lemma79HoldPathCutoffTailMomentENN
+             calc
+@@ -263,7 +263,7 @@
+       intro full
+       by_cases hfull : taoSection7HoldListPMF B full = 0
+       · simp [hfull]
+-      · exact mul_le_mul_left' (hvalue full hfull) _
++      · exact mul_le_mul_right (hvalue full hfull) _
+     have htoWeight :
+         lemma79PMFENNExpectation
+             (taoSection7HoldListPMF B)
+@@ -333,13 +333,13 @@
+               (longAtom.indicator endpointWeight) * prefactor := htoWeight
+         _ ≤ ((taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               ENNReal.ofReal lemma79R2ContractionFactor) * prefactor :=
+-          mul_le_mul_right' hendpointBound prefactor
++          mul_le_mul_left hendpointBound prefactor
+         _ = (taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               (prefactor * ENNReal.ofReal lemma79R2ContractionFactor) := by
+           ac_rfl
+         _ ≤ (taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               ENNReal.ofReal (Real.exp epsilon) :=
+-          mul_le_mul_left' hscalarENN _
++          mul_le_mul_right hscalarENN _
+     have hExpPull :=
+       lemma79_holdList_keyAtom_cutoffTailMomentENN_expectation_eq_of_le
+         hJB origin family hpair (some (p, entryPoint))
+--- a/source/Erdos1135/Tao/Renewal/Lemma79R3AtomBound.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79R3AtomBound.lean
+@@ -147,7 +147,7 @@
+           (by simpa [family] using htrace)
+     by_cases hwhite : endpointCoord ∈ White
+     · have hwhiteGlobal := hwhiteIff.mp hwhite
+-      rw [if_pos hwhiteGlobal] at hreal
++      rw [ite_eq_left hwhiteGlobal] at hreal
+       unfold lemma79HoldPathCutoffTailMomentENN
+       calc
+         ENNReal.ofReal
+@@ -181,7 +181,7 @@
+             ((lemma79HoldPathRestartPointAt origin full p K).j : ℕ)
+             (lemma79HoldPathRestartPointAt origin full p K).l :=
+         fun h => hwhite (hwhiteIff.mpr h)
+-      rw [if_neg hwhiteGlobal, mul_one] at hreal
++      rw [ite_eq_right hwhiteGlobal, mul_one] at hreal
+       unfold lemma79HoldPathCutoffTailMomentENN
+       calc
+         ENNReal.ofReal
+--- a/source/Erdos1135/Tao/Renewal/Lemma79R3Pointwise.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79R3Pointwise.lean
+@@ -125,7 +125,7 @@
+       rw [Nat.cast_add]
+       have hcountReal : (1 : ℝ) ≤ (count : ℝ) := by exact_mod_cast hcount
+       linarith
+-    rw [if_pos hwhite]
++    rw [ite_eq_left hwhite]
+     exact mul_le_mul_of_nonneg_right hcoeff hfuture0
+   · have hcoeff :
+         Real.exp
+@@ -135,7 +135,7 @@
+       rw [Nat.cast_add]
+       have hcount0 : (0 : ℝ) ≤ (count : ℝ) := Nat.cast_nonneg _
+       linarith
+-    rw [if_neg hwhite, mul_one]
++    rw [ite_eq_right hwhite, mul_one]
+     exact mul_le_mul_of_nonneg_right hcoeff hfuture0
+ 
+ end Lemma79TailExpectation
+--- a/source/Erdos1135/Tao/Renewal/Lemma79Recurrence.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79Recurrence.lean
+@@ -176,7 +176,7 @@
+               lemma79CutoffWhiteCount
+                 (lemma79RestartPointAt pointAt k1)
+                 n xi epsilon C t := by
+-        simpa [lemma79RestartPointAt] using hcount
++        exact hcount
+       rw [lemma79CutoffTailMoment_eq_exp_of_tR? hglobal,
+         lemma79CutoffTailMoment_eq_exp_of_tR? hlocal,
+         ← Real.exp_add]
+--- a/source/Erdos1135/Tao/Renewal/Lemma79TailExpectationCore.lean
++++ b/source/Erdos1135/Tao/Renewal/Lemma79TailExpectationCore.lean
+@@ -1851,11 +1851,11 @@
+             by_cases hp : pre ∈ PreAtom
+             · have hat : sampleOf (pre, tail') ∈ AtomA :=
+                 (hatom pre tail').mpr hp
+-              rw [if_pos hat, if_pos hp, hprod pre tail']
++              rw [ite_eq_left hat, ite_eq_left hp, hprod pre tail']
+             · have hnot : sampleOf (pre, tail') ∉ AtomA := by
+                 intro hmem
+                 exact hp ((hatom pre tail').mp hmem)
+-              rw [if_neg hnot, if_neg hp]
++              rw [ite_eq_right hnot, ite_eq_right hp]
+       _ = ∑ pre, if pre ∈ PreAtom then (nuPre pre).toReal else 0 := by
+             refine Finset.sum_congr rfl ?_
+             intro pre _hpre
+@@ -1911,7 +1911,7 @@
+                       tailKey (pre, tail) = tail :=
+                   ⟨hat, htail pre tail⟩
+                 have hright : pre ∈ PreAtom ∧ tail = tail := ⟨hp, rfl⟩
+-                rw [if_pos hleft, if_pos hright, hprod pre tail]
++                rw [ite_eq_left hleft, ite_eq_left hright, hprod pre tail]
+               · have hleft :
+                     ¬ (sampleOf (pre, tail') ∈ AtomA ∧
+                       tailKey (pre, tail') = tail) := by
+@@ -1923,7 +1923,7 @@
+                 have hright : ¬ (pre ∈ PreAtom ∧ tail' = tail) := by
+                   intro h
+                   exact ht h.2
+-                rw [if_neg hleft, if_neg hright]
++                rw [ite_eq_right hleft, ite_eq_right hright]
+             · have hleft :
+                   ¬ (sampleOf (pre, tail') ∈ AtomA ∧
+                     tailKey (pre, tail') = tail) := by
+@@ -1932,7 +1932,7 @@
+               have hright : ¬ (pre ∈ PreAtom ∧ tail' = tail) := by
+                 intro h
+                 exact hp h.1
+-              rw [if_neg hleft, if_neg hright]
++              rw [ite_eq_right hleft, ite_eq_right hright]
+       _ = ∑ pre, if pre ∈ PreAtom then
+             (nuPre pre).toReal * (nuTail tail).toReal else 0 := by
+             refine Finset.sum_congr rfl ?_
+@@ -3005,7 +3005,7 @@
+     lemma79KeyAtom (Parent ∩ Exit) key k =
+       lemma79KeyAtom Parent key k ∩ Exit := by
+   ext omega
+-  simp [lemma79KeyAtom, and_comm, and_left_comm, and_assoc]
++  simp [lemma79KeyAtom, and_comm, and_assoc]
+ 
+ /--
+ Countable O5 aggregation algebra.  Unnormalized exit contractions on every
+@@ -3619,7 +3619,7 @@
+     refine Finset.sum_congr rfl ?_
+     intro omega _homega
+     by_cases hmem : omega ∈ AtomA
+-    · rw [if_pos hmem, if_pos hmem, hprefixFuture omega hmem]
++    · rw [ite_eq_left hmem, ite_eq_left hmem, hprefixFuture omega hmem]
+       rfl
+     · simp [hmem]
+   have hright_value :
+@@ -3800,11 +3800,11 @@
+       simpa [hwhite] using exit_indicator_le_prefixWhiteCount a omega hmem
+     have hcount : (1 : ℝ) ≤ (prefixWhiteCount a : ℝ) := by
+       exact_mod_cast hcount_nat
+-    rw [exitWhiteWeight, if_pos hwhite, ← Real.exp_add]
++    rw [exitWhiteWeight, ite_eq_left hwhite, ← Real.exp_add]
+     exact Real.exp_le_exp.mpr (by nlinarith)
+   · have hcount : (0 : ℝ) ≤ (prefixWhiteCount a : ℝ) := by
+       exact_mod_cast Nat.zero_le (prefixWhiteCount a)
+-    rw [exitWhiteWeight, if_neg hwhite, mul_one]
++    rw [exitWhiteWeight, ite_eq_right hwhite, mul_one]
+     exact Real.exp_le_exp.mpr (by nlinarith)
+ 
+ theorem lemma79_fixedOriginStoppedRestartTowerSource_of_fixedPrefixCarrier
+--- a/source/Erdos1135/Tao/Renewal/Prop78Case1Scalar.lean
++++ b/source/Erdos1135/Tao/Renewal/Prop78Case1Scalar.lean
+@@ -43,7 +43,7 @@
+           have hmass :
+               (geom4PNat n.succPNat).toReal =
+                 (1 / 4 : ℝ) * (3 / 4 : ℝ) ^ n := by
+-            simpa using geom4PNat_apply_nat_succ_toReal n
++            simpa only [Nat.succPNat] using geom4PNat_apply_nat_succ_toReal n
+           have hcoe : ((n.succPNat : ℕ+) : ℕ) = n + 1 := by rfl
+           rw [hmass, hcoe]
+           rw [show t * (n + 1 : ℕ) = t + (n : ℝ) * t by
+@@ -80,7 +80,7 @@
+   have hmass :
+       (geom4PNat n.succPNat).toReal =
+         (1 / 4 : ℝ) * (3 / 4 : ℝ) ^ n := by
+-    simpa using geom4PNat_apply_nat_succ_toReal n
++    simpa only [Nat.succPNat] using geom4PNat_apply_nat_succ_toReal n
+   have hcoe : ((n.succPNat : ℕ+) : ℕ) = n + 1 := by rfl
+   rw [hmass, hcoe]
+   rw [show t * (n + 1 : ℕ) = t + (n : ℝ) * t by
+@@ -362,7 +362,7 @@
+       simp [div_eq_mul_inv, mul_add, mul_assoc]
+       ring
+     · simp
+-  simpa [taoSection7Case1Rate] using
++  simpa [taoSection7Case1Rate, Function.comp_def] using
+     hreal.comp tendsto_natCast_atTop_atTop
+ 
+ theorem exists_taoSection7Case1RateThreshold
+--- a/source/Erdos1135/Tao/Renewal/Prop78Case3Event.lean
++++ b/source/Erdos1135/Tao/Renewal/Prop78Case3Event.lean
+@@ -1215,7 +1215,7 @@
+         (taoSection7Case3ExitGapBoundWithBase base Kcut) threshold q :=
+     (Finset.mem_Icc.mp
+       (by
+-        simpa [taoSection7Case3LocalSelectedEnvelope] using hp)).2
++        exact hp)).2
+   simpa [taoSection7Case3BaseKcutNextBound] using hp_right
+ 
+ /--
+@@ -1238,7 +1238,7 @@
+           (taoSection7Case3ExitGapBoundWithBase base Kcut) threshold q :=
+       (Finset.mem_Icc.mp
+         (by
+-          simpa [taoSection7Case3LocalSelectedEnvelope] using hp)).2
++          exact hp)).2
+     simpa [B, taoSection7Case3BaseKcutNextBound] using hp'
+   have hBq_le :
+       B q ≤ B ((B^[i]) start) := by
+@@ -1284,7 +1284,7 @@
+           (taoSection7Case3ExitGapBoundWithBase base Kcut) threshold q :=
+       (Finset.mem_Icc.mp
+         (by
+-          simpa [taoSection7Case3LocalSelectedEnvelope] using hp)).2
++          exact hp)).2
+     simpa [B, taoSection7Case3BaseKcutNextBound] using hp'
+   have hBq_le :
+       B q ≤ B ((B^[i]) start) :=
+--- a/source/Erdos1135/Tao/Renewal/Prop78Case3Stopping.lean
++++ b/source/Erdos1135/Tao/Renewal/Prop78Case3Stopping.lean
+@@ -10766,7 +10766,7 @@
+       Real.exp
+         (-(tailCount ω : ℝ) +
+           epsilon * (min (TaoSection7Case3SourceStoppingRun.r (steps ω)) R : ℝ)) := by
+-  rw [h.tail_moment_eq, if_pos hrge]
++  rw [h.tail_moment_eq, ite_eq_left hrge]
+   have hrge_real :
+       (R : ℝ) ≤ (TaoSection7Case3SourceStoppingRun.r (steps ω) : ℝ) := by
+     exact_mod_cast hrge
+--- a/source/Erdos1135/Tao/Renewal/SourceListBridge.lean
++++ b/source/Erdos1135/Tao/Renewal/SourceListBridge.lean
+@@ -10,6 +10,8 @@
+ blocks terminated by `3`, and keeps cancellation and weighted Hold consumers in
+ later modules.
+ -/
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ namespace Erdos1135
+ namespace Tao
+--- a/source/Erdos1135/Tao/Renewal/SourcePathData.lean
++++ b/source/Erdos1135/Tao/Renewal/SourcePathData.lean
+@@ -252,7 +252,7 @@
+     taoSection7ShiftIndex (taoSection7ShiftIndex j a) b =
+       taoSection7ShiftIndex j (a + b) := by
+   apply Subtype.ext
+-  simp [taoSection7ShiftIndex]
++  change (j : ℕ) + a + b = (j : ℕ) + (a + b)
+   omega
+ 
+ @[simp] theorem taoSection7SourceBlocks_append
+@@ -361,7 +361,7 @@
+     taoSection7SourceSuffixCoversWindow q P pres := by
+   subst blocks
+   subst q
+-  simpa [taoSection7SourceSuffixCoversWindow] using hP
++  simpa [taoSection7SourceSuffixCoversWindow, Nat.add_assoc] using hP
+ 
+ /--
+ A block-scoped source-suffix provenance package supplies the exact
+--- a/source/Erdos1135/Tao/Renewal/SourceRegeneration.lean
++++ b/source/Erdos1135/Tao/Renewal/SourceRegeneration.lean
+@@ -79,7 +79,7 @@
+         have hxs : pre = xs := (List.cons.inj (congrArg Prod.snd h)).2
+         exact hne (Prod.ext hk hxs).symm
+       simp [hpair]
+-  · rw [if_neg hbc, ENNReal.tsum_eq_zero]
++  · rw [ite_eq_right hbc, ENNReal.tsum_eq_zero]
+     rintro ⟨k, xs⟩
+     have hpair : ¬(m + 1, b :: pre) = (k + 1, c :: xs) := by
+       intro h
+@@ -96,21 +96,21 @@
+   rw [taoSection7HoldSourcePrefixRegeneratedPMF, PMF.bind_apply]
+   by_cases hb : b = 3
+   · subst b
+-    rw [if_pos rfl, ENNReal.tsum_eq_zero]
++    rw [ite_eq_left rfl, ENNReal.tsum_eq_zero]
+     intro c
+     by_cases hc : c = 3
+     · subst c
+       simp
+-    · rw [if_neg hc, taoSection7HoldSourcePrefixPMF_map_miss_apply]
++    · rw [ite_eq_right hc, taoSection7HoldSourcePrefixPMF_map_miss_apply]
+       simp [Ne.symm hc]
+-  · rw [if_neg hb, tsum_eq_single b]
+-    · rw [if_neg hb, taoSection7HoldSourcePrefixPMF_map_miss_apply]
++  · rw [ite_eq_right hb, tsum_eq_single b]
++    · rw [ite_eq_right hb, taoSection7HoldSourcePrefixPMF_map_miss_apply]
+       simp
+     · intro c hcb
+       by_cases hc : c = 3
+       · subst c
+         simp
+-      · rw [if_neg hc, taoSection7HoldSourcePrefixPMF_map_miss_apply]
++      · rw [ite_eq_right hc, taoSection7HoldSourcePrefixPMF_map_miss_apply]
+         simp [Ne.symm hcb]
+ 
+ private theorem taoSection7HoldSourcePrefixRegeneratedPMF_zero_nil_apply :
+@@ -123,7 +123,7 @@
+   · intro c hc
+     by_cases hc3 : c = 3
+     · exact (hc hc3).elim
+-    · rw [if_neg hc3]
++    · rw [ite_eq_right hc3]
+       have hmap :
+           (taoSection7HoldSourcePrefixPMF.map fun x =>
+             (x.1 + 1, c :: x.2)) (0, []) = 0 := by
+@@ -146,7 +146,7 @@
+   by_cases hc3 : c = 3
+   · subst c
+     simp
+-  · rw [if_neg hc3]
++  · rw [ite_eq_right hc3]
+     have hmap :
+         (taoSection7HoldSourcePrefixPMF.map fun x =>
+           (x.1 + 1, c :: x.2)) (0, b :: pre) = 0 := by
+@@ -169,7 +169,7 @@
+   by_cases hc3 : c = 3
+   · subst c
+     simp
+-  · rw [if_neg hc3]
++  · rw [ite_eq_right hc3]
+     have hmap :
+         (taoSection7HoldSourcePrefixPMF.map fun x =>
+           (x.1 + 1, c :: x.2)) (m + 1, []) = 0 := by
+@@ -223,8 +223,8 @@
+           rw [taoSection7HoldSourcePrefixRegeneratedPMF_succ_cons_apply]
+           by_cases hb : b = 3
+           · subst b
+-            rw [if_pos rfl, taoSection7HoldSourcePrefixPMF_succ_three]
+-          · rw [if_neg hb]
++            rw [ite_eq_left rfl, taoSection7HoldSourcePrefixPMF_succ_three]
++          · rw [ite_eq_right hb]
+             apply (ENNReal.toReal_eq_toReal_iff'
+               (PMF.apply_ne_top _ _)
+               (ENNReal.mul_ne_top
+@@ -281,12 +281,12 @@
+   funext b
+   by_cases hb : b = 3
+   · subst b
+-    rw [if_pos rfl, PMF.pure_bind, PMF.map_comp, PMF.map_comp]
++    rw [ite_eq_left rfl, PMF.pure_bind, PMF.map_comp, PMF.map_comp]
+     apply congrArg
+       (fun f => (taoSection7HoldSourcePrefixListPMF N).map f)
+     funext xs
+     simp [Function.comp_apply]
+-  · simp only [if_neg hb]
++  · simp only [ite_eq_right hb]
+     rw [PMF.bind_map]
+     change
+       taoSection7HoldSourcePrefixPMF.bind
+@@ -327,6 +327,7 @@
+           PMF.pure ([] : List ℕ)
+       convert PMF.map_const
+         (taoSection7HoldSourcePrefixListPMF N) ([] : List ℕ) using 1
++      congr 1
+   | succ J ih =>
+       cases N with
+       | zero => omega
+--- a/source/Erdos1135/Tao/Syracuse/Affine.lean
++++ b/source/Erdos1135/Tao/Syracuse/Affine.lean
+@@ -1,6 +1,8 @@
+ import Erdos1135.Tao.Syracuse.Basic
+ import Mathlib.Data.PNat.Basic
+ import Mathlib.Data.Rat.Lemmas
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ /-!
+ # Rational Affine Syracuse Conventions
+--- a/source/Erdos1135/Tao/Syracuse/CylinderMass.lean
++++ b/source/Erdos1135/Tao/Syracuse/CylinderMass.lean
+@@ -318,8 +318,7 @@
+     pmfProb (PMF.uniformOfFintype α) {x : α | x = a} =
+       (1 : ℝ) / (Fintype.card α : ℝ) := by
+   classical
+-  rw [pmfProb_uniformOfFintype]
+-  simp
++  simpa using pmfProb_uniformOfFintype_finset ({a} : Finset α)
+ 
+ theorem pmfProb_uniform_syracuseValuationCylinderResidue (as : List ℕ+) :
+     pmfProb (PMF.uniformOfFintype (ZMod (2 ^ (taoTupleWeight as + 1))))
+--- a/source/Erdos1135/Tao/Syracuse/ParityBridge.lean
++++ b/source/Erdos1135/Tao/Syracuse/ParityBridge.lean
+@@ -1,5 +1,7 @@
+ import Erdos1135.Tao.Syracuse.Affine
+ import Erdos1135.Terras.Parity.Word
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ /-!
+ # Bridge From Syracuse Valuation Tuples To Terras Parity Lists
+--- a/source/Erdos1135/Tao/Syracuse/Syrac.lean
++++ b/source/Erdos1135/Tao/Syracuse/Syrac.lean
+@@ -1,6 +1,8 @@
+ import Erdos1135.Tao.Syracuse.ValuationDistribution
+ import Mathlib.Data.ZMod.Basic
+ import Mathlib.Tactic.IntervalCases
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ /-!
+ # Finite Syrac PMF Skeleton
+@@ -420,7 +422,7 @@
+   simp [syracStep, syracMod6Exp1]
+   change (((2 : ZMod 9) ^ (6 * k + 1))⁻¹) = 5
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_zero_mod6_two (k : ℕ) :
+     syracStep 1 (0 : ZMod (3 ^ 1)) (syracMod6Exp2 k) =
+@@ -428,7 +430,7 @@
+   simp [syracStep, syracMod6Exp2]
+   change (((2 : ZMod 9) ^ (6 * k + 2))⁻¹) = 7
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_zero_mod6_three (k : ℕ) :
+     syracStep 1 (0 : ZMod (3 ^ 1)) (syracMod6Exp3 k) =
+@@ -436,7 +438,7 @@
+   simp [syracStep, syracMod6Exp3]
+   change (((2 : ZMod 9) ^ (6 * k + 3))⁻¹) = 8
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_zero_mod6_four (k : ℕ) :
+     syracStep 1 (0 : ZMod (3 ^ 1)) (syracMod6Exp4 k) =
+@@ -444,7 +446,7 @@
+   simp [syracStep, syracMod6Exp4]
+   change (((2 : ZMod 9) ^ (6 * k + 4))⁻¹) = 4
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_zero_mod6_five (k : ℕ) :
+     syracStep 1 (0 : ZMod (3 ^ 1)) (syracMod6Exp5 k) =
+@@ -452,7 +454,7 @@
+   simp [syracStep, syracMod6Exp5]
+   change (((2 : ZMod 9) ^ (6 * k + 5))⁻¹) = 2
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_zero_mod6_six (k : ℕ) :
+     syracStep 1 (0 : ZMod (3 ^ 1)) (syracMod6Exp6 k) =
+@@ -460,7 +462,7 @@
+   simp [syracStep, syracMod6Exp6]
+   change (((2 : ZMod 9) ^ (6 * k + 6))⁻¹) = 1
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_one_mod6_one (k : ℕ) :
+     syracStep 1 (1 : ZMod (3 ^ 1)) (syracMod6Exp1 k) =
+@@ -468,7 +470,7 @@
+   simp [syracStep, syracMod6Exp1]
+   change (((2 : ZMod 9) ^ (6 * k + 1))⁻¹) * 4 = 2
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_one_mod6_two (k : ℕ) :
+     syracStep 1 (1 : ZMod (3 ^ 1)) (syracMod6Exp2 k) =
+@@ -476,7 +478,7 @@
+   simp [syracStep, syracMod6Exp2]
+   change (((2 : ZMod 9) ^ (6 * k + 2))⁻¹) * 4 = 1
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_one_mod6_three (k : ℕ) :
+     syracStep 1 (1 : ZMod (3 ^ 1)) (syracMod6Exp3 k) =
+@@ -484,7 +486,7 @@
+   simp [syracStep, syracMod6Exp3]
+   change (((2 : ZMod 9) ^ (6 * k + 3))⁻¹) * 4 = 5
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_one_mod6_four (k : ℕ) :
+     syracStep 1 (1 : ZMod (3 ^ 1)) (syracMod6Exp4 k) =
+@@ -492,7 +494,7 @@
+   simp [syracStep, syracMod6Exp4]
+   change (((2 : ZMod 9) ^ (6 * k + 4))⁻¹) * 4 = 7
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_one_mod6_five (k : ℕ) :
+     syracStep 1 (1 : ZMod (3 ^ 1)) (syracMod6Exp5 k) =
+@@ -500,7 +502,7 @@
+   simp [syracStep, syracMod6Exp5]
+   change (((2 : ZMod 9) ^ (6 * k + 5))⁻¹) * 4 = 8
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_one_mod6_six (k : ℕ) :
+     syracStep 1 (1 : ZMod (3 ^ 1)) (syracMod6Exp6 k) =
+@@ -508,7 +510,7 @@
+   simp [syracStep, syracMod6Exp6]
+   change (((2 : ZMod 9) ^ (6 * k + 6))⁻¹) * 4 = 4
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_two_mod6_one (k : ℕ) :
+     syracStep 1 (2 : ZMod (3 ^ 1)) (syracMod6Exp1 k) =
+@@ -516,7 +518,7 @@
+   simp [syracStep, syracMod6Exp1]
+   change (((2 : ZMod 9) ^ (6 * k + 1))⁻¹) * 7 = 8
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_two_mod6_two (k : ℕ) :
+     syracStep 1 (2 : ZMod (3 ^ 1)) (syracMod6Exp2 k) =
+@@ -524,7 +526,7 @@
+   simp [syracStep, syracMod6Exp2]
+   change (((2 : ZMod 9) ^ (6 * k + 2))⁻¹) * 7 = 4
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_two_mod6_three (k : ℕ) :
+     syracStep 1 (2 : ZMod (3 ^ 1)) (syracMod6Exp3 k) =
+@@ -532,7 +534,7 @@
+   simp [syracStep, syracMod6Exp3]
+   change (((2 : ZMod 9) ^ (6 * k + 3))⁻¹) * 7 = 2
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_two_mod6_four (k : ℕ) :
+     syracStep 1 (2 : ZMod (3 ^ 1)) (syracMod6Exp4 k) =
+@@ -540,7 +542,7 @@
+   simp [syracStep, syracMod6Exp4]
+   change (((2 : ZMod 9) ^ (6 * k + 4))⁻¹) * 7 = 1
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_two_mod6_five (k : ℕ) :
+     syracStep 1 (2 : ZMod (3 ^ 1)) (syracMod6Exp5 k) =
+@@ -548,7 +550,7 @@
+   simp [syracStep, syracMod6Exp5]
+   change (((2 : ZMod 9) ^ (6 * k + 5))⁻¹) * 7 = 5
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_two_mod6_six (k : ℕ) :
+     syracStep 1 (2 : ZMod (3 ^ 1)) (syracMod6Exp6 k) =
+@@ -556,7 +558,7 @@
+   simp [syracStep, syracMod6Exp6]
+   change (((2 : ZMod 9) ^ (6 * k + 6))⁻¹) * 7 = 7
+   rw [two_pow_mod9_mod6]
+-  decide
++  decide +kernel
+ 
+ private theorem syracStep_one_ne_zero_mod9 (y : ZMod (3 ^ 1)) (a : ℕ+) :
+     syracStep 1 y a ≠ (0 : ZMod (3 ^ (1 + 1))) := by
+@@ -566,7 +568,7 @@
+     fin_cases y <;>
+       simp [syracStep, syracMod6Exp1, syracMod6Exp2, syracMod6Exp3, syracMod6Exp4,
+         syracMod6Exp5, syracMod6Exp6, two_pow_mod9_mod6] <;>
+-      decide
++      decide +kernel
+ 
+ private theorem syracStep_one_ne_three_mod9 (y : ZMod (3 ^ 1)) (a : ℕ+) :
+     syracStep 1 y a ≠ (3 : ZMod (3 ^ (1 + 1))) := by
+@@ -576,7 +578,7 @@
+     fin_cases y <;>
+       simp [syracStep, syracMod6Exp1, syracMod6Exp2, syracMod6Exp3, syracMod6Exp4,
+         syracMod6Exp5, syracMod6Exp6, two_pow_mod9_mod6] <;>
+-      decide
++      decide +kernel
+ 
+ private theorem syracStep_one_ne_six_mod9 (y : ZMod (3 ^ 1)) (a : ℕ+) :
+     syracStep 1 y a ≠ (6 : ZMod (3 ^ (1 + 1))) := by
+@@ -586,7 +588,7 @@
+     fin_cases y <;>
+       simp [syracStep, syracMod6Exp1, syracMod6Exp2, syracMod6Exp3, syracMod6Exp4,
+         syracMod6Exp5, syracMod6Exp6, two_pow_mod9_mod6] <;>
+-      decide
++      decide +kernel
+ 
+ private theorem map_syracStep_one_apply_zero
+     (y : ZMod (3 ^ 1)) :
+@@ -1827,7 +1829,7 @@
+       else if (0 : ZMod (3 ^ 2)) = 7 then ENNReal.ofReal (2 / 63 : ℝ)
+       else ENNReal.ofReal (22 / 63 : ℝ)
+     rw [syracPMF_two_apply_zero]
+-    rw [if_pos rfl]
++    rw [ite_eq_left rfl]
+   · change syracPMF 2 (1 : ZMod (3 ^ 2)) =
+       if (1 : ZMod (3 ^ 2)) = 0 then 0
+       else if (1 : ZMod (3 ^ 2)) = 1 then ENNReal.ofReal (8 / 63 : ℝ)
+@@ -1839,8 +1841,8 @@
+       else if (1 : ZMod (3 ^ 2)) = 7 then ENNReal.ofReal (2 / 63 : ℝ)
+       else ENNReal.ofReal (22 / 63 : ℝ)
+     rw [syracPMF_two_apply_one]
+-    rw [if_neg (by decide : ¬((1 : ZMod (3 ^ 2)) = 0))]
+-    rw [if_pos rfl]
++    rw [ite_eq_right (by decide : ¬((1 : ZMod (3 ^ 2)) = 0))]
++    rw [ite_eq_left rfl]
+   · change syracPMF 2 (2 : ZMod (3 ^ 2)) =
+       if (2 : ZMod (3 ^ 2)) = 0 then 0
+       else if (2 : ZMod (3 ^ 2)) = 1 then ENNReal.ofReal (8 / 63 : ℝ)
+@@ -1852,9 +1854,9 @@
+       else if (2 : ZMod (3 ^ 2)) = 7 then ENNReal.ofReal (2 / 63 : ℝ)
+       else ENNReal.ofReal (22 / 63 : ℝ)
+     rw [syracPMF_two_apply_two]
+-    rw [if_neg (by decide : ¬((2 : ZMod (3 ^ 2)) = 0))]
+-    rw [if_neg (by decide : ¬((2 : ZMod (3 ^ 2)) = 1))]
+-    rw [if_pos rfl]
++    rw [ite_eq_right (by decide : ¬((2 : ZMod (3 ^ 2)) = 0))]
++    rw [ite_eq_right (by decide : ¬((2 : ZMod (3 ^ 2)) = 1))]
++    rw [ite_eq_left rfl]
+   · change syracPMF 2 (3 : ZMod (3 ^ 2)) =
+       if (3 : ZMod (3 ^ 2)) = 0 then 0
+       else if (3 : ZMod (3 ^ 2)) = 1 then ENNReal.ofReal (8 / 63 : ℝ)
+@@ -1866,10 +1868,10 @@
+       else if (3 : ZMod (3 ^ 2)) = 7 then ENNReal.ofReal (2 / 63 : ℝ)
+       else ENNReal.ofReal (22 / 63 : ℝ)
+     rw [syracPMF_two_apply_three]
+-    rw [if_neg (by decide : ¬((3 : ZMod (3 ^ 2)) = 0))]
+-    rw [if_neg (by decide : ¬((3 : ZMod (3 ^ 2)) = 1))]
+-    rw [if_neg (by decide : ¬((3 : ZMod (3 ^ 2)) = 2))]
+-    rw [if_pos rfl]
++    rw [ite_eq_right (by decide : ¬((3 : ZMod (3 ^ 2)) = 0))]
++    rw [ite_eq_right (by decide : ¬((3 : ZMod (3 ^ 2)) = 1))]
++    rw [ite_eq_right (by decide : ¬((3 : ZMod (3 ^ 2)) = 2))]
++    rw [ite_eq_left rfl]
+   · change syracPMF 2 (4 : ZMod (3 ^ 2)) =
+       if (4 : ZMod (3 ^ 2)) = 0 then 0
+       else if (4 : ZMod (3 ^ 2)) = 1 then ENNReal.ofReal (8 / 63 : ℝ)
+@@ -1881,11 +1883,11 @@
+       else if (4 : ZMod (3 ^ 2)) = 7 then ENNReal.ofReal (2 / 63 : ℝ)
+       else ENNReal.ofReal (22 / 63 : ℝ)
+     rw [syracPMF_two_apply_four]
+-    rw [if_neg (by decide : ¬((4 : ZMod (3 ^ 2)) = 0))]
+-    rw [if_neg (by decide : ¬((4 : ZMod (3 ^ 2)) = 1))]
+-    rw [if_neg (by decide : ¬((4 : ZMod (3 ^ 2)) = 2))]
+-    rw [if_neg (by decide : ¬((4 : ZMod (3 ^ 2)) = 3))]
+-    rw [if_pos rfl]
++    rw [ite_eq_right (by decide : ¬((4 : ZMod (3 ^ 2)) = 0))]
++    rw [ite_eq_right (by decide : ¬((4 : ZMod (3 ^ 2)) = 1))]
++    rw [ite_eq_right (by decide : ¬((4 : ZMod (3 ^ 2)) = 2))]
++    rw [ite_eq_right (by decide : ¬((4 : ZMod (3 ^ 2)) = 3))]
++    rw [ite_eq_left rfl]
+   · change syracPMF 2 (5 : ZMod (3 ^ 2)) =
+       if (5 : ZMod (3 ^ 2)) = 0 then 0
+       else if (5 : ZMod (3 ^ 2)) = 1 then ENNReal.ofReal (8 / 63 : ℝ)
+@@ -1897,12 +1899,12 @@
+       else if (5 : ZMod (3 ^ 2)) = 7 then ENNReal.ofReal (2 / 63 : ℝ)
+       else ENNReal.ofReal (22 / 63 : ℝ)
+     rw [syracPMF_two_apply_five]
+-    rw [if_neg (by decide : ¬((5 : ZMod (3 ^ 2)) = 0))]
+-    rw [if_neg (by decide : ¬((5 : ZMod (3 ^ 2)) = 1))]
+-    rw [if_neg (by decide : ¬((5 : ZMod (3 ^ 2)) = 2))]
+-    rw [if_neg (by decide : ¬((5 : ZMod (3 ^ 2)) = 3))]
+-    rw [if_neg (by decide : ¬((5 : ZMod (3 ^ 2)) = 4))]
+-    rw [if_pos rfl]
++    rw [ite_eq_right (by decide : ¬((5 : ZMod (3 ^ 2)) = 0))]
++    rw [ite_eq_right (by decide : ¬((5 : ZMod (3 ^ 2)) = 1))]
++    rw [ite_eq_right (by decide : ¬((5 : ZMod (3 ^ 2)) = 2))]
++    rw [ite_eq_right (by decide : ¬((5 : ZMod (3 ^ 2)) = 3))]
++    rw [ite_eq_right (by decide : ¬((5 : ZMod (3 ^ 2)) = 4))]
++    rw [ite_eq_left rfl]
+   · change syracPMF 2 (6 : ZMod (3 ^ 2)) =
+       if (6 : ZMod (3 ^ 2)) = 0 then 0
+       else if (6 : ZMod (3 ^ 2)) = 1 then ENNReal.ofReal (8 / 63 : ℝ)
+@@ -1914,13 +1916,13 @@
+       else if (6 : ZMod (3 ^ 2)) = 7 then ENNReal.ofReal (2 / 63 : ℝ)
+       else ENNReal.ofReal (22 / 63 : ℝ)
+     rw [syracPMF_two_apply_six]
+-    rw [if_neg (by decide : ¬((6 : ZMod (3 ^ 2)) = 0))]
+-    rw [if_neg (by decide : ¬((6 : ZMod (3 ^ 2)) = 1))]
+-    rw [if_neg (by decide : ¬((6 : ZMod (3 ^ 2)) = 2))]
+-    rw [if_neg (by decide : ¬((6 : ZMod (3 ^ 2)) = 3))]
+-    rw [if_neg (by decide : ¬((6 : ZMod (3 ^ 2)) = 4))]
+-    rw [if_neg (by decide : ¬((6 : ZMod (3 ^ 2)) = 5))]
+-    rw [if_pos rfl]
++    rw [ite_eq_right (by decide : ¬((6 : ZMod (3 ^ 2)) = 0))]
++    rw [ite_eq_right (by decide : ¬((6 : ZMod (3 ^ 2)) = 1))]
++    rw [ite_eq_right (by decide : ¬((6 : ZMod (3 ^ 2)) = 2))]
++    rw [ite_eq_right (by decide : ¬((6 : ZMod (3 ^ 2)) = 3))]
++    rw [ite_eq_right (by decide : ¬((6 : ZMod (3 ^ 2)) = 4))]
++    rw [ite_eq_right (by decide : ¬((6 : ZMod (3 ^ 2)) = 5))]
++    rw [ite_eq_left rfl]
+   · change syracPMF 2 (7 : ZMod (3 ^ 2)) =
+       if (7 : ZMod (3 ^ 2)) = 0 then 0
+       else if (7 : ZMod (3 ^ 2)) = 1 then ENNReal.ofReal (8 / 63 : ℝ)
+@@ -1932,14 +1934,14 @@
+       else if (7 : ZMod (3 ^ 2)) = 7 then ENNReal.ofReal (2 / 63 : ℝ)
+       else ENNReal.ofReal (22 / 63 : ℝ)
+     rw [syracPMF_two_apply_seven]
+-    rw [if_neg (by decide : ¬((7 : ZMod (3 ^ 2)) = 0))]
+-    rw [if_neg (by decide : ¬((7 : ZMod (3 ^ 2)) = 1))]
+-    rw [if_neg (by decide : ¬((7 : ZMod (3 ^ 2)) = 2))]
+-    rw [if_neg (by decide : ¬((7 : ZMod (3 ^ 2)) = 3))]
+-    rw [if_neg (by decide : ¬((7 : ZMod (3 ^ 2)) = 4))]
+-    rw [if_neg (by decide : ¬((7 : ZMod (3 ^ 2)) = 5))]
+-    rw [if_neg (by decide : ¬((7 : ZMod (3 ^ 2)) = 6))]
+-    rw [if_pos rfl]
++    rw [ite_eq_right (by decide : ¬((7 : ZMod (3 ^ 2)) = 0))]
++    rw [ite_eq_right (by decide : ¬((7 : ZMod (3 ^ 2)) = 1))]
++    rw [ite_eq_right (by decide : ¬((7 : ZMod (3 ^ 2)) = 2))]
++    rw [ite_eq_right (by decide : ¬((7 : ZMod (3 ^ 2)) = 3))]
++    rw [ite_eq_right (by decide : ¬((7 : ZMod (3 ^ 2)) = 4))]
++    rw [ite_eq_right (by decide : ¬((7 : ZMod (3 ^ 2)) = 5))]
++    rw [ite_eq_right (by decide : ¬((7 : ZMod (3 ^ 2)) = 6))]
++    rw [ite_eq_left rfl]
+   · change syracPMF 2 (8 : ZMod (3 ^ 2)) =
+       if (8 : ZMod (3 ^ 2)) = 0 then 0
+       else if (8 : ZMod (3 ^ 2)) = 1 then ENNReal.ofReal (8 / 63 : ℝ)
+@@ -1951,14 +1953,14 @@
+       else if (8 : ZMod (3 ^ 2)) = 7 then ENNReal.ofReal (2 / 63 : ℝ)
+       else ENNReal.ofReal (22 / 63 : ℝ)
+     rw [syracPMF_two_apply_eight]
+-    rw [if_neg (by decide : ¬((8 : ZMod (3 ^ 2)) = 0))]
+-    rw [if_neg (by decide : ¬((8 : ZMod (3 ^ 2)) = 1))]
+-    rw [if_neg (by decide : ¬((8 : ZMod (3 ^ 2)) = 2))]
+-    rw [if_neg (by decide : ¬((8 : ZMod (3 ^ 2)) = 3))]
+-    rw [if_neg (by decide : ¬((8 : ZMod (3 ^ 2)) = 4))]
+-    rw [if_neg (by decide : ¬((8 : ZMod (3 ^ 2)) = 5))]
+-    rw [if_neg (by decide : ¬((8 : ZMod (3 ^ 2)) = 6))]
+-    rw [if_neg (by decide : ¬((8 : ZMod (3 ^ 2)) = 7))]
++    rw [ite_eq_right (by decide : ¬((8 : ZMod (3 ^ 2)) = 0))]
++    rw [ite_eq_right (by decide : ¬((8 : ZMod (3 ^ 2)) = 1))]
++    rw [ite_eq_right (by decide : ¬((8 : ZMod (3 ^ 2)) = 2))]
++    rw [ite_eq_right (by decide : ¬((8 : ZMod (3 ^ 2)) = 3))]
++    rw [ite_eq_right (by decide : ¬((8 : ZMod (3 ^ 2)) = 4))]
++    rw [ite_eq_right (by decide : ¬((8 : ZMod (3 ^ 2)) = 5))]
++    rw [ite_eq_right (by decide : ¬((8 : ZMod (3 ^ 2)) = 6))]
++    rw [ite_eq_right (by decide : ¬((8 : ZMod (3 ^ 2)) = 7))]
+ 
+ end Tao
+ end Erdos1135
+--- a/source/Erdos1135/Tao/Syracuse/ValuationCylinder.lean
++++ b/source/Erdos1135/Tao/Syracuse/ValuationCylinder.lean
+@@ -1,4 +1,6 @@
+ import Erdos1135.Tao.Syracuse.ParityBridge
++
++set_option backward.isDefEq.respectTransparency false
+ 
+ /-!
+ # Valuation Cylinder Shape Lemmas
+--- a/source/Erdos1135/Terras/Parity/Residue.lean
++++ b/source/Erdos1135/Terras/Parity/Residue.lean
+@@ -224,7 +224,7 @@
+ lemma parityPrefixOfResidue_injective (k : ℕ) :
+     Function.Injective (parityPrefixOfResidue k) := by
+   intro r s h
+-  haveI : NeZero (2 ^ k) := ⟨two_pow_ne_zero k⟩
++  have : NeZero (2 ^ k) := ⟨two_pow_ne_zero k⟩
+   have hmod : Nat.ModEq (2 ^ k) r.val s.val :=
+     modEq_twoPow_of_parityPrefix_eq h
+   have hcast : (r.val : ZMod (2 ^ k)) = (s.val : ZMod (2 ^ k)) :=
+@@ -237,7 +237,7 @@
+ lemma parityPrefixOfResidue_bijective (k : ℕ) :
+     Function.Bijective (parityPrefixOfResidue k) := by
+   classical
+-  haveI : NeZero (2 ^ k) := ⟨two_pow_ne_zero k⟩
++  have : NeZero (2 ^ k) := ⟨two_pow_ne_zero k⟩
+   exact (Fintype.bijective_iff_injective_and_card (parityPrefixOfResidue k)).mpr
+     ⟨parityPrefixOfResidue_injective k, by rw [ZMod.card, card_parityWord]⟩
+ 
+@@ -251,7 +251,7 @@
+ 
+ theorem natCast_eq_residue_iff_parityPrefix_eq (k : ℕ) (r : ZMod (2 ^ k)) (n : ℕ) :
+     (n : ZMod (2 ^ k)) = r ↔ parityPrefix k n = parityPrefixOfResidue k r := by
+-  haveI : NeZero (2 ^ k) := ⟨two_pow_ne_zero k⟩
++  have : NeZero (2 ^ k) := ⟨two_pow_ne_zero k⟩
+   constructor
+   · intro h
+     have hcast : (n : ZMod (2 ^ k)) = (r.val : ZMod (2 ^ k)) := by
+@@ -272,7 +272,7 @@
+     ∃! r : ZMod (2 ^ k),
+       ∀ n : ℕ, (n : ZMod (2 ^ k)) = r ↔ parityPrefix k n = w := by
+   classical
+-  haveI : NeZero (2 ^ k) := ⟨two_pow_ne_zero k⟩
++  have : NeZero (2 ^ k) := ⟨two_pow_ne_zero k⟩
+   let r : ZMod (2 ^ k) := parityPrefix_equiv_zmod k w
+   have hr : parityPrefixOfResidue k r = w := by
+     change parityPrefixZModEquiv k ((parityPrefixZModEquiv k).symm w) = w
+--- a/source/FormalConjectures/Wikipedia/CollatzConjecture.lean
++++ b/source/FormalConjectures/Wikipedia/CollatzConjecture.lean
+@@ -44,14 +44,4 @@
+ def collatzStep (n : Nat) : Nat :=
+   if Even n then n / 2 else 3 * n + 1
+ 
+-/--
+-Now form a sequence beginning with any positive integer, where each subsequent term is obtained
+-by applying the operation defined above to the previous term.
+-The **Collatz conjecture** states that for any positive integer `n`, there exists a natural number
+-`m` such that the `m`-th term of the sequence is 1.
+--/
+-@[category research open, AMS 11 37]
+-theorem collatz_conjecture (n : Nat) (hn : n > 0) : ∃ m, collatzStep^[m] n = 1 := by
+-  sorry
+-
+ end CollatzConjecture

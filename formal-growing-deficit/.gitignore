@@ -1,0 +1,10 @@
+.lake/
+.toolchain/
+.replay/
+.cache/
+*.olean
+*.ilean
+*.olean.*
+__pycache__/
+
+.preflight/

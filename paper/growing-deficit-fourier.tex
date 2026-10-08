@@ -1,0 +1,697 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left|#1\right|}
+\DeclareMathOperator{\Geom}{Geom}
+\setlength{\parskip}{3pt}
+\hypersetup{pdftitle={Fourier decay for truncated Syracuse affine laws},pdfauthor={Lucas Valbuena}}
+\title{Fourier decay for truncated Syracuse affine laws}
+\author{Lucas Valbuena}
+\date{7 October 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Let \(a_1,\ldots,a_k\) be independent positive geometric random variables
+with \(\PP(a_i=a)=2^{-a}\), and set \(S_j=a_1+\cdots+a_j\).
+We study the affine law
+\(\Phi_k(z)=\sum_{j=1}^k3^{j-1}2^{-S_j}+3^k2^{-S_k}z\)
+modulo \(3^n\), with \(k\le n\).
+For every fixed \(A\in\N\), its primitive Fourier coefficients are bounded
+by \(C_A((n-k+2)/n)^A\), uniformly in the seed and after multiplication
+by any unit-modulus function of \(S_k\).
+Consequently, conditioning on any total-exponent slice of probability at
+least \(k^{-B}\) preserves decay faster than every fixed inverse power of
+\(k\) throughout \(n-k\le k^\beta\), for each fixed \(0<\beta<1\).
+The event \(S_k=2k\) satisfies this conclusion without an additional mass
+hypothesis. The proof combines a fixed-dimensional Subspace Theorem
+obstruction to finite black-triangle covers, a qualitative renewal
+estimate above the entropy threshold, and a conductor recursion.
+The constants are ineffective. The results concern finite random affine
+laws and do not prove the Collatz conjecture.
+\end{abstract}
+
+\section{The random affine law and the main estimates}
+
+Throughout, \(\N=\{0,1,2,\ldots\}\). The variables \(a_i\) are independent
+and take positive integer values with \(\PP(a_i=a)=2^{-a}\).
+Put \(S_0=0\) and \(S_j=\sum_{i=1}^ja_i\). Since two is a unit modulo
+\(3^n\), the expression
+\begin{equation}\label{eq:affine}
+ \Phi_k(z)=\sum_{j=1}^k3^{j-1}2^{-S_j}+3^k2^{-S_k}z
+ \quad\text{in }\Z/3^n\Z
+\end{equation}
+is defined for every \(n,k\in\N\) and \(z\in\Z/3^n\Z\).
+This uses the reversed-variable convention for the Syracuse affine
+composition. Reversing an iid exponent list leaves both its law and its
+total exponent unchanged. We write
+\[
+ \chi_{n,\xi}(x)=\exp(-2\pi i\xi x/3^n).
+\]
+A frequency is \emph{primitive} if \(3\nmid\xi\).
+
+\begin{theorem}[Conductor-deficit estimate]\label{thm:main}
+For every \(A\in\N\) there is a constant \(C_A>0\) such that
+\begin{equation}\label{eq:main}
+ \abs{\E\bigl[\chi_{n,\xi}(\Phi_k(z))\tau(S_k)\bigr]}
+ \le C_A\left(\frac{n-k+2}{n}\right)^A
+\end{equation}
+for all integers \(n\ge1\), \(0\le k\le n\), all primitive
+\(\xi\in\Z/3^n\Z\), all \(z\in\Z/3^n\Z\), and every function
+\(\tau:\N\to\C\) with \(\abs{\tau(s)}=1\) for all \(s\).
+\end{theorem}
+
+The constant precedes every parameter on the right of this statement.
+In particular, the estimate is uniform when the deficit \(d=n-k\)
+grows. It gives no power of \(n\) when \(d/n\) stays bounded away from
+zero: the exponent \(A\) is fixed, and its constant is uncontrolled as
+\(A\) varies.
+
+Let \(p_k(s)=\PP(S_k=s)\). Conditioning below means the actual source
+law restricted to \(S_k=s\) and divided by \(p_k(s)\).
+
+\begin{theorem}[Conditioning on total exponent]\label{thm:conditional}
+For each \(A\in\N\), one constant \(C_A>0\) works simultaneously for
+all parameters in Theorem~\ref{thm:main} and every \(s\) with
+\(p_k(s)>0\), giving
+\begin{equation}\label{eq:conditional}
+ \abs{\E[\chi_{n,\xi}(\Phi_k(z))\mid S_k=s]}
+ \le \frac{C_A}{p_k(s)}\left(\frac{n-k+2}{n}\right)^A.
+\end{equation}
+Moreover, for every \(q,B\in\N\) and \(0<\beta<1\), there is
+\(C_{q,B,\beta}>0\) such that
+\begin{equation}\label{eq:massfloor}
+ \abs{\E[\chi_{k+d,\xi}(\Phi_k(z))\mid S_k=s]}
+ \le C_{q,B,\beta}k^{-q}
+\end{equation}
+whenever \(k\ge1\), \(d\in\N\), \(d\le k^\beta\), \(\xi\) is
+primitive modulo \(3^{k+d}\), \(z\in\Z/3^{k+d}\Z\), and
+\(p_k(s)\ge k^{-B}\).
+\end{theorem}
+
+\begin{corollary}[The central slice]\label{cor:central}
+For every \(q\in\N\) and \(0<\beta<1\), there is \(C_{q,\beta}>0\)
+such that
+\[
+ \abs{\E[\chi_{k+d,\xi}(\Phi_k(z))\mid S_k=2k]}
+ \le C_{q,\beta}k^{-q}
+\]
+for every \(k\ge4\), \(d\le k^\beta\), every primitive frequency
+modulo \(3^{k+d}\), and every seed \(z\) in that group.
+\end{corollary}
+
+The proof of the corollary uses the elementary, uniform lower bound
+\(p_k(2k)\ge1/(4k)\). No local-limit estimate is an input.
+
+\subsection{Relation to preceding work}
+
+Tao's Proposition~1.17 gives the primitive Fourier estimate for the
+full-length Syracuse offset law, and his Section~7 develops the paired
+source and renewal geometry used here~\cite{Tao}.
+At \(k=n\), the seed term vanishes modulo \(3^n\).
+We do not claim this endpoint as a new result.
+The distinction in \eqref{eq:main} is its dependence on a growing
+conductor deficit. A bound with an exponential loss in \(d\) does not
+give the range \(d\le k^\beta\).
+
+Si's Theorem~H states uniform conditional decay at logarithmic
+oversampling~\cite{Si}. Corollary~\ref{cor:central} supplies every fixed
+polynomially sublinear oversampling range on the central slice;
+Theorem~\ref{thm:conditional} covers all slices with the stated mass
+floor. This comparison concerns those precise parameter ranges, and
+does not assert a uniform theorem at a fixed positive oversampling
+ratio. We do not use results from Si's preprint in the proof.
+
+\section{Excluding a fixed number of black triangles}\label{sec:arithmetic}
+
+Fix \(0\le\eps<1/4\) and a primitive frequency \(\xi\) modulo \(3^n\).
+At a lattice point \((j,l)\in\Z_{>0}\times\Z\), let
+\[
+ \Theta_{n,\xi}(j,l)=\xi3^{2j-2}2^{1-l}\pmod{3^n}.
+\]
+The point is black if the absolute value of the signed representative
+of \(\Theta_{n,\xi}(j,l)\), divided by \(3^n\), is at most \(\eps\).
+Otherwise it is white. An integer-height triangle with top-left point
+\((j_i,T_i)\) and height \(h_i\in\N\) consists of the lattice points
+\begin{equation}\label{eq:triangle}
+ j\ge j_i,\quad l\le T_i,\quad
+ (j-j_i)\log9+(T_i-l)\log2\le h_i\log2.
+\end{equation}
+Calling a triangle black means that every lattice point in it is black.
+
+Consider \(r+1\) such triangles, indexed by \(0\le i\le r\), with
+\(2(j_i-1)<n\). Suppose there are \(m_i,u_i\in\N\) and
+\(e_i,g_i\in\Z\) satisfying
+\begin{align}\label{eq:schedules}
+ j_{i+1}&=j_i+m_i+u_i,&
+ T_{i+1}-T_i&=h_{i+1}+g_i &&(i<r),\\
+ h_i&=4m_i+e_i,& \sum_{i=0}^r m_i&\le n.\nonumber
+\end{align}
+Define the error and span by
+\begin{equation}\label{eq:error-span}
+ E=\sum_{i=0}^r\abs{e_i}+\sum_{i=0}^{r-1}(u_i+\abs{g_i}),
+ \qquad H=h_0+T_r-T_0.
+\end{equation}
+The vertical gaps are signed, and no ordering of the original tops is
+assumed.
+
+\begin{proposition}[Finite-cover obstruction]\label{prop:cover}
+Fix \(R\in\N\), \(0\le\eps<1/4\), \(\eta>0\), and a function
+\(w:\N\to\R\) such that, for every \(\gamma>0\),
+\(w(n)\le\gamma n\) eventually. There is \(N\) such that every family
+above with \(n\ge N\), \(r<R\), and \(E\le w(n)\) satisfies
+\[
+ H\log2<n\log3+\eta n.
+\]
+The cutoff is uniform over the primitive frequency and all triangle
+locations. It need not be effective.
+\end{proposition}
+
+\begin{proof}
+We first treat a putative sequence of counterexamples for which every
+\(m_i\ge\delta n\), with fixed \(\delta>0\) and fixed \(r\).
+Write \(q_i=3^{n-2j_i+2}\), and let \(a_i\) be the signed representative
+of \(\xi2^{1-T_i}\) modulo \(q_i\). Primitivity gives \(a_i\ne0\).
+Successive doublings down the left column cannot wrap while remaining
+black when \(\eps<1/4\). Therefore
+\begin{equation}\label{eq:black-numerator}
+ \abs{a_i}\le\eps q_i2^{-h_i}.
+\end{equation}
+The height relation gives
+\(D_i=T_{i+1}-T_i=h_{i+1}+g_i>0\) eventually.
+The common frequency then gives exact integer carries \(z_i\) with
+\begin{equation}\label{eq:carry}
+ q_i=9^{m_i+u_i}q_{i+1},\qquad
+ a_i=2^{D_i}a_{i+1}-z_iq_{i+1}.
+\end{equation}
+In particular,
+\[
+ \abs{z_i}\le\eps2^{g_i}
+       +\eps9^{m_i+u_i}2^{-h_i}=\exp(o(n))
+\]
+as an upper bound, using \(e_i,g_i,u_i=o(n)\).
+
+Put \(D=\sum_{i<r}D_i\), \(b=a_0\), and
+\[
+ X_0=2^Da_r,\qquad
+ X_{i+1}=z_iq_{i+1}2^{D_0+\cdots+D_{i-1}}\quad(i<r).
+\]
+Unrolling \eqref{eq:carry} gives
+\begin{equation}\label{eq:residual}
+ b=X_0-\sum_{i<r}X_{i+1},\qquad
+ 0<\frac{\abs b}{2^D}\le\eps3^n2^{-H}.
+\end{equation}
+The single-triangle case, and the case of no nonzero carry, contradict
+the entropy excess directly. Otherwise pass to a subsequence with a
+fixed nonempty set of nonzero carry indices, and list the corresponding
+coordinates as \(Y_1,\ldots,Y_t\), in their original order.
+
+For the integer vector \(x=(X_0,Y_1,\ldots,Y_t)\), use the forms
+\(X_0-\sum_jY_j,Y_1,\ldots,Y_t\) at infinity and the coordinate forms
+at both primes two and three. Each system has determinant one.
+Writing \(\abs{p}_p=p^{-1}\), their full local product is at most
+\begin{equation}\label{eq:local-product}
+ \left(\prod_{z_i\ne0}\abs{z_i}\right)\frac{\abs b}{2^D}
+ \le \exp(-\eta n+o(n)).
+\end{equation}
+Indeed, the archimedean, two-adic and three-adic factors of a carry
+coordinate together contribute at most \(\abs{z_i}\); the two-adic
+factor of \(X_0\) is at most \(2^{-D}\).
+All coordinates have absolute value at most \(\exp(Cn)\) for a fixed
+\(C>0\). Taking \(\kappa=\eta/(4C)\), the product in
+\eqref{eq:local-product} is eventually smaller than
+\(\norm{x}_\infty^{-\kappa}\). The rational Subspace
+Theorem~\cite{Schlickewei} thus places
+these vectors in finitely many proper rational subspaces.
+
+None of those subspaces can contain an infinite subsequence.
+The exact schedules and \(16>9\) give
+\begin{equation}\label{eq:ratios}
+ \frac{b}{Y_j}\longrightarrow0,
+ \qquad \frac{Y_i}{Y_j}\longrightarrow0\quad(i<j).
+\end{equation}
+For example, the first ratio is bounded in absolute value by
+\((9/16)^{m_0+\cdots+m_i}\exp(o(n))\) for the carry indexed by \(i\).
+The ratio of successive nonzero carry coordinates has the same form
+with the intervening block sum. Their main exponents are linear in
+\(n\), whereas all carry and scheduling losses are subexponential.
+If a fixed rational relation
+\(c_0X_0+\sum_jc_jY_j=0\) held along an infinite subsequence, then
+\eqref{eq:residual} would give
+\[
+ c_0b+\sum_j(c_0+c_j)Y_j=0.
+\]
+Dividing by the last coordinate with nonzero coefficient and using
+\eqref{eq:ratios} shows that every \(c_0+c_j\) vanishes. Since
+\(b\ne0\), all coefficients then vanish, a contradiction.
+
+For a general counterexample sequence, fix the number of triangles
+on a subsequence and make every \(m_i/n\) converge. Delete the indices
+with zero limit. At least one remains, since otherwise \(H=o(n)\).
+The deleted lengths and heights total \(o(n)\). Joining the schedules
+across each deleted segment adds these lengths to the horizontal
+omissions and these heights to the signed vertical gaps. The total
+error remains \(o(n)\), and the original and retained spans differ
+in absolute value by \(o(n)\). The retained original
+triangles have \(m_i\ge\delta n\) for one \(\delta>0\), and retain a
+positive entropy excess. This reduces to the contradiction just proved.
+Finally, failure of a uniform cutoff would supply an unbounded
+counterexample sequence with the same fixed \(R,\eps,\eta,w\).
+\end{proof}
+
+\section{Qualitative decay above the entropy threshold}\label{sec:qualitative}
+
+Pair the exponents and write
+\[
+ b_j=a_{2j-1}+a_{2j},\qquad L_j=b_1+\cdots+b_j.
+\]
+The \(b_j\) are independent with
+\(\PP(b_j=b)=(b-1)2^{-b}\) for \(b\ge2\). For fixed pair sums,
+the two splits of \(b_j=3\) are equiprobable. Their contributions to
+the offset differ by
+\(2\cdot3^{2j-2}2^{-L_j}\). Define
+\[
+ f_{n,\xi}(j,l)=
+ \left|\frac{\chi_{n,\xi}(5\cdot3^{2j-2}2^{-l})+
+                   \chi_{n,\xi}(7\cdot3^{2j-2}2^{-l})}{2}\right|
+\]
+and the nonnegative envelope
+\begin{equation}\label{eq:envelope}
+ Q_{n,\xi}(J)=\E\prod_{j=1}^J
+ \begin{cases}f_{n,\xi}(j,L_j),&b_j=3,\\1,&b_j\ne3.\end{cases}
+ \qquad
+ Q(n,J)=\sup_{3\nmid\xi}Q_{n,\xi}(J).
+\end{equation}
+Thus \(0\le Q(n,J)\le1\). If \(J=\lfloor k/2\rfloor\),
+conditioning on the pair sums and, for odd \(k\), the last exponent,
+gives
+\begin{equation}\label{eq:pair-majorant}
+ \abs{\E[\chi_{n,\xi}(\Phi_k(z))\tau(S_k)]}
+ \le Q_{n,\xi}(J).
+\end{equation}
+The total exponent, seed term, and terminal phase are constant during
+this conditional averaging. The factors from other pair sums and the
+unpaired exponent have absolute value at most one.
+
+Fix a sufficiently small absolute \(\eps>0\), as in the renewal
+estimate below. Let \(W_J\) count the indices \(j\le J\) with
+\(b_j=3\) for which \((j,L_j)\) is white. The cosine formula and
+the definition of white give
+\begin{equation}\label{eq:laplace}
+ Q_{n,\xi}(J)\le\E e^{-\eps^3W_J}
+ \le\PP(W_J\le T)+e^{-\eps^3T}\qquad(T\in\N).
+\end{equation}
+
+\subsection{The finite renewal estimate}
+
+The points \((j,L_j)\) for which \(b_j=3\), in their original order,
+form a renewal path. Its increments are the independent blocks ending
+at the next occurrence of \(b=3\). Each horizontal increment is
+positive, each vertical increment is nonnegative, and their mean
+slope is four. We use the black-triangle decomposition and renewal
+estimate of Tao's Section~7~\cite{Tao}, in the following finite form.
+
+Set \(C=\lfloor n/2\rfloor\), and use a list of \(C+1\) renewal
+increments. Its first increment is the starting point of a path with
+\(C\) subsequent steps. This list contains every raw success with
+horizontal coordinate at most \(C\). The canonical black triangles
+cover the black points in \(1\le j\le C\). Starting with the first
+black point of this path, record its triangle; the next recorded point
+is the first subsequent black point above the preceding triangle's
+top. Continue with the same rule at path times less than \(C\).
+Stops are numbered from one, so
+the first stop can occur at path time zero. A missing stop is distinct
+from a stop at zero.
+
+Write \(t_R\) for the path time of stop \(R\), if it exists, and
+let \(V(t)\) count the white points at positive path times through
+\(t\), restricted to \(j\le C\). The finite stopped estimate is
+\begin{equation}\label{eq:moment}
+ \E\left[\mathbf1_{\{t_R\text{ exists}\}}
+                e^{-V(t_R)+\eps R}\right]\le e^\eps.
+\end{equation}
+It holds for every \(R\ge1\), uniformly over the initial renewal
+point and the primitive frequency. Averaging over the first increment
+therefore preserves it.
+
+For precision, \eqref{eq:moment} uses the full cutoff \(C\), even
+when the desired horizontal horizon \(J\) is smaller. It is the
+stopped, zero-on-absence version of the renewal argument underlying
+Tao's Lemma~7.9. The one-step argument uses the localized
+first-passage mass from Lemma~7.7 and the separation of distinct black
+triangles. Choose the localization radius first, then choose \(\eps\)
+so that its separation scale contains the resulting collar. The
+one-step estimate applies uniformly at the restart point. We give the
+finite induction explicitly to specify its cutoff convention.
+
+Let \(G_R\) denote the random variable in \eqref{eq:moment}. Partition
+according to the first-entry event \(A_{p,x}\), with first stop at
+path time \(p\), point \(x\), and canonical triangle \(\Delta\).
+Let \(K\ge1\) be the first additional time above the top of
+\(\Delta\), and \(U\) its endpoint. Write \(w(U)=e^{-1}\) when
+\(U\) is white and lies in \(j\le C\), and \(w(U)=1\) otherwise.
+For \(R\ge2\), the stopping rule and white counts give
+\begin{equation}\label{eq:one-step}
+ G_R\le e^{-\max(p-1,0)+\eps}\,w(U)\,
+              G_{R-1}(U;\text{fresh tail})
+ \quad\text{on }A_{p,x}.
+\end{equation}
+If \(p+K\ge C\), the left side is zero. On the other branch, there
+are at least \(\max(p-1,0)\) positive-time white points before the
+first entry, and the first-exit point supplies the factor \(w(U)\).
+The restarted variable uses a fresh list of \(C\) increments with
+the same absolute horizontal cutoff \(C\). It does not replace that
+cutoff by \(C-p-K\). Appending independent increments is legitimate
+because the original event and statistic depend on the original
+finite prefix only; the first-passage split then leaves an independent
+fresh tail.
+
+Here is the geometric input for the exit weight. For an entry at depth
+\(s\) below its triangle's top, the relative first-passage endpoint
+\((r,l)\) has probability at least \(1/2\) in the window
+\[
+ \abs{r-s/4}<L\sqrt{1+s},\qquad s<l<s+L,
+\]
+for one absolute \(L\), by the localized first-passage estimate.
+Put \(a=\log2/\log9-1/4>0\) and
+\(K_L=1+a+L^2/(4a)\). This window lies within distance
+\(\sqrt{K_L^2+L^2}\) of a top-row point of the starting triangle.
+The canonical geometry gives separation at least
+\(\rho=\frac1{10}\log(1/\eps)\) between distinct triangles and a
+right boundary at most \(n/2-\rho\) for every triangle.
+Choose \(\eps\) small enough that
+\(K_L^2+L^2\le\rho^2\) and \(\eps\le e^{-10}\).
+Then the localized exit is outside its old triangle, inside the
+horizontal cutoff, and in no other black triangle. It is white.
+Consequently
+\[
+ \E w(U)\le c:=\frac{1+e^{-1}}2\le e^{-\eps}.
+\]
+Assuming \eqref{eq:moment} at \(R-1\), uniformly in the restart
+point, conditional expectation in \eqref{eq:one-step} yields
+\[
+ \E[\mathbf1_{A_{p,x}}G_R]
+ \le\PP(A_{p,x})e^{-\max(p-1,0)+2\eps}c
+ \le\PP(A_{p,x})e^\eps.
+\]
+Sum over the countable first-entry events. Absence of a first entry
+contributes zero; at \(R=1\) the pointwise bound is
+\(G_1\le e^\eps\). This proves \eqref{eq:moment}, including an
+entry at time zero.
+
+Let \(E_R(J)\) be the event that stop \(R\) exists and its horizontal
+coordinate is at most \(J\). On \(E_R(J)\), every white point counted
+by \(V(t_R)\) is among those counted by \(W_J\). Markov's inequality
+in \eqref{eq:moment} consequently gives
+\begin{equation}\label{eq:stopped-tail}
+ \PP\bigl(E_R(J)\cap\{W_J\le T\}\bigr)
+ \le e^{T+\eps-\eps R}.
+\end{equation}
+This deduction requires no uniform estimate for a process restarted
+with only \(J\) units of horizontal room.
+
+\subsection{Good paths cannot use only finitely many triangles}
+
+Take
+\[
+ H_n=\lceil\sqrt n\rceil,\qquad V_n=H_n,\qquad D_n=n^{3/4}.
+\]
+Call the renewal path good if its starting horizontal coordinate is
+at most \(H_n\), its horizontal and vertical steps are at most
+\(H_n,V_n\), and
+\(\abs{l-4j}\le D_n\) at every path point with \(j\le J\).
+Exponential-moment bounds for the independent blocks and for the raw
+geometric sums give, for \(1\le2J\le n\),
+\begin{equation}\label{eq:bad-path}
+ \PP(\text{path is not good})\le B(n):=
+ 15(n+1)e^{-\log(21/20)\sqrt n}
+       +2n e^{-\sqrt n/32}=o(1).
+\end{equation}
+These constants follow from the increment bound
+\[
+ \PP(\Delta j>H\text{ or }\Delta l>V)
+ \le15e^{-\log(21/20)\min(H,V)}
+\]
+and the union bound over the first \(2J\) raw exponent sums, with
+individual tail bound
+\[
+ 2\exp\left[-\min\left(\frac{D^2}{32(2J)},\frac D8\right)\right].
+\]
+
+Fix \(R,T\), and assume the path is good, \(W_J\le T\), and
+\(E_R(J)\) fails. The recorded black triangles before the first
+crossing of \(J\) then form a family with at most \(R\) members.
+There is a member once \(n\) is large: before encountering the first
+black point, at most \(T\) white renewal points can advance the path
+by at most \((T+1)H_n=o(n)\).
+
+Write \((x_i,y_i)\), \(0\le i\le r\), for the recorded entry points,
+and \(A_i\) for the corresponding original triangle tops. Re-anchor
+each triangle at its entry, using the heights
+\[
+ h_i=A_i-y_i\quad(i<r),\qquad
+ h_r=\min\{A_r-y_r,\,4(J-x_r)\},\qquad T_i=y_i+h_i.
+\]
+The new triangle with left edge \(x_i\), top \(T_i\), and height
+\(h_i\) is contained in the original black triangle: add its defining
+inequality to the inequality expressing membership of the entry
+point in the original triangle. Set
+\begin{align*}
+ m_i&=x_{i+1}-x_i\quad(i<r),& m_r&=J-x_r,&u_i&=0,\\
+ e_i&=h_i-4m_i,&g_i&=y_{i+1}-T_i\quad(i<r).
+\end{align*}
+These choices satisfy \eqref{eq:schedules} exactly.
+Only points before the crossing were assumed to lie in the tube.
+If \((j_-,l_-)\), \((j_+,l_+)\) straddle the crossing, use the
+terminal height \(S=\min(4J,l_+)\). Positivity of vertical steps and
+\(j_+-j_-\le H_n\) put this height within \(D_n+4H_n\) of \(4J\).
+Put \(D'=D_n+4H_n\) to account for this endpoint.
+
+The white gaps use at most \(T\) steps, with one exit overshoot for
+each intervening triangle. Thus
+\[
+ \sum_{i<r}\abs{g_i}\le(T+r)V_n,\qquad
+ x_0\le(T+1)H_n,\qquad A_r\ge S-(T+1)V_n.
+\]
+The tube identities and the chosen heights give
+\(\abs{e_i}\le2D'+\abs{g_i}\) for \(i<r\), and
+\(\abs{e_r}\le2D'+(T+1)V_n\). Consequently
+\begin{align}\label{eq:path-cover}
+ E&\le2(r+1)D'+(T+1)V_n+2(T+r)V_n,\\
+ H&\ge4J-4(T+1)H_n-2D'-(T+1)V_n.\nonumber
+\end{align}
+Here \(H\) is the span from \eqref{eq:error-span}, distinct from
+the step threshold \(H_n\). The vertical gaps remain signed, and
+the retained horizontal lengths sum to \(J-x_0\le J\le n\).
+Since \(r<R\) and \(R,T\) are fixed, the error and span loss in
+\eqref{eq:path-cover} are \(o(n)\).
+
+Suppose now that
+\begin{equation}\label{eq:entropy}
+ \log3<2\theta\log2,\qquad \theta n\le2J\le n.
+\end{equation}
+Then \eqref{eq:path-cover} implies
+\(H\log2\ge2\theta n\log2-o(n)\).
+Proposition~\ref{prop:cover}, with any fixed positive \(\eta\) smaller
+than \(2\theta\log2-\log3\), excludes this family for all sufficiently
+large \(n\). The cutoff is uniform in \(J\) and \(\xi\).
+Thus a good path with \(W_J\le T\) must satisfy \(E_R(J)\), and
+\eqref{eq:bad-path} and \eqref{eq:stopped-tail} yield
+\begin{equation}\label{eq:few-white}
+ \PP(W_J\le T)\le B(n)+e^{T+\eps-\eps R}
+\end{equation}
+for all sufficiently large \(n\), for each fixed \(R,T\).
+
+\begin{proposition}[Uniform qualitative contraction]\label{prop:qualitative}
+If \(\log3<2\theta\log2\), then, for every \(\delta>0\), there is
+\(N\) such that
+\[
+ Q(n,J)\le\delta\qquad
+ (n\ge N,\ \theta n\le2J\le n).
+\]
+\end{proposition}
+\begin{proof}
+Choose \(T\) with \(e^{-\eps^3T}<\delta/3\), then \(R\) with
+\(e^{T+\eps-\eps R}<\delta/3\). Finally choose \(n\) beyond the
+uniform cutoff in \eqref{eq:few-white} and with \(B(n)<\delta/3\).
+Apply \eqref{eq:laplace}. No quantitative dependence of this cutoff
+on \(R\) is needed.
+\end{proof}
+
+\section{The conductor recursion}\label{sec:recursion}
+
+Split the product in \eqref{eq:envelope} after \(u\) pairs.
+Conditional on the first \(u\) pair sums, its suffix has conductor
+\(n-2u\), length \(J-u\), and primitive frequency multiplied by
+the unit \(2^{-L_u}\). Independence and the supremum over primitive
+frequencies imply
+\begin{equation}\label{eq:recursion}
+ Q(n,J)\le Q(n,u)Q(n-2u,J-u)
+ \qquad(0\le u\le J,\ 2u<n).
+\end{equation}
+
+\begin{lemma}[Scalar bootstrap]\label{lem:bootstrap}
+Suppose \(0\le Q(n,J)\le1\) on \(n\ge1\), \(2J\le n\), and
+\eqref{eq:recursion} holds. If Proposition~\ref{prop:qualitative}
+holds for some \(0<\theta<1\), then for every \(A\in\N\) there is
+\(C_A>0\) such that
+\begin{equation}\label{eq:paired-deficit}
+ Q(n,J)\le C_A\left(\frac{n-2J+1}{n}\right)^A.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put \(\lambda=(1-\theta)/2\), and obtain the qualitative contraction
+with \(\delta=\lambda^A\). For large \(n\), set
+\(u=\lfloor(1-\lambda)n/2\rfloor\) and \(n'=n-2u\).
+Then
+\[
+ 1\le u,\qquad \theta n\le2u<n,\qquad
+ \lambda n\le n'<\lambda n+2.
+\]
+Let \(D=n-2J+1\). If \(D\le\lambda n\), then \(u\le J\), and
+the deficit is preserved by the recursion:
+\(n'-2(J-u)+1=D\).
+Strong induction on \(n\) gives
+\[
+ Q(n,J)\le\lambda^A C_A(D/n')^A
+             \le C_A(D/n)^A.
+\]
+If \(D>\lambda n\), the trivial bound one suffices after taking
+\(C_A\ge\lambda^{-A}\). The finitely many smaller conductors are
+also absorbed in \(C_A\), since \(D\ge1\).
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Choose \(\theta=5/6\). The entropy inequality follows from
+\(3^3=27<32=2^5\), and \(0<\theta<1\).
+Apply Proposition~\ref{prop:qualitative} and Lemma~\ref{lem:bootstrap}.
+For \(J=\lfloor k/2\rfloor\), one has
+\(n-2J+1\le n-k+2\). The conclusion follows from
+\eqref{eq:pair-majorant} and \eqref{eq:paired-deficit}.
+\end{proof}
+
+\section{Conditioned affine laws}\label{sec:conditioning}
+
+\begin{proof}[Proof of Theorem~\ref{thm:conditional}]
+For fixed \(s\), let \(\sigma_s(t)=1\) if \(t=s\) and \(-1\)
+otherwise. Both \(1\) and \(\sigma_s\) are permitted terminal
+phases, and
+\[
+ \E[\chi_{n,\xi}(\Phi_k(z))\mathbf1_{\{S_k=s\}}]
+ =\tfrac12\E[\chi_{n,\xi}(\Phi_k(z))]
+  +\tfrac12\E[\chi_{n,\xi}(\Phi_k(z))\sigma_s(S_k)].
+\]
+The triangle inequality and Theorem~\ref{thm:main}, followed by division
+by \(p_k(s)>0\), prove \eqref{eq:conditional} with the same constant.
+
+For \eqref{eq:massfloor}, choose an integer \(M\) with
+\((1-\beta)M\ge q+B\). When \(n=k+d\), \(k\ge1\), and
+\(d\le k^\beta\),
+\[
+ \frac{n-k+2}{n}=\frac{d+2}{k+d}
+ \le 3k^{\beta-1}.
+\]
+Use \eqref{eq:conditional} with exponent \(M\) and
+\(p_k(s)^{-1}\le k^B\). The resulting upper bound is
+\(C_M3^M k^{(\beta-1)M+B}\le C_M3^Mk^{-q}\).
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:central}]
+Every positive composition of \(s\) into \(k\) parts has probability
+\(2^{-s}\), and there are \(\binom{s-1}{k-1}\) such compositions.
+Thus, for \(k\ge1\), \(s\ge1\),
+\[
+ p_k(s)=\binom{s-1}{k-1}2^{-s}.
+\]
+The usual convention makes this zero for \(s<k\).
+The elementary central-binomial bound
+\(4^k\le2k\binom{2k}{k}\), together with
+\(\binom{2k}{k}=2\binom{2k-1}{k-1}\), gives
+\[
+ p_k(2k)=\binom{2k-1}{k-1}2^{-2k}\ge\frac1{4k}.
+\]
+For \(k\ge4\), this is at least \(k^{-2}\). Apply
+Theorem~\ref{thm:conditional} with \(B=2\).
+\end{proof}
+
+\section{Formal proof and scope}\label{sec:formal}
+
+The accompanying Lean sources prove the actual geometric-list law,
+its pair-sum envelope, the canonical renewal estimate, the arithmetic
+obstruction, and the conductor bootstrap. The conditioned law is
+defined by filtering the source probability mass function on the
+exact exponent sum, then mapping the affine offset; its Fourier
+coefficient is proved equal to the normalized slice expectation.
+It is not an abstract distribution assumed to have that identity.
+
+The main theorem names, in namespace \texttt{Erdos1135.Tao}, are
+\begin{itemize}
+\item \path{trap_unconditional_affineTwistedExpectation_deficit_all_powers},
+for the joint seed and terminal-phase estimate;
+\item \path{trap_unconditional_seededAffinePMF_deficit_all_powers},
+for the seeded affine probability mass function;
+\item \path{trap_unconditional_conditionedAffinePMF_polynomial_deficit_mass_floor},
+for Theorem~\ref{thm:conditional}'s polynomial deficit range; and
+\item \path{trap_unconditional_centralConditionedAffinePMF_polynomial_deficit},
+for Corollary~\ref{cor:central}.
+\end{itemize}
+The finite-cover argument uses the rational Subspace Theorem from
+Ralf Stephan's \emph{Subspace-Theorems} formalization~\cite{SubspaceLean}.
+The package
+pins its source revision and the Lean and Mathlib versions, includes
+the source dependency closure, and checks theorem dependencies for
+unproved assumptions. The Subspace Theorem is proved in that closure;
+it is not introduced as a new axiom.
+
+Automated assistants were used for proof development, source review,
+and preparation of this manuscript. The accompanying verification
+records describe those checks; they do not constitute external peer
+review.
+
+These estimates concern a finite random affine model. They do not
+bound the exceptional orbits of the deterministic Syracuse map.
+In particular, Fourier decay on primitive frequencies does not by
+itself provide the uniform integrability or integer-occupation upper
+bound needed to transfer these estimates to every starting integer.
+Neither convergence of every Collatz orbit nor absence of nontrivial
+cycles is asserted here.
+
+\begin{thebibliography}{9}
+\bibitem{Tao}
+T. Tao, \emph{Almost all orbits of the Collatz map attain almost
+bounded values}, Forum of Mathematics, Pi \textbf{10} (2022), e12.
+\url{https://arxiv.org/abs/1909.03562}.
+
+\bibitem{Si}
+Y. Si, \emph{A microcanonical phase transition for the Collatz affine
+random model}, preprint,
+4 May 2026, Theorem~H.
+\url{https://zenodo.org/records/20027097}.
+
+\bibitem{Schlickewei}
+H. P. Schlickewei, \emph{The quantitative Subspace Theorem for number
+fields}, Compositio Mathematica \textbf{82} (1992), 245--273.
+\url{https://www.numdam.org/item/CM_1992__82_3_245_0/}.
+
+\bibitem{SubspaceLean}
+R. Stephan, \emph{Subspace-Theorems}, Lean formalization, revision
+\path{d7a11cb1dcab3883fd1008db27a8382c95455b0a}.
+\url{https://github.com/rwst/Subspace-Theorems}.
+\end{thebibliography}
+\end{document}

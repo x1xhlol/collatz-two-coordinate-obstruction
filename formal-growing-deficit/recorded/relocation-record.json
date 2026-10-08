@@ -1,0 +1,245 @@
+{
+  "authentication_commands": [
+    {
+      "arguments": [
+        "python3",
+        "BUNDLE/scripts/replay.py",
+        "--toolchain",
+        "TOOLCHAIN/",
+        "--verify-only"
+      ],
+      "cwd": "BUNDLE/",
+      "elapsed_seconds": 150.38909500604495,
+      "exit_code": 0,
+      "log": "BUNDLE/.relocation-smoke/logs/before.verify.log",
+      "log_sha256": "c49eb6961436864bbd0228871db45a144f789e5fbbb4a340cd88f4f72d6453cc",
+      "result": {
+        "audited_constants": 11718,
+        "commands": 716,
+        "external_objects": 68975,
+        "modules": 357,
+        "record_sha256": "3186c817bcaff2c05b36c0ca8bab35c0ed7b9e201fe5c372aad6aa63855b8332",
+        "recovery_kernel_commands": 357,
+        "status": "PASS",
+        "successful_commands": 1073
+      },
+      "stage": "before"
+    },
+    {
+      "arguments": [
+        "python3",
+        "BUNDLE/scripts/replay.py",
+        "--toolchain",
+        "TOOLCHAIN/",
+        "--verify-only"
+      ],
+      "cwd": "BUNDLE/",
+      "elapsed_seconds": 74.76282199216075,
+      "exit_code": 0,
+      "log": "BUNDLE/.relocation-smoke/logs/after.verify.log",
+      "log_sha256": "c49eb6961436864bbd0228871db45a144f789e5fbbb4a340cd88f4f72d6453cc",
+      "result": {
+        "audited_constants": 11718,
+        "commands": 716,
+        "external_objects": 68975,
+        "modules": 357,
+        "record_sha256": "3186c817bcaff2c05b36c0ca8bab35c0ed7b9e201fe5c372aad6aa63855b8332",
+        "recovery_kernel_commands": 357,
+        "status": "PASS",
+        "successful_commands": 1073
+      },
+      "stage": "after"
+    }
+  ],
+  "commands": [
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.relocation-smoke/source",
+        "BUNDLE/.relocation-smoke/source/TrapUnconditionalDeficit.lean",
+        "-o",
+        "BUNDLE/.relocation-smoke/modules/TrapUnconditionalDeficit.olean"
+      ],
+      "cwd": "BUNDLE/.relocation-smoke/source",
+      "elapsed_seconds": 4.221389046870172,
+      "exit_code": 0,
+      "log": "BUNDLE/.relocation-smoke/logs/TrapUnconditionalDeficit.compile.log",
+      "log_sha256": "e4ae63378cc53a24d70c4b94e584cb1cf3ec2323c0ff7a5680f1f651fdf33a56",
+      "module": "TrapUnconditionalDeficit",
+      "stage": "compile"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "TrapUnconditionalDeficit"
+      ],
+      "cwd": "BUNDLE/.relocation-smoke/source",
+      "elapsed_seconds": 5.7486919411458075,
+      "exit_code": 0,
+      "log": "BUNDLE/.relocation-smoke/logs/TrapUnconditionalDeficit.kernel.log",
+      "log_sha256": "e7787959c57d95a07c7222ea95bc2c70735e3e5668661d1e5399f3a3bf40cc3f",
+      "module": "TrapUnconditionalDeficit",
+      "stage": "kernel"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.relocation-smoke/source",
+        "BUNDLE/.relocation-smoke/source/TrapMicrocanonicalMassFloor.lean",
+        "-o",
+        "BUNDLE/.relocation-smoke/modules/TrapMicrocanonicalMassFloor.olean"
+      ],
+      "cwd": "BUNDLE/.relocation-smoke/source",
+      "elapsed_seconds": 4.842531453119591,
+      "exit_code": 0,
+      "log": "BUNDLE/.relocation-smoke/logs/TrapMicrocanonicalMassFloor.compile.log",
+      "log_sha256": "ec78424a07f0cb2c6d76d95704fbb4674f4cebf3307d251ba853ee3308633b50",
+      "module": "TrapMicrocanonicalMassFloor",
+      "stage": "compile"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "TrapMicrocanonicalMassFloor"
+      ],
+      "cwd": "BUNDLE/.relocation-smoke/source",
+      "elapsed_seconds": 5.3307016689796,
+      "exit_code": 0,
+      "log": "BUNDLE/.relocation-smoke/logs/TrapMicrocanonicalMassFloor.kernel.log",
+      "log_sha256": "c72652388fbfcfa27427c839a8feb39452422301983fc3f6813d2ac1fe727ed6",
+      "module": "TrapMicrocanonicalMassFloor",
+      "stage": "kernel"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.relocation-smoke/source",
+        "BUNDLE/.relocation-smoke/source/TrapCentralMicrocanonical.lean",
+        "-o",
+        "BUNDLE/.relocation-smoke/modules/TrapCentralMicrocanonical.olean"
+      ],
+      "cwd": "BUNDLE/.relocation-smoke/source",
+      "elapsed_seconds": 4.045246690977365,
+      "exit_code": 0,
+      "log": "BUNDLE/.relocation-smoke/logs/TrapCentralMicrocanonical.compile.log",
+      "log_sha256": "b35ade9b486b1ec184a3b9fa163e9d1345f4c44281115dd642f9d74bc9ab9525",
+      "module": "TrapCentralMicrocanonical",
+      "stage": "compile"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "TrapCentralMicrocanonical"
+      ],
+      "cwd": "BUNDLE/.relocation-smoke/source",
+      "elapsed_seconds": 5.495351111982018,
+      "exit_code": 0,
+      "log": "BUNDLE/.relocation-smoke/logs/TrapCentralMicrocanonical.kernel.log",
+      "log_sha256": "d9445142b525d37550af2fd1533602ab9be0096f52b3873b063e5a876a9dbf2f",
+      "module": "TrapCentralMicrocanonical",
+      "stage": "kernel"
+    }
+  ],
+  "direct_import_resolutions": {
+    "TrapCentralMicrocanonical -> TrapCentralBinomial": {
+      "path": "BUNDLE/.replay/modules/TrapCentralBinomial.olean",
+      "sha256": "830681a704d3747fd195e2766be9e6e5769083ebe283835cc4c34190bdb0f4d3"
+    },
+    "TrapCentralMicrocanonical -> TrapExactExponentMass": {
+      "path": "BUNDLE/.replay/modules/TrapExactExponentMass.olean",
+      "sha256": "096c79082905bce5d17897e698d8d9272bf64de1a8c6fd7580960f16bf295b13"
+    },
+    "TrapCentralMicrocanonical -> TrapMicrocanonicalMassFloor": {
+      "path": "BUNDLE/.relocation-smoke/modules/TrapMicrocanonicalMassFloor.olean",
+      "sha256": "2fb413d82ed3fd3d543130b0ec8669668502bcf8a099d7d2848f78ea7f886517"
+    },
+    "TrapMicrocanonicalMassFloor -> TrapMicrocanonicalDeficit": {
+      "path": "BUNDLE/.replay/modules/TrapMicrocanonicalDeficit.olean",
+      "sha256": "762f038947a6acc728670cb39168417524f06c9f9a3a7e0bf0f6748e16b543ba"
+    },
+    "TrapUnconditionalDeficit -> TrapNativeQualitativeDecay": {
+      "path": "BUNDLE/.replay/modules/TrapNativeQualitativeDecay.olean",
+      "sha256": "5f885d2e2b89e002924dac8c04e44e39fad9f4a31b8d16779f7ed384223aab2c"
+    },
+    "TrapUnconditionalDeficit -> TrapSeededDeficit": {
+      "path": "BUNDLE/.replay/modules/TrapSeededDeficit.olean",
+      "sha256": "4f5514ed04dd06f531a64311dbbb455b9aab802ee5bd1a9fd41ea95171deda0e"
+    }
+  },
+  "full_replay_record_sha256": "3186c817bcaff2c05b36c0ca8bab35c0ed7b9e201fe5c372aad6aa63855b8332",
+  "lean_path": [
+    "BUNDLE/.relocation-smoke/modules",
+    "BUNDLE/.replay/modules",
+    "BUNDLE/.lake/packages/mathlib/.lake/build/lib/lean",
+    "BUNDLE/.lake/packages/plausible/.lake/build/lib/lean",
+    "BUNDLE/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+    "BUNDLE/.lake/packages/importGraph/.lake/build/lib/lean",
+    "BUNDLE/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "BUNDLE/.lake/packages/aesop/.lake/build/lib/lean",
+    "BUNDLE/.lake/packages/Qq/.lake/build/lib/lean",
+    "BUNDLE/.lake/packages/batteries/.lake/build/lib/lean",
+    "BUNDLE/.lake/packages/Cli/.lake/build/lib/lean",
+    "TOOLCHAIN/lib/lean"
+  ],
+  "modules": [
+    "TrapUnconditionalDeficit",
+    "TrapMicrocanonicalMassFloor",
+    "TrapCentralMicrocanonical"
+  ],
+  "official_tool_runtime_sha256": {
+    "bin/con-ron": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef",
+    "bin/lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "bin/lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "bin/leanchecker": "9e36e955a251b1313c8eb5b7fa101282d51df109d34d8bb7c1cfdf51985aba29",
+    "bin/leanexport": "c5bc1a10a21e22cbb3671d65987cdef2076833b14182d823ccb2153adf2fa954",
+    "bin/nanoda_bin": "8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8",
+    "lib/lean/libInit_shared.so": "7831b707e868cee76c353d26649fbd8981b2f4d7e0329af55bbf4fa9e0c69350",
+    "lib/lean/libLake_shared.so": "b7d0d1aa2909a742a34ff5faa1d8047575adcd72d923d285b125cdc6473a547e",
+    "lib/lean/libleanshared.so": "2a8e5aed7cac5181a0c2a9f87d87915e039b851f57738a2feefd7cb1e2840e21",
+    "lib/lean/libleanshared_1.so": "691bf49d9e542a15808fad9d1f8c5df45860166f77efa57961b5335e65a3a0ed",
+    "lib/lean/libleanshared_2.so": "141cbfdb3bc2016cd68e0bebc2e5494818213b462ed985afa6d975d4872fb8ec"
+  },
+  "portable_replay_driver_sha256": "037df5d809679c2cebe76d430035ff5dd27029156e640db1440e40980d1c8ebf",
+  "results": {
+    "TrapCentralMicrocanonical": {
+      "object": "BUNDLE/.relocation-smoke/modules/TrapCentralMicrocanonical.olean",
+      "object_parts": {
+        "BUNDLE/.relocation-smoke/modules/TrapCentralMicrocanonical.olean": "c4ff1824a4076f3ad642b3b9c8f1bd30593c11bc5ab34b6b5529e8dc07018aba"
+      },
+      "object_sha256": "c4ff1824a4076f3ad642b3b9c8f1bd30593c11bc5ab34b6b5529e8dc07018aba",
+      "source": "BUNDLE/.relocation-smoke/source/TrapCentralMicrocanonical.lean",
+      "source_sha256": "970c57e7748e9c40200d0e832fb43997134aebf6ceb95f222d094bc96f5e6914"
+    },
+    "TrapMicrocanonicalMassFloor": {
+      "object": "BUNDLE/.relocation-smoke/modules/TrapMicrocanonicalMassFloor.olean",
+      "object_parts": {
+        "BUNDLE/.relocation-smoke/modules/TrapMicrocanonicalMassFloor.olean": "2fb413d82ed3fd3d543130b0ec8669668502bcf8a099d7d2848f78ea7f886517"
+      },
+      "object_sha256": "2fb413d82ed3fd3d543130b0ec8669668502bcf8a099d7d2848f78ea7f886517",
+      "source": "BUNDLE/.relocation-smoke/source/TrapMicrocanonicalMassFloor.lean",
+      "source_sha256": "d434b72e85326b340c29e57bf866d385faee707c56739577b39b1daef78d26d7"
+    },
+    "TrapUnconditionalDeficit": {
+      "object": "BUNDLE/.relocation-smoke/modules/TrapUnconditionalDeficit.olean",
+      "object_parts": {
+        "BUNDLE/.relocation-smoke/modules/TrapUnconditionalDeficit.olean": "639931f72b6c15cc0310b7b5b858565891c518c5a93333ca0a1b8f534f0ed3bf"
+      },
+      "object_sha256": "639931f72b6c15cc0310b7b5b858565891c518c5a93333ca0a1b8f534f0ed3bf",
+      "source": "BUNDLE/.relocation-smoke/source/TrapUnconditionalDeficit.lean",
+      "source_sha256": "bc34d3dd8e211f20038c2a2bc831bfe46666b73e7a615a417534d358df1835a8"
+    }
+  },
+  "scope": "Second-path authentication of the copied full replay and fresh compilation plus official kernel checks of three entry modules; not a second full closure replay.",
+  "script_sha256": "1170125a4db4cc560cd66b02db58891224390ebf7b5ee45c9a51063ec7365002",
+  "source_manifest_sha256": "210db3b96c3c5a0c2071cd0d468ff852554ea4bd9e38efba40c183764af0a538",
+  "status": "PASS"
+}

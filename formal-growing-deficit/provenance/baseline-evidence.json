@@ -1,0 +1,12 @@
+{
+  "purpose": "Hashes of previously checked source/proof inputs, not a portable replay result.",
+  "microcanonical_record_sha256": "0d1caf65b2f3473bafdad530c40e0f73c00a704c0e35e549435cb67f624b4708",
+  "microcanonical_source_manifest_sha256": "24b5ae854ec5ccbdfc013017c487604f31203ed6b83ccf7ceaaa3bf4177eadf1",
+  "probability_closure_record_sha256": "29d5709d84a803514ec250cf6d231fbf96a21c476a8e6a3654c3864c3df06453",
+  "microcanonical_root_semantic_review_sha256": "33ab70d3ed2cdd712b5da6022da31695e62b4ee0e777250e58a0453b65e7f862",
+  "microcanonical_clock_review_sha256": "5d9b9ce5212b95d95abb1965bcd50b0f65d07e70a4308249f5cf13b90b9ea8e2",
+  "upstream_source_scope_sha256": "4ae2453d107de603931bb7d26246efbbdc030f6c3b0bd43dc912279042a843ad",
+  "source_bytes_preserved": true,
+  "central_record_sha256": "2c700e138f11b0342fa0e68ffb387a2a9442512e79d7172b4383c3b80f66eb24",
+  "central_source_manifest_sha256": "049104b0a643e81039b1e79a2b825b7f0d5544243e1ee922e89223407d30f6fe"
+}

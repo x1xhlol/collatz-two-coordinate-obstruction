@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "roundtrip_patched_files": 67,
+  "original_git_blobs_verified": 281,
+  "upstream_distribution_hashes_verified": 150,
+  "modified_source_hashes_verified": 357,
+  "patch_sha256": "1959a50f84f7d8f77c6a9eea3de8e57f08b512a79587009ece74f96df2c4adcb",
+  "source_manifest_sha256": "210db3b96c3c5a0c2071cd0d468ff852554ea4bd9e38efba40c183764af0a538",
+  "all_distributed_paths_relative": true
+}

@@ -1,0 +1,84 @@
+{
+  "artifacts_sha256": {
+    "CITATION.cff": "23439cc4b92bc494a2fdf6f9b8a8ae6723901a6fa53a75ea1dd0d90d151a76d1",
+    "README.md": "3abdd1b1c8c217caac99d4a54f48973a36595b0ce2f5a6ae14e8ad73110b5292",
+    "formal-growing-deficit/SHA256SUMS.json": "7b23efcf51f49885374dfc1d05054af2b88f2e428183dcc5a5834f031a164e66",
+    "formal-growing-deficit/recorded/evidence-index.json": "2fd86dae5ca30194bf1e259d353e41067b9e9b792deb48f6144a493ac172ccdc",
+    "formal-growing-deficit/recorded/independent-review.json": "6a133060fea004b0fafc585e0482856468122c150a441e84aa68c89ff16ff092",
+    "formal-growing-deficit/recorded/relocation-record.json": "5a38e208ce47ecaad3951857345b3d713931002237842f0e76ae2a52a6246133",
+    "formal-growing-deficit/recorded/replay-record.json": "3186c817bcaff2c05b36c0ca8bab35c0ed7b9e201fe5c372aad6aa63855b8332",
+    "formal-growing-deficit/source-manifest.json": "210db3b96c3c5a0c2071cd0d468ff852554ea4bd9e38efba40c183764af0a538",
+    "paper/growing-deficit-fourier.pdf": "c4cef4da6a990d118fab44e9086f4ed59882b9012b8175952fe22b73174c0222",
+    "paper/growing-deficit-fourier.tex": "ca99dae8fdfc5f96c3b2647fdfda37b0981a6f4b9db15b5a59242836a995ac3c",
+    "paper/growing-deficit-lean-claims.md": "5df66866c45d2b7624170963eec55d73be82c6778f00659c7d5da5d13aa2885a"
+  },
+  "baseline_manifest_sha256": "a8cf31c0b9b6e941215a002549a1d95d9591771504855bcf2da866604477654e",
+  "baseline_repository_commit": "9ccf356cb887f6862feb6d40215995dc133e0254",
+  "baseline_tracked_files": 2734,
+  "candidate_assembly_report_sha256": "774ce0dc5a09c8bce748a3f610fe50b2407a0e3ec8d6dcb4701a116255e92fac",
+  "complete_bundle_index_entries": 400,
+  "date": "2026-10-08",
+  "documentation_links_checked": 61,
+  "findings": [],
+  "integration_script_sha256": "7db32c82f1aefd843a5cafefedc0411ad67fe75e138ea4e6e9556fe78015174b",
+  "limits": [
+    "The complete replay and second-path endpoint check cover the pinned Linux x86_64 Lean 4.35.0-rc3 recipe.",
+    "The historical source replay required audit recovery. The original external dependency inventory was not preserved; every proof object was kernel-checked again under the persisted recovery baseline. Fresh users run the corrected 716-command recipe.",
+    "The certificate records automated development and independent automated review, not external peer review or a new line-by-line semantic review of all inherited source files.",
+    "The mathematical scope is the stated finite random affine source law. No deterministic Collatz convergence or new natural-density conclusion follows from this certificate.",
+    "Detailed research review reports are bound by digest for audit history; reproduction uses the public bundle, relative-path records, pinned dependencies and documented replay command."
+  ],
+  "new_paper": {
+    "mathematical_review_and_pdf_inspection": "Completed on the exact pinned files before integration; proof-to-statement mapping and all nine pages reviewed.",
+    "numbered_results": 6,
+    "pages": 9,
+    "root_manuscript_review_sha256": "69727eecf9038b2316d913a83c6ba1abade810cb66c9aa6180803f6fdd546d4c"
+  },
+  "preservation": {
+    "baseline_all_files_authenticated_before_integration": true,
+    "existing_basin_paper_and_theorem_map_preserved_byte_for_byte": true,
+    "existing_manifest_papers_and_checks_preserved": true,
+    "existing_proof_bundles_preserved_byte_for_byte": true
+  },
+  "proves_collatz_conjecture": false,
+  "schema_version": 1,
+  "scope": "Root integration validation following the completed manuscript reviews, 357-module source compilation and kernel checking, recorded audit recovery with all 357 proof objects kernel-checked again, three-entry relocation check, and independent artifact authentication. This integration step rehashes and checks the final distribution; it does not claim an additional Lean replay or external peer review.",
+  "status": "PASS",
+  "verification_counts": {
+    "archived_command_logs": 1082,
+    "archived_recovery_evidence_files": 365,
+    "audited_distinct_constant_names": 11703,
+    "audited_encoded_private_names": 1697,
+    "audited_module_constant_pairs": 11718,
+    "authenticated_local_source_modules": 226,
+    "bundled_source_modules": 357,
+    "complete_replay_commands": 716,
+    "direct_source_import_edges": 990,
+    "external_artifact_files": 68975,
+    "failed_original_audit_commands": 1,
+    "independently_resolved_audit_import_edges": 358,
+    "original_successful_proof_commands": 714,
+    "paper_numbered_results": 6,
+    "paper_pages": 9,
+    "recovery_kernel_commands": 357,
+    "relocated_endpoint_commands": 6,
+    "relocated_full_authentication_calls": 2,
+    "repaired_audit_commands": 2,
+    "source_declarations": {
+      "anonymous_instance_lines": 18,
+      "named_declarations": 5827,
+      "private_declarations": 441
+    },
+    "source_provenance": {
+      "Subspace_Git_matches": 131,
+      "changed_native": 67,
+      "native_Git_and_distribution_matches": 150,
+      "original_local": 76,
+      "patch_lines": 2177,
+      "source_files": 357,
+      "unchanged_upstream": 214
+    },
+    "total_successful_commands": 1073,
+    "unmodified_Subspace_source_modules": 131
+  }
+}

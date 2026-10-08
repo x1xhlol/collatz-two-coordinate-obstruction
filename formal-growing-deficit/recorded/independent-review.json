@@ -1,0 +1,175 @@
+{
+  "counts": {
+    "archived_command_logs": 1082,
+    "archived_recovery_evidence_files": 365,
+    "audited_distinct_constant_names": 11703,
+    "audited_encoded_private_names": 1697,
+    "audited_module_constant_pairs": 11718,
+    "authenticated_local_source_modules": 226,
+    "bundled_source_modules": 357,
+    "complete_replay_commands": 716,
+    "direct_source_import_edges": 990,
+    "external_artifact_files": 68975,
+    "failed_original_audit_commands": 1,
+    "independently_resolved_audit_import_edges": 358,
+    "original_successful_proof_commands": 714,
+    "paper_numbered_results": 6,
+    "paper_pages": 9,
+    "recovery_kernel_commands": 357,
+    "relocated_endpoint_commands": 6,
+    "relocated_full_authentication_calls": 2,
+    "repaired_audit_commands": 2,
+    "source_declarations": {
+      "anonymous_instance_lines": 18,
+      "named_declarations": 5827,
+      "private_declarations": 441
+    },
+    "source_provenance": {
+      "Subspace_Git_matches": 131,
+      "changed_native": 67,
+      "native_Git_and_distribution_matches": 150,
+      "original_local": 76,
+      "patch_lines": 2177,
+      "source_files": 357,
+      "unchanged_upstream": 214
+    },
+    "total_successful_commands": 1073,
+    "unmodified_Subspace_source_modules": 131
+  },
+  "detailed_review_evidence": {
+    "endpoint_runner_delta_review": {
+      "checks": 6,
+      "sha256": "f14bf771bdc4315ba9c8d63327f8d2c4a292dbe274b18d6426242a47a86ee5de"
+    },
+    "frozen_inputs": {
+      "checks": 3547,
+      "sha256": "76fefd4965e26397474dbfdfa1d4cbd2a5c7fc82d432b521303a77d401276005"
+    },
+    "full_replay": {
+      "authenticated_files": 75504,
+      "checks": 119227,
+      "sha256": "2921eab3463735b57782ac09de9602ca29c890eae2a4e1b1dede8886d369bf0f"
+    },
+    "interrupted_proof_prefix": {
+      "checks": 6339,
+      "sha256": "0d4e552fada1f6ad117fc8328b547b46ca26d3fd251ef857b0e932af40d1e89b"
+    },
+    "mathematical_manuscript_review": {
+      "sha256": "e56d2c0401a726d7553bd197f9e4721d055e76971a4bb33a0e26a353ec04d35c"
+    },
+    "packaged_evidence": {
+      "checks": 5113,
+      "sha256": "507e0894ef25954eedfda0a91267298f9c72ad35d2101e825bdf826b82dcd6ac"
+    },
+    "packager_source_review": {
+      "checks": 13,
+      "sha256": "2c91e64288af1479ec0276cdfe77d7943fee54708746a9564a59616598db4db7"
+    },
+    "prior_artifact_checker_delta_review": {
+      "sha256": "b0ed6da20097cb925696844f3814d8262cc5c5745e88eaf1bd5358fb87ef99ae"
+    },
+    "prior_artifact_checker_source_review": {
+      "sha256": "2ee93a14af63a27202736d224406633a5b4cae8db21332d54e3af870e4c2cec1"
+    },
+    "recovery_artifact_checker_source_review": {
+      "sha256": "341b17d6952fe7b2893980894a363741b54f61cf28bd3187b2c323ea0334819a"
+    },
+    "recovery_baseline_observation": {
+      "sha256": "f52403800c096b3da688bbde993184380e3ea1fbf5b0364e1fc749f06eee2866"
+    },
+    "recovery_runner_source_review": {
+      "checks": 24,
+      "sha256": "95aad9aaf0a298b7cd5720174516f6244868f333070f408b1f3c9a3ebee8f0ab"
+    },
+    "relocation": {
+      "authenticated_files": 71709,
+      "checks": 158746,
+      "sha256": "0a2a0961196acf10894fc83bcdb611082d3284e907614b876d565a1a3cdc0374"
+    },
+    "root_manuscript_validation": {
+      "sha256": "69727eecf9038b2316d913a83c6ba1abade810cb66c9aa6180803f6fdd546d4c"
+    },
+    "source_provenance": {
+      "checks": 2795,
+      "sha256": "7bf15fb2340de928a2cd4671f3b439a5049f98adebce80fdc1fcee47ba608288"
+    }
+  },
+  "files_sha256": {
+    "formal-growing-deficit/dependency-pins.json": "9e6f7709afb2c4ad380bb62f7d6223a68ab9b90f5bb918fda30bb333d3bfe4d8",
+    "formal-growing-deficit/provenance/source-changes/README.md": "ba7760cba8d374b1470dba38c15186c3c564e2dfce0ff516f6ca13c35f4a398e",
+    "formal-growing-deficit/provenance/source-changes/lean-4.35-compatibility.patch": "1959a50f84f7d8f77c6a9eea3de8e57f08b512a79587009ece74f96df2c4adcb",
+    "formal-growing-deficit/provenance/source-changes/patch-roundtrip-check.json": "4d791f5eecd8ab3161a4aeb0abb56f7d94b8fcb35004b8a4421399d49d85e5fa",
+    "formal-growing-deficit/provenance/source-changes/source-change-map.json": "4b13838c21b21f62a0f16eef2aa3970c7e861128a3021eeab6eb054e3dfaa6e5",
+    "formal-growing-deficit/recorded/evidence-index.json": "2fd86dae5ca30194bf1e259d353e41067b9e9b792deb48f6144a493ac172ccdc",
+    "formal-growing-deficit/recorded/full-replay-logs.tar.gz": "613c4c2de02f57e12f6d58710947b51f066714864f5d42bcfda7fae1ab3b4a78",
+    "formal-growing-deficit/recorded/generated-audit.lean": "2a0857b977399914a885278a06c4dcabc6d05d87aea913db5db3595a5cd84ade",
+    "formal-growing-deficit/recorded/recovery-evidence.tar.gz": "3647479b59b08d1c7875c7f49dd5703a430c2eca02919c19bb48237e708d2c82",
+    "formal-growing-deficit/recorded/relocation-logs.tar.gz": "4fbddf8a1567eb72fde0102dd937b443f5f0c3bd646285b619aa01ff9f4486be",
+    "formal-growing-deficit/recorded/relocation-record.json": "5a38e208ce47ecaad3951857345b3d713931002237842f0e76ae2a52a6246133",
+    "formal-growing-deficit/recorded/replay-record.json": "3186c817bcaff2c05b36c0ca8bab35c0ed7b9e201fe5c372aad6aa63855b8332",
+    "formal-growing-deficit/scripts/replay.py": "037df5d809679c2cebe76d430035ff5dd27029156e640db1440e40980d1c8ebf",
+    "formal-growing-deficit/scripts/setup.py": "76a258be44102b257c5d9b8d37e9fbeb62bbf632e525146a7bf3bf4f9e772fa6",
+    "formal-growing-deficit/scripts/source_inventory.py": "1446f49676bf270ef9291843d760e1cb2e273645521b97092a5059a03b0703a5",
+    "formal-growing-deficit/source-manifest.json": "210db3b96c3c5a0c2071cd0d468ff852554ea4bd9e38efba40c183764af0a538",
+    "formal-growing-deficit/verification/recover_replay.py": "e12a6d39a090bfe91ca31ba2026aa48b7b316007e9bde9d3e724ed55d18a60ce",
+    "formal-growing-deficit/verification/replay_endpoints.py": "1170125a4db4cc560cd66b02db58891224390ebf7b5ee45c9a51063ec7365002",
+    "paper/growing-deficit-fourier.pdf": "c4cef4da6a990d118fab44e9086f4ed59882b9012b8175952fe22b73174c0222",
+    "paper/growing-deficit-fourier.tex": "ca99dae8fdfc5f96c3b2647fdfda37b0981a6f4b9db15b5a59242836a995ac3c",
+    "paper/growing-deficit-lean-claims.md": "5df66866c45d2b7624170963eec55d73be82c6778f00659c7d5da5d13aa2885a"
+  },
+  "findings": [],
+  "independent_checker_scope": "Research-only read-only authentication implementations, identified here by exact source digest; the recovered replay, relocation and archive checkers also received a separate source review. The portable public replay verifier is bound in files_sha256.",
+  "independent_checker_source_sha256": {
+    "review_frozen_inputs.py": "602bbbc3ce02d95da44fd87bbdd2c33416ef43f5a57d62656899b73d60914f80",
+    "review_interrupted_proof_prefix.py": "d55f56d28d06df9d262cd42bbd183d5a0875b7bfca7ad0231bc6bac66cdf9909",
+    "review_packaged_evidence.py": "a9a37048192d01fd8b1d9f75a7885371cc5a6699da594f4edb9bac67ff485e13",
+    "review_portable_artifacts.py": "0b2b04b6c158646d3b70a41f724ab78e948658a418694991274805e0360e63d0",
+    "review_relocation_artifacts.py": "9ebd86c097276978a4a271c99ab04b27fc4d2b41eb36d8f94223dc0d52272588",
+    "review_source_provenance.py": "2cfd06c02a58122aee9ad1f5c6517e9277626d3e3c4d469ca801b4f65facc121"
+  },
+  "limits": [
+    "The complete replay and second-path endpoint check cover the pinned Linux x86_64 Lean 4.35.0-rc3 recipe.",
+    "The historical source replay required audit recovery. The original external dependency inventory was not preserved; every proof object was kernel-checked again under the persisted recovery baseline. Fresh users run the corrected 716-command recipe.",
+    "The certificate records automated development and independent automated review, not external peer review or a new line-by-line semantic review of all inherited source files.",
+    "The mathematical scope is the stated finite random affine source law. No deterministic Collatz convergence or new natural-density conclusion follows from this certificate.",
+    "Detailed research review reports are bound by digest for audit history; reproduction uses the public bundle, relative-path records, pinned dependencies and documented replay command."
+  ],
+  "paths": "File keys are relative to the public repository root. BUNDLE/ inside replay records denotes the formal-growing-deficit bundle; TOOLCHAIN/ denotes the pinned official Lean installation.",
+  "recorded_at_utc": "2026-10-08T01:14:18Z",
+  "recovery_evidence": {
+    "archive": "formal-growing-deficit/recorded/recovery-evidence.tar.gz",
+    "command_count_scope": "The 1073 successful commands comprise 714 original proof commands, 357 recovery kernel commands and two repaired-audit commands. Eight relocation commands and one original failed audit command bring the archived log count to 1082.",
+    "corrected_driver_sha256": "037df5d809679c2cebe76d430035ff5dd27029156e640db1440e40980d1c8ebf",
+    "executor_sha256": "e12a6d39a090bfe91ca31ba2026aa48b7b316007e9bde9d3e724ed55d18a60ce",
+    "original_driver_sha256": "dd446a3a3878a0fbb9fb24707aae0bcfaa5af1448dbd234b430f082d69cd9b24",
+    "original_failed_audit_log_sha256": "fdb6a308ce08f4a06e0daa5c415a54eab25e0c02a131080d069b38ec645af336",
+    "original_progress_sha256": "d81a3d311250abb6f640c524a2671c6b3b94afab9cf28503256f26ffb8c3a0f3",
+    "persisted_recovery_baseline_sha256": "db261ca5412ae8fa318ca4ab60ecc45933f8671339a8b69fc65e5c987c6b1fc2"
+  },
+  "review_coverage": {
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audit": "A legacy audit root directly imports every bundled module and asserts full implementation visibility and checked-constant existence before collecting axioms; every module header and named/private source declaration is reconciled.",
+    "endpoint_runner": "Full original implementation and subsequent one-pin correction read; new endpoint root takes precedence and each kernel target is checked to resolve there.",
+    "external_dependencies": "Nine exact package source revisions and official Lean/runtime files authenticated. External .olean companions, .ilean, .ir, .ir.sig and shared objects are hash-inventoried before and after recovery. Cached external libraries are reused. The original pre-run inventory was not retained.",
+    "full_runner": "Original execution and verification implementation fully read; corrected driver delta and complete recovery executor read before recovery. Final source/options/metadata pins authenticated.",
+    "private_count_meaning": "Encoded private names, not a complete classification of module export visibility.",
+    "provenance": "150 native originals match pinned Git blobs and the retained upstream distribution manifest; 131 Subspace originals match pinned Git blobs; the complete 2177-line patch regenerates exactly and reproduces all 67 changed sources.",
+    "source_identity": "Exact 357-module entry closure, topological imports, unchanged source bytes and preserved option profiles."
+  },
+  "reviewer": "Independent automated reviewer (Clock); not external peer review",
+  "schema": "portable-growing-deficit-independent-review.v1",
+  "scope": [
+    "Fresh isolated compilation and original official kernel checking of all 357 bundled application and Subspace modules; all 714 successful proof commands and the original audit-header failure are preserved.",
+    "Recovery kernel-checks all 357 preserved proof objects again, then compiles and kernel-checks the repaired complete audit. The full dependency inventory is persisted before and verified after recovery; the original pre-run inventory was not retained.",
+    "A second independent directory containing copied verified inputs and full replay artifacts; full-record authentication before and after fresh compilation and kernel checking of the three entry modules.",
+    "Independent read-only authentication of both completed runs, including source identities, command vectors, logs, object companions, import resolution, external artifact inventories and every axiom-audit row.",
+    "Exact source provenance and compatibility patch reconstruction, with a separate independent patch application reproducing all adapted sources.",
+    "Independent archive parsing verifies all 1082 packaged command logs and all 365 recovery evidence files against authenticated hashes, along with exact record bytes, generated audit source and normalized relative members.",
+    "Binding of the separately reviewed manuscript, typeset paper and theorem-to-Lean map to the same frozen proof source manifest."
+  ],
+  "status": "PASS"
+}

@@ -1,31 +1,28 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying paper and the external results it uses."
+message: "Please cite the relevant accompanying paper and the external results it uses."
 type: software
-version: "2026.10.03.2"
-date-released: "2026-10-03"
+version: "2026.10.08.1"
+date-released: "2026-10-08"
 license:
   - MIT
   - CC-BY-4.0
   - Apache-2.0
-title: "Uniform lower bounds for Collatz predecessor densities: paper and Lean proofs"
+title: "Collatz basin densities and affine Fourier decay: papers and Lean proofs"
 authors:
   - family-names: Valbuena
     given-names: Lucas
 repository-code: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction"
 url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction"
 abstract: >-
-  Natural Collatz basin densities satisfy a uniform inverse-linear lower bound
-  at every positive target prime to three. Ordinary-map predecessor densities
-  satisfy the same bound, and the canonical trace has a uniform positive lower
-  bound at those targets. The proof combines Mazur's predecessor construction,
-  Said Duran's coalescence theorem, and periodic source averaging. The paper
-  also develops density and canonical-limit foundations from Tao's
-  first-passage theorem and Mazur's natural-counting transport. It
-  also proves a uniform exact first-hit coefficient bound for odd targets
-  and a finite cylinder-energy criterion equivalent to universal eventual periodicity.
-  The repository includes Lean sources, pinned dependencies, reproducible
-  checks, and precise attribution. The energy decay condition and additional
-  cycles remain unresolved.
+  Two papers with Lean proofs. The affine-law paper proves primitive Fourier
+  decay uniform in a growing conductor deficit and in the affine seed, with
+  conditional decay on polynomial-mass total-exponent slices and the exact
+  central slice. The basin paper proves uniform inverse-linear predecessor
+  density bounds, a finite cylinder-energy criterion for universal eventual
+  periodicity, a raw occupation lower bound and divergent-component excess,
+  and an almost-sure inverse height clock. The repository includes source
+  proofs, pinned dependencies, verification records, and attribution.
+  A matching raw occupation upper bound and the Collatz conjecture remain open.
 keywords:
   - Collatz conjecture
   - predecessor density
@@ -33,6 +30,9 @@ keywords:
   - Lean
   - formal verification
   - canonical traces
+  - Fourier decay
+  - Syracuse affine laws
+  - Subspace Theorem
 references:
   - type: article
     title: "Collatz basin densities and canonical traces from first-passage stabilization"
@@ -41,3 +41,10 @@ references:
         given-names: Lucas
     year: 2026
     url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction/blob/main/paper/tao-basin-densities.pdf"
+  - type: article
+    title: "Fourier decay for truncated Syracuse affine laws"
+    authors:
+      - family-names: Valbuena
+        given-names: Lucas
+    year: 2026
+    url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction/blob/main/paper/growing-deficit-fourier.pdf"
