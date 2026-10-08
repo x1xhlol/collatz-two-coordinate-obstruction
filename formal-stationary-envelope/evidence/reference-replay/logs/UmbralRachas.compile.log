@@ -1,0 +1,7 @@
+'UmbralRachasGao.cola_umbral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'UmbralRachasGao.orden_positivo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'UmbralRachasGao.orden_par' depends on axioms: [propext, Classical.choice, Quot.sound]
+'UmbralRachasGao.orden_impar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'UmbralRachasGao.orden_cota' depends on axioms: [propext, Classical.choice, Quot.sound]
+'UmbralRachasGao.factor_impar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'UmbralRachasGao.cola_con_orden' depends on axioms: [propext, Classical.choice, Quot.sound]

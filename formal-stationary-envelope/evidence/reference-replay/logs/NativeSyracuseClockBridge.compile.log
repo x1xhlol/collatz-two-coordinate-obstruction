@@ -1,0 +1,4 @@
+'CollatzCanonical.NativeTao.syracuse_shortcut_oddCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.NativeTao.native_first_passage_target_split' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

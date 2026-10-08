@@ -1,0 +1,6 @@
+'CollatzOrbitPackingFiniteRecurrence.prefixCount_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzOrbitPackingFiniteRecurrence.small_start_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzOrbitPackingFiniteRecurrence.terminal_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzOrbitPackingFiniteRecurrence.finite_counting_recurrence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

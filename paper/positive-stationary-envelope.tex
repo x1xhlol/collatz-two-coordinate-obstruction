@@ -1,0 +1,569 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,array,needspace}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A positive semicontinuous density for the Syracuse stationary law},pdfauthor={Lucas Valbuena}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newcommand{\Zthree}{\mathbb Z_3}
+\newcommand{\NN}{\mathbb N_{>0}}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\LL}{\mathcal L}
+\newcommand{\avg}[1]{\langle #1\rangle}
+\DeclareMathOperator{\Law}{Law}
+\title{A positive semicontinuous density\\for the Syracuse stationary law}
+\author{Lucas Valbuena}
+\date{8 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let \(\mu\) be the stationary probability measure on \(\Zthree\)
+for \(x\mapsto(3x+1)/2^a\), with independent geometric exponents
+\(\mathbb P(a=j)=2^{-j}\). We construct its greatest nonnegative
+lower semicontinuous density with respect to additive Haar probability.
+This density vanishes off the units, has a uniform positive lower bound
+on the units, and takes a prescribed arithmetic value at every positive
+integer. The value is the canonical trace obtained from weighted
+first-hit densities, including the cycle factor at periodic targets.
+Consequently every unit cylinder of depth \(k\) has mass at least
+\(c3^{-k}\), with one constant \(c>0\), and the normalized minimum
+cylinder exponent in Tao's 2020 question equals one. At every positive
+integer the cylinder densities also converge to the arithmetic trace
+in Ces\`aro mean absolute error. The density is infinite on a dense
+Haar-null \(G_\delta\) subset of the units, and its integer trace is
+unbounded in every unit residue class. The proof combines periodic first-hit
+means, a superharmonic bound on inverse layers, and a normalization
+argument for an arithmetic lower envelope. It does not settle forward
+Collatz convergence or the expected late-occupation bound.
+\end{abstract}
+
+\section{The stationary measure and the arithmetic trace}
+
+Write \(\lambda\) for additive Haar probability on \(\Zthree\),
+and \(U=\Zthree^\times\), so \(\lambda(U)=2/3\).
+The Syracuse stationary measure is the law of
+\[
+ X=\sum_{j=0}^{\infty}3^j2^{-(a_1+\cdots+a_{j+1})},
+ \qquad \mathbb P(a_i=a)=2^{-a}\quad(a\geq1),
+\]
+where the exponents are independent. This is Tao's random variable
+\cite{Tao}. Put
+\[
+ p_k(b)=\mu\{x:x\equiv b\pmod{3^k}\},\qquad
+ \rho_k(x)=3^k p_k(x\bmod3^k).
+\]
+All Haar densities below use \(\lambda\), rather than Haar
+probability normalized on \(U\).
+
+For the arithmetic definitions use the shortcut map
+\[
+ T(n)=\begin{cases}n/2,&2\mid n,\\(3n+1)/2,&2\nmid n.\end{cases}
+\]
+Let \(o_r(n)\) count odd entries among
+\(n,Tn,\ldots,T^{r-1}n\), and set
+\[
+ R_r(n)=3^{o_r(n)}2^{-r}.
+\]
+If \(q\) reaches a positive target \(N\), let \(\tau_N(q)\)
+be its first hitting time and define
+\[
+ w_N(q)=\frac{q}{N}R_{\tau_N(q)}(q).
+\]
+Set \(w_N(q)=0\) when \(q\) does not reach \(N\).
+These weights lie in \([0,1]\). Their natural means have limits,
+denoted by \(D_N\). We use the arithmetic density and clock results
+in \cite{Basins}; their upstream inputs include the separate
+constructions of Mazur and Said Duran described there.
+
+If \(N\) has a positive return, let \(r_N\) be its first positive
+return time and put
+\[
+ G_N=(1-R_{r_N}(N))^{-1}.
+\]
+Otherwise put \(G_N=1\). Define
+\begin{equation}\label{eq:g}
+ \delta=\frac12\log\frac43,\qquad
+ g(N)=\delta G_N N D_N.
+\end{equation}
+Here a nonperiodic integer means an integer with no positive return
+to itself. It may enter a cycle later.
+
+The construction in this paper starts from the actual function
+\(g\), rather than a value assigned to an almost-everywhere density
+on the countable set of positive integers. For \(x\in\Zthree\), set
+\begin{equation}\label{eq:envelope}
+ e_k(x)=\inf_{\substack{n\in\NN\\ n\equiv x\pmod{3^k}}}g(n),
+ \qquad E(x)=\sup_{k\geq0}e_k(x).
+\end{equation}
+The functions \(e_k\) are finite and constant on depth-\(k\)
+cylinders. The function \(E\) takes values in \([0,\infty]\).
+
+\begin{theorem}\label{thm:envelope}
+The function \(E\) has the following properties.
+\begin{enumerate}
+\item It is lower semicontinuous, \(\int E\,d\lambda=1\), and
+\(\mu=E\lambda\).
+\item It vanishes on \(3\Zthree\). There is one constant \(c>0\)
+such that \(E(x)\geq c\) for all \(x\in U\).
+\item At every positive integer, including every periodic integer,
+\(E(n)=g(n)\).
+\item If \(h:\Zthree\to[0,\infty]\) is lower semicontinuous and
+\(h\lambda=\mu\), then \(h\leq E\) everywhere.
+\end{enumerate}
+\end{theorem}
+
+The greatest representative uses the extended nonnegative reals.
+Corollary~\ref{cor:infinity} below shows that its infinite values
+cannot be removed while retaining the greatest-representative property.
+
+\begin{corollary}\label{cor:cylinders}
+There is a constant \(c>0\) such that
+\[
+ p_k(b)\geq c3^{-k}\qquad
+ (k\geq1,\ b\in\mathbb Z/3^k\mathbb Z,\ 3\nmid b).
+\]
+If \(m_k=\min_{3\nmid b}p_k(b)\), then
+\[
+ c3^{-k}\leq m_k\leq\frac32\,3^{-k},\qquad
+ \lim_{k\to\infty}\frac{-\log m_k}{k\log3}=1.
+\]
+\end{corollary}
+
+Tao introduced this minimum and conjectured the exponent-one
+asymptotic in his 2020 discussion \cite{Tao2020}.
+Nikpour and Rabbani's preprint \cite{NikpourRabbani} reports an
+upper bound of \(1.039979\) for this minimum-atom exponent.
+Corollary~\ref{cor:cylinders} gives a constant lower factor.
+The proof uses the arithmetic inputs behind \eqref{eq:g}; it is
+not a deduction from almost-everywhere integrability alone.
+We make no claim of an exhaustive priority search.
+
+\begin{corollary}\label{cor:integer}
+For every positive integer \(n\),
+\begin{equation}\label{eq:cesaro-absolute}
+ \lim_{K\to\infty}\frac1K\sum_{k=0}^{K-1}|\rho_k(n)-g(n)|=0.
+\end{equation}
+Also \(e_k(n)\uparrow g(n)\). In particular, for each
+\(\varepsilon>0\) there is a conductor \(j\) such that
+\[
+ m\in\NN,\quad m\equiv n\pmod{3^j}
+ \quad\Longrightarrow\quad g(m)>g(n)-\varepsilon.
+\]
+\end{corollary}
+
+The convergence in \eqref{eq:cesaro-absolute} concerns the integer
+trace of the cylinder densities. It does not assert convergence of
+the individual values \(\rho_k(n)\). None of these conclusions
+excludes an additional cycle or a divergent positive orbit.
+
+\begin{corollary}\label{cor:infinity}
+The set \(\{x:E(x)=\infty\}\) is a dense \(G_\delta\) subset
+of \(U\) and has Haar measure zero. In every residue class prime
+to three, \(g\) is unbounded on the positive odd integers in that
+class. The function \(E\) is discontinuous at every positive
+integer prime to three.
+\end{corollary}
+
+\section{First-hit means and a bound on inverse layers}
+
+We record the arithmetic inputs in the normalization used here.
+They are supplied by the native first-hit development and the
+periodic density extension accompanying \cite{Basins}.
+
+The function \(g\) is finite and nonnegative on \(\NN\), vanishes
+on multiples of three, and satisfies one uniform bound
+\begin{equation}\label{eq:integer-floor}
+ g(n)\geq c_0>0\qquad(3\nmid n).
+\end{equation}
+Its binary harmonic identity is
+\begin{equation}\label{eq:harmonic}
+ g(n)=\frac12 g(2n)+\frac32\one_{n\equiv2\ (3)}g((2n-1)/3).
+\end{equation}
+The native canonical identification gives
+\begin{equation}\label{eq:cesaro-input}
+ \frac1K\sum_{k<K}\rho_k(n)\longrightarrow g(n)
+ \qquad(n\in\NN).
+\end{equation}
+The cycle factor in \eqref{eq:g} is necessary for both formulas
+at periodic targets.
+
+For \(K\geq0\) put
+\[
+ C_{K,N}(q)=
+ \one_{\substack{q\text{ odd},\ q\text{ reaches }N\\
+                   o_{\tau_N(q)}(q)\leq K}}
+ R_{\tau_N(q)}(q).
+\]
+The indicator makes this zero when the first hitting time is
+undefined. For a function \(p\) of positive period \(M\), write
+\(\avg p=M^{-1}\sum_{q=0}^{M-1}p(q)\).
+
+\begin{proposition}[Periodic marked first-hit mean]\label{prop:marked}
+Let \(N>0\), and let \(p:\mathbb N\to\mathbb R\) be bounded,
+nonnegative, periodic, and zero outside odd integers prime to three.
+Then
+\begin{equation}\label{eq:marked}
+ \lim_{K\to\infty}\frac1K\sum_{q\geq1}C_{K,N}(q)p(q)
+       =2\delta N D_N\avg p.
+\end{equation}
+If \(N\) is nonperiodic, the right side is \(2g(N)\avg p\).
+\end{proposition}
+
+\begin{proof}
+The periodic source theorem gives the natural mean
+\(D_N\avg p\) for \(w_N(q)p(q)\), and partial summation gives
+the same logarithmic mean. For every \(\varepsilon>0\), the odd
+sources reaching \(N\) for which the bounds
+\[
+ (1-\varepsilon)\frac{\log q}{2\delta}
+ \leq o_{\tau_N(q)}(q)
+ \leq(1+\varepsilon)\frac{\log q}{2\delta}
+\]
+fail form a set of absolute logarithmic density zero. For a bounded
+nonnegative mask, its exceptional contribution is bounded by a fixed
+multiple of the unmasked exceptional contribution. The same domination
+applies to the summable endpoint tail beyond the native exponential
+height cutoff. The two-sided clock squeeze therefore converts the
+logarithmic source mean to
+\[
+ \frac1K\sum_{q\geq1}
+ \one_{\substack{q\text{ odd},\ q\text{ reaches }N\\o_{\tau_N(q)}(q)\leq K}}
+ \frac{w_N(q)p(q)}q
+ \longrightarrow 2\delta D_N\avg p.
+\]
+Multiplication by \(N\) gives \eqref{eq:marked}.
+The formal proof first treats masks bounded by one, then rescales a
+general bounded mask. It retains the summability and endpoint-tail
+hypotheses in the clock squeeze and discharges them by domination
+from the actual first-hit estimates.
+\end{proof}
+
+Call a nonnegative function \(f:\NN\to\mathbb R\) binary
+superharmonic if
+\begin{equation}\label{eq:superharmonic}
+ \frac12 f(2n)+\frac32\one_{n\equiv2\ (3)}f((2n-1)/3)\leq f(n)
+ \qquad(n>0).
+\end{equation}
+
+\begin{lemma}[Inverse-layer bound]\label{lem:layer}
+If \(f\) is binary superharmonic and \(p\) is bounded,
+nonnegative, and satisfies \(p(q)\leq f(q)\) for \(q>0\), then
+\begin{equation}\label{eq:layer-cap}
+ \sum_{q\geq1}C_{K,N}(q)p(q)\leq(K+1)f(N)
+ \qquad(N>0,\ K\geq0).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+First sum over all pairs \((q,r)\) with \(q\) odd,
+\(T^rq=N\), and \(o_r(q)=k\), restricting \(r\) to a finite
+range. The weight of a pair is \(R_r(q)p(q)\).
+For \(k=0\), the only possible contribution is the zero-time
+term, bounded by \(f(N)\). For positive \(k\), split according
+to the last edge into \(N\). The even predecessor is \(2N\),
+with factor \(1/2\) and unchanged odd count. When it exists, the
+odd predecessor is \((2N-1)/3\), with factor \(3/2\) and odd
+count reduced by one. Induction on the time cutoff, followed by
+\eqref{eq:superharmonic}, bounds each layer by \(f(N)\).
+Nonnegative summation removes the time cutoff. Summing over
+\(0\leq k\leq K\) gives \((K+1)f(N)\). First hits form a subset
+of these pairs, proving the claim. The formal series rearrangements
+use the native summability of each unmarked odd-depth layer and
+boundedness of \(p\).
+\end{proof}
+
+\begin{lemma}[Periodic test bound]\label{lem:periodic-bound}
+If \(p\) is bounded, nonnegative, periodic, zero outside odd units,
+and \(p(q)\leq g(q)\) for positive \(q\), then \(\avg p\leq1/2\).
+\end{lemma}
+
+\begin{proof}
+Apply Lemma~\ref{lem:layer} with \(f=g\), which is harmonic.
+Use the positive nonperiodic target \(N=5\). Its shortcut orbit
+enters \(1,2\), so it never returns to five, and \(g(5)>0\) by
+\eqref{eq:integer-floor}. After division by \(K\),
+Proposition~\ref{prop:marked} gives
+\(2g(5)\avg p\leq g(5)\). Cancel \(g(5)\).
+\end{proof}
+
+\section{The lower envelope has mass one}
+
+Every cylinder contains a positive integer, so \(e_k\) in
+\eqref{eq:envelope} is finite and continuous. Cylinder refinement
+gives \(e_k\leq e_{k+1}\), hence \(E\) is lower semicontinuous.
+Also \(E(n)\leq g(n)\) for every positive integer.
+Every nonunit cylinder at conductor at least one contains only
+integer arguments where \(g\) vanishes. The unit lower bound already
+holds at conductor one. Therefore
+\begin{equation}\label{eq:envelope-support}
+ E=0\text{ on }3\Zthree,\qquad E\geq c_0\text{ on }U.
+\end{equation}
+
+\Needspace{8\baselineskip}
+\begin{lemma}[Maximality of the arithmetic envelope]\label{lem:maximal}
+If \(h:\Zthree\to[0,\infty]\) is lower semicontinuous and
+\(h(n)\leq g(n)\) at every positive integer, then \(h\leq E\).
+\end{lemma}
+
+\begin{proof}
+If \(a<h(x)\), lower semicontinuity supplies a cylinder about
+\(x\) on which \(h>a\). Every positive integer in that cylinder
+has \(g(n)>a\), so its infimum \(e_k(x)\) is at least \(a\).
+Take the supremum over \(a<h(x)\).
+\end{proof}
+
+For \(k\geq1\) the integer function
+\(p(q)=\one_{q\text{ odd}}e_k(q)\) has period \(2\cdot3^k\)
+and satisfies Lemma~\ref{lem:periodic-bound}. Among each pair
+\(q,q+3^k\), exactly one integer is odd. Thus
+\[
+ \avg p=\frac12\int e_k\,d\lambda\leq\frac12.
+\]
+The same integral bound at \(k=0\) follows by monotonicity.
+Consequently
+\begin{equation}\label{eq:beta}
+ 0<\beta:=\int E\,d\lambda\leq1.
+\end{equation}
+Positivity uses \eqref{eq:envelope-support}; the upper bound uses
+monotone convergence.
+
+Define the transfer operator on nonnegative functions by
+\[
+ (\LL h)(x)=\frac12h(2x)+
+ \frac32\one_{x\equiv2\ (3)}h((2x-1)/3).
+\]
+The second inverse branch is used only on its clopen domain.
+This operator preserves lower semicontinuity and Haar integrals.
+Indeed, doubling preserves \(\lambda\), while
+\(y\mapsto(3y+1)/2\) maps \(\Zthree\) onto the residue class
+two with Haar scaling \(1/3\).
+At every positive integer \(n\), the inequality \(E\leq g\)
+and \eqref{eq:harmonic} give \((\LL E)(n)\leq g(n)\).
+Lemma~\ref{lem:maximal} therefore yields \(\LL E\leq E\)
+everywhere. Equal finite integrals imply \(\LL E=E\) almost
+everywhere.
+
+It follows that \(E\lambda\) is stationary for the binary maps
+\(H(x)=x/2\) and \(J(x)=(3x+1)/2\), each with probability
+\(1/2\). Iterating the \(H\) part of this equation gives
+stationarity for \(H^{a-1}J(x)=(3x+1)/2^a\), with weights
+\(2^{-a}\); after \(a\) such terms the remaining mass is
+\(\beta2^{-a}\).
+Uniqueness of the stationary probability follows from the common
+\(3\)-adic contraction factor of these affine maps. Hence
+\begin{equation}\label{eq:normalized}
+ \beta^{-1}E\lambda=\mu.
+\end{equation}
+
+\begin{lemma}[Canonical lower semicontinuous minorants]\label{lem:lsc-bound}
+If \(h\) is a nonnegative lower semicontinuous density for \(\mu\),
+then \(h(n)\leq g(n)\) for every positive integer \(n\).
+\end{lemma}
+
+\begin{proof}
+For \(a<h(n)\), all sufficiently fine cylinders about \(n\)
+have \(h>a\). Their normalized masses therefore satisfy
+\(\rho_k(n)\geq a\) for all sufficiently large \(k\).
+Equation~\eqref{eq:cesaro-input} gives \(g(n)\geq a\).
+Let \(a\) increase to \(h(n)\).
+\end{proof}
+
+Apply this lemma to \(h=E/\beta\), using \eqref{eq:normalized}.
+Maximality of the arithmetic envelope gives \(E/\beta\leq E\).
+Since \(0<E(1)\leq g(1)<\infty\), evaluation at one implies
+\(\beta\geq1\). Together with \eqref{eq:beta}, this proves
+\[
+ \beta=1,\qquad \mu=E\lambda.
+\]
+Lemma~\ref{lem:lsc-bound} and Lemma~\ref{lem:maximal} also show
+that every nonnegative lower semicontinuous canonical density lies
+below \(E\).
+
+\section{Equality at the positive integers}
+
+The restriction \(n\mapsto E(n)\) is finite, nonnegative, and
+binary superharmonic. Fix a positive nonperiodic integer \(N\).
+For \(j\geq1\), apply Lemma~\ref{lem:layer} with
+\(f(n)=E(n)\) and \(p(q)=\one_{q\text{ odd}}e_j(q)\).
+Proposition~\ref{prop:marked} and the exact odd-mask mean give
+\[
+ g(N)\int e_j\,d\lambda\leq E(N).
+\]
+As \(j\to\infty\), the integrals increase to one. Thus
+\(g(N)\leq E(N)\). The reverse inequality is part of the
+construction, so \(E(N)=g(N)\) at every positive nonperiodic
+integer, without a parity restriction.
+
+To handle periodic points, put \(d(n)=g(n)-E(n)\).
+This is nonnegative, is zero at nonperiodic points, and satisfies
+\[
+ d(n)\leq\frac12d(2n)+
+       \frac32\one_{n\equiv2\ (3)}d((2n-1)/3).
+\]
+A deterministic map has at most one periodic predecessor of any
+given point: iterate their common image for one less than a common
+multiple of their periods to recover either predecessor.
+Consequently, if \(n\) is periodic, all predecessors of \(Tn\)
+other than \(n\) have zero defect. It follows that
+\[
+ d(Tn)\leq R_1(n)d(n),\qquad
+ d(T^rn)\leq R_r(n)d(n).
+\]
+For any positive return \(T^rn=n\), the positive affine
+correction implies \(R_r(n)<1\). Thus
+\(0\leq d(n)\leq R_r(n)d(n)\) forces \(d(n)=0\).
+This completes Theorem~\ref{thm:envelope}.
+
+\section{Cylinder minima and trace consequences}
+
+A unit cylinder of depth \(k\geq1\) lies wholly in \(U\).
+Integrating \(E\geq c_0\) over it gives
+\(p_k(b)\geq c_0 3^{-k}\).
+There are \(2\cdot3^{k-1}\) unit cylinders and their masses sum
+to one. Their minimum is therefore at most
+\((2\cdot3^{k-1})^{-1}\). These bounds imply
+\[
+ -\log3+\frac{\log c_0}{k}
+ \leq \frac{\log m_k}{k}
+ \leq -\log3+\frac{\log(3/2)}{k},
+\]
+proving Corollary~\ref{cor:cylinders}.
+
+At a positive integer \(n\), lower semicontinuity and
+\(E(n)=g(n)\) imply
+\[
+ \rho_k(n)\geq g(n)-\varepsilon
+ \quad\hbox{for all sufficiently large }k.
+\]
+Together with \eqref{eq:cesaro-input}, this improves the signed
+Ces\`aro mean to the absolute-error mean. Explicitly,
+\(\min(\rho_k(n),g(n))\to g(n)\), and
+\[
+ |\rho_k(n)-g(n)|
+ =\rho_k(n)+g(n)-2\min(\rho_k(n),g(n)).
+\]
+Average this identity to obtain \eqref{eq:cesaro-absolute}.
+Finally, \(e_k(n)\uparrow E(n)=g(n)\). Choosing one \(e_j(n)\)
+above \(g(n)-\varepsilon\), and using its definition as a
+cylinder infimum, proves the residue-class assertion in
+Corollary~\ref{cor:integer}.
+
+\section{Dense infinite values}
+
+Write \(H(x)=x/2\) and \(J(x)=(3x+1)/2\) as before.
+The inequality \(\LL E\leq E\) gives, in the extended
+nonnegative reals,
+\[
+ E(Hx)\geq\tfrac12 E(x),\qquad
+ E(Jx)\geq\tfrac32 E(x).
+\]
+Since \(J(-1)=-1\) and \(E(-1)>0\), the second inequality
+forces \(E(-1)=\infty\). The first then gives
+\[
+ E(-2^{-a})=\infty\qquad(a\geq0).
+\]
+These points are dense in \(U\): powers of two represent every
+unit modulo every power of three. For completeness, elementary
+cubing gives
+\(4^{3^r}=1+3^{r+1}u_r\) with \(u_r\equiv1\pmod3\).
+If a power of two represents a chosen residue modulo \(3^k\),
+multiplying it by one of
+\(1,4^{3^{k-1}},4^{2\cdot3^{k-1}}\) realizes each of the three
+lifts modulo \(3^{k+1}\). Start with the two units modulo three.
+Negation and inversion permute the unit residues, giving the
+claimed density of \(-2^{-a}\).
+
+Lower semicontinuity makes
+\[
+ \{E=\infty\}=\bigcap_{M\geq1}\{E>M\}
+\]
+a \(G_\delta\), and integrability makes it Haar null. Fix a unit
+cylinder and a finite threshold \(M\). Choose an infinite-value
+point inside the cylinder. Lower semicontinuity supplies a smaller
+cylinder on which \(E>M\); it contains a positive odd integer
+\(n\), where \(g(n)=E(n)>M\). This proves the unboundedness
+assertion. Finally, a finite value of \(E\) at a unit cannot be
+a continuity point because every neighborhood contains an infinite
+value. Theorem~\ref{thm:envelope} supplies finiteness at each
+positive integer, proving Corollary~\ref{cor:infinity}.
+
+\Needspace{12\baselineskip}
+\section*{Formalization and verification scope}
+
+The accompanying Lean development defines the same weighted first-hit
+density, cycle factor, arithmetic infima, and canonical stationary
+measure. The accompanying claim map gives the full theorem-to-source
+correspondence. Four principal endpoints in the namespace
+\nolinkurl{CollatzCanonical.IntegerStationaryEnvelope} are:
+\begin{quote}\small\raggedright
+\nolinkurl{canonicalIntegerEnvelope_withDensity}\\
+\nolinkurl{canonicalIntegerEnvelope_natCast_eq}\\
+\nolinkurl{canonicalMinimumUnitMass_base_three_rate}\\
+\nolinkurl{canonicalIntegerEnvelope_infinity_closure}
+\end{quote}
+The finite probability bound is stated directly for the native
+\nolinkurl{syracPMF}, not just for an unrelated stationary model.
+
+All 1,620 modules in the exact internal source closure and the generated
+declaration audit were freshly compiled with warnings treated as errors
+and individually checked by Lean's official kernel checker: 3,242
+successful commands. The audit records 36,651 module-header/constant
+rows, 36,539 distinct names, and 3,419 encoded-private rows. The only
+permitted axioms are \nolinkurl{propext}, \nolinkurl{Classical.choice},
+and \nolinkurl{Quot.sound}. Complete inventories of 53,006 external
+compiled objects agree before and after. Those libraries were
+fingerprinted and reused; neither an external rebuild nor correspondence
+with adjacent source checkouts is claimed. Setup reuse, fresh-process
+record verification, and verification after relocation passed.
+Relocation copied the internal objects and reused the same external
+libraries; it did not recompile the sources. The fresh dependency-download
+branch was not exercised.
+
+\section*{Attribution and use of AI}
+The stationary Syracuse law, the first-passage framework, and the
+minimum-cylinder question are due to Tao. The arithmetic inputs are
+those of the companion basin-density development, with its separate
+attribution to Mazur and Said Duran. The contribution here is the
+arithmetic-envelope construction, its normalization and pointwise
+identification, and the stated consequences.
+
+OpenAI Codex was used extensively for mathematical exploration,
+Lean development, automated review, and preparation of this manuscript.
+Automated checking and review are not external peer review or
+endorsement by the authors of the cited works.
+
+\section*{License}
+Copyright \textcopyright\ 2026 Lucas Valbuena.
+This paper and its source are licensed under
+\href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+Original accompanying code is licensed under MIT; imported formal
+sources retain their own licenses and attribution.
+
+\begin{thebibliography}{9}\small\raggedright
+\bibitem{Tao} T.~Tao,
+\emph{Almost all orbits of the Collatz map attain almost bounded values},
+Forum of Mathematics, Pi \textbf{10} (2022), e12.
+\url{https://doi.org/10.1017/fmp.2022.8}.
+\bibitem{Tao2020} T.~Tao,
+\emph{Equidistribution of Syracuse random variables and density of
+Collatz preimages}, 25 January 2020.
+\url{https://terrytao.wordpress.com/2020/01/25/equidistribution-of-syracuse-random-variables-and-density-of-collatz-preimages/}.
+\bibitem{NikpourRabbani} P.~Nikpour and M.~Rabbani,
+\emph{A Certified Density Exponent for the 3x + 1 Problem and the
+Smallest Atom of the Syracuse Random Variable}, preprint, 2026.
+\url{https://doi.org/10.2139/ssrn.7239062}.
+\bibitem{Basins} L.~Valbuena,
+\emph{Collatz basin densities and canonical traces from first-passage
+stabilization}, 2026, accompanying manuscript and formal development.
+\url{https://github.com/x1xhlol/collatz-two-coordinate-obstruction}.
+\end{thebibliography}
+\end{document}

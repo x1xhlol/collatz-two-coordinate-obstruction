@@ -1,0 +1,175 @@
+{
+  "authentication_data": {
+    "bytes": 8607,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/cycle-finished-stage-authentication-data-20261008.json",
+    "sha256": "b02cdbb2c2eec2dc98bda321f5a3a9c8fcbd4ba07c53d656b417c9a54ed805a0"
+  },
+  "authentication_exit_code": 0,
+  "authentication_script": {
+    "bytes": 24858,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/cycle_authenticate_finished_stage_v2.py",
+    "sha256": "0e4a14de7fe411302aa71489fa0fce333f5e1b9c16d1e04069059ac1bdadee08"
+  },
+  "checks": [
+    "The manifest is the frozen corrected c3a623f8 closure. Independently rehashed all 1620 selected sources and all 247 pinned inputs; checked exact endpoint import closure and topological order.",
+    "Checked completed PASS record/progress agreement, every successful command vector, log hash, kernel replay marker, current internal object and companion hash, module progress, source hash, and all 7856 direct-import resolutions. No internal dependency resolves to an external root.",
+    "Rehashed all 53006 current external compiled objects and official runtime pins; checked clean pinned Mathlib/package revisions and exact before/after state equality.",
+    "Checked all recorded dependency completion precedences, launch chronology, job and exclusive-module limits, memory arithmetic and minimum recorded allowance, command intervals and absence of a failure latch.",
+    "Independently parsed all module headers, axiom rows, and checked-environment owner rows from the audit transcript. Verified all named and private source declarations have audit coverage and only the three stated standard axioms appear. The empty CanonicalIntegerEnvelopeResults entrypoint has a legitimate zero declaration header. The 112 header/owner differences are recorded separately and do not represent missing declarations.",
+    "Checked exact staged file set, all distribution/publication hashes and byte counts, manifest cross-bindings, copied source and pinned input equality, complete textual replay logs, audit source, and completed validation records/logs.",
+    "Checked no compiled artifacts, private replay/external directories, symlinks or unexpected files are selected. The retained Gao source archive contains exactly 53 source/text members and no compiled/private members.",
+    "Read the final guide, evidence explanation, validator and assembler; reference counts, PASS scope, preserved historical README explanation, exact execution manifest, and source-only distribution instructions agree with the actual evidence.",
+    "Confirmed the source-license ledger covers every selected module at the correct source hash. This check concerns scope and byte bindings; the parallel source-rights review remains separately attributable."
+  ],
+  "first_private_checker_correction": {
+    "bytes": 703,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/cycle-authentication-zero-header-correction-20261008.json",
+    "sha256": "2f754e383a6b50c47da9cc326b93b7b21b0d3b167612cc9b1ea1c368504075fd"
+  },
+  "identities": {
+    "audit_compile_log": {
+      "bytes": 11289042,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/.replay/logs/IntegerEnvelopeCompleteAudit.compile.log",
+      "sha256": "4f21cc88ddc01b86a6b0fbe9d2230f03e12ff159b1d7c480b3ddc3793506d6f1"
+    },
+    "audit_source": {
+      "bytes": 168174,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/.replay/source/IntegerEnvelopeCompleteAudit.lean",
+      "sha256": "adba0938eeb7851bb702e286ee6cb65e43f0b8c10b6be4ba792f96d5aa1ebd7f"
+    },
+    "distribution_plan": {
+      "bytes": 1019586,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/distribution-plan.json",
+      "sha256": "8c4a1fa60d79f45f4449bb802ec54242e6542e7ad76538a7795cfacdcfe43c64"
+    },
+    "execution_manifest": {
+      "bytes": 5068251,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/source-manifest.json",
+      "sha256": "c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c"
+    },
+    "input_state": {
+      "bytes": 11803111,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/.replay/input-state-before.json",
+      "sha256": "627a527e144246011a584033e7c6a1e80bbe544ee1eebe0fa32cf12df363fbf5"
+    },
+    "progress_record": {
+      "bytes": 5117369,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/.replay/progress.json",
+      "sha256": "199d1aaeae33ace0683adabc898779aadfd4190f2638f872be28cf1d6c2f3252"
+    },
+    "publication_manifest": {
+      "bytes": 1019189,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/publication-manifest.json",
+      "sha256": "fd5e291225eacd415823f55b6da9ab1f347f2a78cc92df0968b5c29b168bc366"
+    },
+    "replay_record": {
+      "bytes": 30834609,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/.replay/replay-record.json",
+      "sha256": "d51c6afb6168cf34f629cd1d1849cdf5c98067a30c6f60c5d311b74e4e9f39fe"
+    },
+    "validation_record": {
+      "bytes": 4132,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/validation/validation-record.json",
+      "sha256": "640d21a42edd676ece9064a1773769dc8fdd6271275be7c7ab9c07d813473df9"
+    }
+  },
+  "limits": [
+    "The review authenticates recorded completed Lean execution and present artifacts; it does not claim a second independent compilation or kernel run.",
+    "External cached objects were fingerprinted and reused. Complete external source closures were not rebuilt or independently kernel checked, and cached-object correspondence to adjacent source revisions remains unproved.",
+    "The fresh external download and cache-preparation branch was not exercised. Relocated verification copies the completed internal artifacts and reuses the same external libraries.",
+    "Approval is confined to these exact staged bytes and the described completed evidence. It does not assert forward Collatz convergence, the expected late-occupation estimate, or that the separate paper/claim-map has already been copied or published."
+  ],
+  "manual_read_and_scope_bindings": {
+    "REPLAY-GUIDE.md": {
+      "bytes": 11048,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/REPLAY-GUIDE.md",
+      "sha256": "d8a29234d5ce58bf1619ee585ea7c88ef3e2be8049f5dac1025672a6239f70f1"
+    },
+    "evidence/README.md": {
+      "bytes": 1765,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/README.md",
+      "sha256": "b1c93d687df752b885409e4b1bdf2ac26a94b963811d8af0d3159ef46b06a6df"
+    },
+    "evidence/publication-assembly.py": {
+      "bytes": 13755,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/publication-assembly.py",
+      "sha256": "3d349b3405f798b9c0e77030fa9e0e859490843d17abf31aa882169b5c6438b4"
+    },
+    "evidence/validation/fresh-process-verify.log": {
+      "bytes": 279,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/validation/fresh-process-verify.log",
+      "sha256": "ab4188bf963ce14bd84657965f0aecbd94fb2586362b6fadde4f09fa6a91f36a"
+    },
+    "evidence/validation/relocated-verify.log": {
+      "bytes": 279,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/validation/relocated-verify.log",
+      "sha256": "ab4188bf963ce14bd84657965f0aecbd94fb2586362b6fadde4f09fa6a91f36a"
+    },
+    "evidence/validation/setup-reuse.log": {
+      "bytes": 424,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/validation/setup-reuse.log",
+      "sha256": "55b70b0860cbb180db6a30876e79e554d997ab15e0ec8e1f995bd1501c5a8920"
+    },
+    "evidence/validation/validation-harness.py": {
+      "bytes": 8875,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/validation/validation-harness.py",
+      "sha256": "ea58b8122480cd9adb91369460a2b8ec7ccddeea7b2fe86bf5fe58d401d3640d"
+    },
+    "evidence/validation/validation-record.json": {
+      "bytes": 4132,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/validation/validation-record.json",
+      "sha256": "640d21a42edd676ece9064a1773769dc8fdd6271275be7c7ab9c07d813473df9"
+    },
+    "source/CanonicalIntegerEnvelopeResults.lean": {
+      "bytes": 1556,
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/source/CanonicalIntegerEnvelopeResults.lean",
+      "sha256": "a48d93c68b048c0df7475f4ef7b3fe3da03e49b0fcebe7b4aa7268c525cd417d"
+    }
+  },
+  "requested_changes": [],
+  "reviewed_utc": "2026-10-08T12:39:07+00:00",
+  "reviewer": "cycle_research_oct7",
+  "schema": 1,
+  "scope": "Independent read-only authentication of the actual completed corrected replay, validation, and exact publication-stage-corrected distribution. No Lean compilation or kernel process was started by this review; no frozen, staged, or public artifact was edited.",
+  "status": "PASS_COMPLETED_REPLAY_AND_STAGED_SOURCE_TEXT_EVIDENCE",
+  "terminal_driver_evidence": {
+    "bytes": 1504,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/corrected-fresh-replay-absolute.exit.json",
+    "sha256": "54dc0a17b55e0a44ab39dec96ab8881812421668b4d52de796a6118ed254a960"
+  },
+  "verified_results": {
+    "audit": {
+      "audited_constant_rows": 36651,
+      "audited_distinct_names": 36539,
+      "audited_private_rows": 3419,
+      "header_owner_mismatch_rows": 112
+    },
+    "axiom_whitelist": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "before_after_input_states_identical": true,
+    "designated_endpoints": 14,
+    "direct_import_count_label_note": "The authentication-data field internal_import_edges_checked counts all 7856 direct-import resolutions. Of those, 5971 resolve to the fresh internal object directory and 1885 to the pinned external roots.",
+    "direct_import_resolutions": 7856,
+    "distribution_bytes": 116599145,
+    "distribution_file_count": 5168,
+    "external_direct_import_resolutions": 1885,
+    "external_objects_independently_rehashed": 53006,
+    "fresh_internal_direct_import_resolutions": 5971,
+    "fresh_process_verification": "PASS",
+    "maximum_concurrent_module_pairs": 4,
+    "publication_file_count_excluding_its_manifest": 5167,
+    "relocated_verification": "PASS",
+    "setup_reuse": "PASS",
+    "source_archive": {
+      "all_file_members_decode_as_utf8": true,
+      "compiled_private_or_symlink_members": false,
+      "members": 53,
+      "path": "provenance/retained-periodic-census/provenance/gao/upstream-1.0.0.zip"
+    },
+    "source_modules": 1620,
+    "successful_commands": 3242
+  }
+}

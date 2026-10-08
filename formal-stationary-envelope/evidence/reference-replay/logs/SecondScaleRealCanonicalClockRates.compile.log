@@ -1,0 +1,9 @@
+'CollatzClockSecondScale.eventually_real_local_clock_log_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.eventually_real_large_landing_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.eventually_real_local_clock_and_landing_rates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

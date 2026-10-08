@@ -1,0 +1,6 @@
+'CollatzCanonical.NativeTao.odd_shortcut_prefix_is_syracuse_source' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NativeTao.first_passage_shortcut_odd_sources_above' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

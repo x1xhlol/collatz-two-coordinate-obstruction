@@ -1,0 +1,6 @@
+.replay/
+.external/
+__pycache__/
+*.pyc
+preflight-input-state.json
+setup-result.json

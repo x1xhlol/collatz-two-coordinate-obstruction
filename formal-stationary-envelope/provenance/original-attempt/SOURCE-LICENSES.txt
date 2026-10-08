@@ -1,0 +1,40 @@
+Source licenses and attribution
+
+This ledger covers the 362 Lean source modules in source-manifest.json.
+The source origins and hashes are fixed by provenance/source-origins.json.
+
+87 original local modules use the MIT license in licenses/LICENSE-MIT:
+43 retained native modules, 26 retained private modules, and 18 new fair-Haar
+modules. Copyright (c) 2026 Lucas Valbuena. The exact module classification is
+recorded in provenance/origin-license-review.json; upstream sources are excluded
+from this MIT scope.
+
+273 source/Erdos1135/ modules come from Lech Mazur's pinned Tao/natural-density
+formalization, package ca3dd0d63920411213403092aecc6946619eb082. All 273 files
+match the upstream package source-manifest hashes and are byte-identical to
+the retained native bundle at Git revision 7ef1208600107e62561ad6090c06a8cd4e0a1143.
+Their Apache-2.0 license and Advameg notice are retained in
+licenses/LICENSE-APACHE-2.0 and licenses/NOTICE-ADVAMEG. See also
+provenance/upstream-selected-source-pins.json for the pinned source subset.
+
+Two source/FormalConjectures/ modules retain their full copyright and Apache
+headers. See licenses/NOTICE-FORMAL-CONJECTURES for the compatibility shim and
+the exact modified Wikipedia shard. The latter's deletion patch and original
+source retrieval information are frozen in provenance/wikipedia-shard.*.
+
+The predecessor and second-scale namespaces and M. Sharpe's adapted parity
+module from the larger native bundle are not present in this selected closure.
+Their licenses are not repurposed as grants for this selection.
+
+Mathlib and the eight pinned Lake packages remain external dependencies. Their
+source and compiled caches are not distributed in this bundle. Exact upstream
+license copies are supplied under licenses/packages/, with repository revisions
+in provenance/external-license-origins.json. Lean itself is an external official
+toolchain pinned in dependency-pins.json; no toolchain archive or runtime is
+part of this source bundle. The license inventory here covers this bundle's
+source and the named dependency license files, not every transitive asset of
+an external toolchain or package.
+
+Mathematical papers are cited as mathematical sources and are not reproduced
+under these software grants. No external manuscript or image is included in
+this source-license scope.

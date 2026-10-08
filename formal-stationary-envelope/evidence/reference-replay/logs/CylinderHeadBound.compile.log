@@ -1,0 +1,2 @@
+'CollatzCylinderPacking.endpointMass_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.endpoint_head_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

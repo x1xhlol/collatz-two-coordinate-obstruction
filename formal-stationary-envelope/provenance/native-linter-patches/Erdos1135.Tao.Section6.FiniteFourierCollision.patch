@@ -1,0 +1,18 @@
+--- original/Erdos1135/Tao/Section6/FiniteFourierCollision.lean
++++ corrected/Erdos1135/Tao/Section6/FiniteFourierCollision.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Section6.FiberAverageDFT
+ import Erdos1135.Tao.Section6.FiniteFourierParseval
+ import Erdos1135.Tao.Section6.FiniteFourierConvolution
+@@ -254,7 +257,7 @@
+   apply taoZModPowOscillation_rawConvolution_eq_zero_of_dft_eq_zero
+     (hmn := le_rfl) h tau
+   intro xi hsource
+-  exact (hsource ⟨xi, by simp [zmodThreePowMultiple]⟩).elim
++  exact (hsource ⟨xi, by simp⟩).elim
+ 
+ end
+ 

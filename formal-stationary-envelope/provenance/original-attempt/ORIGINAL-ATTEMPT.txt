@@ -1,0 +1,3 @@
+These records describe the original immutable source bundle with manifest 96500e070b6dcdc730975638029d0f7aa31ba40db2ecb46282f76c91175af5b9.
+Its full replay stopped on a strict unnecessarySimpa diagnostic after 68 source modules.
+They are retained as historical provenance and do not certify the corrected source bundle.

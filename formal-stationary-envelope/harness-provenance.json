@@ -1,0 +1,24 @@
+{
+  "base_source_manifest_sha256": "26e04c96f13fe01ae260f4a3db96c9ad629d4cb4504211d205a918255efa2565",
+  "changes": [
+    "Optional bounded dependency scheduler; a dependent waits for strict compilation and official kernel replay of every internal dependency.",
+    "Default sequential behavior and complete source, object, import, input and axiom verification are retained."
+  ],
+  "independently_reviewed_driver_sha256": "82eda25a922068dc62b567d9a41b193ac88007b6c002495c3905150559bc8870",
+  "object_policy": "No internal compiled objects are copied or reused.",
+  "scripts": {
+    "replay.py": {
+      "candidate_sha256": "82eda25a922068dc62b567d9a41b193ac88007b6c002495c3905150559bc8870",
+      "original_sha256": "f73a8106a99bb866d7bfe0e0fbeff8d0f6e90ed7448919c2c70650987a10de9f"
+    },
+    "setup.py": {
+      "candidate_sha256": "9b2bfa6d8aa7cdc65590357be1870eb94535ab21a990ff59b9eddea7e087e896",
+      "original_sha256": "9b2bfa6d8aa7cdc65590357be1870eb94535ab21a990ff59b9eddea7e087e896"
+    },
+    "source_inventory.py": {
+      "candidate_sha256": "1446f49676bf270ef9291843d760e1cb2e273645521b97092a5059a03b0703a5",
+      "original_sha256": "1446f49676bf270ef9291843d760e1cb2e273645521b97092a5059a03b0703a5"
+    }
+  },
+  "status": "PREPARED; NOT FROZEN OR REPLAYED"
+}

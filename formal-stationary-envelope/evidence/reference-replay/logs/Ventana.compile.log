@@ -1,0 +1,5 @@
+'VentanaGao.resta_eventos' depends on axioms: [propext, choice, Quot.sound]
+'VentanaGao.ventana_union' depends on axioms: [propext, choice, Quot.sound]
+'VentanaGao.ventana_cota' depends on axioms: [propext, choice, Quot.sound]
+'VentanaGao.ventana_reloj' depends on axioms: [propext, choice, Quot.sound]
+'VentanaGao.ventana_cuarto' depends on axioms: [propext, choice, Quot.sound]

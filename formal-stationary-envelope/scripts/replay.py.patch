@@ -1,0 +1,434 @@
+--- preserved-first-attempt/scripts/replay.py
++++ scripts/replay.py
+@@ -3,14 +3,17 @@
+ from __future__ import annotations
+ 
+ import argparse
++from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
+ from datetime import datetime, timezone
+ import hashlib
+ import json
++import math
+ import os
+ from pathlib import Path, PurePosixPath
+ import re
+ import shutil
+ import subprocess
++import threading
+ import time
+ 
+ from source_inventory import source_inventory, scrub_lean
+@@ -20,6 +23,8 @@
+ AUDIT = "IntegerEnvelopeCompleteAudit"
+ ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
+ ENDINGS = (".olean", ".olean.private", ".olean.server", ".ilean", ".ir", ".ir.sig", ".so")
++MIN_AVAILABLE_BYTES = 4 * 1024 ** 3
++EXCLUSIVE_SOURCE_BYTES = 50000
+ 
+ 
+ def require(condition, message):
+@@ -293,10 +298,268 @@
+     return answer
+ 
+ 
+-def verify(out, manifest, manifest_pin, state, libraries, toolchain, mathlib):
++def available_memory():
++    """Linux MemAvailable, reduced by a visible cgroup-v2 memory limit."""
++    match = re.search(r"^MemAvailable:\s+(\d+) kB$", Path("/proc/meminfo").read_text(), re.M)
++    require(match is not None, "Cannot measure available RAM")
++    host = int(match[1]) * 1024
++    limits = []
++    cgroup_root = Path("/sys/fs/cgroup")
++    cgroup_lines = Path("/proc/self/cgroup").read_text().splitlines()
++    require(all(len(line.split(":", 2)) == 3 for line in cgroup_lines), "Malformed cgroup membership")
++    require(not any("memory" in line.split(":", 2)[1].split(",") for line in cgroup_lines),
++            "Cgroup-v1 memory control is unsupported; cannot measure effective available RAM")
++    cgroup_line = next((line[3:] for line in cgroup_lines
++                       if line.startswith("0::")), None)
++    if cgroup_line is not None:
++        # Containers may expose their own cgroup as the mount root.
++        leaf = cgroup_root / cgroup_line.lstrip("/")
++        if not leaf.is_dir():
++            leaf = cgroup_root
++        require(leaf.resolve().is_relative_to(cgroup_root.resolve()), "Invalid cgroup memory path")
++        for directory in [leaf, *leaf.parents]:
++            if not directory.is_relative_to(cgroup_root):
++                break
++            maximum, current = directory / "memory.max", directory / "memory.current"
++            if maximum.is_file():
++                value = maximum.read_text().strip()
++                if value != "max":
++                    limits.append({"path": str(directory), "limit_bytes": int(value),
++                                   "used_bytes": int(current.read_text().strip())})
++                    require(limits[-1]["limit_bytes"] >= 0 and limits[-1]["used_bytes"] >= 0,
++                            "Negative cgroup memory telemetry")
++    available = min([host, *[max(0, row["limit_bytes"] - row["used_bytes"]) for row in limits]])
++    return {"available_bytes": available, "host_mem_available_bytes": host, "cgroup_v2_limits": limits}
++
++
++def scheduling_policy(jobs):
++    return {"version": 1, "jobs": jobs, "minimum_available_bytes": MIN_AVAILABLE_BYTES,
++            "exclusive_source_bytes": EXCLUSIVE_SOURCE_BYTES,
++            "clock": "seconds since scheduler start, time.monotonic",
++            "command_order": "topological module order, compile then kernel",
++            "launch_policy": "atomic pair reservations, at most jobs submitted and unaccepted pairs; no executor backlog",
++            "failure_policy": "stop new reservations at failure latch; drain every already-reserved compile/kernel pair",
++            "memory_policy": "Linux MemAvailable capped by visible cgroup-v2 ancestor limits"}
++
++
++def run_schedule(units, dependencies, sizes, run_pair, publish, jobs, memory_probe=available_memory):
++    """Coordinator owns acceptance; workers own one complete compile/kernel pair."""
++    require(type(jobs) is int and 1 <= jobs <= 4, "Jobs must be between 1 and 4")
++    origin, stopped, launch_lock = time.monotonic(), threading.Event(), threading.Lock()
++    results, completed, runs, active = {}, {}, {}, {}
++    pending, errors = list(units), []
++    scheduling = {"policy": scheduling_policy(jobs), "module_runs": runs, "first_failure_seconds": None}
++
++    def ordered_commands():
++        return [command for module in units for command in completed.get(module, {}).get("commands", [])]
++
++    def emit(status):
++        publish({"status": status, "commands": ordered_commands(), "results": dict(results),
++                 "scheduling": scheduling, "errors": list(errors)})
++
++    def latch_failure():
++        with launch_lock:
++            if not stopped.is_set():
++                scheduling["first_failure_seconds"] = time.monotonic() - origin
++            stopped.set()
++
++    def worker(module, accepted):
++        try:
++            outcome = run_pair(module, accepted, origin, latch_failure)
++            require(outcome.get("status") in {"PASS", "FAILED"}, "Invalid worker outcome")
++        except Exception as error:
++            outcome = {"status": "FAILED", "error": str(error), "commands": []}
++        if outcome["status"] != "PASS":
++            latch_failure()
++        return outcome
++
++    with ThreadPoolExecutor(max_workers=jobs) as executor:
++        while pending or active:
++            # Accept all completed pairs before considering any new launch.
++            for future in list(active):
++                if not future.done():
++                    continue
++                module = active.pop(future)
++                outcome = future.result()
++                completed[module] = outcome
++                runs[module]["finished_seconds"] = outcome.get("finished_seconds", time.monotonic() - origin)
++                runs[module]["accepted_seconds"] = time.monotonic() - origin
++                runs[module]["status"] = outcome["status"]
++                if outcome["status"] == "PASS":
++                    results[module] = outcome["result"]
++                else:
++                    errors.append({"module": module, "error": outcome.get("error", "Module pair failed")})
++                emit("FAILED" if stopped.is_set() else "RUNNING")
++            if stopped.is_set():
++                if active:
++                    wait(active, return_when=FIRST_COMPLETED)
++                    continue
++                break
++            launched = False
++            while pending and len(active) < jobs:
++                ready = next((module for module in pending if all(dep in results for dep in dependencies[module])), None)
++                require(ready is not None or bool(active), "No ready module in dependency schedule")
++                if ready is None:
++                    break
++                exclusive = ready == AUDIT or sizes[ready] >= EXCLUSIVE_SOURCE_BYTES
++                if active and (exclusive or any(runs[module]["exclusive"] for module in active.values())):
++                    break
++                try:
++                    memory = memory_probe()
++                    if memory["available_bytes"] < MIN_AVAILABLE_BYTES:
++                        require(bool(active), "Less than 4 GiB available RAM with no active pair; artifacts preserved")
++                        break
++                    with launch_lock:
++                        if stopped.is_set():
++                            break
++                        runs[ready] = {"module": ready, "launch_index": len(runs),
++                                       "dependencies": dependencies[ready], "source_bytes": sizes[ready],
++                                       "exclusive": exclusive, "memory_before_launch": memory,
++                                       "launched_utc": utc(), "launched_seconds": time.monotonic() - origin,
++                                       "status": "RUNNING"}
++                        future = executor.submit(worker, ready, dict(results))
++                        active[future] = ready
++                        pending.remove(ready)
++                    launched = True
++                    emit("RUNNING")
++                except Exception as error:
++                    latch_failure()
++                    errors.append({"module": ready, "error": str(error)})
++                    emit("FAILED")
++                    break
++                if exclusive:
++                    break
++            if active:
++                wait(active, return_when=FIRST_COMPLETED)
++            elif pending and not stopped.is_set() and not launched:
++                raise RuntimeError("Dependency scheduler made no progress")
++    emit("FAILED" if stopped.is_set() else "RUNNING")
++    require(not stopped.is_set() and set(results) == set(units), "Replay pair failed; artifacts preserved")
++    return ordered_commands(), results, scheduling
++
++
++def verify_memory_sample(memory):
++    host, caps = memory["host_mem_available_bytes"], memory["cgroup_v2_limits"]
++    require(type(host) is int and host >= 0 and isinstance(caps, list), "Invalid RAM sample")
++    for cap in caps:
++        require(isinstance(cap["path"], str) and type(cap["limit_bytes"]) is int and cap["limit_bytes"] >= 0 and
++                type(cap["used_bytes"]) is int and cap["used_bytes"] >= 0, "Invalid cgroup RAM sample")
++    require(type(memory["available_bytes"]) is int and memory["available_bytes"] ==
++            min([host, *[max(0, cap["limit_bytes"] - cap["used_bytes"]) for cap in caps]]) and
++            memory["available_bytes"] >= MIN_AVAILABLE_BYTES, "Insufficient recorded available RAM")
++
++
++def verify_schedule(record, out, manifest):
++    units = [*manifest["modules_in_topological_order"], AUDIT]
++    schedule = record["scheduling"]
++    require(schedule["first_failure_seconds"] is None, "Successful schedule contains a failure latch")
++    jobs = schedule["policy"]["jobs"]
++    require(type(jobs) is int and 1 <= jobs <= 4 and schedule["policy"] == scheduling_policy(jobs),
++            "Changed scheduling policy")
++    runs = schedule["module_runs"]
++    require(set(runs) == set(units), "Incomplete scheduling evidence")
++    by_launch, events = {}, []
++    for index, module in enumerate(units):
++        row = runs[module]
++        size = (out / "source" / rel(module, ".lean")).stat().st_size
++        dependencies = [name for name in manifest["modules"][module]["imports"] if name in manifest["modules"]] if module != AUDIT else units[:-1]
++        require(row["module"] == module and row["status"] == "PASS" and row["source_bytes"] == size and
++                row["dependencies"] == dependencies and row["exclusive"] == (module == AUDIT or size >= EXCLUSIVE_SOURCE_BYTES),
++                "Changed module scheduling evidence")
++        launch_index = row["launch_index"]
++        require(type(launch_index) is int and 0 <= launch_index < len(units) and launch_index not in by_launch,
++                "Invalid scheduling launch index")
++        by_launch[launch_index] = module
++        start, finish, accepted = [row[name] for name in ["launched_seconds", "finished_seconds", "accepted_seconds"]]
++        require(all(type(value) in {int, float} and math.isfinite(value) for value in [start, finish, accepted]) and
++                0 <= start <= finish <= accepted, "Invalid scheduling times")
++        verify_memory_sample(row["memory_before_launch"])
++        require(all(runs[dep]["accepted_seconds"] <= start for dep in dependencies), "Dependency pair accepted after launch")
++        stages = record["commands"][2 * index:2 * index + 2]
++        previous = start
++        for command in stages:
++            first, last = command["started_seconds"], command["finished_seconds"]
++            require(all(type(value) in {int, float} and math.isfinite(value) for value in [first, last, command["elapsed_seconds"]]) and
++                    previous <= first <= last <= finish and
++                    math.isclose(command["elapsed_seconds"], last - first, abs_tol=1e-9), "Invalid pair command times")
++            verify_memory_sample(command["memory_before_start"])
++            previous = last
++        events.extend([(start, 1, module), (accepted, -1, module)])
++    ordered = [by_launch[index] for index in range(len(units))]
++    require(ordered[-1] == AUDIT and (jobs != 1 or ordered == units), "Changed sequential or audit launch order")
++    require(all(runs[ordered[index]]["launched_seconds"] <= runs[ordered[index + 1]]["launched_seconds"]
++                for index in range(len(ordered) - 1)), "Launch indexes disagree with actual times")
++    active = set()
++    for _, change, module in sorted(events):
++        if change == -1:
++            require(module in active, "Invalid schedule completion")
++            active.remove(module)
++        else:
++            require(module not in active and len(active) < jobs and
++                    (not active or (not runs[module]["exclusive"] and not any(runs[name]["exclusive"] for name in active))),
++                    "Concurrency or exclusive-module policy violated")
++            active.add(module)
++    require(not active, "Unfinished scheduling interval")
++
++
++def compile_module_pair(module, accepted, origin, latch_failure, out, manifest, state, roots, env, toolchain, mathlib):
++    commands = []
++    progress = out / "module-progress" / (module + ".json")
++    try:
++        require(shutil.disk_usage(ROOT).free >= 512 * 1024 ** 2, "Less than 512 MiB free during replay; artifacts preserved")
++        source, obj = out / "source" / rel(module, ".lean"), out / "modules" / rel(module)
++        obj.parent.mkdir(parents=True, exist_ok=True)
++        if module != AUDIT:
++            require(sha(source) == manifest["modules"][module]["sha256"], "Copied source changed")
++        imports = manifest["modules"][module]["imports"] if module != AUDIT else [*manifest["modules_in_topological_order"], "Lean"]
++        for imported in imports:
++            actual = resolve(imported, roots)
++            if imported in manifest["modules"]:
++                require(imported in accepted and actual == out / "modules" / rel(imported) and
++                        sha(actual) == accepted[imported]["object_sha256"], "Wrong fresh internal dependency")
++            else:
++                require(state["external_object_sha256"].get(symbolic(actual, toolchain, mathlib)) == sha(actual),
++                        "Wrong external dependency")
++        for stage in ["compile", "kernel"]:
++            arguments = command_arguments(out, module, stage, toolchain)
++            memory = available_memory()
++            require(memory["available_bytes"] >= MIN_AVAILABLE_BYTES, "Less than 4 GiB available RAM before command start")
++            start, wall = utc(), time.monotonic() - origin
++            run = subprocess.run(arguments, cwd=out / "source", env=env, capture_output=True, text=True)
++            finish = time.monotonic() - origin
++            transcript = run.stdout + run.stderr
++            successful = run.returncode == 0 and not any(token in transcript for token in ["warning:", "error:", "sorryAx"])
++            kernel_marker = stage != "kernel" or "replaying " + module + "\n" in transcript
++            if not successful or not kernel_marker:
++                latch_failure()
++            log = out / "logs" / (module + "." + stage + ".log")
++            log.write_text(transcript)
++            commands.append({"module": module, "stage": stage,
++                             "arguments": symbolic_command(arguments, toolchain, mathlib),
++                             "cwd": symbolic(out / "source", toolchain, mathlib),
++                             "started_utc": start, "started_seconds": wall, "finished_seconds": finish,
++                             "elapsed_seconds": finish - wall, "memory_before_start": memory,
++                             "exit_code": run.returncode, "log": symbolic(log, toolchain, mathlib), "log_sha256": sha(log)})
++            write_json(progress, {"status": "RUNNING", "module": module, "commands": commands})
++            require(successful, "Replay command failed: " + str(log))
++            require(kernel_marker, "Missing kernel target marker")
++        result = {"source_sha256": sha(source), "object_sha256": sha(obj),
++                  "object_parts": {symbolic(path, toolchain, mathlib): sha(path)
++                                   for path in sorted(obj.parent.glob(obj.stem + ".*")) if path.is_file()}}
++        outcome = {"status": "PASS", "module": module, "commands": commands, "result": result,
++                   "finished_seconds": time.monotonic() - origin}
++    except Exception as error:
++        latch_failure()
++        outcome = {"status": "FAILED", "module": module, "commands": commands, "error": str(error),
++                   "finished_seconds": time.monotonic() - origin}
++    write_json(progress, outcome)
++    return outcome
++
++
++def verify(out, manifest, manifest_pin, state, libraries, toolchain, mathlib, pending=False):
+     record = json.loads((out / "replay-record.json").read_text())
+     units = [*manifest["modules_in_topological_order"], AUDIT]
+-    require(record["status"] == "PASS" and record["modules"] == units[:-1] and record["audit_module"] == AUDIT,
++    require(record["status"] == ("VERIFYING" if pending else "PASS") and record["modules"] == units[:-1] and record["audit_module"] == AUDIT,
+             "Wrong replay record scope")
+     require(record["manifest_sha256"] == manifest_pin and record["driver_sha256"] == sha(Path(__file__)), "Changed replay identities")
+     require(record["allowed_axioms"] == sorted(ALLOWED) and record["scope"] == manifest["scope"], "Changed scope or axiom policy")
+@@ -307,6 +570,7 @@
+                 "Changed or mismatched persisted input state")
+     require(set(record["results"]) == set(units) and len(record["commands"]) == manifest["planned_successful_commands"],
+             "Incomplete replay")
++    verify_schedule(record, out, manifest)
+     require(not any(path.is_symlink() for path in out.rglob("*")), "Linked replay artifact")
+     require({path.relative_to(out / "source") for path in (out / "source").rglob("*.lean")} ==
+             {rel(module, ".lean") for module in units}, "Changed replay source set")
+@@ -349,6 +613,8 @@
+     parser.add_argument("--expected-manifest-sha256", required=True)
+     parser.add_argument("--toolchain", required=True, type=Path)
+     parser.add_argument("--mathlib", required=True, type=Path)
++    parser.add_argument("--jobs", type=int, choices=range(1, 5), default=1,
++                        help="concurrent dependency-ready compile/kernel pairs (default: 1)")
+     action = parser.add_mutually_exclusive_group(required=True)
+     action.add_argument("--preflight", action="store_true")
+     action.add_argument("--run", action="store_true")
+@@ -373,7 +639,7 @@
+     require(not out.exists(), "Fresh output exists; preserve it before any subsequent replay")
+     require(shutil.disk_usage(ROOT).free >= 1024 ** 3, "Less than 1 GiB free before fresh replay")
+     started = utc()
+-    for name in ["source", "modules", "logs"]:
++    for name in ["source", "modules", "logs", "module-progress"]:
+         (out / name).mkdir(parents=True)
+     write_json(out / "input-state-before.json", state)
+     for module in manifest["modules_in_topological_order"]:
+@@ -383,58 +649,56 @@
+     (out / "source" / rel(AUDIT, ".lean")).write_text(audit_source(manifest["modules_in_topological_order"]))
+     roots, commands, results = [out / "modules", *libraries], [], {}
+     env = clean_env(toolchain, roots)
+-    for module in [*manifest["modules_in_topological_order"], AUDIT]:
+-        require(shutil.disk_usage(ROOT).free >= 512 * 1024 ** 2, "Less than 512 MiB free during replay; artifacts preserved")
+-        source, obj = out / "source" / rel(module, ".lean"), out / "modules" / rel(module)
+-        obj.parent.mkdir(parents=True, exist_ok=True)
+-        if module != AUDIT:
+-            require(sha(source) == manifest["modules"][module]["sha256"], "Copied source changed")
+-        imports = manifest["modules"][module]["imports"] if module != AUDIT else [*manifest["modules_in_topological_order"], "Lean"]
+-        for imported in imports:
+-            actual = resolve(imported, roots)
+-            if imported in manifest["modules"]:
+-                require(imported in results and actual == out / "modules" / rel(imported) and
+-                        sha(actual) == results[imported]["object_sha256"], "Wrong fresh internal dependency")
+-            else:
+-                require(state["external_object_sha256"].get(symbolic(actual, toolchain, mathlib)) == sha(actual),
+-                        "Wrong external dependency")
+-        for stage in ["compile", "kernel"]:
+-            arguments = command_arguments(out, module, stage, toolchain)
+-            start, wall = utc(), time.monotonic()
+-            run = subprocess.run(arguments, cwd=out / "source", env=env, capture_output=True, text=True)
+-            log = out / "logs" / (module + "." + stage + ".log")
+-            log.write_text(run.stdout + run.stderr)
+-            commands.append({"module": module, "stage": stage,
+-                             "arguments": symbolic_command(arguments, toolchain, mathlib),
+-                             "cwd": symbolic(out / "source", toolchain, mathlib),
+-                             "started_utc": start, "elapsed_seconds": time.monotonic() - wall,
+-                             "exit_code": run.returncode, "log": symbolic(log, toolchain, mathlib), "log_sha256": sha(log)})
+-            write_json(out / "progress.json", {"status": "RUNNING", "commands": commands, "results": results})
+-            require(run.returncode == 0 and not any(token in log.read_text() for token in ["warning:", "error:", "sorryAx"]),
+-                    "Replay command failed: " + str(log))
+-            if stage == "kernel":
+-                require("replaying " + module + "\n" in log.read_text(), "Missing kernel target marker")
+-        results[module] = {"source_sha256": sha(source), "object_sha256": sha(obj),
+-                           "object_parts": {symbolic(path, toolchain, mathlib): sha(path)
+-                                            for path in sorted(obj.parent.glob(obj.stem + ".*")) if path.is_file()}}
+-        write_json(out / "progress.json", {"status": "RUNNING", "commands": commands, "results": results})
+-        print(json.dumps({"module": module, "status": "PASS", "completed": len(results),
+-                          "total": manifest["source_count"] + 1}), flush=True)
+-    audit = parse_audit((out / "logs" / (AUDIT + ".compile.log")).read_text(), manifest)
+-    after, after_libraries = input_state(load_manifest(pin), pin, toolchain, mathlib)
+-    write_json(out / "input-state-after.json", after)
+-    require(after == state and after_libraries == libraries, "Inputs changed during replay")
+-    record = {"status": "PASS", "started_utc": started, "finished_utc": utc(), "manifest_sha256": pin,
+-              "driver_sha256": state["driver_sha256"], "modules": manifest["modules_in_topological_order"],
+-              "audit_module": AUDIT, "commands": commands, "results": results, "allowed_axioms": sorted(ALLOWED),
+-              "input_states": {name: sha(out / name) for name in ["input-state-before.json", "input-state-after.json"]},
+-              "lean_path": [symbolic(path, toolchain, mathlib) for path in roots],
+-              "direct_import_resolutions": import_resolutions(manifest, out, state, libraries, toolchain, mathlib),
+-              "audit": audit, "scope": manifest["scope"],
+-              "visibility_label_meaning": "private identifies encoded private names; public means not encoded private, not full export visibility"}
++    units = [*manifest["modules_in_topological_order"], AUDIT]
++    dependencies = {module: [name for name in manifest["modules"][module]["imports"] if name in manifest["modules"]]
++                    for module in units[:-1]}
++    dependencies[AUDIT] = units[:-1]
++    sizes = {module: (out / "source" / rel(module, ".lean")).stat().st_size for module in units}
++
++    def pair(module, accepted, origin, latch_failure):
++        return compile_module_pair(module, accepted, origin, latch_failure, out, manifest, state, roots, env, toolchain, mathlib)
++
++    last_completed = 0
++    def publish(progress):
++        nonlocal last_completed
++        write_json(out / "progress.json", progress)
++        if len(progress["results"]) != last_completed:
++            last_completed = len(progress["results"])
++            print(json.dumps({"status": progress["status"], "completed": last_completed,
++                              "total": len(units), "jobs": args.jobs}), flush=True)
++
++    commands, results, scheduling = run_schedule(units, dependencies, sizes, pair, publish, args.jobs)
++    try:
++        audit = parse_audit((out / "logs" / (AUDIT + ".compile.log")).read_text(), manifest)
++        after, after_libraries = input_state(load_manifest(pin), pin, toolchain, mathlib)
++        write_json(out / "input-state-after.json", after)
++        require(after == state and after_libraries == libraries, "Inputs changed during replay")
++        record = {"status": "VERIFYING", "started_utc": started, "finished_utc": utc(), "manifest_sha256": pin,
++                  "driver_sha256": state["driver_sha256"], "modules": manifest["modules_in_topological_order"],
++                  "audit_module": AUDIT, "commands": commands, "results": results, "scheduling": scheduling,
++                  "allowed_axioms": sorted(ALLOWED),
++                  "input_states": {name: sha(out / name) for name in ["input-state-before.json", "input-state-after.json"]},
++                  "lean_path": [symbolic(path, toolchain, mathlib) for path in roots],
++                  "direct_import_resolutions": import_resolutions(manifest, out, state, libraries, toolchain, mathlib),
++                  "audit": audit, "scope": manifest["scope"],
++                  "visibility_label_meaning": "private identifies encoded private names; public means not encoded private, not full export visibility"}
++        write_json(out / "replay-record.json", record)
++    except Exception as error:
++        write_json(out / "progress.json", {"status": "FAILED", "commands": commands, "results": results,
++                                           "scheduling": scheduling, "post_schedule_error": str(error)})
++        raise
++    try:
++        summary = verify(out, manifest, pin, after, libraries, toolchain, mathlib, pending=True)
++    except Exception as error:
++        record["status"], record["verification_error"] = "FAILED", str(error)
++        write_json(out / "replay-record.json", record)
++        write_json(out / "progress.json", {"status": "FAILED", "commands": commands, "results": results,
++                                           "scheduling": scheduling, "verification_error": str(error)})
++        raise
++    record["status"] = "PASS"
+     write_json(out / "replay-record.json", record)
+-    summary = verify(out, manifest, pin, after, libraries, toolchain, mathlib)
+-    write_json(out / "progress.json", {"status": "PASS", "commands": commands, "results": results})
++    summary["record_sha256"] = sha(out / "replay-record.json")
++    write_json(out / "progress.json", {"status": "PASS", "commands": commands, "results": results, "scheduling": scheduling})
+     print(json.dumps(summary), flush=True)
+ 
+ 

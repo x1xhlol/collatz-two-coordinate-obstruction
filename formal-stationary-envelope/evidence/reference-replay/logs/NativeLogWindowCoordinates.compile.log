@@ -1,0 +1,3 @@
+'CollatzCanonical.NativeTao.native_iterated_power_window_expectation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

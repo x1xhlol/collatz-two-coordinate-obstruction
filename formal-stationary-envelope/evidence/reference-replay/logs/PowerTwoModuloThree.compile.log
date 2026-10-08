@@ -1,0 +1,2 @@
+'CollatzPowerTwo.exists_two_power_mod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzPowerTwo.power_two_in_every_unit_progression' depends on axioms: [propext, Classical.choice, Quot.sound]

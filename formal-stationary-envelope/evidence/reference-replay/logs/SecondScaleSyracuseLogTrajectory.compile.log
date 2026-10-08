@@ -1,0 +1,4 @@
+'CollatzClockSecondScale.syracuse_log_trajectory' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.logCorrection_le_before_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.syracuse_log_lower_of_typical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.syracuse_log_upper_before_hit' depends on axioms: [propext, Classical.choice, Quot.sound]

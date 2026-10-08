@@ -1,0 +1,37 @@
+--- original/Erdos1135.ND.Discrepancy.EmpiricalFourier.lean
++++ candidate/Erdos1135.ND.Discrepancy.EmpiricalFourier.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused bound-variable names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.ND.Discrepancy.EmpiricalCDF
+ import Erdos1135.ND.Discrepancy.Fejer
+ import Mathlib.Algebra.Order.Floor.Ring
+@@ -292,7 +296,7 @@
+   rw [intervalIntegral_fourier_neg h hh]
+   have hcoe :
+       ((1 : ℝ) : UnitAddCircle) = ((0 : ℝ) : UnitAddCircle) := by
+-    simpa using (AddCircle.coe_add_period (1 : ℝ) (0 : ℝ))
++    simp
+   rw [hcoe, sub_self, mul_zero]
+ 
+ private theorem intervalIntegral_strictIndicator_mul_fourier
+@@ -348,7 +352,7 @@
+     HasDerivAt
+       (fun s : ℝ => ((r - s - 1 / 2 : ℝ) : ℂ)) (-1 : ℂ) t := by
+   have hreal := ((hasDerivAt_id t).const_sub r).sub_const (1 / 2)
+-  convert hreal.ofReal_comp using 1 <;> norm_num
++  convert hreal.ofReal_comp using 1; norm_num
+ 
+ private theorem fourierCoeffOn_empiricalAffine
+     (r : ℝ) (h : ℤ) (hh : h ≠ 0) :
+@@ -454,7 +458,7 @@
+         fun t => tail t + aff t := by
+     funext t
+     unfold tail aff
+-    by_cases hrt : r < t <;> simp [hrt] <;> ring
++    by_cases hrt : r < t <;> simp [hrt]; ring
+   change (∫ t in (0 : ℝ)..1, e t *
+       (((if r < t then (1 : ℝ) else 0) + r - t - 1 / 2 : ℝ) : ℂ)) = _
+   rw [hsplit, intervalIntegral.integral_add htail haff]

@@ -1,0 +1,19 @@
+--- original/Erdos1135.NumberTheory.Rhin.LiteralSupport.lean
++++ candidate/Erdos1135.NumberTheory.Rhin.LiteralSupport.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused bound-variable names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.NumberTheory.Rhin.LiteralPolynomial
+ import Mathlib.Algebra.Polynomial.Coeff
+ 
+@@ -270,7 +274,7 @@
+       unfold positiveRhinSquareInt
+       rw [Polynomial.coeff_C_mul]
+       rw [← Polynomial.map_pow, Polynomial.coeff_map]
+-      simp [Int.natAbs_mul, Int.natAbs_pow]
++      simp [Int.natAbs_mul]
+     _ ≤ (12 : ℕ) ^ 14 * (positiveRhinProduct n ^ 2).eval 1 :=
+       Nat.mul_le_mul_left _ hCoeff
+     _ = (((12 : ℕ) ^ 7 * literalRhinCoefficientProduct n) ^ 2) := by

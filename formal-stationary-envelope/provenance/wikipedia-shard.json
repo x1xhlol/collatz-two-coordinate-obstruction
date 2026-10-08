@@ -1,0 +1,22 @@
+{
+  "bundled_source": "source/FormalConjectures/Wikipedia/CollatzConjecture.lean",
+  "change": "Only the unrelated open conjecture statement, its documentation and attribute are omitted. The genuine collatzStep definition, imports, namespace and full Apache header remain byte-identical. No proof or axiom-check exemption.",
+  "copyright": "2025 The Formal Conjectures Authors",
+  "license": "licenses/LICENSE-APACHE-2.0",
+  "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "original": {
+    "path": "formal-basins-native/source/FormalConjectures/Wikipedia/CollatzConjecture.lean",
+    "repository": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction.git",
+    "revision": "7ef1208600107e62561ad6090c06a8cd4e0a1143",
+    "sha256": "cc45c97c70147327f010caf8d827ad1eb5030ed5686872330188a13a3f6971c8"
+  },
+  "patch": "provenance/wikipedia-shard.patch",
+  "patch_sha256": "989a4a9bef4ada81012e2c4d4b747d6c8d159e2ed4fe1f50c050a75042bea216",
+  "reviewed": {
+    "path": "formal-growing-deficit/source/FormalConjectures/Wikipedia/CollatzConjecture.lean",
+    "repository": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction.git",
+    "revision": "7ef1208600107e62561ad6090c06a8cd4e0a1143",
+    "sha256": "727103159db692eb03e3a006b504fc2cd3a44c3a3c4714b36155f6b53bf5ad49"
+  },
+  "scope": "Exact reuse of an already reviewed source shard; original retained sources are unchanged."
+}

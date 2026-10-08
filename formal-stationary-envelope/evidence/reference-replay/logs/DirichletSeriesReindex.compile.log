@@ -1,0 +1,7 @@
+'CollatzCanonical.DirichletAbelian.powered_dirichlet_summable_all_nat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.powered_dirichlet_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.subtract_one_tendsto_nhdsGT' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

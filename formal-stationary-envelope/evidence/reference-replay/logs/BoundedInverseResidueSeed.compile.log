@@ -1,0 +1,12 @@
+'CollatzCanonical.BoundedInverseSeed.exists_generalTargetRoot_start_bounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.generalTargetRoot_le_explicit_multiple' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.generalTargetRoot_strictMono' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.exists_bounded_nonreturning_predecessor_in_residue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

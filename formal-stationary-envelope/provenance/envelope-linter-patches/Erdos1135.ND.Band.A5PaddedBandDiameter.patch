@@ -1,0 +1,19 @@
+--- original/Erdos1135.ND.Band.A5PaddedBandDiameter.lean
++++ candidate/Erdos1135.ND.Band.A5PaddedBandDiameter.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.ND.Band.A5PhysicalPaddingRate
+ 
+ /-!
+@@ -99,7 +103,7 @@
+       Real.log B / 200000 ≤ (Tao.taoSection5M0 B : ℝ) := by
+     have hfloor := Nat.lt_floor_add_one (Real.log B / 100000)
+     rw [← Tao.taoSection5M0_eq_floor_log B] at hfloor
+-    push_cast at hfloor
++
+     nlinarith
+   intro branch j hj n hn n' hn' hnn'
+   have hcount : 0 < ndA5BandCount B branch := Nat.zero_lt_of_lt hj

@@ -1,0 +1,14 @@
+'CollatzCanonical.DirichletAbelian.oddWindowNumerator_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.oddWindowMass_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.harmonic_normalization_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.oddWindowExpectation_normalization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.oddWindow_normalized_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.odd_windowMean_discrepancy_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

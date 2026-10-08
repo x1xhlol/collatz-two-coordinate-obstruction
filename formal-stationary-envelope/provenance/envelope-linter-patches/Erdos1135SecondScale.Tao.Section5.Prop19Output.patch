@@ -1,0 +1,19 @@
+--- original/Erdos1135SecondScale.Tao.Section5.Prop19Output.lean
++++ candidate/Erdos1135SecondScale.Tao.Section5.Prop19Output.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -82,7 +86,7 @@
+         (taoSection5SourceHi B branch)
+         (facts.mass_pos branch))
+       (hresidue branch)
+-  convert hvaluation using 1 <;> norm_num [taoProp19DecayExponent_one]
++  convert hvaluation using 1; norm_num [taoProp19DecayExponent_one]
+ 
+ /-- For all sufficiently large common thresholds, both Section 5 branches
+ carry the actual fixed-constant Proposition 1.9 output. -/

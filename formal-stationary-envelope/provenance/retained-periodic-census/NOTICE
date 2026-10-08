@@ -1,0 +1,19 @@
+Periodic-census basin-density floor: additive formal extension
+Original local work: Copyright (c) 2026 Lucas Valbuena, MIT License.
+
+This package includes the Gao formalization by Omar Javier Said Duran:
+Copyright 2026 Omar Javier Said Duran. Apache License 2.0.
+Formal proofs in Lean 4 of conjectures of Gao, Garner and Wu on consecutive
+integers in the Collatz problem, version 1.0.0, 27 September 2026.
+doi:10.5281/zenodo.23003500.
+
+This package includes adaptations of the predecessor-density formalization
+by Lech Mazur. Copyright 2026 Lech Mazur. Apache License 2.0.
+The full original notice is retained in licenses/NOTICE-PREDECESSOR.
+
+The separately retained predecessor baseline notice attributes the original
+natural-density logarithmic-time formalization to Advameg, Inc.
+See provenance/bounded-seed/BASELINE_NOTICE and BASELINE_LICENSE.
+
+Compatibility and derivation details are in SOURCE-LICENSES.txt and the
+source-origin manifest. These notices do not change the original licenses.

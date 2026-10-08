@@ -1,0 +1,37 @@
+--- original/Erdos1135SecondScale.Tao.Fourier.Section7PairExpansion.lean
++++ candidate/Erdos1135SecondScale.Tao.Fourier.Section7PairExpansion.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused bound-variable names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -331,7 +335,7 @@
+                     omega
+                   · exact congrArg Int.ofNat hweight
+                 · exact hgetD
+-              · congr 3 <;> simp [taoTupleWeight, add_assoc]
++              · congr 3; simp [taoTupleWeight, add_assoc]
+ 
+ private theorem taoSection7PairExpansionFrom_odd_eq_product_mul_terminal :
+     ∀ (m : ℕ) (N : ℕ) (xi : ZMod (3 ^ N))
+@@ -364,7 +368,7 @@
+           have hj : (⟨(j : ℕ) + 0, Nat.add_pos_left j.2 0⟩ : ℕ+) = j := by
+             apply Subtype.ext
+             rfl
+-          simp [taoSection7PairExpansionFrom, taoTupleWeight, hj]
++          simp [taoSection7PairExpansionFrom, taoTupleWeight]
+           apply congrArg
+             (fun x : ZMod (3 ^ N) => taoForwardDFTKernel x xi)
+           apply congrArg₂ (taoSection7PairX N)
+@@ -459,7 +463,7 @@
+                           (s + taoTupleWeight
+                             ((a₁ :: a₂ :: tail).take 2))))
+                       ((a₁ :: a₂ :: tail).getD 1 1) := by
+-                congr 3 <;> simp [taoTupleWeight, add_assoc]
++                congr 3; simp [taoTupleWeight, add_assoc]
+               exact
+                 (congrArg₂ (· * ·) hhead
+                   (congrArg₂ (· * ·) hprod hterm)).trans (by ring)

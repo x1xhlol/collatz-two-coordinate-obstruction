@@ -1,0 +1,3 @@
+'CollatzCylinderPacking.geometric_word_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.geometric_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.geometric_tail_le_half_pow' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,28 @@
+--- original/Erdos1135.ND.Discrepancy.A5ReferenceGenuineBandRate.lean
++++ candidate/Erdos1135.ND.Discrepancy.A5ReferenceGenuineBandRate.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.ND.Discrepancy.A5ReferenceTerminalAggregateRate
+ import Erdos1135.ND.Discrepancy.A5ReferenceFullCenterRate
+ import Erdos1135.ND.Discrepancy.A5BandCoverageRate
+@@ -35,7 +39,7 @@
+ 
+ private theorem eventually_const_mul_nat_rpow_neg_le_log_rate
+     {K a d epsilon : ℝ}
+-    (hK : 0 < K) (ha : 0 < a) (hepsilon : 0 < epsilon) :
++    (_hK : 0 < K) (ha : 0 < a) (hepsilon : 0 < epsilon) :
+     ∀ᶠ B : ℕ in atTop,
+       K * Real.rpow (B : ℝ) (-a) ≤
+         epsilon * Real.rpow (Real.log B) (-d) := by
+@@ -89,7 +93,7 @@
+ 
+ private theorem eventually_const_mul_log_rpow_neg_le_genuine
+     {K e d epsilon : ℝ}
+-    (hK : 0 < K) (hde : d < e) (hepsilon : 0 < epsilon) :
++    (_hK : 0 < K) (hde : d < e) (hepsilon : 0 < epsilon) :
+     ∀ᶠ B : ℕ in atTop,
+       K * Real.rpow (Real.log B) (-e) ≤
+         epsilon * Real.rpow (Real.log B) (-d) := by

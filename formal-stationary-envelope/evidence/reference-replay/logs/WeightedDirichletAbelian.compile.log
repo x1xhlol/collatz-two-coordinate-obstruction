@@ -1,0 +1,19 @@
+'CollatzCanonical.DirichletAbelian.laplace_linear_majorant_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.normalized_laplace_linear_majorant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.logarithmicCumulative_laplace_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.normalized_zeta_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.weighted_dirichlet_abelian_shifted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.powered_weighted_dirichlet_abelian_shifted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.weighted_dirichlet_abelian' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

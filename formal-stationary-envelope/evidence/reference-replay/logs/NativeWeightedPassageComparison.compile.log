@@ -1,0 +1,6 @@
+'CollatzCanonical.NativeTao.native_real_passLocation_eq_of_first' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NativeTao.native_real_windows_weight_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

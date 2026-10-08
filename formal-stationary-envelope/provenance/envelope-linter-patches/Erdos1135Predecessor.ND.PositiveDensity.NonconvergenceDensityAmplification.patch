@@ -1,0 +1,18 @@
+--- native/Erdos1135Predecessor/ND/PositiveDensity/NonconvergenceDensityAmplification.lean
++++ source/Erdos1135Predecessor/ND/PositiveDensity/NonconvergenceDensityAmplification.lean
+@@ -1,3 +1,6 @@
++/- This private replay copy replaces the deprecated proof tactic `push_neg` by `push Not` only.
++   Definitions and theorem statements are unchanged; see provenance/envelope-linter-patches.json. -/
++
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file was adapted from Lech Mazur's published predecessor-density source
+@@ -55,7 +58,7 @@
+     ∀ n : ℕ, 0 < n → Erdos1135Predecessor.Reaches n 1 := by
+   classical
+   by_contra hnot
+-  push_neg at hnot
++  push Not at hnot
+   obtain ⟨c, hc, X0, hbad⟩ := positive_nonconvergence_lower_density_of_counterexample hnot
+   obtain ⟨X, hX0, hXpos, hgood⟩ := hstat (c / 2) (by positivity) X0
+   have hb := hbad X hX0

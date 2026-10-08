@@ -1,0 +1,10 @@
+'CollatzClockAudit.globalClockFailureBudget_eq_clockLadderFailureBudget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockAudit.global_barrier_clock_failure_le_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.exists_eventually_global_barrier_clock_envelope' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockAudit.eventually_global_barrier_clock_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

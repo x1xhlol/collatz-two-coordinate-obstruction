@@ -1,0 +1,3 @@
+'CollatzCanonical.NativeTao.eventually_global_barrier_implies_target_clock' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

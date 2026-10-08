@@ -1,0 +1,19 @@
+'CollatzCanonical.DirichletAbelian.logarithmicCumulative_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.logarithmicCumulative_monotone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.logarithmicCumulative_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.finite_harmonic_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.logarithmicCumulative_linear_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.logarithmicCumulative_eq_tsum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.logarithmicCumulative_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

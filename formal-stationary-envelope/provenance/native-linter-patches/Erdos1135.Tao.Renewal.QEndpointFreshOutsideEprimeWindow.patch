@@ -1,0 +1,18 @@
+--- original/Erdos1135/Tao/Renewal/QEndpointFreshOutsideEprimeWindow.lean
++++ corrected/Erdos1135/Tao/Renewal/QEndpointFreshOutsideEprimeWindow.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeFiber
+ import Erdos1135.Tao.Renewal.PMFIntWindowUnion
+ import Erdos1135.Tao.Renewal.CanonicalFirstPassageSigmaCenters
+@@ -66,7 +69,7 @@
+             coord r ∈ taoSection7IntIccWindow R c.1} := by
+     ext r
+     simp only [lemma79EndpointFreshNearSigmaHorizontalEvent,
+-      Set.mem_setOf_eq, sigmaHorizontalCenters, Set.mem_image]
++      Set.mem_setOf_eq, sigmaHorizontalCenters]
+     constructor
+     · rintro ⟨q, hq, hr⟩
+       refine ⟨⟨((q.j : ℕ) : ℤ), ⟨q, hq, rfl⟩⟩, ?_⟩

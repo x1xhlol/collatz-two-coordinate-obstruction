@@ -1,0 +1,12 @@
+'CollatzCanonical.IntegerStationaryEnvelope.exists_uniform_canonicalRho_unit_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.exists_uniform_canonical_cylinder_unit_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.exists_uniform_syracPMF_unit_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.exists_uniform_syracPMF_toReal_unit_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

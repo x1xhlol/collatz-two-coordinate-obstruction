@@ -1,0 +1,9 @@
+'CollatzCanonical.IntegerStationaryEnvelope.integerEnvelopeValue_superharmonic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.markedOddDepthTruncation_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.firstHitPartial_marked_le_integerEnvelope' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,5 @@
+'CollatzClockAudit.terminal_valuation_le_of_prefix_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.first_hit_log_landing_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.first_hit_landing_gt_sqrt_of_prefix_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

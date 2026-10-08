@@ -1,0 +1,6 @@
+'CollatzCanonical.NativeTao.actual_target_clock_ladder_window_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NativeTao.actual_target_clock_exception_logarithmic_mean_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

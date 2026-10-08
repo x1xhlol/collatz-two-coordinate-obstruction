@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.OddBarrierPassage.prefix_avoids_odd_target' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.firstHitWeight_uniform_barrier_stability_of_odd_target' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.firstHitWeight_odd_target_passage_expectation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

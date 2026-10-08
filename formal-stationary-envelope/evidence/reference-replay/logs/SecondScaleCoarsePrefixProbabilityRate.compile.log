@@ -1,0 +1,5 @@
+'CollatzClockSecondScale.coarse_horizon_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.coarsePrefixError_le_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.eventually_coarsePrefixError_le_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

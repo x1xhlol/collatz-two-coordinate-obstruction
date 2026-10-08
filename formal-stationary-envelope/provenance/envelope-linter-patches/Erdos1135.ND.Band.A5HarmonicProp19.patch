@@ -1,0 +1,19 @@
+--- original/Erdos1135.ND.Band.A5HarmonicProp19.lean
++++ candidate/Erdos1135.ND.Band.A5HarmonicProp19.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.ND.Band.A5HarmonicResidue
+ import Erdos1135.Tao.Syracuse.Prop19
+ 
+@@ -38,7 +42,7 @@
+       (Tao.taoSection5N0 B) (Tao.taoSection5NPrime B) hscale
+       (ndA5HarmonicBandPMF B branch j hB hcount)
+       hresidue
+-  convert hvaluation using 1 <;>
++  convert hvaluation using 1;
+     norm_num [Tao.taoProp19DecayExponent_one]
+ 
+ end

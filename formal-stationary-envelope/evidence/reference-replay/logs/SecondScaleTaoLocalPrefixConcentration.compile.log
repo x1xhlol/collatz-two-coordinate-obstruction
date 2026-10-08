@@ -1,0 +1,7 @@
+'CollatzClockSecondScale.actual_prefix_bad_probability_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.canonical_source_prefix_bad_probability_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.eventually_canonical_source_prefix_bad_probability_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

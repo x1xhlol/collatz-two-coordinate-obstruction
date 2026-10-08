@@ -1,0 +1,12 @@
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_greatest' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_eventually_cylinder_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalRho_cesaro_abs_trace_of_envelope_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalRho_mean_abs_trace_of_envelope_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

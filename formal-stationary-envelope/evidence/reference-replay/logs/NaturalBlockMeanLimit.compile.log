@@ -1,0 +1,2 @@
+'CollatzCanonical.NativeTao.actual_basin_natural_block_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.NativeTao.actual_weight_natural_block_mean' depends on axioms: [propext, Classical.choice, Quot.sound]

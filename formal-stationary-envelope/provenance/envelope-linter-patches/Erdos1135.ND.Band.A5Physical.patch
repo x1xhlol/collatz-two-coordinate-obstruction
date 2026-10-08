@@ -1,0 +1,37 @@
+--- original/Erdos1135.ND.Band.A5Physical.lean
++++ candidate/Erdos1135.ND.Band.A5Physical.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.ND.Band.A5Tube
+ import Erdos1135.Tao.Section5.PassScheduleFacts
+ import Mathlib.Analysis.Complex.ExponentialBounds
+@@ -1012,7 +1016,7 @@
+     rw [Tao.taoSection5M0_eq_floor_log]
+     have hfloor := Nat.floor_le
+       (by positivity : (0 : ℝ) ≤ Real.log B / 100000)
+-    convert hfloor using 1 <;> ring
++    convert hfloor using 1; ring
+   have hlowerScaled :
+       (1 / 1000 : ℝ) * Real.log B / ndA5LogFourThirds ≤
+         Real.log (ndA5BandLower B branch j / (B : ℝ)) /
+@@ -1258,7 +1262,7 @@
+     have hbase' :
+         (1 / (10 * Real.log 2)) * Real.log B - 1 <
+           (Tao.taoSection5N0 B : ℝ) := by
+-      convert hbase using 1 <;> ring
++      convert hbase using 1; ring
+     linarith
+   have hn0Upper :
+       (Tao.taoSection5N0 B : ℝ) ≤
+@@ -1278,7 +1282,7 @@
+     have hbase' :
+         (Tao.taoSection5N0 B : ℝ) ≤
+           (1 / (10 * Real.log 2)) * Real.log B := by
+-      convert hbase using 1 <;> ring
++      convert hbase using 1; ring
+     exact hbase'.trans hcoeffScaled
+   have hratioLowerMul :
+       (1374 / 100 : ℝ) *

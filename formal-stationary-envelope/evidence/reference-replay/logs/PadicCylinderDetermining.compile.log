@@ -1,0 +1,7 @@
+'CollatzCylinderPacking.Arithmetic.padic_cylinders_piSystem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.padic_cylinders_generate_borel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.padic_probability_eq_of_cylinders' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

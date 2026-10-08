@@ -1,0 +1,3 @@
+'CollatzCanonical.DirichletAbelian.actual_basin_odd_logarithmic_mean_exists' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

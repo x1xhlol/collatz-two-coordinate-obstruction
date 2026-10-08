@@ -1,0 +1,22 @@
+'CollatzCanonical.GreenKernelScalars.delta_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GreenKernelScalars.kappa_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GreenKernelScalars.kappa_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GreenKernelScalars.kappa_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GreenKernelScalars.exp_strict_chord' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GreenKernelScalars.rpow_strict_chord_one_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.GreenKernelScalars.kappa_eq_half_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GreenKernelScalars.kappa_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GreenKernelScalars.one_sub_kappa_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GreenKernelScalars.exp_linear_difference_quotient_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.GreenKernelScalars.delta_eq_logs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GreenKernelScalars.kappa_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GreenKernelScalars.kappa_difference_quotient_at_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.GreenKernelScalars.kappa_critical_right_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

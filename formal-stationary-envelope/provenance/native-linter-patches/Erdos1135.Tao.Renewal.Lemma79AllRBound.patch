@@ -1,0 +1,18 @@
+--- original/Erdos1135/Tao/Renewal/Lemma79AllRBound.lean
++++ corrected/Erdos1135/Tao/Renewal/Lemma79AllRBound.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Renewal.Lemma79OneStepBound
+ 
+ /-!
+@@ -31,7 +34,7 @@
+       unfold lemma79PMFENNExpectation
+       apply ENNReal.tsum_le_tsum
+       intro omega
+-      exact mul_le_mul_left' (hF omega) _
++      exact mul_le_mul_right (hF omega) _
+     _ = (∑' omega, mu omega) * C := by
+       unfold lemma79PMFENNExpectation
+       exact ENNReal.tsum_mul_right

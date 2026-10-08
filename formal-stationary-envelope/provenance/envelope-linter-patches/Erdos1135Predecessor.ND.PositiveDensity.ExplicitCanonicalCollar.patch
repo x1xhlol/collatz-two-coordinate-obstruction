@@ -1,0 +1,19 @@
+--- original/Erdos1135Predecessor.ND.PositiveDensity.ExplicitCanonicalCollar.lean
++++ candidate/Erdos1135Predecessor.ND.PositiveDensity.ExplicitCanonicalCollar.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file was adapted from Lech Mazur's published predecessor-density source
+@@ -46,7 +50,7 @@
+   have hBreal : (1 : ℝ) ≤ B := by exact_mod_cast hB
+   have hEreal : (160 : ℝ) * (B : ℝ) ^ 2 ≤ E := by exact_mod_cast hE
+   have hlog : (1 / 2 : ℝ) ≤ Real.log 2 := by
+-    convert Real.one_sub_inv_le_log_of_pos (by norm_num : (0 : ℝ) < 2) using 1 <;> norm_num
++    convert Real.one_sub_inv_le_log_of_pos (by norm_num : (0 : ℝ) < 2) using 1; norm_num
+   have hsep : 8 * (B : ℝ) ^ 2 ≤
+       taoSection7TriangleSeparation (explicitRenewalEpsilon E) := by
+     rw [explicitRenewal_separation_eq]

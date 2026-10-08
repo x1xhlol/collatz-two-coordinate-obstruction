@@ -1,0 +1,26 @@
+{
+  "status": "PASS_SOURCE_REVIEW_AND_FOCUSED_CONTROLS_NOT_LEAN_REPLAY",
+  "utc": "2026-10-08T10:20:59.462156+00:00",
+  "reviewer": "Root",
+  "driver_sha256": "82eda25a922068dc62b567d9a41b193ac88007b6c002495c3905150559bc8870",
+  "diff_sha256": "fd1c1cd4c06103a3cf845aef958f71d14ad3ac48c542c5ef18aa83a3041901de",
+  "tests_sha256": "47f3f6d6bd2bb4e7c2b766590bdc7248238eed2028a00c761a58ab7a384c422e",
+  "independent_execution_log_sha256": "c2307563988d6dea80e2c5752d9f35033d64d21fcdc18fafd9d1f9a9e03bd7a4",
+  "independent_execution_exit_code": 0,
+  "focused_controls_passed": 14,
+  "review_scope": [
+    "Complete delta read; unchanged trust-critical input, inventory, import, strict command and all-constant audit functions read.",
+    "Coordinator accepts a module only after complete strict compile and official kernel pair. Dependents use accepted fresh object hash.",
+    "No dependency-ready pair reservation after the failure latch; already reserved pairs are drained and all failed-stage evidence is retained.",
+    "Jobs1 preserves original canonical module order. At most four reserved pairs; source at least 50000 bytes and final audit reserve exclusive full pairs.",
+    "4 GiB minimum effective available memory measured before reservation and each process start, including visible cgroup-v2 ancestors.",
+    "Success verifier checks dependency acceptance times, command times, canonical command order, max concurrency, exclusivity, policy and RAM samples.",
+    "Final record starts VERIFYING; compilation, audit, input mutation or self-verification failure cannot leave PASS.",
+    "No changes to retained allowed axioms, warning-as-error, source no-bypass tokens, external input inventory or coherent internal imports."
+  ],
+  "limitations": [
+    "Synthetic focused controls do not compile Lean; full fresh strict compilation/kernel replay and independent final artifact verification remain required.",
+    "Effective memory telemetry samples are launch-time checks, not a continuous RAM reservation.",
+    "Frozen failed source bundle was not edited."
+  ]
+}

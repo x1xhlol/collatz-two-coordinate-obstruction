@@ -1,0 +1,28 @@
+--- original/Erdos1135.ND.Discrepancy.ErdosTuran.lean
++++ candidate/Erdos1135.ND.Discrepancy.ErdosTuran.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.ND.Discrepancy.EmpiricalFourier
+ 
+ /-!
+@@ -400,7 +404,7 @@
+       exact (ndFejerKernel_even H u).symm
+     _ = ∫ u in D / 2..(1 / 2 : ℝ), ndFejerKernel H u := by
+       convert intervalIntegral.integral_comp_neg
+-        (f := ndFejerKernel H) (a := (-(1 / 2 : ℝ))) (b := -D / 2) using 1 <;> ring
++        (f := ndFejerKernel H) (a := (-(1 / 2 : ℝ))) (b := -D / 2) using 1; ring
+ 
+ private theorem intervalIntegral_ndFejerKernel_center
+     (H : ℕ) (D : ℝ) :
+@@ -437,7 +441,7 @@
+       (∫ u in -D / 2..D / 2, f (-u)) =
+         ∫ u in -D / 2..D / 2, f u := by
+     convert intervalIntegral.integral_comp_neg
+-      (f := f) (a := -D / 2) (b := D / 2) using 1 <;> ring
++      (f := f) (a := -D / 2) (b := D / 2) using 1; ring
+   have hneg :
+       (∫ u in -D / 2..D / 2, f (-u)) =
+         -(∫ u in -D / 2..D / 2, f u) := by

@@ -1,0 +1,15 @@
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_infinity_closure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_infinity_isGDelta' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_infinity_haar_null' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.actual_trace_unbounded_in_unit_cylinder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_not_continuousAt_positive_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

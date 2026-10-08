@@ -1,0 +1,28 @@
+--- original/Erdos1135.Tao.Section5.AffineAtomDenominatorComparison.lean
++++ candidate/Erdos1135.Tao.Section5.AffineAtomDenominatorComparison.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.Tao.Section5.AffineAtomReciprocalMass
+ import Erdos1135.Tao.Section5.AffineDenominatorRatio
+ import Erdos1135.Tao.Section5.PassAtomMass
+@@ -20,7 +24,7 @@
+ /-- Exact reciprocal-form atom term before any denominator replacement. -/
+ noncomputable def taoSection5ExactAffineAtomMass
+     {B : ℕ} {branch : TaoSection5SourceBranch} {E : Set ℕ}
+-    (hmass :
++    (_hmass :
+       0 < logFinsetMass
+         (oddLogWindow
+           (taoSection5SourceLo B branch)
+@@ -69,7 +73,7 @@
+ the one geometric list mass, and the exact source normalizer. -/
+ noncomputable def taoSection5IdealAffineAtomMass
+     {B : ℕ} {branch : TaoSection5SourceBranch} {E : Set ℕ}
+-    (hmass :
++    (_hmass :
+       0 < logFinsetMass
+         (oddLogWindow
+           (taoSection5SourceLo B branch)

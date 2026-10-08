@@ -1,0 +1,20 @@
+'CollatzCanonical.BoundedInverseSeed.seedConductorFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.seedMixingDepth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.sixthRootDensityFloor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.seedMixingDepth_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.seedConductorFloor_monotone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.seedMixingDepth_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.sixthRootDensityFloor_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.sixthRootDensityFloor_antitone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.sixthRootDensityFloor_eq_depth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.sixthRootDensityFloor_ge_exp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

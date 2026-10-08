@@ -1,0 +1,9 @@
+'CollatzCanonical.NaturalPrefix.full_natural_prefix_mean_of_odd_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NaturalPrefix.full_natural_prefix_mean_of_block_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NaturalPrefix.full_natural_prefix_mean_of_doubling_invariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

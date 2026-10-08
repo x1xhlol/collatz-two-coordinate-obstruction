@@ -1,0 +1,19 @@
+'CollatzCanonical.PeriodicConvolution.linear_bound_of_mean_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicConvolution.shifted_mean_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicConvolution.loop_convolution_tendsto_of_linear_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicConvolution.loop_convolution_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicConvolution.bounded_remainder_div_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicConvolution.loop_convolution_add_bounded_remainder_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicConvolution.periodic_reconstruction_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,46 @@
+--- original/Erdos1135SecondScale.Tao.Section5.PassTypicalFailure.lean
++++ candidate/Erdos1135SecondScale.Tao.Section5.PassTypicalFailure.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -147,7 +151,7 @@
+       _ = Real.rpow L (11 / 10 : ℝ) := by norm_num
+       _ = x ^ (11 / 2 : ℝ) := by
+         dsimp only [x]
+-        convert Real.rpow_mul hLpos.le (1 / 5 : ℝ) (11 / 2 : ℝ) using 1 <;>
++        convert Real.rpow_mul hLpos.le (1 / 5 : ℝ) (11 / 2 : ℝ) using 1;
+           norm_num
+   have hscaled :
+       (2 * L * Real.exp (-x / 32)) * Real.rpow L (1 / 10 : ℝ) ≤ 1 := by
+@@ -168,7 +172,7 @@
+     calc
+       Real.rpow L (-1 / 10 : ℝ) =
+           (Real.rpow L (1 / 10 : ℝ))⁻¹ := by
+-            convert Real.rpow_neg hLpos.le (1 / 10 : ℝ) using 1 <;>
++            convert Real.rpow_neg hLpos.le (1 / 10 : ℝ) using 1;
+               norm_num
+       _ = 1 / Real.rpow L (1 / 10 : ℝ) :=
+         (one_div (Real.rpow L (1 / 10 : ℝ))).symm
+@@ -354,7 +358,7 @@
+     calc
+       Real.rpow L (-1 / 10 : ℝ) =
+           (Real.rpow L (1 / 10 : ℝ))⁻¹ := by
+-            convert Real.rpow_neg hLpos.le (1 / 10 : ℝ) using 1 <;>
++            convert Real.rpow_neg hLpos.le (1 / 10 : ℝ) using 1;
+               norm_num
+       _ = 1 / Real.rpow L (1 / 10 : ℝ) :=
+         (one_div (Real.rpow L (1 / 10 : ℝ))).symm
+@@ -365,7 +369,7 @@
+     _ ≤ 1 / Real.rpow L (1 / 10 : ℝ) := henvelope
+     _ = taoSection5PowerInteriorDelta B := by
+       unfold taoSection5PowerInteriorDelta
+-      simpa only [L, hneg]
++      simp only [L, hneg]
+ 
+ /-- The complete closed-prefix error packet at one common threshold.  It
+ stores the actual Proposition 1.9 source law and the branch-uniform one-shot

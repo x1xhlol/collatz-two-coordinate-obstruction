@@ -1,0 +1,632 @@
+--- a/Erdos1135/Tao/Probability/LogWindowEndpoints.lean
++++ b/Erdos1135/Tao/Probability/LogWindowEndpoints.lean
+@@ -1,3 +1,10 @@
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
+ import Erdos1135.Tao.Probability.LogWindowSourceIndex
+ import Mathlib.Algebra.Order.Floor.Ring
+ import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+@@ -19,9 +26,9 @@
+ open Filter
+ open scoped Topology
+ 
+-/-- Tao's fixed exponent `alpha = 1.001`. -/
++/-- Tao's fixed exponent `alpha = 1.0005`. -/
+ noncomputable def taoAlpha : ℝ :=
+-  (1001 : ℝ) / 1000
++  (2001 : ℝ) / 2000
+ 
+ /-- Lower natural endpoint for the odd value window attached to `y`. -/
+ noncomputable def taoNyLo (y : ℝ) : ℕ :=
+--- a/Erdos1135/Tao/Probability/LogWindowEventualMassLower.lean
++++ b/Erdos1135/Tao/Probability/LogWindowEventualMassLower.lean
+@@ -1,4 +1,11 @@
+-import Erdos1135.Tao.Probability.LogWindowBoundaryMass
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
++import Erdos1135.Tao.Probability.LogWindowQuarterMass
+ import Erdos1135.Tao.Probability.LogWindowEndpoints
+ 
+ /-!
+@@ -22,7 +29,7 @@
+ rounded width and logarithmic scale are large enough. -/
+ theorem log_div_eightThousand_le_taoNyOddWindow_rpow_mass
+     {b beta : ℝ} (hb : 2 ≤ b) (hbeta : 1 ≤ beta)
+-    (hlog : 8000 ≤ Real.log b)
++    (hlog : 24000 ≤ Real.log b)
+     (hwidth : b ^ beta + 2 ≤ (b ^ beta) ^ taoAlpha) :
+     Real.log b / 8000 ≤
+       logFinsetMass (taoNyOddWindow (b ^ beta) taoAlpha) := by
+@@ -43,17 +50,17 @@
+   have hlogScale : Real.log b ≤ beta * Real.log b := by
+     simpa only [one_mul] using
+       mul_le_mul_of_nonneg_right hbeta hlogBNonneg
+-  have hlogWidth : 8 ≤ (taoAlpha - 1) * Real.log (b ^ beta) := by
++  have hlogWidth : 12 ≤ (taoAlpha - 1) * Real.log (b ^ beta) := by
+     rw [hlogY]
+     norm_num [taoAlpha]
+     nlinarith
+-  have hmass := one_eighth_log_width_le_rounded_power_oddWindow_mass
++  have hmass := one_quarter_log_width_le_rounded_power_oddWindow_mass
+     hyTwo taoAlpha_one_lt hab hlogWidth
+   calc
+     Real.log b / 8000 ≤ Real.log (b ^ beta) / 8000 := by
+       rw [hlogY]
+       exact div_le_div_of_nonneg_right hlogScale (by norm_num)
+-    _ = ((taoAlpha - 1) / 8) * Real.log (b ^ beta) := by
++    _ = ((taoAlpha - 1) / 4) * Real.log (b ^ beta) := by
+       norm_num [taoAlpha]
+       ring
+     _ ≤ logFinsetMass (taoNyOddWindow (b ^ beta) taoAlpha) := by
+@@ -73,7 +80,7 @@
+     Real.tendsto_log_atTop
+   filter_upwards
+     [eventually_ge_atTop (2 : ℝ),
+-      hlog.eventually_ge_atTop (8000 : ℝ),
++      hlog.eventually_ge_atTop (24000 : ℝ),
+       hpow.eventually taoNy_width_eventually]
+       with b hb hlogLarge hwidth
+   exact log_div_eightThousand_le_taoNyOddWindow_rpow_mass
+--- /dev/null
++++ b/Erdos1135/Tao/Probability/LogWindowQuarterMass.lean
+@@ -0,0 +1,87 @@
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
++import Erdos1135.Tao.Probability.LogWindowBoundaryMass
++
++/-!
++Quarter-width refinement of Mazur's rounded-window mass argument, used by
++the independently checked alpha = 2001/2000 specialization. The proof is
++adapted from the pinned companion's one-eighth-width lemma; the stronger
++conclusion uses the explicitly stronger width threshold 12.
++-/
++
++namespace Erdos1135.Tao
++
++private theorem log_two_lt_one_quarter : Real.log (2 : ℝ) < 1 := by
++  have h := Real.log_lt_sub_one_of_pos
++    (show (0 : ℝ) < 2 by norm_num) (show (2 : ℝ) ≠ 1 by norm_num)
++  norm_num at h ⊢
++  exact h
++
++theorem one_quarter_log_width_le_rounded_power_oddWindow_mass
++    {y alpha : ℝ} (hy : 2 ≤ y) (halpha : 1 < alpha)
++    (hab : Nat.ceil y ≤ Nat.floor (Real.rpow y alpha))
++    (hwidth : 12 ≤ (alpha - 1) * Real.log y) :
++    ((alpha - 1) / 4) * Real.log y ≤
++      logFinsetMass
++        (oddLogWindow (Nat.ceil y) (Nat.floor (Real.rpow y alpha))) := by
++  let a := Nat.ceil y
++  let z := Real.rpow y alpha
++  let b := Nat.floor z
++  have hyPos : 0 < y := by linarith
++  have hyOne : 1 ≤ y := by linarith
++  have hzPos : 0 < z := by
++    dsimp [z]
++    exact Real.rpow_pos_of_pos hyPos _
++  have hyLeZ : y ≤ z := by
++    dsimp [z]
++    exact Real.self_le_rpow_of_one_le hyOne halpha.le
++  have haReal : y ≤ (a : ℝ) := by
++    dsimp [a]
++    exact Nat.le_ceil y
++  have haUpper : (a : ℝ) ≤ 2 * y := by
++    have hceil := Nat.ceil_lt_add_one (by positivity : 0 ≤ y)
++    dsimp [a]
++    nlinarith
++  have haNat : 2 ≤ a := by
++    exact_mod_cast hy.trans haReal
++  have hbLower : z / 2 ≤ (b : ℝ) := by
++    have hfloor := Nat.lt_floor_add_one z
++    dsimp [b]
++    nlinarith [hyLeZ, hy]
++  have hbPos : (0 : ℝ) < b := by
++    nlinarith [hbLower, hzPos]
++  have haPos : (0 : ℝ) < a := by positivity
++  have hlogA : Real.log (a : ℝ) ≤ Real.log 2 + Real.log y := by
++    have hmono := Real.strictMonoOn_log.monotoneOn haPos
++      (mul_pos (by norm_num) hyPos) haUpper
++    rw [Real.log_mul (by norm_num : (2 : ℝ) ≠ 0) hyPos.ne'] at hmono
++    exact hmono
++  have hlogB : alpha * Real.log y - Real.log 2 ≤ Real.log (b : ℝ) := by
++    have hmono := Real.strictMonoOn_log.monotoneOn
++      (div_pos hzPos (by norm_num)) hbPos hbLower
++    rw [Real.log_div hzPos.ne' (by norm_num : (2 : ℝ) ≠ 0)] at hmono
++    have hlogZ : Real.log z = alpha * Real.log y := by
++      dsimp [z]
++      exact Real.log_rpow hyPos _
++    rw [hlogZ] at hmono
++    exact hmono
++  have hnatural :=
++    half_log_ratio_sub_two_le_logFinsetMass_oddLogWindow haNat hab
++  have hgap :
++      (alpha - 1) * Real.log y - 2 * Real.log 2 ≤
++        Real.log (b : ℝ) - Real.log (a : ℝ) := by
++    nlinarith [hlogA, hlogB]
++  have hmassBase :
++      (1 / 2 : ℝ) * ((alpha - 1) * Real.log y) - 3 ≤
++        logFinsetMass (oddLogWindow a b) := by
++    nlinarith [hnatural, hgap, log_two_lt_one_quarter]
++  dsimp [a, b, z] at hmassBase ⊢
++  nlinarith [hmassBase, hwidth]
++
++
++end Erdos1135.Tao
+--- a/Erdos1135/Tao/Section5/Geom2HighWeightScalar.lean
++++ b/Erdos1135/Tao/Section5/Geom2HighWeightScalar.lean
+@@ -1,3 +1,10 @@
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
+ import Erdos1135.Tao.Probability.Geom2HighWeight
+ import Erdos1135.Tao.Section5.PassScheduleFacts
+ 
+@@ -19,8 +26,9 @@
+     {B : ℕ} (hB : 1 ≤ B) :
+     (taoSection5M0 B : ℝ) ≤ Real.log B / 100000 := by
+   rw [taoSection5M0_eq_floor_log]
+-  exact Nat.floor_le (by
+-    exact div_nonneg (Real.log_nonneg (by exact_mod_cast hB)) (by norm_num))
++  have hlog : 0 ≤ Real.log (B : ℝ) := Real.log_nonneg (by exact_mod_cast hB)
++  have hf := Nat.floor_le (div_nonneg hlog (by norm_num : (0 : ℝ) ≤ 200000))
++  nlinarith
+ 
+ /-- The discrete inequality `3^6 <= 2^10` sharpens the scheduled numerator to a one-sixth
+ power of the threshold. -/
+--- a/Erdos1135/Tao/Section5/PassNormalizer.lean
++++ b/Erdos1135/Tao/Section5/PassNormalizer.lean
+@@ -1,3 +1,10 @@
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
+ import Erdos1135.Tao.Section5.PowerInteriorBoundaryMass
+ import Erdos1135.Tao.Probability.LogWindowCenteredMass
+ 
+@@ -178,7 +185,9 @@
+   let L := Real.log B
+   let Ly := Real.log (taoSection5SourceY B branch)
+   let s := Real.rpow L (4 / 5 : ℝ)
+-  have hLlarge : 8000 ≤ L := by simpa only [L] using facts.log_large
++  have hLlarge : 8000 ≤ L := by
++    dsimp [L]
++    linarith [facts.log_large]
+   have hLpos : 0 < L := by nlinarith
+   have hLone : 1 ≤ L := by nlinarith
+   have hsOne : 1 ≤ s := by
+--- a/Erdos1135/Tao/Section5/PassSchedule.lean
++++ b/Erdos1135/Tao/Section5/PassSchedule.lean
+@@ -1,3 +1,10 @@
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
+ import Erdos1135.Tao.Section5.Schedule
+ import Erdos1135.Tao.Section5.PassLocationStepBack
+ import Erdos1135.Tao.Syracuse.TruncatedValuationPacking
+@@ -25,7 +32,7 @@
+   Nat.floor (((taoAlpha - 1) / 100) * Real.log B)
+ 
+ theorem taoSection5M0_eq_floor_log (B : ℕ) :
+-    taoSection5M0 B = Nat.floor (Real.log B / 100000) := by
++    taoSection5M0 B = Nat.floor (Real.log B / 200000) := by
+   unfold taoSection5M0 taoAlpha
+   congr 1
+   ring
+--- a/Erdos1135/Tao/Section5/PassScheduleFacts.lean
++++ b/Erdos1135/Tao/Section5/PassScheduleFacts.lean
+@@ -1,3 +1,10 @@
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
+ import Erdos1135.Tao.Section5.PassSchedule
+ 
+ /-!
+@@ -112,9 +119,9 @@
+   norm_num at h ⊢
+   exact h
+ 
+-private theorem two_div_hundred_thousand_le_lower_coefficient
++private theorem two_div_two_hundred_thousand_le_lower_coefficient
+     (branch : TaoSection5SourceBranch) :
+-    (2 / 100000 : ℝ) ≤
++    (2 / 200000 : ℝ) ≤
+       (taoSection5BranchExponent branch - 1) /
+         Real.log (4 / 3 : ℝ) := by
+   apply (le_div_iff₀ log_four_thirds_pos).2
+@@ -146,9 +153,9 @@
+       norm_num [taoAlpha] at ⊢
+       nlinarith
+ 
+-private theorem one_div_four_hundred_le_width_coefficient
++private theorem one_div_eight_hundred_le_width_coefficient
+     (branch : TaoSection5SourceBranch) :
+-    (1 / 400 : ℝ) ≤
++    (1 / 800 : ℝ) ≤
+       taoSection5BranchExponent branch * (taoAlpha - 1) /
+         Real.log (4 / 3 : ℝ) := by
+   apply (le_div_iff₀ log_four_thirds_pos).2
+@@ -244,7 +251,7 @@
+       Tendsto (fun B : ℕ => Real.log (B : ℝ)) atTop atTop :=
+     Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop
+   filter_upwards
+-    [hlog.eventually_ge_atTop (100000 : ℝ),
++    [hlog.eventually_ge_atTop (200000 : ℝ),
+       eventually_taoSection5PassSlack_le_log] with B hlogLarge hslack
+   have hlogPos : 0 < Real.log B := by nlinarith
+   have hBReal : (1 : ℝ) < B :=
+@@ -259,7 +266,7 @@
+   have hlower (branch : TaoSection5SourceBranch) :
+       0 ≤ taoSection5PassLower B branch := by
+     rw [taoSection5PassLower_eq hB branch]
+-    have hcoef := two_div_hundred_thousand_le_lower_coefficient branch
++    have hcoef := two_div_two_hundred_thousand_le_lower_coefficient branch
+     have hmul := mul_le_mul_of_nonneg_right hcoef hlogPos.le
+     nlinarith
+   have hupper (branch : TaoSection5SourceBranch) :
+@@ -273,7 +280,7 @@
+         taoSection5PassUpper B branch := by
+     rw [taoSection5PassLower_eq hB branch,
+       taoSection5PassUpper_eq hB branch]
+-    have hcoef := one_div_four_hundred_le_width_coefficient branch
++    have hcoef := one_div_eight_hundred_le_width_coefficient branch
+     have hmul := mul_le_mul_of_nonneg_right hcoef hlogPos.le
+     rw [← upper_sub_lower_coefficient_eq branch] at hmul
+     nlinarith [hmul]
+@@ -293,10 +300,10 @@
+     rw [mem_taoSection5PassTimes_iff] at hn
+     constructor
+     · have hm0Floor :
+-          (taoSection5M0 B : ℝ) ≤ Real.log B / 100000 := by
++          (taoSection5M0 B : ℝ) ≤ Real.log B / 200000 := by
+         rw [taoSection5M0_eq_floor_log]
+         exact Nat.floor_le (by positivity)
+-      have hcoef := two_div_hundred_thousand_le_lower_coefficient branch
++      have hcoef := two_div_two_hundred_thousand_le_lower_coefficient branch
+       have hcoefMul := mul_le_mul_of_nonneg_right hcoef hlogPos.le
+       have hlowerCast :
+           (2 * taoSection5M0 B : ℝ) ≤
+@@ -366,7 +373,7 @@
+       nlinarith [hslackPos]
+     have hlowerSqPos : 0 < taoSection5PassLower B .alphaSq := by
+       rw [taoSection5PassLower_eq hB .alphaSq]
+-      have hcoef := two_div_hundred_thousand_le_lower_coefficient .alphaSq
++      have hcoef := two_div_two_hundred_thousand_le_lower_coefficient .alphaSq
+       have hmul := mul_le_mul_of_nonneg_right hcoef hlogPos.le
+       nlinarith
+     have hendpoint :
+--- a/Erdos1135/Tao/Section5/PowerInteriorBoundaryMass.lean
++++ b/Erdos1135/Tao/Section5/PowerInteriorBoundaryMass.lean
+@@ -1,5 +1,12 @@
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
+ import Erdos1135.Tao.Section5.PowerInteriorFacts
+-import Erdos1135.Tao.Probability.LogWindowBoundaryMass
++import Erdos1135.Tao.Probability.LogWindowQuarterMass
+ 
+ /-!
+ # Section 5 Repaired-Interior Boundary Mass
+@@ -29,7 +36,7 @@
+ structure TaoSection5PowerInteriorBoundaryMassFacts (B : ℕ) : Prop where
+   geometry : TaoSection5PowerInteriorFacts B
+   residue : TaoSection5ResidueScheduleFacts B
+-  log_large : 8000 ≤ Real.log B
++  log_large : 24000 ≤ Real.log B
+ 
+ theorem eventually_taoSection5PowerInteriorBoundaryMassFacts :
+     ∀ᶠ B : ℕ in atTop, TaoSection5PowerInteriorBoundaryMassFacts B := by
+@@ -38,7 +45,7 @@
+   filter_upwards
+     [eventually_taoSection5PowerInteriorFacts,
+       eventually_taoSection5ResidueScheduleFacts,
+-      hlog.eventually_ge_atTop (8000 : ℝ)]
++      hlog.eventually_ge_atTop (24000 : ℝ)]
+       with B geometry residue log_large
+   exact ⟨geometry, residue, log_large⟩
+ 
+@@ -72,7 +79,7 @@
+ private theorem TaoSection5PowerInteriorBoundaryMassFacts.log_width
+     {B : ℕ} (facts : TaoSection5PowerInteriorBoundaryMassFacts B)
+     (branch : TaoSection5SourceBranch) :
+-    8 ≤ (taoAlpha - 1) *
++    12 ≤ (taoAlpha - 1) *
+       Real.log (taoSection5SourceY B branch) := by
+   have hlogBNonneg : 0 ≤ Real.log B := facts.log_large.trans' (by norm_num)
+   have hbranch : Real.log B ≤
+@@ -133,13 +140,13 @@
+         Nat.floor (Real.rpow (taoSection5SourceY B branch) taoAlpha) := by
+     simpa only [taoSection5SourceLo, taoSection5SourceHi, taoNyLo, taoNyHi]
+       using habSource
+-  have hmass := one_eighth_log_width_le_rounded_power_oddWindow_mass
++  have hmass := one_quarter_log_width_le_rounded_power_oddWindow_mass
+     (facts.two_le_sourceY branch) taoAlpha_one_lt
+     habRounded
+     (facts.log_width branch)
+   calc
+     Real.log (taoSection5SourceY B branch) / 8000 =
+-        ((taoAlpha - 1) / 8) *
++        ((taoAlpha - 1) / 4) *
+           Real.log (taoSection5SourceY B branch) := by
+       norm_num [taoAlpha]
+       ring
+--- a/Erdos1135/Tao/Section5/PowerInteriorFacts.lean
++++ b/Erdos1135/Tao/Section5/PowerInteriorFacts.lean
+@@ -1,3 +1,10 @@
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
+ import Erdos1135.Tao.Section5.PassScheduleFacts
+ 
+ /-!
+@@ -24,7 +31,7 @@
+ 
+ private theorem eventually_taoSection5PowerInteriorDelta_lt :
+     ∀ᶠ B : ℕ in atTop,
+-      taoSection5PowerInteriorDelta B < (1 / 4000 : ℝ) := by
++      taoSection5PowerInteriorDelta B < (1 / 8000 : ℝ) := by
+   have hlog :
+       Tendsto (fun B : ℕ => Real.log (B : ℝ)) atTop atTop :=
+     Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop
+@@ -35,19 +42,19 @@
+     simpa only [Function.comp_def] using
+       (tendsto_rpow_neg_atTop (by norm_num : 0 < (1 / 10 : ℝ))).comp hlog
+   filter_upwards
+-    [hdelta.eventually_lt_const (by norm_num : (0 : ℝ) < 1 / 4000)]
++    [hdelta.eventually_lt_const (by norm_num : (0 : ℝ) < 1 / 8000)]
+     with B hB
+   unfold taoSection5PowerInteriorDelta
+   simpa only [show (-(1 / 10 : ℝ)) = (-1 / 10 : ℝ) by norm_num]
+     using hB
+ 
+-private theorem eventually_three_le_threshold_rpow_one_div_two_thousand :
++private theorem eventually_three_le_threshold_rpow_one_div_four_thousand :
+     ∀ᶠ B : ℕ in atTop,
+-      (3 : ℝ) ≤ (B : ℝ) ^ (1 / 2000 : ℝ) := by
++      (3 : ℝ) ≤ (B : ℝ) ^ (1 / 4000 : ℝ) := by
+   have htendsto :
+-      Tendsto (fun B : ℕ => (B : ℝ) ^ (1 / 2000 : ℝ)) atTop atTop := by
++      Tendsto (fun B : ℕ => (B : ℝ) ^ (1 / 4000 : ℝ)) atTop atTop := by
+     simpa only [Function.comp_def] using
+-      (tendsto_rpow_atTop (by norm_num : 0 < (1 / 2000 : ℝ))).comp
++      (tendsto_rpow_atTop (by norm_num : 0 < (1 / 4000 : ℝ))).comp
+         tendsto_natCast_atTop_atTop
+   exact htendsto.eventually_ge_atTop 3
+ 
+@@ -55,7 +62,7 @@
+ structure TaoSection5PowerInteriorFacts (B : ℕ) : Prop where
+   schedule : TaoSection5PassScheduleFacts B
+   delta_pos : 0 < taoSection5PowerInteriorDelta B
+-  delta_lt : taoSection5PowerInteriorDelta B < (1 / 4000 : ℝ)
++  delta_lt : taoSection5PowerInteriorDelta B < (1 / 8000 : ℝ)
+   source_le_lower : ∀ branch,
+     taoSection5SourceY B branch ≤
+       taoSection5PowerInteriorLower B branch
+@@ -82,7 +89,7 @@
+   filter_upwards
+     [eventually_taoSection5PassScheduleFacts,
+       eventually_taoSection5PowerInteriorDelta_lt,
+-      eventually_three_le_threshold_rpow_one_div_two_thousand]
++      eventually_three_le_threshold_rpow_one_div_four_thousand]
+     with B schedule hdeltaSmall hBgrowth
+   have hBne : B ≠ 1 := by
+     intro hB
+@@ -96,9 +103,9 @@
+     unfold taoSection5PowerInteriorDelta
+     exact Real.rpow_pos_of_pos hlogPos _
+   have hgap :
+-      (1 / 2000 : ℝ) <
++      (1 / 4000 : ℝ) <
+         taoAlpha - 1 - 2 * taoSection5PowerInteriorDelta B := by
+-    have halpha : taoAlpha - 1 = (1 / 1000 : ℝ) := by
++    have halpha : taoAlpha - 1 = (1 / 2000 : ℝ) := by
+       norm_num [taoAlpha]
+     rw [halpha]
+     nlinarith
+@@ -136,7 +143,7 @@
+       (3 : ℝ) ≤ Real.rpow (taoSection5SourceY B branch)
+         (taoAlpha - 1 - 2 * taoSection5PowerInteriorDelta B) := by
+     have hBExponent :
+-        (B : ℝ) ^ (1 / 2000 : ℝ) ≤
++        (B : ℝ) ^ (1 / 4000 : ℝ) ≤
+           (B : ℝ) ^
+             (taoAlpha - 1 - 2 * taoSection5PowerInteriorDelta B) :=
+       Real.rpow_le_rpow_of_exponent_le hBcast hgap.le
+@@ -146,7 +153,7 @@
+           (taoSection5SourceY B branch) ^
+             (taoAlpha - 1 - 2 * taoSection5PowerInteriorDelta B) :=
+       Real.rpow_le_rpow (Nat.cast_nonneg B) (hsourceGe branch)
+-        ((by norm_num : (0 : ℝ) ≤ 1 / 2000).trans hgap.le)
++        ((by norm_num : (0 : ℝ) ≤ 1 / 4000).trans hgap.le)
+     exact hBgrowth.trans (hBExponent.trans hbase)
+   have hfactorization (branch : TaoSection5SourceBranch) :
+       taoSection5PowerInteriorUpper B branch =
+--- a/Erdos1135/Tao/Section5/Prop111NaturalRate.lean
++++ b/Erdos1135/Tao/Section5/Prop111NaturalRate.lean
+@@ -1,3 +1,10 @@
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
+ import Erdos1135.Tao.Fourier.Prop114CanonicalAssembly
+ import Erdos1135.Tao.Section5.BranchPassTV
+ import Erdos1135.Tao.Section5.NoHitEndpoint
+@@ -28,19 +35,19 @@
+ 
+ /-- The floor defining the Section 5 step-back time eventually retains at
+ least half of its real main term. -/
+-theorem eventually_log_div_two_hundred_thousand_le_taoSection5M0 :
++theorem eventually_log_div_four_hundred_thousand_le_taoSection5M0 :
+     ∀ᶠ B : ℕ in atTop,
+-      Real.log B / 200000 ≤ (taoSection5M0 B : ℝ) := by
++      Real.log B / 400000 ≤ (taoSection5M0 B : ℝ) := by
+   have hlog :
+       Tendsto (fun B : ℕ => Real.log (B : ℝ)) atTop atTop :=
+     Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop
+-  filter_upwards [hlog.eventually_ge_atTop (200000 : ℝ)] with B hlarge
++  filter_upwards [hlog.eventually_ge_atTop (400000 : ℝ)] with B hlarge
+   have hfloor :
+-      Real.log B / 100000 - 1 < (taoSection5M0 B : ℝ) := by
+-    have h := Nat.lt_floor_add_one (Real.log B / 100000)
++      Real.log B / 200000 - 1 < (taoSection5M0 B : ℝ) := by
++    have h := Nat.lt_floor_add_one (Real.log B / 200000)
+     rw [← taoSection5M0_eq_floor_log B] at h
+     have h' :
+-        Real.log B / 100000 < (taoSection5M0 B : ℝ) + 1 := by
++        Real.log B / 200000 < (taoSection5M0 B : ℝ) + 1 := by
+       exact_mod_cast h
+     linarith
+   nlinarith
+@@ -61,15 +68,15 @@
+         atTop atTop :=
+     (tendsto_rpow_atTop (by norm_num : (0 : ℝ) < 9 / 10)).comp hlog
+   filter_upwards
+-    [eventually_log_div_two_hundred_thousand_le_taoSection5M0,
+-      hgrowth.eventually_ge_atTop (200000 * Cmix),
++    [eventually_log_div_four_hundred_thousand_le_taoSection5M0,
++      hgrowth.eventually_ge_atTop (400000 * Cmix),
+       hlog.eventually_ge_atTop (1 : ℝ)]
+       with B hm0Lower hgrowthB hlogOne
+   let L := Real.log B
+   have hLpos : 0 < L := zero_lt_one.trans_le hlogOne
+-  have hm0BasePos : 0 < L / 200000 := div_pos hLpos (by norm_num)
++  have hm0BasePos : 0 < L / 400000 := div_pos hLpos (by norm_num)
+   have hdenominator :
+-      Cmix / (taoSection5M0 B : ℝ) ≤ Cmix / (L / 200000) :=
++      Cmix / (taoSection5M0 B : ℝ) ≤ Cmix / (L / 400000) :=
+     div_le_div_of_nonneg_left hCmix hm0BasePos
+       (by simpa only [L] using hm0Lower)
+   have hfactor :
+@@ -84,10 +91,10 @@
+         (Real.rpow_add hLpos (-1 / 10 : ℝ) 1).symm
+       _ = Real.rpow L (9 / 10 : ℝ) := by norm_num
+   have hbaseRate :
+-      Cmix / (L / 200000) ≤ Real.rpow L (-1 / 10 : ℝ) := by
++      Cmix / (L / 400000) ≤ Real.rpow L (-1 / 10 : ℝ) := by
+     apply (div_le_iff₀ hm0BasePos).2
+     have hgrowthB' :
+-        200000 * Cmix ≤ Real.rpow L (9 / 10 : ℝ) := by
++        400000 * Cmix ≤ Real.rpow L (9 / 10 : ℝ) := by
+       simpa only [L] using hgrowthB
+     rw [← hfactor] at hgrowthB'
+     nlinarith
+--- a/Erdos1135/Tao/Section5/ReversePrefixScalar.lean
++++ b/Erdos1135/Tao/Section5/ReversePrefixScalar.lean
+@@ -1,3 +1,10 @@
++/-
++Modified 2026-09-28 for the independent alpha = 2001/2000 replay of
++Mazur's Proposition 1.11 formalization, pinned at ca3dd0d63920.
++The changes are documented in alpha-2001-2000.patch and the replay report.
++Original copyright and license notices are retained; see LICENSE and NOTICE.
++-/
++
+ import Erdos1135.Tao.Section5.ReversePrefix
+ import Erdos1135.Tao.Section5.DescentScale
+ 
+@@ -78,27 +85,27 @@
+       Tendsto (fun B : ℕ => Real.log (B : ℝ)) atTop atTop :=
+     Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop
+   filter_upwards
+-    [hlog.eventually_ge_atTop (4000000 : ℝ),
++    [hlog.eventually_ge_atTop (8000000 : ℝ),
+       eventually_log_rpow_le_mul_log
+-        (p := (3 / 5 : ℝ)) (c := (1 / 8000000 : ℝ)) (by norm_num) (by norm_num),
++        (p := (3 / 5 : ℝ)) (c := (1 / 16000000 : ℝ)) (by norm_num) (by norm_num),
+       eventually_log_rpow_le_mul_log
+-        (p := (7 / 10 : ℝ)) (c := (1 / 4000000 : ℝ)) (by norm_num) (by norm_num)]
++        (p := (7 / 10 : ℝ)) (c := (1 / 8000000 : ℝ)) (by norm_num) (by norm_num)]
+       with B hlogLarge htypical hlost
+   have hlogPos : 0 < Real.log B := by nlinarith
+   have hm0Floor :
+-      Real.log B / 100000 - 1 < (taoSection5M0 B : ℝ) := by
+-    have h := Nat.lt_floor_add_one (Real.log B / 100000)
++      Real.log B / 200000 - 1 < (taoSection5M0 B : ℝ) := by
++    have h := Nat.lt_floor_add_one (Real.log B / 200000)
+     rw [← taoSection5M0_eq_floor_log B] at h
+     nlinarith
+   have hm0Lower :
+-      Real.log B / 200000 ≤ (taoSection5M0 B : ℝ) := by
++      Real.log B / 400000 ≤ (taoSection5M0 B : ℝ) := by
+     nlinarith
+   have hm0LogLower :
+-      Real.log B / 800000 ≤
++      Real.log B / 1600000 ≤
+         (taoSection5M0 B : ℝ) * Real.log (4 / 3 : ℝ) := by
+     calc
+-      Real.log B / 800000 =
+-          (Real.log B / 200000) * (1 / 4 : ℝ) := by ring
++      Real.log B / 1600000 =
++          (Real.log B / 400000) * (1 / 4 : ℝ) := by ring
+       _ ≤ (taoSection5M0 B : ℝ) * (1 / 4 : ℝ) :=
+         mul_le_mul_of_nonneg_right hm0Lower (by norm_num)
+       _ ≤ (taoSection5M0 B : ℝ) * Real.log (4 / 3 : ℝ) :=
+@@ -113,22 +120,22 @@
+       mul_le_mul_of_nonneg_right log_two_lt_one_scalar.le htypicalNonneg
+   have htypicalBudget :
+       2 * Real.log 2 * taoSection5TypicalSlack B ≤
+-        Real.log B / 4000000 := by
++        Real.log B / 8000000 := by
+     have htypical' :
+-        taoSection5TypicalSlack B ≤ Real.log B / 8000000 := by
+-      change Real.rpow (Real.log B) (3 / 5 : ℝ) ≤ Real.log B / 8000000
++        taoSection5TypicalSlack B ≤ Real.log B / 16000000 := by
++      change Real.rpow (Real.log B) (3 / 5 : ℝ) ≤ Real.log B / 16000000
+       convert htypical using 1 <;> ring
+     nlinarith
+   have hlostBudget :
+-      taoSection5CanonicalLostSlack B ≤ Real.log B / 4000000 := by
+-    change Real.rpow (Real.log B) (7 / 10 : ℝ) ≤ Real.log B / 4000000
++      taoSection5CanonicalLostSlack B ≤ Real.log B / 8000000 := by
++    change Real.rpow (Real.log B) (7 / 10 : ℝ) ≤ Real.log B / 8000000
+     convert hlost using 1 <;> ring
+-  have hlogTwoBudget : Real.log 2 ≤ Real.log B / 4000000 := by
++  have hlogTwoBudget : Real.log 2 ≤ Real.log B / 8000000 := by
+     nlinarith [log_two_lt_one_scalar]
+   have htotal :
+       taoSection5CanonicalLostSlack B +
+           2 * Real.log 2 * taoSection5TypicalSlack B + Real.log 2 <
+-        Real.log B / 800000 := by
++        Real.log B / 1600000 := by
+     nlinarith
+   exact htotal.trans_le hm0LogLower
+ 

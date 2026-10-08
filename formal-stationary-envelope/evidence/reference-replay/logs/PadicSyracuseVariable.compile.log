@@ -1,0 +1,5 @@
+'CollatzCylinderPacking.Arithmetic.integer_residue_increment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_variable_projection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_variable_unique' depends on axioms: [propext, Classical.choice, Quot.sound]

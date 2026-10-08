@@ -1,0 +1,7 @@
+'CollatzClockSecondScale.rpow_neg_le_two_mul_of_half_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.floor_rpow_neg_le_two_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.floor_log_rpow_neg_le_two_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.floorSourceError_le_floor_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.floorSourceError_le_real_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.inv_le_log_rpow_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.floorSourceError_le_real_log_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]

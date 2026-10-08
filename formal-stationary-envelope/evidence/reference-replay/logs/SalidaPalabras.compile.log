@@ -1,0 +1,5 @@
+'SalidaPalabrasGao.primera_salida' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SalidaPalabrasGao.supervivencia_prefijo' depends on axioms: [propext, Quot.sound]
+'SalidaPalabrasGao.producto_prefijo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SalidaPalabrasGao.termino_inicial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SalidaPalabrasGao.salida_de_controles' depends on axioms: [propext, Classical.choice, Quot.sound]

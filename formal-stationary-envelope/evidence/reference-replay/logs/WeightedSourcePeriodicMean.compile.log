@@ -1,0 +1,9 @@
+'CollatzCanonical.PeriodicCensusFloor.firstHitWeight_adjacentVariation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_firstHitWeight_periodic_sourceMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.actual_firstHitWeight_oddUnit_sourceMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

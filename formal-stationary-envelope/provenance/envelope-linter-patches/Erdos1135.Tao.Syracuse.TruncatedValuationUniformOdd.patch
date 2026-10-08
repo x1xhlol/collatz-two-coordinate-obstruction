@@ -1,0 +1,20 @@
+--- original/source/Erdos1135/Tao/Syracuse/TruncatedValuationUniformOdd.lean
++++ source/Erdos1135/Tao/Syracuse/TruncatedValuationUniformOdd.lean
+@@ -1,3 +1,8 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
++
+ import Erdos1135.Tao.Syracuse.TruncatedValuationDecoder
+ import Erdos1135.Tao.Syracuse.ValuationDistribution
+ 
+@@ -105,7 +110,7 @@
+             syracuseValuationCylinderWord_eq_true_cons_tail] using hzero.trans w.2
+       | succ j =>
+           let jt : Fin (syracuseValuationCylinderTail as).length :=
+-            ⟨j.1, by simpa [syracuseValuationCylinderTail_length] using j.2⟩
++            ⟨j.1, by simp [syracuseValuationCylinderTail_length]⟩
+           let jK : Fin K := ⟨j.1, lt_of_lt_of_le j.2 hweight⟩
+           have hfullj := congrFun hfull (Fin.succ jK)
+           have htailj := htail jt

@@ -1,0 +1,7 @@
+'CollatzOrbitPackingBootstrap.bound_of_smaller_argument_half_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzOrbitPackingBootstrap.uniform_counting_bootstrap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzOrbitPackingBootstrap.uniform_power_bound_of_counting_recursion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

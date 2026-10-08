@@ -1,0 +1,5 @@
+'PalabrasGao.media_recorre' depends on axioms: [propext, choice, Quot.sound]
+'PalabrasGao.media_take' depends on axioms: [propext, choice, Quot.sound]
+'PalabrasGao.media_cruza' depends on axioms: [propext, choice, Quot.sound]
+'PalabrasGao.cruza_prefijo' depends on axioms: [propext, choice, Quot.sound]
+'PalabrasGao.media_producto' depends on axioms: [propext, choice, Quot.sound]

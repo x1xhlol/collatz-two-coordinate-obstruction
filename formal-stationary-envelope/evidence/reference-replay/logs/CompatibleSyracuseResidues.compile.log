@@ -1,0 +1,4 @@
+'CollatzCylinderPacking.Arithmetic.reduce_truncatedSeries' depends on axioms: [propext, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.sequence_residue_compatible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

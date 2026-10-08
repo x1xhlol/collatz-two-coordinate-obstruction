@@ -1,0 +1,6 @@
+'GuardiasGao.fallos_evento' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GuardiasGao.media_base' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GuardiasGao.guardia_estado' depends on axioms: [propext]
+'GuardiasGao.complemento' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GuardiasGao.fallo_bloque' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GuardiasGao.fallos_guardados' depends on axioms: [propext, Classical.choice, Quot.sound]

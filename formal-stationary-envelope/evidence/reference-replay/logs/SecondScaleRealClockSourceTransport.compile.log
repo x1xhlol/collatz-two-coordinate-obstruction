@@ -1,0 +1,12 @@
+'CollatzClockSecondScale.odd_source_event_probability_eq_logFinsetProb' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.odd_source_event_probability_perturbation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.real_floor_clock_source_perturbation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.real_source_event_probability_le_floor_add' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

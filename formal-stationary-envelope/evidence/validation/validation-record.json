@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "check": "setup-reuse",
+      "command": [
+        "PYTHON",
+        "BUNDLE/scripts/setup.py",
+        "--expected-manifest-sha256",
+        "c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c",
+        "--toolchain",
+        "TOOLCHAIN",
+        "--mathlib",
+        "MATHLIB"
+      ],
+      "cwd": "BUNDLE",
+      "elapsed_seconds": 70.70552294305526,
+      "exit_code": 0,
+      "public_log": "evidence/validation/setup-reuse.log",
+      "public_log_sha256": "55b70b0860cbb180db6a30876e79e554d997ab15e0ec8e1f995bd1501c5a8920",
+      "raw_log_sha256": "60cb1d8e666683fbfd322b65b5305d273937ebc2ba5a022ef85b9b45247678f7",
+      "started_utc": "2026-10-08T12:29:23+00:00"
+    },
+    {
+      "check": "fresh-process-verify",
+      "command": [
+        "PYTHON",
+        "BUNDLE/scripts/replay.py",
+        "--expected-manifest-sha256",
+        "c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c",
+        "--toolchain",
+        "TOOLCHAIN",
+        "--mathlib",
+        "MATHLIB",
+        "--verify-only"
+      ],
+      "cwd": "BUNDLE",
+      "elapsed_seconds": 97.03602163190953,
+      "exit_code": 0,
+      "public_log": "evidence/validation/fresh-process-verify.log",
+      "public_log_sha256": "ab4188bf963ce14bd84657965f0aecbd94fb2586362b6fadde4f09fa6a91f36a",
+      "raw_log_sha256": "ab4188bf963ce14bd84657965f0aecbd94fb2586362b6fadde4f09fa6a91f36a",
+      "started_utc": "2026-10-08T12:30:34+00:00"
+    },
+    {
+      "check": "relocated-verify",
+      "command": [
+        "PYTHON",
+        "RELOCATED_BUNDLE/scripts/replay.py",
+        "--expected-manifest-sha256",
+        "c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c",
+        "--toolchain",
+        "TOOLCHAIN",
+        "--mathlib",
+        "MATHLIB",
+        "--verify-only"
+      ],
+      "cwd": "RELOCATED_BUNDLE",
+      "elapsed_seconds": 98.46297612809576,
+      "exit_code": 0,
+      "public_log": "evidence/validation/relocated-verify.log",
+      "public_log_sha256": "ab4188bf963ce14bd84657965f0aecbd94fb2586362b6fadde4f09fa6a91f36a",
+      "raw_log_sha256": "ab4188bf963ce14bd84657965f0aecbd94fb2586362b6fadde4f09fa6a91f36a",
+      "started_utc": "2026-10-08T12:32:13+00:00"
+    }
+  ],
+  "fresh_external_download_exercised": false,
+  "fresh_process_verify_pass": true,
+  "input_state_sha256": "627a527e144246011a584033e7c6a1e80bbe544ee1eebe0fa32cf12df363fbf5",
+  "manifest_sha256": "c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c",
+  "path_normalization": "Public commands and output use BUNDLE, RELOCATED_BUNDLE, TOOLCHAIN, MATHLIB and PYTHON. Raw output and setup-result.json remain private.",
+  "python_version": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "relocated_verify_pass": true,
+  "relocated_verify_summary": {
+    "audited_constant_rows": 36651,
+    "audited_distinct_names": 36539,
+    "audited_private_rows": 3419,
+    "external_objects": 53006,
+    "record_sha256": "d51c6afb6168cf34f629cd1d1849cdf5c98067a30c6f60c5d311b74e4e9f39fe",
+    "source_modules": 1620,
+    "status": "PASS",
+    "successful_commands": 3242
+  },
+  "replay_driver_sha256": "82eda25a922068dc62b567d9a41b193ac88007b6c002495c3905150559bc8870",
+  "replay_record_sha256": "d51c6afb6168cf34f629cd1d1849cdf5c98067a30c6f60c5d311b74e4e9f39fe",
+  "reused_setup_pass": true,
+  "scope": "Actual setup using existing installations and two new-process verifications. Relocation copies the completed internal artifacts and reuses the same external libraries; it is not another source compilation or a source rebuild of external caches.",
+  "setup_sha256": "9b2bfa6d8aa7cdc65590357be1870eb94535ab21a990ff59b9eddea7e087e896",
+  "status": "PASS",
+  "validation_driver_sha256": "ea58b8122480cd9adb91369460a2b8ec7ccddeea7b2fe86bf5fe58d401d3640d",
+  "verify_summary": {
+    "audited_constant_rows": 36651,
+    "audited_distinct_names": 36539,
+    "audited_private_rows": 3419,
+    "external_objects": 53006,
+    "record_sha256": "d51c6afb6168cf34f629cd1d1849cdf5c98067a30c6f60c5d311b74e4e9f39fe",
+    "source_modules": 1620,
+    "status": "PASS",
+    "successful_commands": 3242
+  }
+}

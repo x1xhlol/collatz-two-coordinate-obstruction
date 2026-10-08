@@ -1,0 +1,15 @@
+'CollatzCylinderPacking.Arithmetic.forward_orbit_inter_basin_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.bounded_ancestor_targets_in_basin_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.eventually_basin_targets_have_no_small_ancestor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.periodic_targets_in_basin_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.eventually_basin_targets_nonperiodic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

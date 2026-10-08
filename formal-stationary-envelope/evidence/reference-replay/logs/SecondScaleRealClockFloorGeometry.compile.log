@@ -1,0 +1,8 @@
+'CollatzClockSecondScale.real_floor_log_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.half_log_le_log_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.localClockGoodEvent_floor_subset_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.real_landing_gt_sqrt_of_coarse_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

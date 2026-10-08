@@ -1,0 +1,3 @@
+'CollatzCanonical.PeriodicCensusFloor.logarithmicSourceMean_of_sourceMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,11 @@
+'Mangostas.hijos_altos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mangostas.paridades_altas' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mangostas.factor_par' depends on axioms: [propext, Quot.sound]
+'Mangostas.factor_impar' depends on axioms: [propext, Quot.sound]
+'Mangostas.hijos_bajos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mangostas.paridades_bajas' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mangostas.conteo_bajo' depends on axioms: [propext, Quot.sound]
+'Mangostas.conteo_alto' depends on axioms: [propext, Quot.sound]
+'Mangostas.adversarial_entrada' does not depend on any axioms
+'Mangostas.adversarial_salida_rapida' does not depend on any axioms
+'Mangostas.adversarial_cuenta' does not depend on any axioms

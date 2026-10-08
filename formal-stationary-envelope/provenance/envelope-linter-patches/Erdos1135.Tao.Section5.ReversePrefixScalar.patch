@@ -1,0 +1,25 @@
+--- original/Erdos1135.Tao.Section5.ReversePrefixScalar.lean
++++ candidate/Erdos1135.Tao.Section5.ReversePrefixScalar.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.Tao.Section5.ReversePrefix
+ import Erdos1135.Tao.Section5.DescentScale
+ 
+@@ -117,12 +121,12 @@
+     have htypical' :
+         taoSection5TypicalSlack B ≤ Real.log B / 8000000 := by
+       change Real.rpow (Real.log B) (3 / 5 : ℝ) ≤ Real.log B / 8000000
+-      convert htypical using 1 <;> ring
++      convert htypical using 1; ring
+     nlinarith
+   have hlostBudget :
+       taoSection5CanonicalLostSlack B ≤ Real.log B / 4000000 := by
+     change Real.rpow (Real.log B) (7 / 10 : ℝ) ≤ Real.log B / 4000000
+-    convert hlost using 1 <;> ring
++    convert hlost using 1; ring
+   have hlogTwoBudget : Real.log 2 ≤ Real.log B / 4000000 := by
+     nlinarith [log_two_lt_one_scalar]
+   have htotal :

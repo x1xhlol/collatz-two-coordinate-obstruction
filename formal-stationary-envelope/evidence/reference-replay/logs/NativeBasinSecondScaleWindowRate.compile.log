@@ -1,0 +1,3 @@
+'CollatzCanonical.NativeTao.native_basin_second_scale_normalized_window_rate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

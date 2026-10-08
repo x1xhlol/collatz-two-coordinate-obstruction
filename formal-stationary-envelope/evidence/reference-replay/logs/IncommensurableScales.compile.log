@@ -1,0 +1,2 @@
+'CollatzCanonical.Scales.no_equal_positive_powers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.Scales.logarithms_incommensurable' depends on axioms: [propext, Classical.choice, Quot.sound]

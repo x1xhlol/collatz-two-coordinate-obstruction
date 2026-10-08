@@ -1,0 +1,4 @@
+'CollatzClockSecondScale.clockRadius_le_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.exists_centered_first_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.exists_centered_first_hit_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.section5_centered_first_hit' depends on axioms: [propext, Classical.choice, Quot.sound]

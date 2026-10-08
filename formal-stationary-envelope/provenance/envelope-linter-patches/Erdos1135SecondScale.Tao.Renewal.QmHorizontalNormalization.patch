@@ -1,0 +1,23 @@
+--- original/Erdos1135SecondScale.Tao.Renewal.QmHorizontalNormalization.lean
++++ candidate/Erdos1135SecondScale.Tao.Renewal.QmHorizontalNormalization.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused bound-variable names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -114,12 +118,6 @@
+       rw [hnormalize]
+       unfold taoSection7Case3Outer754HorizontalFactor
+       dsimp [r]
+-      change ((m : ℝ) ^ A)⁻¹ *
+-          taoSection7Case3Outer754HorizontalScalar A m (Jtot omega) *
+-            taoSection7SourceActualQmAtCutoff n A (m - 1) xi epsilon =
+-        ((m : ℝ) ^ A)⁻¹ *
+-            taoSection7SourceActualQmAtCutoff n A (m - 1) xi epsilon *
+-          taoSection7Case3Outer754HorizontalScalar A m (Jtot omega)
+       ring
+ 
+ end

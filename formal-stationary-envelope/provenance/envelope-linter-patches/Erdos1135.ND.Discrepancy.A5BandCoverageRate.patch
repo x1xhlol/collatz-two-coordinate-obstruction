@@ -1,0 +1,70 @@
+--- original/Erdos1135.ND.Discrepancy.A5BandCoverageRate.lean
++++ candidate/Erdos1135.ND.Discrepancy.A5BandCoverageRate.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.ND.Band.A5BandCoverageFullGood
+ import Erdos1135.ND.Band.A5HarmonicFullGoodRate
+ import Erdos1135.ND.Discrepancy.A5TwoProfileFlat
+@@ -24,19 +28,19 @@
+       ∀ (branch : Tao.TaoSection5SourceBranch) (j : ℕ) (E : Set ℕ)
+         (hB : 1 ≤ B)
+         (hcount : 0 < ndA5BandCount B branch)
+-        (descent : Tao.TaoSection5DescentScaleFacts B)
+-        (time : Tao.TaoSection5PassTimeLocalizationFacts B)
+-        (lost : Tao.TaoSection5PassLostWindowFacts B)
+-        (hbudget : Tao.taoSection5ReversePrefixScalarBudget B)
+-        (hlogB : (300000 : ℝ) ≤ Real.log (B : ℝ))
+-        (hpadding : 3 * ndA5TubeWidth B C ≤
++        (_descent : Tao.TaoSection5DescentScaleFacts B)
++        (_time : Tao.TaoSection5PassTimeLocalizationFacts B)
++        (_lost : Tao.TaoSection5PassLostWindowFacts B)
++        (_hbudget : Tao.taoSection5ReversePrefixScalarBudget B)
++        (_hlogB : (300000 : ℝ) ≤ Real.log (B : ℝ))
++        (_hpadding : 3 * ndA5TubeWidth B C ≤
+           (33 / 500000 : ℝ) * Real.log (B : ℝ))
+-        (hWn0 : 10 * ndA5TubeWidth B C ≤
++        (_hWn0 : 10 * ndA5TubeWidth B C ≤
+           (Tao.taoSection5N0 B : ℝ))
+-        (hWlarge : 6 ≤ ndA5TubeWidth B C)
+-        (hwidth : ndA5TubeWidth B C ≤
++        (_hWlarge : 6 ≤ ndA5TubeWidth B C)
++        (_hwidth : ndA5TubeWidth B C ≤
+           Tao.taoSection5TypicalSlack B)
+-        (hj : j < ndA5BandCount B branch),
++        (_hj : j < ndA5BandCount B branch),
+         |((ndA5HarmonicBandPMF B branch j hB hcount).toOuterMeasure
+               (Tao.taoSection5PassEvent B E)).toReal -
+             ((ndA5HarmonicBandPMF B branch j hB hcount).toOuterMeasure
+@@ -64,19 +68,19 @@
+       ∀ (branch : Tao.TaoSection5SourceBranch) (j : ℕ) (E : Set ℕ)
+         (hB : 1 ≤ B)
+         (hcount : 0 < ndA5BandCount B branch)
+-        (descent : Tao.TaoSection5DescentScaleFacts B)
+-        (time : Tao.TaoSection5PassTimeLocalizationFacts B)
+-        (lost : Tao.TaoSection5PassLostWindowFacts B)
+-        (hbudget : Tao.taoSection5ReversePrefixScalarBudget B)
+-        (hlogB : (300000 : ℝ) ≤ Real.log (B : ℝ))
+-        (hpadding : 3 * ndA5TubeWidth B C ≤
++        (_descent : Tao.TaoSection5DescentScaleFacts B)
++        (_time : Tao.TaoSection5PassTimeLocalizationFacts B)
++        (_lost : Tao.TaoSection5PassLostWindowFacts B)
++        (_hbudget : Tao.taoSection5ReversePrefixScalarBudget B)
++        (_hlogB : (300000 : ℝ) ≤ Real.log (B : ℝ))
++        (_hpadding : 3 * ndA5TubeWidth B C ≤
+           (33 / 500000 : ℝ) * Real.log (B : ℝ))
+-        (hWn0 : 10 * ndA5TubeWidth B C ≤
++        (_hWn0 : 10 * ndA5TubeWidth B C ≤
+           (Tao.taoSection5N0 B : ℝ))
+-        (hWlarge : 6 ≤ ndA5TubeWidth B C)
+-        (hwidth : ndA5TubeWidth B C ≤
++        (_hWlarge : 6 ≤ ndA5TubeWidth B C)
++        (_hwidth : ndA5TubeWidth B C ≤
+           Tao.taoSection5TypicalSlack B)
+-        (hj : j < ndA5BandCount B branch),
++        (_hj : j < ndA5BandCount B branch),
+         |((ndA5FlatBandPMF B branch j hB hcount).toOuterMeasure
+               (Tao.taoSection5PassEvent B E)).toReal -
+             ((ndA5FlatBandPMF B branch j hB hcount).toOuterMeasure

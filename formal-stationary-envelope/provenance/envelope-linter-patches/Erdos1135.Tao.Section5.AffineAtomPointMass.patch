@@ -1,0 +1,19 @@
+--- original/Erdos1135.Tao.Section5.AffineAtomPointMass.lean
++++ candidate/Erdos1135.Tao.Section5.AffineAtomPointMass.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.Tao.Probability.LogWindowOddNatPoint
+ import Erdos1135.Tao.Section5.AffineAtomFiber
+ 
+@@ -60,7 +64,7 @@
+       taoAffineSourceCandidate_eq_of_taoAffList_eq htyp.1 hAff
+     rw [hAtom, PMF.toOuterMeasure_apply_singleton]
+     rw [oddLogWindowOddNatPMF_apply_of_mem hmass N hwindow]
+-    simpa only [hCandidate]
++    simp only [hCandidate]
+   · rw [if_neg hcompat]
+     rw [taoSection5ClosedAffineAtom_eq_empty_of_incompatible i hcompat]
+     simp

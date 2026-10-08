@@ -1,0 +1,19 @@
+--- original/Erdos1135Predecessor.ND.PositiveDensity.Geom2ShiftedWideSymmetricTerminalDepthShiftOrdinaryClock.lean
++++ candidate/Erdos1135Predecessor.ND.PositiveDensity.Geom2ShiftedWideSymmetricTerminalDepthShiftOrdinaryClock.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file was adapted from Lech Mazur's published predecessor-density source
+@@ -223,7 +227,7 @@
+   have hcoefB := mul_le_mul_of_nonneg_right hcoef hB
+   have hlog := U.fullTerminalPath_log_source_ge_floorSum hb cap n shift K z
+   have hlog' : (2569 / 9000 : ℝ) * B ≤ Real.log (x : ℝ) := by
+-    convert hlog using 1 <;> norm_num [B, x]
++    convert hlog using 1; norm_num [B, x]
+   have hlogC := mul_le_mul_of_nonneg_left hlog' hcoef0
+   have hfinal : gamma * ((p.depth : ℝ) + 1) ≤ gamma * (kappa * Real.log (x : ℝ)) := by
+     nlinarith only [hbudget, hcoefB, hlogC]

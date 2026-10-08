@@ -1,0 +1,4 @@
+'CollatzClockSecondScale.actual_prefix_centered_take' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.actual_prefix_bad_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.actual_prefix_bad_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.source_event_bad_probability_le' depends on axioms: [propext, Classical.choice, Quot.sound]

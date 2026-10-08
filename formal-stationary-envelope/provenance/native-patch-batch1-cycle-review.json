@@ -1,0 +1,70 @@
+{
+  "all_changed_proof_contexts_read": true,
+  "all_diffs_read": true,
+  "candidate_pins_sha256": "5f62dc91736fa747e770f5403476eb630dd54e5da5a8aaccaa593232a3dbc4a0",
+  "compile_record_sha256": "3a3523e7b5ce23819d40c450ca40f5552472c9b5a329281165ac5bc10305dc9c",
+  "findings": [],
+  "global_checks": {
+    "all_compile_logs_empty_and_hash_matched": true,
+    "all_recorded_compile_exit_codes_zero": true,
+    "all_recorded_compiles_use_warningAsError": true,
+    "every_candidate_has_modification_notice": true,
+    "every_patch_applied_with_fuzz_zero_and_reproduced_exact_candidate_bytes": true,
+    "no_warning_or_linter_disable_added": true,
+    "only_tactic_bodies_and_modification_notices_changed": true,
+    "theorem_statements_definitions_imports_preserved": true
+  },
+  "independent_lean_execution": false,
+  "modules": [
+    {
+      "candidate_sha256": "55954048125d1e0486ddd95a7545882a78f86c495012d8927caa45bb9ddfcd2f",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS_FUZZ_ZERO",
+      "module": "Erdos1135.Tao.Fourier.Section7PairExpansion",
+      "original_sha256": "8097e84283a110bdba12ca32cca3275f54b5e872771c46753a327995481df752",
+      "patch_sha256": "46ddaf9200c33051cc675698c3759f6c76de09467aabb78ca8994a3f02932c23",
+      "semantic_review": "The two congr/simp sequences retain the same goal simplification; the unused hj simp argument is removed while the following explicit subtype equality proof remains. No formula or branch is changed."
+    },
+    {
+      "candidate_sha256": "ba2465d694e63fed4e8446ab11d3672cf1eeb894018786f1046677351d5b9953",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS_FUZZ_ZERO",
+      "module": "Erdos1135.Tao.Fourier.Section7PairExpectation",
+      "original_sha256": "b4cab97e37207cd905db2241eb4e7b0a3f21b9853bd908470b7d6d2a0fa4f214",
+      "patch_sha256": "18358b00ede8a6032c327769c0cbf0562568f1db962d3ab99ed67aa57e5cd0cd",
+      "semantic_review": "Both dsimp only replacements definitionally reduce product projections before the unchanged tsum_mul_left step; summability hypotheses and summation reindexing are unchanged."
+    },
+    {
+      "candidate_sha256": "ea922933dd8ec8dc82dd05d53bd1a6ed66f58987a3efd6e1a1340172a8c35482",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS_FUZZ_ZERO",
+      "module": "Erdos1135.Tao.Renewal.CanonicalFirstPassageLocalizedMass",
+      "original_sha256": "7e9f205cc066a5504be24798938ed1677ad0baff21742943c4aac0308609de8e",
+      "patch_sha256": "4f7682ffa45b8d5458ff46fbd447e706d001604b2cf47108aca1803c6a1e54e8",
+      "semantic_review": "The marginal outer-measure lift is proved directly by simp after expanding the same local PMF and event definitions. The equality, tail hypotheses, radius, and resulting one-half mass bound are unchanged."
+    },
+    {
+      "candidate_sha256": "83acf4c36afbde3789e709bc32a1973614bf23c75fe6aa0a0bc95dfae8fb62ba",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS_FUZZ_ZERO",
+      "module": "Erdos1135.Tao.Renewal.Lemma77PotentialCore",
+      "original_sha256": "753f90f0474f06cd13ca4a0fc32b93e87a40803dbf1b120fb1efd684b7b0fbd0",
+      "patch_sha256": "5ecf7dcb10b2acbc49f0fe2cedb959a44af86851b71e3138d8d9909f5c515bbf",
+      "semantic_review": "The negative-horizontal-coordinate case uses the same pointwise zero lemma to simplify to summability of zero; only unnecessary simpa is replaced by simp."
+    },
+    {
+      "candidate_sha256": "54997dfb124fd5dc03fbfaf36b1b94e8d74329a56cc6ec6fee917287073fe167",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS_FUZZ_ZERO",
+      "module": "Erdos1135.Tao.Section6.ConductorProjectivity",
+      "original_sha256": "c152c14fbfa1551eae7b2e97e8996ad8f040116257b3cae3cae4ec2ba8317486",
+      "patch_sha256": "c44db8087ab90e729b1b688dcdd7d080180104364ff650dc0daeeb7aa7682067",
+      "semantic_review": "List.take_zero and List.drop_zero directly identify the two map functions. The prior using proof is unnecessary; theorem statement and imports are unchanged."
+    }
+  ],
+  "provenance_scope": "The source modification notices are present. Final corrected-bundle origins, licenses, source pins and native-linter-patches record still require final-bundle reconciliation; this review certifies only the immutable batch bytes.",
+  "reviewed_utc": "2026-10-08T03:10:49.367646+00:00",
+  "reviewer": "Cycle",
+  "scope": "Independent full-diff and changed-context semantic review, original/candidate/patch/log byte authentication, and temporary exact patch application with fuzz zero. Recorded strict compiles reuse imports; no independent Lean execution or fresh full-closure replay is claimed. Original failed bundle was not modified.",
+  "status": "PASS_SOURCE_DELTA_REVIEW"
+}

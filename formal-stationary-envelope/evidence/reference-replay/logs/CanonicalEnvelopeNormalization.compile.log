@@ -1,0 +1,9 @@
+'CollatzCanonical.IntegerStationaryEnvelope.lowerSemicontinuous_canonical_density_le_integer_trace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_normalized_le_self' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_normalizing_mass_eq_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

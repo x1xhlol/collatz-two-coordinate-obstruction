@@ -1,0 +1,12 @@
+{
+  "schema": "collatz-predecessor-density-rights-v1",
+  "extension_license_status": "AUTHOR_APPROVED",
+  "extension_license_identifier": "Apache-2.0",
+  "extension_approval_date": "2026-09-06",
+  "extension_approval_timezone": "America/New_York",
+  "extension_approval_basis": "Explicit rightsholder authorization for the new formalization code and its verification and reproduction tools.",
+  "baseline_license_identifier": "Apache-2.0",
+  "baseline_grant_not_transferred_to_new_material": true,
+  "paper_and_images_included_in_code_license": false,
+  "publication_authorized_by_this_record": false
+}

@@ -1,0 +1,5 @@
+'CollatzClockAudit.pmf_outer_mass_ne_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.pmf_outer_probability_union_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.pmf_outer_probability_biUnion_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.reference_stage_good_of_two_local_clocks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.reference_stage_clock_bad_probability' depends on axioms: [propext, Classical.choice, Quot.sound]

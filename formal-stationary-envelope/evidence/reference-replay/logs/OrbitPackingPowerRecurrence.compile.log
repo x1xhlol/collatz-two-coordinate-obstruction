@@ -1,0 +1,5 @@
+'CollatzOrbitPackingPowerRecurrence.floor_log_two_le_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzOrbitPackingPowerRecurrence.exists_packing_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzOrbitPackingPowerRecurrence.uniform_power_bound_of_packing_recurrence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

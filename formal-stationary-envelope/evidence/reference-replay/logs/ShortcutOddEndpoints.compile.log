@@ -1,0 +1,6 @@
+'CollatzCanonical.NativeTao.shortcut_odd_endpoint_is_syracuse_clock' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NativeTao.pass_preserved_after_shortcut_odd_landing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

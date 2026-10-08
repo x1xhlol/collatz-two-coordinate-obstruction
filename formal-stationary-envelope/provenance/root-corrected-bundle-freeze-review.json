@@ -1,0 +1,39 @@
+{
+  "corrected_manifest_sha256": "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69",
+  "independent_delta_checks": [
+    "Exactly32 reviewed candidate source replacements;330 byte-identical modules",
+    "Unchanged entry modules, targets, topological order, dependency closure, external dependencies, driver and audit implementation",
+    "All named/private declaration names and kinds and all imports unchanged; inventory line numbers refreshed",
+    "All43 manifest-pinned inputs authenticated; original10 also remain valid",
+    "Every adapted origin retains exact original provenance and patch hashes",
+    "All32 corrected patches already independently read/applied with fuzz=0 in root reviews; Cycle records authenticated",
+    "Setup only replaces manifest pin; corrected README fully read with correct trust and failure scopes"
+  ],
+  "module_count": 362,
+  "native_patch_record_sha256": "4c99f191cee5f15ad6cbaeb26e92125d1aeb4ba377af56ade638280a8a259243",
+  "original_manifest_sha256": "96500e070b6dcdc730975638029d0f7aa31ba40db2ecb46282f76c91175af5b9",
+  "pinned_file_count": 43,
+  "preflight_input_state_sha256": "aee4e58c8e03deb075a28cdd1160da50c4396adfc82b4cc521182583c80a4dbe",
+  "readme_sha256": "f75e0b13f2905e00ebd63dc4c123189e6bce7d0be5cd5d39324249716ab2cb38",
+  "review_harness_note": "An earlier authentication command completed source and inventory comparisons but stopped at an overly strict review-status spelling assertion. Cycle uses PASS_SOURCE_DELTA_REVIEW, whose record and no-findings scope were inspected before this successful rerun.",
+  "review_records": {
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-fair-haar-energy-oct8/full-sharp-reviewed-source-corrections/batch1/cycle-review.json": "a7a845351ae59b2be8bd88dbab0fb094e1621a3dd023067671a3606c5ede0376",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-fair-haar-energy-oct8/full-sharp-reviewed-source-corrections/batch2/cycle-review.json": "b00a7e118477dfc64f010227cfe042b615007c6e0a59f57c6c989de4a3f4bc2b",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-fair-haar-energy-oct8/root-linter-batch1-review.json": "3e0efb6aa53a683b180102869920d34cbe0f57aeebd08b99773f5472595026b8",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-fair-haar-energy-oct8/root-linter-batch2-review.json": "0d96f2c8dd602e4884f6be66549ec61c4de4e95b9dc01a77b071300770a4643c"
+  },
+  "reviewed_utc": "2026-10-08T03:19:58.897067+00:00",
+  "reviewer": "Root",
+  "runner_sha256": "0c6f892bf0e10bd9f6ac93d8cc8eb81217d1cafefa45841d36d500292ef5a4b3",
+  "scope": "Approves this corrected source freeze and unchanged strict replay driver for a new fresh full-closure run following successful read-only preflight. Does not claim that fresh run has completed or that library caches were rebuilt. Publication license appendices are separately reviewed and sealed.",
+  "setup_sha256": "dc5a1f61a4d98b4c56cf1401e2b8255f53c214f3cfbd6b7e495b5f2e4e1bed47",
+  "source_counts": {
+    "new-fair-haar-energy": 18,
+    "retained-native-bundle": 285,
+    "retained-private-proof": 26,
+    "reviewed-native-proof-syntax-adaptation": 32,
+    "reviewed-source-shard": 1
+  },
+  "source_origin_sha256": "65db1de59255f1eace8c9ca9bdc25517e4c620567197ced61946f4b722e07732",
+  "status": "PASS"
+}

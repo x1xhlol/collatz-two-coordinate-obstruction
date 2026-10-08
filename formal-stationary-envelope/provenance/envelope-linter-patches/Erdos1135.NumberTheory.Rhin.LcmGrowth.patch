@@ -1,0 +1,44 @@
+--- original/Erdos1135.NumberTheory.Rhin.LcmGrowth.lean
++++ candidate/Erdos1135.NumberTheory.Rhin.LcmGrowth.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused bound-variable names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.NumberTheory.Rhin.RangeLCM
+ import Mathlib.Data.Nat.Choose.Factorization
+ import Mathlib.Data.Nat.Choose.Sum
+@@ -173,7 +177,7 @@
+   have hb : b ≤ n - a := by omega
+   have hc : c ≤ n - a - b := by omega
+   have hd : d ≤ n - a - b - c := by omega
+-  simp only [sylvesterMultinomial, a, b, c, d]
++  simp only [sylvesterMultinomial]
+   exact mul_pos (mul_pos (mul_pos (Nat.choose_pos ha) (Nat.choose_pos hb))
+     (Nat.choose_pos hc)) (Nat.choose_pos hd)
+ 
+@@ -269,7 +273,7 @@
+     sylvesterPart43, Nat.div_div_eq_div_mul] at hStrict ⊢
+   rw [hRemainderZero]
+   simp only [add_zero]
+-  convert hStrict using 1 <;> simp only [mul_comm]
++  convert hStrict using 1; simp only [mul_comm]
+ 
+ /-- Division is subadditive across the exact five-part partition. -/
+ private theorem sylvester_floor_parts_le (n t : ℕ) :
+@@ -544,6 +548,7 @@
+     simp only [mul_pow]
+     dsimp only [common]
+     rw [hTwoDen, hSevenDen, hFortyThreeDen]
++    set_option exponentiation.threshold 2048 in
+     calc
+       (2 ^ 602 * 2 ^ 258 * 2 ^ 42) * 3 *
+           (7 ^ 903 * 7 ^ 602 * 7 ^ 42) *
+@@ -666,6 +671,7 @@
+       _ ≤ block ^ q := Nat.pow_le_pow_left hBlock q
+       _ ≤ sylvesterWeight n := hWeightBlock
+   have h602Residual : 602 ^ 1805 ≤ 3 ^ (6 * 1805) := by
++    set_option exponentiation.threshold 2048 in
+     calc
+       602 ^ 1805 ≤ (3 ^ 6) ^ 1805 :=
+         Nat.pow_le_pow_left (by norm_num) 1805

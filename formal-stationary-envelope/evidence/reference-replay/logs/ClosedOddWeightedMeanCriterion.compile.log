@@ -1,0 +1,3 @@
+'CollatzCanonical.DirichletAbelian.odd_weighted_mean_of_closed_normalized_windows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

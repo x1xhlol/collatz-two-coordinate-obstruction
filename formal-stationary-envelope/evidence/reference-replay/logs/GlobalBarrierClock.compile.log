@@ -1,0 +1,5 @@
+'CollatzClockAudit.globalClockErrorConstant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.global_clock_stage_error_le_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.real_clock_source_support_threshold_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.global_clock_good_implies_barrier_clock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.global_barrier_clock_failure_probability' depends on axioms: [propext, Classical.choice, Quot.sound]

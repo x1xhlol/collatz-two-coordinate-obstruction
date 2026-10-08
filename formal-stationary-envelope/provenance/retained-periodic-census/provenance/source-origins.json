@@ -1,0 +1,361 @@
+{
+  "ActualBasinExplicitLowerDensity": {
+    "group": "bounded-seed",
+    "original_local_sha256": "8eeae3b01880747ff91897a9caadd1aec1252e14d9479d5b4872a2eb5e9225b8",
+    "source_sha256": "8eeae3b01880747ff91897a9caadd1aec1252e14d9479d5b4872a2eb5e9225b8"
+  },
+  "ActualBasinPeriodicMean": {
+    "group": "periodic-census",
+    "original_local_sha256": "d1dee620448251b69e95504b86fde746726a1f8d753687f5c557f2778f6f7b56",
+    "source_sha256": "d1dee620448251b69e95504b86fde746726a1f8d753687f5c557f2778f6f7b56"
+  },
+  "ActualBasinPolynomialFloor": {
+    "group": "periodic-census",
+    "original_local_sha256": "756e9002202b7f6bf9f921953b6531d1b1dd27396c64c7db7d12e7315eba523c",
+    "source_sha256": "756e9002202b7f6bf9f921953b6531d1b1dd27396c64c7db7d12e7315eba523c"
+  },
+  "ActualBasinPowerLowerDensity": {
+    "group": "bounded-seed",
+    "original_local_sha256": "fb72fb7d60989208073ff7aed115ada98770ff18f045f66d7856b88b8a933343",
+    "source_sha256": "fb72fb7d60989208073ff7aed115ada98770ff18f045f66d7856b88b8a933343"
+  },
+  "ArbitraryPowerMixingBudget": {
+    "group": "bounded-seed",
+    "original_local_sha256": "b387f9c705063cf50c6a2d299f6ab75649c454cdd287855b897b3a5d01478bbb",
+    "source_sha256": "b387f9c705063cf50c6a2d299f6ab75649c454cdd287855b897b3a5d01478bbb"
+  },
+  "Banda": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "69745a6c78769ec7cbf4d962e651ea1a2c8bec1ed445aee535f092bb638fc4a0",
+    "prior_compatibility_sha256": "69745a6c78769ec7cbf4d962e651ea1a2c8bec1ed445aee535f092bb638fc4a0",
+    "source_sha256": "69745a6c78769ec7cbf4d962e651ea1a2c8bec1ed445aee535f092bb638fc4a0",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Banda.lean",
+    "upstream_sha256": "69745a6c78769ec7cbf4d962e651ea1a2c8bec1ed445aee535f092bb638fc4a0"
+  },
+  "BasinAdjacentVariation": {
+    "group": "periodic-census",
+    "original_local_sha256": "8a3818d6db57517da736dd9d717838d5b8d10e66a87978c9c059a70c5c57d609",
+    "source_sha256": "8a3818d6db57517da736dd9d717838d5b8d10e66a87978c9c059a70c5c57d609"
+  },
+  "BoundedFrozenSeed": {
+    "group": "bounded-seed",
+    "original_local_sha256": "8fc979610d0805abaa6b3fc190bb732b26ba5514caa9d5968c064c31aadc4478",
+    "source_sha256": "8fc979610d0805abaa6b3fc190bb732b26ba5514caa9d5968c064c31aadc4478"
+  },
+  "BoundedInverseResidueSeed": {
+    "group": "bounded-seed",
+    "original_local_sha256": "9abc42ddfb1fe12e62d940af97aeac15598906b7c5fecf7b06d1783fdf77016d",
+    "source_sha256": "9abc42ddfb1fe12e62d940af97aeac15598906b7c5fecf7b06d1783fdf77016d"
+  },
+  "BoundedPredecessorDensity": {
+    "group": "bounded-seed",
+    "original_local_sha256": "9d70853d18e685b6277c8d62467a29105edfdf6d94d92f23c109cf8781d19893",
+    "source_sha256": "9d70853d18e685b6277c8d62467a29105edfdf6d94d92f23c109cf8781d19893"
+  },
+  "CanonicalTracePolynomialFloor": {
+    "group": "periodic-census",
+    "original_local_sha256": "0fc02abbfd683e676102e241543e28746103c52866090c71308565b5b5934e29",
+    "source_sha256": "0fc02abbfd683e676102e241543e28746103c52866090c71308565b5b5934e29"
+  },
+  "ConteoEnsayos": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "aec459a1bc57779f2a4ecf79d734d7cb17ef778ec31b96fc98de26a54e11eb6e",
+    "prior_compatibility_sha256": "aec459a1bc57779f2a4ecf79d734d7cb17ef778ec31b96fc98de26a54e11eb6e",
+    "source_sha256": "aec459a1bc57779f2a4ecf79d734d7cb17ef778ec31b96fc98de26a54e11eb6e",
+    "upstream_archive_path": "depuracion/gao20260920/formal/ConteoEnsayos.lean",
+    "upstream_sha256": "aec459a1bc57779f2a4ecf79d734d7cb17ef778ec31b96fc98de26a54e11eb6e"
+  },
+  "Ensayo": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "e9eff0365c0d35fe9914732779001d6d9e5c0f2aa8b030f2621bdb4e85079af4",
+    "prior_compatibility_sha256": "e9eff0365c0d35fe9914732779001d6d9e5c0f2aa8b030f2621bdb4e85079af4",
+    "source_sha256": "e9eff0365c0d35fe9914732779001d6d9e5c0f2aa8b030f2621bdb4e85079af4",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Ensayo.lean",
+    "upstream_sha256": "e9eff0365c0d35fe9914732779001d6d9e5c0f2aa8b030f2621bdb4e85079af4"
+  },
+  "FrozenSeedPeriodicPrefix": {
+    "group": "periodic-census",
+    "original_local_sha256": "d23c9bd35b571d4b64a872f27dec9a4b3c70058b30351a82cb704612ce33030b",
+    "source_sha256": "d23c9bd35b571d4b64a872f27dec9a4b3c70058b30351a82cb704612ce33030b"
+  },
+  "GaoEnunciado": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "2221721561a4d67f38bd8ec010f33ce37c5aa53d89c12cd0a7cbf21527c8272c",
+    "prior_compatibility_sha256": "2221721561a4d67f38bd8ec010f33ce37c5aa53d89c12cd0a7cbf21527c8272c",
+    "source_sha256": "2221721561a4d67f38bd8ec010f33ce37c5aa53d89c12cd0a7cbf21527c8272c",
+    "upstream_archive_path": "depuracion/gao20260920/formal/GaoEnunciado.lean",
+    "upstream_sha256": "2221721561a4d67f38bd8ec010f33ce37c5aa53d89c12cd0a7cbf21527c8272c"
+  },
+  "GaoLiteral": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "69d63504430fd84e08624a7312f35be664de3d0a4c9b32bb446bcbf80462da7f",
+    "prior_compatibility_sha256": "69d63504430fd84e08624a7312f35be664de3d0a4c9b32bb446bcbf80462da7f",
+    "source_sha256": "69d63504430fd84e08624a7312f35be664de3d0a4c9b32bb446bcbf80462da7f",
+    "upstream_archive_path": "depuracion/gao20260920/formal/GaoLiteral.lean",
+    "upstream_sha256": "69d63504430fd84e08624a7312f35be664de3d0a4c9b32bb446bcbf80462da7f"
+  },
+  "GaoShortcutBridge": {
+    "group": "periodic-census",
+    "original_local_sha256": "9beaa614e4e3ba6a17d852b6fbc93d31fa2f3f452b11f564f4067c3958b17ba2",
+    "source_sha256": "9beaa614e4e3ba6a17d852b6fbc93d31fa2f3f452b11f564f4067c3958b17ba2"
+  },
+  "GenericPowerPredecessorCount": {
+    "group": "bounded-seed",
+    "original_local_sha256": "c3ff46fcb1f0611edac07751fa6042e0dddca2e1f1e58c72b76576df11f03958",
+    "source_sha256": "c3ff46fcb1f0611edac07751fa6042e0dddca2e1f1e58c72b76576df11f03958"
+  },
+  "GenericSeedPredecessorCount": {
+    "group": "bounded-seed",
+    "original_local_sha256": "fa7bd1195582cb03c991011df66754dc19a78b64e66e3d9befb879c8daa8f7c0",
+    "source_sha256": "fa7bd1195582cb03c991011df66754dc19a78b64e66e3d9befb879c8daa8f7c0"
+  },
+  "Guardias": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "3c80b755c5d64dd1474d5d1d7fc05024f54fe56e9fe2138b4b17d9f6e2621b84",
+    "prior_compatibility_sha256": "3c80b755c5d64dd1474d5d1d7fc05024f54fe56e9fe2138b4b17d9f6e2621b84",
+    "source_sha256": "3c80b755c5d64dd1474d5d1d7fc05024f54fe56e9fe2138b4b17d9f6e2621b84",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Guardias.lean",
+    "upstream_sha256": "3c80b755c5d64dd1474d5d1d7fc05024f54fe56e9fe2138b4b17d9f6e2621b84"
+  },
+  "Hienas": {
+    "group": "gao",
+    "modifications": "One import renamed; prominent packaging modification notice added. No theorem or proof text changed.",
+    "original_local_sha256": "6830581c341096469810646c318bdcdd867214b4a67da8de64907fbdd53a038c",
+    "prior_compatibility_sha256": "6830581c341096469810646c318bdcdd867214b4a67da8de64907fbdd53a038c",
+    "source_sha256": "42ebfe8bba2f9f3f9ed90fbc1bd0d4626f709d4fb91f46399aa6b5fef1ff799f",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Hienas.lean",
+    "upstream_sha256": "9026162d6c96aca77e655ca2430335dcae65727915213892a2c09ae7a577acf0"
+  },
+  "Hormigas": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "c64a0c6d16c69bd4f6bb4afab7cfe3041eb2d042daabd7ab7c94d50b384663f8",
+    "prior_compatibility_sha256": "c64a0c6d16c69bd4f6bb4afab7cfe3041eb2d042daabd7ab7c94d50b384663f8",
+    "source_sha256": "c64a0c6d16c69bd4f6bb4afab7cfe3041eb2d042daabd7ab7c94d50b384663f8",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Hormigas.lean",
+    "upstream_sha256": "c64a0c6d16c69bd4f6bb4afab7cfe3041eb2d042daabd7ab7c94d50b384663f8"
+  },
+  "Lagartijas": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "c189bda9190e6c9c0aa5b0cf641013ac8e06d951658b9f6208ad819142e8ed8b",
+    "prior_compatibility_sha256": "c189bda9190e6c9c0aa5b0cf641013ac8e06d951658b9f6208ad819142e8ed8b",
+    "source_sha256": "c189bda9190e6c9c0aa5b0cf641013ac8e06d951658b9f6208ad819142e8ed8b",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Lagartijas.lean",
+    "upstream_sha256": "c189bda9190e6c9c0aa5b0cf641013ac8e06d951658b9f6208ad819142e8ed8b"
+  },
+  "Martas": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "a738ad4f5df52b281aa7a7186748fbb4cdf4179f4b2c3c07b01dde7f39bb152a",
+    "prior_compatibility_sha256": "a738ad4f5df52b281aa7a7186748fbb4cdf4179f4b2c3c07b01dde7f39bb152a",
+    "source_sha256": "a738ad4f5df52b281aa7a7186748fbb4cdf4179f4b2c3c07b01dde7f39bb152a",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Martas.lean",
+    "upstream_sha256": "a738ad4f5df52b281aa7a7186748fbb4cdf4179f4b2c3c07b01dde7f39bb152a"
+  },
+  "Maximos": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "220bf50ed37167ffcda090212b11e086e227414eab734e51fee3b985b93e441e",
+    "prior_compatibility_sha256": "220bf50ed37167ffcda090212b11e086e227414eab734e51fee3b985b93e441e",
+    "source_sha256": "220bf50ed37167ffcda090212b11e086e227414eab734e51fee3b985b93e441e",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Maximos.lean",
+    "upstream_sha256": "220bf50ed37167ffcda090212b11e086e227414eab734e51fee3b985b93e441e"
+  },
+  "Momentos": {
+    "group": "gao",
+    "modifications": "One import renamed; prominent packaging modification notice added. No theorem or proof text changed.",
+    "original_local_sha256": "e3c79341d01ab7ef78418b40bddb6fb0661abdc5eaff824d8c0c2d9b6e32d9fa",
+    "prior_compatibility_sha256": "e3c79341d01ab7ef78418b40bddb6fb0661abdc5eaff824d8c0c2d9b6e32d9fa",
+    "source_sha256": "9acd0896e7f8255a7ed725948ed2828ce00ed5600d3448a24c2c89786e815ec2",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Momentos.lean",
+    "upstream_sha256": "50ac6d68f66092ba3a8bfee8f233f179fa5ef79a928e017d2c055e17decd6172"
+  },
+  "NativePredecessorMixingBridge": {
+    "group": "bounded-seed",
+    "original_local_sha256": "7fbf1bf5cc34fda5133069b3d454ad8fdae20d3645bef08875d62b66ca62a470",
+    "source_sha256": "7fbf1bf5cc34fda5133069b3d454ad8fdae20d3645bef08875d62b66ca62a470"
+  },
+  "OddTerminalFanMean": {
+    "group": "periodic-census",
+    "original_local_sha256": "7409a0d47abdc2716d4aeaff1140d888be27a63e67838ffa1a9634d35f13f46f",
+    "source_sha256": "7409a0d47abdc2716d4aeaff1140d888be27a63e67838ffa1a9634d35f13f46f"
+  },
+  "OrdinaryPredecessorPolynomialFloor": {
+    "group": "periodic-census",
+    "original_local_sha256": "d39d7c3032117460b63521307f04a594fea10834961e1817bb43ff741743c6f6",
+    "source_sha256": "d39d7c3032117460b63521307f04a594fea10834961e1817bb43ff741743c6f6"
+  },
+  "Palabras": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "419a2641ee623739eb2fb86375c6bfabf38ea8cfff0e35d342ad09507689b433",
+    "prior_compatibility_sha256": "419a2641ee623739eb2fb86375c6bfabf38ea8cfff0e35d342ad09507689b433",
+    "source_sha256": "419a2641ee623739eb2fb86375c6bfabf38ea8cfff0e35d342ad09507689b433",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Palabras.lean",
+    "upstream_sha256": "419a2641ee623739eb2fb86375c6bfabf38ea8cfff0e35d342ad09507689b433"
+  },
+  "ParametrosVentana": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "1b6642fea60d668784473bcab2fc1468cb9ea640984074eb057b94e26d8adeb8",
+    "prior_compatibility_sha256": "1b6642fea60d668784473bcab2fc1468cb9ea640984074eb057b94e26d8adeb8",
+    "source_sha256": "1b6642fea60d668784473bcab2fc1468cb9ea640984074eb057b94e26d8adeb8",
+    "upstream_archive_path": "depuracion/gao20260920/formal/ParametrosVentana.lean",
+    "upstream_sha256": "1b6642fea60d668784473bcab2fc1468cb9ea640984074eb057b94e26d8adeb8"
+  },
+  "PeriodicSourceMean": {
+    "group": "periodic-census",
+    "original_local_sha256": "aa258d8a1ddb25033383a45161e31b479ba952f5a84a119fd8c43ba38da4c349",
+    "source_sha256": "aa258d8a1ddb25033383a45161e31b479ba952f5a84a119fd8c43ba38da4c349"
+  },
+  "PowerDensityFloor": {
+    "group": "bounded-seed",
+    "original_local_sha256": "f511d833ed03883f15f9f4807ea415333a5bfdc24101cff6d51066af4b62db1e",
+    "source_sha256": "f511d833ed03883f15f9f4807ea415333a5bfdc24101cff6d51066af4b62db1e"
+  },
+  "PowerPredecessorDensity": {
+    "group": "bounded-seed",
+    "original_local_sha256": "9409270a21404c9f3309ee00452f5aa608452a236841d5a3d345af8283e51cbd",
+    "source_sha256": "9409270a21404c9f3309ee00452f5aa608452a236841d5a3d345af8283e51cbd"
+  },
+  "Producto": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "37f73ac10c9ea7bc37edfaaedeed0207c3acf47fb51d8cdf6b181f611b421df5",
+    "prior_compatibility_sha256": "37f73ac10c9ea7bc37edfaaedeed0207c3acf47fb51d8cdf6b181f611b421df5",
+    "source_sha256": "37f73ac10c9ea7bc37edfaaedeed0207c3acf47fb51d8cdf6b181f611b421df5",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Producto.lean",
+    "upstream_sha256": "37f73ac10c9ea7bc37edfaaedeed0207c3acf47fb51d8cdf6b181f611b421df5"
+  },
+  "RachasEnteras": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "2a70b2f655fff56800a85178f934d8aba9005f55bdceea9286421742ee3b7cf7",
+    "prior_compatibility_sha256": "2a70b2f655fff56800a85178f934d8aba9005f55bdceea9286421742ee3b7cf7",
+    "source_sha256": "2a70b2f655fff56800a85178f934d8aba9005f55bdceea9286421742ee3b7cf7",
+    "upstream_archive_path": "depuracion/gao20260920/formal/RachasEnteras.lean",
+    "upstream_sha256": "2a70b2f655fff56800a85178f934d8aba9005f55bdceea9286421742ee3b7cf7"
+  },
+  "Reloj": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "8559ece03ea35f6a544216ffd1d814cc4e4903c0ae1063aa7c6f9e4ca417e0a0",
+    "prior_compatibility_sha256": "8559ece03ea35f6a544216ffd1d814cc4e4903c0ae1063aa7c6f9e4ca417e0a0",
+    "source_sha256": "8559ece03ea35f6a544216ffd1d814cc4e4903c0ae1063aa7c6f9e4ca417e0a0",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Reloj.lean",
+    "upstream_sha256": "8559ece03ea35f6a544216ffd1d814cc4e4903c0ae1063aa7c6f9e4ca417e0a0"
+  },
+  "Repeticion": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "a646fcda83fd8beb55eea0164fb2b11e7677f1bdd8f6116c79dcb24d70a46a16",
+    "prior_compatibility_sha256": "a646fcda83fd8beb55eea0164fb2b11e7677f1bdd8f6116c79dcb24d70a46a16",
+    "source_sha256": "a646fcda83fd8beb55eea0164fb2b11e7677f1bdd8f6116c79dcb24d70a46a16",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Repeticion.lean",
+    "upstream_sha256": "a646fcda83fd8beb55eea0164fb2b11e7677f1bdd8f6116c79dcb24d70a46a16"
+  },
+  "Resto": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "f299916edb43aa7ad1a62e52ffdecb459700299da3b0591ae39f083ce29fce09",
+    "prior_compatibility_sha256": "f299916edb43aa7ad1a62e52ffdecb459700299da3b0591ae39f083ce29fce09",
+    "source_sha256": "f299916edb43aa7ad1a62e52ffdecb459700299da3b0591ae39f083ce29fce09",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Resto.lean",
+    "upstream_sha256": "f299916edb43aa7ad1a62e52ffdecb459700299da3b0591ae39f083ce29fce09"
+  },
+  "SalidaPalabras": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "a3ea771e9ef098a295a53470a7e279578082863be42c88b75631179365bed9a8",
+    "prior_compatibility_sha256": "a3ea771e9ef098a295a53470a7e279578082863be42c88b75631179365bed9a8",
+    "source_sha256": "a3ea771e9ef098a295a53470a7e279578082863be42c88b75631179365bed9a8",
+    "upstream_archive_path": "depuracion/gao20260920/formal/SalidaPalabras.lean",
+    "upstream_sha256": "a3ea771e9ef098a295a53470a7e279578082863be42c88b75631179365bed9a8"
+  },
+  "SeedDensityFloor": {
+    "group": "bounded-seed",
+    "original_local_sha256": "16007eb0641d99c97119c55b0c445adb61d97d6c3772e90cfc2a1e140d155740",
+    "source_sha256": "16007eb0641d99c97119c55b0c445adb61d97d6c3772e90cfc2a1e140d155740"
+  },
+  "SixthPowerMixingBudget": {
+    "group": "bounded-seed",
+    "original_local_sha256": "07600146821edaa320f20faf6da25846d0ed079dceff366e0afaa1a48ceed8b7",
+    "source_sha256": "07600146821edaa320f20faf6da25846d0ed079dceff366e0afaa1a48ceed8b7"
+  },
+  "Supervivencia": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "2179e4c18ad39da276c7d3fe6a4aad6c79f46bd142e04266dcabee97c7789551",
+    "prior_compatibility_sha256": "2179e4c18ad39da276c7d3fe6a4aad6c79f46bd142e04266dcabee97c7789551",
+    "source_sha256": "2179e4c18ad39da276c7d3fe6a4aad6c79f46bd142e04266dcabee97c7789551",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Supervivencia.lean",
+    "upstream_sha256": "2179e4c18ad39da276c7d3fe6a4aad6c79f46bd142e04266dcabee97c7789551"
+  },
+  "Tejonas": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "95541d9d2258e4e9d7afe71125cbe259d0cee1addaef14f77e96ba1ce3cc934b",
+    "prior_compatibility_sha256": "95541d9d2258e4e9d7afe71125cbe259d0cee1addaef14f77e96ba1ce3cc934b",
+    "source_sha256": "95541d9d2258e4e9d7afe71125cbe259d0cee1addaef14f77e96ba1ce3cc934b",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Tejonas.lean",
+    "upstream_sha256": "95541d9d2258e4e9d7afe71125cbe259d0cee1addaef14f77e96ba1ce3cc934b"
+  },
+  "TerminalFanCensus": {
+    "group": "periodic-census",
+    "original_local_sha256": "a105c0da85325709097f1d3ff65d03aa5eeff9e2dc7fc678f7c289cbf69e6fc7",
+    "source_sha256": "a105c0da85325709097f1d3ff65d03aa5eeff9e2dc7fc678f7c289cbf69e6fc7"
+  },
+  "TerminalFanEnvelope": {
+    "group": "periodic-census",
+    "original_local_sha256": "c905901d079545974256b9c8723a37c9f46b4ba82026af9125ed1c8905d57810",
+    "source_sha256": "c905901d079545974256b9c8723a37c9f46b4ba82026af9125ed1c8905d57810"
+  },
+  "TwoSiblingNonreturn": {
+    "group": "bounded-seed",
+    "original_local_sha256": "09a95903cd5354c3db5e878e0a0132cd1cbd47aba8ccd0862729eec8656aab83",
+    "source_sha256": "09a95903cd5354c3db5e878e0a0132cd1cbd47aba8ccd0862729eec8656aab83"
+  },
+  "UmbralRachas": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "e88cd73bbfa8d4b724660f26de911b0d057b6cbf95117a6460f0c821dc796e24",
+    "prior_compatibility_sha256": "e88cd73bbfa8d4b724660f26de911b0d057b6cbf95117a6460f0c821dc796e24",
+    "source_sha256": "e88cd73bbfa8d4b724660f26de911b0d057b6cbf95117a6460f0c821dc796e24",
+    "upstream_archive_path": "depuracion/gao20260920/formal/UmbralRachas.lean",
+    "upstream_sha256": "e88cd73bbfa8d4b724660f26de911b0d057b6cbf95117a6460f0c821dc796e24"
+  },
+  "Ventana": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "b26b5277586938ac8033c27048cd0eddaaf272e9f68eaf40c5e70c79445fbbe0",
+    "prior_compatibility_sha256": "b26b5277586938ac8033c27048cd0eddaaf272e9f68eaf40c5e70c79445fbbe0",
+    "source_sha256": "b26b5277586938ac8033c27048cd0eddaaf272e9f68eaf40c5e70c79445fbbe0",
+    "upstream_archive_path": "depuracion/gao20260920/formal/Ventana.lean",
+    "upstream_sha256": "b26b5277586938ac8033c27048cd0eddaaf272e9f68eaf40c5e70c79445fbbe0"
+  },
+  "cadena_completa": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "b82878945590610af2a3cd7d9c755dd4eed28f453856767695cf05e44c15bf63",
+    "prior_compatibility_sha256": "b82878945590610af2a3cd7d9c755dd4eed28f453856767695cf05e44c15bf63",
+    "source_sha256": "b82878945590610af2a3cd7d9c755dd4eed28f453856767695cf05e44c15bf63",
+    "upstream_archive_path": "depuracion/gao20260920/cadena_completa.lean",
+    "upstream_sha256": "b82878945590610af2a3cd7d9c755dd4eed28f453856767695cf05e44c15bf63"
+  },
+  "rachas": {
+    "group": "gao",
+    "modifications": "None; byte-identical to upstream archive source.",
+    "original_local_sha256": "8093afbb4fc20de95a9c703ff6b5d1cd03582760b06111873465497eabdfe6c9",
+    "prior_compatibility_sha256": "8093afbb4fc20de95a9c703ff6b5d1cd03582760b06111873465497eabdfe6c9",
+    "source_sha256": "8093afbb4fc20de95a9c703ff6b5d1cd03582760b06111873465497eabdfe6c9",
+    "upstream_archive_path": "depuracion/frente20260910/rachas.lean",
+    "upstream_sha256": "8093afbb4fc20de95a9c703ff6b5d1cd03582760b06111873465497eabdfe6c9"
+  }
+}

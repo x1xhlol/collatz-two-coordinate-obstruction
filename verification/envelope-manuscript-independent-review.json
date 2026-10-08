@@ -1,0 +1,148 @@
+{
+  "status": "PASS \u2014 final manuscript, PDF, integration scope and source-license consistency review",
+  "reviewer": "Occupation",
+  "created_utc": "2026-10-08T12:40:57.741264+00:00",
+  "final_files": [
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/integration-final/positive-stationary-envelope.tex",
+      "sha256": "522693c1f61c233f56f7d95e31c58a266ee81729d3628f2656f55a418cd01a78"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/integration-final/positive-stationary-envelope.pdf",
+      "sha256": "8525cef1cda701874bcea9115670bab915091b0a1e5959b87a44a7c23493388f"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/integration-final/README.md",
+      "sha256": "76baa5a375c09a8f4cbcc043cd0057d2b69103224a14854070c98342a3f6c257"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/integration-final/CITATION.cff",
+      "sha256": "73b7952aad8a8a2290afa13bf5562b1cadb11bd35e811ff027d0370480d58621"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/integration-final/envelope-lean-claims.md",
+      "sha256": "e01df8a892ceb37c5b02ed5bf0e8851f93168003be77fdd0cd71e2f697a5f994"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/integration-final/render-record.json",
+      "sha256": "b089a1d3bbfe7904e3bcbe92039159ed4f62190b133bf5096dc6bfbe9736310f"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/integration-final/pdf-metrics.json",
+      "sha256": "97a1038f3a292fd008f5e4af5a84f98ebe73e6b02724709e3c06a237ab97e20c"
+    }
+  ],
+  "stage_bindings": [
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/source-manifest.json",
+      "sha256": "c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/publication-manifest.json",
+      "sha256": "fd5e291225eacd415823f55b6da9ab1f347f2a78cc92df0968b5c29b168bc366"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/distribution-plan.json",
+      "sha256": "8c4a1fa60d79f45f4449bb802ec54242e6542e7ad76538a7795cfacdcfe43c64"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/REPLAY-GUIDE.md",
+      "sha256": "d8a29234d5ce58bf1619ee585ea7c88ef3e2be8049f5dac1025672a6239f70f1"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/README.md",
+      "sha256": "b83704dcab7d8c434e0b468299ce7717ac49a9067e1cd0899149fd38ef9fca39"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/README.md",
+      "sha256": "b1c93d687df752b885409e4b1bdf2ac26a94b963811d8af0d3159ef46b06a6df"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/SOURCE-LICENSES.txt",
+      "sha256": "8fceca9b0255c3c3c30e2b6fd2b847b82553d9786137552ba89f3053d7934ea8"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/provenance/envelope-license-review.json",
+      "sha256": "26548b1d087994e5b3944bf0f736dbd06fe7db5b43b90c138d781110fa059da3"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/provenance/envelope-license-occupation-review-corrected-20261008.json",
+      "sha256": "299c45bb06c4c31684b310198bce07522b85b164643d838fbe947b4e757af44b"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/reference-replay/replay-record.json",
+      "sha256": "d51c6afb6168cf34f629cd1d1849cdf5c98067a30c6f60c5d311b74e4e9f39fe"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/reference-replay/input-state-before.json",
+      "sha256": "627a527e144246011a584033e7c6a1e80bbe544ee1eebe0fa32cf12df363fbf5"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/reference-replay/input-state-after.json",
+      "sha256": "627a527e144246011a584033e7c6a1e80bbe544ee1eebe0fa32cf12df363fbf5"
+    },
+    {
+      "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/validation/validation-record.json",
+      "sha256": "640d21a42edd676ece9064a1773769dc8fdd6271275be7c7ab9c07d813473df9"
+    }
+  ],
+  "approved_mathematical_base": {
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/manuscript/positive-stationary-envelope.tex",
+    "sha256": "72e48f83c2970d9abfeccdd86a63545465cfded023286866d0b90d2f641b7f9a"
+  },
+  "approved_claim_map_base": {
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/manuscript/positive-stationary-envelope-lean-claims.md",
+    "sha256": "5902c9647fdfd6e71a4c0fe4b9e5c4429501698048e1282a9511226f4715c93d"
+  },
+  "preparation_review": {
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/integration-draft/occupation-publication-template-preparation-review.json",
+    "sha256": "641a8e89244945fd3c1c9faf12ffe35fcdce6b5152f286b8817b2ff1e7775d89"
+  },
+  "checks": {
+    "mathematics": "The approved manuscript is preserved byte-for-byte apart from the already checked scoped preprint sentence/bibliography and the completed verification paragraph. Final TeX equals the reviewed template with exactly one placeholder replacement. All proof statements, constants, domains and mathematical formulas are preserved.",
+    "claim_map": "Only the stale private verification paragraph and intended-location preface changed. All 50 table endpoint names occur in the checked declaration audit. All 44 links resolve against the actual staged bundle, including 23 distinct Lean source files and the completed evidence links.",
+    "readme_citation": "README is exactly its reviewed template with the completed evidence paragraph inserted; all 48 relative links resolve in the planned merged public layout using the staged bundle, rendered paper files and existing repository. CITATION is byte-identical to the reviewed, successfully parsed YAML with four paper references and matching title/author/date/version scope.",
+    "execution_counts": {
+      "source_modules": 1620,
+      "compile_commands": 1621,
+      "official_kernel_commands": 1621,
+      "successful_commands": 3242,
+      "audit_module_header_constant_rows": 36651,
+      "audit_distinct_names": 36539,
+      "audit_encoded_private_rows": 3419,
+      "external_compiled_objects": 53006
+    },
+    "count_method": "Independently counted the record modules, command stages and successful exits; checked strict compilation flags and official checker commands; recounted declaration rows, distinct names and private rows; checked every row uses only the three permitted axioms. Before/after input-state hashes agree and the external inventory has 53,006 entries.",
+    "validation": "The recorded setup-reuse, fresh-process verification and relocated verification each exited zero; their three public log hashes match. Text accurately states that relocation copied internal objects and reused the same external libraries, with no recompilation. External caches were fingerprinted and reused; no external source rebuild or source/object correspondence proof is claimed. Fresh dependency download was not exercised.",
+    "license_scope": "The actual staged combined ledger and inventory are byte-identical to the previously reviewed corrected records. Rechecked all 1,620 selected module hashes and evidence paths against the actual stage, equality of selected module sets with the execution manifest, and all 41 additional retained-file hashes. Scope remains 276 MIT modules, 1,340 Apache-2.0 modules and four predecessor-derived mixed-scope modules. The earlier 362-module ledger is explicitly historical; original local MIT grants are not applied to third-party sources. The paper separately states CC BY 4.0.",
+    "pdf": {
+      "sha256": "8525cef1cda701874bcea9115670bab915091b0a1e5959b87a44a7c23493388f",
+      "pages": 8,
+      "independent_visual_reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "visual_result": "All pages independently inspected at rendered resolution; formulas, theorem numbering, verification paragraph, attribution and bibliography are legible with no clipping, overlap or missing content.",
+      "text_result": "Extracted text and all eight rendered pages checked against the final source; numerical verification claims and the scoped preprint statement appear correctly.",
+      "metadata": "Title and author match the manuscript. All 24 fonts are embedded.",
+      "log_result": "No actual typesetting warning, overfull/underfull box, undefined reference or missing-glyph warning found.",
+      "uri_annotations": "CC BY license, Tao DOI, Tao 2020 page, Nikpour\u2013Rabbani DOI and repository targets match the final source."
+    }
+  },
+  "resolved_findings": [
+    {
+      "finding": "The initial final claim map retained the private pending-replay paragraph.",
+      "resolution": "Root replaced only that status paragraph and finalized its link preface; corrected map e01df8a892ceb37c5b02ed5bf0e8851f93168003be77fdd0cd71e2f697a5f994 was independently rechecked and is the version bound above."
+    }
+  ],
+  "remaining_findings": [],
+  "scope": "Final mathematical preservation, rendered-document and documentary integration review. Record-level counts, axiom scope, selected license pins and intended merged-layout links were independently checked. This review ran no new Lean jobs and does not claim another full source replay; Cycle separately authenticates the complete replay/distribution artifact set. It approves the exact staged/rendered files bound above, not a later unexamined public copy.",
+  "public_or_frozen_edits": false,
+  "new_lean_jobs": false
+}

@@ -1,0 +1,19 @@
+--- original/Erdos1135Predecessor.Tao.Probability.CountableMarkov.lean
++++ candidate/Erdos1135Predecessor.Tao.Probability.CountableMarkov.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file was adapted from Lech Mazur's published predecessor-density source
+@@ -113,7 +117,7 @@
+   · have hcut : cutoff ≤ F a := le_of_lt ha
+     have hmem : cutoff < F a := by simpa [E] using ha
+     simp only [Set.indicator, Set.mem_setOf_eq, hmem, if_true, one_mul]
+-    exact mul_le_mul_left' hcut _
++    exact mul_le_mul_right hcut _
+   · have hnot : ¬ cutoff < F a := by simpa [E] using ha
+     simp [Set.indicator, hnot]
+ 

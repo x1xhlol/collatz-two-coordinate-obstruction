@@ -1,10 +1,27 @@
-# Collatz basin densities, Fourier decay, and Syracuse integrability
+# Collatz basin densities and Syracuse laws
 
-This repository maintains three papers by Lucas Valbuena, with Lean sources, pinned dependencies, and reproducible verification records.
+This repository maintains four papers by Lucas Valbuena, with Lean sources, pinned dependencies, and reproducible verification records.
 
+- [A positive semicontinuous density for the Syracuse stationary law](paper/positive-stationary-envelope.pdf) · [Source](paper/positive-stationary-envelope.tex) · [Theorem-to-Lean map](paper/envelope-lean-claims.md)
 - [Quadratic cylinder energy and integrability of the Syracuse law](paper/quadratic-cylinder-energy.pdf) · [Source](paper/quadratic-cylinder-energy.tex) · [Theorem-to-Lean map](paper/sharp-haar-lean-claims.md)
 - [Fourier decay for truncated Syracuse affine laws](paper/growing-deficit-fourier.pdf) · [Source](paper/growing-deficit-fourier.tex) · [Theorem-to-Lean map](paper/growing-deficit-lean-claims.md)
 - [Collatz basin densities and canonical traces from first-passage stabilization](paper/tao-basin-densities.pdf) · [Source](paper/tao-basin-densities.tex) · [Theorem-to-Lean map](paper/basin-lean-claims.md)
+
+## Positive stationary density and integer traces
+
+The canonical Syracuse stationary law has a greatest nonnegative lower semicontinuous density `E` with respect to full additive Haar probability on the 3-adic integers. It integrates to one, vanishes off the units, and has one uniform positive lower bound on the units. At every positive integer, `E(n)` equals the arithmetic trace from weighted first-hit densities, including its cycle factor at periodic targets.
+
+Every unit cylinder of depth `k` therefore has mass at least `c * 3^(-k)`. Averaging the unit-cylinder masses also gives an upper bound for their minimum `c_k`:
+
+```text
+c * 3^(-k) <= c_k <= (3/2) * 3^(-k),    k >= 1.
+```
+
+This gives exponent one in Tao's minimum-atom question. At each positive integer, the cylinder densities converge to the arithmetic trace in Cesàro mean absolute error. The envelope is infinite on a Haar-null Gδ set dense in the units; its finite integer trace is unbounded in every unit residue class. The envelope is discontinuous at each positive unit integer. The continuity statement concerns the envelope as a function into the extended nonnegative reals.
+
+These statements connect the stationary measure to the actual arithmetic trace. They do not give a uniform approximation as the integer grows, a matching occupation upper bound, or a proof of the Collatz conjecture.
+
+The standalone [envelope proof bundle](formal-stationary-envelope/REPLAY-GUIDE.md) uses Lean **4.30.0-rc2**. All 1,620 internal source modules and their generated declaration audit were freshly compiled with warnings as errors and individually checked by Lean's official kernel checker, for 3,242 successful commands. The audit covers 36,651 module-header/constant rows, 36,539 distinct names and 3,419 encoded-private rows, using only the three standard axioms listed below. Complete inventories of 53,006 external compiled objects agreed before and after the run. These external libraries were fingerprinted and reused; they were not rebuilt or independently matched to adjacent source checkouts. Setup reuse and fresh-process record verification also passed, including verification in a relocated directory using copied internal objects and the same external libraries. Relocation did not recompile the sources. The fresh dependency-download branch was not exercised. The [preserved evidence](formal-stationary-envelope/evidence/README.md) records the precise execution and validation scope.
 
 ## Syracuse integrability and cylinder energy
 
@@ -78,7 +95,7 @@ The [artifact manifest](paper/artifact-manifest.json) binds the current paper an
 
 ## Reproduce the proofs
 
-The [sharp-integrability bundle](formal-sharp-haar/README.md) and [Fourier bundle](formal-growing-deficit/README.md) each have their own standalone instructions. The six bundles below support the basin paper.
+The [envelope bundle](formal-stationary-envelope/REPLAY-GUIDE.md), [sharp-integrability bundle](formal-sharp-haar/README.md) and [Fourier bundle](formal-growing-deficit/README.md) each have their own standalone instructions. The six bundles below support the basin paper.
 
 The six basin-paper bundles use Lean **4.30.0-rc2**, commit `3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc`, and Mathlib **`5450b53e5ddc75d46418fabb605edbf36bd0beb6`**. Their manifests pin the package revisions as well.
 
@@ -152,13 +169,14 @@ Each output directory must be new. Each additive verifier recompiles all its sup
 
 ## Build the papers
 
-All three sources are self-contained, including their bibliographies. Use XeLaTeX twice or Tectonic. The basin paper also requires the TeX Live font `DejaVuSansMono.ttf`:
+All four sources are self-contained, including their bibliographies. Use XeLaTeX twice or Tectonic. The basin paper also requires the TeX Live font `DejaVuSansMono.ttf`:
 
 ```sh
 cd paper
 tectonic --keep-logs --untrusted tao-basin-densities.tex
 tectonic --keep-logs --untrusted growing-deficit-fourier.tex
 tectonic --keep-logs --untrusted quadratic-cylinder-energy.tex
+tectonic --keep-logs --untrusted positive-stationary-envelope.tex
 ```
 
 ## Attribution and licenses
@@ -167,6 +185,8 @@ The basin paper credits [Tao's first-passage theorem](https://doi.org/10.1017/fm
 
 Original code and documentation use the [MIT license](LICENSE). The papers and their sources use [CC BY 4.0](paper/LICENSE). Imported and adapted formal sources retain their own licenses and notices; see the [native source-license map](formal-basins-native/SOURCE-LICENSES.md), [density-extension source-license map](formal-periodic-census/SOURCE-LICENSES.txt), [energy-extension source-license map](formal-cylinder-energy/SOURCE-LICENSES.txt), [occupation-extension source-license map](formal-raw-occupation/SOURCE-LICENSES.txt), [excess source-license map](formal-raw-divergent-excess/SOURCE-LICENSES.txt), and [inverse-clock source-license map](formal-inverse-doob-clock/SOURCE-LICENSES.txt). They are not relicensed as original local work.
 
-The publication set was narrowed to the basin paper on 3 October 2026 and subsequently expanded with the growing-deficit Fourier and sharp-integrability results. Earlier standalone papers and superseded Lean developments remain in [repository history](https://github.com/x1xhlol/collatz-two-coordinate-obstruction/commits/main/) and [previous releases](https://github.com/x1xhlol/collatz-two-coordinate-obstruction/releases). Their removal from the current collection is an editorial choice, not a claim that their checked results were false. The repository URL is retained for existing citations. The Fourier bundle has its own [third-party notices](formal-growing-deficit/THIRD_PARTY_NOTICES.md), including the incorporated Advameg and Ralf Stephan formalizations.
+The publication set was narrowed to the basin paper on 3 October 2026 and subsequently expanded with the growing-deficit Fourier, sharp-integrability and stationary-envelope results. Earlier standalone papers and superseded Lean developments remain in [repository history](https://github.com/x1xhlol/collatz-two-coordinate-obstruction/commits/main/) and [previous releases](https://github.com/x1xhlol/collatz-two-coordinate-obstruction/releases). Their removal from the current collection is an editorial choice, not a claim that their checked results were false. The repository URL is retained for existing citations. The Fourier bundle has its own [third-party notices](formal-growing-deficit/THIRD_PARTY_NOTICES.md), including the incorporated Advameg and Ralf Stephan formalizations.
 
 The sharp-integrability bundle includes its own [source-license map](formal-sharp-haar/licenses/SOURCE-LICENSES.txt) and [preserved replay evidence](formal-sharp-haar/evidence/README.md), including the reviewed native compatibility patches and original failed attempt.
+
+The envelope bundle has a [combined source-license map](formal-stationary-envelope/SOURCE-LICENSES.txt) covering its complete selection and [preserved execution evidence](formal-stationary-envelope/evidence/README.md). Its sources retain the original notices and exact proof-compatibility patches.

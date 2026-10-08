@@ -1,0 +1,51 @@
+{
+  "status": "PASS: corrected source-license and attribution inventory consistency review",
+  "reviewer": "Occupation",
+  "created_utc": "2026-10-08T10:44:07.194939+00:00",
+  "scope": "Read-only documentary source-scope review; no legal conclusion, no public/frozen edits, and no claim that the fresh replay has completed.",
+  "reviewed_sha256": {
+    "source_manifest": "c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c",
+    "SOURCE-LICENSES.txt": "8fceca9b0255c3c3c30e2b6fd2b847b82553d9786137552ba89f3053d7934ea8",
+    "provenance/envelope-license-review.json": "26548b1d087994e5b3944bf0f736dbd06fe7db5b43b90c138d781110fa059da3",
+    "preparation/prepare_publication_licenses_corrected.py": "09a7b2aa64cb9e3a0ab20af2d59a015822d19d1fe9d297d91ba2d78b1629a09f",
+    "frozen_source_origins": "a15f7177945e9327ac1fc4fe50b20f51c72369d4c8a6f1528b467dc25d9496c1"
+  },
+  "checks": {
+    "source_count": 1620,
+    "license_scope_counts": {
+      "MIT": 276,
+      "Apache-2.0": 1340,
+      "Apache-2.0-derived material; MIT original local additions": 4
+    },
+    "all_selected_sources_manifest_and_origin_pins_match": true,
+    "every_classification_matches_its_retained_documentary_grant": true,
+    "all_118_compatibility_sources_resolve_original_license_group": true,
+    "Tejonas_retains_Gao_Apache_scope": true,
+    "additional_retained_files": 41,
+    "all_additional_hashes_match_without_replacing_frozen_files": true,
+    "per_module_evidence_paths_exist": true,
+    "selected_Gao_modules": 23,
+    "selected_Gao_additional_proof_patch": [
+      "Tejonas"
+    ],
+    "retained_Gao_import_compatibility": "Momentos; preserved previous import-only record",
+    "earlier_selected_compatibility_patches": 32,
+    "additional_selected_compatibility_patches": 118,
+    "Sharpe_copyright_full_MIT_permission_and_commit_retained": true,
+    "predecessor_derived_modules": [
+      "BoundedFrozenSeed",
+      "FrozenSeedPeriodicPrefix",
+      "GenericSeedPredecessorCount",
+      "TerminalFanCensus"
+    ],
+    "Gao_archive_contains_no_paper_or_image_files": true,
+    "earlier_362_module_ledger_is_correctly_marked_historical": true,
+    "new_vs_diagnostic_modules": [
+      "CanonicalEnvelopeDenseInfinity",
+      "CanonicalEnvelopeInfiniteOrbit",
+      "PowerTwoModuloThree"
+    ]
+  },
+  "method": "Read the complete current text ledger and corrected generator; read retained native and census source-scope statements, local MIT grant, and Sharpe headers. Independently checked every inventory entry against current frozen bytes, manifest, origin candidates and the declared retained grant. Verified all additional file hashes and exact provenance counts. This updates the older 1617-source documentary review only; the three additional local modules were already mathematically reviewed separately.",
+  "finding": "No correction requested."
+}

@@ -1,0 +1,25 @@
+Formal Conjectures source notices
+
+Copyright 2025 The Formal Conjectures Authors.
+Licensed under Apache-2.0; see LICENSE-APACHE-2.0 in this directory.
+The full copyright and Apache license headers remain in both supplied files.
+
+source/FormalConjectures/Util/ProblemImports.lean is the minimal compatibility
+shim already distributed in the pinned native bundle. Its source documentation
+explicitly identifies the local adaptation for a newer Mathlib version.
+It is reproduced byte for byte from that bundle.
+
+source/FormalConjectures/Wikipedia/CollatzConjecture.lean is a MODIFIED SOURCE
+SHARD. Relative to the native bundle's original file, only the unrelated open
+collatz_conjecture statement, its documentation, attribute and sorry are omitted.
+The genuine collatzStep definition, imports, namespace and full license header
+are unchanged. The supplied shard is byte for byte the previously published
+formal-growing-deficit shard at Git revision
+7ef1208600107e62561ad6090c06a8cd4e0a1143 of
+https://github.com/x1xhlol/collatz-two-coordinate-obstruction.git.
+
+The exact original and shard SHA-256 values, pinned retrieval paths, and
+unified diff are retained in ../provenance/wikipedia-shard.json and
+../provenance/wikipedia-shard.patch. The removal makes no claim to prove the
+Collatz conjecture. This notice supplements the modification descriptions
+already present in the source and provenance; it does not alter source bytes.

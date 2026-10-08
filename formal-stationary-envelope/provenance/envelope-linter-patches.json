@@ -1,0 +1,950 @@
+{
+  "diagnostic_record_sha256": "e5dd6f0e824da8c14a36e820aa7b7b2a310f5537e51fa87b11d9f3b75cbf75d8",
+  "diagnostic_scope": "Nonfinal warning collection only. No diagnostic object is accepted by the fresh replay.",
+  "patches": {
+    "Erdos1135.ND.Band.A5HarmonicProp19": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "cd6d9ebc23960452a62592b5651d63aeaee40b36bf1ef80361c80508bf327f5c",
+      "original_sha256": "80c2bbd6e07cba906a91fdea476b325f73bddd51da80e15e65e01dd1b45d3d77",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Band.A5HarmonicProp19.patch",
+      "patch_sha256": "64499fee2f30ae65f15486ffa53d66796666001652f7e5207f1392692ca2f5fe",
+      "source": "source/Erdos1135/ND/Band/A5HarmonicProp19.lean"
+    },
+    "Erdos1135.ND.Band.A5PaddedBandDiameter": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "6151c0fc79cd454cd5c967edf8c82b9970bb5c25be1fe7dff457b24c7ba8475c",
+      "original_sha256": "f27e98fa95ca43f004b30eb00a94c57b2d6b117081bdfa30b4688e9dea330f25",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Band.A5PaddedBandDiameter.patch",
+      "patch_sha256": "722fa448e7f3575e18a3b7d0a962bd4ad689545e0ced08498a79297af1dbd71b",
+      "source": "source/Erdos1135/ND/Band/A5PaddedBandDiameter.lean"
+    },
+    "Erdos1135.ND.Band.A5Physical": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "96a717c0145c981830979dcaf4dbb906973470011869b5874ae59cab8b9f8200",
+      "original_sha256": "5e0688b0fb1274e1369a1213ae52a0394dadfb5ab476f6533aff62179208cc00",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Band.A5Physical.patch",
+      "patch_sha256": "5c6319d4f62aabaf1759c2368d593570b364e9dea3cbc5cee8785aa84a404b96",
+      "source": "source/Erdos1135/ND/Band/A5Physical.lean"
+    },
+    "Erdos1135.ND.Band.A5PhysicalPaddingRate": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "a3c9faba46ce9893cec7608becc330172718e54a954508525bc22acfe882e0d4",
+      "original_sha256": "930f7c1d3e9b6003fae58aa556ba017029ce7acf20b7e1892450d863fefe13bd",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Band.A5PhysicalPaddingRate.patch",
+      "patch_sha256": "51f190d8b2eb391a810ae0a560764b8a8f895dc8f7e73cda3078e513f6217555",
+      "source": "source/Erdos1135/ND/Band/A5PhysicalPaddingRate.lean"
+    },
+    "Erdos1135.ND.Band.A5ReferenceFixedTimeAbsorption": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "f9f2d4282ed39f8a48d365ed7e52d5c850c9c02441071d620fbe0a4c685a02db",
+      "original_sha256": "fe7b54fe450a3e6dbf58c67d2f9984b6b1f9250da5291e0a003c74a8a53eaceb",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Band.A5ReferenceFixedTimeAbsorption.patch",
+      "patch_sha256": "27f53456565a75fce279d007900f19c06ab07a8b6a26398f1143a66d1989e9ea",
+      "source": "source/Erdos1135/ND/Band/A5ReferenceFixedTimeAbsorption.lean"
+    },
+    "Erdos1135.ND.Band.A6Gaussian": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "77c682e982341aafb667dc30b84d20b79d0c56c67721f37a0161e505fb72b52b",
+      "original_sha256": "d037b825f1f46d58f28be540f04992974b76b2d19b44f70ed47ef83fa6c08d35",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Band.A6Gaussian.patch",
+      "patch_sha256": "e6ab8787de09f8c1b24cdccb5736d6cdf4678a32e5d90a58b4b3b206235637f4",
+      "source": "source/Erdos1135/ND/Band/A6Gaussian.lean"
+    },
+    "Erdos1135.ND.Band.A6LocalLimit": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "3ec2072277861a8cd4748e31cd3a94e2205f22c8dbf5ddbba3485676be7c8a88",
+      "original_sha256": "20498cbb3580c368971deaa2233c4af425d57d8026d61758e57d33922dfdd0ca",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Band.A6LocalLimit.patch",
+      "patch_sha256": "16c026d854bf1f13b5ea0e86a4a8e1ecb1fa3a277eeac8ba1f6cf6018ee65be3",
+      "source": "source/Erdos1135/ND/Band/A6LocalLimit.lean"
+    },
+    "Erdos1135.ND.Band.A6PhysicalInterior": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "686147ac2e6e8a2fb06cb2723ea9f972006744065322b78253116aa69900a2b7",
+      "original_sha256": "23ec2f627e058e7f2742950990252fe1e1f389ac7a7ce5df9e7bcf569cffc682",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Band.A6PhysicalInterior.patch",
+      "patch_sha256": "7cd04dbfd22371aa596f84453eb6eb7c3c018d9f5ed93bd9574ed0929b08a8c9",
+      "source": "source/Erdos1135/ND/Band/A6PhysicalInterior.lean"
+    },
+    "Erdos1135.ND.Band.A6StrictMultiplicity": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "99aa10d7341334f804c9879a003793d4ec8d5f67e20639c94b7ed2ce2d97e330",
+      "original_sha256": "94b3e4feb67c47de09537804209ec4f6f9e8a25ad26fe47184b8afb787263553",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Band.A6StrictMultiplicity.patch",
+      "patch_sha256": "c75a339902bbc1c8e1f110deb78e8e876af2174ac259b6b65a512f4159c38d74",
+      "source": "source/Erdos1135/ND/Band/A6StrictMultiplicity.lean"
+    },
+    "Erdos1135.ND.Discrepancy.A5BandCoverageRate": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "1caa4d1f66b988a18d78244fb17c262f373d128a0728aff27cc908dc69402a74",
+      "original_sha256": "5c7adf52ba51169c40affe10e6ff62303796ae92048dfb8f642f357f5d0dc5fa",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Discrepancy.A5BandCoverageRate.patch",
+      "patch_sha256": "8024f443d40598fa9112d0a34f5cd7365355b84b9249e4cb849da3d90c8daf57",
+      "source": "source/Erdos1135/ND/Discrepancy/A5BandCoverageRate.lean"
+    },
+    "Erdos1135.ND.Discrepancy.A5ReferenceGenuineBandRate": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "52c1a9c815323d3d39b7c600a9e822a252d1ed75aa28ab1c2f33fd0cdcbeb39f",
+      "original_sha256": "c29e5ab8fd68772d258c54153ab3ced21276150a3539bdefe86ef724118d9ec1",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Discrepancy.A5ReferenceGenuineBandRate.patch",
+      "patch_sha256": "862be2f4d22efc88edec6de564825e7a4f7be78319be4a1cbf06893615032090",
+      "source": "source/Erdos1135/ND/Discrepancy/A5ReferenceGenuineBandRate.lean"
+    },
+    "Erdos1135.ND.Discrepancy.A5ReferenceTerminalAggregateRate": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "b7b0b54dc74981d0fe678b22f73320423f9fd8fed9de0e9785c2ebdf042662d1",
+      "original_sha256": "e07a3399fe34c35106190058886b16ab3906e88404531a800fa63c2e1d967ee0",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Discrepancy.A5ReferenceTerminalAggregateRate.patch",
+      "patch_sha256": "bb74d0643a3e85ee8cc745acfe019786b6a46a7eb06103fe65f2bcd3830bc63e",
+      "source": "source/Erdos1135/ND/Discrepancy/A5ReferenceTerminalAggregateRate.lean"
+    },
+    "Erdos1135.ND.Discrepancy.A5TwoProfileA6": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "307b8fcb138dc0293d6a926347fa8a0d2a49de562ba34bc6d8144ef48e893286",
+      "original_sha256": "c89eaad3a027d758cb7dedc3411d938064ae313f12dae15d2d77b46d9aaa5695",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Discrepancy.A5TwoProfileA6.patch",
+      "patch_sha256": "2f2f9cda525c026b63abbf40e4f696c41922cae3055adf09f345f5baf89ad490",
+      "source": "source/Erdos1135/ND/Discrepancy/A5TwoProfileA6.lean"
+    },
+    "Erdos1135.ND.Discrepancy.EmpiricalFourier": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "b802de5ed95ef86a64b8dbe6079a0c9ca49e058d2e6022b3ca1d85be7401a0ba",
+      "original_sha256": "61278d0d1500cf6e83cbdcdd2db2ea8f8b851531e8234500862799879fb3bab0",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Discrepancy.EmpiricalFourier.patch",
+      "patch_sha256": "31a96cf3f357640a3a6cb80f468aa396225c52c760b96fa7f83dc9cf958837df",
+      "source": "source/Erdos1135/ND/Discrepancy/EmpiricalFourier.lean"
+    },
+    "Erdos1135.ND.Discrepancy.ErdosTuran": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "b24906831fed14dea4e1285bfbf39d5ea12e9e362a26f4a11f1a717e9f7898fc",
+      "original_sha256": "5e9808a025abbbdb0783ddca910c13bb53c9d7461cc310bb9f6bc77fd0c60d35",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Discrepancy.ErdosTuran.patch",
+      "patch_sha256": "0b7679df06bfbacf40cb44b631d60be4d71d530cbf408a7d4f6dcd6d84f0cd14",
+      "source": "source/Erdos1135/ND/Discrepancy/ErdosTuran.lean"
+    },
+    "Erdos1135.ND.Fourier.FiberConditioning": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "c3b62c7b54259a4ee7d0503f864f4e23be87cf5181ae0e0174632a496d41d4be",
+      "original_sha256": "0087f7e6ddb109e1d4b3f525a09c5ab03e464d089b3ee3df0e2b5706ca3c7656",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Fourier.FiberConditioning.patch",
+      "patch_sha256": "0201b536a0fbb6f4d9f693d728e7f6b99b05384f32c647e120d76fef07b1ef3a",
+      "source": "source/Erdos1135/ND/Fourier/FiberConditioning.lean"
+    },
+    "Erdos1135.ND.Fourier.FixedTotalBars": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "fd2a9bc9648da911fa93212f7c24a55b98a026c6753e0610d6d5fc512936f04f",
+      "original_sha256": "de18b91432e18caa525d2eb40c1eb996f6d16b6a49466f70e3ddc4344f359840",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Fourier.FixedTotalBars.patch",
+      "patch_sha256": "1150ea301492f25d3027b8e9d8443a7fd0a1edc0b9214cc0506a4679e4defe90",
+      "source": "source/Erdos1135/ND/Fourier/FixedTotalBars.lean"
+    },
+    "Erdos1135.ND.Fourier.FixedTotalRatioNormalization": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "6338a6a805fbe4368ac32b386b2ddeadb2a0370d2d714ca452b19d04e8ead752",
+      "original_sha256": "5bc8f23f9e88bfd504b8d63e5ee1181184d8581e9ba61f0e49f6a4b3bc8cbda5",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Fourier.FixedTotalRatioNormalization.patch",
+      "patch_sha256": "35a533a08f6cfc6b0682e82aef664d228b3ac034c1a3f0ad219f8c1a943a03e6",
+      "source": "source/Erdos1135/ND/Fourier/FixedTotalRatioNormalization.lean"
+    },
+    "Erdos1135.ND.Fourier.FixedTotalReferenceRatio": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "0c031732ded38ff44813253c2b7fce8350e2bdc825128addc0a3edc327755342",
+      "original_sha256": "f915681102762d0fe5120383e532344e2abb06f03df318b222ed03190f8f32ed",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Fourier.FixedTotalReferenceRatio.patch",
+      "patch_sha256": "dac3dcaa7f4dd3d42e77f3ab954a4265cc94f44fd68be5a86821781166680d0f",
+      "source": "source/Erdos1135/ND/Fourier/FixedTotalReferenceRatio.lean"
+    },
+    "Erdos1135.ND.Probability.TrueAbsorption": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "c5fe332c1459038753a227ab129228eab68d55c4e12bb7e7fab8fc5a87edc5f8",
+      "original_sha256": "75374d4096b3993316c1440211b48c342d53427dc8898e9dcb6fbf3ec76e5748",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.ND.Probability.TrueAbsorption.patch",
+      "patch_sha256": "47bb0163b4f2fa8f544ca8df96f14029f006891fccd9c19dfac18f6d88294fe2",
+      "source": "source/Erdos1135/ND/Probability/TrueAbsorption.lean"
+    },
+    "Erdos1135.NumberTheory.Rhin.LargeHeight": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "86bcc0904a2584f2569bae60328f05763caee91fe8f2d12c4e50800aecba1207",
+      "original_sha256": "1bce1e2e3f7a5ed8a7c8aa15b88616a0e1a960b443ccad2348f89ac19b0b798d",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.NumberTheory.Rhin.LargeHeight.patch",
+      "patch_sha256": "880911537b652d27d44cf0071f015e8d560173820c935da357af3375719bee2f",
+      "source": "source/Erdos1135/NumberTheory/Rhin/LargeHeight.lean"
+    },
+    "Erdos1135.NumberTheory.Rhin.LcmGrowth": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "efb6a48aa2e3f5f25d5c091598c7c2bceb9c6c151fb706d2e1b2341cf1751087",
+      "original_sha256": "213dc55d39b54d09caa12ef4cb9a5143fbab3ad2d59ef4dc55f4868ad01ee0d4",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.NumberTheory.Rhin.LcmGrowth.patch",
+      "patch_sha256": "693ac35ebd170731b470a232b0b90ce73e54e3ff989f2ad8d45db9b20e71396f",
+      "source": "source/Erdos1135/NumberTheory/Rhin/LcmGrowth.lean"
+    },
+    "Erdos1135.NumberTheory.Rhin.LiteralRemainder": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "2249b30f076e523da4b5ca2b8c850f40682e89afd617cb340ff849f974ed3191",
+      "original_sha256": "aa8a1eced52bd477ee2c3bc59afa6fdfd18c8a79eddd232be1b8a86f0e67791b",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.NumberTheory.Rhin.LiteralRemainder.patch",
+      "patch_sha256": "115ccb41de8de57c444a671ebb06e2c92c6ccf228f83b9f364068cb19878e6f7",
+      "source": "source/Erdos1135/NumberTheory/Rhin/LiteralRemainder.lean"
+    },
+    "Erdos1135.NumberTheory.Rhin.LiteralSupport": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "5cfb5383a8c9cc7fca9b1479619413e1fa18cc113171cdcf0cda9b68c301b483",
+      "original_sha256": "421bcfd532b8024cd27096ea160349464b50abbf5943d87c15c92a8d6527c5a4",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.NumberTheory.Rhin.LiteralSupport.patch",
+      "patch_sha256": "beb0d315b59dfa0d56b3b3ec71f88243328b022f79db0c6f4070b07dd9bd79f1",
+      "source": "source/Erdos1135/NumberTheory/Rhin/LiteralSupport.lean"
+    },
+    "Erdos1135.Tao.Probability.AntitoneResidueSums": {
+      "adaptation": "Reported proof-tactic sequencing, unused tactic/argument, or unnecessary simpa correction, plus a modification notice. No declaration statement changed.",
+      "candidate_sha256": "41493424525360f9a672cd7fc29147ecb5fdcedf8e4b3159093a3639b21a7c63",
+      "original_sha256": "b670c3fe14be415395b17304d620266cf2290f1dbdd81a0ca834eb3e4cc79f95",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Probability.AntitoneResidueSums.patch",
+      "patch_sha256": "b204de579bfd78dc9cb8853c9f5af442dfa6798f28575a51648e94ad4a1fa449",
+      "source": "source/Erdos1135/Tao/Probability/AntitoneResidueSums.lean"
+    },
+    "Erdos1135.Tao.Probability.Geom2HighWeight": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "8c3400650d82fefc1475e052c7fe4e1215fc1db0c32675f38bfaf6828474c7a2",
+      "original_sha256": "4097d5fb8bb13531e25f1281301935fe252116ad9b9d5ff4b55d36a5152edf37",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Probability.Geom2HighWeight.patch",
+      "patch_sha256": "2b3b03d0b4509409dd547f141b3ab1a243db549d7d8d1fb76f03fcc18646804c",
+      "source": "source/Erdos1135/Tao/Probability/Geom2HighWeight.lean"
+    },
+    "Erdos1135.Tao.Probability.Geom2TerminalMoment": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "61290fad99139caa47f3e688c97783a933e21e2a57be76503a7eaeea9cfdb3aa",
+      "original_sha256": "a2e9671b705d0c7396f39e2cb2e0c489e185d375c0d42b63917e61f360065e8a",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Probability.Geom2TerminalMoment.patch",
+      "patch_sha256": "8677d500f7af8f8b41aecff3d959da7c52d5450827e7a2ea5111f9c77a947e12",
+      "source": "source/Erdos1135/Tao/Probability/Geom2TerminalMoment.lean"
+    },
+    "Erdos1135.Tao.Section5.AffineAtomDenominatorComparison": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "a121ca3b980479cf2c732c54a88f57b5ae51b825cc49fc14bc825a21045a1792",
+      "original_sha256": "73c9208e72e8028cff54c9322626739c1595bb145adf70ac1693e8cf3ccf0722",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Section5.AffineAtomDenominatorComparison.patch",
+      "patch_sha256": "59c807fcd5b35cbf63e465876ef80309da7b45fbea7d37f1caaa35949bf949c5",
+      "source": "source/Erdos1135/Tao/Section5/AffineAtomDenominatorComparison.lean"
+    },
+    "Erdos1135.Tao.Section5.AffineAtomPointMass": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "47023ba2437801ccd476a92c313e9a9d3a3009dde1f0e120662e14db1819b1f0",
+      "original_sha256": "a4501d5a76c0c6337c10e4497d440a36f00056f1115360c33b7936b22ff33419",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Section5.AffineAtomPointMass.patch",
+      "patch_sha256": "08ee764bbd2b92d7e019b2c9608fbfc3efc96d51c4890c918421be1914a4c3b9",
+      "source": "source/Erdos1135/Tao/Section5/AffineAtomPointMass.lean"
+    },
+    "Erdos1135.Tao.Section5.EndpointCoefficientBound": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "084c79a111fd61ff3c2faf13d2a5989491d658ea62d5e318543f632e6b9172c3",
+      "original_sha256": "28a88ea24774e900aa1b47fd5853518001fe5382d7a05372f3a4002e32389395",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Section5.EndpointCoefficientBound.patch",
+      "patch_sha256": "2f386decd71b6171e81583cc5bb5f35887e8e44ee9be34c42166df1b5c7b8bdf",
+      "source": "source/Erdos1135/Tao/Section5/EndpointCoefficientBound.lean"
+    },
+    "Erdos1135.Tao.Section5.EndpointValuationFiber": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "38fbcfda105552a845ccde201879cdeb840897bfdbd62b95bd30a7e24a56d2dd",
+      "original_sha256": "d9a894887c5986613b7d098776d718e3b69c07fbdff2ba369026adc28ac2b74c",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Section5.EndpointValuationFiber.patch",
+      "patch_sha256": "872cf8a6a408f0971029dae079cda57fad7557b2b1bf6de62c8b9924244a6713",
+      "source": "source/Erdos1135/Tao/Section5/EndpointValuationFiber.lean"
+    },
+    "Erdos1135.Tao.Section5.PassTypicalFailure": {
+      "adaptation": "Reported proof-tactic sequencing, unused tactic/argument, or unnecessary simpa correction, plus a modification notice. No declaration statement changed.",
+      "candidate_sha256": "2b4329c865a61d443b383b03a26bb6163afc67a038a253278100011cc697b6aa",
+      "original_sha256": "b4530efb37252765db9d1e82d7cd9c81316e983261053c8a680e38cae5ee4afb",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Section5.PassTypicalFailure.patch",
+      "patch_sha256": "89ebf4a56c05c9e84880a1bc9d7ea32c0afdb118bf1e667c794da5373c2f4cbb",
+      "source": "source/Erdos1135/Tao/Section5/PassTypicalFailure.lean"
+    },
+    "Erdos1135.Tao.Section5.Prop19Output": {
+      "adaptation": "Reported proof-tactic sequencing, unused tactic/argument, or unnecessary simpa correction, plus a modification notice. No declaration statement changed.",
+      "candidate_sha256": "b046272affa2e2ba8f275ff7ef19831a7a3715e1f565fb56fb9500c76b3e1124",
+      "original_sha256": "1bd0fd663b6d3e7c4d81cd596304cac0e2177a6027291eb05bd65b400a274120",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Section5.Prop19Output.patch",
+      "patch_sha256": "9e71fd4469de3bf7b4ac1681de87ee4b49ab99d438d0018fc545e5fdb508215c",
+      "source": "source/Erdos1135/Tao/Section5/Prop19Output.lean"
+    },
+    "Erdos1135.Tao.Section5.ReversePrefixScalar": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "b8b266a6db968e1738e6ba0f6eea6f5437c0562d799d717d9c68bfc34628d399",
+      "original_sha256": "3e93b73f54868890f92432d2131e26ccf74a124cc6bfcf81de295be3db6e29a9",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Section5.ReversePrefixScalar.patch",
+      "patch_sha256": "64b26dc9538819a0e0a82b62d471ffdf074b69118f87a74f309e404a8400b157",
+      "source": "source/Erdos1135/Tao/Section5/ReversePrefixScalar.lean"
+    },
+    "Erdos1135.Tao.Syracuse.TruncatedValuationGeom2": {
+      "adaptation": "Reported proof-tactic sequencing, unused tactic/argument, or unnecessary simpa correction, plus a modification notice. No declaration statement changed.",
+      "candidate_sha256": "23b5e401610f72fe6a7e54a373097e51e178545b48341b5cbc93e9532fc94923",
+      "original_sha256": "7b55a0c400dbdab560262e34780e3f4ad8ba3074a9dfdca27377320603d3e7e9",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Syracuse.TruncatedValuationGeom2.patch",
+      "patch_sha256": "e141471946e72bf91f39f623e79794fe7167e20ea4b6e87cb8ddb030dd71ff76",
+      "source": "source/Erdos1135/Tao/Syracuse/TruncatedValuationGeom2.lean"
+    },
+    "Erdos1135.Tao.Syracuse.TruncatedValuationUniformOdd": {
+      "adaptation": "Reported proof-tactic sequencing, unused tactic/argument, or unnecessary simpa correction, plus a modification notice. No declaration statement changed.",
+      "candidate_sha256": "172a880a75f33a44caada80e53bc853f8f5bd5a3b071980e2b2eb5217f1132ad",
+      "original_sha256": "c0153564374ff3b73871ef8c14386fd5e3f6fe8f243e1b096382663cf0cba5ac",
+      "patch": "provenance/envelope-linter-patches/Erdos1135.Tao.Syracuse.TruncatedValuationUniformOdd.patch",
+      "patch_sha256": "da8da3b22fd4c013e89eaf6b7b02c99d8b980983b7bb84a7ee76977b2887ceec",
+      "source": "source/Erdos1135/Tao/Syracuse/TruncatedValuationUniformOdd.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitCanonicalCase1Threshold": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "a8a8f8ee9d8c784afc027857a07dbf129d34ad9c1a89d0246429f0882d96583f",
+      "original_sha256": "32b9e6dc217adda069b0d083680c2495e44ffc80b9f509a002acf19b6d15a3de",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitCanonicalCase1Threshold.patch",
+      "patch_sha256": "97b878bf7c25c516635b822c6aec2ca1b35541bc21405684f4ad57182a73b086",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitCanonicalCase1Threshold.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitCanonicalCase2Moment": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "bdc7103ef005d8cbcb7c0d35015e0a2e445fb95a9e315c125b64a75cd30f3606",
+      "original_sha256": "17be158ec3a7b6dba53e4d4e1afb5adbd761015070e16f9dfab702118e5e2609",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitCanonicalCase2Moment.patch",
+      "patch_sha256": "bfb074cddec48ac35ee7a0e0addd8746643b6181936998518f8a1cc85a84b0d9",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitCanonicalCase2Moment.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitCanonicalCase3Parameters": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "20dbe0e7e32aa9e2db8bc982edd8d7f12cd73f9d0d6aa59cdcbc727a4a5b9c44",
+      "original_sha256": "ba80fafaf66066daec1c86ac55d37a1716102c5722953a22479a12709b54e9ca",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitCanonicalCase3Parameters.patch",
+      "patch_sha256": "71242889d51cf4677f8d13cc1007b252f7564ebaf56b193ad07f367bbabd2bdd",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitCanonicalCase3Parameters.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitCanonicalCollar": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "0491ed2a223d597b368b2d2d13a378ac1172e35b0b2035df534644bcfa7d8ff7",
+      "original_sha256": "fe46955441c3821dac63f0652977ce60317f54599d929ac2e2f108fdf62b7bb4",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitCanonicalCollar.patch",
+      "patch_sha256": "b93c6a6c77814d0f0046cba28c6da5fa0ab99a5f6a1d1a76d2e2a71e95e9d1af",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitCanonicalCollar.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitLogarithmicVariationBudgets": {
+      "adaptation": "Reported proof-elaboration correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "2ae40cdf7a8b84bd4b0929c021b3a5294cea1368c62a164bac41e43424d377c7",
+      "original_sha256": "708cf9c720b1046deacbdd46cafbc2d04497e25b764698d65e8e908362ab6817",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitLogarithmicVariationBudgets.patch",
+      "patch_sha256": "73607218d3b8a7c144084102ff2a5920b4577b75dfba0d373affa5aae66af7c0",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitLogarithmicVariationBudgets.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitNumericalPrimitiveDecay": {
+      "adaptation": "Reported proof-elaboration correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "1085ee614a73ecdaf8eab178d65416e20377b051bcb9001710aaebf30eee4bde",
+      "original_sha256": "d9e4c6e95961cdfe336f9f314d7e3482596a58dda181d9cb6ebe44dc9cd00551",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitNumericalPrimitiveDecay.patch",
+      "patch_sha256": "57e7cf87561aaffc9c631271adfa757942732a767ff80460b43f974f162304df",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitNumericalPrimitiveDecay.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitOnePeriodSuccessfulRoot": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "ab53a597b9290a0dacbb524cbbd39534f08c9e54cb99101ca932b4a0c2c0b865",
+      "original_sha256": "9d06d73c6f45eda71f37b16a37b623502dd32d0f6318488dd00f1cecff7b0db7",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitOnePeriodSuccessfulRoot.patch",
+      "patch_sha256": "075fce239fbe998bc2af49d465fdb3da2d348c3c675d26ad9180d8c7c7dff487",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitOnePeriodSuccessfulRoot.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitReferenceHeightCensus": {
+      "adaptation": "Reported proof-elaboration correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "1ba2844b63b18849ed188961ae8017e005c76852447d304c0126bbb8c07afa5c",
+      "original_sha256": "0258de67b12a28265cab1fcd86c00bfcd53d99c08bd5dcbe232cfc44e181487a",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitReferenceHeightCensus.patch",
+      "patch_sha256": "c6c826f27f5a58bb412f0f7b0836e05b26b75f2f69e61e1781d391d59130beb9",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitReferenceHeightCensus.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitRetainedGeometricTail": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "226aeadc34bcd0264b10f6ca0ffcbd38039059bbf4d7dca6785bff7c854d8a15",
+      "original_sha256": "173be1ad97a0c2ccc5633d39bf35c08d8fa113e9d95d170e40405a5d9110abc3",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitRetainedGeometricTail.patch",
+      "patch_sha256": "d3610b2c0707136ead490b93d4de8d7f853797b513c1ffae06ad144561125c1f",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitRetainedGeometricTail.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitSeedToCount": {
+      "adaptation": "Reported proof-elaboration correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "1aa6e34541c60981987a27860cea1cf45be3a2b6b7b955dbadd45d7244ef9643",
+      "original_sha256": "b73f48f4390013864df98e79669b45bc71e79acff4c51778f42126e16d21b7c5",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitSeedToCount.patch",
+      "patch_sha256": "b7ef21e202287c2b169af90d9d7346188f975bd0cce02de1c2d351fbc7e14dd1",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitSeedToCount.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.ExplicitVariationBudgets": {
+      "adaptation": "Reported proof-elaboration correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "3c573d7a2e582102b530bf5e38314c85329e3fe86edabdce590a8e867b319439",
+      "original_sha256": "4825533b9a195dfc3b99e1acc656704927f6311f84e0fe0f13479d3cc20e5358",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.ExplicitVariationBudgets.patch",
+      "patch_sha256": "78b7a4d302af7903cc82bc12acc1353d5aa334c6c9df53044434e6ac4861451c",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/ExplicitVariationBudgets.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.GeneralTargetTerminalCensus": {
+      "adaptation": "Reported proof-elaboration correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "293f92b06108cc29bd72bb7b82ea74f40237319b70f43c999923cf977539fa22",
+      "original_sha256": "2c82520e1b096c0c8794de98e478b9c1e16293bfba44ac388d558058d5c474d6",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.GeneralTargetTerminalCensus.patch",
+      "patch_sha256": "f3a7d7de2ea4c5d8bd2a61f3e2d7e7b2592e9294abdb00347f4166308b578084",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/GeneralTargetTerminalCensus.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.Geom2ShiftedWideSymmetricTerminalDepthShiftOrdinaryClock": {
+      "adaptation": "Reported proof-elaboration correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "06cce46f6f86f42ebb12c7c5ecc4b8f331b383885a3821bcf8efa24c4cbd5283",
+      "original_sha256": "465f792361ccfec5faa0ea15e3a2ae04ca95bbc6f606767b75e4138a6b5f9476",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.Geom2ShiftedWideSymmetricTerminalDepthShiftOrdinaryClock.patch",
+      "patch_sha256": "d0341dbfaabf2d01fd975c383151564c1486ca9d8d2b1644283070a7d92e06fe",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/Geom2ShiftedWideSymmetricTerminalDepthShiftOrdinaryClock.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.NonconvergenceDensityAmplification": {
+      "adaptation": "One proof tactic spelling push_neg to push Not plus a modification notice; no definition or theorem statement changed.",
+      "candidate_sha256": "f8f78ce41deb9976325bd99137369e7b88a6068652ec612d1c39e4b98ddf22e3",
+      "original_sha256": "8fb307640b4a4cf9ccf4d20c92d560e0d3560ab759cdc9d7e275306a964ebd35",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.NonconvergenceDensityAmplification.patch",
+      "patch_sha256": "0525f89ef3e77e48dc0aeedb434249ce9dfaa1e48066f243537d92d454cf107f",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/NonconvergenceDensityAmplification.lean"
+    },
+    "Erdos1135Predecessor.ND.PositiveDensity.PredecessorCountSupport": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "696fef0e744c3ef387cb0dc5e1e33c652443df4055d0d238268cf2a86802af58",
+      "original_sha256": "1f99d1755cfc1f82a527261de0ceb619cdc01b284629bb65344732a04eaf1031",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.ND.PositiveDensity.PredecessorCountSupport.patch",
+      "patch_sha256": "111ecbf7105989bab69f748680c0fb7c6aae7b70843a48eb8c6dc0d2610e77e3",
+      "source": "source/Erdos1135Predecessor/ND/PositiveDensity/PredecessorCountSupport.lean"
+    },
+    "Erdos1135Predecessor.Tao.Fourier.Section7PairExpansion": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "b18a7268552fc6ab3bd98a4ffe65680639d5a6a832e5c8ef84ba53b4d2c2603f",
+      "original_sha256": "a0e9fc0c4180706320a8c8b0a314500693ec1591328072c2ee280fcc8e578f21",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Fourier.Section7PairExpansion.patch",
+      "patch_sha256": "1a5353814bf74bdf5434871ce499117afad6cd3e4ba9449cf00a6ca574efea5c",
+      "source": "source/Erdos1135Predecessor/Tao/Fourier/Section7PairExpansion.lean"
+    },
+    "Erdos1135Predecessor.Tao.Fourier.Section7PairExpectation": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "edba7bf891517e9130b5ec0f1891758e2f8695590179ac141bb64e45b15b4743",
+      "original_sha256": "d8dd36af044dfe60956962034ea0b89638f3934844ebbd3fa8d0035b9ceaff11",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Fourier.Section7PairExpectation.patch",
+      "patch_sha256": "3f1e2cd9fca1b871497958cf92bfa2f6701f17a193a0557b2a495b83c17781eb",
+      "source": "source/Erdos1135Predecessor/Tao/Fourier/Section7PairExpectation.lean"
+    },
+    "Erdos1135Predecessor.Tao.Probability.CountableMarkov": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "7147c7871849c8a359f17bdda90c6ac649d269d255ae417d8132d0fd85abcfa0",
+      "original_sha256": "e0ac6a05d7d3844d02bed2ffcb949492a304e253a62164ddb05753d977255d1e",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Probability.CountableMarkov.patch",
+      "patch_sha256": "5a363076eafa1750628bb19f33f901ff769d5061a235ec8434e3739309c22fc0",
+      "source": "source/Erdos1135Predecessor/Tao/Probability/CountableMarkov.lean"
+    },
+    "Erdos1135Predecessor.Tao.Probability.Geom2CenteredMoment": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "5ed993299e32f3cff17c002a10538c38e6144273124fcabf55c973facd00161c",
+      "original_sha256": "ebd8f714018b2a22afb5e4d20f0629d9c2386bb549fb3c5bd7ca49aba9fa206d",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Probability.Geom2CenteredMoment.patch",
+      "patch_sha256": "382c2a7241b5df8cf488573866587b0d08e9458fc19f213b2f2b6c701b8d0f52",
+      "source": "source/Erdos1135Predecessor/Tao/Probability/Geom2CenteredMoment.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.CanonicalFirstPassageSigmaCenters": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "61f9748eb409c53a4d2dcca193a24abe5a44b76671e3ca6801de927d73926547",
+      "original_sha256": "eed6f7d42ff8b9f838b979e3cd18fb22364afe37512bc056fa8ac4722708fe5d",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.CanonicalFirstPassageSigmaCenters.patch",
+      "patch_sha256": "09e165db04dbe03ff9bfb422a57fc0490d8a450f01a72a97f4663589d340d6a5",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/CanonicalFirstPassageSigmaCenters.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.HoldListHorizontalTail": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "0f7c3239d08398ca83a87d4b00cd4e75f0e0336218c458b76a634c51f3446b33",
+      "original_sha256": "fa9aedf8f171483bd8671a23aca98f1bab1ca672fa60c4c4ab5bdd81000eefe7",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.HoldListHorizontalTail.patch",
+      "patch_sha256": "bd8fe255a149739307f251f42dc08cecf617c58b14d50e5df07d76cd0b381790",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/HoldListHorizontalTail.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.Lemma77PotentialCore": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "095ca1fd905f6ba6044fe06b49470c7f93ec7bda77576bcec313a5d778e8cf23",
+      "original_sha256": "37e2af9a9213aebb8c3f3179246721fa383c620ea53407310b7e3984a2cdc1b9",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.Lemma77PotentialCore.patch",
+      "patch_sha256": "a67234bb4a77a0e7d7fdbb77b719c55551f9cbdd24922c45487f5fac1ac722bb",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/Lemma77PotentialCore.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.Lemma79AllRBound": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "5c6755890fcfce76bc2942cd4cf01e966c2e494c6b25bfa214e92ba3a67f5a03",
+      "original_sha256": "10f770fc367b98d6f34a9b29446d7ecdcdc9d27c41520e8fced8138d6f562812",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.Lemma79AllRBound.patch",
+      "patch_sha256": "cf47c209da8f4d31cafae9c151cc4e622e7c7646de6192fcf89524a2354a47d2",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/Lemma79AllRBound.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.Lemma79CutoffStatistic": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "fdf809095f1fd2e3a286383983c3588ec55a8fd5a6cf5521d95d85cd5e11b424",
+      "original_sha256": "0a847f0cb69992697cc908231a7fc5c84630a4dae0e9ccad4be1333f8699438a",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.Lemma79CutoffStatistic.patch",
+      "patch_sha256": "5d05de93d4a5f3460a7300117c81c5f6fad13b9283af50a2c41655daffd2dcd5",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/Lemma79CutoffStatistic.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.Lemma79EndpointFreshLaw": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "4af7a2a5f2aba6a4a99712516471e945d7fa270cdca7920d18c8dfdb500097dd",
+      "original_sha256": "12bf97e778ae378be328cfaef7136abfd012c74c8b888562aef10f93045c8a8e",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.Lemma79EndpointFreshLaw.patch",
+      "patch_sha256": "d4bd8b61591d8ac9d05241e208d7dbcc8a64ff68475754c809103862503fba5d",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/Lemma79EndpointFreshLaw.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.Lemma79NativeMarkov": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "24e06c6028fb6c59b0f442e5416b099fee3eb2325b1a7e2e5042162137104d2b",
+      "original_sha256": "2327dba76ac706ec928a739bd1757a1db2c3e94dd2549c71f122db9e9c1844ea",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.Lemma79NativeMarkov.patch",
+      "patch_sha256": "89a478fb6a8f65fc0d5a4ddd76f2d979bccfa4e355084ea8a36f80c02f8268af",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/Lemma79NativeMarkov.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.Lemma79OneStepBound": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "f5476e95859e288e393d03ad685623d8310827c639eda43912fcbdc26ff2f97e",
+      "original_sha256": "345a5d068eda1ce75050d5c5b3fde4a9cef16130e4a7ec8dd55b2f613574af4a",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.Lemma79OneStepBound.patch",
+      "patch_sha256": "4b683f080d23beccf059780aad8b5e6aa857009c4741c8ce080ad5d8a79e0b50",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/Lemma79OneStepBound.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.Lemma79PostExitFreshTail": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "d294205133ea12ce6c5d7110e156f245c7dd41578b3d4c4b9296f191cce51883",
+      "original_sha256": "7a43ead337f6c85370ce5f9f74ac5445c82b4fba82ddb127456a906ab9636b5a",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.Lemma79PostExitFreshTail.patch",
+      "patch_sha256": "9f8a4f404c6487fed2a9e0f054da88f1673d8cd4ae34b8010892feb9c0ad2066",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/Lemma79PostExitFreshTail.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.Lemma79R2EndpointContraction": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "023538225e3cf8d2cc41343d4f0619aad3acf6b20d69fb779bcd16b692253d98",
+      "original_sha256": "f5d28c5d5251b7a1be4c859389f0cbd6f5f8a8a9d72ca2df7d35c64732029f3d",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.Lemma79R2EndpointContraction.patch",
+      "patch_sha256": "c4f889b7dcb6c6dbb5fd3fba00aca8a09bab45722517b754f763995c59773b78",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/Lemma79R2EndpointContraction.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.PMFExpectationThreeRegion": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "6db67e42d93166b0ff0bffbf9ed7ed05ad8a9e8ea0f5be73a115c6210026e8ce",
+      "original_sha256": "a43341a56bd8c56155ee5496452498b8985394ba09cf45af96fe1a7cea46b8b8",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.PMFExpectationThreeRegion.patch",
+      "patch_sha256": "2b9e1d42eda97373da161f7ce9db0c01718b54e50ea92a956a7730dc7604d502",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/PMFExpectationThreeRegion.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.QEndpointFreshMarginals": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "760f14069d178300901c83336fdabaf2bb99c3a65043aaefb7b9d098ef1bad00",
+      "original_sha256": "ecadcf5459034c77f81bb5f8d3b5ca63170e6e5656e4da9427fb016cd0dfb4b8",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.QEndpointFreshMarginals.patch",
+      "patch_sha256": "4d2d68c60e56daf0c80c8dc0643a8a5c9d0432197681b2b8c13293469c2baa1b",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/QEndpointFreshMarginals.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.QEndpointFreshOutsideEprimeBudget": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "44a48bf2c5a74582d0328c8226914d29376146d14f956ef8d266bfd8ff6f37a0",
+      "original_sha256": "d50680206ff5812151c41c13223ae0e856e6567513576dcc06efd297957733ce",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.QEndpointFreshOutsideEprimeBudget.patch",
+      "patch_sha256": "8382fb273e974c08b077305359d3243a0dded1e7ab815737b39fe40a12a21206",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/QEndpointFreshOutsideEprimeBudget.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.QEndpointFreshOutsideEprimeNearSigma": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "062397a897d5b4a0616e7fa661c56eb0f4b570d5767831a19b82c7a857e05c1b",
+      "original_sha256": "bd4aa7bbe3803df9caa499e6506dcc296349c46afc154de6026a6c3e4562031c",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.QEndpointFreshOutsideEprimeNearSigma.patch",
+      "patch_sha256": "077d9f625ea503fea242adf12f91ce699b6386fe093355875452ce267d3dcb21",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/QEndpointFreshOutsideEprimeNearSigma.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.QEndpointFreshOutsideEprimeWindow": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "7d3b7e6f2165f5e21c778d272d834e46749ecea7b04d35609fe7283f72216aab",
+      "original_sha256": "c2e368960ac09507ea6fcc3b57cbc94ec965680780dc0261281cc9036874e1d0",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.QEndpointFreshOutsideEprimeWindow.patch",
+      "patch_sha256": "d9e676c654478aa04a72d85f5d73ab5d6a289360b114a13f61da1b6010d97d3f",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/QEndpointFreshOutsideEprimeWindow.lean"
+    },
+    "Erdos1135Predecessor.Tao.Renewal.QmHorizontalNormalization": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "bcd0b2d78d07ab81bed038b90df616aed8755a7784b098a0317dca66b102fa72",
+      "original_sha256": "360c46cad2bf40bd72ba5754858e66107e2e0e5415e1b0dbf4b6e003669c032f",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Renewal.QmHorizontalNormalization.patch",
+      "patch_sha256": "e737a9b3c6c61ec7d054993dbb4cc4813b5febfb49345be68893b954bf588733",
+      "source": "source/Erdos1135Predecessor/Tao/Renewal/QmHorizontalNormalization.lean"
+    },
+    "Erdos1135Predecessor.Tao.Section6.Geom2IntervalConcentration": {
+      "adaptation": "One proof tactic spelling push_neg to push Not plus a modification notice; no definition or theorem statement changed.",
+      "candidate_sha256": "0e0e7e67598a43da79d6c6ff308fba71621cb65833f26657423c0e04ae19b3cb",
+      "original_sha256": "895dcb697df42fad7ec22d12e39bd69be97904b867b17186a0684f82c2febec7",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Section6.Geom2IntervalConcentration.patch",
+      "patch_sha256": "32efd052242a39f78dc598a6ca46c0d2c7d0c4d8d4a70f9f807c427102c77732",
+      "source": "source/Erdos1135Predecessor/Tao/Section6/Geom2IntervalConcentration.lean"
+    },
+    "Erdos1135Predecessor.Tao.Section6.UniformLift": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "12f50070a2e02e90e6a7a644b6f2536b13d61f5a72b8e23b2926c739bba00777",
+      "original_sha256": "db4688b0c552ed87cce759fa4da8a807465a59d373c393aa2b069c83e9f489cc",
+      "patch": "provenance/envelope-linter-patches/Erdos1135Predecessor.Tao.Section6.UniformLift.patch",
+      "patch_sha256": "016f3ddef1354dbdef9a22498744a04f90d2aadb10fc3325a13266e4ec005b40",
+      "source": "source/Erdos1135Predecessor/Tao/Section6/UniformLift.lean"
+    },
+    "Erdos1135SecondScale.Tao.Fourier.Section7PairExpansion": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "843c974cbe774c6b9de7cf5fe23173fb214b2f74fa99e81325987190a10eb04f",
+      "original_sha256": "e8ccfc7df7fbc948e0f94a4f62a9799ebae7a713f674a63c3371f54188c02a6a",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Fourier.Section7PairExpansion.patch",
+      "patch_sha256": "288adf08674d469b4a8466fb680a298f026c00ac21c9283233683af14c0a6eb7",
+      "source": "source/Erdos1135SecondScale/Tao/Fourier/Section7PairExpansion.lean"
+    },
+    "Erdos1135SecondScale.Tao.Fourier.Section7PairExpectation": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "e91108c9f9d5bdac671abe14ea7257003e12535c22e1d5c21f24b95daddbd7bc",
+      "original_sha256": "b7c86f6255c1fd0ba8f1f3cf0f98af34590dce68400cd0a77575e4b9d13a5c34",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Fourier.Section7PairExpectation.patch",
+      "patch_sha256": "cbb4f78916915841eaabb21f52821996e9e5d8d0f4fd1f1ac592cf22bca59d3c",
+      "source": "source/Erdos1135SecondScale/Tao/Fourier/Section7PairExpectation.lean"
+    },
+    "Erdos1135SecondScale.Tao.Probability.AntitoneResidueSums": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "9003f03c79595c1049853bd2a82b20362c2394c94c16f8217f7ce08c43a925cd",
+      "original_sha256": "eb7ce7b8f12958c4ebb209f7e3e98b79d9533481f423f2b7e16350b0b3c91ff5",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Probability.AntitoneResidueSums.patch",
+      "patch_sha256": "392f3790f7025b6177f506fc7ed24161569d77f7ab17aa5a7d5840717a36587b",
+      "source": "source/Erdos1135SecondScale/Tao/Probability/AntitoneResidueSums.lean"
+    },
+    "Erdos1135SecondScale.Tao.Probability.CountableMarkov": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "93d5ba0dc7390200f2729e43bbf6c8d205845747f17f41aeeb939d43aa148427",
+      "original_sha256": "b585c23df39d6cb791e8f82ebab3c1ff6fc01eedba63e521ae1fdbdc6f353373",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Probability.CountableMarkov.patch",
+      "patch_sha256": "9b74981ebe18ffe480e1ce06f39ebe519b5ebbe651db3f812aa18f1a04cd87df",
+      "source": "source/Erdos1135SecondScale/Tao/Probability/CountableMarkov.lean"
+    },
+    "Erdos1135SecondScale.Tao.Probability.Geom2CenteredMoment": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "98c05a9c3b2ce6fb4d66459680e6a1be908f9f20e71526caa728f0e66ffb24da",
+      "original_sha256": "3261c0b9504fb6f83d294bf8690630a324dae5dc8b6754fe4400b9971bcfd4ad",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Probability.Geom2CenteredMoment.patch",
+      "patch_sha256": "d098781b733c8ce829733fb6c8160211637a22fa8f6d9c2026bbbe0c3e631ec8",
+      "source": "source/Erdos1135SecondScale/Tao/Probability/Geom2CenteredMoment.lean"
+    },
+    "Erdos1135SecondScale.Tao.Probability.Geom2HighWeight": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "e38a3d80125cb81509137783f0fdbcd25f5f083a4009ed757f9b95b4bfee1830",
+      "original_sha256": "2ede2a7e8674f3c643f4d991d705e1d5a5e6ff53c40d2f218d0c1f4e6d9f1a91",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Probability.Geom2HighWeight.patch",
+      "patch_sha256": "a3caba3f8f30b0c066fdf73e5f775305edfc7b9f85210e777f3617db9f0fb88e",
+      "source": "source/Erdos1135SecondScale/Tao/Probability/Geom2HighWeight.lean"
+    },
+    "Erdos1135SecondScale.Tao.Probability.Geom2TerminalMoment": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "f872a72eb8f48b9d4319b4706e484ec219360e7b60080112b24c8bfaadbc23f8",
+      "original_sha256": "6aa92eb2b1d65647712843bf832c9c13aacb94226799ddf0603708964700bc49",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Probability.Geom2TerminalMoment.patch",
+      "patch_sha256": "5c5bae7c7d19158b65a3afe1119c2c1d6526d774aff854ed24677e52dd46f3ae",
+      "source": "source/Erdos1135SecondScale/Tao/Probability/Geom2TerminalMoment.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageLocalizedMass": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "cf6cee419cc0bff7a4fd5e8d0285fa1655372a95c1702f0221a0428e37c254c8",
+      "original_sha256": "d94a81f38289ead38a4cde0a9da008ccb46f5654bf74535838817323195adfc5",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageLocalizedMass.patch",
+      "patch_sha256": "bd6b93ceee6ad39767178f8e6452526557ce611490df80d9854ddf52e9fae587",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/CanonicalFirstPassageLocalizedMass.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageSigmaCenters": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "891ae6a6a75bd145cb0c374ecac63353505adac949079abdc35b72f8d3386deb",
+      "original_sha256": "4008c005d280b8546fe798ae577c99734ad64bf1f291537c50148e32494f6c62",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.CanonicalFirstPassageSigmaCenters.patch",
+      "patch_sha256": "d3bea653c7ed823d5ce9ab2f76dc512767a2320bd8a48d362b199a06401aea10",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/CanonicalFirstPassageSigmaCenters.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.HoldListHorizontalTail": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "8b62cbf6a1a7c20a822aebbddd34f9a62fa45bb292d762dc0d98a7dd84f090b7",
+      "original_sha256": "98a9968a12cea656ca5bb70518dafce13fae195a898b8434d84e3809f1df95e3",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.HoldListHorizontalTail.patch",
+      "patch_sha256": "5cc2bb9f3b8200c432f683dd88a66cf9b5c5d8a6f7a074e11364218e43a1ac36",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/HoldListHorizontalTail.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Lemma77PotentialCore": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "03baa989beecc42aa9c4780bd928e96a88bc0d94ed6b17cb399913bceeec283c",
+      "original_sha256": "f5105da2dcc6dc9723357531b13f9ba84f2069e6de9d9aaef1cafd44dd7db8bc",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Lemma77PotentialCore.patch",
+      "patch_sha256": "071ead3616a7983649e980559ea34e792dbcbd745eafb86425d1ecc3197544d5",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Lemma77PotentialCore.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Lemma79AllRBound": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "4c0bdaf8822b5864694e96e33c84e6bea7d769da4d6ae6722ba7b1295ef2d601",
+      "original_sha256": "dd1f4881ef6e4efdf8e79d504d4f30a2935d4bccbae3d9332bb138ecb7fc3c3a",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Lemma79AllRBound.patch",
+      "patch_sha256": "e3f13225e4dd4134d7cf5b483b6745105f846deaf70a2395be99d82fd11d7145",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Lemma79AllRBound.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Lemma79CutoffStatistic": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "df1d179a766ffa125ea4c113ccf8cd14f69551ab81338b2cd51d4aee69f84bc2",
+      "original_sha256": "efb2b471abdf929efc03c9ed4524e3b08c4b78c536284e9dee48284ec45a1f07",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Lemma79CutoffStatistic.patch",
+      "patch_sha256": "88857d0d1b3e7dc08584c0bf167748a5a676606c4d2a9e9f27b4f553cda1c8df",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Lemma79CutoffStatistic.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Lemma79EndpointFreshLaw": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "2e89c123453bf9b316bf7a78c1a2aa837579b29060e8cc613c28f0af5eb03d85",
+      "original_sha256": "22a31efdadf5210212fcf47808933ceb37584f410399c058dbc346e6d5466c87",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Lemma79EndpointFreshLaw.patch",
+      "patch_sha256": "b0787efd41332d2f1064dea347e9dffc49ee12747eb1f8457a4d9aede49bb88f",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Lemma79EndpointFreshLaw.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Lemma79NativeMarkov": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "befa439610b7a6a76befc0cf127ee963d7d206fdec61d1211e6c0fd7f94dd7f1",
+      "original_sha256": "2485148c19a6c1e3113571e8571bf5f28b258ce2dc81526d0d151424636f35d8",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Lemma79NativeMarkov.patch",
+      "patch_sha256": "ce96d7c8a657e827b5ce7ba508cdd1b1addcb54c836e64bef64a9b22c4c1e3b4",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Lemma79NativeMarkov.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Lemma79OneStepBound": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "e6d677eafaff4d6cba2ec675cb7895598b5577edcd6c7d97d0434062f5469dd5",
+      "original_sha256": "1620d60f7c28db24d5859d9138a651219a515904ce17c8d9691c28ce7493df13",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Lemma79OneStepBound.patch",
+      "patch_sha256": "21caa61f027e43fbde2e235e244a8ccbd055453929348f12d3580bc7016e03ef",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Lemma79OneStepBound.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Lemma79PostExitFreshTail": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "f18632b339ad5238fdcb70ad50f926d9707c492af19e8f2777a1ff61f3f2fd1d",
+      "original_sha256": "1cf32c84cf949922053008857c0790387d482b44d3b73223f9274fa15d1416e5",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Lemma79PostExitFreshTail.patch",
+      "patch_sha256": "e638d1b741ddce4ee1b44e001ae88fe0ca4882c29d896013596e22e238d27bcb",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Lemma79PostExitFreshTail.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Lemma79R2EndpointContraction": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "b5cf5072b85cd8c36cee36a196d1287d15abd82e311fbc721744a123a7360a79",
+      "original_sha256": "2e7eea91089f94ee2cc9e3cf45c9e6e344c24288485f2e130a5591956c67f4fe",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Lemma79R2EndpointContraction.patch",
+      "patch_sha256": "23455cb8d16b43bbf8cd07c1d1822e67cb60bfea38d2c8edb89669f9fad84692",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Lemma79R2EndpointContraction.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Lemma79R2PositiveKeyBound": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "4b90c84c6b6512ab753969b3e386a912b023261644b78f912fbc9ffcb7c231c7",
+      "original_sha256": "ca4b04517af38f003b56c2602484d8ddf9b7409932ca105e41ec558eec25c2fb",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Lemma79R2PositiveKeyBound.patch",
+      "patch_sha256": "9ad4dc5b50403fab85c10d1fd846f4875caad4ad14c8de2a630d557c30945895",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Lemma79R2PositiveKeyBound.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Lemma79TailExpectationCore": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "93e10f7ba22f40ff237375541ae3cb934e326429bbdfaa4b98668d15bdcda80f",
+      "original_sha256": "a7bdf8c1afeead7e8ba33b5fc2b6c95e8a453084fc85d99a093d74fbd6eb8e93",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Lemma79TailExpectationCore.patch",
+      "patch_sha256": "1e83cbd2f3fef8f86a7293c414b0b7abd3f362237dcf6c32f8dbd7ece0814526",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Lemma79TailExpectationCore.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.PMFExpectationThreeRegion": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "1f38af773bb8ef765cd38cacab5f9daa54a76a1cfae023eb15f636869bcfb3ae",
+      "original_sha256": "37ff2d1c9d73a6b0cc0e361d3c55a34fa75ce0b4ccb24a508d1da6efec5caae1",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.PMFExpectationThreeRegion.patch",
+      "patch_sha256": "98d3e3259b99799193b4e70211b11c01a432a9e6ab20bbfa93fb6ebae79dc2f9",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/PMFExpectationThreeRegion.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Prop78CanonicalAssembly": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "eb49fbfdaa7deca66c78a83a2f6cd7532897f2454cda265587b6f8a25fc1f90b",
+      "original_sha256": "297ac31bb0ecdade71b4f8c5bb884286cf3b0a2146359c3bc7f622baf9388726",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Prop78CanonicalAssembly.patch",
+      "patch_sha256": "1e44ef1bdd3e9e81a8c9171503f2fa7a25052fcece4e7da44932d9c4734f692f",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Prop78CanonicalAssembly.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Prop78Case3ActiveCoverStopping": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "3845b9992835824105173624b73056d5329e7e5126364346b1a137e939c15b05",
+      "original_sha256": "8c26823a6366d2f368d23ac8c1c9d567ed596a988bf07c1c61266f8dfd786d7e",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Prop78Case3ActiveCoverStopping.patch",
+      "patch_sha256": "49687269127781a8cd7f22f304ac0893a8a77f5a38ca4f08a36f5e43b4a2373f",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Prop78Case3ActiveCoverStopping.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Prop78Case3BaseKcutScheduleExistence": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "be147f64d2de66019a4cc3c446974e042436694e0b027cbcc2e80703100139af",
+      "original_sha256": "e61807ce03d447f252df0f3dcaa4c39f84283e7cf629fd0d54ec1d4d6eb7f561",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Prop78Case3BaseKcutScheduleExistence.patch",
+      "patch_sha256": "19f5ffb2f8845dd729c32b28861aa4c518266bfde0c6a23be37850b6cac74d0a",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Prop78Case3BaseKcutScheduleExistence.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.Prop78Pointwise737": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "1691a9e5610be001769c1fc4cdbdc8d58dd4a1bf6122d77411a49814617e9fb1",
+      "original_sha256": "802234cca5f272476df5e48df66e2f4bc542fd942aaba0d0f70e1d7561c49b86",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.Prop78Pointwise737.patch",
+      "patch_sha256": "74b86e66969ba12f4113eb8b411d0876db4e9d241b30c7978169c1276d75b224",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/Prop78Pointwise737.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshMarginals": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "8dcc9b2fdb3b9fd5d0e3fb20dd2726caa812ca2a5aa1d622666378b07914d70b",
+      "original_sha256": "f88a32439a04e3e371caab309ac6565f790eab26d722c29c2594f858ee634801",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.QEndpointFreshMarginals.patch",
+      "patch_sha256": "5f91781f02c2964ad78b3264cc23c245ba93348f989d78fc3b087a672e25ac10",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/QEndpointFreshMarginals.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeBudget": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "beef2022baa56f9eb99706be48e2a22a39136c969db1ca3c948f508a5d539094",
+      "original_sha256": "19f748059d932c9dc235cb2f7be061d4891c32f9ba4cdc74e8f2098271c96314",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeBudget.patch",
+      "patch_sha256": "bea8c9345120fabd7b90b01fdc4123676f3fe0003111d705d844e9f97f7d8280",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/QEndpointFreshOutsideEprimeBudget.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeNearSigma": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "b89699dcad93619cbe74fd211c090f2fc4ce7e896aa58bd7449ca690789dd4bc",
+      "original_sha256": "90abb451599607a018e60668592b59285d63473874c0640ec0b1fbd3bed77b75",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeNearSigma.patch",
+      "patch_sha256": "a5196820fd651e145fd0a55d542e0397c6cfc50cedf5009bd7ff86b13dcf5e63",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/QEndpointFreshOutsideEprimeNearSigma.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeSourceMargin": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "10252aae984fa64c44d77340fd83cb21df6fb3a1de4729d9b84762deaaee15a3",
+      "original_sha256": "f18b3ccf2090f6dbf17773cd166d58fb22fb3e5fa3cd29f50e8acbe3f16f2fa3",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeSourceMargin.patch",
+      "patch_sha256": "49ba8049831f89ec67a7ff0a2e81b7692163783d2911ffd645254c48a823c681",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/QEndpointFreshOutsideEprimeSourceMargin.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeWindow": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "e585fabef6c2cf3096150c2cfc0a27d74b0a25c7c63a60ab0a96e21670a30ff4",
+      "original_sha256": "8c2353ec4d31ed959ed0f1345cdf108931e76c9abb4a41c90683ed78d3e41ac1",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeWindow.patch",
+      "patch_sha256": "6fac5fe69f1bab5a45b8c0cf1ac0356122790aec4e3775faeced3b92ec507754",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/QEndpointFreshOutsideEprimeWindow.lean"
+    },
+    "Erdos1135SecondScale.Tao.Renewal.QmHorizontalNormalization": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "86ea28c185dd66ac3394588984eda6e7ffb65d402dc966791d556da8b48238cb",
+      "original_sha256": "02a84928ab6b845cfc3ccf8bf4344385d666679cc5a1b1a2979f535c06afa942",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Renewal.QmHorizontalNormalization.patch",
+      "patch_sha256": "96f8a123d7bbb457db25d1098e225df1cc60dd1e005252cc77aaf5100bad3eb4",
+      "source": "source/Erdos1135SecondScale/Tao/Renewal/QmHorizontalNormalization.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section5.AffineAtomDenominatorComparison": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "7ce4e2e93ee6c4735197159ed5dbad69210b5866ce0a80c037016530907b2e00",
+      "original_sha256": "762bded563feb7bafc0701788f6a29a369af2078dbf3b45e60ffce2357391251",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section5.AffineAtomDenominatorComparison.patch",
+      "patch_sha256": "db9f99c91df7f5c8322a0d1c5d6a7f3f57a661feecd089d47d3344505e012316",
+      "source": "source/Erdos1135SecondScale/Tao/Section5/AffineAtomDenominatorComparison.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section5.AffineAtomPointMass": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "54f44c193539dd463ce8689c991e07855393a30f8dc94a19f9d8dfcd672dd2eb",
+      "original_sha256": "a1e4af3c3baea5476839543ee6f242c9eb934a8a0dbf1908ff270f0a516edf91",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section5.AffineAtomPointMass.patch",
+      "patch_sha256": "3cc833313e7d11aaff539bff48b7f877ba8132174c02c7738b1310b8ed487885",
+      "source": "source/Erdos1135SecondScale/Tao/Section5/AffineAtomPointMass.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section5.EndpointCoefficientBound": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "dffa8c8804135e78ab55ab6fff25bc05f6682332f6666cf56d217bc13cda1891",
+      "original_sha256": "271a6b29171b981491849848c3317aa124e1dcb9752b396429d21d612a8bd273",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section5.EndpointCoefficientBound.patch",
+      "patch_sha256": "246397d37fc819c01b5cd8d5a3b6bfca2b87c562f03d3f303242cf2df643eaf5",
+      "source": "source/Erdos1135SecondScale/Tao/Section5/EndpointCoefficientBound.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section5.EndpointValuationFiber": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "37d449a93417a1a2befe66ba34c7beedf018362a162532540362446837f7ecda",
+      "original_sha256": "3e13c8c166fce210caa66ce0670944bbac8acf7d3fb0986a161c71dff65b7e7f",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section5.EndpointValuationFiber.patch",
+      "patch_sha256": "61f396eccb8a98c96346beb5185ba72a9823c99c392a2a5db2f3dd9cb689e1ed",
+      "source": "source/Erdos1135SecondScale/Tao/Section5/EndpointValuationFiber.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section5.PassTypicalFailure": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "4db4481219c9f3c9e4177341f705bf3884e3f0ff457f546a8c18e6c7072c08ab",
+      "original_sha256": "a4ccf5d1ffd99d44838118a3e89bf08569a99eee4aa3e6e46be09aaa6d341c6d",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section5.PassTypicalFailure.patch",
+      "patch_sha256": "296387963da995ba8e3eba88f7d22552a91e17733fd42cf326e2faedae66305c",
+      "source": "source/Erdos1135SecondScale/Tao/Section5/PassTypicalFailure.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section5.Prop19Output": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "617834dfb096dd7a04221b4420a2b39b8cb6cd42c18a97dbdce287eb836faa15",
+      "original_sha256": "508a9be0ded396b89a7b3cc3d68d3df11237b488876b207bf7de49e02f824757",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section5.Prop19Output.patch",
+      "patch_sha256": "808668c65d2cc2dfd1ed3d0e0f1c273a0867f89a5ab961eded247ab131606e60",
+      "source": "source/Erdos1135SecondScale/Tao/Section5/Prop19Output.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section5.ReversePrefixScalar": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "1c79d6b3a1428ec3714e73966890aaf54444ed022d1a475e8ee41f13d31216a6",
+      "original_sha256": "ff5304282dac39f63f7f332a8cc78c91bad375873ace9125270a967dcf29330b",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section5.ReversePrefixScalar.patch",
+      "patch_sha256": "234c7fb3ddb12f854ccde7d60f1560d315a289feb1e24f7cac05dd3d248f68b6",
+      "source": "source/Erdos1135SecondScale/Tao/Section5/ReversePrefixScalar.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section6.ConductorProjectivity": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "fac632a782869af57301738b36d70dde5263989e9cc8b8a2198f8a3ccbed0d01",
+      "original_sha256": "3229e38515f1c30323589ef4b48f2a5bc80a0687898c0a4167e9121d8328920b",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section6.ConductorProjectivity.patch",
+      "patch_sha256": "4590cfc89ca6867c3190bfcca2c7bc668e5eecd2672f7e3b2edd149f0fa372ed",
+      "source": "source/Erdos1135SecondScale/Tao/Section6/ConductorProjectivity.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section6.FiniteFourierCollision": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "7a19a819e2ac81cb42be548933f0087e751aa6af4e7c5aa6c2e355c60e74a00d",
+      "original_sha256": "069fff38cdac4be2798a38bcf636ec3ed22fa1d9d2a0125db0f42ea7d1cb8b11",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section6.FiniteFourierCollision.patch",
+      "patch_sha256": "7cffe14bd8db78dcd556b7bb3751a99f485126a4e14bd1388dcdd45793655a22",
+      "source": "source/Erdos1135SecondScale/Tao/Section6/FiniteFourierCollision.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section6.Geom2IntervalConcentration": {
+      "adaptation": "One proof tactic spelling push_neg to push Not plus a modification notice; no definition or theorem statement changed.",
+      "candidate_sha256": "df646060f6d3e728e7ce19efc7207725e8d4a950b7d65c0dd531341beacb854e",
+      "original_sha256": "7e077c9c551f80277924e607d3c92fc14f7e8e1a0801b0beee3e063d4bf53f19",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section6.Geom2IntervalConcentration.patch",
+      "patch_sha256": "882861ac20c33edabacdc3f2460abc007b84ad16321d00927a9901f62ed02040",
+      "source": "source/Erdos1135SecondScale/Tao/Section6/Geom2IntervalConcentration.lean"
+    },
+    "Erdos1135SecondScale.Tao.Section6.UniformLift": {
+      "adaptation": "Reported proof elaboration correction, retained unused hypotheses, or bound-variable alpha-renaming. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "59d3b5444f4f64069e726ead1cc3a7ba47d54102a41dab3bdbecc8784edfc347",
+      "original_sha256": "fcff183cc3efc4315e69ff15dc72b353b46957979cb14e18336517785f598836",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Section6.UniformLift.patch",
+      "patch_sha256": "38ed5bdac3959e70725962546840f4e7588098dfcf9b7395ddf917e82e3d31de",
+      "source": "source/Erdos1135SecondScale/Tao/Section6/UniformLift.lean"
+    },
+    "Erdos1135SecondScale.Tao.Syracuse.TruncatedValuationGeom2": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "35634c7f19c776dc5fa9c3615a06f4f8c3062908225d5ee5d0d2da3dc678f3e7",
+      "original_sha256": "47adeb542b786dc229ec727753daeb240955fae0ce99fde2abf634e51ffe6605",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Syracuse.TruncatedValuationGeom2.patch",
+      "patch_sha256": "7eebc472db2a3082b3676cd9735837e614e614a1277d2ae74b147c8245552c76",
+      "source": "source/Erdos1135SecondScale/Tao/Syracuse/TruncatedValuationGeom2.lean"
+    },
+    "Erdos1135SecondScale.Tao.Syracuse.TruncatedValuationUniformOdd": {
+      "adaptation": "Reported proof-tactic correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed.",
+      "candidate_sha256": "c81bdc90e7b8a82836da5eb8420835f00c610cb8c13a7e8ccb20472aafdd473a",
+      "original_sha256": "02d4e41106b88587e4076d9245f91c40b3851635047b6d0bcd1b797c7ab505bf",
+      "patch": "provenance/envelope-linter-patches/Erdos1135SecondScale.Tao.Syracuse.TruncatedValuationUniformOdd.patch",
+      "patch_sha256": "4d81ad636319c7733dc0cbf69db2f1feddf4ea0f2a126fffe79a9379bca22087",
+      "source": "source/Erdos1135SecondScale/Tao/Syracuse/TruncatedValuationUniformOdd.lean"
+    },
+    "Tejonas": {
+      "adaptation": "Reported proof-elaboration correction or unused binder alpha-renaming, plus a modification notice. No theorem proposition changed; no warning disabled.",
+      "candidate_sha256": "974437ad6e664915d6815b7b3757b640b3a6c70dd4659fd38c4b05349b97d839",
+      "original_sha256": "95541d9d2258e4e9d7afe71125cbe259d0cee1addaef14f77e96ba1ce3cc934b",
+      "patch": "provenance/envelope-linter-patches/Tejonas.patch",
+      "patch_sha256": "2aa4ca020f81365b39ddb86c674c52ac649638009d5c2bae6678468bd79544ab",
+      "source": "source/Tejonas.lean"
+    }
+  }
+}

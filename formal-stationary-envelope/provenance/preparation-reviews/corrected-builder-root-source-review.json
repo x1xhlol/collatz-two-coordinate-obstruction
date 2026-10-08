@@ -1,0 +1,21 @@
+{
+  "status": "PASS_SOURCE_REVIEW_NOT_EXECUTION",
+  "utc": "2026-10-08T10:19:44.636033+00:00",
+  "reviewer": "Root",
+  "builder": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/prepare_envelope_replay_corrected.py",
+  "builder_sha256": "72a7bdd79476f9c9532828f512bc647354b20f5fd92503536b4300019e6fd020",
+  "review_scope": [
+    "Complete corrected builder and delta from original builder read.",
+    "Fresh destination, source-only copy, preserved failed bundle, exact final source closure, import topology and no-bypass token gates retained.",
+    "Complete nonfinal diagnostic and exact warning-module patch coverage required before freeze.",
+    "Expanded strict candidate checks bind source, patch, log and exit status; final fresh replay is still required.",
+    "Prepared driver must match supplied independently reviewed SHA; freeze rechecks same driver and every prepared script.",
+    "Final independent patch review must match supplied SHA, PASS status and exact expanded ledger hash; reviewed record and development ledger are preserved in pinned provenance.",
+    "Source inventory recomputed before copy, every copied file checked, final manifest pins all bundle metadata and sources."
+  ],
+  "limitations": [
+    "This does not review or approve a changing scheduler candidate. That needs its own final-hash review.",
+    "Final expanded warning patch content review is separate and pending.",
+    "No builder execution, frozen corrected manifest, Lean replay or all-constant audit is claimed here."
+  ]
+}

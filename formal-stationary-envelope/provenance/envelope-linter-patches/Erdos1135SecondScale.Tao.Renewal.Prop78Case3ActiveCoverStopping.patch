@@ -1,0 +1,22 @@
+--- original/Erdos1135SecondScale.Tao.Renewal.Prop78Case3ActiveCoverStopping.lean
++++ candidate/Erdos1135SecondScale.Tao.Renewal.Prop78Case3ActiveCoverStopping.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused bound-variable names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -42,8 +46,9 @@
+     (hinit' :
+       TaoSection7Case3InitialStoppingStep
+         pointAt hactive.family first' Γ') :
+-    (first, Γ) = (first', Γ') :=
+-  hinit.pair_eq_of_pairwiseDisjoint hactive.pairwiseDisjoint hinit'
++    (first, Γ) = (first', Γ') := by
++  have _ := J
++  exact hinit.pair_eq_of_pairwiseDisjoint hactive.pairwiseDisjoint hinit'
+ 
+ /--
+ Compare an actual stopping-transition head with a produced one-step packet

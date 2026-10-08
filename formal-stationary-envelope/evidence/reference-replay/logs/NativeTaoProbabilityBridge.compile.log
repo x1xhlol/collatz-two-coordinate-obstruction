@@ -1,0 +1,7 @@
+'CollatzCanonical.NativeTao.native_closed_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.NativeTao.finite_landing_fullL1_eq_native_TV' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NativeTao.native_firstHitWeight_passage_expectation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

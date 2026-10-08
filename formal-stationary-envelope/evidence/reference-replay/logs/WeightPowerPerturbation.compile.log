@@ -1,0 +1,7 @@
+'CollatzCanonical.WeightPerturbation.neg_mul_log_le_inv_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.WeightPerturbation.uniform_weight_power_perturbation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.WeightPerturbation.abs_weight_power_perturbation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

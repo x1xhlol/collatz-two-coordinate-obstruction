@@ -1,0 +1,27 @@
+--- original/Erdos1135/Tao/Renewal/Prop78CanonicalAssembly.lean
++++ corrected/Erdos1135/Tao/Renewal/Prop78CanonicalAssembly.lean
+@@ -1,3 +1,6 @@
++/- This local copy renames unused bound variables in result types for the pinned toolchain linter.
++   The logical statement is alpha-equivalent; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Renewal.Prop78AbsolutePacket
+ import Erdos1135.Tao.Renewal.Prop78Case1White
+ import Erdos1135.Tao.Renewal.Prop78Case2Expectation
+@@ -32,7 +35,7 @@
+     ∃ C : ℕ,
+       TaoSection7Prop78Threshold A packet.epsilon C ∧
+       ∀ (n : ℕ) (xi : ZMod (3 ^ n))
+-        (hxi : zmodThreePrimitive n xi) (m : ℕ),
++        (_hxi : zmodThreePrimitive n xi) (m : ℕ),
+         C ≤ m → m ≤ n / 2 →
+         taoSection7SourceActualQmAtCutoff
+             n A m xi packet.epsilon ≤
+@@ -90,7 +93,7 @@
+     ∃ C : ℕ,
+       TaoSection7Prop78Threshold A packet.epsilon C ∧
+       ∀ (n : ℕ) (xi : ZMod (3 ^ n))
+-        (hxi : zmodThreePrimitive n xi) (m : ℕ),
++        (_hxi : zmodThreePrimitive n xi) (m : ℕ),
+         C ≤ m → m ≤ n / 2 →
+         taoSection7SourceActualQmAtCutoff
+             n A m xi packet.epsilon ≤

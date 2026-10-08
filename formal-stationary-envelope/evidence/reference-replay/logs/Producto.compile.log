@@ -1,0 +1,5 @@
+'ProductoGao.deriva_producto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProductoGao.momento_producto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProductoGao.maximo_producto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProductoGao.producto_desde' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProductoGao.producto_palabra' depends on axioms: [propext, Classical.choice, Quot.sound]

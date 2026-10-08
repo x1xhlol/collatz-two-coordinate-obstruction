@@ -1,0 +1,546 @@
+{
+  "approved_mathematical_base_sha256": "72e48f83c2970d9abfeccdd86a63545465cfded023286866d0b90d2f641b7f9a",
+  "artifact_manifest_binding": "The paper artifact manifest binds this report after its creation; this report does not hash that manifest, to avoid a circular digest.",
+  "base_commit": "48830badb2f8f1639309744012838cf061d45b7b",
+  "citation": {
+    "references": 4,
+    "title": "Collatz basin densities and Syracuse laws: papers and Lean proofs",
+    "version": "2026.10.08.3"
+  },
+  "complete_package_index": "formal-stationary-envelope/publication-manifest.json",
+  "complete_package_index_sha256": "fd5e291225eacd415823f55b6da9ab1f347f2a78cc92df0968b5c29b168bc366",
+  "distribution_bytes": 116599145,
+  "distribution_file_count": 5168,
+  "independent_manuscript_review": "verification/envelope-manuscript-independent-review.json",
+  "independent_manuscript_review_sha256": "e2aaaac61f726257939e675a888557f2997005ad010cdf4f641aa365f7c15716",
+  "independent_replay_review": "verification/envelope-completed-replay-independent-review.json",
+  "independent_replay_review_sha256": "8bc2ac66a71bcf907fdbc261016d92caca3d76640cf0c4ee3d437b29d73a6c0a",
+  "limitations": [
+    "No forward Collatz convergence, cycle exclusion, or expected occupation upper bound is proved.",
+    "The lower bound and fixed-integer trace conclusions supply no uniform approximation as the integer root grows.",
+    "External compiled libraries remain a stated reuse boundary.",
+    "Automated review and proof checking are not external peer review."
+  ],
+  "local_link_count": 99,
+  "local_links": [
+    {
+      "source": "README.md",
+      "target": "paper/positive-stationary-envelope.pdf"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/positive-stationary-envelope.tex"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/envelope-lean-claims.md"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/quadratic-cylinder-energy.pdf"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/quadratic-cylinder-energy.tex"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/sharp-haar-lean-claims.md"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/growing-deficit-fourier.pdf"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/growing-deficit-fourier.tex"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/growing-deficit-lean-claims.md"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/tao-basin-densities.pdf"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/tao-basin-densities.tex"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/basin-lean-claims.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-stationary-envelope/REPLAY-GUIDE.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-stationary-envelope/evidence/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-sharp-haar/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-sharp-haar/evidence/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-growing-deficit/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-growing-deficit/recorded/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-growing-deficit/recorded/independent-review.json"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-basins-native/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-periodic-census/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-cylinder-energy/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-raw-occupation/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-raw-divergent-excess/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-inverse-doob-clock/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/artifact-manifest.json"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-stationary-envelope/REPLAY-GUIDE.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-sharp-haar/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-growing-deficit/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-basins-native/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-periodic-census/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-cylinder-energy/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-raw-occupation/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-raw-divergent-excess/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-inverse-doob-clock/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "LICENSE"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/LICENSE"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-basins-native/SOURCE-LICENSES.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-periodic-census/SOURCE-LICENSES.txt"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-cylinder-energy/SOURCE-LICENSES.txt"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-raw-occupation/SOURCE-LICENSES.txt"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-raw-divergent-excess/SOURCE-LICENSES.txt"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-inverse-doob-clock/SOURCE-LICENSES.txt"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-growing-deficit/THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-sharp-haar/licenses/SOURCE-LICENSES.txt"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-sharp-haar/evidence/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-stationary-envelope/SOURCE-LICENSES.txt"
+    },
+    {
+      "source": "README.md",
+      "target": "formal-stationary-envelope/evidence/README.md"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/REPLAY-GUIDE.md"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/evidence/reference-replay/replay-record.json"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/evidence/validation/validation-record.json"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PadicIntegerEnvelope.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalIntegerEnvelope.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalIntegerEnvelope.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeStationary.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalIntegerEnvelope.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PadicIntegerEnvelopeIntegral.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopePeriodicExtension.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeCylinderTrace.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeUniformCylinderFloor.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalSyracuseMinimumUnitMass.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalSyracuseMinimumUnitMass.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeTraceConsequences.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PadicIntegerEnvelope.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeArithmeticRegularity.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeArithmeticRegularity.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeDenseInfinity.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeDenseInfinity.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeDenseInfinity.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeDenseInfinity.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PeriodicMarkedFirstHitMeanFromSources.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PeriodicMarkedFirstHitMeanFromSources.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/EnvelopeOddSuperharmonicLayer.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PeriodicTraceTestIntegralBoundFromLayers.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PadicIntegerEnvelope.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeStepMean.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PadicIntegerEnvelopeIntegral.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PadicBinaryEnvelopeTransfer.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PadicBinaryEnvelopeTransfer.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeStationary.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeNormalization.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeNormalization.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopePointwiseSqueeze.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopePeriodicExtension.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeTraceConsequences.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeInfiniteOrbit.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PowerTwoModuloThree.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalEnvelopeDenseInfinity.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/ActualUnconditionalCanonicalTrace.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalTracePolynomialFloor.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/PadicBinaryEnvelopeTransfer.lean"
+    },
+    {
+      "source": "paper/envelope-lean-claims.md",
+      "target": "../formal-stationary-envelope/source/CanonicalIntegerEnvelopeResults.lean"
+    },
+    {
+      "source": "formal-stationary-envelope/REPLAY-GUIDE.md",
+      "target": "source/CanonicalIntegerEnvelopeResults.lean"
+    },
+    {
+      "source": "formal-stationary-envelope/REPLAY-GUIDE.md",
+      "target": "evidence/validation/validation-record.json"
+    },
+    {
+      "source": "formal-stationary-envelope/REPLAY-GUIDE.md",
+      "target": "evidence/README.md"
+    },
+    {
+      "source": "formal-stationary-envelope/REPLAY-GUIDE.md",
+      "target": "evidence/reference-replay/replay-record.json"
+    },
+    {
+      "source": "formal-stationary-envelope/REPLAY-GUIDE.md",
+      "target": "README.md"
+    },
+    {
+      "source": "formal-stationary-envelope/REPLAY-GUIDE.md",
+      "target": "SOURCE-LICENSES.txt"
+    },
+    {
+      "source": "formal-stationary-envelope/REPLAY-GUIDE.md",
+      "target": "provenance/envelope-license-review.json"
+    }
+  ],
+  "mathematical_preservation": "Final TeX equals the previously reviewed template with its completed verification paragraph. Only the scoped recent-preprint citation and verification prose differ from the approved mathematical source. The claim map changes only completed verification status and the finalized link preface.",
+  "pdf": {
+    "font_check": "All 24 fonts embedded; verified by pdffonts.",
+    "log_check": "No typesetting warnings, overfull/underfull boxes, unresolved references, or missing glyphs.",
+    "page_checks": [
+      {
+        "outside_page_words": [],
+        "page": 1,
+        "root_visual_review": "PASS",
+        "word_count": 408
+      },
+      {
+        "outside_page_words": [],
+        "page": 2,
+        "root_visual_review": "PASS",
+        "word_count": 430
+      },
+      {
+        "outside_page_words": [],
+        "page": 3,
+        "root_visual_review": "PASS",
+        "word_count": 378
+      },
+      {
+        "outside_page_words": [],
+        "page": 4,
+        "root_visual_review": "PASS",
+        "word_count": 573
+      },
+      {
+        "outside_page_words": [],
+        "page": 5,
+        "root_visual_review": "PASS",
+        "word_count": 460
+      },
+      {
+        "outside_page_words": [],
+        "page": 6,
+        "root_visual_review": "PASS",
+        "word_count": 460
+      },
+      {
+        "outside_page_words": [],
+        "page": 7,
+        "root_visual_review": "PASS",
+        "word_count": 443
+      },
+      {
+        "outside_page_words": [],
+        "page": 8,
+        "root_visual_review": "PASS",
+        "word_count": 182
+      }
+    ],
+    "pages": 8,
+    "pdf_sha256": "8525cef1cda701874bcea9115670bab915091b0a1e5959b87a44a7c23493388f",
+    "status": "PASS"
+  },
+  "previous_papers_preserved": [
+    {
+      "additional_results": "Uniform exact first-hit coefficient bound at positive odd targets, including periodic targets; actual finite cylinder-mass transport and energy decomposition; an exact finite-energy criterion equivalent to universal eventual periodicity, with unconditional normalized decay outside every diverging ancestor barrier. Unconditional raw occupation lower bound: for every b<1/log(4/3), the sum of actual weighted first-hit densities over odd N\u2264R is at least b log R for all sufficiently large integer R. A specified injective odd orbit forces the additional lower coefficient D_u/(P_infinity(u)*log(3/2)), strictly positive at unit roots. Under the actual inverse Doob law at every positive odd nonperiodic unit root, log(Y_k)/k tends almost surely to log(4/3).",
+      "credit": "The inverse-linear form was proposed by Wirsching. The proof uses Mazur's weighted predecessor construction and Said Duran's coalescence theorem, alongside the density and canonical-limit foundations described in the paper.",
+      "main_result": "For one fixed positive integer K_seed and every positive target N prime to three, shortcut and ordinary predecessor natural densities are at least 3/(128*K_seed*N).",
+      "numbered_results": 31,
+      "pages": 37,
+      "pdf": "paper/tao-basin-densities.pdf",
+      "pdf_sha256": "eba6e34319e3f42c0ca2748b81349d808abbbcacdcd3bf38d9f946936eab13d3",
+      "source": "paper/tao-basin-densities.tex",
+      "source_sha256": "fa4e6c790002bdbb32c1679eb0b833574e110f0462f16a0e2303594137822850",
+      "theorem_map": "paper/basin-lean-claims.md",
+      "theorem_map_sha256": "03ee66ad959fbabeff1c1a25facd81b1d023ee51a3fd128e3c9ee86f0f06039f",
+      "title": "Collatz basin densities and canonical traces from first-passage stabilization"
+    },
+    {
+      "additional_results": "Conditioning on total-exponent slices with polynomially bounded reciprocal mass preserves superpolynomial decay for n-k<=k^beta, 0<beta<1. The central slice S_k=2k has mass at least 1/(4k) for k>=1 and satisfies that decay conclusion for k>=4.",
+      "credit": "Tao's full-length endpoint is prior work. The comparison with Si is confined to his stated central-slice logarithmic oversampling range. The proof incorporates the credited Subspace Theorem formalizations and renewal inputs.",
+      "limitations": "Constants are ineffective. No conductor-power decay at fixed positive deficit ratio, deterministic integer transfer, or Collatz convergence result is asserted.",
+      "main_result": "For every fixed natural A, primitive Fourier coefficients of the k-step geometric Syracuse affine law modulo 3^n are bounded by C_A*((n-k+2)/n)^A for n>=1 and 0<=k<=n, uniformly in the seed and in unit-modulus phases depending on the total exponent.",
+      "numbered_results": 6,
+      "pages": 9,
+      "pdf": "paper/growing-deficit-fourier.pdf",
+      "pdf_sha256": "c4cef4da6a990d118fab44e9086f4ed59882b9012b8175952fe22b73174c0222",
+      "source": "paper/growing-deficit-fourier.tex",
+      "source_sha256": "ca99dae8fdfc5f96c3b2647fdfda37b0981a6f4b9db15b5a59242836a995ac3c",
+      "theorem_map": "paper/growing-deficit-lean-claims.md",
+      "theorem_map_sha256": "5df66866c45d2b7624170963eec55d73be82c6778f00659c7d5da5d13aa2885a",
+      "title": "Fourier decay for truncated Syracuse affine laws"
+    },
+    {
+      "additional_results": "Uniform finite-level Lp bounds for every real 1<=p<2; the actual stationary density equation; failure of L2 through positive support overlap. The depth-zero and p=1 finite-level boundary cases are assembled from the named public endpoints explained in the theorem map.",
+      "credit": "Tao supplies the random law, fine-scale mixing and fixed-length/fixed-total offset injectivity. The quadratic energy argument uses distinct natural quotients and normalized geometric moments. No exhaustive priority claim is made.",
+      "limitations": "These are random-law Haar estimates. No weak-L2 bound, exact linear energy growth, integer trace estimate or individual-orbit convergence result is asserted.",
+      "main_result": "For the canonical fair Syracuse law on the 3-adic integers, full-Haar depth-k cylinder energy is at most 24k+8k^2<=32k^2 for k>=1. One normalized nonnegative density has exact real Lp range 1<=p<2.",
+      "numbered_results": 6,
+      "pages": 8,
+      "pdf": "paper/quadratic-cylinder-energy.pdf",
+      "pdf_sha256": "5454fe1144976fdf72f643bba0f7b6aaf8cd0cc17f6e4dcd49f8cd59dce2c46e",
+      "source": "paper/quadratic-cylinder-energy.tex",
+      "source_sha256": "d8bc1905bdc833ce01fcfe21984096d5c8cf75bef10ebd93e4ec3e8804392df0",
+      "theorem_map": "paper/sharp-haar-lean-claims.md",
+      "theorem_map_sha256": "0bf051f1bd41c477f309243ce30c4ed82f1ae186db9f8bbc24057434f87e9c6f",
+      "title": "Quadratic cylinder energy and integrability of the Syracuse law"
+    }
+  ],
+  "prior_checks_preserved": true,
+  "private_checker_correction": "verification/envelope-private-checker-correction.json",
+  "private_checker_correction_sha256": "2f754e383a6b50c47da9cc326b93b7b21b0d3b167612cc9b1ea1c368504075fd",
+  "proof_scope": "All 1,620 internal source modules and the generated complete declaration audit were freshly compiled with warnings as errors and individually checked by the official kernel checker. The audit includes private and generated constants and permits only propext, Classical.choice and Quot.sound. Complete inventories of 53,006 external compiled objects agree before and after. Setup reuse, fresh-process record verification and relocated verification passed; relocation copied internal objects and reused the same external libraries without recompilation. External libraries were fingerprinted and reused, not rebuilt or independently matched to adjacent source checkouts. Fresh dependency download was not exercised.",
+  "public_files": {
+    "CITATION.cff": "73b7952aad8a8a2290afa13bf5562b1cadb11bd35e811ff027d0370480d58621",
+    "README.md": "76baa5a375c09a8f4cbcc043cd0057d2b69103224a14854070c98342a3f6c257",
+    "paper/envelope-lean-claims.md": "e01df8a892ceb37c5b02ed5bf0e8851f93168003be77fdd0cd71e2f697a5f994",
+    "paper/positive-stationary-envelope.pdf": "8525cef1cda701874bcea9115670bab915091b0a1e5959b87a44a7c23493388f",
+    "paper/positive-stationary-envelope.tex": "522693c1f61c233f56f7d95e31c58a266ee81729d3628f2656f55a418cd01a78"
+  },
+  "replay_authentication_data": "verification/envelope-completed-replay-authentication-data.json",
+  "replay_authentication_data_sha256": "b02cdbb2c2eec2dc98bda321f5a3a9c8fcbd4ba07c53d656b417c9a54ed805a0",
+  "reviewed_utc": "2026-10-08T12:43:01.813849+00:00",
+  "schema_version": 1,
+  "scope": "Root final repository integration: approved mathematics and rendered files preserved, exact source/text bundle authenticated, all eight PDF pages visually inspected with font/log/bounding-box checks, local links and citation metadata checked, and all prior paper artifacts preserved. Completed Lean execution is authenticated by the separately pinned independent replay review; this integration review performs no additional Lean replay.",
+  "source_manifest": "formal-stationary-envelope/source-manifest.json",
+  "source_manifest_sha256": "c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c",
+  "status": "PASS"
+}

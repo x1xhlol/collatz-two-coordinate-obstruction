@@ -1,0 +1,73 @@
+--- original/Erdos1135.NumberTheory.Rhin.LargeHeight.lean
++++ candidate/Erdos1135.NumberTheory.Rhin.LargeHeight.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.NumberTheory.Rhin.Statement
+ import Erdos1135.NumberTheory.Rhin.RangeLCM
+ import Erdos1135.NumberTheory.Rhin.LiteralCoefficientBound
+@@ -234,7 +238,7 @@
+   have h3 := Ideal.mul_mem_left (I ^ 2) (C c) hdd
+   have hSum := (I ^ 2).add_mem ((I ^ 2).add_mem h1 h2) h3
+   change _ ∈ I ^ 2
+-  convert hSum using 1 <;> simp only [map_mul] <;> ring
++  convert hSum using 1; simp only [map_mul]; ring
+ 
+ private theorem cubic_generator_expansion_mem_endpointXIdeal_cube
+     (d : ℤ) (A : ℤ[X]) (b c e : ℤ) :
+@@ -260,7 +264,7 @@
+   have hSum :=
+     (I ^ 3).add_mem ((I ^ 3).add_mem ((I ^ 3).add_mem h1 h2) h3) h4
+   change _ ∈ I ^ 3
+-  convert hSum using 1 <;> simp only [map_mul] <;> ring
++  convert hSum using 1; simp only [map_mul]; ring
+ 
+ private theorem literalRhinFactor1_mem_three :
+     literalRhinFactor1 ∈ endpointXIdeal 3 := by
+@@ -304,7 +308,7 @@
+     literalRhinFactor5 ∈ endpointXIdeal 3 ^ 2 := by
+   have h := quadratic_mem_endpointXIdeal_sq 3 17 (-34) 16
+   norm_num [map_mul] at h ⊢
+-  convert h using 1 <;> ring
++  convert h using 1
+ 
+ private theorem literalRhinFactor5_mem_four :
+     literalRhinFactor5 ∈ endpointXIdeal 4 := by
+@@ -320,19 +324,19 @@
+     4 (C 289 * X - C 3468) 3825 (-1836) 324
+   unfold literalRhinFactor5
+   norm_num [map_mul] at h ⊢
+-  convert h using 1 <;> ring
++  convert h using 1; ring
+ 
+ private theorem literalRhinFactor6_mem_three_sq :
+     literalRhinFactor6 ∈ endpointXIdeal 3 ^ 2 := by
+   have h := quadratic_mem_endpointXIdeal_sq 3 19 (-36) 16
+   norm_num [map_mul] at h ⊢
+-  convert h using 1 <;> ring
++  convert h using 1
+ 
+ private theorem literalRhinFactor6_mem_four_sq :
+     literalRhinFactor6 ∈ endpointXIdeal 4 ^ 2 := by
+   have h := quadratic_mem_endpointXIdeal_sq 4 19 (-27) 9
+   norm_num [map_mul] at h ⊢
+-  convert h using 1 <;> ring
++  convert h using 1
+ 
+ private def literalRhinThreeOrderAt (i : Fin 6) (n : ℕ) : ℕ :=
+   ![literalRhinMultiplicity 0 n, 0, 0, literalRhinMultiplicity 3 n,
+@@ -480,10 +484,10 @@
+       have h3x := Ideal.mul_mem_mul
+         (endpointXIdeal_C_mem 3) (endpointXIdeal_X_mem 4)
+       have hSub := (endpointXIdeal 3 * endpointXIdeal 4).sub_mem h4x h3x
+-      convert hSub using 1 <;> norm_num [map_mul] <;> ring
++      convert hSub using 1; norm_num [map_mul]; ring
+     · have hMul := Ideal.mul_mem_mul
+         (endpointXIdeal_C_mem 3) (endpointXIdeal_C_mem 4)
+-      convert hMul using 1 <;> norm_num [map_mul]
++      convert hMul using 1; norm_num [map_mul]
+ 
+ /-- The literal p. 162 polynomial has the corrected common `(X,12)^n`
+ certificate needed by the two p. 159 endpoint integrals.  The proof keeps

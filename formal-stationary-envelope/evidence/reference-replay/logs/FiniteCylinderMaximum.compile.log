@@ -1,0 +1,3 @@
+'CollatzCylinderPacking.Arithmetic.maximum_residue_mass_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

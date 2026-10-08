@@ -1,0 +1,9 @@
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalRho_eventually_native_trace_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalRho_cesaro_abs_native_trace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalRho_mean_abs_native_trace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

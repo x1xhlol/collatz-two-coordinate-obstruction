@@ -1,0 +1,6 @@
+'CollatzCanonical.NativeTao.actual_clockExceptionIndicator_eq_event' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NativeTao.actual_firstHitOddDepth_exception_mean_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

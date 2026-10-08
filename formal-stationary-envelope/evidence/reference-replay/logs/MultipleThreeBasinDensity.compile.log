@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.actual_basin_density_zero_of_multiple_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.actual_weighted_density_zero_of_multiple_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.actual_trace_zero_of_multiple_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,19 @@
+--- original/Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeNearSigma.lean
++++ candidate/Erdos1135SecondScale.Tao.Renewal.QEndpointFreshOutsideEprimeNearSigma.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused bound-variable names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -67,7 +71,7 @@
+     (hradius : Jgeo ^ 2 + (K * B) ^ 2 ≤ R ^ 2)
+     (hgapKB : gap ≤ K * B)
+     (hLerrKB : Lerr ≤ K * B) :
+-    ∃ c : Center family old sMin K B,
++    ∃ _c : Center family old sMin K B,
+       NearSigma R (Sigma family old sMin K B)
+         (lemma79EndpointFreshPointAt entry atom p) := by
+   rcases hatom with

@@ -1,0 +1,9 @@
+'CollatzCanonical.LaplaceAbelian.exponential_first_moment_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.LaplaceAbelian.exponential_first_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.LaplaceAbelian.scaled_laplace_integral_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.LaplaceAbelian.laplace_scaling_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.LaplaceAbelian.laplace_abelian_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

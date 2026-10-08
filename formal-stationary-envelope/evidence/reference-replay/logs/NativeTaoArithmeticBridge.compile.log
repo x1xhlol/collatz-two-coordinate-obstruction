@@ -1,0 +1,7 @@
+'CollatzCanonical.NativeTao.iterate_eq_native' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.NativeTao.native_real_first_passage_is_oddBarrier' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NativeTao.native_real_first_passage_goodLanding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

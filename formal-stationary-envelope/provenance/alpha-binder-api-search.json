@@ -1,0 +1,13 @@
+{
+  "bound_result_changes": {
+    "Prop78CanonicalAssembly": "two nested hxi binders renamed _hxi",
+    "Prop78Pointwise737": "two nested hxi binders renamed _hxi",
+    "QEndpointFreshOutsideEprimeNearSigma": "one unused existential c binder renamed _c"
+  },
+  "matches": [],
+  "pattern": "hxi\\s*:=",
+  "scope": "Source search for named applications affected by approved nested result binder alpha-renaming; full fresh compilation remains required.",
+  "source_count": 362,
+  "source_manifest_sha256": "96500e070b6dcdc730975638029d0f7aa31ba40db2ecb46282f76c91175af5b9",
+  "top_level_named_argument_changes": []
+}

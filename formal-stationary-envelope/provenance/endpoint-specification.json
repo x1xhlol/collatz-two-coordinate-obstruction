@@ -1,0 +1,50 @@
+{
+  "endpoints": [
+    "CanonicalIntegerEnvelopeResults"
+  ],
+  "endpoint_declarations": [
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_withDensity",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_lintegral_eq_one",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_uniform_unit_floor",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_natCast_eq",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_greatest",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalMinimumUnitMass_uniform_bounds",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalMinimumUnitMass_base_three_rate",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalRho_mean_abs_native_trace",
+    "CollatzCanonical.IntegerStationaryEnvelope.actual_trace_residue_lower",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_infinity_closure",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_infinity_isGDelta",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_infinity_haar_null",
+    "CollatzCanonical.IntegerStationaryEnvelope.actual_trace_unbounded_in_unit_cylinder",
+    "CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_not_continuousAt_positive_unit"
+  ],
+  "required_new_source_hashes": {
+    "CanonicalEnvelopeArithmeticRegularity": "c4d6f33ab877d951a74307688527bd1f04f7c41a7640afcf3c60e9d18808c1d0",
+    "CanonicalEnvelopeCylinderTrace": "db33de3401b84eef21df0193fb6452f909fa933268720619faba194449f38e58",
+    "CanonicalEnvelopeDenseInfinity": "2401178cc2f27822aa8ef1cba2ea775beb723ae3ae9193a9c3eb86ed8cdbf95c",
+    "CanonicalEnvelopeInfiniteOrbit": "425bd3b13dd0b9073de144a2458d9afbd948bcfee20cb4265f52dc908931a68d",
+    "CanonicalEnvelopeNormalization": "bb475c7433cd03575ccfae7f74cfdb250ce87963434817d38838456119489deb",
+    "CanonicalEnvelopePeriodicExtension": "00c4554bec5c153706df8f244bdc4e8433f84b45b762db40fa95496a7dc688e5",
+    "CanonicalEnvelopePointwiseSqueeze": "8058516eecc4a7f048c5608b183953ed10c7fcc8f8fd63d54051eab70930b079",
+    "CanonicalEnvelopeStationary": "1735d1c0f36ab6e54e791f66de9353e1c28e079c2a768bb658307aaae0d95642",
+    "CanonicalEnvelopeStepMean": "4e8817fc851600afdb37c1c9e4505f3f7d2fcd87f845b6b0b88db74a6e73dd33",
+    "CanonicalEnvelopeTraceConsequences": "7cdba4c0d09734a3e8c135d8c66bbadbf8800b7735887533dc93b4a92391ef8f",
+    "CanonicalEnvelopeUniformCylinderFloor": "e2dee9b3ced0f546e93ec0761c51d682f527571f1bc6034621559854d6e55f72",
+    "CanonicalIntegerEnvelope": "e9a7850d392e1cdb169ede260be05cef7c2978084957081fccb61430af5f6eb0",
+    "CanonicalIntegerEnvelopeResults": "a48d93c68b048c0df7475f4ef7b3fe3da03e49b0fcebe7b4aa7268c525cd417d",
+    "CanonicalSyracuseMinimumUnitMass": "059a0fd9b720888180319b22738b5a564f85cb6cc44a47b3e0f351c2e845c823",
+    "EnvelopeOddSuperharmonicLayer": "41be6b92b414b5318f6ba75f8faa844ff8fcc8864d05171780dd09a7deb77f7c",
+    "PadicBinaryEnvelopeTransfer": "fd0ddec18257008e6eef3e4af1af02f7254d5e744392e0246d0da783167dd852",
+    "PadicIntegerEnvelope": "40652658374d2687bb59083269c36114c2382a9cf59208dc7f749caa4a9204ef",
+    "PadicIntegerEnvelopeIntegral": "932e9aec1190d0be7f8f44aa334f3919fc14c7ef41204942490d3e99d2a76554",
+    "PeriodicMarkedFirstHitMeanFromSources": "be2937d81a12da3012c3227416589813c7917c0e379a52fbbc252630c311fa68",
+    "PeriodicTraceTestIntegralBoundFromLayers": "22bd05775ea6ce5fb1f369f4453cd7bddd72ab18a25bbca83526bde9f2723758",
+    "PowerTwoModuloThree": "5be46eeab995b54ccdeea3b662944dec43cdedc05e58e61b537b6a66cfcc5e30"
+  },
+  "source_selection": "Direct layer/periodic-source route; old PeriodicMarkedFirstHitMean and old PeriodicTraceTestIntegralBound are excluded.",
+  "supersedes_endpoint_specification": {
+    "path": "endpoint-specification.json",
+    "sha256": "bc533478c060b40148111ffd413c135f9bd98573fb121c109c5533662f736b8f",
+    "reason": "Adds the dense Haar-null G-delta infinity locus and the residue-wise unboundedness/discontinuity conclusions."
+  }
+}

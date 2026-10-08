@@ -1,0 +1,9 @@
+'CollatzCanonical.NativeTao.native_first_passage_oddDepth_split' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NativeTao.native_first_passage_bounded_target_remainder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.NativeTao.native_first_passage_real_target_remainder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

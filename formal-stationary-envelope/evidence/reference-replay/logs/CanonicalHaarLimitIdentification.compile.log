@@ -1,0 +1,9 @@
+'Erdos1135.Tao.canonicalSyracuseMeasure_eq_withDensity_abs_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos1135.Tao.canonicalSyracuseMeasure_eq_withDensity_canonicalHaarDensity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos1135.Tao.canonicalSyracuseMeasure_absolutelyContinuous_padicThreeHaar' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

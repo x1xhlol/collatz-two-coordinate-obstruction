@@ -1,0 +1,7 @@
+'CollatzCanonical.DirichletAbelian.odd_harmonic_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.oddLogarithmicCumulative_one_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.odd_harmonic_window_mass_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

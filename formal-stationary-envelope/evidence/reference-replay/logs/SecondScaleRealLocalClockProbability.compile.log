@@ -1,0 +1,19 @@
+'CollatzClockSecondScale.pmf_outer_probability_mono_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockSecondScale.eventually_natural_clock_bad_log_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.real_clock_bad_probability_le_floor_add' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.eventually_real_clock_bad_probability_sharp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.eventually_real_clock_bad_probability_floor_log_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.real_landing_bad_probability_le_floor_add' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockSecondScale.eventually_real_landing_bad_probability_floor_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

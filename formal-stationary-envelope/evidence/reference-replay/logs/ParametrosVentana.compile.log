@@ -1,0 +1,7 @@
+'ParametrosVentanaGao.producto_entero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParametrosVentanaGao.producto_cuarto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParametrosVentanaGao.contraccion_inicial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParametrosVentanaGao.coste_reloj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParametrosVentanaGao.horizonte_posterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParametrosVentanaGao.ventana_explicita' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParametrosVentanaGao.ventana_uniforme' depends on axioms: [propext, Classical.choice, Quot.sound]

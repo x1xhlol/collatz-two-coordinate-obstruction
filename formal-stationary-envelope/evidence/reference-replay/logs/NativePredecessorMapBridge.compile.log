@@ -1,0 +1,2 @@
+'CollatzBasinMapBridges.native_predecessor_double_basin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzBasinMapBridges.native_countBelow_le_basin_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]

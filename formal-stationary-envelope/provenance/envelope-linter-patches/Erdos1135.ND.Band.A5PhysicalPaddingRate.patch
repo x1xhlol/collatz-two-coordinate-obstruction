@@ -1,0 +1,19 @@
+--- original/Erdos1135.ND.Band.A5PhysicalPaddingRate.lean
++++ candidate/Erdos1135.ND.Band.A5PhysicalPaddingRate.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.ND.Band.A5Physical
+ import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+ import Mathlib.Analysis.SpecificLimits.Basic
+@@ -97,7 +101,7 @@
+     _ = k * (N * d) := by
+       dsimp [epsilon]
+       field_simp [hC.ne']
+-      <;> ring
++
+     _ ≤ k * Real.log B := mul_le_mul_of_nonneg_left hNd hk.le
+ 
+ /-- Every fixed positive physical tube is eventually narrower than Tao's

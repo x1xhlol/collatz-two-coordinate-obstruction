@@ -1,0 +1,45 @@
+{
+  "status": "PASS — independent scheduler source review and test execution",
+  "reviewer": "occupation branch",
+  "date": "2026-10-08",
+  "candidate_sha256": "82eda25a922068dc62b567d9a41b193ac88007b6c002495c3905150559bc8870",
+  "reviewed_files_sha256": {
+    "preparation/replay_parallel_candidate.py": "82eda25a922068dc62b567d9a41b193ac88007b6c002495c3905150559bc8870",
+    "preparation/replay_parallel_tests.py": "47f3f6d6bd2bb4e7c2b766590bdc7248238eed2028a00c761a58ab7a384c422e",
+    "preparation/replay_parallel_candidate.patch": "fd1c1cd4c06103a3cf845aef958f71d14ad3ac48c542c5ef18aa83a3041901de",
+    "preparation/replay-parallel-candidate-validation-20261008.json": "6eecb9f632119aae83465d245ee4861df998d3dbcba578dfaf54e4e6503ebf87",
+    "preparation/replay_parallel_occupation_tests_final.log": "c2307563988d6dea80e2c5752d9f35033d64d21fcdc18fafd9d1f9a9e03bd7a4",
+    "full-envelope-replay/scripts/replay.py": "f73a8106a99bb866d7bfe0e0fbeff8d0f6e90ed7448919c2c70650987a10de9f"
+  },
+  "independent_test_execution": {
+    "command": [
+      "python3",
+      "preparation/replay_parallel_tests.py"
+    ],
+    "exit_code": 0,
+    "tests_passed": 14,
+    "log": "preparation/replay_parallel_occupation_tests_final.log",
+    "log_sha256": "c2307563988d6dea80e2c5752d9f35033d64d21fcdc18fafd9d1f9a9e03bd7a4"
+  },
+  "scope": "Read-only review of the complete candidate diff and final tests, with an independent test execution. No candidate source was edited by this reviewer. Fake subprocess tests certify scheduler controls, not Lean theorems or a fresh full replay.",
+  "checked": [
+    "Default jobs=1; optional integer jobs 1 through 4.",
+    "Dependency eligibility uses coordinator acceptance after the full strict compile/kernel pair, not merely the presence of an object.",
+    "The compiler and kernel command vectors, clean environment, source/input authentication, declaration audit generation and parsing, and import-resolution checks retain the original logic. Sensitive function ASTs are unchanged.",
+    "Atomic pair reservations and the failure latch share a lock. No executor backlog exists beyond the configured pair slots. First failure time is persisted under the lock; already-reserved pairs drain and retain their own logs and progress.",
+    "Sources of at least 50000 bytes and the final audit have exclusive pair intervals; the audit depends on acceptance of every ordinary module.",
+    "Available memory is sampled before reservation and before each compile/kernel subprocess. Host MemAvailable is capped by visible finite cgroup-v2 ancestor headroom. Unsupported cgroup-v1 memory control and malformed or negative required telemetry fail closed.",
+    "Actual monotonic stage and pair times are kept separately from the deterministic topological order of command records. The verifier checks stage sequencing, dependency acceptance times, concurrency, exclusivity, policy, source sizes, and recorded RAM calculations.",
+    "A failed compile, warning, sorry marker, kernel exit, missing target marker, or ordinary worker exception latches failure. Failed final audit/input-state and self-verification paths retain FAILED status.",
+    "The final replay record remains VERIFYING until self-verification succeeds. Selected endpoint reports do not substitute for the complete declaration audit.",
+    "Fourteen tests passed, including a controlled free-slot failure race, diamond dependency graph, exact exclusive-size boundary, failure draining, resource parser cases, thirteen schedule-tamper cases, and finalization failures."
+  ],
+  "resolved_findings": [
+    "Persisted first_failure_seconds and used the common latch for coordinator failures.",
+    "Rejected unsupported cgroup-v1 memory limits and negative cgroup-v2 telemetry.",
+    "Marked post-schedule audit/input-state failures as FAILED."
+  ],
+  "remaining_findings": [],
+  "failure_policy_scope": "Stopping applies to new atomic pair reservations. Already-reserved compiler/kernel subprocesses may start after another pair fails while those pairs drain. This behavior is explicit in the candidate policy and author validation.",
+  "adoption_boundary": "Approval covers this exact preparation candidate. The corrected bundle must pin the adopted driver, helpers, and reviews; its actual strict source replay and independent final verification remain separate required steps."
+}

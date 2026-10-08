@@ -1,0 +1,9 @@
+'CollatzCanonical.DirichletAbelian.closedOddWindowProbability_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.finiteMean_closedOddWindowProbability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.closedOddWindow_firstHitWeight_passage_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

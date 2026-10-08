@@ -1,0 +1,38 @@
+{
+  "formal-canonical-haar-density-oct7": {
+    "record_sha256": "30a887ad46d2c2f2d2abf7318593b6031554c720aef5570e7540ab68fddb2a34",
+    "source_manifest_sha256": "44854a8332db3272cd445b36235122caa311d1a653bfc57f599d65d78f7ed550"
+  },
+  "formal-canonical-syrac-law-oct7": {
+    "record_sha256": "fc5a27ceda64432672be5641e7fabf6364686ef48cdc0fb5312272708a2c64ff",
+    "source_manifest_sha256": "d6b118d20f7e050008f3fe14790e9ad992d3d3a7df040ff41243a9b35bb9e84f"
+  },
+  "formal-padic-affine-haar-oct7": {
+    "record_sha256": "a21082e70ace445f7c7f783cbf99829a3b180491fb0a84dc30ccdff4d69da89e",
+    "source_manifest_sha256": "513923c4a019dab65af385231e2ba6e8800300af77665bf5ef70fb21c3b1447d"
+  },
+  "formal-unit-haar-cylinder-oct7": {
+    "record_sha256": "cbd99b412e463ae68410e5f00b3baaaf7cdcbd7e587ba33448ef7a608094e00c",
+    "source_manifest_sha256": "cbd01451b45a732aa83ed74a91e34b7966dc565c9e9d08ca5895651d6f3d66cd"
+  },
+  "formal-unit-source-density-oct7": {
+    "record_sha256": "789c5a393e59bc4c4d181ea93481315076bc4ec235663fb6add7da38f1727472",
+    "source_manifest_sha256": "238f9b43402bc6fe188ed1b90f9a7d9656861f2e1b0188f960670d29c699b1d6"
+  },
+  "formal-unit-source-law-comparison-oct7": {
+    "record_sha256": "45b0b3a72cbe96a8955fe4fbce5d2da351f7f9fa8423de6a6915fa3313bf8e11",
+    "source_manifest_sha256": "fde360ca1ddcc5a508db4c4111f0c5c167292eb33e1603030b9dc68dde564f2b"
+  },
+  "formal-unit-source-mixing-oct7": {
+    "record_sha256": "e404dfbe9e5213cfb04baef5df8cf499d2741aa4d31caf6ec76c92d6f385dd85",
+    "source_manifest_sha256": "0f97d9a336d03375337f8d27f4c8274aba5ccbc60e373c35e217a20c55b566c3"
+  },
+  "formal-unit-source-padic-comparison-oct7": {
+    "record_sha256": "62bd47150c19e4196c04a94194033af50cf6e6b24228c9b6f9489e0dd64f3ab0",
+    "source_manifest_sha256": "cdfc051a66b1dc4a94822d226d4de87017aa989979d180e658309823fcdb429f"
+  },
+  "formal-unit-source-section6-oct7": {
+    "record_sha256": "06c6ce81641c1c3eaf9939ec33df52cb7c67b01d023a608146362cc3878fc902",
+    "source_manifest_sha256": "279631b83f6ff0f1401e620bad5db75c611711aa76f2dc00542eb2e0908cb046"
+  }
+}

@@ -103,6 +103,29 @@
       "source_manifest_sha256": "c0d92d90ad3e6f477a7ccaa7d04d5048677657ae4e25da32b1339877e12e324a",
       "status": "PASS"
     },
+    "positive_stationary_envelope": {
+      "audited_distinct_constant_names": 36539,
+      "audited_encoded_private_rows": 3419,
+      "audited_module_header_constant_rows": 36651,
+      "complete_package_index": "formal-stationary-envelope/publication-manifest.json",
+      "complete_package_index_sha256": "fd5e291225eacd415823f55b6da9ab1f347f2a78cc92df0968b5c29b168bc366",
+      "external_input_states_identical": true,
+      "fingerprinted_external_objects": 53006,
+      "fresh_source_modules": 1620,
+      "fresh_units_including_audit": 1621,
+      "header_owner_mismatch_rows_recorded_separately": 112,
+      "independent_review": "verification/envelope-completed-replay-independent-review.json",
+      "independent_review_sha256": "8bc2ac66a71bcf907fdbc261016d92caca3d76640cf0c4ee3d437b29d73a6c0a",
+      "post_replay_validation": "formal-stationary-envelope/evidence/validation/validation-record.json",
+      "post_replay_validation_sha256": "640d21a42edd676ece9064a1773769dc8fdd6271275be7c7ab9c07d813473df9",
+      "report": "formal-stationary-envelope/evidence/reference-replay/replay-record.json",
+      "report_sha256": "d51c6afb6168cf34f629cd1d1849cdf5c98067a30c6f60c5d311b74e4e9f39fe",
+      "scope": "All 1,620 internal source modules and the generated complete declaration audit were freshly compiled with warnings as errors and individually checked by the official kernel checker. The audit includes private and generated constants and permits only propext, Classical.choice and Quot.sound. Complete inventories of 53,006 external compiled objects agree before and after. Setup reuse, fresh-process record verification and relocated verification passed; relocation copied internal objects and reused the same external libraries without recompilation. External libraries were fingerprinted and reused, not rebuilt or independently matched to adjacent source checkouts. Fresh dependency download was not exercised.",
+      "source_manifest": "formal-stationary-envelope/source-manifest.json",
+      "source_manifest_sha256": "c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c",
+      "status": "PASS",
+      "successful_compiler_and_kernel_commands": 3242
+    },
     "raw_divergent_excess_extension": {
       "audited_constants": 63,
       "audited_named_source_declarations": 26,
@@ -178,13 +201,21 @@
       "report_sha256": "8ec425e3724ac42deb7e640ea81ab2e119ad9e01394d0e34b33c63463df0d56f",
       "scope": "Final manuscript math-preservation, eight-page PDF visual/font/bounding-box checks, complete payload authentication, theorem-map owner and local-link checks, preservation of both prior papers, metadata consistency and final integration. Completed proof compilation, kernel replay and external-cache reuse are stated in the separate sharp_haar_integrability check.",
       "status": "PASS"
+    },
+    "stationary_envelope_manuscript": {
+      "independent_integration_review": "verification/envelope-manuscript-independent-review.json",
+      "independent_integration_review_sha256": "e2aaaac61f726257939e675a888557f2997005ad010cdf4f641aa365f7c15716",
+      "report": "verification/manuscript-stationary-envelope-validation-20261008.json",
+      "report_sha256": "8f2e45ed7b242c3476e19f804ad0662a158c6af98bd522486400263f0599adf2",
+      "scope": "Final mathematical preservation, eight-page PDF visual/font/bounding-box checks, complete source/text payload authentication, theorem-map endpoint and local-link checks, preservation of all three prior papers, citation metadata and final repository integration. Completed proof compilation, kernel replay and external-cache reuse are stated separately in positive_stationary_envelope.",
+      "status": "PASS"
     }
   },
   "curation": {
-    "active_papers": 3,
+    "active_papers": 4,
     "historical_dependency_provenance": "external/mazur-alpha-2001-2000",
     "preserved_in": "Git history and earlier releases",
-    "reason": "Focus the current collection on the strongest density, growing-deficit Fourier and sharp Syracuse integrability results. Removal of earlier papers is an editorial choice and does not declare their checked results false.",
+    "reason": "Focus the current collection on the strongest basin-density, growing-deficit Fourier, sharp Syracuse integrability and positive stationary-envelope results. Removal of earlier papers is an editorial choice and does not declare their checked results false.",
     "removed_from_current_collection": [
       "Two-coordinate obstruction paper and its standalone formal development",
       "Independent second proof of Said Duran's equal-height theorem and its standalone formal development",
@@ -200,7 +231,8 @@
     "Novelty comparisons and automated semantic reviews are not external peer review or an exhaustive priority search.",
     "Verification scope is stated per record; source/object authentication is distinguished from fresh compilation and individual kernel replay.",
     "The Fourier result concerns finite random affine laws with a growing but sublinear deficit; its ineffective constants and conditioning ranges do not supply a deterministic Collatz orbit estimate.",
-    "The sharp Syracuse integrability theorem concerns full additive Haar measure and gives no integer trace estimate, weak-L2 endpoint, exact linear energy asymptotic or Collatz convergence result. External compiled libraries in its full internal replay are an explicitly stated reuse boundary."
+    "The sharp Syracuse integrability theorem concerns full additive Haar measure and gives no integer trace estimate, weak-L2 endpoint, exact linear energy asymptotic or Collatz convergence result. External compiled libraries in its full internal replay are an explicitly stated reuse boundary.",
+    "The positive stationary envelope identifies the arithmetic trace at each fixed positive integer and gives uniform cylinder lower bounds; it does not supply a uniform moving-root approximation, expected occupation upper bound, cycle exclusion or Collatz convergence."
   ],
   "papers": [
     {
@@ -246,11 +278,26 @@
       "theorem_map": "paper/sharp-haar-lean-claims.md",
       "theorem_map_sha256": "0bf051f1bd41c477f309243ce30c4ed82f1ae186db9f8bbc24057434f87e9c6f",
       "title": "Quadratic cylinder energy and integrability of the Syracuse law"
+    },
+    {
+      "additional_results": "Every unit cylinder of depth k has mass at least c*3^(-k), and the minimum-cylinder logarithmic exponent is one. At each positive integer the cylinder densities converge to the arithmetic trace in Cesaro mean absolute error. Infinite values form a Haar-null G-delta dense in the units; the finite trace is unbounded among positive odd integers in every unit residue class, and the envelope is discontinuous at every positive unit integer.",
+      "credit": "Tao supplies the stationary law, first-passage framework and minimum-cylinder question. The arithmetic inputs come from the companion basin-density development with its distinct Mazur and Said Duran attribution. The comparison with Nikpour and Rabbani is limited to the upper bound reported in their preprint; no exhaustive priority claim is made.",
+      "limitations": "The integer statements are pointwise in the root. No uniform moving-root approximation, ordinary pointwise convergence of individual cylinder densities, expected occupation upper bound, cycle exclusion or forward Collatz convergence is asserted.",
+      "main_result": "The canonical Syracuse stationary probability on the 3-adic integers has a greatest nonnegative lower semicontinuous density for full additive Haar probability. It integrates to one, vanishes off the units, has a uniform positive lower bound on the units, and equals the actual weighted first-hit arithmetic trace at every positive integer, including periodic targets.",
+      "numbered_results": 9,
+      "pages": 8,
+      "pdf": "paper/positive-stationary-envelope.pdf",
+      "pdf_sha256": "8525cef1cda701874bcea9115670bab915091b0a1e5959b87a44a7c23493388f",
+      "source": "paper/positive-stationary-envelope.tex",
+      "source_sha256": "522693c1f61c233f56f7d95e31c58a266ee81729d3628f2656f55a418cd01a78",
+      "theorem_map": "paper/envelope-lean-claims.md",
+      "theorem_map_sha256": "e01df8a892ceb37c5b02ed5bf0e8851f93168003be77fdd0cd71e2f697a5f994",
+      "title": "A positive semicontinuous density for the Syracuse stationary law"
     }
   ],
   "proves_collatz_conjecture": false,
   "public_repository": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction",
-  "release_version": "2026.10.08.2",
+  "release_version": "2026.10.08.3",
   "schema_version": 3,
   "typesetting_tool": "Tectonic 0.17.0"
 }

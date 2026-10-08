@@ -1,0 +1,2 @@
+'CollatzCylinderPacking.Arithmetic.validTuple_modEq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.arithmetic_mass_modEq' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,60 @@
+{
+  "base_driver": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay/scripts/replay.py",
+  "base_sha256": "f73a8106a99bb866d7bfe0e0fbeff8d0f6e90ed7448919c2c70650987a10de9f",
+  "candidate": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/replay_parallel_candidate.py",
+  "candidate_sha256": "82eda25a922068dc62b567d9a41b193ac88007b6c002495c3905150559bc8870",
+  "command": [
+    "python3",
+    "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/replay_parallel_tests.py"
+  ],
+  "coverage": [
+    "diamond DAG waits for all accepted kernel pairs",
+    "default sequential order and rejected jobs 0/5/bool",
+    "four concurrent pairs and 49999/50000 byte exclusive boundary",
+    "deterministic topological command order despite reversed completion",
+    "failure race between memory probe and reservation",
+    "failure stops new reservations and drains another pair",
+    "worker exception",
+    "compile nonzero/warning/sorry and kernel nonzero/missing marker/spawn failure logs",
+    "RAM threshold and malformed/ancestor/v1 controls",
+    "13 schedule tamper controls",
+    "failed final self-verification never leaves PASS",
+    "post-schedule audit failure writes FAILED",
+    "exact original sensitive-function AST identity"
+  ],
+  "created_utc": "2026-10-08T10:19:17.887312+00:00",
+  "defaults": {
+    "allowed_jobs": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "exclusive_source_bytes": 50000,
+    "jobs": 1,
+    "minimum_available_ram_bytes": 4294967296
+  },
+  "diff_sha256": "fd1c1cd4c06103a3cf845aef958f71d14ad3ac48c542c5ef18aa83a3041901de",
+  "exact_diff": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/replay_parallel_candidate.patch",
+  "exit_code": 0,
+  "failure_semantics": "Atomic pair reservations stop at the first persisted failure latch; already-reserved pairs drain. Actual stage starts and finishes and effective RAM samples are recorded. This does not promise that already-reserved subprocesses never start after another pair fails.",
+  "frozen_bundle_modified": false,
+  "lean_replay_started_by_author": false,
+  "log": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/replay_parallel_tests.log",
+  "log_sha256": "c3b09fccf437497dd1cca65c421dc956340ffac3633583a8d941941d502d6491",
+  "memory_scope": "Linux MemAvailable, capped by visible cgroup-v2 ancestor headroom; unsupported cgroup-v1 memory control and malformed telemetry fail closed.",
+  "scope": "Preparation-only optional scheduler candidate; fake-command tests do not certify any Lean module or fresh replay.",
+  "status": "PASS",
+  "test_count": 14,
+  "tests": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/replay_parallel_tests.py",
+  "tests_sha256": "47f3f6d6bd2bb4e7c2b766590bdc7248238eed2028a00c761a58ab7a384c422e",
+  "unchanged_sensitive_functions": [
+    "clean_env",
+    "load_manifest",
+    "input_state",
+    "audit_source",
+    "parse_audit",
+    "command_arguments",
+    "import_resolutions"
+  ]
+}

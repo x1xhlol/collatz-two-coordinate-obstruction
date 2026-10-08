@@ -1,0 +1,4 @@
+'CollatzClockAudit.real_odd_source_map_passage_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.exists_eventually_real_clock_scale_facts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.adjacent_real_sourceY' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.adjacent_reference_passage_tv' depends on axioms: [propext, Classical.choice, Quot.sound]

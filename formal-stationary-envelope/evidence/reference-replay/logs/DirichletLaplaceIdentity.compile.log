@@ -1,0 +1,16 @@
+'CollatzCanonical.DirichletAbelian.laplaceIndicatorTerm_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.laplaceIndicatorTerm_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.integral_laplaceIndicatorTerm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.integral_laplaceIndicatorTerm_norm_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.laplaceIndicatorTerm_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.dirichlet_laplace_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

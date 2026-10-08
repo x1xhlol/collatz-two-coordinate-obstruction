@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.syracuseJ_integer_cylinder_preimage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.syracuseJ_integer_cylinder_preimage_empty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonicalRho_successor_recursion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

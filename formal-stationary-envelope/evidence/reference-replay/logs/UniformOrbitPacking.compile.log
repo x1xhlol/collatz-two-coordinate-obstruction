@@ -1,0 +1,5 @@
+'CollatzUniformOrbitPacking.uniform_finite_distinct_orbit_packing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzUniformOrbitPacking.uniform_real_cutoff_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzUniformOrbitPacking.uniform_finite_path_packing' depends on axioms: [propext, Classical.choice, Quot.sound]

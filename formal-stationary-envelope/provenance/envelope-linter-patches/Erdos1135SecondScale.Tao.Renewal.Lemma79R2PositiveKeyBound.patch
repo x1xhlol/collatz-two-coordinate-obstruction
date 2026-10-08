@@ -1,0 +1,35 @@
+--- original/Erdos1135SecondScale.Tao.Renewal.Lemma79R2PositiveKeyBound.lean
++++ candidate/Erdos1135SecondScale.Tao.Renewal.Lemma79R2PositiveKeyBound.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused bound-variable names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -272,7 +276,7 @@
+       intro full
+       by_cases hfull : taoSection7HoldListPMF B full = 0
+       · simp [hfull]
+-      · exact mul_le_mul_left' (hvalue full hfull) _
++      · exact mul_le_mul_right (hvalue full hfull) _
+     have htoWeight :
+         lemma79PMFENNExpectation
+             (taoSection7HoldListPMF B)
+@@ -342,13 +346,13 @@
+               (longAtom.indicator endpointWeight) * prefactor := htoWeight
+         _ ≤ ((taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               ENNReal.ofReal lemma79R2ContractionFactor) * prefactor :=
+-          mul_le_mul_right' hendpointBound prefactor
++          mul_le_mul_left hendpointBound prefactor
+         _ = (taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               (prefactor * ENNReal.ofReal lemma79R2ContractionFactor) := by
+           ac_rfl
+         _ ≤ (taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               ENNReal.ofReal (Real.exp epsilon) :=
+-          mul_le_mul_left' hscalarENN _
++          mul_le_mul_right hscalarENN _
+     have hExpPull :=
+       lemma79_holdList_keyAtom_cutoffTailMomentENN_expectation_eq_of_le
+         hJB origin family hpair (some (p, entryPoint))

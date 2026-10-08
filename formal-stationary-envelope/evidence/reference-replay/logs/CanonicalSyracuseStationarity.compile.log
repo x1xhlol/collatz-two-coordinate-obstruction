@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.canonical_head_tail_pair_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_geometric_affine_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_syracuse_stationarity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,24 @@
+{
+  "assembly_executed": false,
+  "checks": [
+    "Validation requires successful726command record, identical before-after inventory pins, disjoint new destinations protected against nesting in source/toolchain/mathlib.",
+    "Actual setup reuse plus two fresh-process verify-only calls including relocation; record explicitly states this is not a second compilation.",
+    "Copied replay internal artifacts support relocated verification; no external libraries copied.",
+    "Public validation normalizes path labels and records raw output hashes; raw local paths and setup result excluded from publication.",
+    "Assembler requires all three validation passes and exact validation/evidence filename sets; pins runtime files and every source.",
+    "Original failed137th command and68completedpairs retained separately with exact bytes; completed reference includes726logs and audit source.",
+    "Distribution excludes runtime .replay and all compiled/external/private preparation files. Publication manifest omits itself; copy plan binds it separately.",
+    "Historical absolute evidence labels disclosed without rewriting frozen provenance."
+  ],
+  "findings": [],
+  "full_sources_read": true,
+  "reviewed_utc": "2026-10-08T03:55:31.757566+00:00",
+  "scope": "Static code and syntax review only; actual completed primary replay, setup-reuse, fresh-process and relocated validations, and final whitelist authentication remain required.",
+  "source_pins": {
+    "assemble-sharp-haar-distribution.py": "bffd863a63d92db6880c3a521eeb3ca2bcc4514cb318846932989a1ac0a87b14",
+    "validate-sharp-haar-replay.py": "2b74654b5d262be7cf88d5f1add0681a05e2ca87e42adad90bb1041b37b51b14"
+  },
+  "status": "PASS_ROOT_FULL_SOURCE_REVIEW",
+  "syntax_parsed": true,
+  "validation_executed": false
+}

@@ -1,0 +1,6 @@
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_neg_one_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_halving_neg_one_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,4 @@
+'CollatzCylinderPacking.Arithmetic.actual_green_density_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.actual_density_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,28 @@
+--- original/Erdos1135SecondScale.Tao.Section5.AffineAtomDenominatorComparison.lean
++++ candidate/Erdos1135SecondScale.Tao.Section5.AffineAtomDenominatorComparison.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -29,7 +33,7 @@
+ /-- Exact reciprocal-form atom term before any denominator replacement. -/
+ noncomputable def taoSection5ExactAffineAtomMass
+     {B : ℕ} {branch : TaoSection5SourceBranch} {E : Set ℕ}
+-    (hmass :
++    (_hmass :
+       0 < logFinsetMass
+         (oddLogWindow
+           (taoSection5SourceLo B branch)
+@@ -78,7 +82,7 @@
+ the one geometric list mass, and the exact source normalizer. -/
+ noncomputable def taoSection5IdealAffineAtomMass
+     {B : ℕ} {branch : TaoSection5SourceBranch} {E : Set ℕ}
+-    (hmass :
++    (_hmass :
+       0 < logFinsetMass
+         (oddLogWindow
+           (taoSection5SourceLo B branch)

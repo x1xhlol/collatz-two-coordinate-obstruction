@@ -1,0 +1,28 @@
+--- original/Erdos1135.Tao.Probability.Geom2TerminalMoment.lean
++++ candidate/Erdos1135.Tao.Probability.Geom2TerminalMoment.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.Tao.Probability.CountableMarkov
+ import Erdos1135.Tao.Probability.FullL1
+ import Erdos1135.Tao.Probability.Geom2ListProjectivity
+@@ -258,7 +262,7 @@
+   intro as
+   have hmass := geom2PNatListPMF_apply_length_toReal as.1
+   rw [as.2] at hmass
+-  simpa [E, hmass]
++  simp [E, hmass]
+ 
+ theorem tsum_geom2PNatListMass_mul_terminalValue_exactLength_of_pos
+     {m : ℕ} (hm : 0 < m) :
+@@ -278,7 +282,7 @@
+   intro as
+   have hmass := geom2PNatListPMF_apply_length_toReal as.1
+   rw [as.2] at hmass
+-  simpa [E, hmass]
++  simp [E, hmass]
+ 
+ /-- The iid positive Geom(2) law has total mass one at every exact length. -/
+ theorem tsum_geom2PNatListMass_exactLength (m : ℕ) :

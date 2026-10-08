@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.actual_basin_density_positive_iff_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.actual_weighted_density_positive_iff_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.actual_trace_positive_iff_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

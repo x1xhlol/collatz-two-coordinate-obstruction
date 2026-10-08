@@ -1,0 +1,3 @@
+'CollatzCylinderPacking.geometric_tail_le_half_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.certificate_head_bound_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.cylinder_bound_of_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]

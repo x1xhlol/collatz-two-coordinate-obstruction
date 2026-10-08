@@ -1,0 +1,19 @@
+--- original/Erdos1135/Tao/Renewal/PMFExpectationThreeRegion.lean
++++ corrected/Erdos1135/Tao/Renewal/PMFExpectationThreeRegion.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Renewal.Prop78Case2Discount
+ import Erdos1135.Tao.Renewal.QStoppedApprox
+ 
+@@ -143,6 +146,9 @@
+           lowCap * (μ.toOuterMeasure (Badᶜ ∩ Low)).toReal +
+             goodCap * (μ.toOuterMeasure ((Bad ∪ Low)ᶜ)).toReal := by
+   classical
++  have _ := hbadCap0
++  have _ := hlowCap0
++  have _ := hgoodCap0
+   let mass : Ω → ℝ := fun ω => (μ ω).toReal
+   let badMass : Ω → ℝ := Bad.indicator mass
+   let lowMass : Ω → ℝ := (Badᶜ ∩ Low).indicator mass

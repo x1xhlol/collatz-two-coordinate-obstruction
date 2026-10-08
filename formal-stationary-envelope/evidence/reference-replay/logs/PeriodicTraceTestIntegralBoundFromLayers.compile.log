@@ -1,0 +1,3 @@
+'CollatzCanonical.IntegerStationaryEnvelope.periodic_actual_density_value_mean_le_half_from_layers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

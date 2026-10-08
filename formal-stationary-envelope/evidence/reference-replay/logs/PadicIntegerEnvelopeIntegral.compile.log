@@ -1,0 +1,12 @@
+'CollatzCanonical.IntegerStationaryEnvelope.dominated_cylinder_integral_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_lintegral_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_lintegral_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_uniform_unit_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

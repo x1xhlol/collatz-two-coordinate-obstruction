@@ -1,0 +1,16 @@
+'CollatzCanonical.DirichletAbelian.closedOddWindow_boundary_correction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.normalized_boundary_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.closedOddWindowExpectation_sub_open_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.closedOddWindowNumerator_eq_inclusive_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.open_window_comparison_of_closed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.scaled_oddWindow_boundary_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,5 @@
+'CollatzCylinderPacking.Arithmetic.truncatedSeries_cleared' depends on axioms: [propext, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.wordResidue_eq_truncatedSeries' depends on axioms: [propext, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.arithmetic_mass_eq_series_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

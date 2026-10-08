@@ -1,0 +1,5 @@
+'CollatzOrbitPackingParityCount.parity_of_modEq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzOrbitPackingParityCount.modEq_of_parity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzOrbitPackingParityCount.card_oddCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzOrbitPackingParityCount.card_oddCount_filter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzOrbitPackingParityCount.card_subset_double_range_le' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,257 @@
+{
+  "base_source_manifest_sha256": "96500e070b6dcdc730975638029d0f7aa31ba40db2ecb46282f76c91175af5b9",
+  "candidate_manifest_sha256": "d87cdc64b2c2fd4b9607384f7687d1fb3624ecc4c76e8f0e23a526407e6ee7fc",
+  "compile_record_sha256": "9a58a2720b19b14cca7950c3473d886d0102d200926b58fe311b0351365967e8",
+  "findings": [],
+  "full_diff_read": true,
+  "reviewed_utc": "2026-10-08T03:15:12.062931+00:00",
+  "reviewer": "Root",
+  "scope": "Source-delta semantic review and exact patch/compile-log byte authentication. Diagnostics reuse existing imports; fresh full-closure replay still required. Original failed bundle unchanged.",
+  "semantic_review": "All27 patches independently read.24 retain literal theorem statements and all imports/definitions;3 only alpha-rename unused bound result variables and add accurate notices. Reverse alpha-renaming plus notice removal reproduces each of the3 original sources exactly. Proof changes replace deprecated aliases with their same-type targets, remove unused casts/simp arguments/change, simplify reflexive PMF/inequality/castHom steps, and explicitly reference existing unused proof parameters without removing hypotheses. No warning suppression.",
+  "status": "PASS",
+  "verified": [
+    {
+      "candidate_sha256": "c93e3a3e973ee73312d0434f5f6fc9c61324e5b0b20463d0e28fd5a31879562e",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Probability.CountableMarkov",
+      "original_sha256": "594ad7132da199dbab833eee413d7d090004df7f05503db4adeca869278c8788",
+      "patch_sha256": "3bc2cc11187fe5edf2aa8f0863102e44cf4817661b5e396cdc6c98a914770dbd",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "19949328b242ed3f737528d65d64136b4d1aaa69776ec5d8e59b39a37e545cdc",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Probability.Geom2CenteredMoment",
+      "original_sha256": "ed2f630e6cc0964c725ae53aeb6c2ee91408d3e3a9166a2366a0ad92e665ea50",
+      "patch_sha256": "a8883b64d3485bff7f48efbe8afee1af0576bc1602ca44a88a69746e71079a33",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "867bf27e739b6e2e6590f018d071d35828a822aeee57395f396f7b4c20447890",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.CanonicalFirstPassageSigmaCenters",
+      "original_sha256": "3e9086ff9c59e5cb02c38738d8925d384255d025e90fa3ab68718fdd86866c45",
+      "patch_sha256": "b7a24d94fa6f3089fc091555803dda7c0cd4a0fde80e0620ea1e53fecd273218",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "a41540d18fbf3e0a3c27f977f5759ac0bea00f882597041803585273489c6e5f",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.HoldListHorizontalTail",
+      "original_sha256": "6bff4807c4ecb188aaf0a9c5f669e25431294b4a7c362f6587fad2e779303516",
+      "patch_sha256": "5cd653355098a113e357c2807f7d64f297fa6d27663538b010051c5a518bf9ef",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "b9b4764266b4145936eb05cd23ef294e5fba66a152b749cd74e0356ad76f3847",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Lemma79AllRBound",
+      "original_sha256": "717ed31f4b5fe4a209de8c651b7fa6ecbdcd19990987cd624656dfa2418e4d37",
+      "patch_sha256": "8f9079345c8a7e49fcf61144f505602948bb07cd049b6afcaf5c033acd22cc8e",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "366ea803770430eacf73712e91580aa39a27ddae251efdea3fa057c2ff1dbf42",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Lemma79CutoffStatistic",
+      "original_sha256": "e0f1a60c7414db617cecf2002abe023f751e5e8b0cbbccb0fbc8669a27b93902",
+      "patch_sha256": "3fc2c54856584d2cff6f492c908ae511e8e8e94fe47c4043fb397208956ab3cd",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "0917842f98e0b4b0c9628afe807574530a892156b4b07014b8a21bbc3551fded",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Lemma79EndpointFreshLaw",
+      "original_sha256": "7f92eb50cd50b9adf625f5775ca9c746cb0cf3aae15c9df1813d32109a7e4ce8",
+      "patch_sha256": "74734392c7efa5f9c8ec7a1ea1887a0715ab73c2a52e8fb1720219ed84ac0db8",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "9f991885f6f102ad6f85e23b1b36cd7e9c6882ff93a894707f0fc88e5832d33b",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Lemma79NativeMarkov",
+      "original_sha256": "5d30467e370f261cd1a4905d924d92316348c6353fbb76a397e4811eb05bd7a0",
+      "patch_sha256": "994dbab1a2e1b57aa190b402d577b508d3e1b79b669b02b68b36606ae33de5e2",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "9bf3cd7bd3ef9c7d877bc8c9af3d933399839fb5ed2b38c1a28a5f021b7aeaff",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Lemma79OneStepBound",
+      "original_sha256": "37c001605d12f07dbbf5fdeffdf17eb4547c196c9e315ae29de358457698f863",
+      "patch_sha256": "61c2f4ac9476b1299c1c400a7419e61393b5968a169f24add1fc0b0c27a1563e",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "44ff06d63767084ddb637d62464406937804729bdea17952886b87495b7580ce",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Lemma79PostExitFreshTail",
+      "original_sha256": "7c07e65174aaaf49d47ff6b3a03697248a9833de8c1b24e97432bb4b5d8468f3",
+      "patch_sha256": "b290957150892f51143332195f7d75c3eeb16cc5132841db0b46b0f9170b4cc6",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "efb84244397a7987056d60c1fb92be8346411ceb98af1b305070c7bcac2cc07c",
+      "compile_log_sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Lemma79R2EndpointContraction",
+      "original_sha256": "65cf790012d2cc1d44bfa6399a623f27eca58242cb1b264c6b64c5235d9b71a8",
+      "patch_sha256": "caf5de1ede5d080876409158df754eb73b842fd5f370257b7a7464807174d5db",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "2a880de9fc65bbbb1af82f4859d5f5f552049a97bdca2868288d9a871ea9bc60",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Lemma79R2PositiveKeyBound",
+      "original_sha256": "d673e2e5c92fcbf1e2ae323e5236aca95ed110e14d12b55da0e344067e0874f6",
+      "patch_sha256": "79c633a6a3a284b0a7fe6a58bc905f7c845db7be7d7771052e263c3f1aa65615",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "f4f88ab150ab954e40b78ac178c684d4f721290dee1a39e01a9744810431d2db",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Lemma79TailExpectationCore",
+      "original_sha256": "af89d7739cb9da1cf3cd1bf8aabb34f1214c59e37478b532e34dd775f24a9d4d",
+      "patch_sha256": "2f8685fefa63af8b20bc1b5715b43fbfad7874343de98a5140f43567f43e0288",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "6d0694b557c7d3d093a171f07b9bddd5920517018fe4cca7a1038df0b93e62e5",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.PMFExpectationThreeRegion",
+      "original_sha256": "32c4fcc056f55d136de52279d87c093232c692acc989e139925e1d286511eb2a",
+      "patch_sha256": "0d29b99ff5efd09b3fd36524eebdc91efebf23130431691f74743731801789cc",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "7521196e2ae3f27827d6442de12065b2da91e21b4272b6fe9835d1395518455d",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Prop78CanonicalAssembly",
+      "original_sha256": "d106ffb3f6431c309053228e3a94292b5b740fab9ac56e9ac93cd88dc975f36e",
+      "patch_sha256": "9a3caf7c5d593ea1f5c636e234fbc155084bc886c94a907bca08a6eafdb59707",
+      "statement_scope": "alpha-equivalent bound-variable spelling only"
+    },
+    {
+      "candidate_sha256": "afd16a174111e36719d84ffc5a2a79a9e3a8c105092559e72942ae4a83b65706",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Prop78Case3ActiveCoverStopping",
+      "original_sha256": "562dc8f9a883647fd682b679d8fd24a7082b80c7ea1b0b744d0ef3539bca009a",
+      "patch_sha256": "646f72d63289808fcb8b6e3b8bb2b923675327f135825bbdf5126136c20e5f6a",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "e7b9c140afd56ec0382bb2b0a55c7b445e62a3ac3f9c5f121becca8c215b3b9e",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Prop78Case3BaseKcutScheduleExistence",
+      "original_sha256": "08ef1f18a5734ec6db88c2f49a1d08d506e430da4c5fc6dd0463cde0507ec7fe",
+      "patch_sha256": "a30bfab2c1dcbe75e1fe767269ffbc0b098ea2f1c5d51e9300f1eae08a630c24",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "8b443954b701a7d4c4e36102d802dc8f4f221db7ed1afd1240dba19f95dcddc2",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.Prop78Pointwise737",
+      "original_sha256": "a911e20dc373ddf400f4d9877c9831e2d813e8ce5b97afb4ba5820a5e586a444",
+      "patch_sha256": "8c9b821569a8216a2780e641c640afb631dcbed0f740758b99e1ff21a02ffd8e",
+      "statement_scope": "alpha-equivalent bound-variable spelling only"
+    },
+    {
+      "candidate_sha256": "aa99e9d9b85a5da1c76e49f0d3322957680dc96bcea7fabe50d713e9af5920e8",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.QEndpointFreshMarginals",
+      "original_sha256": "d0c92e2a82f352e47b58c66f29365329219b5a3fe1e67cdc9960e6a3d743ee92",
+      "patch_sha256": "82b2a245ae3d33a38367d4760883a0587d6381587126b4ece543eb899c0f730b",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "f67e7872637709b39bdc432d18382129b6559775f085c93d8a4ef64aa4292ad9",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeBudget",
+      "original_sha256": "a8e824437ce7228e5a5c0847395660368312513d9a44ca2eab77d9ac8c35d066",
+      "patch_sha256": "a8688bbc0a881ac8373961ff6d386d2880c387cd1834e73f45c693e0f9d1f345",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "e93846330021b61a8e179e0fbc7cfeb72022c6434e9e7ed2735045c964eb38bf",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeNearSigma",
+      "original_sha256": "bfcab08be426cdc9dcdf76e90c0c54bef191f363da5499d550a850119a1a7157",
+      "patch_sha256": "2a1d792bbc4e8d93864613f24f6b752db7124f8f00ae6b804714603cc7f7133b",
+      "statement_scope": "alpha-equivalent bound-variable spelling only"
+    },
+    {
+      "candidate_sha256": "305fedec3db6df1088429ec8765501d16cf27b767161e84ede33a1e36abe3735",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeSourceMargin",
+      "original_sha256": "c348a64021a04eb9995800bbeb354ac72ec271391d85f4ac0da932e0cc49ed5c",
+      "patch_sha256": "bf149e2163ab92977809c13879c6b9d148e8d2379ad18c2ae7f0f72cc3765273",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "5cbdf97a305b2d2d3b920550cf6db3d8f4ce674072a232c58cf5f2bc7feab14b",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeWindow",
+      "original_sha256": "45c71f2d526fccc7f213a46c314c5ea07f0cf9818352fe69b9d96fcbd968be46",
+      "patch_sha256": "4c126f40b9ac13743dd3a1e75ba595c34f50d43d15f941a1e97d65160d6e8273",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "bdd81bea8d173040af90e97cfa3372bf1118df63bcdbb762145e4d3e7be8fcf5",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Renewal.QmHorizontalNormalization",
+      "original_sha256": "aff5b27547674353d4f7d7e328e04bce9e3cabb6295cd06669877f2140e9c3b7",
+      "patch_sha256": "74fe6c2911c0b860336f9c201aad8c3634614976b80bd2076a8fef5e71e49d38",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "c7b1aeb6d20db9dd0d4f561fe9ecd70d6bf4198d24da902cee6ce6c195cb7600",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Section6.FiniteFourierCollision",
+      "original_sha256": "e0f32c511983843c757151d1431275c4826c761906916926a387904324f7937b",
+      "patch_sha256": "af5bb47b209c401713ab3a9db78b9e4f7d2ba808aceea6c284ad6b406a024052",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "fceae3be0a10b9b54d3f5df3cd7cd2cd58eae0e2c2113098ce06da4e2898f778",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Section6.Geom2IntervalConcentration",
+      "original_sha256": "645919112f6eddd640de9f3a395ebe36cbd08eab462909cfbf2da14fbec1ca62",
+      "patch_sha256": "7a3f5b048fda3abbd68da4c989ba55b2626d11b21aa45eb0a2889283ac1703f4",
+      "statement_scope": "unchanged"
+    },
+    {
+      "candidate_sha256": "6e4c824f8ce092dd4108c2b1b5b15e75d1a19f468e90bf21fba774fdbc590516",
+      "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_patch_application": "PASS",
+      "module": "Erdos1135.Tao.Section6.UniformLift",
+      "original_sha256": "e79628d63f7f72c05db63b5b784b43c00850a41d124ace1e3efa8690cca0b083",
+      "patch_sha256": "7cac7bed37a30daa294329dcf6399eb9f62c85df66b0ef58fa108097c2ba07e9",
+      "statement_scope": "unchanged"
+    }
+  ]
+}

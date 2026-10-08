@@ -1,0 +1,9 @@
+{
+  "change": "Compare every header count using the Counter zero default and reject row modules absent from headers. Preserve the original checker and frozen evidence unchanged.",
+  "checker_sha256": "605e32fde9328218441cdba276ce39d94e2645f1d7871a2a94c4a3649f333bcf",
+  "corrected_checker_sha256": "0e4a14de7fe411302aa71489fa0fce333f5e1b9c16d1e04069059ac1bdadee08",
+  "diagnosis": "Counter omits the legitimate zero-declaration CanonicalIntegerEnvelopeResults entrypoint module. All 1620 module header counts equal the parsed row count, including this zero. No evidence mismatch.",
+  "exit_code": 1,
+  "failed_check": "Audit module counts differ",
+  "status": "INITIAL_PRIVATE_CHECKER_FALSE_NEGATIVE"
+}

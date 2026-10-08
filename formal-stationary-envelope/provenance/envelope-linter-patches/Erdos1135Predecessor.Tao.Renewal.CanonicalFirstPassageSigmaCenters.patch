@@ -1,0 +1,19 @@
+--- original/Erdos1135Predecessor.Tao.Renewal.CanonicalFirstPassageSigmaCenters.lean
++++ candidate/Erdos1135Predecessor.Tao.Renewal.CanonicalFirstPassageSigmaCenters.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file was adapted from Lech Mazur's published predecessor-density source
+@@ -85,7 +89,7 @@
+   have hpq : p ≠ q := by
+     intro hpq
+     apply hne
+-    simpa [hpq]
++    simp [hpq]
+   have hscale_nonneg : 0 ≤ sigmaSeparationScale sMin := by
+     exact separationScale_nonneg_of_gapAbsorbs habsorb
+   have hdist :=

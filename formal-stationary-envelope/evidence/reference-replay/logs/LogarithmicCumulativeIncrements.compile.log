@@ -1,0 +1,6 @@
+'CollatzCanonical.DirichletAbelian.finite_harmonic_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.logarithmicCumulative_increment_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,5 @@
+'CollatzCanonical.DirichletAbelian.oddWindowNumerator_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.oddWindowProbability_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.finiteMean_oddWindowProbability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

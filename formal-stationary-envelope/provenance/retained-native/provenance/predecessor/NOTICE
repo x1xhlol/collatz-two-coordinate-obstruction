@@ -1,0 +1,15 @@
+Positive Lower Density of Collatz Predecessors
+Copyright 2026 Lech Mazur
+
+The narrowed extension code and accompanying verification and reproduction tools
+are licensed under the Apache License, Version 2.0, following the author's
+explicit approval on September 6, 2026 (America/New_York).
+
+This is a follow-up to the previously public positive-density logarithmic-time
+Collatz release. Assembly obtains that exact baseline by its recorded archive
+digest and commit. The baseline's LICENSE and NOTICE are retained separately
+as BASELINE_LICENSE and BASELINE_NOTICE. Original upstream notices within
+source files remain unchanged. External dependencies retain their own licenses.
+
+Research and formalization: Lech Mazur, with generative-AI assistance.
+The source license does not cover the accompanying paper or images.

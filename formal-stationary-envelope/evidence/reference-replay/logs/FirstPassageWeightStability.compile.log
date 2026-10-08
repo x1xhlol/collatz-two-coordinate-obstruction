@@ -1,0 +1,7 @@
+'CollatzCylinderPacking.Arithmetic.firstHit_prefix_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.OddBarrierPassage.landing_le_of_prefix_hit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.firstHitWeight_uniform_barrier_stability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

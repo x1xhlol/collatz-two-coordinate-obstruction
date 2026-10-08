@@ -1,0 +1,19 @@
+--- original/Erdos1135Predecessor.ND.PositiveDensity.GeneralTargetTerminalCensus.lean
++++ candidate/Erdos1135Predecessor.ND.PositiveDensity.GeneralTargetTerminalCensus.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file was adapted from Lech Mazur's published predecessor-density source
+@@ -186,7 +190,7 @@
+     (U.fullGoodCoreTerminalWeight_nonneg cap width n (V.fullTerminalShift X hX hi) 1)
+     (U.fullGoodCoreTerminalWeight_le_original cap width n (V.fullTerminalShift X hX hi) 1)
+     m k hmk X hX hQ hsource epsilon he hL1 ((2/3:ℝ)*(p:ℝ)) (by positivity) hheight
+-  convert h using 1 <;> unfold fullGoodCoreTerminalMass <;> ring
++  convert h using 1; unfold fullGoodCoreTerminalMass; ring
+ 
+ theorem fullGoodCoreTerminalMass_ge_of_square_budget_and_height_of_nonreturningSeed
+     (U : NDGeom2ShiftedWideSymmetricRootSideUniformFloorState)

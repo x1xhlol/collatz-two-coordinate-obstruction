@@ -1,0 +1,105 @@
+{
+  "SecondScaleActualPrefixEventTransfer": {
+    "dependencies": [
+      "SecondScaleSyracuseLandingLowerBound",
+      "SecondScaleTaoLocalPrefixConcentration"
+    ],
+    "original_sha256": "95cf50dc1aca27608f441ff1a6cae30bf55dcb51376364abf71e2fc67232f73b",
+    "original_source": "/dev/shm/collatz-local-clock-proof/ActualPrefixEventTransfer.lean",
+    "source_sha256": "15c29cca4e72cd45328fcab988f1b9bf3fd03ae021f48dd2e140b077933cd88f"
+  },
+  "SecondScaleCanonicalClockWindows": {
+    "dependencies": [
+      "SecondScaleSyracuseCenteredPassage"
+    ],
+    "original_sha256": "8926c683b1dcc061ba398a8fd010e493bdce9d81f5297b2bc529bc7d9f5f45e4",
+    "original_source": "/dev/shm/collatz-clock-window-proof/CanonicalClockWindows.lean",
+    "source_sha256": "0f542aebbdae89834be0389510c9ba11de78f850f6c8ec6282280d5532cda529"
+  },
+  "SecondScaleCanonicalLocalClockProbability": {
+    "dependencies": [
+      "SecondScaleCanonicalClockWindows",
+      "SecondScaleCoarsePrefixProbabilityRate"
+    ],
+    "original_sha256": "014a9f499331dcf4455aed55a1117c56ad0837d6c8032d2f4726add17216bf2b",
+    "original_source": "/dev/shm/collatz-local-clock-proof/CanonicalLocalClockProbability.lean",
+    "source_sha256": "e70d4bb54fa80446e9b359322f82a0465b6dced8a4e95a6af3d84afc4f9be272"
+  },
+  "SecondScaleCoarsePrefixProbabilityRate": {
+    "dependencies": [
+      "SecondScaleActualPrefixEventTransfer"
+    ],
+    "original_sha256": "ae3817d279c64e0d8b876881900425cc8f3dda7ec1ad16bdf8a882e0f0433115",
+    "original_source": "/dev/shm/collatz-local-clock-proof/CoarsePrefixProbabilityRate.lean",
+    "source_sha256": "cdc2e0e7a1f816da86531ec304f3132f5778966ecb0b591fe5155d8f379d7c99"
+  },
+  "SecondScaleRealCanonicalClockRates": {
+    "dependencies": [
+      "SecondScaleRealLocalClockProbability",
+      "SecondScaleRealClockRateBounds"
+    ],
+    "original_sha256": "ebe6b2f0646575a6d3d114e3065c75174744dcbc30e0937799cd6e2be1477d00",
+    "original_source": "/dev/shm/collatz-real-clock-proof/RealCanonicalClockRates.lean",
+    "source_sha256": "b1db8abcc775c70e1207c75b22c2619358ebac979e90f0e8256ffeba36006b93"
+  },
+  "SecondScaleRealClockFloorGeometry": {
+    "dependencies": [
+      "SecondScaleRealClockSourceTransport"
+    ],
+    "original_sha256": "b7b41375ee38f7db48c87663d9b9f77008f2fc9376433a5b3f937f24c30a53b8",
+    "original_source": "/dev/shm/collatz-real-clock-proof/RealClockFloorGeometry.lean",
+    "source_sha256": "905d5e88627e18297b8442ec6f312638585f87a0ae9ccb3d08757078e46911b9"
+  },
+  "SecondScaleRealClockRateBounds": {
+    "dependencies": [
+      "SecondScaleRealClockFloorGeometry"
+    ],
+    "original_sha256": "db1f9e20c0267639f016f853fcadd1b025db60428eb3b936dc27afcafc49640c",
+    "original_source": "/dev/shm/collatz-real-clock-proof/RealClockRateBounds.lean",
+    "source_sha256": "ff5a166ce4aea64e48ad5e19c557b5d98d5c8554ecb8d5eedcc3f66c0c5c91a8"
+  },
+  "SecondScaleRealClockSourceTransport": {
+    "dependencies": [
+      "SecondScaleCanonicalLocalClockProbability"
+    ],
+    "original_sha256": "c45c912f066144ce156bcc1185c4bf48e07f425f677384fb5c112571d2a6123f",
+    "original_source": "/dev/shm/collatz-real-clock-proof/RealClockSourceTransport.lean",
+    "source_sha256": "d6b451c6de148e4d73d03a0559ccc48e5b59a897cdc7d9424024aca7f4f30aa9"
+  },
+  "SecondScaleRealLocalClockProbability": {
+    "dependencies": [
+      "SecondScaleRealClockFloorGeometry"
+    ],
+    "original_sha256": "a5c7b7b27a806791b82f9727a73ebb388b4e7399c652e7f8453a59026c167745",
+    "original_source": "/dev/shm/collatz-real-clock-proof/RealLocalClockProbability.lean",
+    "source_sha256": "05d4b207b15caf79740d28a1e8ddd892ff914847bb3970c0a79b6ab656b750c3"
+  },
+  "SecondScaleSyracuseCenteredPassage": {
+    "dependencies": [
+      "SecondScaleSyracuseLogTrajectory"
+    ],
+    "original_sha256": "0dac9871a3d527144b3c8a727d31c716d35745606d544d98fba799192b0739cd",
+    "original_source": "/dev/shm/collatz-local-clock-proof/SyracuseCenteredPassage.lean",
+    "source_sha256": "807cc970e99f92771193ea9852d28e2c4965154f2610ff4ec85a537dcb50ab91"
+  },
+  "SecondScaleSyracuseLandingLowerBound": {
+    "dependencies": [
+      "SecondScaleSyracuseCenteredPassage"
+    ],
+    "original_sha256": "cd6256c53ae88544ded147ce4469e1aedcbb7e059b53d0df3575cb393c5a5d5a",
+    "original_source": "/dev/shm/collatz-local-clock-proof/SyracuseLandingLowerBound.lean",
+    "source_sha256": "b8802dacf76eb3123a8ddb4c9d3378191f0199493983616e3848212c7cd55018"
+  },
+  "SecondScaleSyracuseLogTrajectory": {
+    "dependencies": [],
+    "original_sha256": "2c88b80e4891f8ac2c3bf41db9cd713a323ba7802f14fd6cc89fb22f86628065",
+    "original_source": "/dev/shm/collatz-local-clock-proof/SyracuseLogTrajectory.lean",
+    "source_sha256": "a9915644b9d9d0ee8bf0f9f0ffa104e22a815e633bf94b3b1b312788fdbe14a2"
+  },
+  "SecondScaleTaoLocalPrefixConcentration": {
+    "dependencies": [],
+    "original_sha256": "3b7d04340342e848fc5ef5bbdd9b1b07586e835c46dcd4a7a2904563c3be8b0e",
+    "original_source": "/dev/shm/collatz-clock-source-audit/TaoLocalPrefixConcentration.lean",
+    "source_sha256": "2a553defabce1094ce1e8694ad79b6ef659d9bfc6ef13196465e8ca2edae1d35"
+  }
+}

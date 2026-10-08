@@ -1,0 +1,1 @@
+'CollatzCanonical.DirichletAbelian.closed_window_mean_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

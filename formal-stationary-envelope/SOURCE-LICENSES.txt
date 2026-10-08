@@ -1,0 +1,74 @@
+Source licenses and attribution: canonical integer-envelope bundle
+
+This ledger covers the 1620 Lean source modules selected by the frozen
+execution manifest c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c.
+The per-module hashes, source origins, declared license scopes and supporting
+records are in provenance/envelope-license-review.json.
+
+The selected sources comprise 276 MIT-scoped modules,
+1340 Apache-2.0-scoped modules, and four predecessor-derived
+modules whose upstream Apache-2.0 rights and MIT original local additions
+are recorded separately. These are source-scope classifications; the local
+MIT grant is not applied to imported or adapted third-party material.
+
+Original local proof modules, scripts and documentation use
+licenses/LICENSE-MIT, Copyright (c) 2026 Lucas Valbuena. FiniteBinomialTail
+and OrbitPackingParityCount retain M. Sharpe's separate MIT copyright and
+full permission notice in their source headers, at the recorded upstream
+commit ec8174b567d5cab4960024782210b5f5db02bd3a.
+
+The Erdos1135, Erdos1135SecondScale, Erdos1135Predecessor,
+FormalConjectures and FormalConjecturesPredecessor namespaces, together
+with CollatzPredecessorDensity, retain their upstream rights and notices.
+Lech Mazur's first-passage/natural-density package and predecessor release
+are distinct retained sources. Their licenses, notices, namespace changes
+and predecessor rights records are preserved in licenses/ and
+provenance/retained-native/. The selected second-scale and predecessor
+copies remain Apache-2.0 material. Existing headers are unchanged.
+
+There are 150 selected proof-compatibility adaptations: the 32 earlier
+sharp-bundle patches in provenance/native-linter-patches.json and the
+118 additional compatibility patches in
+provenance/envelope-linter-patches.json. Their exact original/current
+hashes, patches and modification notices are retained. The separate
+FormalConjectures Wikipedia shard has its own exact deletion patch and
+provenance; it retains the definition and omits an unrelated unproved
+conjecture declaration. Compatibility edits retain theorem propositions, allowing bound-variable alpha-renaming;
+local evaluation limits are raised where needed. No linter or proof-check exemption is used.
+
+Twenty-three selected Gao modules come from Omar Javier Said Duran's
+formal artifact, version 1.0.0, 27 September 2026,
+doi:10.5281/zenodo.23003500, Copyright 2026 Omar Javier Said Duran.
+They remain Apache-2.0; see licenses/LICENSE-GAO-APACHE-2.0. The complete
+retained source archive, original README, original Gao sources and exact
+compatibility records are under
+provenance/retained-periodic-census/provenance/gao/. Momentos retains the
+recorded import compatibility adaptation. Additional proof compatibility
+edits in Tejonas are recorded in provenance/envelope-linter-patches.json.
+The archive's other sources are historical evidence, not additional
+compiled modules. The retained archive contains no paper or image files.
+
+BoundedFrozenSeed, GenericSeedPredecessorCount,
+FrozenSeedPeriodicPrefix and TerminalFanCensus reuse or adapt predecessor
+proof assemblies. Their upstream rights are retained under
+licenses/LICENSE-PREDECESSOR-APACHE-2.0 and licenses/NOTICE-PREDECESSOR,
+with supporting grant records under
+provenance/retained-periodic-census/provenance/bounded-seed/.
+Original local additions retain their local MIT attribution. The
+retained census SOURCE-LICENSES.txt explains these derivations.
+
+The copied licenses/SOURCE-LICENSES.txt and
+provenance/origin-license-review.json describe the earlier 362-module
+sharp bundle only. They are preserved as historical source-specific
+evidence. Their earlier whole-bundle counts and statement excluding
+second-scale/predecessor namespaces do not apply to this expanded bundle.
+Use this ledger and provenance/envelope-license-review.json for the
+current selection.
+
+Lean, Mathlib and the eight pinned packages remain external dependencies;
+their source trees and compiled caches are not distributed here. Exact
+dependency license copies are retained under licenses/packages/, with
+revision provenance in provenance/external-license-origins.json.
+Papers and images cited by upstream packages are not reproduced or
+relicensed by these software grants. The companion paper has its
+separately stated CC BY 4.0 license.

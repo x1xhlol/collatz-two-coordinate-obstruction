@@ -1,0 +1,12 @@
+'CollatzCylinderPacking.Arithmetic.actualFirstHitDensity_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.fixed_basin_green_ratio_uniform_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.fixed_basin_green_ratio_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.fixed_basin_boundary_limits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

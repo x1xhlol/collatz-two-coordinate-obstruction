@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.exists_uniform_basin_boundary_function' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.fixed_basin_density_uniform_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.fixed_basin_density_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

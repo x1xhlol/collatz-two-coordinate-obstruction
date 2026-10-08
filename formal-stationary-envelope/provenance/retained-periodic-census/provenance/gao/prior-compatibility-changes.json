@@ -1,0 +1,12 @@
+{
+  "Hienas": {
+    "original_sha256": "9026162d6c96aca77e655ca2430335dcae65727915213892a2c09ae7a577acf0",
+    "port_sha256": "6830581c341096469810646c318bdcdd867214b4a67da8de64907fbdd53a038c",
+    "change": "One import renamed for Mathlib 4.30 compatibility; no theorem or proof text changed."
+  },
+  "Momentos": {
+    "original_sha256": "50ac6d68f66092ba3a8bfee8f233f179fa5ef79a928e017d2c055e17decd6172",
+    "port_sha256": "e3c79341d01ab7ef78418b40bddb6fb0661abdc5eaff824d8c0c2d9b6e32d9fa",
+    "change": "One import renamed for Mathlib 4.30 compatibility; no theorem or proof text changed."
+  }
+}

@@ -1,0 +1,6 @@
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_natCast_eq_of_marked_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_natCast_eq_of_nonperiodic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

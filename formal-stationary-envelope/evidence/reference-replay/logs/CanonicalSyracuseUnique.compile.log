@@ -1,0 +1,15 @@
+'CollatzCylinderPacking.Arithmetic.stationary_cylinder_real_recursion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.finite_half_contraction_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.stationary_probability_cylinders_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.syracuse_stationary_probability_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.eq_canonical_of_syracuse_stationary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,6 @@
+'CollatzCylinderPacking.Arithmetic.padicIntegerEnvelope_maximal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.padicIntegerEnvelope_lintegral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,16 @@
+--- upstream/depuracion/gao20260920/formal/Hienas.lean
++++ source/Hienas.lean
+@@ -1,4 +1,4 @@
+-import Mathlib.Analysis.Real.Sqrt
++import Mathlib.Analysis.SpecialFunctions.Sqrt
+ import Mathlib.Tactic.Linarith
+ import Mathlib.Tactic.NormNum
+ import Mathlib.Tactic.FieldSimp
+--- upstream/depuracion/gao20260920/formal/Momentos.lean
++++ source/Momentos.lean
+@@ -1,4 +1,4 @@
+-import Mathlib.Analysis.Real.Sqrt
++import Mathlib.Analysis.SpecialFunctions.Sqrt
+ import Mathlib.Tactic.Linarith
+ import Mathlib.Tactic.NormNum
+ import Mathlib.Tactic.FieldSimp

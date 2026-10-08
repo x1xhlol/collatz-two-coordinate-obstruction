@@ -1,0 +1,2 @@
+'CollatzCanonical.NaturalPrefix.fullNaturalPrefixSum_halving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.NaturalPrefix.natural_half_ratio_error' depends on axioms: [propext, Classical.choice, Quot.sound]

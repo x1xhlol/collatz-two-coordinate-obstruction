@@ -1,0 +1,10 @@
+'CollatzCanonical.BoundedInverseSeed.frozenSeedHeightMultiplier' depends on axioms: [propext]
+'CollatzCanonical.BoundedInverseSeed.exists_bounded_generalTarget_full_core_mark' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.exists_bounded_generalTarget_core_sequence_seed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.BoundedInverseSeed.exists_bounded_generalTarget_uniform_twoThirds_seed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

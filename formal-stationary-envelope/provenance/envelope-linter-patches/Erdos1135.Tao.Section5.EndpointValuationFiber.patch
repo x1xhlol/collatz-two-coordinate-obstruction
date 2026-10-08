@@ -1,0 +1,40 @@
+--- original/Erdos1135.Tao.Section5.EndpointValuationFiber.lean
++++ candidate/Erdos1135.Tao.Section5.EndpointValuationFiber.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.Tao.Probability.Geom2TerminalMoment
+ import Erdos1135.Tao.Section5.PassLostWindow
+ import Erdos1135.Tao.Section5.PayloadFreeCoefficient
+@@ -347,7 +351,7 @@
+     exfalso
+     omega
+   · intro hM
+-    simpa using hM
++    simp at hM
+ 
+ theorem taoSection5EndpointFiber_nonempty_highLower_le_upper
+     {B : ℕ} {E : Set ℕ} (facts : TaoSection5PassLostWindowFacts B)
+@@ -373,7 +377,7 @@
+     exfalso
+     omega
+   · intro hM
+-    simpa using hM
++    simp at hM
+ 
+ /-- Exact full-product CRT class for every member of a fixed endpoint
+ valuation/residue fiber. -/
+@@ -488,9 +492,9 @@
+       rw [← taoSection5EPrime_empty B]
+       exact M.2
+     exfalso
+-    simpa using hfalse
++    simp at hfalse
+   · intro hM
+-    simpa using hM
++    simp at hM
+ 
+ @[simp]
+ theorem taoSection5PayloadFreeCoefficient_EPrime_empty

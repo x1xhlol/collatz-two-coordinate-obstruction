@@ -1,0 +1,4 @@
+'CollatzCylinderPacking.Arithmetic.truncatedSeries_closedForm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.wordResidue_closedForm' depends on axioms: [propext, Classical.choice, Quot.sound]

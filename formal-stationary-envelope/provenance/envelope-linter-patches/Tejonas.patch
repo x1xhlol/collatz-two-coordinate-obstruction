@@ -1,0 +1,19 @@
+--- original/Tejonas.lean
++++ candidate/Tejonas.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Martas
+ 
+ /- Tejonas: los pares reales (x,y) bajo el mapa atajo, con sus conteos impares,
+@@ -651,7 +655,7 @@
+   -- los n<4^t son a lo sumo 4^t
+   have hpeq : ((Finset.range N).filter (fun n => n%2^t ∈ S)).card≤
+       (((Finset.range N).filter (fun n => n%2^t ∈ S)).filter (fun n => 4^t≤n)).card+4^t := by
+-    have hsplit := Finset.filter_card_add_filter_neg_card_eq_card
++    have hsplit := Finset.card_filter_add_card_filter_not
+       (s:=(Finset.range N).filter (fun n => n%2^t ∈ S)) (fun n => 4^t≤n)
+     have hsmall : (((Finset.range N).filter (fun n => n%2^t ∈ S)).filter (fun n => ¬4^t≤n)).card≤4^t := by
+       calc _ ≤ (Finset.range (4^t)).card := by

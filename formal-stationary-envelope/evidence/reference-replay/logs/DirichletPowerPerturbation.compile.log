@@ -1,0 +1,13 @@
+'CollatzCanonical.DirichletAbelian.shifted_power_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.DirichletAbelian.weighted_dirichlet_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.powered_weight_dirichlet_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.normalized_weight_power_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.DirichletAbelian.powered_dirichlet_limit_of_normalized_zeta_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

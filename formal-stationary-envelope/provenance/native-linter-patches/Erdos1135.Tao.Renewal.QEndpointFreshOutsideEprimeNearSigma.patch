@@ -1,0 +1,18 @@
+--- original/Erdos1135/Tao/Renewal/QEndpointFreshOutsideEprimeNearSigma.lean
++++ corrected/Erdos1135/Tao/Renewal/QEndpointFreshOutsideEprimeNearSigma.lean
+@@ -1,3 +1,6 @@
++/- This local copy renames unused bound variables in result types for the pinned toolchain linter.
++   The logical statement is alpha-equivalent; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Renewal.QEndpointFreshEStarEprime
+ import Erdos1135.Tao.Renewal.QEndpointFreshSupport
+ 
+@@ -58,7 +61,7 @@
+     (hradius : Jgeo ^ 2 + (K * B) ^ 2 ≤ R ^ 2)
+     (hgapKB : gap ≤ K * B)
+     (hLerrKB : Lerr ≤ K * B) :
+-    ∃ c : Center family old sMin K B,
++    ∃ _c : Center family old sMin K B,
+       NearSigma R (Sigma family old sMin K B)
+         (lemma79EndpointFreshPointAt entry atom p) := by
+   rcases hatom with

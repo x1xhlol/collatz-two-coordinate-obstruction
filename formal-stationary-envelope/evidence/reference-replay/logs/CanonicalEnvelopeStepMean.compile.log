@@ -1,0 +1,6 @@
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerStep_integral_tendsto_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalOddStep_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

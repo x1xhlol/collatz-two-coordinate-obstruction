@@ -1,0 +1,129 @@
+{
+  "audit_compile_log": {
+    "bytes": 11289042,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/.replay/logs/IntegerEnvelopeCompleteAudit.compile.log",
+    "sha256": "4f21cc88ddc01b86a6b0fbe9d2230f03e12ff159b1d7c480b3ddc3793506d6f1"
+  },
+  "audit_source": {
+    "bytes": 168174,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/.replay/source/IntegerEnvelopeCompleteAudit.lean",
+    "sha256": "adba0938eeb7851bb702e286ee6cb65e43f0b8c10b6be4ba792f96d5aa1ebd7f"
+  },
+  "audit_summary": {
+    "audited_constant_rows": 36651,
+    "audited_distinct_names": 36539,
+    "audited_private_rows": 3419,
+    "header_owner_mismatch_rows": 112
+  },
+  "distribution_plan": {
+    "bytes": 1019586,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/distribution-plan.json",
+    "sha256": "8c4a1fa60d79f45f4449bb802ec54242e6542e7ad76538a7795cfacdcfe43c64"
+  },
+  "endpoint_count": 14,
+  "execution_manifest": {
+    "bytes": 5068251,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/source-manifest.json",
+    "sha256": "c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c"
+  },
+  "external_objects_independently_rehashed": 53006,
+  "input_state": {
+    "bytes": 11803111,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/.replay/input-state-before.json",
+    "sha256": "627a527e144246011a584033e7c6a1e80bbe544ee1eebe0fa32cf12df363fbf5"
+  },
+  "internal_import_edges_checked": 7856,
+  "maximum_concurrent_pairs_observed": 4,
+  "mutated_no_frozen_or_public_artifact": true,
+  "performed_no_lean_execution": true,
+  "progress_record": {
+    "bytes": 5117369,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/.replay/progress.json",
+    "sha256": "199d1aaeae33ace0683adabc898779aadfd4190f2638f872be28cf1d6c2f3252"
+  },
+  "publication_manifest": {
+    "bytes": 1019189,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/publication-manifest.json",
+    "sha256": "fd5e291225eacd415823f55b6da9ab1f347f2a78cc92df0968b5c29b168bc366"
+  },
+  "replay_record": {
+    "bytes": 30834609,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/full-envelope-replay-corrected/.replay/replay-record.json",
+    "sha256": "d51c6afb6168cf34f629cd1d1849cdf5c98067a30c6f60c5d311b74e4e9f39fe"
+  },
+  "review_script": {
+    "bytes": 24858,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/preparation/cycle_authenticate_finished_stage_v2.py",
+    "sha256": "0e4a14de7fe411302aa71489fa0fce333f5e1b9c16d1e04069059ac1bdadee08"
+  },
+  "scope_limit": "Authenticates the actual completed evidence and current file bytes without repeating Lean compilation or kernel execution. External cached-object correspondence to source revisions remains unproved.",
+  "source_archives_with_only_utf8_text_members": {
+    "provenance/retained-periodic-census/provenance/gao/upstream-1.0.0.zip": [
+      "said-duran-collatz-lean-1.0.0/LICENSE",
+      "said-duran-collatz-lean-1.0.0/README.md",
+      "said-duran-collatz-lean-1.0.0/checks/evidencia_lagartijas_exacta.json",
+      "said-duran-collatz-lean-1.0.0/checks/evidencia_lagartijas_pares.json",
+      "said-duran-collatz-lean-1.0.0/checks/revision_gao.py",
+      "said-duran-collatz-lean-1.0.0/checks/revision_gao_salida.txt",
+      "said-duran-collatz-lean-1.0.0/checks/revision_garner.py",
+      "said-duran-collatz-lean-1.0.0/checks/revision_garner_salida.txt",
+      "said-duran-collatz-lean-1.0.0/checks/revision_wu.py",
+      "said-duran-collatz-lean-1.0.0/checks/revision_wu_n24_salida.txt",
+      "said-duran-collatz-lean-1.0.0/checks/revision_wu_salida.txt",
+      "said-duran-collatz-lean-1.0.0/checks/tabla2_1e8_salida.txt",
+      "said-duran-collatz-lean-1.0.0/checks/terminos_oeis.py",
+      "said-duran-collatz-lean-1.0.0/checks/terminos_oeis_salida.txt",
+      "said-duran-collatz-lean-1.0.0/checks/verificar_alpacas.py",
+      "said-duran-collatz-lean-1.0.0/checks/verificar_alpacas_salida.txt",
+      "said-duran-collatz-lean-1.0.0/checks/verificar_lagartijas.py",
+      "said-duran-collatz-lean-1.0.0/checks/verificar_lagartijas_pares.py",
+      "said-duran-collatz-lean-1.0.0/depuracion/frente20260910/rachas.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/cadena_completa.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/evidencia_gao_lean.json",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/.gitignore",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Alpacas.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Banda.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Condoras.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/ConteoEnsayos.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Ensayo.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/GaoEnunciado.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/GaoLiteral.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/GarnerEnunciado.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Guardias.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Hienas.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Hormigas.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Lagartijas.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Martas.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Maximos.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Momentos.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Palabras.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/ParametrosVentana.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Producto.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/RachasEnteras.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Reloj.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Repeticion.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Resto.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/SalidaPalabras.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Supervivencia.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Tejonas.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/UmbralRachas.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/Ventana.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/WuEnunciado.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/lake-manifest.json",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/lakefile.lean",
+      "said-duran-collatz-lean-1.0.0/depuracion/gao20260920/formal/lean-toolchain"
+    ]
+  },
+  "source_modules": 1620,
+  "stage_distribution_bytes": 116599145,
+  "stage_distribution_files": 5168,
+  "stage_publication_files": 5167,
+  "status": "AUTHENTICATION_CHECKS_PASSED",
+  "successful_commands": 3242,
+  "validation_record": {
+    "bytes": 4132,
+    "path": "/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-integer-stationary-envelope-oct8/publication-stage-corrected/evidence/validation/validation-record.json",
+    "sha256": "640d21a42edd676ece9064a1773769dc8fdd6271275be7c7ab9c07d813473df9"
+  },
+  "validation_scope": "Actual setup using existing installations and two new-process verifications. Relocation copies the completed internal artifacts and reuses the same external libraries; it is not another source compilation or a source rebuild of external caches."
+}

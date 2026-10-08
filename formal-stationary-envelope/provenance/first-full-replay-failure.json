@@ -1,0 +1,29 @@
+{
+  "status": "FAILED_STRICT_COMPILATION_PRESERVED",
+  "source_manifest_sha256": "26e04c96f13fe01ae260f4a3db96c9ad629d4cb4504211d205a918255efa2565",
+  "progress_sha256": "40fbc30f39be771d0067c67cdf7bed069f67f2bf6110aca711d4f538e1c695e6",
+  "successful_source_kernel_pairs": 112,
+  "successful_commands": 224,
+  "failed_command": {
+    "arguments": [
+      "TOOLCHAIN/bin/lean",
+      "-j1",
+      "-DwarningAsError=true",
+      "--root=BUNDLE/.replay/source",
+      "BUNDLE/.replay/source/Erdos1135/Tao/Probability/AntitoneResidueSums.lean",
+      "-o",
+      "BUNDLE/.replay/modules/Erdos1135/Tao/Probability/AntitoneResidueSums.olean"
+    ],
+    "cwd": "BUNDLE/.replay/source",
+    "elapsed_seconds": 4.301303473999724,
+    "exit_code": 1,
+    "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Probability.AntitoneResidueSums.compile.log",
+    "log_sha256": "cc0481266f7112e2dd5d51925561c2cd71ea397e315db7b602f862314be74382",
+    "module": "Erdos1135.Tao.Probability.AntitoneResidueSums",
+    "stage": "compile",
+    "started_utc": "2026-10-08T07:29:57+00:00"
+  },
+  "failure": "Three strict linter errors in the native AntitoneResidueSums source: one unnecessary tactic sequence focus and two no-op decide tactics. The global kernel/axiom audit and final input-state comparison were not reached.",
+  "preservation": "The complete frozen bundle and all run artifacts are preserved unchanged. Subsequent diagnostic work uses a separate source/object tree.",
+  "reporting_correction": "A progress update reported no errors after reading the completed-module counter without checking the newly failed command. This was explicitly corrected when discovered."
+}

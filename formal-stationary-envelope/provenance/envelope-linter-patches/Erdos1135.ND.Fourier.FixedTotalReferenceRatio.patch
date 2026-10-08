@@ -1,0 +1,20 @@
+--- original/Erdos1135.ND.Fourier.FixedTotalReferenceRatio.lean
++++ candidate/Erdos1135.ND.Fourier.FixedTotalReferenceRatio.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused bound-variable names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.ND.Fourier.FixedTotalSourceLaw
+ import Erdos1135.ND.Fourier.FixedTotalDisintegration
+ 
+@@ -208,8 +212,7 @@
+         _ ≤ g u := by
+           dsimp [g, tailP, tailQ]
+           rw [if_pos hu, if_pos hu]
+-          simpa [mul_assoc] using
+-            le_refl ((centralCoeff * (q u).toReal) * phi u)
++          simp [mul_assoc]
+     · have hp0 : 0 ≤ (p u).toReal := ENNReal.toReal_nonneg
+       have hq0 : 0 ≤ (q u).toReal := ENNReal.toReal_nonneg
+       have habs : |(p u).toReal - (q u).toReal| ≤

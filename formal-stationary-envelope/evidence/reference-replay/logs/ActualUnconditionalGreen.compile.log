@@ -1,0 +1,12 @@
+'CollatzCylinderPacking.Arithmetic.actual_firstHitWeight_odd_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.actual_firstHitWeight_full_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.actual_unconditional_green_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.actual_unconditional_density_harmonic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

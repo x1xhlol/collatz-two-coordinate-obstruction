@@ -1,0 +1,6 @@
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerStep_natCast_tendsto_trace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.actual_trace_residue_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

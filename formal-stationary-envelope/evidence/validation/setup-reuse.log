@@ -1,0 +1,3 @@
+Running: PYTHON BUNDLE/scripts/replay.py --expected-manifest-sha256 c3a623f8f06ec66824099ca3b4e40e5448533c0dfb0ce389cee70e52879dc28c --toolchain TOOLCHAIN --mathlib MATHLIB --preflight
+{"status": "PASS", "modules": 1620, "external_objects": 53006, "baseline_sha256": "627a527e144246011a584033e7c6a1e80bbe544ee1eebe0fa32cf12df363fbf5"}
+Setup complete. Use the toolchain and Mathlib paths in setup-result.json for the replay.

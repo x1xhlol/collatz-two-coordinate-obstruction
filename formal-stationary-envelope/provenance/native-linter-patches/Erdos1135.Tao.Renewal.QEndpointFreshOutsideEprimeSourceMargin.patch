@@ -1,0 +1,17 @@
+--- original/Erdos1135/Tao/Renewal/QEndpointFreshOutsideEprimeSourceMargin.lean
++++ corrected/Erdos1135/Tao/Renewal/QEndpointFreshOutsideEprimeSourceMargin.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Renewal.QEndpointFreshOutsideEprimeSourceWidth
+ import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+ 
+@@ -103,7 +106,6 @@
+           (2 * lemma79OutsideEprimeScale Aweight p) + 1) /
+             (S : ℝ)) * (S : ℝ) := by
+         field_simp [hS0]
+-        <;> ring
+     _ ≤ (Real.log 2 / Real.log 9 - (1 / 4 : ℝ)) *
+         (S : ℝ) := hmul
+     _ = (S : ℝ) *

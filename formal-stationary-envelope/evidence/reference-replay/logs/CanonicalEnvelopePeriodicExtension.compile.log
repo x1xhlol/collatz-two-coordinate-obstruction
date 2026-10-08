@@ -1,0 +1,6 @@
+'CollatzCanonical.IntegerStationaryEnvelope.nonnegative_defect_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_natCast_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

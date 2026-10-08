@@ -1,0 +1,11 @@
+'CollatzClockAudit.canonical_source_support_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.eventually_canonical_centered_first_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.eventually_canonical_clock_bad_probability_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockAudit.canonical_coarse_landing_bad_probability_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockAudit.eventually_canonical_large_landing_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

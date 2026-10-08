@@ -1,0 +1,143 @@
+{
+  "created": "2026-09-27T23:27:31.987952+00:00",
+  "modified": "2026-09-27T23:27:32.317592+00:00",
+  "id": 23003500,
+  "conceptrecid": "23003499",
+  "doi": "10.5281/zenodo.23003500",
+  "conceptdoi": "10.5281/zenodo.23003499",
+  "doi_url": "https://doi.org/10.5281/zenodo.23003500",
+  "metadata": {
+    "title": "Formal proofs in Lean 4 of conjectures of Gao, Garner and Wu on consecutive integers in the Collatz problem",
+    "doi": "10.5281/zenodo.23003500",
+    "publication_date": "2026-09-27",
+    "description": "<p>Lean 4 (v4.32.2) and Mathlib formalization accompanying three papers on consecutive integers in the Collatz (3x+1) problem. With C(n) = n/2 for even n and C(n) = 3n+1 for odd n, it proves:</p><ul><li><strong>Gao (1993), in the form recorded by Lagarias:</strong> the set of n such that C^k(n) = C^k(n+1) for some k \u2264 log_2 n has natural density one (<code>GaoEnunciado.conjetura_gao</code>).</li><li><strong>Gao (1993), literal form:</strong> the normalized count of the n &lt; 2^k \u2212 1 such that n and n+1 coalesce within k steps (equal values, equal numbers of halvings, without passing through 1) tends to 1, and so does the proportion d(x) of such n &lt; x (<code>GaoLiteral.conjetura_gao_literal</code>).</li><li><strong>Garner (1985):</strong> for all L and N there is n \u2265 N such that n, n+1, \u2026, n+L have the same height and the same total stopping time (<code>GarnerEnunciado.conjetura_garner</code>).</li><li><strong>Wu (1992):</strong> the length of the longest run of consecutive integers of equal height in [1, M) tends to infinity (<code>WuEnunciado.conjetura_wu_dos</code>), and Wu's first conjecture, d(M) \u2192 1, is equivalent to the statement that the integers reaching 1 have natural density one (<code>WuEnunciado.conjetura_wu_uno</code>).</li></ul><p>The final theorems depend only on the axioms propext, Classical.choice and Quot.sound; there is no sorry, native_decide or declared axiom. Apart from the runs that are built explicitly, nothing here shows that any integer reaches 1.</p><p><strong>Build.</strong> Lean 4.32.2 and Mathlib commit 905b95818eb3 are pinned (lean-toolchain, lake-manifest.json). From the directory depuracion/gao20260920/formal of the archive run <code>lake exe cache get</code> and then <code>lake build GaoCore GaoFormal</code>. The file evidencia_gao_lean.json records the build, the SHA-256 hash of every final module and the output of #print axioms. The folder checks contains the independent Python programs of the numerical checks reported in the papers. Identifiers and comments in the sources are in Spanish; README.md describes every module in English.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Said Duran, Omar Javier",
+        "affiliation": "Independent Researcher",
+        "orcid": "0009-0009-1418-2558"
+      }
+    ],
+    "keywords": [
+      "Collatz problem",
+      "3x+1 problem",
+      "Lean 4",
+      "Mathlib",
+      "formal verification",
+      "natural density",
+      "Markov chain"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.23003524",
+        "relation": "isSupplementTo",
+        "resource_type": "publication-preprint",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.23003526",
+        "relation": "isSupplementTo",
+        "resource_type": "publication-preprint",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.23003528",
+        "relation": "isSupplementTo",
+        "resource_type": "publication-preprint",
+        "scheme": "doi"
+      }
+    ],
+    "version": "1.0.0",
+    "language": "eng",
+    "resource_type": {
+      "title": "Software",
+      "type": "software"
+    },
+    "license": {
+      "id": "apache2.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "23003499"
+          }
+        }
+      ]
+    }
+  },
+  "title": "Formal proofs in Lean 4 of conjectures of Gao, Garner and Wu on consecutive integers in the Collatz problem",
+  "links": {
+    "self": "https://zenodo.org/api/records/23003500",
+    "self_html": "https://zenodo.org/records/23003500",
+    "preview_html": "https://zenodo.org/records/23003500?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.23003500",
+    "self_doi": "https://doi.org/10.5281/zenodo.23003500",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.23003500",
+    "reserve_doi": "https://zenodo.org/api/records/23003500/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/23003499",
+    "parent_html": "https://zenodo.org/records/23003499",
+    "parent_doi": "https://doi.org/10.5281/zenodo.23003499",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.23003499",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:23003500/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:23003500/sequence/default",
+    "files": "https://zenodo.org/api/records/23003500/files",
+    "media_files": "https://zenodo.org/api/records/23003500/media-files",
+    "archive": "https://zenodo.org/api/records/23003500/files-archive",
+    "archive_media": "https://zenodo.org/api/records/23003500/media-files-archive",
+    "latest": "https://zenodo.org/api/records/23003500/versions/latest",
+    "latest_html": "https://zenodo.org/records/23003500/latest",
+    "versions": "https://zenodo.org/api/records/23003500/versions",
+    "draft": "https://zenodo.org/api/records/23003500/draft",
+    "access_links": "https://zenodo.org/api/records/23003500/access/links",
+    "access_grants": "https://zenodo.org/api/records/23003500/access/grants",
+    "access_users": "https://zenodo.org/api/records/23003500/access/users",
+    "access_request": "https://zenodo.org/api/records/23003500/access/request",
+    "access": "https://zenodo.org/api/records/23003500/access",
+    "communities": "https://zenodo.org/api/records/23003500/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/23003500/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/23003500/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/23003500/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/23003500/quota-increase",
+    "requests": "https://zenodo.org/api/records/23003500/requests"
+  },
+  "updated": "2026-09-27T23:27:32.317592+00:00",
+  "recid": "23003500",
+  "revision": 3,
+  "files": [
+    {
+      "id": "e3b3f5a9-1a75-4fb1-95de-e7ca62795462",
+      "key": "said-duran-collatz-lean-1.0.0.zip",
+      "size": 122906,
+      "checksum": "md5:33df5cd80a7e8d805d5721df7b522c8d",
+      "links": {
+        "self": "https://zenodo.org/api/records/23003500/files/said-duran-collatz-lean-1.0.0.zip/content"
+      }
+    }
+  ],
+  "swh": {
+    "swhid": "swh:1:dir:fb7a133d606c46ce04dde84f24ee6bb20ba10581;origin=https://doi.org/10.5281/zenodo.23003499;visit=swh:1:snp:46c0717f8eff610f22620a4ed5e9eb6b0ead7bf6;anchor=swh:1:rel:b27e0beb8efeb33a6a5f7e9c5a686cc46fd0ac71;path=said-duran-collatz-lean-1.0.0"
+  },
+  "owners": [
+    {
+      "id": "1905632"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 0,
+    "unique_downloads": 0,
+    "views": 0,
+    "unique_views": 0,
+    "version_downloads": 0,
+    "version_unique_downloads": 0,
+    "version_unique_views": 0,
+    "version_views": 0
+  },
+  "state": "done",
+  "submitted": true
+}

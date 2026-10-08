@@ -1,0 +1,6 @@
+'CollatzCylinderPacking.Arithmetic.actual_unconditional_canonical_identification' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.actual_firstHitElapsed_exception_mean_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

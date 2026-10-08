@@ -1,0 +1,7 @@
+'CollatzClockAudit.reference_passage_small_landing_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClockAudit.real_pass_value_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.clock_ladder_top_source_small_landing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.global_clock_good_failure_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClockAudit.global_clock_good_first_hit' depends on axioms: [propext, Classical.choice, Quot.sound]

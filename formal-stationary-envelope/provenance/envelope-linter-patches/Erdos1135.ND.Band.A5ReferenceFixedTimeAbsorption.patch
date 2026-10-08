@@ -1,0 +1,28 @@
+--- original/Erdos1135.ND.Band.A5ReferenceFixedTimeAbsorption.lean
++++ candidate/Erdos1135.ND.Band.A5ReferenceFixedTimeAbsorption.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ import Erdos1135.ND.Band.A5ReferenceTerminalPacket
+ import Erdos1135.ND.Band.A5FixedCellReferenceProfiles
+ import Erdos1135.ND.Band.A5NominalTotalCap
+@@ -182,7 +186,7 @@
+       at hdesc
+     dsimp only [Y, q, R, e, a, m, nu,
+       ndA5HarmonicReferenceNonproportionalError]
+-    convert hdesc using 1 <;> ring
++    convert hdesc using 1; ring
+   have habsorb :=
+     abs_sum_sub_sum_mul_le_trueAbsorb
+       (Finset.univ : Finset
+@@ -292,7 +296,7 @@
+       at hdesc
+     dsimp only [Y, q, R, e, a, m, nu,
+       ndA5FlatReferenceNonproportionalError]
+-    convert hdesc using 1 <;> ring
++    convert hdesc using 1; ring
+   have habsorb :=
+     abs_sum_sub_sum_mul_le_trueAbsorb
+       (Finset.univ : Finset

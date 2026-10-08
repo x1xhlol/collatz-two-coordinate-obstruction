@@ -1,0 +1,12 @@
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_periodic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_weighted_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.oddTerminalFan_scaled_source_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

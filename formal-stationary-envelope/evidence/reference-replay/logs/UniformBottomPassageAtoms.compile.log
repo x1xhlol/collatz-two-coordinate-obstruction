@@ -1,0 +1,4 @@
+'CollatzCanonical.NativeTao.clock_ladder_bottom_atom_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.NativeTao.exists_uniform_bottom_passage_atom_log_rate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

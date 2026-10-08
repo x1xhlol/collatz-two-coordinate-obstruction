@@ -1,0 +1,6 @@
+'CollatzCanonical.PeriodicCensusFloor.terminalEnvelope_source_sum_le_basin_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.exists_frozen_seed_eventual_periodic_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

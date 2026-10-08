@@ -1,0 +1,7 @@
+'MartasGao.duracion_cota' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MartasGao.tiempo_cota' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MartasGao.ensayos_grandes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MartasGao.cola_ensayos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MartasGao.existe_m' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MartasGao.fusion_monotona' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MartasGao.martas' depends on axioms: [propext, Classical.choice, Quot.sound]

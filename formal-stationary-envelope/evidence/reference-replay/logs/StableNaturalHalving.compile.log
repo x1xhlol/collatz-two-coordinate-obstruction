@@ -1,0 +1,3 @@
+'CollatzCanonical.NaturalPrefix.stable_natural_halving_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

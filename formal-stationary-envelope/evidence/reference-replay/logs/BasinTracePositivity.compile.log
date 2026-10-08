@@ -1,0 +1,6 @@
+'CollatzCylinderPacking.Arithmetic.actual_density_positivity_equivalences' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.positive_target_reaches_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

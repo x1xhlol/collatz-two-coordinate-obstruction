@@ -1,0 +1,6 @@
+'CollatzCanonical.IntegerStationaryEnvelope.periodic_marked_firstHit_mean' depends on axioms: [propext,
+ choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.periodic_marked_firstHit_mean_nonperiodic' depends on axioms: [propext,
+ choice,
+ Quot.sound]

@@ -1,0 +1,6 @@
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_zero_of_not_isUnit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.IntegerStationaryEnvelope.canonicalIntegerEnvelope_lowerSemicontinuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

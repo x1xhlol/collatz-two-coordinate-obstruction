@@ -1,0 +1,19 @@
+--- original/Erdos1135SecondScale.Tao.Renewal.Lemma79CutoffStatistic.lean
++++ candidate/Erdos1135SecondScale.Tao.Renewal.Lemma79CutoffStatistic.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -235,7 +239,7 @@
+       have hcount := lemma79CutoffWhiteCount_congr
+         (n := n) (xi := xi) (epsilon := epsilon) (C := C)
+         (hpoint := hpoint t ht)
+-      simpa [hcount]
++      simp [hcount]
+ 
+ /-- The canonical cutoff trace of a Hold path is determined by `full.take C`. -/
+ theorem lemma79HoldPathCutoffTrace_take

@@ -1,0 +1,5 @@
+'CollatzCanonical.GaoShortcut.basin_eq_of_good' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.basin_adjacent_variation_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.GaoShortcut.basin_adjacent_variation_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

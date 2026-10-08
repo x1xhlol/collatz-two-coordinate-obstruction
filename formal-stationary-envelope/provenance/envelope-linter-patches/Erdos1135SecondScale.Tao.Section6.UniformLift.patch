@@ -1,0 +1,30 @@
+--- original/Erdos1135SecondScale.Tao.Section6.UniformLift.lean
++++ candidate/Erdos1135SecondScale.Tao.Section6.UniformLift.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof elaboration and unused bound-variable names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -34,8 +38,7 @@
+     (taoZModThreeProjection hrs).comp (taoZModThreeProjection hsn) =
+       taoZModThreeProjection (hrs.trans hsn) := by
+   unfold taoZModThreeProjection
+-  simpa using ZMod.castHom_comp
+-    (Nat.pow_dvd_pow 3 hrs) (Nat.pow_dvd_pow 3 hsn)
++  simp
+ 
+ theorem taoZModThreeProjection_comp_apply
+     {r s n : ℕ} (hrs : r ≤ s) (hsn : s ≤ n) (y : ZMod (3 ^ n)) :
+@@ -224,8 +227,7 @@
+       intro x hx
+       by_cases h : x = 0 <;> simp [h]
+     _ = 1 := by
+-      simpa using
+-        (Fintype.sum_ite_eq' (0 : ZMod (3 ^ 1)) (fun _ => (1 : ℝ)))
++      simp
+ 
+ /-- Bottom-level lifting also preserves the exact L1 norm. -/
+ theorem taoZModPowUniformLift_zero_sum_abs

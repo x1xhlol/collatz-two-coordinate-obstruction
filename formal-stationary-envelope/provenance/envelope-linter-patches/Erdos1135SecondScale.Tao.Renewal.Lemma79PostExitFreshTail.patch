@@ -1,0 +1,19 @@
+--- original/Erdos1135SecondScale.Tao.Renewal.Lemma79PostExitFreshTail.lean
++++ candidate/Erdos1135SecondScale.Tao.Renewal.Lemma79PostExitFreshTail.lean
+@@ -1,3 +1,7 @@
++/-
++Compatibility modification, 8 October 2026: proof-tactic syntax and unused binder names only.
++See provenance/envelope-linter-patches.json for exact source hashes and patches.
++-/
+ /-
+ Modification notice: changed by Lucas Valbuena, 28 September 2026.
+ This file is a namespace-renamed copy of the second-scale adaptation of
+@@ -298,7 +302,7 @@
+           (D * lemma79PMFENNExpectation
+             (lemma79RawHoldFirstPassagePrefixPMF J entry gap)
+             prefixWeight) :=
+-      mul_le_mul_left' htower _
++      mul_le_mul_right htower _
+ 
+ end Lemma79TailExpectation
+ end TaoSection7Case3SourceStoppingRun

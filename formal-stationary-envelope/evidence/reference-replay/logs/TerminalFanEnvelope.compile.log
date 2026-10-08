@@ -1,0 +1,13 @@
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_dominates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.PeriodicCensusFloor.terminalFanEnvelope_fullMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

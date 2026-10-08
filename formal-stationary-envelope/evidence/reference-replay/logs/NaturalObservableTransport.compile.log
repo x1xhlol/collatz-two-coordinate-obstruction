@@ -1,0 +1,2 @@
+'CollatzCanonical.NativeTao.natural_basin_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.NativeTao.natural_weight_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,7 @@
+'CollatzCylinderPacking.Arithmetic.canonical_approximation_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_variable_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.padic_cylinder_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]

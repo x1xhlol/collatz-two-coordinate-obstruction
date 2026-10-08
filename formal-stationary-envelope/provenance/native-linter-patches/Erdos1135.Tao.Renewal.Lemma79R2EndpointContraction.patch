@@ -1,0 +1,34 @@
+--- original/Erdos1135/Tao/Renewal/Lemma79R2EndpointContraction.lean
++++ corrected/Erdos1135/Tao/Renewal/Lemma79R2EndpointContraction.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Renewal.Lemma79R2Scalar
+ import Erdos1135.Tao.Renewal.Lemma79TailExpectationCore
+ 
+@@ -72,13 +75,13 @@
+   classical
+   have hexp0 : 0 ≤ Real.exp (-1) := (Real.exp_pos _).le
+   have hexp1 : Real.exp (-1) ≤ 1 := by
+-    simpa using Real.exp_le_exp.mpr (show (-1 : ℝ) ≤ 0 by norm_num)
++    simp
+   have hdiff0 : 0 ≤ 1 - Real.exp (-1) := sub_nonneg.mpr hexp1
+   have hone :
+       ENNReal.ofReal (Real.exp (-1)) +
+           ENNReal.ofReal (1 - Real.exp (-1)) = 1 := by
+     rw [← ENNReal.ofReal_add hexp0 hdiff0]
+-    convert ENNReal.ofReal_one using 1 <;> ring
++    convert ENNReal.ofReal_one using 1; ring
+   have hpoint :
+       lemma79R2EndpointWeight White =
+         fun omega =>
+@@ -164,7 +167,7 @@
+     _ = ENNReal.ofReal lemma79R2ContractionFactor := by
+       have hexp0 : 0 ≤ Real.exp (-1) := (Real.exp_pos _).le
+       have hexp1 : Real.exp (-1) ≤ 1 := by
+-        simpa using Real.exp_le_exp.mpr (show (-1 : ℝ) ≤ 0 by norm_num)
++        simp
+       have hdiff0 : 0 ≤ 1 - Real.exp (-1) := sub_nonneg.mpr hexp1
+       rw [← ENNReal.ofReal_mul (p := (1 / 2 : ℝ))
+         (q := 1 - Real.exp (-1)) (by norm_num)]

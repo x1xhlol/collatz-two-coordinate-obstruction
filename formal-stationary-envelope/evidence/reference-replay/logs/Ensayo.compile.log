@@ -1,0 +1,6 @@
+'EnsayoGao.palabra_piso_uniforme' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EnsayoGao.premio_piso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EnsayoGao.relevo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EnsayoGao.salida_premio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EnsayoGao.salida_a_fusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EnsayoGao.ensayo_uniforme' depends on axioms: [propext, Classical.choice, Quot.sound]
