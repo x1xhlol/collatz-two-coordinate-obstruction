@@ -1,0 +1,95 @@
+{
+  "packages": [
+    {
+      "code_distributed_in_this_bundle": false,
+      "license": "Apache-2.0",
+      "local_notice": "licenses/packages/mathlib/LICENSE",
+      "package": "mathlib",
+      "repository": "https://github.com/leanprover-community/mathlib4",
+      "revision": "5450b53e5ddc75d46418fabb605edbf36bd0beb6",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "upstream_path": "LICENSE"
+    },
+    {
+      "code_distributed_in_this_bundle": false,
+      "license": "Apache-2.0",
+      "local_notice": "licenses/packages/plausible/LICENSE",
+      "package": "plausible",
+      "repository": "https://github.com/leanprover-community/plausible",
+      "revision": "86210d4ad1b08b086d0bd638637a75246523dbb8",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "upstream_path": "LICENSE"
+    },
+    {
+      "code_distributed_in_this_bundle": false,
+      "license": "Apache-2.0",
+      "local_notice": "licenses/packages/LeanSearchClient/LICENSE",
+      "package": "LeanSearchClient",
+      "repository": "https://github.com/leanprover-community/LeanSearchClient",
+      "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "upstream_path": "LICENSE"
+    },
+    {
+      "code_distributed_in_this_bundle": false,
+      "license": "Apache-2.0",
+      "local_notice": "licenses/packages/importGraph/LICENSE",
+      "package": "importGraph",
+      "repository": "https://github.com/leanprover-community/import-graph",
+      "revision": "cdab3938ccabbdb044be6896e251b5814bec932e",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "upstream_path": "LICENSE"
+    },
+    {
+      "code_distributed_in_this_bundle": false,
+      "license": "Apache-2.0",
+      "local_notice": "licenses/packages/proofwidgets/LICENSE",
+      "package": "proofwidgets",
+      "repository": "https://github.com/leanprover-community/ProofWidgets4",
+      "revision": "2db6054a44326f8c0230ee0570e2ddb894816511",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "upstream_path": "LICENSE"
+    },
+    {
+      "code_distributed_in_this_bundle": false,
+      "license": "Apache-2.0",
+      "local_notice": "licenses/packages/aesop/LICENSE",
+      "package": "aesop",
+      "repository": "https://github.com/leanprover-community/aesop",
+      "revision": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "upstream_path": "LICENSE"
+    },
+    {
+      "code_distributed_in_this_bundle": false,
+      "license": "Apache-2.0",
+      "local_notice": "licenses/packages/Qq/LICENSE",
+      "package": "Qq",
+      "repository": "https://github.com/leanprover-community/quote4",
+      "revision": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "upstream_path": "LICENSE"
+    },
+    {
+      "code_distributed_in_this_bundle": false,
+      "license": "Apache-2.0",
+      "local_notice": "licenses/packages/batteries/LICENSE",
+      "package": "batteries",
+      "repository": "https://github.com/leanprover-community/batteries",
+      "revision": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "upstream_path": "LICENSE"
+    },
+    {
+      "code_distributed_in_this_bundle": false,
+      "license": "MIT",
+      "local_notice": "licenses/packages/Cli/LICENSE",
+      "package": "Cli",
+      "repository": "https://github.com/leanprover/lean4-cli",
+      "revision": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+      "sha256": "f7e95706807e931782b6efd9a9d2789508a52423ad67b56ee7e5e324362d4aac",
+      "upstream_path": "LICENSE"
+    }
+  ],
+  "scope": "Exact license-file copies from pinned external dependency Git revisions; external source/cache code is not distributed."
+}

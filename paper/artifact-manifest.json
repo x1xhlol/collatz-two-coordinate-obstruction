@@ -145,13 +145,46 @@
       "status": "PASS",
       "verifier_negative_controls_report": "formal-raw-occupation/recorded/portable-driver-hardened-checks.json",
       "verifier_negative_controls_report_sha256": "ae74a9d8a0faa3fd1f867d0093c6b9701758c238ccab8e95d60ea021edeebf81"
+    },
+    "sharp_haar_integrability": {
+      "audited_distinct_constant_names": 10445,
+      "audited_encoded_private_rows": 736,
+      "audited_module_constant_rows": 10465,
+      "complete_package_index": "formal-sharp-haar/publication-manifest.json",
+      "complete_package_index_sha256": "9f0bfd120d1f02554b879f2962c724c60f740793d52db79d5b95c78106e1df47",
+      "distribution_review": "verification/sharp-haar-distribution-independent-review.json",
+      "distribution_review_sha256": "699f217d473c9c664e16207cd2bf7f37cf1321baa86167e4ef5f006a4f13d6e4",
+      "duplicate_header_membership_rows": 20,
+      "external_input_states_identical": true,
+      "fingerprinted_external_objects": 53006,
+      "fresh_source_modules": 362,
+      "fresh_units_including_audit": 363,
+      "independent_review": "verification/sharp-haar-completed-replay-independent-review.json",
+      "independent_review_sha256": "a1fcd2288506aafd56d1b9da2fa46e91a96ec5e0517099d3c27ed3cdc927208f",
+      "post_replay_validation": "formal-sharp-haar/evidence/validation/validation-record.json",
+      "post_replay_validation_sha256": "e0070f1151e662fafa5eb70023402bd686efe2843e65bf9db111e879c4fdab99",
+      "report": "formal-sharp-haar/evidence/reference-replay/replay-record.json",
+      "report_sha256": "1dc27c7083ad4b634117335ba6ee641e1b05fdd6a07582e5afc2695279a67572",
+      "scope": "All 362 internal sources and the generated complete declaration audit were freshly compiled with warnings as errors and individually checked by the official kernel checker. All compiled internal declarations, including generated and encoded private names, were audited for the three standard axioms. Complete external input inventories are identical before and after. Actual setup reuse, fresh-process record verification and relocated verification passed; relocation copied internal compiled artifacts and did not perform another source compilation. External Lean and Mathlib libraries were fingerprinted and reused, not rebuilt or independently matched to adjacent source checkouts. The fresh dependency-download branch remains unexercised. The original failed strict-compilation attempt and the 32 reviewed compatibility patches are preserved.",
+      "source_manifest": "formal-sharp-haar/source-manifest.json",
+      "source_manifest_sha256": "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69",
+      "status": "PASS",
+      "successful_compiler_and_kernel_commands": 726
+    },
+    "sharp_haar_manuscript": {
+      "independent_integration_review": "verification/sharp-haar-integration-independent-review.json",
+      "independent_integration_review_sha256": "b9164ea99d088c377676953ccae4ee7d0f5d0c189b6f392c17fdde06070ba659",
+      "report": "verification/manuscript-sharp-haar-validation-20261008.json",
+      "report_sha256": "8ec425e3724ac42deb7e640ea81ab2e119ad9e01394d0e34b33c63463df0d56f",
+      "scope": "Final manuscript math-preservation, eight-page PDF visual/font/bounding-box checks, complete payload authentication, theorem-map owner and local-link checks, preservation of both prior papers, metadata consistency and final integration. Completed proof compilation, kernel replay and external-cache reuse are stated in the separate sharp_haar_integrability check.",
+      "status": "PASS"
     }
   },
   "curation": {
-    "active_papers": 2,
+    "active_papers": 3,
     "historical_dependency_provenance": "external/mazur-alpha-2001-2000",
     "preserved_in": "Git history and earlier releases",
-    "reason": "Focus the current collection on the strongest density results and the growing-deficit Fourier theorem. Removal of earlier papers is an editorial choice and does not declare their checked results false.",
+    "reason": "Focus the current collection on the strongest density, growing-deficit Fourier and sharp Syracuse integrability results. Removal of earlier papers is an editorial choice and does not declare their checked results false.",
     "removed_from_current_collection": [
       "Two-coordinate obstruction paper and its standalone formal development",
       "Independent second proof of Said Duran's equal-height theorem and its standalone formal development",
@@ -166,7 +199,8 @@
     "The lower-bound constants are fixed Lean choices; no numerical value or uniform finite-cutoff estimate is asserted.",
     "Novelty comparisons and automated semantic reviews are not external peer review or an exhaustive priority search.",
     "Verification scope is stated per record; source/object authentication is distinguished from fresh compilation and individual kernel replay.",
-    "The Fourier result concerns finite random affine laws with a growing but sublinear deficit; its ineffective constants and conditioning ranges do not supply a deterministic Collatz orbit estimate."
+    "The Fourier result concerns finite random affine laws with a growing but sublinear deficit; its ineffective constants and conditioning ranges do not supply a deterministic Collatz orbit estimate.",
+    "The sharp Syracuse integrability theorem concerns full additive Haar measure and gives no integer trace estimate, weak-L2 endpoint, exact linear energy asymptotic or Collatz convergence result. External compiled libraries in its full internal replay are an explicitly stated reuse boundary."
   ],
   "papers": [
     {
@@ -197,11 +231,26 @@
       "theorem_map": "paper/growing-deficit-lean-claims.md",
       "theorem_map_sha256": "5df66866c45d2b7624170963eec55d73be82c6778f00659c7d5da5d13aa2885a",
       "title": "Fourier decay for truncated Syracuse affine laws"
+    },
+    {
+      "additional_results": "Uniform finite-level Lp bounds for every real 1<=p<2; the actual stationary density equation; failure of L2 through positive support overlap. The depth-zero and p=1 finite-level boundary cases are assembled from the named public endpoints explained in the theorem map.",
+      "credit": "Tao supplies the random law, fine-scale mixing and fixed-length/fixed-total offset injectivity. The quadratic energy argument uses distinct natural quotients and normalized geometric moments. No exhaustive priority claim is made.",
+      "limitations": "These are random-law Haar estimates. No weak-L2 bound, exact linear energy growth, integer trace estimate or individual-orbit convergence result is asserted.",
+      "main_result": "For the canonical fair Syracuse law on the 3-adic integers, full-Haar depth-k cylinder energy is at most 24k+8k^2<=32k^2 for k>=1. One normalized nonnegative density has exact real Lp range 1<=p<2.",
+      "numbered_results": 6,
+      "pages": 8,
+      "pdf": "paper/quadratic-cylinder-energy.pdf",
+      "pdf_sha256": "5454fe1144976fdf72f643bba0f7b6aaf8cd0cc17f6e4dcd49f8cd59dce2c46e",
+      "source": "paper/quadratic-cylinder-energy.tex",
+      "source_sha256": "d8bc1905bdc833ce01fcfe21984096d5c8cf75bef10ebd93e4ec3e8804392df0",
+      "theorem_map": "paper/sharp-haar-lean-claims.md",
+      "theorem_map_sha256": "0bf051f1bd41c477f309243ce30c4ed82f1ae186db9f8bbc24057434f87e9c6f",
+      "title": "Quadratic cylinder energy and integrability of the Syracuse law"
     }
   ],
   "proves_collatz_conjecture": false,
   "public_repository": "https://github.com/x1xhlol/collatz-two-coordinate-obstruction",
-  "release_version": "2026.10.08.1",
+  "release_version": "2026.10.08.2",
   "schema_version": 3,
   "typesetting_tool": "Tectonic 0.17.0"
 }

@@ -1,0 +1,10 @@
+'CollatzCylinderPacking.Arithmetic.padic_projection_map_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.syracuseH_cylinder_preimage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.syracuseJ_projection_approximation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.syracuseJ_cylinder_measure_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

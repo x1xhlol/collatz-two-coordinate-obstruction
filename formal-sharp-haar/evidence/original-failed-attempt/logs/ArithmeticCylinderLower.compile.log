@@ -1,0 +1,2 @@
+'CollatzCylinderPacking.Arithmetic.validTuple_ones' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.arithmetic_mass_lower' depends on axioms: [propext, Classical.choice, Quot.sound]

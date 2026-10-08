@@ -1,0 +1,13 @@
+'CollatzCylinderPacking.Arithmetic.sequence_residue_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_cylinder_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_cylinder_arithmetic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_maximum_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_maximum_exponent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

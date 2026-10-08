@@ -1,0 +1,3 @@
+/home/ubuntu/collatz-global-descent-20260927/research-2026.09.28-trace/formal-fair-haar-energy-oct8/full-sharp-replay-preparation/.replay/source/Erdos1135/Tao/Section6/ConductorProjectivity.lean:147:2: error: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`

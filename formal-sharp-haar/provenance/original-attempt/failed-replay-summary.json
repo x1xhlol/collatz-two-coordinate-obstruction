@@ -1,0 +1,31 @@
+{
+  "completed_commands": 137,
+  "completed_source_and_kernel_pairs": 68,
+  "driver_sha256": "0c6f892bf0e10bd9f6ac93d8cc8eb81217d1cafefa45841d36d500292ef5a4b3",
+  "failed_command": {
+    "arguments": [
+      "TOOLCHAIN/bin/lean",
+      "-j1",
+      "-DwarningAsError=true",
+      "--root=BUNDLE/.replay/source",
+      "BUNDLE/.replay/source/Erdos1135/Tao/Section6/ConductorProjectivity.lean",
+      "-o",
+      "BUNDLE/.replay/modules/Erdos1135/Tao/Section6/ConductorProjectivity.olean"
+    ],
+    "cwd": "BUNDLE/.replay/source",
+    "elapsed_seconds": 4.407775762025267,
+    "exit_code": 1,
+    "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Section6.ConductorProjectivity.compile.log",
+    "log_sha256": "66e67273b88d91546509b7878d3f84930cf4007d16be8cb63253b7aeac90cd60",
+    "module": "Erdos1135.Tao.Section6.ConductorProjectivity",
+    "stage": "compile",
+    "started_utc": "2026-10-08T02:45:59+00:00"
+  },
+  "failure": "unnecessarySimpa linter at source line147 of Erdos1135.Tao.Section6.ConductorProjectivity; warnings were treated as errors",
+  "input_state_before_sha256": "6d7a6b6d996c3b96a0a07138633b0eeb6ed0ccd04511bfa28312b99d11770530",
+  "progress_record_sha256": "3358c0490bbf37dd6bf4b9f9cbe67557e00dc008f8c9430ffeef88b12c87b930",
+  "resolution": "32 native compatibility patches identified by a complete remaining-source diagnostic; a distinct corrected bundle and fresh full replay use a new manifest.",
+  "scope": "The original full replay stopped on a strict linter error; it did not complete the global audit or final input-state verification. Its immutable source bundle and complete failed output directory remain preserved separately.",
+  "source_manifest_sha256": "96500e070b6dcdc730975638029d0f7aa31ba40db2ecb46282f76c91175af5b9",
+  "status": "FAILED"
+}

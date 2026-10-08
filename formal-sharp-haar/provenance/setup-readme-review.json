@@ -1,0 +1,46 @@
+{
+  "baseline_review": {
+    "path": "provenance/original-attempt/setup-readme-review.json",
+    "scope": "Prior static behavior review is inherited only for bytes unchanged by this delta; original preflight/replay observations are not transferred to the corrected run.",
+    "sha256": "45e4adef06e4e89106368034ec876354e9eaab9771e6d6a3e7cf89c54e8b1e19"
+  },
+  "checks": {
+    "external_trust_boundary": "The prior explicit external-object fingerprint and cache provenance limitations are unchanged.",
+    "frozen_manifest_runner_and_proof_inputs": "Verified all current frozen pinned files and source hashes; none was edited by this review.",
+    "python_3_9_static_AST_parse": "PASS; parsed without importing or executing setup.py.",
+    "readme_adaptation_disclosure": "Correctly discloses tactic/local-reference edits, nested bound-variable renaming in three files, retained quantifiers/hypotheses, source notices, exact patch records and historical-only original-attempt evidence.",
+    "readme_inventory": "Matches 362 sources, 4911 named declarations, 265 private declarations, 23 anonymous instances, 4 designated endpoints and 726 planned successful commands; origin groups now match 18 new/285 unchanged native/32 adapted native/26 private/1 shard.",
+    "readme_reproduction_commands": "Both replay and verify-only commands use the corrected manifest hash and retain the same actual runner flags/default paths.",
+    "setup_existing_behavior": "All download, revision/hash verification, cache-isolation, prerequisite, reused-root and failure-handling code is byte-identical to the prior reviewed setup.",
+    "setup_only_change": "Exactly the hardcoded MANIFEST_PIN literal changes from the original frozen manifest to the corrected frozen manifest."
+  },
+  "created_utc": "2026-10-08T03:21:17.630122+00:00",
+  "limitations": [
+    "Fresh download/extraction/clone/cache preparation remains unexercised by this reviewer.",
+    "Preflight authenticates inputs; it does not freshly compile or kernel-check the 362 internal modules.",
+    "No current full replay success is asserted by this static delta review."
+  ],
+  "observed_execution_evidence": {
+    "corrected_preflight_state_present": true,
+    "executor_reported_preflight_status": "PASS; reported by Occupation, whose resulting state was inspected and pinned here.",
+    "external_objects_in_state": 53006,
+    "fresh_setup_branch_executed_by_this_review": false,
+    "full_replay_completion_claimed": false,
+    "preflight_state_sha256": "aee4e58c8e03deb075a28cdd1160da50c4396adfc82b4cc521182583c80a4dbe",
+    "replay_directory_present_at_review": true,
+    "setup_wrapper_executed_by_this_review": false,
+    "source_modules_in_state": 362
+  },
+  "remaining_findings": [],
+  "reviewed_sha256": {
+    "README.md": "f75e0b13f2905e00ebd63dc4c123189e6bce7d0be5cd5d39324249716ab2cb38",
+    "dependency-pins.json": "180cae101dd4e45a2e99efd6c0022ac71bf7c5d6e57debdabc342fd2afdbbd86",
+    "preflight-input-state.json": "aee4e58c8e03deb075a28cdd1160da50c4396adfc82b4cc521182583c80a4dbe",
+    "scripts/replay.py": "0c6f892bf0e10bd9f6ac93d8cc8eb81217d1cafefa45841d36d500292ef5a4b3",
+    "scripts/setup.py": "dc5a1f61a4d98b4c56cf1401e2b8255f53c214f3cfbd6b7e495b5f2e4e1bed47",
+    "source-manifest.json": "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69"
+  },
+  "schema": "fair-haar-setup-readme-delta-review-v2",
+  "scope": "Independent static delta review of corrected setup.py and README against their authenticated original reviewed versions, current frozen manifest, unchanged runner/dependency pins and the observed corrected preflight state. No setup or replay execution, network download or cache mutation was performed by this reviewer.",
+  "status": "PASS"
+}

@@ -1,0 +1,3 @@
+'Erdos1135.Tao.padicAffineBranch_map_haar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.padicAffineBranch_map_unitHaar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.padicAffineBranch_map_unitHaar_eq_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]

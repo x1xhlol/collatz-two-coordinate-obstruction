@@ -1,0 +1,3 @@
+'Erdos1135.Tao.unitSourceAffinePMF_primitive_polynomial_decay' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

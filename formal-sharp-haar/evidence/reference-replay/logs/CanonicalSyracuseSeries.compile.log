@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.padic_truncated_projection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_series_approximation_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_variable_series_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

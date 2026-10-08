@@ -1,0 +1,18 @@
+--- original/Erdos1135/Tao/Section6/Geom2IntervalConcentration.lean
++++ corrected/Erdos1135/Tao/Section6/Geom2IntervalConcentration.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Probability.Geom2CenteredMoment
+ import Erdos1135.Tao.Probability.Geom2ListProjectivity
+ import Erdos1135.Tao.Section6.EventAggregation
+@@ -260,7 +263,7 @@
+       intro htyp
+       exact hfail ⟨hlen, htyp⟩
+     simp only [taoCor63StarInclusiveTypical] at hntyp
+-    push_neg at hntyp
++    push Not at hntyp
+     obtain ⟨i, j, hij, hj, hbad⟩ := hntyp
+     let r : ℕ := j - i
+     have hr : 0 < r := Nat.sub_pos_of_lt hij

@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.maximum_residue_log_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.maximum_residue_exponential_rate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.maximum_residue_base_three_rate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

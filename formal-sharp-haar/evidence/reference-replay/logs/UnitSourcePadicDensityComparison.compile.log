@@ -1,0 +1,7 @@
+'Erdos1135.Tao.canonicalPadicRho_eq_syracMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.exists_unitSourcePadic_fullHaar_error_le_inv_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos1135.Tao.exists_unitSourcePadic_unitHaar_error_le_inv_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

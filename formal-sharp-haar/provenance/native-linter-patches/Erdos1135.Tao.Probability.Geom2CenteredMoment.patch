@@ -1,0 +1,41 @@
+--- original/Erdos1135/Tao/Probability/Geom2CenteredMoment.lean
++++ corrected/Erdos1135/Tao/Probability/Geom2CenteredMoment.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Probability.CountableMarkov
+ import Erdos1135.Tao.Syracuse.ValuationDistribution
+ import Mathlib.Analysis.SpecialFunctions.Log.Basic
+@@ -167,7 +170,6 @@
+       (((a : ℕ) : ℝ) - 2) + taoGeom2CenteredListWeight as := by
+   unfold taoGeom2CenteredListWeight taoTupleWeight
+   simp
+-  push_cast
+   ring
+ 
+ theorem taoGeom2CenteredExpMoment_ennreal
+@@ -359,7 +361,6 @@
+     _ = Real.exp (8 * t ^ 2 * N) := by
+       rw [← Real.exp_nat_mul]
+       congr 1
+-      push_cast
+       ring
+ 
+ /-- One-sided upper tail from the positive centered MGF. -/
+@@ -413,7 +414,6 @@
+       _ = Real.exp (8 * t ^ 2 * N) := by
+         rw [← Real.exp_nat_mul]
+         congr 1
+-        push_cast
+         ring
+   calc
+     ((geom2PNatListPMF N).toOuterMeasure
+@@ -477,7 +477,6 @@
+       _ = Real.exp (8 * t ^ 2 * N) := by
+         rw [← Real.exp_nat_mul]
+         congr 1
+-        push_cast
+         ring
+   calc
+     ((geom2PNatListPMF N).toOuterMeasure

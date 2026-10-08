@@ -1,0 +1,3 @@
+'Erdos1135.Tao.eLpNorm_le_first_second_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.eLpNorm_le_real_moment_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.polynomial_interpolation_le_inverse_square' depends on axioms: [propext, Classical.choice, Quot.sound]

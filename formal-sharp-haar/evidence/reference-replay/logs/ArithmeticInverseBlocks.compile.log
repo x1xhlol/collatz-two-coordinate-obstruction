@@ -1,0 +1,3 @@
+'CollatzCylinderPacking.Arithmetic.block_path' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.inverse_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.inverse_block_admissible' depends on axioms: [propext, Classical.choice, Quot.sound]

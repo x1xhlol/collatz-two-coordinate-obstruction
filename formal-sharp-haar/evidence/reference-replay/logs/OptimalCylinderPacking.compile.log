@@ -1,0 +1,4 @@
+'CollatzCylinderPacking.scaled_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.endpoint_span' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.odd_endpoint_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.endpointCount_scaled_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

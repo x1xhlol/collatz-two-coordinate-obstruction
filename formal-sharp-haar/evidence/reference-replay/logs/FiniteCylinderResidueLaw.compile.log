@@ -1,0 +1,7 @@
+'CollatzCylinderPacking.Arithmetic.validWord_iff_wordResidue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.arithmetic_mass_eq_residueMass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.residue_mass_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.residue_mass_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.residue_mass_lower' depends on axioms: [propext, Classical.choice, Quot.sound]

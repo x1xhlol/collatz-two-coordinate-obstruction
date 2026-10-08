@@ -1,0 +1,9 @@
+'CollatzCylinderPacking.Arithmetic.FairEnergy.residue_energy_le_quadratic_cubic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.FairEnergy.residue_energy_lt_seventy_cubic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.FairEnergy.canonical_cylinder_energy_lt_seventy_cubic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

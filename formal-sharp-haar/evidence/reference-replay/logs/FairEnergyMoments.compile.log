@@ -1,0 +1,12 @@
+'CollatzCylinderPacking.Arithmetic.FairEnergy.cubicMomentTerm_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.FairEnergy.cubicMomentTerm_tsum_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.FairEnergy.quadraticMomentTerm_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.FairEnergy.quadraticMomentTerm_tsum_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

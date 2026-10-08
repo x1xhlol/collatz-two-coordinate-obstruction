@@ -1,0 +1,90 @@
+{
+  "bundle": {
+    "additional_frozen_execution_pins": 43,
+    "all_files_exact_private_candidate_copies": true,
+    "all_payload_files_utf8_text": true,
+    "directory": "formal-sharp-haar",
+    "excluded_compiled_cache_or_private_runtime_artifacts": 0,
+    "file_count": 1322,
+    "largest_file_bytes": 8865305,
+    "private_distribution_plan_sha256": "406a101908ef07ff533d117b02e5bd3a90a5133df5b9076a57d3f63ae1746e76",
+    "publication_manifest_sha256": "9f0bfd120d1f02554b879f2962c724c60f740793d52db79d5b95c78106e1df47",
+    "source_manifest_sha256": "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69",
+    "source_modules": 362,
+    "total_bytes": 46644162
+  },
+  "checks": [
+    "Both earlier paper sources, both PDFs and both theorem maps are byte-identical to the pinned public base; their artifact-manifest entries and all eight prior check objects are preserved.",
+    "The public formal-sharp-haar directory is exactly the sealed 1322-file private whitelist with every byte, hash and size matching, and all 362 sources plus 43 frozen execution pins authenticated. No .replay/.external/cache/compiled object/bytecode/raw local setup/private preparation file enters the payload.",
+    "All 41 current artifact-manifest path/SHA-256 pairs resolve and authenticate. The new sharp check counts, complete input-state equality and verification scope agree with the primary replay and three actual post-run validation records.",
+    "README, CFF and Zenodo metadata report three Lucas Valbuena papers at version 2026.10.08.2 and date 2026-10-08. CFF parses as YAML, Zenodo/artifact metadata as JSON, all three CFF paper titles and repository-local paper URL targets agree with the artifact entries, and the metadata bytes match the independently reviewed final candidates.",
+    "All 62 local Markdown targets in repository README, new claim map, bundle README and evidence README resolve. External URL availability was not tested because this is an integration review of a not-yet-published candidate.",
+    "All 28 qualified public endpoints named in the claim map appear as named source declarations and non-private audited constants. Every theorem-table source link points to its actual owner module. Literal 1<p<2,n>=1 bounds and the separately assembled p=1,n=0 cases are disclosed accurately.",
+    "The full new paper, claim map, changed metadata and five verification reports were read. The energy constants, one common normalized density, actual stationary equation, unconditional failure at p=2 and exact real p>=1 range agree with the checked endpoint statements. Auxiliary 3*4^(-a) moment weights are distinguished from the fair 2^(-a) law.",
+    "The final TeX and PDF match the supplied d8bc1905... and 5454fe11... hashes. PDF metadata names Lucas Valbuena and the correct title; pdfinfo confirms eight pages, and source counting confirms six numbered theorem/lemma/proposition environments.",
+    "Fresh strict internal compilation and individual kernel replay are distinguished from cached external-library reuse and relocated artifact verification. Historical failure evidence, reviewed compatibility patches and the unexercised fresh-download branch are disclosed. No weak-L2, exact linear-energy asymptotic, integer trace, individual-orbit convergence, exhaustive novelty or human peer-review claim is introduced.",
+    "git diff --check passes. This review made no public repository edits and performed no additional Lean execution."
+  ],
+  "counts": {
+    "active_papers": 3,
+    "artifact_path_sha256_bindings_authenticated": 41,
+    "claim_map_public_declarations_authenticated": 28,
+    "local_markdown_links_authenticated": 62,
+    "new_paper_numbered_results": 6,
+    "new_paper_pages": 8,
+    "prior_manifest_check_objects_preserved": 8,
+    "prior_manifest_paper_entries_preserved": 2,
+    "prior_paper_source_pdf_and_map_files_preserved": 6,
+    "verification_reports_read": 5
+  },
+  "findings": [],
+  "limitations": [
+    "This report binds the exact candidate hashes above, including the pre-final-integration artifact manifest. It does not authenticate a future changed manifest.",
+    "No new compiler/kernel replay, full external cache rehash, CFF schema validation, PDF visual rerender or live external URL check was performed in this integration review. Existing authenticated execution and visual-review records remain the evidence for those scopes."
+  ],
+  "observed_sharp_replay": {
+    "distinct_internal_names": 10445,
+    "duplicate_header_memberships": 20,
+    "encoded_private_rows": 736,
+    "external_objects": 53006,
+    "input_states_equal": true,
+    "internal_sources": 362,
+    "module_header_rows": 10465,
+    "replay_record_sha256": "1dc27c7083ad4b634117335ba6ee641e1b05fdd6a07582e5afc2695279a67572",
+    "setup_reuse_fresh_process_and_relocated_verification": "PASS",
+    "successful_commands": 726,
+    "units_including_audit": 363
+  },
+  "pending_parent_actions": [
+    "Add the separately planned manuscript integration report and its artifact-manifest check, then authenticate that final delta.",
+    "Git staging/commit/push are outside this read-only review."
+  ],
+  "preserved_prior_paper_files": {
+    "paper/basin-lean-claims.md": "03ee66ad959fbabeff1c1a25facd81b1d023ee51a3fd128e3c9ee86f0f06039f",
+    "paper/growing-deficit-fourier.pdf": "c4cef4da6a990d118fab44e9086f4ed59882b9012b8175952fe22b73174c0222",
+    "paper/growing-deficit-fourier.tex": "ca99dae8fdfc5f96c3b2647fdfda37b0981a6f4b9db15b5a59242836a995ac3c",
+    "paper/growing-deficit-lean-claims.md": "5df66866c45d2b7624170963eec55d73be82c6778f00659c7d5da5d13aa2885a",
+    "paper/tao-basin-densities.pdf": "eba6e34319e3f42c0ca2748b81349d808abbbcacdcd3bf38d9f946936eab13d3",
+    "paper/tao-basin-densities.tex": "fa4e6c790002bdbb32c1679eb0b833574e110f0462f16a0e2303594137822850"
+  },
+  "public_base_commit": "7ef1208600107e62561ad6090c06a8cd4e0a1143",
+  "repository_state": "Candidate files are in the worktree; the Git index has no staged difference from the base. No commit or public repository write was performed by this reviewer.",
+  "reviewed_candidate_files": {
+    ".zenodo.json": "900e25176056370d66e3d2566b64f030350e0dcd54f331427efbf19a57c04928",
+    "CITATION.cff": "1b4bc02036ca603353ac064141894a23536846658f19ece62a8104e4dd85e12c",
+    "README.md": "3d188aa282bc3af1b258106b87f0a3c93db302cd86a384556ef3f53eb288bc30",
+    "paper/artifact-manifest.json": "34f715fa0b14b74470a4d22090c7b60162dfb72b11bd746baec88718fd00fce6",
+    "paper/quadratic-cylinder-energy.pdf": "5454fe1144976fdf72f643bba0f7b6aaf8cd0cc17f6e4dcd49f8cd59dce2c46e",
+    "paper/quadratic-cylinder-energy.tex": "d8bc1905bdc833ce01fcfe21984096d5c8cf75bef10ebd93e4ec3e8804392df0",
+    "paper/sharp-haar-lean-claims.md": "0bf051f1bd41c477f309243ce30c4ed82f1ae186db9f8bbc24057434f87e9c6f",
+    "verification/sharp-haar-completed-replay-independent-review.json": "a1fcd2288506aafd56d1b9da2fa46e91a96ec5e0517099d3c27ed3cdc927208f",
+    "verification/sharp-haar-distribution-authentication.json": "5760a0a4dae5450d11bb8e04188dc2e9d160f0f9cd5af1b9cf4c4f15b98349e0",
+    "verification/sharp-haar-distribution-independent-review.json": "699f217d473c9c664e16207cd2bf7f37cf1321baa86167e4ef5f006a4f13d6e4",
+    "verification/sharp-haar-manuscript-independent-review.json": "b48ec43a2db336d22169f35958fa947d9d17c35b070e0701060facef1fbe7a5f",
+    "verification/sharp-haar-pdf-validation.json": "ee20b1f15e0195889731ba09357c45f01de8749bcc4f5a252d3073973633c92f"
+  },
+  "reviewed_utc": "2026-10-08T04:39:22+00:00",
+  "reviewer": "occupation_research_oct7",
+  "scope": "Independent read-only integration audit of the public worktree candidate against the sealed proof bundle, pinned base papers, exact completed proof records, metadata, claim map and current artifact manifest.",
+  "status": "PASS_WITH_NO_FINDINGS"
+}

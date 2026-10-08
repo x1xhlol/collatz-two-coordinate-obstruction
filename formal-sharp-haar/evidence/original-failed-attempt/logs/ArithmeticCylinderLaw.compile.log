@@ -1,0 +1,2 @@
+'CollatzCylinderPacking.Arithmetic.arithmetic_mass_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.arithmetic_mass_upper' depends on axioms: [propext, Classical.choice, Quot.sound]

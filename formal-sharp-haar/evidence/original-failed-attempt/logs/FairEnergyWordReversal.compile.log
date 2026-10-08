@@ -1,0 +1,4 @@
+'CollatzCylinderPacking.Arithmetic.FairEnergy.wordPNatList_reverse_numerator' depends on axioms: [propext, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.FairEnergy.affineNumerator_injective_of_wordLength' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

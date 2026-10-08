@@ -1,0 +1,2 @@
+'Erdos1135.Tao.canonicalHaarDensity_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.canonicalHaarDensity_stationary' depends on axioms: [propext, Classical.choice, Quot.sound]

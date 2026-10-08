@@ -1,0 +1,34 @@
+--- original/Erdos1135/Tao/Renewal/Lemma79R2PositiveKeyBound.lean
++++ corrected/Erdos1135/Tao/Renewal/Lemma79R2PositiveKeyBound.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Renewal.Lemma79R2PositiveKey
+ import Erdos1135.Tao.Renewal.Lemma79R2MasterTransport
+ import Erdos1135.Tao.Renewal.Lemma79R2EndpointExpectation
+@@ -263,7 +266,7 @@
+       intro full
+       by_cases hfull : taoSection7HoldListPMF B full = 0
+       · simp [hfull]
+-      · exact mul_le_mul_left' (hvalue full hfull) _
++      · exact mul_le_mul_right (hvalue full hfull) _
+     have htoWeight :
+         lemma79PMFENNExpectation
+             (taoSection7HoldListPMF B)
+@@ -333,13 +336,13 @@
+               (longAtom.indicator endpointWeight) * prefactor := htoWeight
+         _ ≤ ((taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               ENNReal.ofReal lemma79R2ContractionFactor) * prefactor :=
+-          mul_le_mul_right' hendpointBound prefactor
++          mul_le_mul_left hendpointBound prefactor
+         _ = (taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               (prefactor * ENNReal.ofReal lemma79R2ContractionFactor) := by
+           ac_rfl
+         _ ≤ (taoSection7HoldListPMF B).toOuterMeasure longAtom *
+               ENNReal.ofReal (Real.exp epsilon) :=
+-          mul_le_mul_left' hscalarENN _
++          mul_le_mul_right hscalarENN _
+     have hExpPull :=
+       lemma79_holdList_keyAtom_cutoffTailMomentENN_expectation_eq_of_le
+         hJB origin family hpair (some (p, entryPoint))

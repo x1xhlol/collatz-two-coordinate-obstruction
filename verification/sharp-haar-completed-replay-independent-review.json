@@ -1,0 +1,251 @@
+{
+  "audit_compile_log_sha256": "d712fbfb57f3dda0ffcef0f1b3daad048dde688909a1bb0bf697b79d0ae2c7fb",
+  "audit_source_sha256": "41d0cda207a10cbb6e1651f183ad2f2416a2684d7aa12648696dcf99a869a463",
+  "before_after_input_state_sha256": "aee4e58c8e03deb075a28cdd1160da50c4396adfc82b4cc521182583c80a4dbe",
+  "checker_sha256": "325e0f7f1b43a70e62653e38a0d71730edc8054178fba7540eb55fb9370ab353",
+  "checks": [
+    "All 362 original and copied internal sources match the frozen manifest; its 43 additional execution input pins and both helper digests authenticate.",
+    "The manifest is exactly the transitive internal closure of its three designated entry modules and its recorded order is topological.",
+    "All 363 source/result records and compiled internal object parts authenticate; the generated audit imports exactly the complete internal list.",
+    "Every recorded command has the expected strict Lean or official leanchecker invocation, a zero exit code, and an authenticated log. Kernel logs each contain the exact requested-module replay line.",
+    "An independent audit-log parser reconstructs every module, axiom and owner row and exactly matches the record. Only the three standard axioms occur.",
+    "All named and private source inventory declarations are represented, and all four designated public endpoints are present.",
+    "Every direct import resolution agrees with the rebuilt internal artifact or authenticated external input inventory. Saved package revisions and official runtime pins agree with dependency-pins.json.",
+    "Before and after saved complete input inventories are byte-identical and retain the expected 53006 external object hashes. These fingerprints do not independently establish correspondence between cached binaries and adjacent pinned sources."
+  ],
+  "findings": [],
+  "header_owner_analysis": {
+    "all_owners_inside_rebuilt_internal_closure": true,
+    "duplicate_axiom_and_visibility_rows_agree": true,
+    "every_name_has_row_in_its_checked_owner_header": true,
+    "explanation": "The 20 excess module/header rows are repeated membership of generated equation or congruence declarations. Each repeated name has one checked-environment owner among the 362 rebuilt modules, also appears in that owner header, and has identical axiom and visibility data in every repeated header. Their multiplicities account exactly for 10465 minus 10445. No external-owner declaration enters through these rows.",
+    "mismatch_rows": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "module": "ArithmeticCylinderLower",
+        "name": "CollatzCylinderPacking.Arithmetic.ValidTuple.eq_2",
+        "owner_module": "ArithmeticCylinderResidues",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "module": "ArithmeticCylinderLower",
+        "name": "CollatzCylinderPacking.Arithmetic.ValidTuple.eq_def",
+        "owner_module": "ArithmeticCylinderResidues",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "module": "ArithmeticCylinderLower",
+        "name": "CollatzCylinderPacking.Arithmetic.ValidTuple.eq_1",
+        "owner_module": "ArithmeticCylinderResidues",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "module": "FinitePathInverseWords",
+        "name": "CollatzCylinderPacking.Arithmetic.ValidTuple.eq_2",
+        "owner_module": "ArithmeticCylinderResidues",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "module": "FinitePathInverseWords",
+        "name": "CollatzCylinderPacking.Arithmetic.ValidTuple.eq_def",
+        "owner_module": "ArithmeticCylinderResidues",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "module": "FinitePathInverseWords",
+        "name": "CollatzCylinderPacking.Arithmetic.inverseValue.eq_1",
+        "owner_module": "ArithmeticCylinderLower",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "module": "FinitePathInverseWords",
+        "name": "CollatzCylinderPacking.Arithmetic.ValidTuple.eq_1",
+        "owner_module": "ArithmeticCylinderResidues",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Renewal.Lemma77PascalGaussian",
+        "name": "Erdos1135.Tao.TaoSection7Lemma77.taoLemma22GaussianWeight.eq_1",
+        "owner_module": "Erdos1135.Tao.Renewal.Lemma77EndpointAssembly",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Renewal.Lemma77PascalGaussian",
+        "name": "Erdos1135.Tao.TaoSection7Lemma77.lemma77HeightPotentialKernel.eq_1",
+        "owner_module": "Erdos1135.Tao.Renewal.Lemma77LocalLimit",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Renewal.Prop78Boundary",
+        "name": "Erdos1135.Tao.taoSection7SourceActualW.eq_1",
+        "owner_module": "Erdos1135.Tao.Renewal.Prop78Case3CutoffAlignment",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Fourier.Lemma74PrimitiveStrip",
+        "name": "Erdos1135.Tao.taoSection7SourceWhitePoint.eq_1",
+        "owner_module": "Erdos1135.Tao.Fourier.Section7SourceDomain",
+        "visibility": "public"
+      },
+      {
+        "axioms": [],
+        "module": "Erdos1135.Tao.Fourier.Lemma74PrimitiveStrip",
+        "name": "Erdos1135.Tao.TaoSection7Point.down.eq_1",
+        "owner_module": "Erdos1135.Tao.Fourier.Lemma74SoutheastTransport",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Fourier.Lemma74PrimitiveStrip",
+        "name": "Erdos1135.Tao.taoSection7SourceBlackPoint.eq_1",
+        "owner_module": "Erdos1135.Tao.Renewal.GeometryBridge",
+        "visibility": "public"
+      },
+      {
+        "axioms": [],
+        "module": "Erdos1135.Tao.Fourier.Lemma74CanonicalClaimStar",
+        "name": "Erdos1135.Tao.taoSection7SourcePointInDomain.eq_1",
+        "owner_module": "Erdos1135.Tao.Renewal.Prop78Case3Stopping",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Renewal.Lemma79R2EndpointExpectation",
+        "name": "Erdos1135.Tao.TaoSection7Case3SourceStoppingRun.Lemma79TailExpectation.lemma79HoldPathHeadKey.eq_1",
+        "owner_module": "Erdos1135.Tao.Renewal.Lemma79PostExitFreshTail",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Renewal.Lemma79R2PositiveKey",
+        "name": "Erdos1135.Tao.TaoSection7Case3SourceStoppingRun.Lemma79TailExpectation.lemma79HoldPathHeadKey.eq_1",
+        "owner_module": "Erdos1135.Tao.Renewal.Lemma79PostExitFreshTail",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Section6.AmbientOffsetAppend",
+        "name": "Erdos1135.Tao.taoSection7OffsetPrefix.eq_1",
+        "owner_module": "UnitSourceAffinePMF",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Section6.FiniteFourierConvolution",
+        "name": "Erdos1135.Tao.taoForwardDFTKernel.congr_simp",
+        "owner_module": "Erdos1135.Tao.Fourier.Section7Character",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Section6.Cor63HeadPrefix",
+        "name": "Erdos1135.Tao.taoSection7OffsetSummand.eq_1",
+        "owner_module": "Erdos1135.Tao.Section6.ModulusProjection",
+        "visibility": "public"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "module": "Erdos1135.Tao.Section6.Cor63HeadPrefix",
+        "name": "Erdos1135.Tao.taoSection7OffsetPrefix.eq_1",
+        "owner_module": "UnitSourceAffinePMF",
+        "visibility": "public"
+      }
+    ],
+    "outside_owner_admissions": 0
+  },
+  "limitations": [
+    "This reviewer did not rerun the Lean compiler or kernel checker.",
+    "This reviewer did not repeat active validation live hashing of all external binaries or independently rebuild external source closures.",
+    "Final setup reuse, fresh-process and relocated verification records, source-only distribution sealing, and generated manuscript review are separate later checks.",
+    "The mathematical endpoints concern the random 3-adic law and give no integer-orbit convergence conclusion."
+  ],
+  "observed_counts": {
+    "additional_generated_audit_external_imports": 1,
+    "audited_distinct_internal_names": 10445,
+    "audited_encoded_private_rows": 736,
+    "audited_module_constant_rows": 10465,
+    "authenticated_command_logs": 726,
+    "authenticated_internal_object_parts": 363,
+    "direct_import_resolutions": 1174,
+    "distinct_names_with_multiple_header_memberships": 15,
+    "external_direct_imports_from_proof_modules": 79,
+    "generated_audit_modules": 1,
+    "header_owner_mismatch_rows": 20,
+    "internal_source_modules": 362,
+    "saved_external_object_hashes": 53006,
+    "source_manifest_pinned_files": 43,
+    "successful_compile_kernel_commands": 726
+  },
+  "replay_record_sha256": "1dc27c7083ad4b634117335ba6ee641e1b05fdd6a07582e5afc2695279a67572",
+  "reviewer": "clock_review_oct7",
+  "scope": "Independent completed-record, all-log, frozen internal input and artifact audit. No new Lean execution and no live rehash of the 53006 external library objects; those are compared through the authenticated identical saved input inventories while separate validation runs.",
+  "source_manifest_sha256": "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69",
+  "status": "PASS_WITH_NO_FINDINGS"
+}

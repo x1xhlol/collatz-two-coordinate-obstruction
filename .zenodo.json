@@ -1,13 +1,13 @@
 {
-  "title": "Uniform lower bounds for Collatz predecessor densities: paper and Lean proofs",
+  "title": "Collatz basin densities, Fourier decay, and Syracuse integrability: papers and Lean proofs",
   "creators": [
     {
       "name": "Valbuena, Lucas"
     }
   ],
-  "description": "<p>Lucas Valbuena, Collatz basin densities and canonical traces from first-passage stabilization. The paper proves a uniform inverse-linear lower bound for the natural density of every positive shortcut basin whose target is prime to three. The ordinary-map predecessor natural density satisfies the same bound. Weighted first-hit densities and canonical traces have corresponding uniform lower bounds. The paper also proves a uniform exact first-hit coefficient bound for odd targets, including periodic targets, and a finite cylinder-energy criterion equivalent to universal eventual periodicity. It proves sublinear complementary energy for every diverging ancestor threshold; the small-ancestor energy condition remains unresolved.</p><p>The proof uses Mazur's weighted predecessor construction, Said Duran's coalescence theorem, and periodic source averaging. The inverse-linear form was proposed by Wirsching. The density and canonical-limit foundations use Tao's first-passage theorem and Mazur's natural-counting transport. All inputs are credited separately. No claim of an exhaustive novelty search is made. Divergence and additional cycles remain unresolved; the paper does not prove the Collatz conjecture.</p><p>The archive contains the paper, LaTeX source, theorem map, native Lean foundation, and additive density and finite-energy proof bundles. Verification records distinguish fresh compilation and individual kernel checks from authenticated reuse of pinned dependencies. Audited results use only propext, Classical.choice, and Quot.sound. The current collection omits the earlier standalone matrix-obstruction and independent-second-proof papers; those remain in earlier repository releases.</p><p>Original code and documentation use MIT. Imported and adapted formal sources retain their Apache-2.0 or other original licenses and notices. The paper and LaTeX source use CC BY 4.0. Automated proof development and review are disclosed and do not constitute external peer review.</p>",
-  "version": "2026.10.03.2",
-  "publication_date": "2026-10-03",
+  "description": "<p>Three papers by Lucas Valbuena with Lean sources and recorded verification. Quadratic cylinder energy and integrability of the Syracuse law proves an upper bound 24k+8k² for the full-Haar energy of the depth-k fair Syracuse cylinder density, for k≥1, and a normalized stationary density whose exact real Lp range is 1≤p&lt;2. The argument credits Tao's law, fine-scale mixing and offset injectivity.</p><p>Fourier decay for truncated Syracuse affine laws proves primitive Fourier decay uniform in a growing conductor deficit and affine seed, with conditional decay on polynomial-mass total-exponent slices and the central slice. Constants are ineffective, and no conductor-power bound at fixed positive deficit ratio is claimed.</p><p>Collatz basin densities and canonical traces from first-passage stabilization proves uniform inverse-linear predecessor density bounds, including periodic targets, using the credited work of Mazur and Said Duran. The inverse-linear form was proposed by Wirsching. Further results include a finite-energy criterion equivalent to universal eventual periodicity, a raw occupation lower bound and conditional divergent excess, and an almost-sure inverse height clock.</p><p>The archive includes the papers, LaTeX sources, theorem maps, pinned dependencies and proof verification records. Each bundle distinguishes fresh strict compilation and individual kernel replay from authenticated reuse of external libraries. Audited results use only propext, Classical.choice and Quot.sound. The sharp-integrability bundle freshly compiled and individually kernel checked all 362 internal sources and their complete declaration audit, with 726 successful commands and 10,465 audited module/constant rows. External compiled libraries were fingerprinted and reused; their full source closures were not rebuilt. Setup reuse and record verification in fresh processes and a relocated directory also passed. The fresh dependency-download branch was not exercised.</p><p>These results do not prove the Collatz conjecture. Sublinear masked energy, additional cycles, and a matching raw occupation upper bound remain unresolved. No exhaustive priority claim is made. Original code and documentation use MIT; imported and adapted formal sources retain their own licenses and notices. The papers and LaTeX sources use CC BY 4.0. Automated proof development and review are disclosed and do not constitute external peer review. Earlier standalone papers remain in repository history and prior releases.</p>",
+  "version": "2026.10.08.2",
+  "publication_date": "2026-10-08",
   "access_right": "open",
   "license": "mit",
   "upload_type": "software",
@@ -18,7 +18,11 @@
     "natural density",
     "canonical traces",
     "Lean",
-    "formal verification"
+    "formal verification",
+    "Fourier decay",
+    "Syracuse affine laws",
+    "3-adic probability",
+    "integrability"
   ],
   "related_identifiers": [
     {

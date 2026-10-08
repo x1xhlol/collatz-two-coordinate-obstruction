@@ -1,0 +1,6 @@
+'CollatzCylinderPacking.Arithmetic.geometricWordPMF_map_wordResidue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_cylinder_eq_syracPMF' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

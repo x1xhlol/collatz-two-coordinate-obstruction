@@ -1,0 +1,27 @@
+--- original/Erdos1135/Tao/Fourier/Section7PairExpectation.lean
++++ corrected/Erdos1135/Tao/Fourier/Section7PairExpectation.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Fourier.Section7PairExpansion
+ 
+ /-!
+@@ -217,7 +220,7 @@
+       rw [Summable.tsum_prod' hsum hfiber]
+       apply tsum_congr
+       intro b
+-      simp only [Prod.fst, Prod.snd]
++      dsimp only
+       rw [tsum_mul_left]
+ 
+ private theorem taoSection7PairExpansionExpectation_add_two_eq_pair_tsum
+@@ -341,7 +344,7 @@
+       rw [Summable.tsum_prod' hsum hfiber]
+       apply tsum_congr
+       intro a
+-      simp only [Prod.fst, Prod.snd]
++      dsimp only
+       rw [tsum_mul_left]
+ 
+ private theorem taoSection7Pair_tsum_eq_fiber_tsum

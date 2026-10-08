@@ -1,0 +1,3 @@
+'Erdos1135.Tao.canonicalHaarDensity_not_memLp_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.canonicalHaarDensity_memLp_iff_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.canonicalSyracuseMeasure_has_sharp_lp_density' depends on axioms: [propext, Classical.choice, Quot.sound]

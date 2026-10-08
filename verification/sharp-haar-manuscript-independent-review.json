@@ -1,0 +1,42 @@
+{
+  "checks": [
+    "Generated metadata reports the observed 362 internal sources, 726 commands, 10465 module/constant rows, 10445 distinct names and 736 encoded-private rows with their correct meanings. These agree with the independently audited primary record.",
+    "Fresh strict internal compilation/kernel checking is separated from fingerprinted external reuse, setup reuse and fresh-process/relocated record verification. The unexercised external-download branch remains explicit. No additional source rebuild is attributed to relocation.",
+    "All 28 namespace-qualified theorem-map endpoints occur as public audited declarations. The p=1 and depth-zero assembled cases, one common normalized density, unconditional actual non-L2 result, and auxiliary-versus-fair-law distinctions remain intact.",
+    "After reversing only the documented date/heading/verification replacement and the two Needspace layout lines, the final TeX is byte-identical to the original private draft. All mathematical statements, arguments, AI disclosure and bibliography are preserved.",
+    "The final layout additions are solely the needspace package import and a six-baseline reservation before Theorem 1.1; their removal recovers the exact initial generated source hash recorded in the preserved preparation record.",
+    "No pending-release or private-draft marker remains in the intended published content. The preparation provenance remains unchanged and correctly pins the earlier source before its explicit layout-only update.",
+    "CITATION parses as YAML and Zenodo metadata as JSON; version, date, author and three-paper titles are consistent. All 47 local Markdown link targets resolve against the intended final placement and authenticated current assets.",
+    "Mathematical scope remains the actual random-law Haar theorem, with no new weak-L2, linear-energy, integer-trace or individual-orbit conclusion. Tao attribution and the limited priority statement remain clear.",
+    "The initial full check confirmed the public repository at the pinned clean base and all three original metadata hashes matching their base pins; this review made no public change."
+  ],
+  "final_layout_source_sha256": "d8bc1905bdc833ce01fcfe21984096d5c8cf75bef10ebd93e4ec3e8804392df0",
+  "findings": [],
+  "initial_generated_source_sha256": "07ce6cd76fb97e87d20aa9b636cfda9f95f5bb22f580e53ac79205e705c7aaaa",
+  "initial_generation_record_sha256": "a185f5f3d65db9ae732a433eec6ef5c8e6d8825a4374772b5c373a773d38e747",
+  "limitations": [
+    "No CFF schema validator or external URL availability check was run.",
+    "PDF build/rendering verification is owned by the separate pinned root PDF record; this review does not duplicate that visual check.",
+    "Final public integration and artifact-manifest checks occur after these private candidates are copied."
+  ],
+  "local_markdown_link_targets_checked": 47,
+  "public_endpoint_names_checked": 28,
+  "reference_bindings": {
+    "distribution_plan_sha256": "406a101908ef07ff533d117b02e5bd3a90a5133df5b9076a57d3f63ae1746e76",
+    "draft_source_sha256": "02bf0db69c1bfa95ff48bfe87393cbed876ff0e1f82ea703e2890469054c2df7",
+    "primary_replay_record_sha256": "1dc27c7083ad4b634117335ba6ee641e1b05fdd6a07582e5afc2695279a67572",
+    "publication_manifest_sha256": "9f0bfd120d1f02554b879f2962c724c60f740793d52db79d5b95c78106e1df47",
+    "root_pdf_verification_record_sha256": "ee20b1f15e0195889731ba09357c45f01de8749bcc4f5a252d3073973633c92f",
+    "validation_record_sha256": "e0070f1151e662fafa5eb70023402bd686efe2843e65bf9db111e879c4fdab99"
+  },
+  "reviewed_candidate_files": {
+    ".zenodo.json": "900e25176056370d66e3d2566b64f030350e0dcd54f331427efbf19a57c04928",
+    "CITATION.cff": "1b4bc02036ca603353ac064141894a23536846658f19ece62a8104e4dd85e12c",
+    "README.md": "3d188aa282bc3af1b258106b87f0a3c93db302cd86a384556ef3f53eb288bc30",
+    "quadratic-cylinder-energy.tex": "d8bc1905bdc833ce01fcfe21984096d5c8cf75bef10ebd93e4ec3e8804392df0",
+    "sharp-haar-lean-claims.md": "0bf051f1bd41c477f309243ce30c4ed82f1ae186db9f8bbc24057434f87e9c6f"
+  },
+  "reviewer": "clock_review_oct7",
+  "scope": "Full semantic read of generated README, CITATION, Zenodo description and theorem map; complete TeX delta review against the preserved draft and authenticated initial candidate. Source/math and wording review, not an independent PDF rendering or a new Lean replay.",
+  "status": "PASS_WITH_NO_FINDINGS"
+}

@@ -1,0 +1,3 @@
+'Erdos1135.Tao.exists_unitSourceMappedOscillation_le_slice_sum_add_globalFailure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

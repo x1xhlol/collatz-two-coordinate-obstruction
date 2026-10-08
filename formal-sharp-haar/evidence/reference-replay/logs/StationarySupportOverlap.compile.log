@@ -1,0 +1,2 @@
+'Erdos1135.Tao.positive_overlap_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.critical_sq_identity_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]

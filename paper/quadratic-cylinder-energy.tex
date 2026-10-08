@@ -1,0 +1,577 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Quadratic cylinder energy and integrability of the Syracuse law},
+  pdfauthor={Lucas Valbuena}
+}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newcommand{\Zthree}{\mathbb Z_3}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\norm}[2]{\lVert #1\rVert_{#2}}
+\DeclareMathOperator{\Law}{Law}
+\title{Quadratic cylinder energy and integrability\\of the Syracuse law}
+\author{Lucas Valbuena}
+\date{8 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let \(\mu\) be the stationary probability measure on \(\Zthree\) for
+the random affine maps \(x\mapsto(3x+1)/2^a\), where
+\(\Prob(a=j)=2^{-j}\) for \(j\geq1\).  With respect to additive Haar
+probability \(\lambda\), let \(\rho_k\) be the density obtained by
+spreading each depth-\(k\) cylinder mass uniformly over that cylinder.
+We prove
+\[
+  \int_{\Zthree}\rho_k^2\,d\lambda
+  \leq24k+8k^2\leq32k^2\qquad(k\geq1).
+\]
+The proof combines offset injectivity, an elementary count of distinct
+integer quotients, and normalized geometric second moments.  Together
+with Tao's fine-scale mixing estimate, the bound gives a single density
+\(\rho=d\mu/d\lambda\) in every \(L^p(\lambda)\), \(1\leq p<2\).
+A support-overlap argument applied to the stationary equation shows
+that \(\rho\notin L^2(\lambda)\).  These statements concern Haar
+integrability of the random affine law.
+\end{abstract}
+
+\section{The stationary law and the results}
+
+Write \(\lambda\) for additive Haar probability on \(\Zthree\), so
+\(\lambda(x+3^k\Zthree)=3^{-k}\).  For \(a\geq1\), put
+\[
+  \Phi_a(x)=\frac{3x+1}{2^a}.
+\]
+If \(a_1,a_2,\ldots\) are independent with
+\(\Prob(a_i=j)=2^{-j}\), the series
+\begin{equation}\label{eq:random-series}
+  X=\sum_{j=0}^{\infty}3^j2^{-(a_1+\cdots+a_{j+1})}
+\end{equation}
+converges in \(\Zthree\).  Its law \(\mu\) is stationary for the
+maps \(\Phi_a\): separating the first exponent in the series gives
+\(X\overset{d}{=}\Phi_{a_1}(X')\), where \(X'\) has law \(\mu\)
+and is independent of \(a_1\).  This is the Syracuse law described in
+\cite[Remark~1.13]{Tao}.  Its cylinder probabilities are
+\[
+  p_k(v)=\mu(v+3^k\Zthree),\qquad v\in\mathbb Z/3^k\mathbb Z,
+\]
+and we set
+\begin{equation}\label{eq:rho-energy}
+  \rho_k(x)=3^k p_k(x\bmod3^k),\qquad
+  N_k=\int\rho_k^2\,d\lambda
+      =3^k\sum_{v\bmod3^k}p_k(v)^2.
+\end{equation}
+In particular, \(\rho_0=1\) and \(N_0=1\).  All norms and integrals
+below use the full additive Haar probability \(\lambda\).
+
+\Needspace{6\baselineskip}
+\begin{theorem}\label{thm:main}
+The Syracuse law has the following properties.
+\begin{enumerate}
+\item For every integer \(k\geq1\),
+\begin{equation}\label{eq:main-energy}
+  N_k\leq24k+8k^2\leq32k^2.
+\end{equation}
+\item There is a nonnegative density \(\rho\), with
+\(\mu=\rho\lambda\) and \(\int\rho\,d\lambda=1\), such that
+\[
+  \rho\in L^p(\lambda),\qquad
+  \sup_{k\geq0}\norm{\rho_k}{p}<\infty
+  \quad\text{for every }1\leq p<2.
+\]
+The same density \(\rho\) works for all these exponents.
+\item This density does not belong to \(L^2(\lambda)\).
+\end{enumerate}
+\end{theorem}
+
+The energy proof is independent of the mixing estimate.  The density
+and its subcritical integrability use Tao's
+Proposition~1.14~\cite{Tao}.  Offset injectivity, which enters the
+energy argument, is the content of his Lemma~6.2; Section~6 of that
+paper also uses separation of offsets in collision estimates.
+We include the elementary decoding and moment arguments needed here.
+
+These estimates are with respect to Haar measure.  Embedded ordinary
+integers form a countable Haar-null set, so the estimates do not supply
+an integer trace bound or a conclusion about individual Collatz orbits.
+
+\section{Words, numerators, and fixed-total fibers}
+
+For a word \(w=(a_1,\ldots,a_k)\) of positive integers, use
+chronological composition:
+\[
+  \Phi_w=\Phi_{a_k}\circ\cdots\circ\Phi_{a_1},\qquad
+  A_i=a_1+\cdots+a_i,\quad A_0=0,\quad A=A_k.
+\]
+Direct expansion gives
+\begin{equation}\label{eq:word-formula}
+  \Phi_w(x)=\frac{3^k x+B(w)}{2^A},\qquad
+  B(w)=\sum_{i=0}^{k-1}3^{k-1-i}2^{A_i}.
+\end{equation}
+Define the positive real translation quantity and the residue
+\begin{equation}\label{eq:translation-residue}
+  Y(w)=\frac{B(w)}{3^k},\qquad
+  r_k(w)=2^{-A}B(w)\pmod{3^k}.
+\end{equation}
+Here the inverse of \(2^A\) is taken modulo \(3^k\) in the
+second expression.  The image \(\Phi_w(\Zthree)\) is the cylinder
+\(r_k(w)+3^k\Zthree\).
+
+The series~\eqref{eq:random-series}, reduced modulo \(3^k\), is the
+endpoint of a length-\(k\) composition with the reverse ordering of
+the exponents.  Reversal preserves their product distribution.
+Consequently,
+\begin{equation}\label{eq:fair-words}
+  p_k(v)=\sum_{\substack{w\in\mathbb N_{>0}^k\\r_k(w)=v}}2^{-A(w)}.
+\end{equation}
+The sum is absolutely convergent since
+\(\sum_w2^{-A(w)}=(\sum_{a\geq1}2^{-a})^k=1\).
+
+\begin{lemma}[Fixed-total decoding]\label{lem:decoding}
+For fixed \(k\geq1\) and \(A\), the numerator \(B(w)\)
+determines a word \(w\) with \(A(w)=A\).  For a fixed residue
+\(v\), the map
+\[
+  w\longmapsto q(w):=\left\lfloor\frac{B(w)}{3^k}\right\rfloor
+\]
+is therefore injective among words with \(A(w)=A\) and \(r_k(w)=v\).
+Moreover, \(q(w)\) is a nonnegative integer and \(q(w)\leq Y(w)\).
+\end{lemma}
+
+\begin{proof}
+For \(k=1\), the total fixes the only exponent.  For \(k\geq2\),
+\eqref{eq:word-formula} gives
+\[
+  B(w)-3^{k-1}=2^{a_1}B(a_2,\ldots,a_k).
+\]
+The numerator on the right after removing \(2^{a_1}\) is odd:
+its first summand is odd and its remaining summands are even.
+Thus
+\(a_1=v_2(B(w)-3^{k-1})\).  Division recovers the suffix
+numerator, and induction with total \(A-a_1\) recovers the suffix.
+This is the fixed-total numerator form of offset injectivity
+\cite[Lemma~6.2]{Tao}.
+
+On the fiber with total \(A\) and residue \(v\), every numerator
+has the same remainder modulo \(3^k\), namely \(2^A v\).
+Equal quotients therefore imply equal numerators and then equal words.
+The last assertion follows from the definition of the floor.
+\end{proof}
+
+\begin{lemma}[Quotient count]\label{lem:quotient-count}
+If \(q_1,\ldots,q_m\) are distinct nonnegative integers and
+\(Y_j\geq q_j\), then
+\[
+  m^2\leq2\sum_{j=1}^m(1+Y_j).
+\]
+In particular, if \(m_A(v)\) counts any chosen subset of the
+fixed-\((k,A,v)\) fiber, then
+\begin{equation}\label{eq:fiber-count}
+  m_A(v)^2\leq
+  2\sum_{\substack{w\text{ in the chosen fiber}}}(1+Y(w)).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Order the distinct integers increasingly.  The \(j\)-th is at
+least \(j-1\), so
+\[
+  \sum_{j=1}^m(1+Y_j)\geq\sum_{j=1}^m j
+  =\frac{m(m+1)}2\geq\frac{m^2}2.
+\]
+Apply Lemma~\ref{lem:decoding} to obtain~\eqref{eq:fiber-count}.
+\end{proof}
+
+\section{The energy estimate}
+
+Fix \(k\geq1\).  Introduce the probability distribution on words
+\begin{equation}\label{eq:biased-law}
+  \pi_k(w)=3^k4^{-A(w)}
+         =\prod_{j=1}^k(3\cdot4^{-a_j}).
+\end{equation}
+It is normalized because \(\sum_{a\geq1}3\cdot4^{-a}=1\).
+This distribution will be used only to calculate a moment;
+the cylinder probabilities in~\eqref{eq:fair-words} retain their fair
+weights \(2^{-A(w)}\).
+
+\begin{lemma}[Energy reduction]\label{lem:energy-reduction}
+One has
+\begin{equation}\label{eq:energy-moment}
+  N_k\leq\frac4k\E_{\pi_k}\bigl[A^2(1+Y)\bigr].
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+First restrict to words with \(A\leq M\), where \(M\geq k\).
+For each residue \(v\), denote the corresponding partial sum in
+\eqref{eq:fair-words} by \(p_{k,M}(v)\).  Every word has \(A\geq k\).
+The elementary estimate
+\[
+  \frac1{A^2}\leq2\left(\frac1A-\frac1{A+1}\right)\qquad(A\geq1)
+\]
+implies \(\sum_{A=k}^{M}A^{-2}\leq2/k\).  Weighted
+Cauchy--Schwarz and~\eqref{eq:fiber-count} now give
+\begin{align*}
+  p_{k,M}(v)^2
+  &=\left(\sum_{A=k}^{M}2^{-A}m_A(v)\right)^2\\
+  &\leq\frac2k\sum_{A=k}^{M}A^2 4^{-A}m_A(v)^2\\
+  &\leq\frac4k\sum_{\substack{w:\,A(w)\leq M\\r_k(w)=v}}
+                   A(w)^2 4^{-A(w)}(1+Y(w)).
+\end{align*}
+Sum over \(v\) and multiply by \(3^k\).  Each word has exactly
+one residue, and hence
+\[
+  3^k\sum_v p_{k,M}(v)^2
+  \leq\frac4k\sum_{A(w)\leq M}\pi_k(w)A(w)^2(1+Y(w)).
+\]
+Let \(M\to\infty\).  The left side tends to \(N_k\), and the
+nonnegative sums on the right increase to the displayed expectation.
+The next lemma shows that this expectation is finite.
+\end{proof}
+
+\begin{lemma}[Normalized second moments]\label{lem:moment}
+For \(k\geq1\),
+\begin{equation}\label{eq:moment-bound}
+  \E_{\pi_k}\bigl[A^2(1+Y)\bigr]\leq6k^2+2k^3.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The identity
+\(\sum_{a\geq1}a^2z^a=z(1+z)/(1-z)^3\), for \(0<z<1\),
+gives
+\begin{equation}\label{eq:coordinate-moments}
+  \sum_{a\geq1}a^2 2^{-a}=6,\qquad
+  \sum_{a\geq1}a^2(3\cdot4^{-a})=\frac{20}{9}\leq6.
+\end{equation}
+For \(0\leq i\leq k\), put \(C_i=3^i2^{-A_i}\).  Formula
+\eqref{eq:word-formula} yields
+\begin{equation}\label{eq:translation-tilt}
+  Y=\frac13\sum_{i=0}^{k-1}C_i^{-1}.
+\end{equation}
+Multiplying \(\pi_k\) by \(C_i^{-1}\) changes precisely the
+first \(i\) coordinate weights:
+\[
+  (3\cdot4^{-a})\frac{2^a}{3}=2^{-a}.
+\]
+Therefore \(\pi_k(w)C_i(w)^{-1}\) is a normalized product
+distribution, with fair coordinates before position \(i+1\) and
+the weights \(3\cdot4^{-a}\) thereafter.  No normalization factor
+is lost in this change of measure.
+
+The pointwise inequality
+\(A^2\leq k\sum_{j=1}^k a_j^2\), together with
+\eqref{eq:coordinate-moments}, gives
+\[
+  \E_{\pi_k}[A^2C_i^{-1}]\leq6k^2
+       \qquad(0\leq i\leq k).
+\]
+For \(i=0\), this bounds \(\E_{\pi_k}A^2\).
+Summing~\eqref{eq:translation-tilt} gives
+\[
+  \E_{\pi_k}[A^2Y]
+  =\frac13\sum_{i=0}^{k-1}\E_{\pi_k}[A^2C_i^{-1}]
+  \leq2k^3.
+\]
+All the summands are nonnegative, so Tonelli's theorem justifies the
+sums, and the bounds also establish their finiteness.
+\end{proof}
+
+Combining Lemmas~\ref{lem:energy-reduction} and~\ref{lem:moment}
+proves
+\[
+  N_k\leq\frac4k(6k^2+2k^3)=24k+8k^2\leq32k^2,
+\]
+which is part~(1) of Theorem~\ref{thm:main}.
+
+\section{Mixing and subcritical integrability}
+
+The published input is the following consequence of
+\cite[Proposition~1.14, equations~(1.26)--(1.27)]{Tao}:
+for each \(A>0\) there is a finite constant \(C_A\) such that
+\begin{equation}\label{eq:mixing}
+  \norm{\rho_n-\rho_m}{1}\leq C_A m^{-A}
+  \qquad(n\geq m\geq1).
+\end{equation}
+To check the normalization, consistency of the cylinder masses gives
+\[
+  \norm{\rho_n-\rho_m}{1}
+  =\sum_{v\bmod3^n}
+       \left|p_n(v)-3^{m-n}p_m(v\bmod3^m)\right|.
+\]
+This is exactly the oscillation in the cited proposition.
+
+It follows that \(\rho_k\) is Cauchy in \(L^1(\lambda)\).
+Let \(\rho\) be a nonnegative representative of its limit.
+The limit has integral one.  For every cylinder \(D\) of depth
+\(m\), consistency gives \(\int_D\rho_k\,d\lambda=\mu(D)\)
+when \(k\geq m\).  Passing to the \(L^1\) limit proves the same
+identity for \(\rho\).  Cylinders generate the Borel sigma algebra,
+so the finite measures \(\rho\lambda\) and \(\mu\) are equal.
+
+Fix \(1<p<2\), and put
+\(\delta_k=\rho_{k+1}-\rho_k\) for \(k\geq1\).
+By~\eqref{eq:mixing},
+\begin{equation}\label{eq:increment-one}
+  \norm{\delta_k}{1}\leq C_A k^{-A}.
+\end{equation}
+The elementary inequality \((u-v)^2\leq2(u^2+v^2)\) and the
+energy bound give
+\begin{equation}\label{eq:increment-two}
+  \int\delta_k^2\,d\lambda
+  \leq2(N_{k+1}+N_k)
+  \leq64\bigl((k+1)^2+k^2\bigr)
+  \leq320k^2.
+\end{equation}
+H\"older interpolation between the first and second moments yields
+\begin{align}
+  \norm{\delta_k}{p}
+  &\leq\norm{\delta_k}{1}^{(2-p)/p}
+            \left(\int\delta_k^2\,d\lambda\right)^{(p-1)/p}
+       \notag\\
+  &\leq C_A^{(2-p)/p}320^{(p-1)/p}
+           k^{[-A(2-p)+2(p-1)]/p}.\label{eq:interpolation}
+\end{align}
+For completeness, the first inequality follows by writing
+\(|u|^p=|u|^{2-p}(|u|^2)^{p-1}\), applying H\"older with
+conjugate exponents \(1/(2-p)\) and \(1/(p-1)\), and taking
+the \(p\)-th root.
+
+Choose a positive integer
+\[
+  A>\frac{4p-2}{2-p}.
+\]
+Then the exponent in~\eqref{eq:interpolation} is at most \(-2\).
+With \(D_p=C_A^{(2-p)/p}320^{(p-1)/p}\), finite telescoping and
+Minkowski give, for every \(n\geq1\),
+\begin{equation}\label{eq:uniform-lp}
+  \norm{\rho_n}{p}
+  \leq\norm{\rho_1}{p}+\sum_{k=1}^{n-1}\norm{\delta_k}{p}
+  \leq\norm{\rho_1}{p}+2D_p.
+\end{equation}
+Here \(\rho_1\) is a bounded cylinder function, and
+\(\sum_{k\geq1}k^{-2}\leq2\) follows from the same telescoping
+estimate used in the energy proof.
+
+The already established \(L^1\) convergence implies convergence in
+measure to \(\rho\).  The Fatou property for convergence in measure
+therefore gives
+\[
+  \norm{\rho}{p}\leq\liminf_{n\to\infty}\norm{\rho_n}{p}
+  \leq\norm{\rho_1}{p}+2D_p.
+\]
+Indeed, one may choose a subsequence realizing the liminf, pass to a
+further subsequence converging almost everywhere, and apply Fatou's
+lemma to the \(p\)-th powers.  This step uses the same \(L^1\)
+limit for each \(p\).  The case \(p=1\) was established above,
+and \(\rho_0=1\) supplies the remaining finite level.
+This proves part~(2) of Theorem~\ref{thm:main}.
+
+\section{The stationary equation and the critical exponent}
+
+Let
+\[
+  J(y)=\frac{3y+1}{2},\qquad
+  D=J(\Zthree)=\{x\in\Zthree:x\equiv2\pmod3\}.
+\]
+Multiplication by \(2\) preserves \(\lambda\), while
+\(J_*\lambda=3\lambda|_D\).  For a measurable function \(h\),
+write its extension along this branch as
+\[
+  (Lh)(x)=
+  \begin{cases}
+    h((2x-1)/3),&x\in D,\\
+    0,&x\notin D.
+  \end{cases}
+\]
+Thus, whenever the integral is defined,
+\begin{equation}\label{eq:lift-integral}
+  \int Lh\,d\lambda=\frac13\int h\,d\lambda,
+\end{equation}
+and, for integrable \(h,g\),
+\begin{equation}\label{eq:lift-l1}
+  \norm{Lh-Lg}{1}=\frac13\norm{h-g}{1}.
+\end{equation}
+
+The geometric weights yield the exact finite-level recursion
+\begin{equation}\label{eq:finite-recursion}
+  \rho_{k+1}(x)
+   =\frac12\rho_{k+1}(2x)+\frac32(L\rho_k)(x)
+       \qquad(k\geq0).
+\end{equation}
+To see this, separate \(a=1\) from \(a\geq2\) in the outermost
+exponent of the random series.  The first event has probability
+\(1/2\) and applies \(J\) to the depth-\(k\) tail.  Conditional
+on \(a\geq2\), the exponent \(a-1\) has the original geometric
+law, and the output is half the corresponding depth-\((k+1)\)
+variable.  The two changes of variables have Haar density factors
+\(3\) and \(1\), respectively, which gives~\eqref{eq:finite-recursion}.
+
+Passing to the \(L^1\) limit in~\eqref{eq:finite-recursion}, using
+the invariance under doubling and~\eqref{eq:lift-l1}, proves
+\begin{equation}\label{eq:stationary-density}
+  \rho(x)=\frac12\rho(2x)+\frac32(L\rho)(x)
+       \quad\text{for almost every }x.
+\end{equation}
+For an explicit estimate, the \(L^1\) norm of the difference between
+the two sides is at most
+\[
+  \frac32\norm{\rho_{k+1}-\rho}{1}
+  +\frac12\norm{\rho_k-\rho}{1},
+\]
+which tends to zero.
+
+We use the following finite-measure observation.
+
+\begin{lemma}[Positive support overlap]\label{lem:support}
+Let \(f,a,b\) be nonnegative measurable functions on a finite
+measure space \((\Omega,\nu)\).  Suppose \(f=a+b\) almost
+everywhere,
+\[
+  \nu\{a>0\}=\nu\{f>0\},\qquad
+  0<\int b\,d\nu<\infty,
+\]
+and \(ab\) is integrable.  Then \(\int ab\,d\nu>0\).
+\end{lemma}
+
+\begin{proof}
+Since \(a\leq f\) almost everywhere, \(\{a>0\}\) is contained
+in \(\{f>0\}\) up to a null set.  Equality of their finite
+measures makes these sets equal up to a null set.  If
+\(\int ab\,d\nu=0\), nonnegativity and integrability imply
+\(ab=0\) almost everywhere.  But wherever \(b>0\), the equation
+\(f=a+b\) gives \(f>0\), hence \(a>0\) outside a null set.
+This forces \(b=0\) almost everywhere, contradicting its positive
+integral.
+\end{proof}
+
+Suppose now that \(\rho\in L^2(\lambda)\), and put
+\[
+  a(x)=\frac12\rho(2x),\qquad b(x)=\frac32(L\rho)(x).
+\]
+Both functions belong to \(L^2\), their product is integrable,
+and~\eqref{eq:stationary-density} gives \(\rho=a+b\) almost
+everywhere.  Doubling preserves Haar measure, so
+\[
+  \lambda\{a>0\}=\lambda\{\rho>0\}.
+\]
+Equation~\eqref{eq:lift-integral} and \(\int\rho\,d\lambda=1\)
+give \(\int b\,d\lambda=1/2\).  Lemma~\ref{lem:support}
+therefore implies \(\int ab\,d\lambda>0\).
+
+On the other hand, the same changes of variables yield
+\[
+  \int a^2\,d\lambda=\frac14\int\rho^2\,d\lambda,
+  \qquad
+  \int b^2\,d\lambda=\frac34\int\rho^2\,d\lambda.
+\]
+Squaring \(\rho=a+b\) and integrating would then give
+\[
+  \int\rho^2\,d\lambda
+   =\int\rho^2\,d\lambda+2\int ab\,d\lambda,
+\]
+a contradiction.  This proves part~(3) of
+Theorem~\ref{thm:main}.  Since \(\lambda\) is a probability measure,
+\(L^p(\lambda)\subseteq L^2(\lambda)\) for every real \(p\geq2\).
+Thus, among real exponents \(p\geq1\), the density belongs to
+\(L^p(\lambda)\) exactly when \(p<2\).
+The support argument uses no ergodicity
+statement and no claim that \(\rho\) is positive almost everywhere
+on a prescribed ambient set.
+
+\clearpage
+\section*{Formalization record}
+
+The following table records the corresponding Lean endpoints.  The
+energy proof uses the native reverse ordering of the word exponents;
+an explicit reversal identity connects its numerator to
+\eqref{eq:word-formula}.  Its moment proof uses the same geometric
+second moments through a direct recursion on native words.
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.23\textwidth}
+  >{\raggedright\arraybackslash}p{0.52\textwidth}
+  >{\raggedright\arraybackslash}p{0.19\textwidth}@{}}
+\hline
+Statement & Lean endpoint & Recorded status\\
+\hline
+Native quadratic energy &
+\nolinkurl{FairEnergy.residue_energy_le_linear_quadratic} &
+Strict compile and kernel check passed\\[5pt]
+Haar quadratic energy &
+\nolinkurl{canonicalPadicRho_sq_integral_le_thirtytwo_quadratic} &
+Strict compile and kernel check passed\\[5pt]
+One subcritical density &
+\nolinkurl{canonicalSyracuseMeasure_has_subcritical_density} &
+Strict compile and kernel check passed\\[5pt]
+Uniform finite-level \(L^p\), \(1<p<2\), \(n\geq1\) &
+\nolinkurl{exists_canonicalPadicRho_uniform_eLpNorm_bound} &
+Strict compile and kernel check passed\\[5pt]
+Actual stationary equation &
+\nolinkurl{canonicalHaarDensity_stationary} &
+Strict compile and kernel check passed\\[5pt]
+Failure of \(L^2\) &
+\nolinkurl{canonicalHaarDensity_not_memLp_two} &
+Strict compile and kernel check passed\\[5pt]
+One density with the exact \(L^p\) range &
+\nolinkurl{canonicalSyracuseMeasure_has_sharp_lp_density} &
+Strict compile and kernel check passed\\
+\hline
+\end{tabular}
+\end{center}
+
+Here \nolinkurl{FairEnergy} abbreviates
+\nolinkurl{CollatzCylinderPacking.Arithmetic.FairEnergy}; the other
+displayed endpoints are in \nolinkurl{Erdos1135.Tao}.
+The uniform-bound endpoint is public; the extension to \(n=0\)
+and \(p=1\) uses the finite norm at depth zero and the mass-one
+identity at every depth.
+The accompanying bundle freshly compiled all 362 internal source
+modules and checked each with the official Lean kernel checker.
+Its complete declaration audit was also compiled and kernel checked,
+for 726 successful commands.  The audit covers 10,465 module/constant
+rows, 10,445 distinct names and 736 encoded private rows;
+only \nolinkurl{propext}, \nolinkurl{Classical.choice} and
+\nolinkurl{Quot.sound} occur as axioms.  Complete external input
+inventories agreed before and after the run.  The external Lean and
+Mathlib libraries were fingerprinted and reused; their complete source
+closures were not rebuilt.  Subsequent setup reuse and record verification
+in fresh processes, including a relocated directory, also passed.
+The bundle preserves the earlier failed strict-compilation attempt
+and the 32 reviewed compatibility patches.  The fresh dependency-download
+branch was not exercised.
+
+\section*{Use of AI}
+OpenAI Codex was used extensively for mathematical exploration,
+development of the Lean proofs and verification scripts, automated
+review, and preparation and revision of this manuscript.
+The accompanying formal artifacts have the verification scope
+recorded above.  Automated review does not constitute external peer
+review or imply review or endorsement by the authors of the cited works.
+
+\begin{thebibliography}{9}
+\bibitem{Tao}
+T.~Tao,
+Almost all orbits of the Collatz map attain almost bounded values,
+\emph{Forum of Mathematics, Pi} \textbf{10} (2022), e12.
+\href{https://doi.org/10.1017/fmp.2022.8}
+{doi:10.1017/fmp.2022.8}.
+Author manuscript: \href{https://arxiv.org/abs/1909.03562v7}
+{arXiv:1909.03562v7}.
+\end{thebibliography}
+
+\end{document}

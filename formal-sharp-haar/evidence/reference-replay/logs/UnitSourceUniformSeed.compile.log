@@ -1,0 +1,3 @@
+'Erdos1135.Tao.unitSourceUniformSeed_apply_toReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.unitSourceUniformSeed_projection_eq_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.unitSourceInitialPMF_apply_toReal' depends on axioms: [propext, Classical.choice, Quot.sound]

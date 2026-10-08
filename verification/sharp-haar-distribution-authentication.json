@@ -1,0 +1,23 @@
+{
+  "actual_validation_checks": 3,
+  "bytes_authenticated": 46644162,
+  "distribution_plan_sha256": "406a101908ef07ff533d117b02e5bd3a90a5133df5b9076a57d3f63ae1746e76",
+  "exact_evidence_copy_counts": {
+    "original-failed-attempt": 139,
+    "reference-replay": 731
+  },
+  "files_authenticated": 1322,
+  "frozen_pin_count": 43,
+  "largest_file": "evidence/reference-replay/input-state-after.json",
+  "largest_file_bytes": 8865305,
+  "publication_manifest_sha256": "9f0bfd120d1f02554b879f2962c724c60f740793d52db79d5b95c78106e1df47",
+  "readme_sha256": "e59a5c3b2d3110e0f8c257fbcd71b6b01381b4d17d42ea20b45b736478231927",
+  "replay_record_sha256": "1dc27c7083ad4b634117335ba6ee641e1b05fdd6a07582e5afc2695279a67572",
+  "reviewed_utc": "2026-10-08T04:29:37+00:00",
+  "reviewer": "Occupation agent; separate post-assembly authentication command",
+  "scope": "Authenticates sealed source-only payload, all frozen inputs, every evidence copy, exact public-log normalization against preserved private raw output, and completed source/axiom-check records. Does not mutate the public repository or rebuild external caches.",
+  "source_manifest_sha256": "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69",
+  "source_modules": 362,
+  "status": "PASS",
+  "validation_record_sha256": "e0070f1151e662fafa5eb70023402bd686efe2843e65bf9db111e879c4fdab99"
+}

@@ -1,0 +1,3 @@
+'Erdos1135.Tao.padicAffineBranch_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.padicAffineBranch_image_cylinder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.padicAffineBranch_image_units' depends on axioms: [propext, Classical.choice, Quot.sound]

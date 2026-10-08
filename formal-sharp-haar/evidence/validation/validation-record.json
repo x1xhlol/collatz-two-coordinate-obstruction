@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "check": "setup-reuse",
+      "command": [
+        "PYTHON",
+        "BUNDLE/scripts/setup.py",
+        "--toolchain",
+        "TOOLCHAIN",
+        "--mathlib",
+        "MATHLIB"
+      ],
+      "cwd": "BUNDLE",
+      "elapsed_seconds": 52.61112093203701,
+      "exit_code": 0,
+      "public_log": "evidence/validation/setup-reuse.log",
+      "public_log_sha256": "d3a8c27cdd83ebb66521859c5ba82b5add791486ff7834b113b5847df301e8ab",
+      "raw_log_sha256": "39fdf01c8157682ca806f7a0388ecab51ce504e3d18b672447e0ca68c093b911",
+      "started_utc": "2026-10-08T04:24:44+00:00"
+    },
+    {
+      "check": "fresh-process-verify",
+      "command": [
+        "PYTHON",
+        "BUNDLE/scripts/replay.py",
+        "--expected-manifest-sha256",
+        "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69",
+        "--toolchain",
+        "TOOLCHAIN",
+        "--mathlib",
+        "MATHLIB",
+        "--verify-only"
+      ],
+      "cwd": "BUNDLE",
+      "elapsed_seconds": 53.63850902603008,
+      "exit_code": 0,
+      "public_log": "evidence/validation/fresh-process-verify.log",
+      "public_log_sha256": "2f98cd4240875c9fec89bb4aae4c961e153daa9d54143e2725559e027fd70e59",
+      "raw_log_sha256": "2f98cd4240875c9fec89bb4aae4c961e153daa9d54143e2725559e027fd70e59",
+      "started_utc": "2026-10-08T04:25:37+00:00"
+    },
+    {
+      "check": "relocated-verify",
+      "command": [
+        "PYTHON",
+        "RELOCATED_BUNDLE/scripts/replay.py",
+        "--expected-manifest-sha256",
+        "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69",
+        "--toolchain",
+        "TOOLCHAIN",
+        "--mathlib",
+        "MATHLIB",
+        "--verify-only"
+      ],
+      "cwd": "RELOCATED_BUNDLE",
+      "elapsed_seconds": 54.324656075797975,
+      "exit_code": 0,
+      "public_log": "evidence/validation/relocated-verify.log",
+      "public_log_sha256": "2f98cd4240875c9fec89bb4aae4c961e153daa9d54143e2725559e027fd70e59",
+      "raw_log_sha256": "2f98cd4240875c9fec89bb4aae4c961e153daa9d54143e2725559e027fd70e59",
+      "started_utc": "2026-10-08T04:26:31+00:00"
+    }
+  ],
+  "fresh_external_download_exercised": false,
+  "fresh_process_verify_pass": true,
+  "input_state_sha256": "aee4e58c8e03deb075a28cdd1160da50c4396adfc82b4cc521182583c80a4dbe",
+  "manifest_sha256": "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69",
+  "path_normalization": "Public command and stdout roots are replaced by BUNDLE, RELOCATED_BUNDLE, TOOLCHAIN and MATHLIB; the current Python executable is labeled PYTHON. Raw command output and setup-result.json remain private.",
+  "python_version": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "relocated_verify_pass": true,
+  "relocated_verify_summary": {
+    "audited_constant_rows": 10465,
+    "audited_distinct_names": 10445,
+    "audited_private_rows": 736,
+    "external_objects": 53006,
+    "record_sha256": "1dc27c7083ad4b634117335ba6ee641e1b05fdd6a07582e5afc2695279a67572",
+    "source_modules": 362,
+    "status": "PASS",
+    "successful_commands": 726
+  },
+  "replay_driver_sha256": "0c6f892bf0e10bd9f6ac93d8cc8eb81217d1cafefa45841d36d500292ef5a4b3",
+  "replay_record_sha256": "1dc27c7083ad4b634117335ba6ee641e1b05fdd6a07582e5afc2695279a67572",
+  "reused_setup_pass": true,
+  "scope": "Actual existing-installation setup and two new-process verifications, including a relocated bundle with copied internal replay artifacts. All checks reuse the same read-only external libraries. This is not a second source compilation or an external-cache source rebuild.",
+  "setup_sha256": "dc5a1f61a4d98b4c56cf1401e2b8255f53c214f3cfbd6b7e495b5f2e4e1bed47",
+  "status": "PASS",
+  "validation_driver_sha256": "2b74654b5d262be7cf88d5f1add0681a05e2ca87e42adad90bb1041b37b51b14",
+  "verify_summary": {
+    "audited_constant_rows": 10465,
+    "audited_distinct_names": 10445,
+    "audited_private_rows": 736,
+    "external_objects": 53006,
+    "record_sha256": "1dc27c7083ad4b634117335ba6ee641e1b05fdd6a07582e5afc2695279a67572",
+    "source_modules": 362,
+    "status": "PASS",
+    "successful_commands": 726
+  }
+}

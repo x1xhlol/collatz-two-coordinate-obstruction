@@ -1,0 +1,6 @@
+'Erdos1135.Tao.canonicalHaarDifference_sq_integral_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.exists_canonicalHaarDifference_eLpNorm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.canonicalHaarDensity_memLp_of_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.canonicalSyracuseMeasure_has_subcritical_density' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

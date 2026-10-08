@@ -1,0 +1,11 @@
+'CollatzCanonical.Correction.product_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.Correction.tail_product_tendsto_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.Correction.orbit_product_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.Correction.iterate_correction_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.Correction.forward_orbit_product_tendsto_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCanonical.Correction.orbit_product_prefix_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCanonical.Correction.finite_orbit_product_le_of_reciprocal_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

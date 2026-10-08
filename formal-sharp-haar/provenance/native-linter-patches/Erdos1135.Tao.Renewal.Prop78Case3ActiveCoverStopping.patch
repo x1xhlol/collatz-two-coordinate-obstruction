@@ -1,0 +1,21 @@
+--- original/Erdos1135/Tao/Renewal/Prop78Case3ActiveCoverStopping.lean
++++ corrected/Erdos1135/Tao/Renewal/Prop78Case3ActiveCoverStopping.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Renewal.Prop78ActiveCover
+ import Erdos1135.Tao.Renewal.Prop78Case3Stopping
+ 
+@@ -33,8 +36,9 @@
+     (hinit' :
+       TaoSection7Case3InitialStoppingStep
+         pointAt hactive.family first' Γ') :
+-    (first, Γ) = (first', Γ') :=
+-  hinit.pair_eq_of_pairwiseDisjoint hactive.pairwiseDisjoint hinit'
++    (first, Γ) = (first', Γ') := by
++  have _ := J
++  exact hinit.pair_eq_of_pairwiseDisjoint hactive.pairwiseDisjoint hinit'
+ 
+ /--
+ Compare an actual stopping-transition head with a produced one-step packet

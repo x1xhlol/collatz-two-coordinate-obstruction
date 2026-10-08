@@ -1,0 +1,2814 @@
+{
+  "commands": [
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/CanonicalLpInterpolation.lean",
+        "-o",
+        "BUNDLE/.replay/modules/CanonicalLpInterpolation.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.045144740957767,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CanonicalLpInterpolation.compile.log",
+      "log_sha256": "737633a653af5a72548f419d8e09ef776de3eb704adfa2f56afd85a902116149",
+      "module": "CanonicalLpInterpolation",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:35:11+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "CanonicalLpInterpolation"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.972849788144231,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CanonicalLpInterpolation.kernel.log",
+      "log_sha256": "fcc2a4fa60ac4fb775c37012c62a1d167f1ffe9445c26a026566d80cb2ff2c70",
+      "module": "CanonicalLpInterpolation",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:35:15+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/OptimalCylinderPacking.lean",
+        "-o",
+        "BUNDLE/.replay/modules/OptimalCylinderPacking.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 7.5771623130422086,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/OptimalCylinderPacking.compile.log",
+      "log_sha256": "468797132231c270e1961d05f037b2ee3f57ab6ffb5340ba718a00e995705bfb",
+      "module": "OptimalCylinderPacking",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:35:19+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "OptimalCylinderPacking"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.8029298558831215,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/OptimalCylinderPacking.kernel.log",
+      "log_sha256": "000c6713c73c71e25bdc6c5138c7f0233f4ed9a63911e49285036c7fa35e9cb6",
+      "module": "OptimalCylinderPacking",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:35:27+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/AdmissibleCylinderWords.lean",
+        "-o",
+        "BUNDLE/.replay/modules/AdmissibleCylinderWords.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 2.6689002718776464,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/AdmissibleCylinderWords.compile.log",
+      "log_sha256": "bcfa7aee317be61e177a5f1fb05c9f5e6a6ab6d2691ba2f249396ce88d27ca96",
+      "module": "AdmissibleCylinderWords",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:35:31+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "AdmissibleCylinderWords"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.5815123319625854,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/AdmissibleCylinderWords.kernel.log",
+      "log_sha256": "1b0b41100c458355fcb558961a7330f005f4cf4539baeeaaf35b997e11ef40b7",
+      "module": "AdmissibleCylinderWords",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:35:33+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/CylinderLowerBranch.lean",
+        "-o",
+        "BUNDLE/.replay/modules/CylinderLowerBranch.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 2.847077294019982,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CylinderLowerBranch.compile.log",
+      "log_sha256": "fd74f901f417ed354938751e7edf00661aaf8cfd443772db2639eb01071cee78",
+      "module": "CylinderLowerBranch",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:35:37+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "CylinderLowerBranch"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.639160400023684,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CylinderLowerBranch.kernel.log",
+      "log_sha256": "16c9c283c7b904ba1f53770670e94ba1da355803b42b1ef3cb9fc6318720ca1f",
+      "module": "CylinderLowerBranch",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:35:40+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/ArithmeticInverseBlocks.lean",
+        "-o",
+        "BUNDLE/.replay/modules/ArithmeticInverseBlocks.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.120872550178319,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticInverseBlocks.compile.log",
+      "log_sha256": "eb042e3a7c1657efca61271969c6a4b80a54ebe435c16250c0d138f8c76f9d08",
+      "module": "ArithmeticInverseBlocks",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:35:43+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "ArithmeticInverseBlocks"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.63526268908754,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticInverseBlocks.kernel.log",
+      "log_sha256": "28d9d62318ee64fae7fd146175a4206a66eb836f5abc3bcfe72ec50e39c7bbed",
+      "module": "ArithmeticInverseBlocks",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:35:47+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/GeometricWordTail.lean",
+        "-o",
+        "BUNDLE/.replay/modules/GeometricWordTail.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 23.057983638020232,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/GeometricWordTail.compile.log",
+      "log_sha256": "dffd61244a2ea960f9ba5111952cca25afbbaa0a47f6ecd9aa40ddf833072a5f",
+      "module": "GeometricWordTail",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:35:50+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "GeometricWordTail"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.8630728581920266,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/GeometricWordTail.kernel.log",
+      "log_sha256": "c56feb01471ab831717de0e4190884c42f346724914679a4a72e1094a333dc8e",
+      "module": "GeometricWordTail",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:36:13+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/ArithmeticInverseTuples.lean",
+        "-o",
+        "BUNDLE/.replay/modules/ArithmeticInverseTuples.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.0565147649031132,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticInverseTuples.compile.log",
+      "log_sha256": "d0dfbb4a4de869e042c2bc8439ea43516c06839be7fb88ca8048d7f641d1a7dc",
+      "module": "ArithmeticInverseTuples",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:36:17+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "ArithmeticInverseTuples"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.7747817609924823,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticInverseTuples.kernel.log",
+      "log_sha256": "ccfc26a1d8f1dabd6cd748cf5563cc49ae5720eef6cbb119ea2cdc4a391142c1",
+      "module": "ArithmeticInverseTuples",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:36:20+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/ArithmeticWordFibers.lean",
+        "-o",
+        "BUNDLE/.replay/modules/ArithmeticWordFibers.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.018332322826609,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticWordFibers.compile.log",
+      "log_sha256": "459da131b4c4be1abb03e104b1bfe64a06981f737d56eab284f7045fe10bc8b6",
+      "module": "ArithmeticWordFibers",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:36:24+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "ArithmeticWordFibers"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.705486194929108,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticWordFibers.kernel.log",
+      "log_sha256": "533739ce0bb593db631421b13221d7b121dcc8b327f5c018a9dbd5defde23d0b",
+      "module": "ArithmeticWordFibers",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:36:27+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/CylinderHeadBound.lean",
+        "-o",
+        "BUNDLE/.replay/modules/CylinderHeadBound.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 2.7576361258979887,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CylinderHeadBound.compile.log",
+      "log_sha256": "0f73d5dbe68ffe184112e7e1237716e1f87f532f69251cc7fbd75ccc854d5f96",
+      "module": "CylinderHeadBound",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:36:31+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "CylinderHeadBound"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.582799519877881,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CylinderHeadBound.kernel.log",
+      "log_sha256": "87e62b34e1ba30ab689b7a03b98d31da09efba8ecea785f9a67351a7693d852a",
+      "module": "CylinderHeadBound",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:36:34+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/CylinderExpansionBound.lean",
+        "-o",
+        "BUNDLE/.replay/modules/CylinderExpansionBound.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.0522696131374687,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CylinderExpansionBound.compile.log",
+      "log_sha256": "75d9758b15c4fb20a989a12b11fbd64e1b12940e68432c603ae02f20ab57a0f6",
+      "module": "CylinderExpansionBound",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:36:37+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "CylinderExpansionBound"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.632830249145627,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CylinderExpansionBound.kernel.log",
+      "log_sha256": "d7baff90668ac9715d515ab6eb4c7a6895f2953e1d50f594df09131555ae4ca9",
+      "module": "CylinderExpansionBound",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:36:40+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/ArithmeticCylinderLaw.lean",
+        "-o",
+        "BUNDLE/.replay/modules/ArithmeticCylinderLaw.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.157860629959032,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticCylinderLaw.compile.log",
+      "log_sha256": "ab7b72a6e4c56017046049f6d9022095ff2b823a5f0c42212ebac2bbc2544519",
+      "module": "ArithmeticCylinderLaw",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:36:44+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "ArithmeticCylinderLaw"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.769262981135398,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticCylinderLaw.kernel.log",
+      "log_sha256": "a3e057b22eed3c05e400787805fa77d6fff50eecf28759446fbb08df2f05fdc7",
+      "module": "ArithmeticCylinderLaw",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:36:47+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/ArithmeticCylinderResidues.lean",
+        "-o",
+        "BUNDLE/.replay/modules/ArithmeticCylinderResidues.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 2.695892584975809,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticCylinderResidues.compile.log",
+      "log_sha256": "e8f64da211efc701aba98ad7e1d826c642560ce0495b759deeec826ac897cfa0",
+      "module": "ArithmeticCylinderResidues",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:36:51+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "ArithmeticCylinderResidues"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.6697710810694844,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticCylinderResidues.kernel.log",
+      "log_sha256": "ada8f86ac643a8dd671e1e1b227ed3ff30275496d3222a6a5755466d528f5b22",
+      "module": "ArithmeticCylinderResidues",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:36:53+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/ArithmeticCylinderCongruence.lean",
+        "-o",
+        "BUNDLE/.replay/modules/ArithmeticCylinderCongruence.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.0801353061106056,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticCylinderCongruence.compile.log",
+      "log_sha256": "a2ff947c72d1285c644d5db5d9e345c05be83faaa4235a83a5914769cdff2556",
+      "module": "ArithmeticCylinderCongruence",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:36:57+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "ArithmeticCylinderCongruence"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.812812504824251,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticCylinderCongruence.kernel.log",
+      "log_sha256": "a85db809915efa01897037008a722f9c73372a6a66c57722a6b147655bc3d0b4",
+      "module": "ArithmeticCylinderCongruence",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:37:00+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/ArithmeticCylinderLower.lean",
+        "-o",
+        "BUNDLE/.replay/modules/ArithmeticCylinderLower.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.1903299640398473,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticCylinderLower.compile.log",
+      "log_sha256": "7ebda87c1c679f0883b601da5cde2b3965481b2584e96d55bb175c58c6e1752c",
+      "module": "ArithmeticCylinderLower",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:37:04+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "ArithmeticCylinderLower"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.7855629271361977,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/ArithmeticCylinderLower.kernel.log",
+      "log_sha256": "4d37bcd789d22db2cd1163b06cc2967770a63501d94aab099b40ccd1b11fdc3a",
+      "module": "ArithmeticCylinderLower",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:37:07+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FiniteCylinderResidueLaw.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FiniteCylinderResidueLaw.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.085212580161169,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FiniteCylinderResidueLaw.compile.log",
+      "log_sha256": "378d41da85c6b2595e4b2f32cbccdd676a2770aa753b8c99597615cec1dcf481",
+      "module": "FiniteCylinderResidueLaw",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:37:11+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FiniteCylinderResidueLaw"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.6959231628570706,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FiniteCylinderResidueLaw.kernel.log",
+      "log_sha256": "4c26311d9923661936d368df9e90ee38b41b0d98f4a5e5dfcac2784ecf725a60",
+      "module": "FiniteCylinderResidueLaw",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:37:14+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FairEnergyWordCore.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FairEnergyWordCore.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 2.9428730451036245,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyWordCore.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "FairEnergyWordCore",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:37:18+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FairEnergyWordCore"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.61566260503605,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyWordCore.kernel.log",
+      "log_sha256": "a622dccf09dfc4407b5a7dce9c46e45c8d6160ad75389b04d3af28cde1553b92",
+      "module": "FairEnergyWordCore",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:37:21+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FormalConjectures/Util/ProblemImports.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FormalConjectures/Util/ProblemImports.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 1.837017800891772,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FormalConjectures.Util.ProblemImports.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "FormalConjectures.Util.ProblemImports",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:37:24+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FormalConjectures.Util.ProblemImports"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.3022780059836805,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FormalConjectures.Util.ProblemImports.kernel.log",
+      "log_sha256": "fbd149c5ee77cc701e323bebaf7bebc6f7eefab0d5ad2ac93c3c1e03e7df6d83",
+      "module": "FormalConjectures.Util.ProblemImports",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:37:26+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FormalConjectures/Wikipedia/CollatzConjecture.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FormalConjectures/Wikipedia/CollatzConjecture.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 1.855778930010274,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FormalConjectures.Wikipedia.CollatzConjecture.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "FormalConjectures.Wikipedia.CollatzConjecture",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:37:29+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FormalConjectures.Wikipedia.CollatzConjecture"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.25491402996704,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FormalConjectures.Wikipedia.CollatzConjecture.kernel.log",
+      "log_sha256": "5d64c10ad2a9fa827d7d550c14ed9683c88353671182401f9118dcbf84d9c79a",
+      "module": "FormalConjectures.Wikipedia.CollatzConjecture",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:37:31+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Basic.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Basic.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.4952588798478246,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Basic.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Basic",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:37:35+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Basic"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.199616271071136,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Basic.kernel.log",
+      "log_sha256": "261ed5a4671ac5bcb38f3ee70528aad80232176f692860b56b36a0a779590f9c",
+      "module": "Erdos1135.Basic",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:37:38+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/CollatzStep.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/CollatzStep.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.5900162560865283,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.CollatzStep.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.CollatzStep",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:37:42+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.CollatzStep"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.1987017339561135,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.CollatzStep.kernel.log",
+      "log_sha256": "eeb12ee2b6ac353f68e8a62c772a9edfb4e33af3969197ec5da456de817bb5dc",
+      "module": "Erdos1135.CollatzStep",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:37:46+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Parity.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Parity.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.5781434269156307,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Parity.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Parity",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:37:50+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Parity"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.1646904069930315,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Parity.kernel.log",
+      "log_sha256": "b081caebeb18b996675de33e8af2e47cf7d11a1f704fb7fda34afb1044385f21",
+      "module": "Erdos1135.Parity",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:37:54+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Division.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Division.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.839170241029933,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Division.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Division",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:37:58+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Division"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.344692605081946,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Division.kernel.log",
+      "log_sha256": "1c414b944abd1058e4721b649fb03431419b2852e1782d155867df49bc3cafca",
+      "module": "Erdos1135.Division",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:38:02+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Terras/Core/Defs.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Terras/Core/Defs.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.8187705939635634,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Terras.Core.Defs.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Terras.Core.Defs",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:38:06+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Terras.Core.Defs"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.401898341951892,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Terras.Core.Defs.kernel.log",
+      "log_sha256": "d78f27ed04071a487f84a3cf8dcfc50b916becd876e47aeedf73808082842d08",
+      "module": "Erdos1135.Terras.Core.Defs",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:38:10+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/Defs.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/Defs.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.2905995820183307,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.Defs.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.Defs",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:38:14+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.Defs"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.093810568796471,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.Defs.kernel.log",
+      "log_sha256": "1993dfedd0d510c5c5c7f385e1c9e6e7f19a9d89d2845f63058c17ba7dbef0a8",
+      "module": "Erdos1135.Tao.Syracuse.Defs",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:38:18+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/Basic.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/Basic.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.5906763698440045,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.Basic.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.Basic",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:38:22+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.Basic"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.1464539838489145,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.Basic.kernel.log",
+      "log_sha256": "911e0bec91767d0cfa9ae1d1a934b77fdbbca3b8e657d3dee15877308ee9f611",
+      "module": "Erdos1135.Tao.Syracuse.Basic",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:38:25+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/Affine.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/Affine.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.227208619937301,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.Affine.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.Affine",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:38:29+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.Affine"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.242711377097294,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.Affine.kernel.log",
+      "log_sha256": "5a3139a810279b93c1b9c6d7935f0a184d1d2a18676d7df65a1e28c03c6302fb",
+      "module": "Erdos1135.Tao.Syracuse.Affine",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:38:34+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/OffsetInjectivity.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/OffsetInjectivity.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.788123368984088,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.OffsetInjectivity.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.OffsetInjectivity",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:38:38+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.OffsetInjectivity"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.129530807025731,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.OffsetInjectivity.kernel.log",
+      "log_sha256": "d5a50a7aa4c8d63505acd62fff52ca9f118581a006273dff94ad18c42cd35d37",
+      "module": "Erdos1135.Tao.Syracuse.OffsetInjectivity",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:38:43+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/AffineReverse.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/AffineReverse.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.589255707105622,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.AffineReverse.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.AffineReverse",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:38:47+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.AffineReverse"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.160807340871543,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.AffineReverse.kernel.log",
+      "log_sha256": "4ce56e02b94327955e82bed6050f92abbf13ada0bece9e72e5b91d14166eaae4",
+      "module": "Erdos1135.Tao.Syracuse.AffineReverse",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:38:51+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FairEnergyWordReversal.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FairEnergyWordReversal.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.4811785421334207,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyWordReversal.compile.log",
+      "log_sha256": "a190721de9a809084ce908129340b3bfba0573d2e2cebfdcc8c76692852a74ef",
+      "module": "FairEnergyWordReversal",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:38:56+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FairEnergyWordReversal"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.230919355992228,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyWordReversal.kernel.log",
+      "log_sha256": "dbc37fc2071711b54eb0ff410858821ce5c70c5b07db037ca1af34820596db6a",
+      "module": "FairEnergyWordReversal",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:38:59+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FairEnergyWordSeparation.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FairEnergyWordSeparation.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.769700003089383,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyWordSeparation.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "FairEnergyWordSeparation",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:39:03+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FairEnergyWordSeparation"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.385740597033873,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyWordSeparation.kernel.log",
+      "log_sha256": "27b721931aaf445d5e8a238a4c5d383f0ab9da55d5a41c70875a4d1f7de60d3e",
+      "module": "FairEnergyWordSeparation",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:39:08+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/HarmonicFiberBounds.lean",
+        "-o",
+        "BUNDLE/.replay/modules/HarmonicFiberBounds.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 5.9397608591243625,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/HarmonicFiberBounds.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "HarmonicFiberBounds",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:39:12+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "HarmonicFiberBounds"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.2195741140749305,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/HarmonicFiberBounds.kernel.log",
+      "log_sha256": "242875521f39045030dbc5bc6966510ad807bce56876700c00e35fbf0b1bc657",
+      "module": "HarmonicFiberBounds",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:39:18+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FairEnergyFinite.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FairEnergyFinite.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.436750167049468,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyFinite.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "FairEnergyFinite",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:39:23+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FairEnergyFinite"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.14935518312268,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyFinite.kernel.log",
+      "log_sha256": "cd14bf5df2bead16c4b2b548931e5870d0dc1bc7ae907446a893acf221f57a66",
+      "module": "FairEnergyFinite",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:39:27+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FairEnergyMoments.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FairEnergyMoments.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 29.65345644392073,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyMoments.compile.log",
+      "log_sha256": "5547aac3e17f9d4f0249428991b810cc7a2d4ed175a859e815264205e88674e9",
+      "module": "FairEnergyMoments",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:39:31+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FairEnergyMoments"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 5.0161248948425055,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyMoments.kernel.log",
+      "log_sha256": "bfb77f8bd7f22dd3275a749bcc472a14ffbc360a6ae9fad7cd8afc22c38a5332",
+      "module": "FairEnergyMoments",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:40:01+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FairEnergyLimit.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FairEnergyLimit.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.066400276031345,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyLimit.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "FairEnergyLimit",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:40:06+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FairEnergyLimit"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.889358835062012,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyLimit.kernel.log",
+      "log_sha256": "937c5cf1c88ff0a1ff24ac08ed36dc7834ac52476a2637042afa672617a5d022",
+      "module": "FairEnergyLimit",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:40:09+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FiniteSyracuseSeries.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FiniteSyracuseSeries.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.370705456007272,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FiniteSyracuseSeries.compile.log",
+      "log_sha256": "c0dd844ec2ee5bb99c4f32e9c7018abf8dab284c5cc881cfac7f89628541c42a",
+      "module": "FiniteSyracuseSeries",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:40:13+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FiniteSyracuseSeries"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.9075008400250226,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FiniteSyracuseSeries.kernel.log",
+      "log_sha256": "684d3a3821a1bccb6853f182fdd9c0926ebc0c77be4c0f471d3c49f8cf7c2592",
+      "module": "FiniteSyracuseSeries",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:40:16+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FiniteSyracuseSeriesClosedForm.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FiniteSyracuseSeriesClosedForm.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 2.8321971050463617,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FiniteSyracuseSeriesClosedForm.compile.log",
+      "log_sha256": "b13d1fbec03b469231c29575df87942f7e89753f524491a940301d6f75415854",
+      "module": "FiniteSyracuseSeriesClosedForm",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:40:20+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FiniteSyracuseSeriesClosedForm"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.69506910815835,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FiniteSyracuseSeriesClosedForm.kernel.log",
+      "log_sha256": "61dd81b1569653eef7ab84e9dc55fceb5c42091e907994840e34e61051e54a7c",
+      "module": "FiniteSyracuseSeriesClosedForm",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:40:23+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/CompatibleSyracuseResidues.lean",
+        "-o",
+        "BUNDLE/.replay/modules/CompatibleSyracuseResidues.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.039918869966641,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CompatibleSyracuseResidues.compile.log",
+      "log_sha256": "77e842a1aa300db3fe5d60c3d3ebf7f06f456eacabc3d9298c1ae3d1f5d131d2",
+      "module": "CompatibleSyracuseResidues",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:40:27+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "CompatibleSyracuseResidues"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.714946327963844,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CompatibleSyracuseResidues.kernel.log",
+      "log_sha256": "aef474d571623667605e011f5505824f73b97fa416a8721902f6d619b5712acd",
+      "module": "CompatibleSyracuseResidues",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:40:30+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/PadicSyracuseVariable.lean",
+        "-o",
+        "BUNDLE/.replay/modules/PadicSyracuseVariable.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 2.7553988969884813,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/PadicSyracuseVariable.compile.log",
+      "log_sha256": "fa107cfda1998b22008593b4fb47576c4ef718326c01fd73cb3d5782fd9c95e7",
+      "module": "PadicSyracuseVariable",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:40:33+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "PadicSyracuseVariable"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.7116936079692096,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/PadicSyracuseVariable.kernel.log",
+      "log_sha256": "0a04836d7af8f38d1b38b5fe4ba0fbb5336975d11f1992063228b3278368ad9f",
+      "module": "PadicSyracuseVariable",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:40:36+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/GeometricSequenceLaw.lean",
+        "-o",
+        "BUNDLE/.replay/modules/GeometricSequenceLaw.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.752122384030372,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/GeometricSequenceLaw.compile.log",
+      "log_sha256": "767ddb6d217d3191151a8faa8682b459e3c6a4c9b4928ac8b23776ae5eb70f87",
+      "module": "GeometricSequenceLaw",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:40:40+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "GeometricSequenceLaw"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.1044287600088865,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/GeometricSequenceLaw.kernel.log",
+      "log_sha256": "745c036c3ccf110fd908f77e4057459d7d8e05be871c888fe335a9cde2b8144d",
+      "module": "GeometricSequenceLaw",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:40:44+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/SyracuseVariableMeasurable.lean",
+        "-o",
+        "BUNDLE/.replay/modules/SyracuseVariableMeasurable.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.7807990091387182,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/SyracuseVariableMeasurable.compile.log",
+      "log_sha256": "513b1713ab1623635215dd43591419926bf1516e9e54437e83f41da1c30726ea",
+      "module": "SyracuseVariableMeasurable",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:40:48+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "SyracuseVariableMeasurable"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.046135826967657,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/SyracuseVariableMeasurable.kernel.log",
+      "log_sha256": "d0948942ed071bdc0e67feb7fb42cd6ece967a61121b9ca17cb8b96319f32f58",
+      "module": "SyracuseVariableMeasurable",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:40:52+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FiniteCylinderMaximum.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FiniteCylinderMaximum.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 2.52331639197655,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FiniteCylinderMaximum.compile.log",
+      "log_sha256": "d3f2e75b6a3e5e17f7be3bd10efc525d1bbf256b320614a327a916548e852816",
+      "module": "FiniteCylinderMaximum",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:40:56+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FiniteCylinderMaximum"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.765506267081946,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FiniteCylinderMaximum.kernel.log",
+      "log_sha256": "325bd53e0769a564dd3f64f31869932a18cca2760459835d180886b8acb8ff1e",
+      "module": "FiniteCylinderMaximum",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:40:58+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/OptimalFiniteCylinderRate.lean",
+        "-o",
+        "BUNDLE/.replay/modules/OptimalFiniteCylinderRate.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.4782993840053678,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/OptimalFiniteCylinderRate.compile.log",
+      "log_sha256": "9cb5d1ee4e79a70e3013fc68852b0ed1da0299f53e001b313d68653faab885c0",
+      "module": "OptimalFiniteCylinderRate",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:41:02+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "OptimalFiniteCylinderRate"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.6614512561354786,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/OptimalFiniteCylinderRate.kernel.log",
+      "log_sha256": "d0249437ef0973961998be737b194caa2119babca4bf2ee67b1b088bc9cdd329",
+      "module": "OptimalFiniteCylinderRate",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:41:05+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/CanonicalSyracuseCylinderLaw.lean",
+        "-o",
+        "BUNDLE/.replay/modules/CanonicalSyracuseCylinderLaw.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.5487132070120424,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CanonicalSyracuseCylinderLaw.compile.log",
+      "log_sha256": "bd8d9c334dce00964ded071f25e0a7ad22ee5d16916b128e89bb1ef30a9fda50",
+      "module": "CanonicalSyracuseCylinderLaw",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:41:09+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "CanonicalSyracuseCylinderLaw"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.038164798170328,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/CanonicalSyracuseCylinderLaw.kernel.log",
+      "log_sha256": "7c9c1faf5e8b046abcb4e093f945591d3871e653f404a68869a1d3435543d4a3",
+      "module": "CanonicalSyracuseCylinderLaw",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:41:13+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FairEnergyBound.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FairEnergyBound.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.4740583170205355,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyBound.compile.log",
+      "log_sha256": "533b811b0fa54c5063df6012cc1ac1a565e528fefefd683fe210662048df42ac",
+      "module": "FairEnergyBound",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:41:17+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FairEnergyBound"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.1690618908032775,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyBound.kernel.log",
+      "log_sha256": "54889952e4a7e7613055b4cf521aaf2581ac4b20738f6b7fc4c41010b2e1873f",
+      "module": "FairEnergyBound",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:41:21+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/QuotientFiberBounds.lean",
+        "-o",
+        "BUNDLE/.replay/modules/QuotientFiberBounds.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.189581947866827,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/QuotientFiberBounds.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "QuotientFiberBounds",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:41:25+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "QuotientFiberBounds"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.560695979045704,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/QuotientFiberBounds.kernel.log",
+      "log_sha256": "5bc95a9a87a7342f9f08e5713dcc802658c856305ed759405d4e15a58d15cccb",
+      "module": "QuotientFiberBounds",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:41:30+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FairEnergyQuadraticFinite.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FairEnergyQuadraticFinite.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.623683376004919,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyQuadraticFinite.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "FairEnergyQuadraticFinite",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:41:34+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FairEnergyQuadraticFinite"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.557118554832414,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyQuadraticFinite.kernel.log",
+      "log_sha256": "a18859aad5df70d76de78feebb0b18d9d8ddc9ed6b6549b3f7a15afc700cef31",
+      "module": "FairEnergyQuadraticFinite",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:41:39+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/FairEnergyQuadraticBound.lean",
+        "-o",
+        "BUNDLE/.replay/modules/FairEnergyQuadraticBound.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.5586433140560985,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyQuadraticBound.compile.log",
+      "log_sha256": "e8635c91dfaae721480100ec8366a56894c8f095a042ab05daecb136d772deea",
+      "module": "FairEnergyQuadraticBound",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:41:43+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "FairEnergyQuadraticBound"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.449144894024357,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/FairEnergyQuadraticBound.kernel.log",
+      "log_sha256": "a610a902996303b3982ac74dc3a127af65a0c0899932347e40a8b3af9a15a72e",
+      "module": "FairEnergyQuadraticBound",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:41:48+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Probability/Finite.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Probability/Finite.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 6.1447681991849095,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Probability.Finite.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Probability.Finite",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:41:52+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Probability.Finite"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.199301986023784,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Probability.Finite.kernel.log",
+      "log_sha256": "5c6db14c0d7d0bb2380935d7964f33c52529216671e491755977a5ced3c8461e",
+      "module": "Erdos1135.Tao.Probability.Finite",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:41:59+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Probability/Geom.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Probability/Geom.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 19.783569201128557,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Probability.Geom.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Probability.Geom",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:42:03+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Probability.Geom"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.420488101895899,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Probability.Geom.kernel.log",
+      "log_sha256": "6eb6443ec084f1a8ab7f5062d2e4cae5ef5406eab0acb3f7380960abebd11aa6",
+      "module": "Erdos1135.Tao.Probability.Geom",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:42:23+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Probability/Truncation.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Probability/Truncation.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 5.242899583186954,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Probability.Truncation.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Probability.Truncation",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:42:27+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Probability.Truncation"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.461509984917939,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Probability.Truncation.kernel.log",
+      "log_sha256": "aca198fd3ab72e379e0cea20279dc0596bea94dcc38b27baac26a1f25f8a8227",
+      "module": "Erdos1135.Tao.Probability.Truncation",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:42:32+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Terras/Parity/Word.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Terras/Parity/Word.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 5.928665587911382,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Terras.Parity.Word.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Terras.Parity.Word",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:42:37+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Terras.Parity.Word"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.311759029049426,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Terras.Parity.Word.kernel.log",
+      "log_sha256": "0a223dd43b8750cb57297832b027b62ad28306b7ef41c2f11102bde055f3a9bd",
+      "module": "Erdos1135.Terras.Parity.Word",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:42:43+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/ParityBridge.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/ParityBridge.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 5.89324583299458,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.ParityBridge.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.ParityBridge",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:42:47+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.ParityBridge"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.2904967539943755,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.ParityBridge.kernel.log",
+      "log_sha256": "5186f15ce54ca37ada459b8bcf300677bc05084f50789c29c41777f67af3aaae",
+      "module": "Erdos1135.Tao.Syracuse.ParityBridge",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:42:53+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Residues.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Residues.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.815704015083611,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Residues.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Residues",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:42:57+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Residues"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.186470506014302,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Residues.kernel.log",
+      "log_sha256": "21199c47b436933752029e0f6642f5ba98a0fc91e503732608f3fbe861151da9",
+      "module": "Erdos1135.Residues",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:43:01+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/TwoAdic.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/TwoAdic.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.64910524408333,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.TwoAdic.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.TwoAdic",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:43:05+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.TwoAdic"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.1423764349892735,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.TwoAdic.kernel.log",
+      "log_sha256": "43ea7576d23d75365808e36414d4e83485893f348288c1a1b6fe54603f6f64e7",
+      "module": "Erdos1135.TwoAdic",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:43:09+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Terras/Parity/Residue.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Terras/Parity/Residue.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 5.064243663102388,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Terras.Parity.Residue.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Terras.Parity.Residue",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:43:13+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Terras.Parity.Residue"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.2309913211502135,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Terras.Parity.Residue.kernel.log",
+      "log_sha256": "a805b632059d1a601ed2f906b215ab509ed0af71526bb0ac769e9519298c70f5",
+      "module": "Erdos1135.Terras.Parity.Residue",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:43:18+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/Residue.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/Residue.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.538139143027365,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.Residue.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.Residue",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:43:22+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.Residue"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.3443058140110224,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.Residue.kernel.log",
+      "log_sha256": "83ddee66527464c14bbb45519e4da58db6b5d89311e8ee74cdf6531809fb2bab",
+      "module": "Erdos1135.Tao.Syracuse.Residue",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:43:26+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/ValuationCylinder.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/ValuationCylinder.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.004925301996991,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.ValuationCylinder.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.ValuationCylinder",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:43:30+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.ValuationCylinder"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.271351603092626,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.ValuationCylinder.kernel.log",
+      "log_sha256": "7bee9b28a302015640eb006e45563069feee564ea97cb0822d5c7103248acf44",
+      "module": "Erdos1135.Tao.Syracuse.ValuationCylinder",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:43:34+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/ValuationCylinderResidue.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/ValuationCylinderResidue.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.619621596066281,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.ValuationCylinderResidue.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.ValuationCylinderResidue",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:43:38+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.ValuationCylinderResidue"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.420846919063479,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.ValuationCylinderResidue.kernel.log",
+      "log_sha256": "57cd76975acda03da6171f2d0d1b94c70603aa4dcc4c72a1aee50808794b89aa",
+      "module": "Erdos1135.Tao.Syracuse.ValuationCylinderResidue",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:43:42+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/CylinderMass.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/CylinderMass.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 5.339825300965458,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.CylinderMass.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.CylinderMass",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:43:46+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.CylinderMass"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.597880078013986,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.CylinderMass.kernel.log",
+      "log_sha256": "44233efaec580a40025fca02cb1cce80aceee622de63cf81e923c7f136920753",
+      "module": "Erdos1135.Tao.Syracuse.CylinderMass",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:43:52+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/ValuationDistribution.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/ValuationDistribution.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 5.025770659092814,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.ValuationDistribution.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.ValuationDistribution",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:43:56+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.ValuationDistribution"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.61672854819335,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.ValuationDistribution.kernel.log",
+      "log_sha256": "fecdb450ce33891f84524f84b9de3da0e37835e8261c019c8451a1a9d8bd8c28",
+      "module": "Erdos1135.Tao.Syracuse.ValuationDistribution",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:44:01+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Syracuse/Syrac.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/Syrac.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 30.22344914614223,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.Syrac.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Syracuse.Syrac",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:44:06+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Syracuse.Syrac"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 6.053678296040744,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Syracuse.Syrac.kernel.log",
+      "log_sha256": "5fc54797a7b61dbb0373c6f9dcd5a9b12fffd6066e18fc49ca9f30b62a9ff584",
+      "module": "Erdos1135.Tao.Syracuse.Syrac",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:44:36+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Fourier/Basic.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Fourier/Basic.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 8.645211237948388,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Fourier.Basic.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Fourier.Basic",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:44:42+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Fourier.Basic"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.4728182319086045,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Fourier.Basic.kernel.log",
+      "log_sha256": "9d9e66830c6ab9df0da3a04cf6fc663a8fdcaa0314f2c3636ad2ad2f8fd9d8a4",
+      "module": "Erdos1135.Tao.Fourier.Basic",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:44:51+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Fourier/TV.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Fourier/TV.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 7.943561595864594,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Fourier.TV.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Fourier.TV",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:44:56+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Fourier.TV"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 5.33093824586831,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Fourier.TV.kernel.log",
+      "log_sha256": "82ac4d066ddc1f2a23f422ad785d025451500390303fa964e64830b6fca7c546",
+      "module": "Erdos1135.Tao.Fourier.TV",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:45:04+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Fourier/DecayStatement.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Fourier/DecayStatement.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.913632532814518,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Fourier.DecayStatement.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Fourier.DecayStatement",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:45:09+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Fourier.DecayStatement"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.4873186179902405,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Fourier.DecayStatement.kernel.log",
+      "log_sha256": "2da4ec30145e29bdbbaaf5bf2026c15c6468919f8475d7da93e96ca43bf4466c",
+      "module": "Erdos1135.Tao.Fourier.DecayStatement",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:45:14+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Probability/Pascal.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Probability/Pascal.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 3.7354213141370565,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Probability.Pascal.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Probability.Pascal",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:45:18+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Probability.Pascal"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.011511255055666,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Probability.Pascal.kernel.log",
+      "log_sha256": "fad2536a872ff36189446d0d8f2732c9e1e5d2b3a1d30f3024abddfa0bbce34f",
+      "module": "Erdos1135.Tao.Probability.Pascal",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:45:22+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Fourier/Section7Character.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Fourier/Section7Character.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 9.21877513709478,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Fourier.Section7Character.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Fourier.Section7Character",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:45:26+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Fourier.Section7Character"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.438159923069179,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Fourier.Section7Character.kernel.log",
+      "log_sha256": "b8ff92481149506f44c3dcf500e02d0df3bc1f7505866bd53b890f1a68a6b207",
+      "module": "Erdos1135.Tao.Fourier.Section7Character",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:45:35+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Fourier/Section7SourceLaw.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Fourier/Section7SourceLaw.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.880990918027237,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Fourier.Section7SourceLaw.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Fourier.Section7SourceLaw",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:45:40+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Fourier.Section7SourceLaw"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.490527448011562,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Fourier.Section7SourceLaw.kernel.log",
+      "log_sha256": "36707b92a212b81e34339b4f665e0173fdfdd0103a306c15b23a927d0b510f89",
+      "module": "Erdos1135.Tao.Fourier.Section7SourceLaw",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:45:45+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Section6/ModulusProjection.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Section6/ModulusProjection.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.795105237979442,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Section6.ModulusProjection.compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module": "Erdos1135.Tao.Section6.ModulusProjection",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:45:49+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/leanchecker",
+        "--verbose",
+        "Erdos1135.Tao.Section6.ModulusProjection"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.753377928864211,
+      "exit_code": 0,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Section6.ModulusProjection.kernel.log",
+      "log_sha256": "d9e1387e5eeb9e77caa0fed6fb3b59b9f678b5fc3034d37b8e4e177e225e86cc",
+      "module": "Erdos1135.Tao.Section6.ModulusProjection",
+      "stage": "kernel",
+      "started_utc": "2026-10-08T02:45:54+00:00"
+    },
+    {
+      "arguments": [
+        "TOOLCHAIN/bin/lean",
+        "-j1",
+        "-DwarningAsError=true",
+        "--root=BUNDLE/.replay/source",
+        "BUNDLE/.replay/source/Erdos1135/Tao/Section6/ConductorProjectivity.lean",
+        "-o",
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Section6/ConductorProjectivity.olean"
+      ],
+      "cwd": "BUNDLE/.replay/source",
+      "elapsed_seconds": 4.407775762025267,
+      "exit_code": 1,
+      "log": "BUNDLE/.replay/logs/Erdos1135.Tao.Section6.ConductorProjectivity.compile.log",
+      "log_sha256": "66e67273b88d91546509b7878d3f84930cf4007d16be8cb63253b7aeac90cd60",
+      "module": "Erdos1135.Tao.Section6.ConductorProjectivity",
+      "stage": "compile",
+      "started_utc": "2026-10-08T02:45:59+00:00"
+    }
+  ],
+  "results": {
+    "AdmissibleCylinderWords": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/AdmissibleCylinderWords.olean": "e9575dcf67d85434d69059b566486740b5a44bd75a0afd74b15bf31aa3312172"
+      },
+      "object_sha256": "e9575dcf67d85434d69059b566486740b5a44bd75a0afd74b15bf31aa3312172",
+      "source_sha256": "980d8f83983d673350d77dfb0ff64c2b31ed12ff7514adb020b585e44b8a22d9"
+    },
+    "ArithmeticCylinderCongruence": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/ArithmeticCylinderCongruence.olean": "0bdd51d331c1864719fbbc8e66b5c2ec703e29425f7231924c71d46e9e784d5a"
+      },
+      "object_sha256": "0bdd51d331c1864719fbbc8e66b5c2ec703e29425f7231924c71d46e9e784d5a",
+      "source_sha256": "fef1cb7cbd4a22d4d3d197d761fe36a6bdb2e77e43c9b817c1d297f7f020e1b1"
+    },
+    "ArithmeticCylinderLaw": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/ArithmeticCylinderLaw.olean": "e427c29a17e7600b70cb3e0ceac822eac9f956df61d74490024195075fc50e75"
+      },
+      "object_sha256": "e427c29a17e7600b70cb3e0ceac822eac9f956df61d74490024195075fc50e75",
+      "source_sha256": "f51395dbeadec99adc0c1cd0af4eeda1ede1a242d6b21537e52c6a71b15b9053"
+    },
+    "ArithmeticCylinderLower": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/ArithmeticCylinderLower.olean": "bd07ed952816a83557f52e9c3fc31fa50f3959e348171a1e442f36bef185d2a5"
+      },
+      "object_sha256": "bd07ed952816a83557f52e9c3fc31fa50f3959e348171a1e442f36bef185d2a5",
+      "source_sha256": "a9110f08377dcf13990186f1c71ff64fbd50689637dec9ed94bbf1c90e226afb"
+    },
+    "ArithmeticCylinderResidues": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/ArithmeticCylinderResidues.olean": "9d2f5c15e5450791e88b46d88d3ca9ca2927f8fa10a71bc4a79d04c620b54da9"
+      },
+      "object_sha256": "9d2f5c15e5450791e88b46d88d3ca9ca2927f8fa10a71bc4a79d04c620b54da9",
+      "source_sha256": "3af2d7c702b6ef9f0053a0791919fabae541ee9f86af56850fd9dcaf9a704035"
+    },
+    "ArithmeticInverseBlocks": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/ArithmeticInverseBlocks.olean": "2b12b076d1ac13feddb39890744ea7a9f86be5ca522e8d05360ce4f5ba449553"
+      },
+      "object_sha256": "2b12b076d1ac13feddb39890744ea7a9f86be5ca522e8d05360ce4f5ba449553",
+      "source_sha256": "219cd6200ee2eedf3883db345f50e07898b2267ac89f46f1d14780547b7a8625"
+    },
+    "ArithmeticInverseTuples": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/ArithmeticInverseTuples.olean": "24568eebee5a8188f18c4646230ed4de9dea52a85621001f07eb2af1dc50caee"
+      },
+      "object_sha256": "24568eebee5a8188f18c4646230ed4de9dea52a85621001f07eb2af1dc50caee",
+      "source_sha256": "bd0d5c0b20175f7e22f8b199cd4aeb494d290ddcea0cee5cf4b10e51e4f911dd"
+    },
+    "ArithmeticWordFibers": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/ArithmeticWordFibers.olean": "2be4f4a407b9c6de786468f57a7775dd5df1a53269a71f1565694551bc2e1df5"
+      },
+      "object_sha256": "2be4f4a407b9c6de786468f57a7775dd5df1a53269a71f1565694551bc2e1df5",
+      "source_sha256": "ab79ffcfef9e97594d1db1aa10572b683b100e36806f3542983de44c48e930dc"
+    },
+    "CanonicalLpInterpolation": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/CanonicalLpInterpolation.olean": "c490c1138b85f20d10d6c9e3a42a55ebde91585f9f3777de17c1449efab9e8ca"
+      },
+      "object_sha256": "c490c1138b85f20d10d6c9e3a42a55ebde91585f9f3777de17c1449efab9e8ca",
+      "source_sha256": "9ce6e12eeef918c57394ef6aac42236bf026b35c8a16af8f8bbd7f5cdfe381e8"
+    },
+    "CanonicalSyracuseCylinderLaw": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/CanonicalSyracuseCylinderLaw.olean": "5094024344231e29a47b38ef6d9b71b59e232411df72b06a391502d54ded8f30"
+      },
+      "object_sha256": "5094024344231e29a47b38ef6d9b71b59e232411df72b06a391502d54ded8f30",
+      "source_sha256": "d471c198747f5f2f157d77199ad7857b997a2dcb2a8486cdff62123cf322f82a"
+    },
+    "CompatibleSyracuseResidues": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/CompatibleSyracuseResidues.olean": "b0c5d23fb4c39a715118d2adaf56db5948da1557a4b28617e0efa5d10cefa0b3"
+      },
+      "object_sha256": "b0c5d23fb4c39a715118d2adaf56db5948da1557a4b28617e0efa5d10cefa0b3",
+      "source_sha256": "e90b2bc8b6c050d0a33ff890f23cc5b4e9848fedd113adbd3485770589c3df13"
+    },
+    "CylinderExpansionBound": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/CylinderExpansionBound.olean": "6f1feabec6d2d40e18f98ba1a75186ceb6b8d67cf3dcad1c8da6498c28bf61fb"
+      },
+      "object_sha256": "6f1feabec6d2d40e18f98ba1a75186ceb6b8d67cf3dcad1c8da6498c28bf61fb",
+      "source_sha256": "a4dca412f66fd56a1dc33ce3a8e7127aeb2bdafccec6bc82f715253f7e0b6aeb"
+    },
+    "CylinderHeadBound": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/CylinderHeadBound.olean": "776809d63a2a8b614f5b39d9c3863c4e0b7106e4aead5773a43cf5522d4ac640"
+      },
+      "object_sha256": "776809d63a2a8b614f5b39d9c3863c4e0b7106e4aead5773a43cf5522d4ac640",
+      "source_sha256": "c5fdc150fbf09f11a44b4d6c98a098491875ab89327cac01f46a112f7c5b8dee"
+    },
+    "CylinderLowerBranch": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/CylinderLowerBranch.olean": "4f8d6b33f8e0d92293a522adb5644c638fd9a35067bfb534aa97cce4c61c5ae8"
+      },
+      "object_sha256": "4f8d6b33f8e0d92293a522adb5644c638fd9a35067bfb534aa97cce4c61c5ae8",
+      "source_sha256": "a9d0fc25aa4ad2836f67151136126f5421c315d3686046d57010a385cd307e78"
+    },
+    "Erdos1135.Basic": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Basic.olean": "90c93536e44ba10dfe4447786575c220b74cdd7a05261f2232b33b58b223ac11"
+      },
+      "object_sha256": "90c93536e44ba10dfe4447786575c220b74cdd7a05261f2232b33b58b223ac11",
+      "source_sha256": "cf8f99310847c1e3aeb4019a1dee229e5c437f0619495ac2818f3af8139a9d99"
+    },
+    "Erdos1135.CollatzStep": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/CollatzStep.olean": "5bfa18275aafd2b1037a4a8ee1708af284fe0f5e85a27dd699419d75ca07f69e"
+      },
+      "object_sha256": "5bfa18275aafd2b1037a4a8ee1708af284fe0f5e85a27dd699419d75ca07f69e",
+      "source_sha256": "be7a77bc4ec1f7c4b111d25733e52148b4e22cd4fce507630fe0fb1ca2de398a"
+    },
+    "Erdos1135.Division": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Division.olean": "b9d28d48ead973308dcbe9f7bf961a011a859f82845c8bb9a2d70f7a57264928"
+      },
+      "object_sha256": "b9d28d48ead973308dcbe9f7bf961a011a859f82845c8bb9a2d70f7a57264928",
+      "source_sha256": "c8a63f9bc9e3fb8127044a80513412a449aa5b21872f001a02dcebfda34f2fdd"
+    },
+    "Erdos1135.Parity": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Parity.olean": "9baf0106313948b882309812cc89ecf4f36f5ef27d64e03452c5bc9d63f35035"
+      },
+      "object_sha256": "9baf0106313948b882309812cc89ecf4f36f5ef27d64e03452c5bc9d63f35035",
+      "source_sha256": "30e004b959735fbbf04769a40350ded21455dc0312106e8132500b319de236e1"
+    },
+    "Erdos1135.Residues": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Residues.olean": "c7f5d528db0cab771356bade31e2ddaab6b8d6cdeead1cfc977ce4de0d37ed01"
+      },
+      "object_sha256": "c7f5d528db0cab771356bade31e2ddaab6b8d6cdeead1cfc977ce4de0d37ed01",
+      "source_sha256": "3d7255b27418277d3adcd03bec2a256caba50ae063874cb7df5a855cb0f509b8"
+    },
+    "Erdos1135.Tao.Fourier.Basic": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Fourier/Basic.olean": "aad0fd7291fdccac10d15d21f63cc2f2da79fe66547e0fe9975dcf7c0d7f6b6a"
+      },
+      "object_sha256": "aad0fd7291fdccac10d15d21f63cc2f2da79fe66547e0fe9975dcf7c0d7f6b6a",
+      "source_sha256": "2a791b97a9d3a19ca15de059aa373e7fcf20e41ff4adb8738bfce35f3b51afbe"
+    },
+    "Erdos1135.Tao.Fourier.DecayStatement": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Fourier/DecayStatement.olean": "6bed858cbc5f2c4846ab4f5d5154f615d5acba03f284134fd4e617ab36460b1b"
+      },
+      "object_sha256": "6bed858cbc5f2c4846ab4f5d5154f615d5acba03f284134fd4e617ab36460b1b",
+      "source_sha256": "6821d417795593c67c29b87e90490f2ae690f26dc8b5bbf95221caef2c099dbe"
+    },
+    "Erdos1135.Tao.Fourier.Section7Character": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Fourier/Section7Character.olean": "b42cbb7fccec91c4f8104c31f2cc6b343baeb9e349a15fe8db03c0509ca5780e"
+      },
+      "object_sha256": "b42cbb7fccec91c4f8104c31f2cc6b343baeb9e349a15fe8db03c0509ca5780e",
+      "source_sha256": "d5ad75334cf19fd28339362ed9574ac636e540261ca3d8679b35c19882b52b90"
+    },
+    "Erdos1135.Tao.Fourier.Section7SourceLaw": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Fourier/Section7SourceLaw.olean": "a5969dda55c9f5a68fe5bf4b67af9016cdd2b21eb2a18d8645a1cd3650fccd72"
+      },
+      "object_sha256": "a5969dda55c9f5a68fe5bf4b67af9016cdd2b21eb2a18d8645a1cd3650fccd72",
+      "source_sha256": "214534e8b3bbaa3a532504ed2d932292999d824be8e3bf47d696ff91710fb019"
+    },
+    "Erdos1135.Tao.Fourier.TV": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Fourier/TV.olean": "4fb172a5fd3b27fca798b33b74649acf0476b4365c03bf4d77c119ef37fe5994"
+      },
+      "object_sha256": "4fb172a5fd3b27fca798b33b74649acf0476b4365c03bf4d77c119ef37fe5994",
+      "source_sha256": "36019531ddd385c79741d930ea45da8979d302e3bded7ff0a772f245bb5c0290"
+    },
+    "Erdos1135.Tao.Probability.Finite": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Probability/Finite.olean": "f96125f6dffb6e47aa243ec52ec2605b83cbb2d541d79ee7854eae981d9d79da"
+      },
+      "object_sha256": "f96125f6dffb6e47aa243ec52ec2605b83cbb2d541d79ee7854eae981d9d79da",
+      "source_sha256": "2fdfd5d29e65fb2c33187775ae47b10d6be012a75f5c494da538b5f5f216f18f"
+    },
+    "Erdos1135.Tao.Probability.Geom": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Probability/Geom.olean": "8c54e5c8569568f33dd283af153997cb8dbc5895a40ea274320cd76520bc2eaf"
+      },
+      "object_sha256": "8c54e5c8569568f33dd283af153997cb8dbc5895a40ea274320cd76520bc2eaf",
+      "source_sha256": "071d405a5b9fb9e18b1721485b2fb64e3ca8a22ef507a6925952eb4ab9d8e180"
+    },
+    "Erdos1135.Tao.Probability.Pascal": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Probability/Pascal.olean": "a1e2434fe47a8e46cafe17e4e3d6b4dc5b8ce1d7b121d2cc75fbce67edc81ec4"
+      },
+      "object_sha256": "a1e2434fe47a8e46cafe17e4e3d6b4dc5b8ce1d7b121d2cc75fbce67edc81ec4",
+      "source_sha256": "8cfac743c9f19f0f9e2a2a0443081475325fd229a0b17ca4e76b5c26e505a3bd"
+    },
+    "Erdos1135.Tao.Probability.Truncation": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Probability/Truncation.olean": "e0f3e1bd1a07d406ff7b729074ea795cf0743f716d9d94df6967f3995b64a1b9"
+      },
+      "object_sha256": "e0f3e1bd1a07d406ff7b729074ea795cf0743f716d9d94df6967f3995b64a1b9",
+      "source_sha256": "09f4c839ee7faabf5c17e2ab4791d7a775c4044bf588f8b6dd5e99625a84174e"
+    },
+    "Erdos1135.Tao.Section6.ModulusProjection": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Section6/ModulusProjection.olean": "cd5901e1afb230afb03ae636d1a767ffc75eb2c6e6b1fbf7e9f310e78b8b979c"
+      },
+      "object_sha256": "cd5901e1afb230afb03ae636d1a767ffc75eb2c6e6b1fbf7e9f310e78b8b979c",
+      "source_sha256": "bc88dcf64e1a19d7124656135de975aed43c42a614d9460f0a09a3552643e773"
+    },
+    "Erdos1135.Tao.Syracuse.Affine": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/Affine.olean": "9098cb6b5eea24fc27ff50a332415521e5c487e5721b6dd8f4fb5618973c3b66"
+      },
+      "object_sha256": "9098cb6b5eea24fc27ff50a332415521e5c487e5721b6dd8f4fb5618973c3b66",
+      "source_sha256": "06a2f9aa999e96cb95bfd2cc64d71528d16965ed37e6623a40ae6116062798ae"
+    },
+    "Erdos1135.Tao.Syracuse.AffineReverse": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/AffineReverse.olean": "c8fe89d21ac9608204843367b088055de62b03e1fe5a3e526f92faa52a40493d"
+      },
+      "object_sha256": "c8fe89d21ac9608204843367b088055de62b03e1fe5a3e526f92faa52a40493d",
+      "source_sha256": "d3ecd26c44de0eba086b849c87f7684068dc3df60d359e283a41179cdfed5468"
+    },
+    "Erdos1135.Tao.Syracuse.Basic": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/Basic.olean": "839732008df6f993442b6419632b719055242c217081bd432ff75a4c98f6223d"
+      },
+      "object_sha256": "839732008df6f993442b6419632b719055242c217081bd432ff75a4c98f6223d",
+      "source_sha256": "fafec12689630a30946586513f5e51c350f94002dea430f2a182f44921fdc341"
+    },
+    "Erdos1135.Tao.Syracuse.CylinderMass": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/CylinderMass.olean": "d267e6d4c87ca5f1b71607b6ff3eee21a3867dbb7f52ed4e7fd4967db163eb3b"
+      },
+      "object_sha256": "d267e6d4c87ca5f1b71607b6ff3eee21a3867dbb7f52ed4e7fd4967db163eb3b",
+      "source_sha256": "a7dd9bd19bcf3b64b052cba210c084c6acb29942ea3c78e4c0ffcd4064ed60c7"
+    },
+    "Erdos1135.Tao.Syracuse.Defs": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/Defs.olean": "b222d859d873b8273b42aeca55c77fc5f058e4d1edf494641d99798aacab0518"
+      },
+      "object_sha256": "b222d859d873b8273b42aeca55c77fc5f058e4d1edf494641d99798aacab0518",
+      "source_sha256": "6a061710b03e35fcc7bea522e96aa634afdc68492f7055124315abb0b08a9f72"
+    },
+    "Erdos1135.Tao.Syracuse.OffsetInjectivity": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/OffsetInjectivity.olean": "3bb8f7b586a0669c5ea7df70a363b907ecffd33e0a271ad0702f1cba054e4ac0"
+      },
+      "object_sha256": "3bb8f7b586a0669c5ea7df70a363b907ecffd33e0a271ad0702f1cba054e4ac0",
+      "source_sha256": "97dd716abdf6d667d954c063b7beb0156a8d3d34e4ca42466d70d9de8ed925e6"
+    },
+    "Erdos1135.Tao.Syracuse.ParityBridge": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/ParityBridge.olean": "fd27ad45ab40af23946f339640f1c24698fe23055350f33b9a701a9e4aa256b1"
+      },
+      "object_sha256": "fd27ad45ab40af23946f339640f1c24698fe23055350f33b9a701a9e4aa256b1",
+      "source_sha256": "35c35240788a53005055a61fe60a30c89b080f22404c2d963c17e693c5b7fc0f"
+    },
+    "Erdos1135.Tao.Syracuse.Residue": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/Residue.olean": "d1af83468f87919d2c44b0dd86c75e78e418c5591cd11efd01804dcddaef41cf"
+      },
+      "object_sha256": "d1af83468f87919d2c44b0dd86c75e78e418c5591cd11efd01804dcddaef41cf",
+      "source_sha256": "89b4f3f41c8d34e3a65ef20e1c4ffa1616914021c09b0f077bdedf1a63afcc89"
+    },
+    "Erdos1135.Tao.Syracuse.Syrac": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/Syrac.olean": "28228701d36b99e8e0bb409ea218b4712dbdfe668814dff151582e27ce220134"
+      },
+      "object_sha256": "28228701d36b99e8e0bb409ea218b4712dbdfe668814dff151582e27ce220134",
+      "source_sha256": "57266b4ae52def9c4f8d9348a4a6891cc15e87f72d2aff5b1952d6a27109c536"
+    },
+    "Erdos1135.Tao.Syracuse.ValuationCylinder": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/ValuationCylinder.olean": "58321e732cdc53524f17e2391bde19c6777a45776f83069e5fa6c2c63a726cc6"
+      },
+      "object_sha256": "58321e732cdc53524f17e2391bde19c6777a45776f83069e5fa6c2c63a726cc6",
+      "source_sha256": "53ac59aac554e1e9c207a4b2b756d2e0849fa4004cbde809013423e29331431f"
+    },
+    "Erdos1135.Tao.Syracuse.ValuationCylinderResidue": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/ValuationCylinderResidue.olean": "f32f932effcd5811c14af9e31e4075c25d6b1af14ba667219d7883ddd61170fa"
+      },
+      "object_sha256": "f32f932effcd5811c14af9e31e4075c25d6b1af14ba667219d7883ddd61170fa",
+      "source_sha256": "9d9bd182cfa87347c9c8942471163a6027a6ccacc9d02d52f674b25939b21d6a"
+    },
+    "Erdos1135.Tao.Syracuse.ValuationDistribution": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Tao/Syracuse/ValuationDistribution.olean": "0088b98c2f5a3d54e9ad6837c042daf108948cb1780876e696f33a2bbd25bffe"
+      },
+      "object_sha256": "0088b98c2f5a3d54e9ad6837c042daf108948cb1780876e696f33a2bbd25bffe",
+      "source_sha256": "a765c6aa38b87504514766274f33acfaf0b811f57ab883c1ffecba1745500c97"
+    },
+    "Erdos1135.Terras.Core.Defs": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Terras/Core/Defs.olean": "90096e5e48ead8496f885e55cc1776160e9e53c3296ff314277dcdb56d467552"
+      },
+      "object_sha256": "90096e5e48ead8496f885e55cc1776160e9e53c3296ff314277dcdb56d467552",
+      "source_sha256": "5d92f90e1b8ced2990fc76cc289dc72c54cbe2f9c29b2708986925b4ab2abae7"
+    },
+    "Erdos1135.Terras.Parity.Residue": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Terras/Parity/Residue.olean": "ee16983b01f53a44551a829b380792e0b03cba6290cb730ec66a9f8f219c8bcf"
+      },
+      "object_sha256": "ee16983b01f53a44551a829b380792e0b03cba6290cb730ec66a9f8f219c8bcf",
+      "source_sha256": "403f5e0a32452ec0e81f24174086cd9178723bfe03dcdcb8bf635bde32b81ebd"
+    },
+    "Erdos1135.Terras.Parity.Word": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/Terras/Parity/Word.olean": "fa10656fecd5a792acd5bef5c586fb56fe6f474f2b155d694ea361947ce24442"
+      },
+      "object_sha256": "fa10656fecd5a792acd5bef5c586fb56fe6f474f2b155d694ea361947ce24442",
+      "source_sha256": "760efd43ab555f72d122b35e3d5abb1233fe5b0e4b526e5c840bb9d455a2f364"
+    },
+    "Erdos1135.TwoAdic": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/Erdos1135/TwoAdic.olean": "f09e4ace18fefb11ae30281a1f5a18b5258a5c4552ef33dbc613187860bc8241"
+      },
+      "object_sha256": "f09e4ace18fefb11ae30281a1f5a18b5258a5c4552ef33dbc613187860bc8241",
+      "source_sha256": "134e0857941bfe03e228ecbbfcea7d8efb800ad456a23874db6ccfc5669eb72f"
+    },
+    "FairEnergyBound": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FairEnergyBound.olean": "10f12fb71547660a5e6838cad8620f10b7f7f40a899434ba9c8fe3fa89669bf4"
+      },
+      "object_sha256": "10f12fb71547660a5e6838cad8620f10b7f7f40a899434ba9c8fe3fa89669bf4",
+      "source_sha256": "79a5136039c237865d6380af349ac9bd3781eef6cc3e3d0fd3a75a08b4231273"
+    },
+    "FairEnergyFinite": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FairEnergyFinite.olean": "025f332d06337c18883c40734b15e537f50db8c6d90a8ce1d50d2d97e734362a"
+      },
+      "object_sha256": "025f332d06337c18883c40734b15e537f50db8c6d90a8ce1d50d2d97e734362a",
+      "source_sha256": "7a2749831159b27fdbc6809e3388192aa8ccd87b85d7382e7e8fd3f2acca45d6"
+    },
+    "FairEnergyLimit": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FairEnergyLimit.olean": "2f065ca4b39490f2ae2f869216ceddb9c35e35fb996507ea3f4a868863b089f2"
+      },
+      "object_sha256": "2f065ca4b39490f2ae2f869216ceddb9c35e35fb996507ea3f4a868863b089f2",
+      "source_sha256": "21134c5e5b98308c4c23875acf45ea15f024b9ab9fc6e32591a9dceb092abe36"
+    },
+    "FairEnergyMoments": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FairEnergyMoments.olean": "a19488d725ac18f0d0c423c31108446049886f55b8ce93d8ea5df02a8dfca7f5"
+      },
+      "object_sha256": "a19488d725ac18f0d0c423c31108446049886f55b8ce93d8ea5df02a8dfca7f5",
+      "source_sha256": "5ef6f30764347e1970b53a5c6f0589c34bfadfdedfdc59d37ea6273e8e91bd18"
+    },
+    "FairEnergyQuadraticBound": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FairEnergyQuadraticBound.olean": "a9b43594f26c223706a92348f61dce27670d58d133affa6a5e40e64610bbaaf9"
+      },
+      "object_sha256": "a9b43594f26c223706a92348f61dce27670d58d133affa6a5e40e64610bbaaf9",
+      "source_sha256": "e347185b763f2ebc5d7f995034d0afe74e4e4d725d98983824296f61458eb944"
+    },
+    "FairEnergyQuadraticFinite": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FairEnergyQuadraticFinite.olean": "2d0658029fae245e484a191dc617dd1b53a2053cb8b6e6fb179cf1750fc9c155"
+      },
+      "object_sha256": "2d0658029fae245e484a191dc617dd1b53a2053cb8b6e6fb179cf1750fc9c155",
+      "source_sha256": "f201b165fbc93bd8de46e577e774aba132665bbe1cefd208a048aa7606b999ad"
+    },
+    "FairEnergyWordCore": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FairEnergyWordCore.olean": "445fd1e816f0ac2392f6c430cfc8f4257e2506529a70f5fbb9b1a97be3503eb6"
+      },
+      "object_sha256": "445fd1e816f0ac2392f6c430cfc8f4257e2506529a70f5fbb9b1a97be3503eb6",
+      "source_sha256": "c278f4552f7624a8bb41bc7100b964644b142dfa075c522708aa711de669a650"
+    },
+    "FairEnergyWordReversal": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FairEnergyWordReversal.olean": "59fbb95337c10e513500f69e2694713c6808b4c7fc1f45d8f3a6cd8e2975dbad"
+      },
+      "object_sha256": "59fbb95337c10e513500f69e2694713c6808b4c7fc1f45d8f3a6cd8e2975dbad",
+      "source_sha256": "9a7591c83b61eefcf2a48c2ed528e0492c18a0e80efde0aa0862d3979977374a"
+    },
+    "FairEnergyWordSeparation": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FairEnergyWordSeparation.olean": "1391134fb56b79154e2d29f9522ada09f3ee2839e5ee23fcc41b00d2e4293f0e"
+      },
+      "object_sha256": "1391134fb56b79154e2d29f9522ada09f3ee2839e5ee23fcc41b00d2e4293f0e",
+      "source_sha256": "149e962f0f8bf59ba6bc305c5e895d7bb91f2ab949ef5264006c13e96c146c5c"
+    },
+    "FiniteCylinderMaximum": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FiniteCylinderMaximum.olean": "d8a869d2877238c66e3c6e0e82ae1f8ab2ebac1aebba11997131335c0d237e03"
+      },
+      "object_sha256": "d8a869d2877238c66e3c6e0e82ae1f8ab2ebac1aebba11997131335c0d237e03",
+      "source_sha256": "9a44ced80d4d67ea35ea54696917518aa11c3332537457a980e2fa561ab24a68"
+    },
+    "FiniteCylinderResidueLaw": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FiniteCylinderResidueLaw.olean": "ea182e4e11e6a808db0d2c11302f5ea36d01e37aab5d73e8a7d6b7d09919c7b7"
+      },
+      "object_sha256": "ea182e4e11e6a808db0d2c11302f5ea36d01e37aab5d73e8a7d6b7d09919c7b7",
+      "source_sha256": "c051a85eba1736d6708c26e3768fa5d4018ea2268953384c892992a354e60b08"
+    },
+    "FiniteSyracuseSeries": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FiniteSyracuseSeries.olean": "0c562e99fa9fd290acdbf93013967b72c570dafe77ec7582fba50cfc04ecc62b"
+      },
+      "object_sha256": "0c562e99fa9fd290acdbf93013967b72c570dafe77ec7582fba50cfc04ecc62b",
+      "source_sha256": "242eca460c3def32c4102247713ab7e5893b85d0479efe4b875b33046946090d"
+    },
+    "FiniteSyracuseSeriesClosedForm": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FiniteSyracuseSeriesClosedForm.olean": "61027fbd5dd4a70cd49795f98df5fcfb13691db85116ac84d47ab141eaa78a10"
+      },
+      "object_sha256": "61027fbd5dd4a70cd49795f98df5fcfb13691db85116ac84d47ab141eaa78a10",
+      "source_sha256": "72749c70f3fd89dce4e2a5eacc7f2cb8dcabbbd4925c8b85716926833b520195"
+    },
+    "FormalConjectures.Util.ProblemImports": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FormalConjectures/Util/ProblemImports.olean": "fb4f41207d2645889e12736d7f9c2685581dc5581b31e925c98ecfdfe1fabe4b"
+      },
+      "object_sha256": "fb4f41207d2645889e12736d7f9c2685581dc5581b31e925c98ecfdfe1fabe4b",
+      "source_sha256": "d1d7c7278eb35585e54d7e33a6969ab2596bf2c91f6b5029dc07086dbcb43c7f"
+    },
+    "FormalConjectures.Wikipedia.CollatzConjecture": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/FormalConjectures/Wikipedia/CollatzConjecture.olean": "3f49bcd9a9f85e27d0d2cf0b27d293523c8cb403e7856cc910045333a761034d"
+      },
+      "object_sha256": "3f49bcd9a9f85e27d0d2cf0b27d293523c8cb403e7856cc910045333a761034d",
+      "source_sha256": "727103159db692eb03e3a006b504fc2cd3a44c3a3c4714b36155f6b53bf5ad49"
+    },
+    "GeometricSequenceLaw": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/GeometricSequenceLaw.olean": "b62d265517071370fb884ad52640ff01181636020aa9500b5f416a3c6b1c5ae8"
+      },
+      "object_sha256": "b62d265517071370fb884ad52640ff01181636020aa9500b5f416a3c6b1c5ae8",
+      "source_sha256": "4eb9fa3e07574875dc1d141314c0907cc820bbc7f4b2e4850dcddf9692e2522d"
+    },
+    "GeometricWordTail": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/GeometricWordTail.olean": "d79791ee5aa69e174cd908775734cfc3d5e116278970109558b8b08f9d9ae48d"
+      },
+      "object_sha256": "d79791ee5aa69e174cd908775734cfc3d5e116278970109558b8b08f9d9ae48d",
+      "source_sha256": "503a00a46d73c9bc4df4060b2bda737d5b4e9e84e43e5c363325e0b6162c66d5"
+    },
+    "HarmonicFiberBounds": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/HarmonicFiberBounds.olean": "65c1a7263546f64e62d26f102c3b099770b7b06485464017a9720a96f78bc23a"
+      },
+      "object_sha256": "65c1a7263546f64e62d26f102c3b099770b7b06485464017a9720a96f78bc23a",
+      "source_sha256": "1149c421db949e513260f30ca7a8182b58d3da6d49d7ff58a68ccaa268ffdde5"
+    },
+    "OptimalCylinderPacking": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/OptimalCylinderPacking.olean": "8038280083f7feb9b65d0abb266988edf15913cab8d47dbbd1351731468c2f6f"
+      },
+      "object_sha256": "8038280083f7feb9b65d0abb266988edf15913cab8d47dbbd1351731468c2f6f",
+      "source_sha256": "7424c207552ceba9f4bf2c2161280918e2c754956b7f3b385c856fa3bf66a1ee"
+    },
+    "OptimalFiniteCylinderRate": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/OptimalFiniteCylinderRate.olean": "ba86384ce73c37b6484672066d159421e4aeccc74e85f6b46daeca0d8e904a36"
+      },
+      "object_sha256": "ba86384ce73c37b6484672066d159421e4aeccc74e85f6b46daeca0d8e904a36",
+      "source_sha256": "d3112ae0f5be5bd8425db6f22f38cb81ee7179399b66ac0209d56f846cfd7675"
+    },
+    "PadicSyracuseVariable": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/PadicSyracuseVariable.olean": "7a74aefd59bf929dd3157351d241408528afce6b51b5f6b466249454f9304ff5"
+      },
+      "object_sha256": "7a74aefd59bf929dd3157351d241408528afce6b51b5f6b466249454f9304ff5",
+      "source_sha256": "8dc38a4637e2124562b947d852168da3f38bba85c384966ab24766c87688c1c3"
+    },
+    "QuotientFiberBounds": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/QuotientFiberBounds.olean": "2b54528fc2310f30f0abb16e103c22113ba6ef48dbf9d5c276d59bc97a0bf768"
+      },
+      "object_sha256": "2b54528fc2310f30f0abb16e103c22113ba6ef48dbf9d5c276d59bc97a0bf768",
+      "source_sha256": "0b3a5fb8165e09145f5c03a8146cf988306828e078ee82b635c55ed2aa160bd1"
+    },
+    "SyracuseVariableMeasurable": {
+      "object_parts": {
+        "BUNDLE/.replay/modules/SyracuseVariableMeasurable.olean": "e2486ee92178bfb995e8d13825116bcdd3440bb29386bd571b698302d09cfad5"
+      },
+      "object_sha256": "e2486ee92178bfb995e8d13825116bcdd3440bb29386bd571b698302d09cfad5",
+      "source_sha256": "6786d1b7d06806c3768d8b5fec58da7cdcc9904598e41897a954fe2d28b1544d"
+    }
+  },
+  "status": "RUNNING"
+}

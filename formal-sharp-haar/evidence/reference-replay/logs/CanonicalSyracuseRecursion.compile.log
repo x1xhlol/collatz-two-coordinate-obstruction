@@ -1,0 +1,6 @@
+'CollatzCylinderPacking.Arithmetic.canonical_variable_explicit_series' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonical_variable_affine_recursion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,16 @@
+{
+  "appendix_artifacts_authenticated": 16,
+  "frozen_files_authenticated": 43,
+  "license_counts": {
+    "Apache-2.0": 275,
+    "MIT": 87
+  },
+  "module_bindings_authenticated": 362,
+  "origin_delta_review_sha256": "0572eed2ac1cf57d78e4b83cdd6d65afb24654266765126ed2cc99921c2d2bff",
+  "reviewed_utc": "2026-10-08T03:24:55.283707+00:00",
+  "reviewer": "Root",
+  "scope": "Read semantic review summaries and complete setup-delta record; computationally authenticated all362 module rows,16 appendix artifacts,43 core pins,both historical baseline records and batch review copies. This is documentation/provenance delta authentication, not fresh proof replay or new legal adjudication. Fresh setup branch remains unexercised.",
+  "setup_delta_review_sha256": "56d3c28a09d2e751919aaad4718bac0bd14717f7853899f6d3f6308ee89860fe",
+  "source_manifest_sha256": "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69",
+  "status": "PASS"
+}

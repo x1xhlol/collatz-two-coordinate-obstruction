@@ -1,0 +1,17 @@
+--- original/FormalConjectures/Wikipedia/CollatzConjecture.lean
++++ reviewed/FormalConjectures/Wikipedia/CollatzConjecture.lean
+@@ -44,14 +44,4 @@
+ def collatzStep (n : Nat) : Nat :=
+   if Even n then n / 2 else 3 * n + 1
+ 
+-/--
+-Now form a sequence beginning with any positive integer, where each subsequent term is obtained
+-by applying the operation defined above to the previous term.
+-The **Collatz conjecture** states that for any positive integer `n`, there exists a natural number
+-`m` such that the `m`-th term of the sequence is 1.
+--/
+-@[category research open, AMS 11 37]
+-theorem collatz_conjecture (n : Nat) (hn : n > 0) : ∃ m, collatzStep^[m] n = 1 := by
+-  sorry
+-
+ end CollatzConjecture

@@ -1,0 +1,4 @@
+'CollatzCylinderPacking.LowerBranch.all_odd_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCylinderPacking.LowerBranch.all_one_branch_admissible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

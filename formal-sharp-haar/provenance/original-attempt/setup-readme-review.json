@@ -1,0 +1,76 @@
+{
+  "checks": {
+    "appendix_boundary": "Setup, README and this review are publication appendices; the frozen proof execution manifest and proof inputs remain unchanged.",
+    "cache_isolation": "Clears all inherited MATHLIB_CACHE_* settings, creates a previously nonexistent mathlib-cache directory under --external-dir, and sets MATHLIB_CACHE_DIR explicitly. Cache code gives this setting precedence over XDG_CACHE_HOME and HOME.",
+    "cache_prerequisite": "Requires system curl >=7.81 before the fresh Mathlib branch. Git/tar/zstd are checked in the same /usr/bin:/bin path used by child commands.",
+    "declaration_counts": "README matches 362 sources, 4911 named declarations, 265 private declarations, 23 anonymous instances, 4 designated endpoints and 726 planned successful commands.",
+    "existing_installations": "Both supplied-root branches bypass downloads, extraction, Git checkout, Lake and cache preparation. They invoke version/hash checks and the frozen runner preflight. This is a source/cache-content read-only assessment, not a guarantee about filesystem access times or Git internal metadata.",
+    "external_trust_boundary": "README expressly distinguishes object fingerprint/stability from proof that compiled cache objects came from adjacent pinned sources; no fresh external source-closure rebuild or independent complete external kernel replay is claimed.",
+    "failure_behavior": "Subprocess failures stop setup; incomplete new destinations remain for diagnosis. README instructs a new destination for retry. Existing .replay contents are preserved and refused for a new replay.",
+    "fresh_mathlib": "Creates fresh detached checkouts at pinned revisions for Mathlib and all eight packages; checks Lake manifest before and after cache command; final frozen-runner preflight validates source revisions and external object availability.",
+    "fresh_toolchain": "Uses the frozen official archive URL, byte count, SHA-256, extracted directory, runtime hashes and Lean version; refuses an existing toolchain destination.",
+    "hardcoded_manifest_pin": "Matches frozen source-manifest.json; bundled pinned files and all source module hashes are checked before setup work.",
+    "python_3_9_static_AST_parse": "PASS; ast.parse with feature_version=(3,9), without importing or running setup.py.",
+    "python_interpreter": "Requires running Python >=3.9 and invokes the child preflight with sys.executable.",
+    "reproduction_commands": "README pins the exact manifest and uses actual --preflight/--run/--verify-only runner options and default external directory names."
+  },
+  "created_utc": "2026-10-08T02:43:49+00:00",
+  "limitations": [
+    "Fresh download, extraction, clone and cache preparation remain unexercised; static review is not an end-to-end bootstrap test.",
+    "The setup-wrapper reused-root branch was not executed by this reviewer; Occupation plans a separate later execution record.",
+    "The retained reused-root preflight fingerprints 53006 external objects but does not prove their compilation provenance.",
+    "No external files, frozen source files, manifests or replay runner were modified."
+  ],
+  "observed_execution_evidence": {
+    "existing_preflight_state_present": true,
+    "external_objects_in_state": 53006,
+    "fresh_setup_branch_executed": false,
+    "full_replay_completion_claimed": false,
+    "note": "The pre-existing reused-root preflight state is observed evidence for the frozen runner. It is not evidence that setup.py itself or the fresh download/cache branch was exercised. The full replay was ongoing during this review.",
+    "preflight_and_running_replay_before_state_byte_identical": true,
+    "setup_wrapper_reuse_branch_executed_by_this_review": false,
+    "source_modules_in_state": 362
+  },
+  "pinned_mathlib_cache_sources": {
+    "repository": "https://github.com/leanprover-community/mathlib4",
+    "revision": "5450b53e5ddc75d46418fabb605edbf36bd0beb6",
+    "source_sha256": {
+      "Cache/IO.lean": "a3fa92bfb1c1257c3322306fa8b425a28cf420687ea885e6bf90563f4fac6408",
+      "Cache/Init.lean": "9514d72513c02aca9667e89bd8fe6310bb9efd19cd11dc685db47a543cd06314",
+      "Cache/Requests.lean": "83ac9351e4a813334217d2eafc440efda72851d7e78e69dc1d35d3503d09e37b"
+    }
+  },
+  "remaining_findings": [],
+  "resolved_findings": [
+    {
+      "finding": "Pinned Mathlib Cache.IO.validateCurl invokes curl even before any fallback; the initial setup and README omitted this prerequisite.",
+      "id": "missing-curl-prerequisite",
+      "initial_setup_sha256": "2932f44e17c667843e5d38491146be895c7f10702008225070640789c1f3baff",
+      "resolution": "Fresh Mathlib setup now checks curl >=7.81 and README lists it."
+    },
+    {
+      "finding": "Inherited MATHLIB_CACHE_DIR/GET_URL and default HOME/XDG cache could redirect or reuse cache inputs outside the claimed fresh checkout.",
+      "id": "inherited-global-cache-settings",
+      "initial_setup_sha256": "2932f44e17c667843e5d38491146be895c7f10702008225070640789c1f3baff",
+      "resolution": "All MATHLIB_CACHE_* variables are removed and a newly created, explicit cache directory beneath --external-dir is used and documented."
+    },
+    {
+      "finding": "Initial prerequisite lookup used inherited PATH while child commands used a sanitized system PATH and bare python3.",
+      "id": "prerequisite-child-path-mismatch",
+      "intermediate_setup_sha256": "9f47107e6f89d468bc4cc31bb62a7a28c13e29d3439271ab5102105433b0d74e",
+      "resolution": "System tools are checked in the actual child PATH, README states those paths, and the preflight child uses sys.executable with an explicit >=3.9 check."
+    }
+  ],
+  "reviewed_sha256": {
+    ".replay/input-state-before.json": "6d7a6b6d996c3b96a0a07138633b0eeb6ed0ccd04511bfa28312b99d11770530",
+    "README.md": "78ddd94c45c63b8a97009e8cb261fc3f3f809fb3c1b2f4d28c786a3b33c30a47",
+    "dependency-pins.json": "180cae101dd4e45a2e99efd6c0022ac71bf7c5d6e57debdabc342fd2afdbbd86",
+    "preflight-input-state.json": "6d7a6b6d996c3b96a0a07138633b0eeb6ed0ccd04511bfa28312b99d11770530",
+    "scripts/replay.py": "0c6f892bf0e10bd9f6ac93d8cc8eb81217d1cafefa45841d36d500292ef5a4b3",
+    "scripts/setup.py": "cfad94313549277514d3f96162e9e40ff44dcdc9b2c7ab16eb8c6626f1cf80bb",
+    "source-manifest.json": "96500e070b6dcdc730975638029d0f7aa31ba40db2ecb46282f76c91175af5b9"
+  },
+  "schema": "fair-haar-setup-readme-review-v1",
+  "scope": "Bounded independent static review of setup.py and reproduction README, against the frozen runner, dependency pins, existing reused-root preflight state, and the pinned Mathlib cache implementation. No setup execution, replay execution, network download, cache population, cache mutation, or frozen proof-input edit was performed by this review.",
+  "status": "PASS"
+}

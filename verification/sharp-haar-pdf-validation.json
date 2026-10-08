@@ -1,0 +1,108 @@
+{
+  "ai_disclosure_and_bibliography_unchanged": true,
+  "all_fonts_embedded": true,
+  "bbox": {
+    "outside_page_words": 0,
+    "pages": [
+      {
+        "height": 792.0,
+        "width": 612.0,
+        "words": 377
+      },
+      {
+        "height": 792.0,
+        "width": 612.0,
+        "words": 458
+      },
+      {
+        "height": 792.0,
+        "width": 612.0,
+        "words": 401
+      },
+      {
+        "height": 792.0,
+        "width": 612.0,
+        "words": 427
+      },
+      {
+        "height": 792.0,
+        "width": 612.0,
+        "words": 515
+      },
+      {
+        "height": 792.0,
+        "width": 612.0,
+        "words": 418
+      },
+      {
+        "height": 792.0,
+        "width": 612.0,
+        "words": 200
+      },
+      {
+        "height": 792.0,
+        "width": 612.0,
+        "words": 384
+      }
+    ]
+  },
+  "compile_log_sha256": "3795cc37ca0a93c58ce641e763446c5955144745830d01418d1c8680aa8994a9",
+  "compiler": {
+    "arguments": [
+      "--keep-logs",
+      "--keep-intermediates",
+      "--untrusted",
+      "quadratic-cylinder-energy.tex"
+    ],
+    "exit_code": 0,
+    "path_label": "Tectonic 0.17.0",
+    "sha256": "2b3a86250906c92ed0a3ae8aaa454ec55bd6cede8593b3e549640177f6aecaa3"
+  },
+  "created_utc": "2026-10-08T04:32:29.125948+00:00",
+  "mathematical_body_unchanged": true,
+  "numbered_results": 6,
+  "page_render_sha256": {
+    "1": "1573935fe6736cef77a7c9cc20eaead6a70de44ab6fe7adaec07f954ef5cffb4",
+    "2": "894bab3004c019e872f4ae4c167e2a2f906d1bec23fab4789793402d1b3fa156",
+    "3": "3750eb9c22a98bd588d9b121af36c4e213d29a495fd9df3b284bf4edf1a80942",
+    "4": "017f659a34afb5d554bad2f1312f580b9a709830dd0d046e6feee06aa92de0e3",
+    "5": "73263df30713afe71b4b1244bb1fe8491de2b2327b4ea7e19b00cd1f805cd3d5",
+    "6": "59831f774f4652b9fcb1e76165bbd4856860aa023ad076c7ec1ea5e77a030343",
+    "7": "b0813d68576b51ba3dbba623ec0021e3e564508b2a64fb89a5e05c6e7201ce17",
+    "8": "d282228836e75b46d7202c934227e162a47f86eb17294039935188e2136f5603"
+  },
+  "pages": 8,
+  "pdf_bytes": 95386,
+  "pdf_sha256": "5454fe1144976fdf72f643bba0f7b6aaf8cd0cc17f6e4dcd49f8cd59dce2c46e",
+  "pdffonts_sha256": "38dffd32b2ad858ca8eb87f374ff9dee176d98967e18ecadbf1929a6c1cea61e",
+  "pdfinfo_sha256": "010d74ecc317366c161738f7c81c5ab9111327b13bf7cdbca07aa433031f5187",
+  "scope": "PDF and manuscript review only. Completed proof replay and external-library reuse scopes are recorded separately.",
+  "source_changes": [
+    "Removed private-draft date label and section qualifier",
+    "Replaced provisional verification paragraph with completed exact replay scope",
+    "Added needspace before main theorem to prevent an orphan heading"
+  ],
+  "source_sha256": "d8bc1905bdc833ce01fcfe21984096d5c8cf75bef10ebd93e4ec3e8804392df0",
+  "status": "PASS",
+  "tex_log_sha256": "34a5b50e248008f4f2600ebc64215c2893bef46a015dc23dc8699a23a4e78165",
+  "visual_inspection": {
+    "directly_reinspected_final_pages": [
+      1,
+      2,
+      3,
+      8
+    ],
+    "dpi": 110,
+    "draft_raster_identical_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "note": "Final page 8 is identical to the directly inspected first publication build; pages 2-7 are identical to the fully inspected draft. Final page 1 and main theorem pagination inspected directly.",
+    "status": "PASS"
+  },
+  "warnings": []
+}

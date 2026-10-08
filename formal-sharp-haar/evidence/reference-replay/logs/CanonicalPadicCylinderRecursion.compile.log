@@ -1,0 +1,5 @@
+'CollatzCylinderPacking.Arithmetic.canonicalPadicRho_natCast' depends on axioms: [propext, choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.padicOddPredecessor_equation' depends on axioms: [propext, choice, Quot.sound]
+'CollatzCylinderPacking.Arithmetic.canonicalPadicRho_successor_recursion' depends on axioms: [propext,
+ choice,
+ Quot.sound]

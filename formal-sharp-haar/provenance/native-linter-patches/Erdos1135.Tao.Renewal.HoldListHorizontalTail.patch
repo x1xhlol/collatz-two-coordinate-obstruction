@@ -1,0 +1,18 @@
+--- original/Erdos1135/Tao/Renewal/HoldListHorizontalTail.lean
++++ corrected/Erdos1135/Tao/Renewal/HoldListHorizontalTail.lean
+@@ -1,3 +1,6 @@
++/- This local copy changes proof tactics only to satisfy the pinned toolchain linters.
++   The theorem statements are unchanged; see provenance/native-linter-patches.json. -/
++
+ import Erdos1135.Tao.Renewal.HoldListHorizontalMoment
+ import Erdos1135.Tao.Renewal.Lemma79NativeMarkov
+ import Erdos1135.Tao.Renewal.Prop78Case2MomentScalar
+@@ -76,7 +79,7 @@
+       (taoSection7HoldListPMF P).toOuterMeasure Event * cutoff ≤
+           (taoSection7HoldListPMF P).toOuterMeasure
+               {fresh | cutoff ≤ F fresh} * cutoff :=
+-        mul_le_mul_right' ((taoSection7HoldListPMF P).toOuterMeasure.mono hsubset) _
++        mul_le_mul_left ((taoSection7HoldListPMF P).toOuterMeasure.mono hsubset) _
+       _ ≤ lemma79PMFENNExpectation (taoSection7HoldListPMF P) F := hmarkov
+       _ ≤ ENNReal.ofReal (Real.exp ((P : ℝ) / 2)) := hmean
+   have hcutoff0 : cutoff ≠ 0 := by

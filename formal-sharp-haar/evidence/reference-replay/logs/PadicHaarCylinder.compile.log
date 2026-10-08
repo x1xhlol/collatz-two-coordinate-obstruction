@@ -1,0 +1,3 @@
+'Erdos1135.Tao.padicThreeHaar_projection_eq_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.padicThreeHaar_cylinder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.integral_padicThreeHaar_cylinder' depends on axioms: [propext, Classical.choice, Quot.sound]

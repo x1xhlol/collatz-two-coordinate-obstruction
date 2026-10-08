@@ -1,28 +1,29 @@
 cff-version: 1.2.0
 message: "Please cite the relevant accompanying paper and the external results it uses."
 type: software
-version: "2026.10.08.1"
+version: "2026.10.08.2"
 date-released: "2026-10-08"
 license:
   - MIT
   - CC-BY-4.0
   - Apache-2.0
-title: "Collatz basin densities and affine Fourier decay: papers and Lean proofs"
+title: "Collatz basin densities, Fourier decay, and Syracuse integrability: papers and Lean proofs"
 authors:
   - family-names: Valbuena
     given-names: Lucas
 repository-code: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction"
 url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction"
 abstract: >-
-  Two papers with Lean proofs. The affine-law paper proves primitive Fourier
-  decay uniform in a growing conductor deficit and in the affine seed, with
-  conditional decay on polynomial-mass total-exponent slices and the exact
-  central slice. The basin paper proves uniform inverse-linear predecessor
-  density bounds, a finite cylinder-energy criterion for universal eventual
-  periodicity, a raw occupation lower bound and divergent-component excess,
-  and an almost-sure inverse height clock. The repository includes source
-  proofs, pinned dependencies, verification records, and attribution.
-  A matching raw occupation upper bound and the Collatz conjecture remain open.
+  Three papers with Lean proofs. The Syracuse-law paper proves a quadratic
+  upper bound for full-Haar cylinder energy and a normalized stationary
+  density whose exact real Lp range is 1 <= p < 2. The affine-law paper
+  proves primitive Fourier decay uniform in a growing conductor deficit
+  and affine seed, including polynomial-mass total-exponent conditioning
+  and the central slice. The basin paper proves uniform inverse-linear
+  predecessor density bounds, a finite-energy criterion for universal
+  eventual periodicity, a raw occupation lower bound and divergent excess,
+  and an almost-sure inverse height clock. Each proof bundle states its
+  fresh-check and dependency-reuse scope. The Collatz conjecture remains open.
 keywords:
   - Collatz conjecture
   - predecessor density
@@ -33,6 +34,8 @@ keywords:
   - Fourier decay
   - Syracuse affine laws
   - Subspace Theorem
+  - 3-adic probability
+  - integrability
 references:
   - type: article
     title: "Collatz basin densities and canonical traces from first-passage stabilization"
@@ -48,3 +51,10 @@ references:
         given-names: Lucas
     year: 2026
     url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction/blob/main/paper/growing-deficit-fourier.pdf"
+  - type: article
+    title: "Quadratic cylinder energy and integrability of the Syracuse law"
+    authors:
+      - family-names: Valbuena
+        given-names: Lucas
+    year: 2026
+    url: "https://github.com/x1xhlol/collatz-two-coordinate-obstruction/blob/main/paper/quadratic-cylinder-energy.pdf"

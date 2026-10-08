@@ -1,0 +1,43 @@
+{
+  "boundaries": [
+    "Only the exact distribution whitelist is approved by this file audit. Extra private preparation files in Q remain excluded.",
+    "The original failed attempt is retained as failure evidence and is not represented as completed validation.",
+    "Publication text/PDF and public repository integration are separate reviews."
+  ],
+  "checks": [
+    "Every one of 1322 whitelisted files is a regular nonsymlink file at a safe relative path, matches exact bytes and SHA-256, and decodes as UTF-8 text. No compiled object, cache, bytecode, .replay or .external path is distributed.",
+    "Publication-manifest.json authenticates exactly the other 1321 distributed files; the distribution plan additionally authenticates that manifest. Both bind the frozen proof manifest and completed replay record correctly.",
+    "The source set is exactly the manifest 362-module closure. All frozen proof-execution inputs, source licenses, provenance, runtime scripts and documented evidence are present.",
+    "Reference replay record, both input states, final progress and audit source are byte-identical to the primary run. All 726 reference logs match the recorded command hashes.",
+    "All three post-run validation checks have zero exit status, authenticated public logs and consistent summaries. Fresh-process and relocated verification agree on all replay and audit counts.",
+    "The final README correctly distinguishes 10465 module-header rows from 10445 distinct constants and identifies the 20 repeated-header rows. It reports 736 encoded-private rows without relabeling them as private theorems.",
+    "The README explicitly states that relocation reuses copied internal objects and performs no new source compilation; fresh external downloads remain unexercised. The external cache/source correspondence trust boundary is retained.",
+    "All local Markdown links in the final bundle README and evidence README resolve. Historical absolute-path labels in preserved original evidence are disclosed and are not used as runtime paths."
+  ],
+  "counts_by_top_directory": {
+    ".gitignore": 1,
+    "README.md": 1,
+    "dependency-pins.json": 1,
+    "evidence": 876,
+    "lean-toolchain": 1,
+    "licenses": 14,
+    "provenance": 61,
+    "publication-manifest.json": 1,
+    "scripts": 3,
+    "source": 362,
+    "source-manifest.json": 1
+  },
+  "distribution_plan_sha256": "406a101908ef07ff533d117b02e5bd3a90a5133df5b9076a57d3f63ae1746e76",
+  "file_count": 1322,
+  "final_bundle_readme_sha256": "e59a5c3b2d3110e0f8c257fbcd71b6b01381b4d17d42ea20b45b736478231927",
+  "findings": [],
+  "publication_manifest_excludes_own_file_count": 1321,
+  "publication_manifest_sha256": "9f0bfd120d1f02554b879f2962c724c60f740793d52db79d5b95c78106e1df47",
+  "replay_record_sha256": "1dc27c7083ad4b634117335ba6ee641e1b05fdd6a07582e5afc2695279a67572",
+  "reviewer": "clock_review_oct7",
+  "scope": "Independent seal authentication of every distributed file and full read of final bundle/evidence README and observed validation records/logs. This does not rerun the compiler, official kernel checker or external inventory.",
+  "source_manifest_sha256": "84022bcbca17d9797d5578900b4fd109748ea8e7788b84e47d5c37deb48d0a69",
+  "status": "PASS_WITH_NO_FINDINGS",
+  "total_bytes": 46644162,
+  "validation_record_sha256": "e0070f1151e662fafa5eb70023402bd686efe2843e65bf9db111e879c4fdab99"
+}
